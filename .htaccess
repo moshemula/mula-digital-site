@@ -1,0 +1,96 @@
+# ============================================================
+#  Mula Digital — .htaccess (Apache)
+#  פריסה: העלו את הקובץ הזה לשורש האתר (public_html)
+#  הערה: אם השרת שלכם מבוסס Nginx ולא Apache — הקובץ הזה לא יחול,
+#        ויש להגדיר את אותם כללים בקונפיגורציית ה-Nginx.
+# ============================================================
+
+# ----- מנוע הכתיבה -----
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # 1) הפניה ל-HTTPS + www בקנוניזציה אחת (מונע שרשור הפניות)
+    #    תוצאה סופית תמיד: https://www.muladigital.co.il/...
+    RewriteCond %{HTTPS} off [OR]
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+    RewriteRule ^ https://www.%1%{REQUEST_URI} [R=301,L]
+
+    # 2) הסרת סיומת .html אם מישהו ניגש אליה ישירות (URL נקי)
+    RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+    RewriteRule ^ /%1 [R=301,L]
+
+    # 3) הגשת index.html לשורש (ברירת מחדל ממילא, נשאר לבהירות)
+    DirectoryIndex index.html
+</IfModule>
+
+# ----- דף שגיאה 404 (אתר עמוד-אחד: מחזיר לדף הבית) -----
+ErrorDocument 404 /index.html
+
+# ----- דחיסה (Gzip / Deflate) -----
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+    AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+    AddOutputFilterByType DEFLATE application/json application/xml
+    AddOutputFilterByType DEFLATE image/svg+xml application/rss+xml
+    AddOutputFilterByType DEFLATE font/ttf font/otf font/woff font/woff2
+</IfModule>
+
+# ----- Brotli (אם זמין) -----
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/html text/css application/javascript
+    AddOutputFilterByType BROTLI_COMPRESS image/svg+xml application/json
+</IfModule>
+
+# ----- קאשינג בדפדפן (Core Web Vitals) -----
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault                          "access plus 1 month"
+    ExpiresByType text/html                 "access plus 0 seconds"
+    ExpiresByType text/css                  "access plus 1 year"
+    ExpiresByType application/javascript    "access plus 1 year"
+    ExpiresByType image/jpeg                "access plus 1 year"
+    ExpiresByType image/png                 "access plus 1 year"
+    ExpiresByType image/webp                "access plus 1 year"
+    ExpiresByType image/svg+xml             "access plus 1 year"
+    ExpiresByType image/x-icon              "access plus 1 year"
+    ExpiresByType video/mp4                 "access plus 1 year"
+    ExpiresByType font/woff2                "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+    # קבצים סטטיים — קאש ארוך וקבוע
+    <FilesMatch "\.(jpg|jpeg|png|webp|svg|ico|mp4|css|js|woff2)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    # ה-HTML — תמיד טרי
+    <FilesMatch "\.html$">
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
+
+    # ----- כותרות אבטחה -----
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    # הסרת חשיפת גרסת שרת
+    Header unset X-Powered-By
+</IfModule>
+
+# ----- סוגי MIME (ליתר ביטחון) -----
+<IfModule mod_mime.c>
+    AddType video/mp4 .mp4
+    AddType image/webp .webp
+    AddType image/svg+xml .svg
+    AddType font/woff2 .woff2
+    AddType application/manifest+json .webmanifest
+</IfModule>
+
+# ----- חסימת גישה לקבצים רגישים -----
+<FilesMatch "^\.(htaccess|htpasswd|git|env)">
+    Require all denied
+</FilesMatch>
+
+# ----- קידוד ברירת מחדל -----
+AddDefaultCharset UTF-8

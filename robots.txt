@@ -1,0 +1,17 @@
+# Mula Digital — robots.txt
+# מאפשר סריקה מלאה של האתר והנכסים (תמונות/וידאו טובים ל-SEO)
+
+User-agent: *
+Allow: /
+
+# בוטים של AI לחיפוש (נראות ב-AI) — מותר
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://mosh123.netlify.app/sitemap.xml

@@ -1,0 +1,41 @@
+# ============================================================
+#  Mula Digital — netlify.toml
+#  זהו הקובץ שפועל בפועל ב-Netlify (ה-.htaccess מתעלמים ממנו כאן).
+#  העלו אותו לשורש הפרויקט, יחד עם index.html ותיקיית assets.
+# ============================================================
+
+[build]
+  publish = "."
+
+# ----- כותרות אבטחה לכל הדפים -----
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# ----- ה-HTML תמיד טרי (כדי שעדכונים יופיעו מיד) -----
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ----- קבצים סטטיים: קאש ארוך וקבוע (Core Web Vitals) -----
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ----- ה-manifest -----
+[[headers]]
+  for = "/site.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+    Cache-Control = "public, max-age=86400"
