@@ -77,6 +77,7 @@
     --surface:#FAFAFA;--surface-2:#F4F4F6;--night:#0B0B0F;--night-2:#15151c;--night-line:#262630;--night-card:#191922;
     --red:#E8003D;--purple:#7B2FBE;--grad:linear-gradient(120deg,#E8003D,#7B2FBE);--grad-soft:linear-gradient(120deg,rgba(232,0,61,.1),rgba(123,47,190,.12));
     --f-display:'Heebo',system-ui,sans-serif;--f-body:'Assistant',system-ui,sans-serif;
+    --nav-h:74px;
     --r:22px;--r-sm:14px;
     --ease:cubic-bezier(.22,.61,.36,1);--spring:cubic-bezier(.34,1.56,.64,1);
     --shadow-sm:0 4px 14px rgba(17,17,17,.05);--shadow-md:0 18px 50px rgba(17,17,17,.10);--shadow-glow:0 40px 90px rgba(123,47,190,.18);
@@ -99,16 +100,57 @@
   #progress{position:fixed;top:0;inset-inline:0;height:3px;z-index:60;background:transparent;}
   #progress span{display:block;height:100%;width:0;background:var(--grad);}
 
-  /* nav */
-  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--line);transition:background .3s,box-shadow .3s;}
-  header.scrolled{background:rgba(255,255,255,.96);box-shadow:0 2px 20px rgba(0,0,0,.06);}
-  .nav-in{max-width:1100px;margin-inline:auto;display:flex;align-items:center;justify-content:space-between;height:66px;padding-inline:24px;}
-  .nav-in .logo{height:30px;}
-  .nav-links{display:flex;gap:4px;}
-  .nav-links a{font-family:var(--f-display);font-weight:600;font-size:15px;color:var(--soft);padding:8px 13px;border-radius:100px;transition:background .2s,color .2s;}
-  .nav-links a:hover,.nav-links a.active{color:var(--ink);background:rgba(123,47,190,.08);}
-  .nav-cta{display:none;}
-  @media(min-width:881px){.nav-cta{display:inline-flex;}}
+  /* ===== NAV + MEGA MENU ===== */
+  header.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line);}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);gap:18px;max-width:1200px;margin-inline:auto;padding-inline:24px;}
+  .nav-logo img{height:34px;width:auto;}
+  .nav-menu{display:flex;align-items:center;gap:2px;}
+  .nav-item{position:relative;}
+  .nav-link{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-display);font-weight:600;font-size:16px;color:var(--soft);padding:9px 14px;border-radius:100px;cursor:pointer;transition:color .2s var(--ease),background .2s var(--ease);background:none;border:none;}
+  .nav-link:hover,.nav-item:hover .nav-link{color:var(--ink);}
+  .nav-link.active{color:var(--ink);background:rgba(123,47,190,.08);}
+  .nav-link .caret{width:14px;height:14px;transition:transform .25s var(--ease);}
+  .nav-item.has-mega:hover .caret{transform:rotate(180deg);}
+  .nav-right{display:flex;align-items:center;gap:12px;}
+  .mega{position:absolute;top:calc(100% + 14px);inset-inline-end:0;width:min(94vw,920px);background:rgba(255,255,255,.92);backdrop-filter:saturate(200%) blur(28px);-webkit-backdrop-filter:saturate(200%) blur(28px);border:1px solid rgba(236,236,236,.7);border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.08),0 1px 3px rgba(0,0,0,.04);padding:0;opacity:0;visibility:hidden;transform:translateY(8px);transform-origin:top;transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s;z-index:90;}
+  .nav-item.has-mega:hover .mega,.nav-item.has-mega:focus-within .mega{opacity:1;visibility:visible;transform:translateY(0);}
+  .mega::before{content:"";position:absolute;top:-14px;inset-inline:0;height:14px;}
+  .mega-grid{display:grid;gap:0;}
+  .mega-grid.cols-4{grid-template-columns:repeat(3,1fr) 1.15fr;}
+  .mega-grid.cols-3{grid-template-columns:1fr 1fr 1.2fr;}
+  .mega-col{padding:28px 24px;}
+  .mega-col+.mega-col{border-inline-start:1px solid var(--line);}
+  .mega-col h4{font-family:var(--f-display);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;font-weight:700;display:flex;align-items:center;gap:8px;}
+  .mega-col h4::before{content:"";width:16px;height:2px;background:var(--grad);border-radius:2px;flex:none;}
+  .mega-col a{display:flex;align-items:center;gap:10px;font-weight:600;font-size:14.5px;color:var(--ink);padding:9px 12px;border-radius:10px;transition:background .2s var(--ease),color .2s var(--ease),transform .2s var(--ease);}
+  .mega-col a .mc-icon{flex:none;width:32px;height:32px;border-radius:9px;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;transition:background .2s var(--ease),border-color .2s var(--ease);}
+  .mega-col a .mc-icon svg{width:16px;height:16px;color:var(--soft);transition:color .2s var(--ease);}
+  .mega-col a:hover{background:rgba(123,47,190,.06);color:var(--purple);}
+  .mega-col a:hover .mc-icon{background:rgba(123,47,190,.1);border-color:rgba(123,47,190,.2);}
+  .mega-col a:hover .mc-icon svg{color:var(--purple);}
+  .mega-col a .mc-desc{font-weight:400;font-size:12.5px;color:var(--muted);display:block;margin-top:2px;}
+  .mega-cta{background:var(--night);color:#fff;border-radius:0 20px 20px 0;padding:28px 24px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+  .mega-cta::before{content:"";position:absolute;top:-40px;inset-inline-end:-40px;width:120px;height:120px;background:var(--grad);border-radius:50%;opacity:.15;filter:blur(30px);}
+  .mega-cta h4{color:#fff;font-size:17px;text-transform:none;letter-spacing:-.01em;margin-bottom:8px;font-family:var(--f-display);font-weight:700;}
+  .mega-cta p{color:rgba(255,255,255,.6);font-size:14px;margin-bottom:18px;line-height:1.6;}
+  .mega-feat a{display:flex;align-items:center;gap:11px;padding:9px 12px;border-radius:10px;font-weight:600;font-size:14.5px;transition:background .2s var(--ease),color .2s var(--ease);}
+  .mega-feat a:hover{background:rgba(123,47,190,.06);color:var(--purple);}
+  .mega-feat .mono{flex:none;width:34px;height:34px;border-radius:9px;background:var(--grad);color:#fff;display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:13px;}
+  .burger{display:none;width:44px;height:44px;border:1px solid var(--line-2);border-radius:12px;background:#fff;cursor:pointer;position:relative;}
+  .burger span,.burger span::before,.burger span::after{content:"";position:absolute;left:13px;width:18px;height:2px;background:var(--ink);transition:transform .25s var(--ease),opacity .2s;}
+  .burger span{top:21px;}.burger span::before{top:-6px;}.burger span::after{top:6px;}
+  .burger.open span{background:transparent;}
+  .burger.open span::before{transform:translateY(6px) rotate(45deg);}
+  .burger.open span::after{transform:translateY(-6px) rotate(-45deg);}
+  .mobile-menu{position:fixed;inset:0;z-index:95;background:rgba(255,255,255,.98);backdrop-filter:blur(18px);display:flex;flex-direction:column;padding:calc(var(--nav-h) + 24px) 28px 28px;gap:4px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .3s var(--ease),transform .3s var(--ease),visibility .3s;overflow-y:auto;}
+  .mobile-menu.open{opacity:1;visibility:visible;transform:none;}
+  .mobile-menu a,.mobile-menu .m-sub-toggle{font-family:var(--f-display);font-weight:700;font-size:26px;color:var(--ink);padding:14px 4px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;background:none;border-top:none;border-inline:none;cursor:pointer;width:100%;text-align:start;}
+  .mobile-menu .m-sub{max-height:0;overflow:hidden;transition:max-height .3s var(--ease);}
+  .mobile-menu .m-sub.open{max-height:520px;}
+  .mobile-menu .m-sub a{font-size:18px;font-weight:600;color:var(--soft);padding:11px 16px;border-bottom:1px dashed var(--line);}
+  .mobile-menu .m-cta{margin-top:22px;}
+  .mobile-menu .m-cta .btn{width:100%;}
+  .mega-col a,.mega-feat a,.nav-logo,.m-sub-toggle{cursor:pointer;}
 
   /* buttons */
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--f-display);font-weight:700;font-size:16px;padding:14px 26px;border-radius:100px;cursor:pointer;border:1px solid transparent;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .2s,border-color .2s;}
@@ -328,8 +370,14 @@
     .metrics{grid-template-columns:repeat(2,1fr);}
     .related{grid-template-columns:1fr;}
   }
+  @media (max-width:1000px){
+    .mega{width:min(94vw,640px);}
+    .mega-grid.cols-4{grid-template-columns:1fr 1fr;}.mega-grid.cols-4 .mega-cta{border-radius:0 0 20px 20px;}
+    .mega-grid.cols-3{grid-template-columns:1fr 1fr;}
+  }
   @media(max-width:880px){
-    .nav-links{display:none;}
+    .nav-menu,.nav-right .btn{display:none;}
+    .burger{display:block;}
     .foot-top{grid-template-columns:1fr 1fr;gap:32px;}.foot-brand{grid-column:span 2;}
   }
   @media(max-width:620px){
@@ -361,20 +409,91 @@
 <body>
   <div id="progress"><span></span></div>
 
-  <header>
-    <nav class="nav-in">
-      <a href="/" aria-label="Mula Digital — חזרה לבית"><img src="assets/logo-light.png" alt="Mula Digital" class="logo" /></a>
-      <div class="nav-links">
-        <a href="/">בית</a>
-        <a href="/#services" class="active">שירותים</a>
-        <a href="/portfolio">תיק עבודות</a>
-        <a href="/blog">בלוג</a>
-        <a href="about.html">אודות</a>
-        <a href="contact.html">צור קשר</a>
+  <header class="nav" role="banner">
+    <div class="nav-in">
+      <a href="/" class="nav-logo" aria-label="Mula Digital - דף הבית"><img src="assets/logo-light.png" alt="הלוגו של Mula Digital" /></a>
+      <nav class="nav-menu" aria-label="ניווט ראשי">
+        <div class="nav-item"><a class="nav-link" href="/">בית</a></div>
+        <div class="nav-item has-mega">
+          <a class="nav-link" href="/#services">שירותים <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+          <div class="mega"><div class="mega-grid cols-4">
+              <div class="mega-col"><h4>בניית נוכחות</h4>
+                <a href="service-web-development.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span><span>בניית אתרים<span class="mc-desc">WordPress, Elementor, Shopify</span></span></a>
+                <a href="service-branding.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span><span>מיתוג<span class="mc-desc">לוגו, שפה חזותית, בידול</span></span></a>
+                <a href="service-content.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></span><span>תוכן<span class="mc-desc">קופי, מאמרים, רשתות</span></span></a>
+                <a href="service-graphic-design.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><path d="M17.5 22H6.5a4 4 0 01-4-4V6a4 4 0 014-4h11a4 4 0 014 4v12a4 4 0 01-4 4z"/><path d="M2.5 15.5L8 10l4 4 3-3 6.5 6.5"/></svg></span><span>עיצוב גרפי<span class="mc-desc">פוסטים, באנרים, מצגות</span></span></a>
+                <a href="service-photo-video.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span><span>צילום ווידאו<span class="mc-desc">תדמית, מוצרים, רילסים</span></span></a>
+              </div>
+              <div class="mega-col"><h4>הבאת לקוחות</h4>
+                <a href="service-seo.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span><span>SEO<span class="mc-desc">קידום אורגני בגוגל</span></span></a>
+                <a href="service-local-seo.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Local SEO<span class="mc-desc">חבילת ה-3, מפות גוגל</span></span></a>
+                <a href="service-google-ads.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></span><span>Google Ads<span class="mc-desc">חיפוש, שופינג, דיספליי</span></span></a>
+                <a href="service-meta-ads.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span><span>Meta Ads<span class="mc-desc">Facebook, Instagram, Reels</span></span></a>
+                <a href="service-linkedin.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span><span>LinkedIn<span class="mc-desc">B2B, לידים, תוכן מקצועי</span></span></a>
+              </div>
+              <div class="mega-col"><h4>מערכות צמיחה</h4>
+                <a href="/#services"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 014 4c0 1.95-2 4-4 6-2-2-4-4.05-4-6a4 4 0 014-4z"/><path d="M4.93 10.93a10 10 0 100 2.14"/><path d="M2 12h2"/><path d="M20 12h2"/></svg></span><span>AI Automation<span class="mc-desc">תהליכים חכמים, Make, n8n</span></span></a>
+                <a href="/#services"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span><span>CRM<span class="mc-desc">ניהול לידים ומכירות</span></span></a>
+                <a href="/#services"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span><span>WhatsApp Automation<span class="mc-desc">בוטים, שליחה אוטומטית</span></span></a>
+                <a href="/#services"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span><span>Analytics<span class="mc-desc">GA4, דוחות, תובנות</span></span></a>
+                <a href="/#services"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span><span>CRO<span class="mc-desc">אופטימיזציית המרות</span></span></a>
+              </div>
+              <div class="mega-cta">
+                <h4>לא בטוחים מאיפה להתחיל?</h4>
+                <p>נתחיל באבחון קצר ונבין איפה העסק מפסיד לקוחות.</p>
+                <a href="contact.html" class="btn btn-primary btn-sm">קבעו שיחת אבחון</a>
+              </div>
+          </div></div>
+        </div>
+        <div class="nav-item has-mega">
+          <a class="nav-link" href="/portfolio">תיק עבודות <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+          <div class="mega"><div class="mega-grid cols-3">
+              <div class="mega-col"><h4>לפי סוג עבודה</h4>
+                <a href="/portfolio">אתרים</a><a href="/portfolio">SEO</a><a href="/portfolio">קמפיינים</a><a href="/portfolio">מיתוג</a><a href="/portfolio">עיצוב גרפי</a><a href="/portfolio">אוטומציות</a>
+              </div>
+              <div class="mega-col"><h4>לפי תחום</h4>
+                <a href="/portfolio">תעשייה</a><a href="/portfolio">ביטוח ופיננסים</a><a href="/portfolio">בעלי מקצוע</a><a href="/portfolio">B2B</a><a href="/portfolio">ביוטי</a><a href="/portfolio">טכנולוגיה</a>
+              </div>
+              <div class="mega-col mega-feat"><h4>פרויקטים נבחרים</h4>
+                <a href="/portfolio"><span class="mono">TF</span>Tamuz FTK Solutions</a>
+                <a href="/portfolio"><span class="mono">AB</span>ABP Consultancy</a>
+                <a href="/portfolio"><span class="mono">EL</span>ERP Logic</a>
+              </div>
+          </div></div>
+        </div>
+        <div class="nav-item"><a class="nav-link" href="/blog">בלוג</a></div>
+        <div class="nav-item"><a class="nav-link" href="about.html">אודות</a></div>
+        <div class="nav-item"><a class="nav-link" href="contact.html">צור קשר</a></div>
+      </nav>
+      <div class="nav-right">
+        <a href="contact.html" class="btn btn-primary btn-sm">קבעו שיחת אבחון</a>
+        <button class="burger" id="burger" aria-label="פתיחת תפריט" aria-expanded="false"><span></span></button>
       </div>
-      <a href="contact.html" class="btn btn-primary btn-sm nav-cta">קבעו שיחת אבחון</a>
-    </nav>
+    </div>
   </header>
+
+  <!-- mobile full-screen menu -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="תפריט נייד" role="navigation">
+    <a href="/">בית</a>
+    <button class="m-sub-toggle" data-sub="m-services">שירותים <span>+</span></button>
+    <div class="m-sub" id="m-services">
+      <a href="service-web-development.html">בניית אתרים</a>
+      <a href="service-branding.html">מיתוג</a>
+      <a href="service-content.html">תוכן</a>
+      <a href="service-graphic-design.html">עיצוב גרפי</a>
+      <a href="service-seo.html">SEO</a>
+      <a href="service-google-ads.html">Google Ads</a>
+      <a href="service-meta-ads.html">Meta Ads</a>
+      <a href="service-linkedin.html">LinkedIn</a>
+      <a href="service-local-seo.html">Local SEO</a>
+      <a href="service-photo-video.html">צילום ווידאו</a>
+    </div>
+    <a href="/portfolio">תיק עבודות</a>
+    <a href="/blog">בלוג</a>
+    <a href="about.html">אודות</a>
+    <a href="contact.html">צור קשר</a>
+    <div class="m-cta"><a href="contact.html" class="btn btn-primary">קבעו שיחת אבחון</a></div>
+  </nav>
 
   <!-- HERO — dark cinematic -->
   <section class="srv-hero">
@@ -744,6 +863,22 @@
   <script>
   (function(){
     'use strict';
+    // mobile menu
+    (function(){
+      var burger=document.getElementById('burger'), mobile=document.getElementById('mobileMenu');
+      if(burger&&mobile){
+        burger.addEventListener('click',function(){
+          var open=mobile.classList.toggle('open'); burger.classList.toggle('open',open);
+          burger.setAttribute('aria-expanded',open?'true':'false'); document.body.style.overflow=open?'hidden':'';
+        });
+        document.querySelectorAll('.m-sub-toggle').forEach(function(t){
+          t.addEventListener('click',function(){ var s=document.getElementById(t.getAttribute('data-sub')); var o=s.classList.toggle('open'); t.querySelector('span').textContent=o?'−':'+'; });
+        });
+        mobile.querySelectorAll('a').forEach(function(a){
+          a.addEventListener('click',function(){ mobile.classList.remove('open'); burger.classList.remove('open'); burger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; });
+        });
+      }
+    })();
     var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     document.getElementById('y').textContent=new Date().getFullYear();
 
