@@ -55,7 +55,7 @@
 
   <style>
   :root{
-    --bg:#FFFFFF;--ink:#111111;--soft:#3f3f46;--muted:#8A8A92;--line:#ECECEC;--line-2:#E2E2E2;
+    --bg:#FFFFFF;--ink:#111111;--soft:#3f3f46;--muted:#71717A;--line:#ECECEC;--line-2:#E2E2E2;
     --surface:#FAFAFA;--surface-2:#F3F3F5;--night:#0B0B0F;--night-2:#15151c;--night-line:#262630;
     --red:#E8003D;--purple:#7B2FBE;--grad:linear-gradient(120deg,#E8003D,#7B2FBE);
     --f-display:'Heebo',system-ui,sans-serif;--f-body:'Assistant',system-ui,sans-serif;
@@ -63,7 +63,7 @@
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%;}
-  body{font-family:var(--f-body);color:var(--ink);background:var(--bg);font-size:19px;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  body{font-family:var(--f-body);color:var(--ink);background:var(--bg);font-size:19px;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden;touch-action:manipulation;}
   h1,h2,h3,h4{font-family:var(--f-display);line-height:1.18;letter-spacing:-.02em;}
   a{color:inherit;text-decoration:none;}
   img{max-width:100%;display:block;}
@@ -87,19 +87,19 @@
   .btn-sm{padding:10px 18px;font-size:14px;}
   .btn-light{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.25);}
   .btn-light:hover{background:rgba(255,255,255,.18);}
-  /* hero — image background with overlaid title */
-  .a-hero{position:relative;background-size:cover;background-position:center;min-height:clamp(340px,46vw,460px);display:flex;align-items:flex-end;}
-  .a-hero-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,15,.55) 0%,rgba(11,11,15,.35) 35%,rgba(11,11,15,.86) 100%);}
-  .a-hero-in{position:relative;z-index:1;padding:40px 24px 38px;width:100%;}
-  .crumbs{font-size:14px;color:rgba(255,255,255,.78);margin-bottom:16px;font-family:var(--f-display);font-weight:600;}
-  .crumbs a{color:rgba(255,255,255,.78);}
-  .crumbs a:hover{color:#fff;}
-  .a-cat{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:700;font-size:13px;color:#fff;background:rgba(123,47,190,.5);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(6px);padding:7px 16px;border-radius:100px;}
-  .a-cat::before{content:"";width:7px;height:7px;border-radius:50%;background:#fff;}
-  h1.a-title{font-size:clamp(28px,4.6vw,46px);font-weight:900;margin:16px 0 16px;line-height:1.12;color:#fff;max-width:780px;text-shadow:0 2px 30px rgba(0,0,0,.3);}
-  .a-meta{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.78);font-size:15px;flex-wrap:wrap;}
-  .a-meta .who{display:flex;align-items:center;gap:10px;font-weight:600;color:#fff;}
-  .a-meta .who img{width:38px;height:38px;border-radius:50%;object-fit:cover;object-position:50% 15%;border:2px solid rgba(255,255,255,.5);}
+  /* hero — clean centered */
+  .a-hero-clean{text-align:center;padding:40px 24px 0;}
+  .a-cat-clean{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-display);font-weight:700;font-size:13px;color:var(--purple);margin-bottom:20px;}
+  h1.a-title-clean{font-size:clamp(30px,4.6vw,44px);font-weight:900;margin:16px 0 24px;line-height:1.2;color:var(--ink);max-width:780px;margin-inline:auto;}
+  .a-meta-clean{display:flex;justify-content:center;align-items:center;gap:16px;font-size:14px;color:var(--muted);margin-bottom:32px;flex-wrap:wrap;}
+  .a-meta-clean .who{display:flex;align-items:center;gap:8px;font-weight:600;color:var(--ink);}
+  .a-meta-clean .who img{width:36px;height:36px;border-radius:50%;object-fit:cover;object-position:50% 15%;}
+  .sep-dot{width:4px;height:4px;border-radius:50%;background:var(--muted);display:inline-block;}
+  .feat-img{width:100%;border-radius:14px;overflow:hidden;margin-bottom:42px;}
+  .feat-img img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+  .crumbs{font-size:14px;color:var(--muted);margin-bottom:12px;font-family:var(--f-display);font-weight:600;}
+  .crumbs a{color:var(--muted);}
+  .crumbs a:hover{color:var(--purple);}
   figure.shot figcaption{font-size:13.5px;color:var(--muted);text-align:center;padding:10px 14px;}
   /* TOC */
   .toc{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px 26px;margin:30px 0;}
@@ -212,14 +212,26 @@
   .ilinks a{font-family:var(--f-display);font-weight:600;font-size:14px;color:var(--purple);background:#fff;border:1px solid var(--line-2);border-radius:100px;padding:7px 14px;}
   .ilinks a:hover{border-color:var(--purple);}
   /* author */
-  .author{margin:46px 0 10px;background:var(--night);color:#fff;border-radius:24px;padding:32px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;}
-  .author img{width:108px;height:108px;border-radius:20px;object-fit:cover;object-position:50% 12%;border:1px solid var(--night-line);}
-  .author .k{font-family:var(--f-display);font-weight:700;font-size:12px;letter-spacing:.06em;color:#D9C8FF;text-transform:uppercase;}
-  .author h3{font-size:23px;font-weight:900;color:#fff;margin:6px 0 8px;}
-  .author p{color:rgba(255,255,255,.74);font-size:15.5px;margin:0 0 16px;}
+  .author{margin:46px 0 10px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px 32px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;}
+  .author img{width:90px;height:90px;border-radius:50%;object-fit:cover;object-position:50% 12%;border:2px solid var(--line);}
+  .author .k{font-family:var(--f-display);font-weight:700;font-size:12px;letter-spacing:.06em;color:var(--purple);margin-bottom:2px;}
+  .author h3{font-size:20px;font-weight:900;color:var(--ink);margin:4px 0 8px;}
+  .author p{color:var(--soft);font-size:15px;margin:0 0 14px;line-height:1.7;}
   .author .links{display:flex;gap:10px;flex-wrap:wrap;}
-  .author .links a{display:inline-flex;align-items:center;gap:7px;font-family:var(--f-display);font-weight:700;font-size:14px;padding:9px 16px;border-radius:100px;border:1px solid rgba(255,255,255,.22);color:#fff;}
-  .author .links a.lead{background:var(--grad);border-color:transparent;}
+  .author .links a{display:inline-flex;align-items:center;gap:7px;font-family:var(--f-display);font-weight:700;font-size:14px;padding:9px 16px;border-radius:100px;border:1px solid var(--line-2);color:var(--ink);}
+  .author .links a:hover{border-color:var(--purple);color:var(--purple);}
+  .author .links a.lead{background:var(--grad);border-color:transparent;color:#fff;}
+  /* blockquote — Acjon style */
+  .bq{position:relative;padding:36px 24px 28px;margin:38px 0;text-align:center;}
+  .bq-mark{font-size:52px;line-height:1;color:var(--red);opacity:.25;margin-bottom:8px;}
+  .bq-text{font-family:var(--f-display);font-weight:700;font-size:21px;line-height:1.5;color:var(--ink);margin-bottom:12px;}
+  .bq-author{font-size:13px;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:8px;}
+  .bq-author::before{content:'';width:24px;height:1.5px;background:var(--muted);}
+  /* article tags */
+  .article-tags{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:40px 0 0;padding-top:24px;border-top:1px solid var(--line);}
+  .article-tags .label{font-size:14px;color:var(--soft);font-family:var(--f-display);font-weight:600;}
+  .article-tags .tag{font-size:13px;padding:6px 14px;border-radius:100px;border:1px solid var(--line-2);color:var(--soft);background:transparent;}
+  .article-tags .tag:hover{border-color:var(--purple);color:var(--purple);}
   .endcta{text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:42px 30px;margin:28px 0 50px;}
   .endcta h2{font-size:clamp(24px,3.6vw,34px);font-weight:900;margin-bottom:10px;}
   .endcta p{color:var(--soft);margin-bottom:22px;}
@@ -231,7 +243,7 @@
   .foot-brand img{height:40px;margin-bottom:16px;}
   .foot-brand p{color:rgba(255,255,255,.6);font-size:15.5px;max-width:300px;}
   .foot-social{display:flex;gap:10px;margin-top:18px;}
-  .foot-social a{width:38px;height:38px;border-radius:10px;border:1px solid var(--night-line);display:grid;place-items:center;color:rgba(255,255,255,.8);transition:background .2s,border-color .2s,color .2s,transform .2s;}
+  .foot-social a{width:44px;height:44px;border-radius:12px;border:1px solid var(--night-line);display:grid;place-items:center;color:rgba(255,255,255,.8);transition:background .2s,border-color .2s,color .2s,transform .2s;}
   .foot-social a:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.4);color:#fff;transform:translateY(-2px);}
   .foot-social svg{width:18px;height:18px;}
   .foot-col h4{font-family:var(--f-display);font-size:13px;letter-spacing:.06em;color:rgba(255,255,255,.5);text-transform:uppercase;margin-bottom:16px;font-weight:700;}
@@ -253,33 +265,45 @@
     .tbl{font-size:15px;}.tbl th,.tbl td{padding:11px 12px;}
   }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
+  :focus-visible{outline:3px solid rgba(123,47,190,.55);outline-offset:3px;border-radius:6px;}
+  .btn:active{transform:scale(.97);}
+  .skip-link{position:absolute;top:-100%;inset-inline-start:16px;z-index:200;background:var(--ink);color:#fff;font-family:var(--f-display);font-weight:700;font-size:15px;padding:12px 24px;border-radius:0 0 12px 12px;transition:top .25s var(--ease);}
+  .skip-link:focus{top:0;}
   </style>
 </head>
 <body>
-  <div id="progress"><span></span></div>
+  <a href="#article-content" class="skip-link">דלג לתוכן המאמר</a>
+  <div id="progress" aria-hidden="true"><span></span></div>
 
-  <header>
+  <header role="banner">
     <div class="nav-in">
       <a href="/" aria-label="Mula Digital"><img src="assets/logo-light.png" alt="Mula Digital" /></a>
       <nav class="nav-links">
         <a href="/">בית</a><a href="/blog">בלוג</a><a href="/portfolio">תיק עבודות</a><a href="/#about">אודות</a>
       </nav>
-      <a href="/#contact" class="btn btn-primary btn-sm">קבעו שיחת אבחון</a>
+      <a href="contact.html" class="btn btn-primary btn-sm">קבעו שיחת אבחון</a>
     </div>
   </header>
 
-  <section class="a-hero" style="background-image:url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1600&q=72&auto=format&fit=crop')">
-    <div class="a-hero-ov"></div>
-    <div class="wrap a-hero-in">
-      <div class="crumbs"><a href="/">בית</a> · <a href="/blog">בלוג</a> · אתרים</div>
-      <span class="a-cat">אתרים</span>
-      <h1 class="a-title">למה אתר יפה לא מספיק כדי להביא לקוחות<br><span class="gradient-text">(ומה באמת גורם לאתר להמיר פניות)</span></h1>
-      <div class="a-meta">
-        <span class="who"><img src="assets/moshe-black.jpg" alt="משה מולה" />משה מולה</span>
-        <span>·</span><span>18 דק׳ קריאה</span><span>·</span><span>מדריך עומק</span><span>·</span><span>עודכן יוני 2026</span>
-      </div>
+  <section class="a-hero-clean wrap">
+    <div class="crumbs"><a href="/">בית</a> · <a href="/blog">בלוג</a> · אתרים</div>
+    <span class="a-cat-clean">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+      אתרים
+    </span>
+    <h1 class="a-title-clean">למה אתר יפה לא מספיק כדי להביא לקוחות<br>(ומה באמת גורם לאתר להמיר פניות)</h1>
+    <div class="a-meta-clean">
+      <span class="who"><img src="assets/moshe-black.jpg" alt="משה מולה" />משה מולה</span>
+      <span class="sep-dot"></span><span>18 דק׳ קריאה</span>
+      <span class="sep-dot"></span><span>מדריך עומק</span>
+      <span class="sep-dot"></span><span>עודכן יוני 2026</span>
     </div>
   </section>
+  <div class="wrap">
+    <div class="feat-img">
+      <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=70&auto=format&fit=crop" alt="למה אתר יפה לא מספיק כדי להביא לקוחות" loading="eager" />
+    </div>
+  </div>
 
   <article class="wrap">
 
@@ -496,7 +520,7 @@
       <p style="font-size:13.5px;color:var(--muted);margin:14px 0 0;text-align:center">* הדגמה לפי הנחות סבירות. המספרים האמיתיים תלויים בתחום, בשוק ובאיכות התנועה.</p>
     </div>
 
-    <div class="midcta"><div><b>רוצה לדעת מה המספרים האמיתיים אצלך?</b><span>נעשה אבחון קצר ונראה כמה פניות האתר שלך מפספס.</span></div><a href="/#contact" class="btn btn-primary btn-sm">קבעו שיחת אבחון</a></div>
+    <div class="midcta"><div><b>רוצה לדעת מה המספרים האמיתיים אצלך?</b><span>נעשה אבחון קצר ונראה כמה פניות האתר שלך מפספס.</span></div><a href="contact.html" class="btn btn-primary btn-sm">קבעו שיחת אבחון</a></div>
 
     <h2 id="s18"><span class="n">18.</span> איך אני בודק אתר חדש של לקוח</h2>
     <p>כשבעל עסק פונה אליי, אני לא מתחיל מהעיצוב. אני עובר תהליך בדיקה מסודר — וזה בדיוק מה שמבדיל בין ניחוש לאבחון אמיתי. הנה השיטה שלי, שלב אחרי שלב:</p>
@@ -660,6 +684,15 @@
     <p>האתר הוא חוליה מרכזית בשרשרת — אבל הוא לא השרשרת כולה. כשכל החלקים מחוברים, אתה מפסיק לרדוף אחרי לקוחות, והם מתחילים להגיע אליך.</p>
     <p>ואם העסק שלך טוב במציאות אבל חלש בדיגיטל — זה בדיוק הזמן לסגור את הפער.</p>
 
+    <div class="article-tags">
+      <span class="label">תגיות:</span>
+      <span class="tag">אתרים</span>
+      <span class="tag">SEO</span>
+      <span class="tag">המרה</span>
+      <span class="tag">שיווק דיגיטלי</span>
+      <span class="tag">B2B</span>
+    </div>
+
     <!-- author -->
     <div class="author">
       <img src="assets/moshe-black.jpg" alt="משה מולה, מייסד Mula Digital" loading="lazy" />
@@ -668,7 +701,7 @@
         <h3>משה מולה</h3>
         <p>מייסד Mula Digital ואסטרטג צמיחה. מעל 20 שנות ניסיון בשיווק ומכירות, בונה לעסקים מקומיים, חברות B2B ותעשייה מערכות צמיחה דיגיטלית שמחברות אסטרטגיה, אתר, SEO, קמפיינים ואוטומציה — כדי להביא יותר לקוחות, לא רק אתר יפה. כל מה שכתוב במדריך הזה מגיע מהשטח, מעבודה אמיתית עם עשרות עסקים.</p>
         <div class="links">
-          <a class="lead" href="/#contact">קבעו שיחת אבחון</a>
+          <a class="lead" href="contact.html">קבעו שיחת אבחון</a>
           <a href="tel:0508249824">050-824-9824</a>
           <a href="mailto:Moshe@muladigital.co.il">אימייל</a>
         </div>
@@ -679,7 +712,7 @@
       <h2>אם העסק שלך טוב — הגיע הזמן שגם האתר יראה את זה.</h2>
       <p>נקבע שיחת אבחון קצרה ונבין איפה אתה מפסיד פניות — בלי התחייבות.</p>
       <div class="row">
-        <a href="/#contact" class="btn btn-primary">קבעו שיחת אבחון</a>
+        <a href="contact.html" class="btn btn-primary">קבעו שיחת אבחון</a>
         <a href="/blog" class="btn btn-ghost">למאמרים נוספים</a>
       </div>
     </div>
@@ -699,7 +732,7 @@
           </div>
         </div>
         <div class="foot-col"><h4>ניווט</h4>
-          <a href="/">בית</a><a href="/#system">שיטה</a><a href="/portfolio">תיק עבודות</a><a href="/blog">בלוג</a><a href="/#about">אודות</a><a href="/#contact">צור קשר</a>
+          <a href="/">בית</a><a href="/#system">שיטה</a><a href="/portfolio">תיק עבודות</a><a href="/blog">בלוג</a><a href="/#about">אודות</a><a href="contact.html">צור קשר</a>
         </div>
         <div class="foot-col"><h4>שירותים</h4>
           <a href="/#services">בניית אתרים ומיתוג</a><a href="/#services">SEO וקידום אורגני</a><a href="/#services">קמפיינים ממומנים</a><a href="/#services">אוטומציות AI ו-CRM</a>
@@ -718,9 +751,64 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script>
   (function(){
+    'use strict';
+    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var isTouch=window.matchMedia('(hover: none)').matches;
     document.getElementById('y').textContent=new Date().getFullYear();
+
+    /* --- GSAP animations --- */
+    if(window.gsap&&window.ScrollTrigger&&!reduce){
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Hero title fade-in (no char split — breaks RTL centered text)
+      var title=document.querySelector('.a-title-clean');
+      if(title){
+        gsap.from(title,{opacity:0,y:30,duration:.7,ease:'power2.out',delay:.2});
+      }
+
+      // Hero entrance
+      var heroTl=gsap.timeline({defaults:{ease:'power3.out',duration:.7}});
+      heroTl.from('.crumbs',{y:20,opacity:0,duration:.4})
+        .from('.a-cat-clean',{scale:0,opacity:0,ease:'back.out(1.7)',duration:.4},'<0.1')
+        .from('.a-meta-clean',{y:20,opacity:0},'<0.25');
+
+      // Article H2 text split on scroll
+      gsap.utils.toArray('article h2').forEach(function(h2){
+        var raw2=h2.textContent;
+        h2.innerHTML=raw2.split('').map(function(c){
+          return c===' '?' ':'<span class="ch" style="display:inline-block">'+c+'</span>';
+        }).join('');
+        gsap.from(h2.querySelectorAll('.ch'),{opacity:0,y:20,rotateX:-90,duration:.35,stagger:.012,ease:'power2.out',
+          scrollTrigger:{trigger:h2,start:'top 88%',once:true}});
+      });
+
+      // Reasons list stagger
+      gsap.from('.reasons li',{x:60,opacity:0,duration:.5,stagger:.1,ease:'power2.out',
+        scrollTrigger:{trigger:'.reasons',start:'top 80%',once:true}});
+      // Callouts
+      gsap.utils.toArray('.callout').forEach(function(el){
+        gsap.from(el,{y:30,opacity:0,duration:.6,ease:'power2.out',
+          scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+      });
+      // End CTA
+      gsap.from('.endcta',{y:40,opacity:0,duration:.7,ease:'power2.out',
+        scrollTrigger:{trigger:'.endcta',start:'top 85%',once:true}});
+
+      // Magnetic buttons
+      if(!isTouch){
+        document.querySelectorAll('.btn-primary, .btn-ghost, a.endcta-btn').forEach(function(b){
+          b.addEventListener('mousemove',function(e){
+            var r=b.getBoundingClientRect();
+            b.style.transform='translate('+((e.clientX-(r.left+r.width/2))*.15)+'px,'+((e.clientY-(r.top+r.height/2))*.25)+'px)';
+          });
+          b.addEventListener('mouseleave',function(){b.style.transform='';});
+        });
+      }
+    }
     // progress bar
     var bar=document.querySelector('#progress span');
     addEventListener('scroll',function(){var h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});

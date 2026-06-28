@@ -34,7 +34,7 @@
 
   <style>
   :root{
-    --bg:#FFFFFF;--ink:#0E0E12;--soft:#3f3f46;--muted:#8A8A92;--line:#ECECEC;--line-2:#E2E2E2;
+    --bg:#FFFFFF;--ink:#0E0E12;--soft:#3f3f46;--muted:#71717A;--line:#ECECEC;--line-2:#E2E2E2;
     --surface:#FAFAFA;--surface-2:#F4F4F6;--night:#0B0B0F;--night-2:#15151c;--night-line:#262630;
     --red:#E8003D;--purple:#7B2FBE;--grad:linear-gradient(120deg,#E8003D,#7B2FBE);--grad-soft:linear-gradient(120deg,rgba(232,0,61,.1),rgba(123,47,190,.12));
     --f-display:'Heebo',system-ui,sans-serif;--f-body:'Assistant',system-ui,sans-serif;
@@ -42,7 +42,7 @@
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%;}
-  body{font-family:var(--f-body);color:var(--ink);background:var(--bg);font-size:19px;line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  body{font-family:var(--f-body);color:var(--ink);background:var(--bg);font-size:19px;line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden;touch-action:manipulation;}
   h1,h2,h3,h4{font-family:var(--f-display);line-height:1.16;letter-spacing:-.02em;}
   a{color:inherit;text-decoration:none;}
   img{max-width:100%;display:block;}
@@ -108,7 +108,7 @@
   .arrow-line .tag{font-family:var(--f-display);font-weight:800;font-size:16px;background:var(--grad);color:#fff;border-radius:100px;padding:10px 20px;}
   /* process steps */
   .steps{display:grid;gap:14px;counter-reset:st;}
-  .step{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 26px 24px 80px;counter-increment:st;transition:border-color .25s,box-shadow .25s,transform .25s;}
+  .step{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px 26px;padding-inline-start:80px;counter-increment:st;transition:border-color .25s,box-shadow .25s,transform .25s;}
   .step:hover{border-color:var(--line-2);box-shadow:var(--shadow-md);transform:translateY(-2px);}
   .step::before{content:counter(st);position:absolute;inset-inline-start:22px;top:22px;width:42px;height:42px;border-radius:13px;background:var(--grad-soft);border:1px solid rgba(123,47,190,.18);color:var(--purple);font-family:var(--f-display);font-weight:900;font-size:18px;display:grid;place-items:center;}
   .step h3{font-size:20px;font-weight:800;margin-bottom:6px;}
@@ -186,7 +186,7 @@
   .foot-brand img{height:40px;margin-bottom:16px;}
   .foot-brand p{color:rgba(255,255,255,.6);font-size:15.5px;max-width:300px;}
   .foot-social{display:flex;gap:10px;margin-top:18px;}
-  .foot-social a{width:38px;height:38px;border-radius:10px;border:1px solid var(--night-line);display:grid;place-items:center;color:rgba(255,255,255,.8);transition:background .2s,border-color .2s,color .2s,transform .2s;}
+  .foot-social a{width:44px;height:44px;border-radius:12px;border:1px solid var(--night-line);display:grid;place-items:center;color:rgba(255,255,255,.8);transition:background .2s,border-color .2s,color .2s,transform .2s;}
   .foot-social a:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.4);color:#fff;transform:translateY(-2px);}
   .foot-social svg{width:18px;height:18px;}
   .foot-col h4{font-family:var(--f-display);font-size:13px;letter-spacing:.06em;color:rgba(255,255,255,.5);text-transform:uppercase;margin-bottom:16px;font-weight:700;}
@@ -210,18 +210,23 @@
     .foot-top{grid-template-columns:1fr;}.foot-brand{grid-column:auto;}
   }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important;}.reveal{opacity:1;transform:none;}}
+  :focus-visible{outline:3px solid rgba(123,47,190,.55);outline-offset:3px;border-radius:6px;}
+  .btn:active{transform:scale(.97);}
+  .skip-link{position:absolute;top:-100%;inset-inline-start:16px;z-index:200;background:var(--ink);color:#fff;font-family:var(--f-display);font-weight:700;font-size:15px;padding:12px 24px;border-radius:0 0 12px 12px;transition:top .25s var(--ease);}
+  .skip-link:focus{top:0;}
   </style>
 </head>
 <body>
-  <div id="progress"><span></span></div>
+  <a href="#about-hero" class="skip-link">דלג לתוכן הראשי</a>
+  <div id="progress" aria-hidden="true"><span></span></div>
 
-  <header>
+  <header role="banner">
     <div class="nav-in">
       <a href="/" aria-label="Mula Digital"><img class="logo" src="assets/logo-light.png" alt="Mula Digital" /></a>
       <nav class="nav-links">
-        <a href="/">בית</a><a href="/portfolio">תיק עבודות</a><a href="/blog">בלוג</a><a href="about.html" class="active">אודות</a><a href="/#contact">צור קשר</a>
+        <a href="/">בית</a><a href="/portfolio">תיק עבודות</a><a href="/blog">בלוג</a><a href="about.html" class="active">אודות</a><a href="contact.html">צור קשר</a>
       </nav>
-      <a href="/#contact" class="btn btn-primary btn-sm">קבעו שיחת אבחון</a>
+      <a href="contact.html" class="btn btn-primary btn-sm">קבעו שיחת אבחון</a>
     </div>
   </header>
 
@@ -233,7 +238,7 @@
         <h1>רוב בעלי העסקים לא צריכים עוד אתר.<br><span class="gradient-text">הם צריכים יותר לקוחות.</span><span class="sm">זו בדיוק הסיבה שהקמתי את Mula Digital.</span></h1>
         <p class="intro">אני לא בונה אתרים יפים בשביל היופי. אני בונה לעסק מערכת שלמה שמכניסה עבודה — ומאחורי זה עומדות 20 שנה של מכירות מהשטח.</p>
         <div class="cta-row">
-          <a href="/#contact" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>בוא נדבר שעה — בלי לחץ</a>
+          <a href="contact.html" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>בוא נדבר שעה — בלי לחץ</a>
           <a href="https://www.linkedin.com/in/moshemula/" target="_blank" rel="noopener" class="btn btn-ghost">לינקדאין</a>
         </div>
       </div>
@@ -458,7 +463,7 @@
           </div>
         </div>
         <div class="foot-col"><h4>ניווט</h4>
-          <a href="/">בית</a><a href="/portfolio">תיק עבודות</a><a href="/blog">בלוג</a><a href="about.html">אודות</a><a href="/#contact">צור קשר</a>
+          <a href="/">בית</a><a href="/portfolio">תיק עבודות</a><a href="/blog">בלוג</a><a href="about.html">אודות</a><a href="contact.html">צור קשר</a>
         </div>
         <div class="foot-col"><h4>שירותים</h4>
           <a href="/#services">בניית אתרים ומיתוג</a><a href="/#services">SEO וקידום אורגני</a><a href="/#services">קמפיינים ממומנים</a><a href="/#services">אוטומציות AI ו-CRM</a>
@@ -477,13 +482,167 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script>
   (function(){
+    'use strict';
+    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var isTouch=window.matchMedia('(hover: none)').matches;
     document.getElementById('y').textContent=new Date().getFullYear();
     var bar=document.querySelector('#progress span');
     addEventListener('scroll',function(){var h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
-    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+    if(!window.gsap||!window.ScrollTrigger||reduce){
+      document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});
+      return;
+    }
+    gsap.registerPlugin(ScrollTrigger);
+    // Override CSS .reveal so GSAP controls visibility
+    gsap.set('.reveal',{opacity:1,y:0});
+
+    /* --- Hero stagger --- */
+    var heroTl=gsap.timeline({defaults:{ease:'power3.out',duration:.7}});
+    heroTl.from('.hero .eyebrow',{y:30,opacity:0})
+      .from('.hero h1',{y:40,opacity:0,duration:.8},'<0.15')
+      .from('.hero .intro',{y:30,opacity:0},'<0.2')
+      .from('.hero .cta-row',{y:20,opacity:0},'<0.2')
+      .from('.hero-photo .ph',{x:60,opacity:0,duration:1,ease:'power2.out'},'<0.1')
+      .from('.hero-photo .badge',{scale:0,opacity:0,ease:'back.out(1.7)',duration:.5},'<0.4');
+
+    /* --- Section reveals with stagger --- */
+    gsap.utils.toArray('.s-head').forEach(function(head){
+      gsap.from(head.children,{y:30,opacity:0,duration:.6,stagger:.12,ease:'power2.out',
+        scrollTrigger:{trigger:head,start:'top 85%',once:true}});
+    });
+
+    /* --- Steps sequential entrance --- */
+    gsap.from('.step',{x:80,opacity:0,duration:.6,stagger:.15,ease:'power2.out',
+      scrollTrigger:{trigger:'.steps',start:'top 80%',once:true}});
+
+    /* --- Number cards: scale + stagger --- */
+    gsap.from('.num',{scale:.7,opacity:0,duration:.5,stagger:.1,ease:'back.out(1.4)',
+      scrollTrigger:{trigger:'.nums',start:'top 80%',once:true}});
+
+    /* --- Number counting animation --- */
+    document.querySelectorAll('.num b').forEach(function(el){
+      var raw=el.textContent.trim();
+      var match=raw.match(/^(\d+)/);
+      if(match){
+        var target=parseInt(match[1]);
+        var suffix=raw.replace(match[1],'');
+        var obj={v:0};
+        gsap.to(obj,{v:target,duration:1.8,ease:'power2.out',
+          scrollTrigger:{trigger:el,start:'top 85%',once:true},
+          onUpdate:function(){el.textContent=Math.round(obj.v)+suffix;}});
+      }
+    });
+
+    /* --- Who-grid cards stagger --- */
+    gsap.from('.who',{y:40,opacity:0,duration:.5,stagger:.06,ease:'power2.out',
+      scrollTrigger:{trigger:'.who-grid',start:'top 80%',once:true}});
+
+    /* --- Do/Don't cards --- */
+    gsap.from('.dd .card',{y:50,opacity:0,duration:.7,stagger:.2,ease:'power2.out',
+      scrollTrigger:{trigger:'.dd',start:'top 80%',once:true}});
+
+    /* --- Stay values grid --- */
+    gsap.from('.stay .v',{y:30,opacity:0,duration:.5,stagger:.1,ease:'power2.out',
+      scrollTrigger:{trigger:'.stay',start:'top 85%',once:true}});
+
+    /* --- Timeline nodes --- */
+    gsap.from('.ptl .node',{y:40,opacity:0,duration:.5,stagger:.08,ease:'power2.out',
+      scrollTrigger:{trigger:'.ptl',start:'top 85%',once:true}});
+
+    /* --- Personal cards --- */
+    gsap.from('.pi',{y:40,opacity:0,duration:.5,stagger:.1,ease:'power2.out',
+      scrollTrigger:{trigger:'.personal',start:'top 85%',once:true}});
+
+    /* --- Outcomes grid --- */
+    gsap.from('.get .g',{scale:.8,opacity:0,duration:.5,stagger:.08,ease:'back.out(1.3)',
+      scrollTrigger:{trigger:'.get',start:'top 85%',once:true}});
+
+    /* --- Name card --- */
+    gsap.from('.name-card',{y:60,opacity:0,duration:.8,ease:'power2.out',
+      scrollTrigger:{trigger:'.name-card',start:'top 85%',once:true}});
+
+    /* --- Final CTA --- */
+    gsap.from('.finalcta',{y:50,opacity:0,duration:.8,ease:'power2.out',
+      scrollTrigger:{trigger:'.finalcta',start:'top 85%',once:true}});
+
+    /* --- Prose big text highlight --- */
+    gsap.utils.toArray('.prose .big').forEach(function(el){
+      gsap.from(el,{y:20,opacity:0,duration:.6,ease:'power2.out',
+        scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+    });
+
+    /* --- Generic reveals (anything still with .reveal) --- */
+    gsap.utils.toArray('.reveal').forEach(function(el){
+      gsap.from(el,{y:22,opacity:0,duration:.7,ease:'power2.out',
+        scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+    });
+
+    /* --- Image reveal mask (hero photo wipe) --- */
+    var ph=document.querySelector('.hero-photo .ph');
+    if(ph){
+      ph.style.clipPath='inset(0 100% 0 0)';
+      gsap.to(ph,{clipPath:'inset(0 0% 0 0)',duration:1,ease:'power3.inOut',delay:.3});
+    }
+
+    /* --- Text split on section H2s --- */
+    function splitChars(el){
+      var html=el.innerHTML;
+      var result='';
+      var inTag=false;
+      for(var i=0;i<html.length;i++){
+        var c=html[i];
+        if(c==='<')inTag=true;
+        if(inTag){result+=c;if(c==='>')inTag=false;continue;}
+        if(c===' '||c==='\n'){result+=c;continue;}
+        result+='<span class="ch" style="display:inline-block">'+c+'</span>';
+      }
+      el.innerHTML=result;
+      return el.querySelectorAll('.ch');
+    }
+    gsap.utils.toArray('.sec .s-head h2').forEach(function(h2){
+      var chars=splitChars(h2);
+      gsap.from(chars,{opacity:0,y:20,rotateX:-90,duration:.4,stagger:.015,ease:'power2.out',
+        scrollTrigger:{trigger:h2,start:'top 85%',once:true}});
+    });
+
+    /* --- Parallax on sections --- */
+    gsap.utils.toArray('.sec.dark').forEach(function(sec){
+      gsap.to(sec,{backgroundPositionY:'30%',ease:'none',
+        scrollTrigger:{trigger:sec,start:'top bottom',end:'bottom top',scrub:true}});
+    });
+
+    /* --- Hover tilt on cards --- */
+    if(!isTouch){
+      document.querySelectorAll('.who, .pi, .num').forEach(function(card){
+        card.addEventListener('mousemove',function(e){
+          var r=card.getBoundingClientRect();
+          var x=(e.clientX-r.left)/r.width-.5;
+          var y=(e.clientY-r.top)/r.height-.5;
+          card.style.transform='perspective(600px) rotateY('+x*8+'deg) rotateX('+(-y*8)+'deg) translateY(-3px)';
+        });
+        card.addEventListener('mouseleave',function(){
+          card.style.transform='';card.style.transition='transform .4s ease';
+          setTimeout(function(){card.style.transition='';},400);
+        });
+      });
+    }
+
+    /* --- Magnetic buttons --- */
+    if(!isTouch){
+      document.querySelectorAll('.btn-primary, .btn-ghost').forEach(function(b){
+        b.addEventListener('mousemove',function(e){
+          var r=b.getBoundingClientRect();
+          b.style.transform='translate('+((e.clientX-(r.left+r.width/2))*.15)+'px,'+((e.clientY-(r.top+r.height/2))*.25)+'px)';
+        });
+        b.addEventListener('mouseleave',function(){b.style.transform='';});
+      });
+    }
+
   })();
   </script>
 </body>

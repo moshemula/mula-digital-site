@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>צור קשר | Mula Digital — משה מולה</title>
+  <meta name="description" content="רוצים לדבר על העסק? השאירו פרטים, שלחו הודעה או התקשרו. משה מולה זמין א׳–ה׳ 8:30–18:00. משרד: אלי הורוביץ 27, רחובות." />
+  <meta name="author" content="משה מולה · Mula Digital" />
+  <meta name="theme-color" content="#0B0B0F" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="canonical" href="https://mosh123.netlify.app/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:site_name" content="Mula Digital" />
+  <meta property="og:title" content="צור קשר | Mula Digital" />
+  <meta property="og:description" content="רוצים לדבר על העסק? השאירו פרטים, התקשרו או שלחו הודעה בוואטסאפ. משה מולה זמין א׳–ה׳ 8:30–18:00." />
+  <meta property="og:image" content="https://mosh123.netlify.app/assets/moshe-black.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Mula Digital",
+    "image":"https://mosh123.netlify.app/assets/logo-dark.png",
+    "url":"https://mosh123.netlify.app/",
+    "telephone":"+972-50-824-9824",
+    "email":"Moshe@muladigital.co.il",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"אלי הורוביץ 27",
+      "addressLocality":"רחובות",
+      "addressCountry":"IL"
+    },
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday","Monday","Tuesday","Wednesday","Thursday"],"opens":"08:30","closes":"18:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"00:00","closes":"00:00"}
+    ],
+    "founder":{
+      "@type":"Person",
+      "name":"משה מולה",
+      "jobTitle":"מייסד ואסטרטג צמיחה"
+    },
+    "sameAs":["https://www.linkedin.com/in/moshemula/"]
+  }
+  </script>
+
+  <style>
+  :root{
+    --bg:#FFFFFF;--ink:#0E0E12;--soft:#3f3f46;--muted:#71717A;--line:#ECECEC;--line-2:#E2E2E2;
+    --surface:#FAFAFA;--surface-2:#F4F4F6;--night:#0B0B0F;--night-2:#15151c;--night-line:#262630;
+    --red:#E8003D;--purple:#7B2FBE;--grad:linear-gradient(120deg,#E8003D,#7B2FBE);--grad-soft:linear-gradient(120deg,rgba(232,0,61,.1),rgba(123,47,190,.12));
+    --f-display:'Heebo',system-ui,sans-serif;--f-body:'Assistant',system-ui,sans-serif;
+    --ease:cubic-bezier(.22,.61,.36,1);--shadow-sm:0 4px 14px rgba(17,17,17,.05);--shadow-md:0 18px 50px rgba(17,17,17,.10);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%;}
+  body{font-family:var(--f-body);color:var(--ink);background:var(--bg);font-size:19px;line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden;touch-action:manipulation;}
+  h1,h2,h3,h4{font-family:var(--f-display);line-height:1.16;letter-spacing:-.02em;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  ::selection{background:rgba(123,47,190,.16);}
+  .wrap{max-width:1000px;margin-inline:auto;padding-inline:24px;}
+  .gradient-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+  /* progress */
+  #progress{position:fixed;top:0;inset-inline:0;height:3px;z-index:60;background:transparent;}
+  #progress span{display:block;height:100%;width:0;background:var(--grad);}
+  /* nav */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--line);}
+  .nav-in{max-width:1100px;margin-inline:auto;display:flex;align-items:center;justify-content:space-between;height:66px;padding-inline:24px;}
+  .nav-in .logo{height:30px;}
+  .nav-links{display:flex;gap:4px;}
+  .nav-links a{font-family:var(--f-display);font-weight:600;font-size:15px;color:var(--soft);padding:8px 13px;border-radius:100px;transition:background .2s,color .2s;}
+  .nav-links a:hover,.nav-links a.active{color:var(--ink);background:rgba(123,47,190,.08);}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--f-display);font-weight:700;font-size:16px;padding:14px 26px;border-radius:100px;cursor:pointer;border:1px solid transparent;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .2s,border-color .2s;}
+  .btn svg{width:18px;height:18px;}
+  .btn-primary{background:var(--grad);color:#fff;box-shadow:0 12px 30px rgba(232,0,61,.22);}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 42px rgba(123,47,190,.32);}
+  .btn-ghost{background:#fff;border-color:var(--line-2);color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--purple);color:var(--purple);}
+  .btn-sm{padding:10px 18px;font-size:14px;}
+
+  /* HERO — image bg with overlay */
+  .c-hero{position:relative;background:url('assets/moshe-black.jpg') center/cover no-repeat;min-height:clamp(280px,38vw,380px);display:flex;align-items:flex-end;}
+  .c-hero-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,15,.55) 0%,rgba(11,11,15,.35) 35%,rgba(11,11,15,.86) 100%);}
+  .c-hero-in{position:relative;z-index:1;padding:40px 24px 38px;width:100%;max-width:1100px;margin-inline:auto;}
+  .crumbs{font-size:14px;color:rgba(255,255,255,.78);margin-bottom:16px;font-family:var(--f-display);font-weight:600;}
+  .crumbs a{color:rgba(255,255,255,.78);}
+  .crumbs a:hover{color:#fff;}
+  h1.c-title{font-size:clamp(30px,4.6vw,48px);font-weight:900;margin:0;line-height:1.12;color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.3);}
+  .c-sub{color:rgba(255,255,255,.78);font-size:clamp(17px,2vw,20px);margin-top:12px;max-width:560px;}
+
+  /* MAIN LAYOUT: form + sidebar */
+  .contact-body{padding:50px 0 0;}
+  .contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:start;}
+
+  /* FORM */
+  .form-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:36px 34px;}
+  .form-card h2{font-size:24px;font-weight:900;margin-bottom:6px;}
+  .form-card .form-sub{color:var(--soft);font-size:16px;margin-bottom:28px;}
+  .field{margin-bottom:20px;}
+  .field label{display:block;font-family:var(--f-display);font-weight:700;font-size:15px;margin-bottom:7px;color:var(--ink);}
+  .field label .req{color:var(--red);margin-inline-start:2px;}
+  .field input,.field select,.field textarea{width:100%;font-family:var(--f-body);font-size:17px;padding:13px 16px;border:1px solid var(--line-2);border-radius:12px;background:var(--surface);color:var(--ink);transition:border-color .2s,box-shadow .2s;outline:none;-webkit-appearance:none;appearance:none;}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--purple);box-shadow:0 0 0 3px rgba(123,47,190,.12);}
+  .field textarea{resize:vertical;min-height:130px;}
+  .field select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%2371717A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:left 14px center;padding-inline-end:16px;padding-inline-start:40px;}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .form-submit{margin-top:8px;}
+  .form-submit .btn{width:100%;min-height:52px;font-size:17px;}
+  .form-note{text-align:center;color:var(--muted);font-size:13.5px;margin-top:14px;}
+
+  /* SUCCESS MESSAGE */
+  .form-success{display:none;text-align:center;padding:40px 20px;}
+  .form-success.show{display:block;}
+  .form-success .ic{width:64px;height:64px;border-radius:50%;background:var(--grad);display:grid;place-items:center;margin:0 auto 18px;}
+  .form-success .ic svg{width:32px;height:32px;stroke:#fff;}
+  .form-success h3{font-size:22px;font-weight:900;margin-bottom:8px;}
+  .form-success p{color:var(--soft);font-size:17px;}
+
+  /* SIDEBAR — contact cards */
+  .sidebar{}
+  .info-card{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 24px;margin-bottom:14px;transition:border-color .25s,transform .25s,box-shadow .25s;}
+  .info-card:hover{border-color:var(--purple);transform:translateY(-2px);box-shadow:var(--shadow-md);}
+  .info-card .ic{flex:none;width:48px;height:48px;border-radius:13px;background:var(--grad-soft);display:grid;place-items:center;}
+  .info-card .ic svg{width:24px;height:24px;stroke:var(--purple);}
+  .info-card .ic.wa svg{stroke:none;fill:var(--purple);}
+  .info-card h3{font-size:15px;font-weight:800;margin-bottom:3px;color:var(--ink);}
+  .info-card p{font-size:16px;color:var(--soft);margin:0;}
+  .info-card a.val{font-family:var(--f-display);font-weight:700;font-size:17px;color:var(--ink);display:block;transition:color .2s;}
+  .info-card a.val:hover{color:var(--purple);}
+
+  /* HOURS CARD */
+  .hours-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;margin-bottom:14px;}
+  .hours-card h3{font-size:16px;font-weight:800;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+  .hours-card h3 svg{width:20px;height:20px;stroke:var(--purple);}
+  .hours-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);font-size:16px;}
+  .hours-row:last-child{border-bottom:none;}
+  .hours-row .day{font-family:var(--f-display);font-weight:700;color:var(--ink);}
+  .hours-row .time{color:var(--soft);}
+  .hours-row.closed .time{color:var(--red);font-weight:600;}
+
+  /* MAP CARD */
+  .map-card{background:var(--night);border-radius:18px;padding:28px;color:#fff;position:relative;overflow:hidden;}
+  .map-card::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 130% at 12% 0%,rgba(232,0,61,.25),transparent 56%),radial-gradient(60% 130% at 90% 100%,rgba(123,47,190,.3),transparent 56%);}
+  .map-card>*{position:relative;z-index:1;}
+  .map-card h3{font-size:17px;font-weight:800;margin-bottom:6px;}
+  .map-card p{color:rgba(255,255,255,.75);font-size:16px;margin-bottom:16px;}
+  .map-card .btn-map{display:inline-flex;align-items:center;gap:9px;font-family:var(--f-display);font-weight:700;font-size:15px;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:12px 22px;border-radius:100px;transition:background .2s,transform .2s;}
+  .map-card .btn-map:hover{background:rgba(255,255,255,.2);transform:translateY(-2px);}
+  .map-card .btn-map svg{width:18px;height:18px;stroke:#fff;}
+
+  /* BOTTOM CTA */
+  .bottom-cta{text-align:center;padding:60px 24px;margin-top:50px;}
+  .bottom-cta h2{font-size:clamp(24px,3.6vw,36px);font-weight:900;margin-bottom:12px;}
+  .bottom-cta p{color:var(--soft);font-size:18px;max-width:500px;margin-inline:auto;margin-bottom:24px;}
+  .bottom-cta .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+
+  /* FOOTER */
+  footer.site{background:var(--night);color:#fff;padding:64px 0 34px;}
+  footer.site .fwrap{max-width:1100px;margin-inline:auto;padding-inline:24px;}
+  .foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px;}
+  .foot-brand img{height:40px;margin-bottom:16px;}
+  .foot-brand p{color:rgba(255,255,255,.6);font-size:15.5px;max-width:300px;}
+  .foot-social{display:flex;gap:10px;margin-top:18px;}
+  .foot-social a{width:44px;height:44px;border-radius:12px;border:1px solid var(--night-line);display:grid;place-items:center;color:rgba(255,255,255,.8);transition:background .2s,border-color .2s,color .2s,transform .2s;}
+  .foot-social a:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.4);color:#fff;transform:translateY(-2px);}
+  .foot-social svg{width:18px;height:18px;}
+  .foot-col h4{font-family:var(--f-display);font-size:13px;letter-spacing:.06em;color:rgba(255,255,255,.65);text-transform:uppercase;margin-bottom:16px;font-weight:700;}
+  .foot-col a,.foot-col span{display:block;color:rgba(255,255,255,.82);font-size:15.5px;margin-bottom:11px;transition:color .2s;}
+  .foot-col a:hover{color:#fff;}
+  .foot-contact .hours{color:rgba(255,255,255,.65);font-size:14.5px;line-height:1.7;margin-top:4px;}
+  .foot-contact .hours b{display:block;color:rgba(255,255,255,.92);font-family:var(--f-display);font-size:13px;letter-spacing:.04em;margin-bottom:3px;}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:48px;padding-top:24px;border-top:1px solid var(--night-line);color:rgba(255,255,255,.6);font-size:14px;}
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+  .reveal.in{opacity:1;transform:none;}
+  /* responsive */
+  @media(max-width:900px){
+    .contact-grid{grid-template-columns:1fr;gap:36px;}
+    .foot-top{grid-template-columns:1fr 1fr;gap:30px;}.foot-brand{grid-column:span 2;}
+  }
+  @media(max-width:620px){
+    .nav-links{display:none;}
+    .field-row{grid-template-columns:1fr;}
+    .form-card{padding:26px 20px;}
+    .foot-top{grid-template-columns:1fr;}.foot-brand{grid-column:auto;}
+  }
+  @media(max-width:390px){
+    .form-card{padding:22px 16px;border-radius:16px;}
+    .info-card{padding:18px 16px;}
+    .btn-primary{width:100%;justify-content:center;}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important;}.reveal{opacity:1;transform:none;}}
+  :focus-visible{outline:3px solid rgba(123,47,190,.55);outline-offset:3px;border-radius:6px;}
+  .btn:active{transform:scale(.97);}
+  .skip-link{position:absolute;top:-100%;inset-inline-start:16px;z-index:200;background:var(--ink);color:#fff;font-family:var(--f-display);font-weight:700;font-size:15px;padding:12px 24px;border-radius:0 0 12px 12px;transition:top .25s var(--ease);}
+  .skip-link:focus{top:0;}
+  </style>
+</head>
+<body>
+  <a href="#contact-main" class="skip-link">דלג לתוכן הראשי</a>
+  <div id="progress" aria-hidden="true"><span></span></div>
+
+  <header role="banner">
+    <div class="nav-in">
+      <a href="/" aria-label="Mula Digital"><img class="logo" src="assets/logo-light.png" alt="Mula Digital" /></a>
+      <nav class="nav-links">
+        <a href="/">בית</a><a href="/portfolio">תיק עבודות</a><a href="/blog">בלוג</a><a href="about.html">אודות</a><a href="contact.html" class="active">צור קשר</a>
+      </nav>
+      <a href="tel:0508249824" class="btn btn-primary btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>050-824-9824</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="c-hero">
+    <div class="c-hero-ov"></div>
+    <div class="c-hero-in">
+      <div class="crumbs"><a href="/">בית</a> / צור קשר</div>
+      <h1 class="c-title">רוצים לדעת איפה העסק מפסיד לקוחות?</h1>
+      <p class="c-sub">השאירו פרטים ונקבע שיחת אבחון קצרה. נבין מה המצב, מה חסר, ומה צריך לקרות.</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main id="contact-main" class="contact-body">
+    <div class="wrap">
+      <div class="contact-grid">
+
+        <!-- FORM -->
+        <div class="form-card reveal">
+          <h2>השאירו פרטים</h2>
+          <p class="form-sub">אחזור אליכם תוך יום עסקים אחד.</p>
+
+          <form id="contactForm" action="https://formsubmit.co/Moshe@muladigital.co.il" method="POST" data-netlify="true" name="contact" netlify-honeypot="bot-field">
+            <!-- FormSubmit settings -->
+            <input type="hidden" name="_subject" value="פנייה חדשה מהאתר — Mula Digital" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://mosh123.netlify.app/contact.html#thanks" />
+            <!-- Netlify honeypot -->
+            <p style="display:none"><label>אל תמלאו: <input name="bot-field" /></label></p>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="name">שם מלא <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" required autocomplete="name" placeholder="למשל: ישראל ישראלי" />
+              </div>
+              <div class="field">
+                <label for="phone">טלפון <span class="req" aria-hidden="true">*</span></label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="050-0000000" dir="ltr" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">אימייל</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="your@email.com" dir="ltr" />
+            </div>
+
+            <div class="field">
+              <label for="service">מה מעניין אתכם?</label>
+              <select id="service" name="service">
+                <option value="" selected>בחרו שירות (אופציונלי)</option>
+                <option value="אתר שיווקי">אתר שיווקי / דף נחיתה</option>
+                <option value="SEO וקידום אורגני">SEO וקידום אורגני</option>
+                <option value="קמפיינים ממומנים">קמפיינים ממומנים (גוגל / מטא)</option>
+                <option value="אוטומציות ו-CRM">אוטומציות, AI ו-CRM</option>
+                <option value="מערכת צמיחה מלאה">מערכת צמיחה מלאה</option>
+                <option value="משהו אחר">משהו אחר</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">ספרו לי בכמה מילים <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" required placeholder="מה העסק שלכם, מה המצב היום, ומה הייתם רוצים שישתנה?"></textarea>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                שלחו הודעה
+              </button>
+            </div>
+            <p class="form-note">ללא התחייבות. פרטיכם לא יועברו לצד שלישי.</p>
+          </form>
+
+          <div id="formSuccess" class="form-success">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>ההודעה נשלחה</h3>
+            <p>תודה! אחזור אליכם בהקדם.<br>רוצים תשובה מיידית? שלחו הודעה בוואטסאפ.</p>
+            <a href="https://wa.me/972508249824" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:18px;">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              שלחו בוואטסאפ
+            </a>
+          </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+
+          <!-- Phone -->
+          <a href="tel:0508249824" class="info-card reveal">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <h3>טלפון</h3>
+              <span class="val" dir="ltr">050-824-9824</span>
+            </div>
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/972508249824" target="_blank" rel="noopener" class="info-card reveal">
+            <div class="ic wa">
+              <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            </div>
+            <div>
+              <h3>וואטסאפ</h3>
+              <p>שלחו הודעה — אני עונה מהר</p>
+            </div>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:Moshe@muladigital.co.il" class="info-card reveal">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            </div>
+            <div>
+              <h3>אימייל</h3>
+              <span class="val" dir="ltr">Moshe@muladigital.co.il</span>
+            </div>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/moshemula/" target="_blank" rel="noopener" class="info-card reveal">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <h3>לינקדאין</h3>
+              <p>בואו נתחבר</p>
+            </div>
+          </a>
+
+          <!-- Hours -->
+          <div class="hours-card reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              שעות פעילות
+            </h3>
+            <div class="hours-row"><span class="day">א׳ – ה׳</span><span class="time">8:30 – 18:00</span></div>
+            <div class="hours-row closed"><span class="day">שישי</span><span class="time">סגור</span></div>
+            <div class="hours-row closed"><span class="day">שבת</span><span class="time">סגור</span></div>
+          </div>
+
+          <!-- Map / Address -->
+          <div class="map-card reveal">
+            <h3>המשרד</h3>
+            <p>אלי הורוביץ 27, רחובות</p>
+            <a href="https://share.google/px8zW59yHP21QZPyc" target="_blank" rel="noopener" class="btn-map">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              פתחו בגוגל מפות
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM CTA -->
+    <div class="bottom-cta reveal">
+      <h2>מעדיפים לדבר?<br><span class="gradient-text">קצר, ממוקד, בלי סיבובים.</span></h2>
+      <p>שיחת אבחון קצרה שבה נבין איפה העסק שלכם מפסיד פניות — ומה אפשר לעשות עם זה.</p>
+      <div class="cta-row">
+        <a href="tel:0508249824" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          050-824-9824
+        </a>
+        <a href="https://wa.me/972508249824" target="_blank" rel="noopener" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          שלחו בוואטסאפ
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site">
+    <div class="fwrap">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <img src="assets/logo-dark.png" alt="הלוגו של Mula Digital" />
+          <p>לא עוד אתר. מערכת צמיחה אחת שמחברת אסטרטגיה, אתר, SEO, קמפיינים, AI, CRM ווואטסאפ — ומביאה לעסק יותר לקוחות.</p>
+          <div class="foot-social">
+            <a href="tel:0508249824" aria-label="טלפון"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+            <a href="mailto:Moshe@muladigital.co.il" aria-label="אימייל"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
+            <a href="https://wa.me/972508249824" aria-label="וואטסאפ" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+          </div>
+        </div>
+        <div class="foot-col"><h4>ניווט</h4>
+          <a href="/">בית</a><a href="/portfolio">תיק עבודות</a><a href="/blog">בלוג</a><a href="about.html">אודות</a><a href="contact.html">צור קשר</a>
+        </div>
+        <div class="foot-col"><h4>שירותים</h4>
+          <a href="/#services">בניית אתרים ומיתוג</a><a href="/#services">SEO וקידום אורגני</a><a href="/#services">קמפיינים ממומנים</a><a href="/#services">אוטומציות AI ו-CRM</a>
+        </div>
+        <div class="foot-col foot-contact"><h4>יצירת קשר</h4>
+          <a href="tel:0508249824">050-824-9824</a>
+          <a href="mailto:Moshe@muladigital.co.il">Moshe@muladigital.co.il</a>
+          <a href="https://share.google/px8zW59yHP21QZPyc" target="_blank" rel="noopener">אלי הורוביץ 27, רחובות</a>
+          <span class="hours"><b>שעות פעילות</b>א׳–ה׳ · 8:30–18:00<br>ו׳ ושבת · סגור</span>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© <span id="y"></span> Mula Digital · כל הזכויות שמורות.</span>
+        <span>בונים מערכות צמיחה לעסקים שרוצים יותר.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+  (function(){
+    'use strict';
+    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var isTouch=window.matchMedia('(hover: none)').matches;
+    document.getElementById('y').textContent=new Date().getFullYear();
+    var bar=document.querySelector('#progress span');
+    addEventListener('scroll',function(){var h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
+
+    /* --- GSAP animations --- */
+    if(window.gsap&&window.ScrollTrigger&&!reduce){
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.set('.reveal',{opacity:1,y:0});
+
+      // Hero text split
+      var title=document.querySelector('.c-title');
+      if(title){
+        var raw=title.textContent;
+        title.innerHTML=raw.split('').map(function(c){
+          return c===' '?' ':'<span class="ch" style="display:inline-block">'+c+'</span>';
+        }).join('');
+        gsap.from(title.querySelectorAll('.ch'),{opacity:0,y:30,rotateX:-90,duration:.4,stagger:.02,ease:'power2.out',delay:.2});
+      }
+
+      // Hero subtitle
+      gsap.from('.crumbs',{y:20,opacity:0,duration:.4,ease:'power3.out'});
+      gsap.from('.c-sub',{y:20,opacity:0,duration:.7,ease:'power3.out',delay:.6});
+
+      // Form card slide in with rotation
+      gsap.from('.form-card',{y:60,opacity:0,rotateX:5,duration:.9,ease:'power2.out',delay:.4,transformOrigin:'top center'});
+
+      // Info cards stagger with scale
+      gsap.from('.sidebar .info-card',{x:80,opacity:0,scale:.9,duration:.5,stagger:.1,ease:'power2.out',delay:.5});
+
+      // Hours card
+      gsap.from('.hours-card',{x:80,opacity:0,scale:.9,duration:.5,ease:'power2.out',delay:.9});
+
+      // Map card with clip reveal
+      var mapCard=document.querySelector('.map-card');
+      if(mapCard){
+        mapCard.style.clipPath='inset(0 100% 0 0)';
+        gsap.to(mapCard,{clipPath:'inset(0 0% 0 0)',duration:.8,ease:'power3.inOut',delay:1.1});
+      }
+
+      // Bottom CTA with text split
+      var ctaH2=document.querySelector('.bottom-cta h2');
+      if(ctaH2){
+        gsap.from('.bottom-cta',{y:40,opacity:0,duration:.7,ease:'power2.out',
+          scrollTrigger:{trigger:'.bottom-cta',start:'top 85%',once:true}});
+      }
+
+      // Magnetic buttons
+      if(!isTouch){
+        document.querySelectorAll('.btn-primary, .btn-ghost, .btn-map').forEach(function(b){
+          b.addEventListener('mousemove',function(e){
+            var r=b.getBoundingClientRect();
+            b.style.transform='translate('+((e.clientX-(r.left+r.width/2))*.15)+'px,'+((e.clientY-(r.top+r.height/2))*.25)+'px)';
+          });
+          b.addEventListener('mouseleave',function(){b.style.transform='';});
+        });
+      }
+
+      // Card hover tilt
+      if(!isTouch){
+        document.querySelectorAll('.info-card').forEach(function(card){
+          card.addEventListener('mousemove',function(e){
+            var r=card.getBoundingClientRect();
+            var x=(e.clientX-r.left)/r.width-.5;
+            var y=(e.clientY-r.top)/r.height-.5;
+            card.style.transform='perspective(600px) rotateY('+x*6+'deg) rotateX('+(-y*6)+'deg) translateY(-3px)';
+          });
+          card.addEventListener('mouseleave',function(){
+            card.style.transform='';card.style.transition='transform .4s ease';
+            setTimeout(function(){card.style.transition='';},400);
+          });
+        });
+      }
+
+    } else {
+      document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});
+    }
+
+    // Form: show success on submit or #thanks hash
+    var form=document.getElementById('contactForm');
+    var success=document.getElementById('formSuccess');
+    if(window.location.hash==='#thanks'){
+      form.style.display='none';
+      form.previousElementSibling.style.display='none'; // hide subtitle
+      success.classList.add('show');
+      // also hide h2
+      form.closest('.form-card').querySelector('h2').style.display='none';
+    }
+
+    // AJAX submit fallback (FormSubmit redirects by default; this gives a nicer UX)
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var fd=new FormData(form);
+      var btn=form.querySelector('button[type="submit"]');
+      btn.disabled=true;
+      btn.textContent='שולח...';
+      fetch(form.action,{method:'POST',body:fd,headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if(r.ok){
+          form.style.display='none';
+          form.closest('.form-card').querySelector('h2').style.display='none';
+          form.closest('.form-card').querySelector('.form-sub').style.display='none';
+          success.classList.add('show');
+        } else {
+          btn.disabled=false;
+          btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>שלחו הודעה';
+          alert('שגיאה בשליחה. נסו שוב או התקשרו ישירות.');
+        }
+      })
+      .catch(function(){
+        form.submit(); // fallback to regular submit
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
