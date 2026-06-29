@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--
   ╔══════════════════════════════════════════════════════════════╗
   ║  Mula Digital — Website 3.0                                   ║
@@ -73,11 +73,11 @@
     --shadow-md:0 18px 50px rgba(17,17,17,.10);
     --shadow-glow:0 40px 90px rgba(123,47,190,.20);
     --ease:cubic-bezier(.22,.61,.36,1);
-    --max:1200px; --nav-h:74px;
+    --max:1200px; --nav-h:80px;
   }
   /* ===== RESET ===== */
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;scroll-padding-top:92px;-webkit-text-size-adjust:100%;}
+  html{scroll-padding-top:92px;-webkit-text-size-adjust:100%;}
   body{font-family:var(--f-body);background:var(--bg);color:var(--ink);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;touch-action:manipulation;}
   h1,h2,h3,h4{font-family:var(--f-display);line-height:1.12;font-weight:800;letter-spacing:-.015em;}
   a{color:inherit;text-decoration:none;}
@@ -89,8 +89,8 @@
   .eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--f-display);font-weight:700;font-size:14px;color:var(--purple);background:rgba(123,47,190,.07);border:1px solid rgba(123,47,190,.16);padding:8px 16px;border-radius:100px;}
   .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--grad);}
   .eyebrow.on-dark{color:#D9C8FF;background:rgba(123,47,190,.18);border-color:rgba(123,47,190,.36);}
-  .section{padding:96px 0;}
-  .section.tight{padding:66px 0;}
+  .section{padding:clamp(72px,10vw,130px) 0;}
+  .section.tight{padding:clamp(52px,7vw,90px) 0;}
   .s-head{max-width:720px;margin-bottom:54px;}
   .s-head h2{font-size:clamp(30px,4.4vw,48px);font-weight:900;margin:18px 0 14px;letter-spacing:-.025em;}
   .s-head p{color:var(--soft);font-size:20px;}
@@ -106,9 +106,9 @@
   .btn-dark:hover{transform:translateY(-2px);background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.42);}
   .btn-sm{padding:11px 22px;font-size:15px;}
   /* ===== REVEAL ===== */
-  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+  .reveal{opacity:0;transform:translateY(36px);transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1);}
   .reveal.in{opacity:1;transform:none;}
-  .stagger>*{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+  .stagger>*{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);}
   .stagger.in>*{opacity:1;transform:none;}
 
   /* ===== PROGRESS BAR ===== */
@@ -118,7 +118,11 @@
   /* ===== NAV + MEGA MENU ===== */
   header.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line);}
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);gap:18px;}
-  .nav-logo img{height:34px;width:auto;}
+  .nav-logo img{height:38px;width:auto;}
+  .nav-phone{display:inline-flex;align-items:center;gap:7px;font-family:var(--f-display);font-weight:600;font-size:14px;color:var(--soft);direction:ltr;transition:color .2s var(--ease);}
+  .nav-phone:hover{color:var(--purple);}
+  .nav-phone svg{width:16px;height:16px;stroke:currentColor;}
+  @media(max-width:1024px){.nav-phone{display:none;}}
   .nav-menu{display:flex;align-items:center;gap:2px;}
   .nav-item{position:relative;}
   .nav-link{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-display);font-weight:600;font-size:16px;color:var(--soft);padding:9px 14px;border-radius:100px;cursor:pointer;transition:color .2s var(--ease),background .2s var(--ease);background:none;border:none;}
@@ -175,8 +179,8 @@
   @keyframes pageIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
 
   /* ===== HERO ===== */
-  .hero{position:relative;padding:78px 0 56px;overflow:hidden;}
-  .hero::before{content:"";position:absolute;inset:-15% 8% auto 30%;height:520px;z-index:-1;pointer-events:none;background:radial-gradient(55% 60% at 70% 30%,rgba(232,0,61,.12),transparent 70%),radial-gradient(55% 60% at 35% 45%,rgba(123,47,190,.14),transparent 70%);filter:blur(8px);}
+  .hero{position:relative;padding:clamp(60px,8vw,100px) 0 clamp(48px,6vw,72px);overflow:hidden;}
+  .hero::before{content:"";position:absolute;inset:-25% 0% auto 20%;width:120%;height:620px;z-index:-1;pointer-events:none;background:radial-gradient(45% 50% at 65% 30%,rgba(232,0,61,.1),transparent 70%),radial-gradient(45% 50% at 30% 50%,rgba(123,47,190,.12),transparent 70%);filter:blur(20px);animation:floatGrad 16s ease-in-out infinite alternate;}
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;}
   .hero h1{font-size:clamp(34px,5.2vw,60px);font-weight:900;letter-spacing:-.03em;margin:22px 0 22px;line-height:1.08;}
   .hero .word{display:inline-block;}
@@ -223,42 +227,42 @@
   .tool .ti img{width:100%;height:100%;object-fit:contain;}
   .tool b{font-family:var(--f-display);font-weight:700;font-size:14.5px;color:var(--ink);white-space:nowrap;}
 
-  /* ===== PROBLEM (3) ===== */
-  .prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  .prob{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);}
-  .prob:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);}
-  .prob .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:25px;margin-bottom:18px;background:var(--surface);border:1px solid var(--line);}
-  .prob .ic svg{width:26px;height:26px;stroke:var(--purple);}
-  .rf-node .e svg{width:22px;height:22px;stroke:currentColor;}
-  .node-in .e svg{width:22px;height:22px;stroke:var(--purple);vertical-align:middle;}
-  .prob h3{font-size:21px;font-weight:800;margin-bottom:8px;}
-  .prob p{color:var(--soft);font-size:16px;}
+  /* ===== PROBLEM CARDS (alternating scroll entrance) ===== */
+  .prob-cards{display:flex;flex-direction:column;gap:24px;}
+  .prob-card{display:flex;align-items:flex-start;gap:32px;padding:44px 48px;background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s var(--ease);}
+  .prob-card:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(0,0,0,.07);border-color:rgba(123,47,190,.25);}
+  .prob-num{font-family:var(--f-display);font-weight:900;font-size:clamp(56px,7vw,80px);line-height:1;color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text;flex-shrink:0;letter-spacing:-.04em;}
+  .prob-icon{width:52px;height:52px;border-radius:14px;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;margin-bottom:14px;}
+  .prob-icon svg{width:26px;height:26px;stroke:var(--purple);}
+  .prob-card h3{font-size:clamp(20px,2.5vw,26px);font-weight:800;margin-bottom:8px;}
+  .prob-card p{color:var(--soft);font-size:17px;line-height:1.65;max-width:560px;}
 
   /* ===== REFRAME band ===== */
-  .reframe{position:relative;background:var(--night);color:#fff;border-radius:36px;margin:40px 0 0;padding:64px 40px;overflow:hidden;text-align:center;}
-  .reframe::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 130% at 18% 0%,rgba(232,0,61,.22),transparent 56%),radial-gradient(70% 130% at 85% 100%,rgba(123,47,190,.28),transparent 56%);}
+  .reframe{position:relative;background:var(--night);color:#fff;border-radius:36px;margin:48px 0 0;padding:clamp(72px,10vw,120px) clamp(24px,5vw,60px);overflow:hidden;text-align:center;}
+  .reframe::before{content:"";position:absolute;inset:-50%;width:200%;height:200%;background:radial-gradient(40% 40% at 20% 30%,rgba(232,0,61,.18),transparent 60%),radial-gradient(40% 40% at 80% 70%,rgba(123,47,190,.22),transparent 60%);animation:floatGrad 12s ease-in-out infinite alternate;pointer-events:none;}
+  @keyframes floatGrad{0%{transform:translate(0,0) rotate(0deg);}100%{transform:translate(3%,-3%) rotate(4deg);}}
   .reframe>*{position:relative;z-index:1;}
-  .reframe h2{font-size:clamp(24px,3.6vw,40px);font-weight:900;letter-spacing:-.02em;line-height:1.22;max-width:840px;margin:0 auto;color:#fff;}
-  .rf-stage{display:flex;align-items:center;justify-content:center;gap:0;margin-top:40px;flex-wrap:wrap;}
-  .rf-node{position:relative;width:84px;height:84px;border-radius:16px;background:var(--night-card);border:1px solid var(--night-line);display:grid;place-content:center;text-align:center;font-family:var(--f-display);font-weight:700;font-size:13px;color:rgba(255,255,255,.85);opacity:.5;transform:translateY(var(--rfy,0)) rotate(var(--rfr,0));transition:transform .9s var(--ease),opacity .7s var(--ease),border-color .7s,background .7s;margin:0 8px;}
-  .rf-node .e{font-size:20px;display:block;margin-bottom:3px;}
-  .rf-node.n1{--rfy:-22px;--rfr:-8deg;}.rf-node.n2{--rfy:18px;--rfr:6deg;}.rf-node.n3{--rfy:-14px;--rfr:-5deg;}.rf-node.n4{--rfy:20px;--rfr:7deg;}.rf-node.n5{--rfy:-18px;--rfr:-6deg;}
-  .rf-link{width:30px;height:3px;background:var(--night-line);border-radius:3px;opacity:0;transition:opacity .5s var(--ease),background .5s;}
-  .rf-stage.connected .rf-node{opacity:1;transform:translateY(0) rotate(0);border-color:transparent;background:linear-gradient(var(--night-card),var(--night-card)) padding-box,var(--grad) border-box;border:1px solid transparent;box-shadow:0 16px 36px rgba(123,47,190,.26);}
-  .rf-stage.connected .rf-link{opacity:1;background:var(--grad);}
-  .rf-tag{display:inline-block;margin-top:34px;font-family:var(--f-display);font-weight:700;font-size:14px;color:#D9C8FF;background:rgba(123,47,190,.18);border:1px solid rgba(123,47,190,.36);padding:9px 20px;border-radius:100px;}
+  .reframe h2{font-size:clamp(26px,3.8vw,44px);font-weight:900;letter-spacing:-.02em;line-height:1.28;max-width:840px;margin:0 auto;color:#fff;}
+  .rf-divider{width:72px;height:4px;background:var(--grad);border-radius:4px;margin:36px auto;}
+  .rf-sub{font-size:clamp(16px,1.8vw,19px);color:rgba(255,255,255,.72);max-width:620px;margin:0 auto 36px;line-height:1.75;}
+  .reframe .btn{font-size:17px;padding:16px 36px;}
 
-  /* ===== GROWTH SYSTEM (orbit) ===== */
-  .system-stage{position:relative;height:520px;display:flex;align-items:center;justify-content:center;perspective:1400px;}
-  .orbit{position:relative;width:min(92vw,520px);height:min(92vw,520px);transform-style:preserve-3d;animation:spin 60s linear infinite;}
-  @keyframes spin{to{transform:rotateZ(360deg);}}
-  .core{position:absolute;top:50%;left:50%;width:150px;height:150px;margin:-75px 0 0 -75px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-content:center;text-align:center;z-index:5;box-shadow:0 30px 70px rgba(123,47,190,.4);animation:spin 60s linear infinite reverse;}
-  .core b{font-family:var(--f-display);font-weight:900;font-size:21px;line-height:1.1;display:block;}
-  .core small{font-size:13px;opacity:.9;}
-  .node{position:absolute;top:50%;left:50%;width:100px;height:100px;margin:-50px 0 0 -50px;transition:transform .3s var(--ease);}
-  .node-in{width:100%;height:100%;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-md);display:grid;place-content:center;text-align:center;font-family:var(--f-display);font-weight:700;font-size:14px;animation:spin 60s linear infinite reverse;transition:box-shadow .3s var(--ease),border-color .3s,transform .3s;}
-  .node .e{font-size:22px;display:block;margin-bottom:3px;}
-  .node:hover .node-in{border-color:var(--purple);box-shadow:0 24px 50px rgba(123,47,190,.28);transform:scale(1.06);}
+  /* ===== GROWTH SYSTEM (bento grid) ===== */
+  .bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-flow:dense;gap:14px;max-width:980px;margin:0 auto;}
+  .bento-cell{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;min-height:130px;transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s var(--ease);}
+  .bento-cell:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,0,0,.08);border-color:rgba(123,47,190,.25);}
+  .bento-cell .e{width:48px;height:48px;border-radius:14px;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;}
+  .bento-cell .e svg{width:24px;height:24px;stroke:var(--purple);}
+  .bento-cell b{font-family:var(--f-display);font-weight:800;font-size:15px;color:var(--ink);}
+  .bento-cell small{font-size:13.5px;color:var(--muted);line-height:1.5;}
+  .bento-core{grid-column:2/4;grid-row:2/4;background:var(--grad);border:none;color:#fff;border-radius:24px;padding:48px 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;box-shadow:0 24px 60px rgba(123,47,190,.3);min-height:auto;}
+  .bento-core:hover{transform:translateY(-5px);box-shadow:0 30px 70px rgba(123,47,190,.4);border-color:transparent;}
+  .bento-core .e{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.25);}
+  .bento-core .e svg{stroke:#fff;}
+  .bento-core b{font-family:var(--f-display);font-weight:900;font-size:clamp(22px,2.5vw,28px);color:#fff;}
+  .bento-core small{font-size:15px;opacity:.85;color:#fff;}
+  .bento-wide{grid-column:1/-1;flex-direction:row;gap:16px;padding:22px 28px;min-height:auto;}
+  .bento-wide .e{flex-shrink:0;}
 
   /* ===== PORTFOLIO cards ===== */
   .pf-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
@@ -283,7 +287,7 @@
   /* ===== SERVICES (3 pillars) ===== */
   /* ===== SERVICES SECTION ===== */
   .srv-section{background:var(--night);color:#fff;position:relative;overflow:hidden;}
-  .srv-section::before{content:"";position:absolute;top:-200px;inset-inline-end:-200px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(123,47,190,.12) 0%,transparent 70%);pointer-events:none;}
+  .srv-section::before{content:"";position:absolute;inset:-30%;width:160%;height:160%;background:radial-gradient(35% 35% at 15% 20%,rgba(232,0,61,.1),transparent 60%),radial-gradient(35% 35% at 85% 80%,rgba(123,47,190,.14),transparent 60%);pointer-events:none;animation:floatGrad 14s ease-in-out infinite alternate-reverse;}
   .srv-section .s-head{max-width:800px;}
   .srv-section .s-head h2{color:#fff;}
   .srv-section .s-head p{color:rgba(255,255,255,.55);}
@@ -388,7 +392,9 @@
 
   /* ===== RESPONSIVE ===== */
   @media (max-width:1000px){
-    .prob-grid,.blog-grid,.pf-grid.cols3{grid-template-columns:repeat(2,1fr);}
+    .blog-grid,.pf-grid.cols3{grid-template-columns:repeat(2,1fr);}
+    .bento{grid-template-columns:repeat(3,1fr);}
+    .bento-core{grid-column:2/4;grid-row:2/3;}
     .srv-grid{grid-template-columns:repeat(3,1fr);}
     .mega{width:min(94vw,640px);}
     .mega-grid.cols-4{grid-template-columns:1fr 1fr;}.mega-grid.cols-4 .mega-cta{border-radius:0 0 20px 20px;}
@@ -407,19 +413,17 @@
   @media (max-width:620px){
     body{font-size:17px;}
     .section{padding:68px 0;}
-    .prob-grid,.blog-grid,.pf-grid,.pf-grid.cols3{grid-template-columns:1fr;}
+    .blog-grid,.pf-grid,.pf-grid.cols3{grid-template-columns:1fr;}
     .foot-top{grid-template-columns:1fr 1fr;gap:30px;}
     .foot-brand{grid-column:span 2;}
     .srv-grid{grid-template-columns:repeat(2,1fr);}
     .chip.c2,.chip.c5{display:none;}
     .final{padding:60px 24px;}
+    .prob-card{flex-direction:column;gap:16px;padding:28px 24px;}
+    .prob-num{font-size:48px;}
     .reframe{padding:48px 22px;border-radius:26px;}
-    .rf-node{width:62px;height:62px;font-size:11px;margin:4px;}
-    .rf-node .e{font-size:16px;}
-    .rf-link{width:14px;}
-    .node{width:78px;height:78px;margin:-39px 0 0 -39px;}
-    .node-in{font-size:12px;}.node .e{font-size:18px;}
-    .core{width:120px;height:120px;margin:-60px 0 0 -60px;}.core b{font-size:17px;}
+    .bento{grid-template-columns:repeat(2,1fr);}
+    .bento-core{grid-column:1/-1;grid-row:auto;}
     .hero-mini{gap:18px;}
   }
   html,body{overflow-x:hidden;max-width:100%;}
@@ -427,8 +431,7 @@
   @media (prefers-reduced-motion:reduce){
     *,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important;}
     .reveal,.stagger>*{opacity:1;transform:none;}
-    .rf-node{opacity:1 !important;transform:none !important;}
-    .rf-link{opacity:1 !important;}
+    .prob-card{opacity:1;transform:none;}
   }
   :focus-visible{outline:3px solid rgba(123,47,190,.55);outline-offset:3px;border-radius:6px;}
   .btn:active{transform:scale(.97);}
@@ -446,7 +449,7 @@
     :root{--max:1320px;}
     .hero h1{font-size:64px;}
     .s-head h2{font-size:52px;}
-    .prob-grid{gap:28px;}
+    .prob-cards{gap:28px;}
     .pf-grid{gap:28px;}
     .srv-grid{gap:18px;}
   }
@@ -464,6 +467,9 @@
     .section{padding:56px 0;}
     .final{padding:48px 18px;border-radius:22px;}
     .reframe{padding:40px 16px;border-radius:22px;}
+    .bento{grid-template-columns:1fr 1fr;gap:10px;}
+    .bento-cell{padding:20px 14px;min-height:100px;}
+    .bento-core{padding:32px 20px;}
     .foot-top{grid-template-columns:1fr;gap:28px;}
     .foot-brand{grid-column:auto;}
     .chip{display:none;}
@@ -496,16 +502,16 @@
                 <a href="service-photo-video.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></span><span>צילום ווידאו<span class="mc-desc">תדמית, מוצרים, רילסים</span></span></a>
               </div>
               <div class="mega-col"><h4>הבאת לקוחות</h4>
-                <a href="service-seo.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span><span>SEO<span class="mc-desc">קידום אורגני בגוגל</span></span></a>
-                <a href="service-local-seo.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Local SEO<span class="mc-desc">חבילת ה-3, מפות גוגל</span></span></a>
-                <a href="service-google-ads.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></span><span>Google Ads<span class="mc-desc">חיפוש, שופינג, דיספליי</span></span></a>
-                <a href="service-meta-ads.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span><span>Meta Ads<span class="mc-desc">Facebook, Instagram, Reels</span></span></a>
+                <a href="service-seo.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span><span>קידום אתרים<span class="mc-desc">SEO אורגני, תוכן, לינקים</span></span></a>
+                <a href="service-local-seo.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>קידום עסק בגוגל<span class="mc-desc">מפות גוגל, חבילת ה-3, ביקורות</span></span></a>
+                <a href="service-google-ads.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></span><span>קמפיינים בגוגל<span class="mc-desc">חיפוש, שופינג, דיספליי</span></span></a>
+                <a href="service-meta-ads.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span><span>פרסום בפייסבוק<span class="mc-desc">Facebook, Instagram, Reels</span></span></a>
                 <a href="service-linkedin.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span><span>LinkedIn<span class="mc-desc">B2B, לידים, תוכן מקצועי</span></span></a>
               </div>
               <div class="mega-col"><h4>מערכות צמיחה</h4>
-                <a href="/#services" data-anchor="services"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 014 4c0 1.95-2 4-4 6-2-2-4-4.05-4-6a4 4 0 014-4z"/><path d="M4.93 10.93a10 10 0 100 2.14"/><path d="M2 12h2"/><path d="M20 12h2"/></svg></span><span>AI Automation<span class="mc-desc">תהליכים חכמים, Make, n8n</span></span></a>
+                <a href="/#services" data-anchor="services"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 014 4c0 1.95-2 4-4 6-2-2-4-4.05-4-6a4 4 0 014-4z"/><path d="M4.93 10.93a10 10 0 100 2.14"/><path d="M2 12h2"/><path d="M20 12h2"/></svg></span><span>אוטומציות AI<span class="mc-desc">תהליכים חכמים, Make, n8n</span></span></a>
                 <a href="/#services" data-anchor="services"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span><span>CRM<span class="mc-desc">ניהול לידים ומכירות</span></span></a>
-                <a href="/#services" data-anchor="services"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span><span>WhatsApp Automation<span class="mc-desc">בוטים, שליחה אוטומטית</span></span></a>
+                <a href="/#services" data-anchor="services"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span><span>אוטומציות וואטסאפ<span class="mc-desc">בוטים, שליחה אוטומטית</span></span></a>
                 <a href="/#services" data-anchor="services"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span><span>Analytics<span class="mc-desc">GA4, דוחות, תובנות</span></span></a>
                 <a href="/#services" data-anchor="services"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span><span>CRO<span class="mc-desc">אופטימיזציית המרות</span></span></a>
               </div>
@@ -523,7 +529,7 @@
           <div class="mega">
             <div class="mega-grid cols-3">
               <div class="mega-col"><h4>לפי סוג עבודה</h4>
-                <a href="/portfolio" data-route="portfolio" data-filter="אתרים">אתרים</a><a href="/portfolio" data-route="portfolio" data-filter="SEO">SEO</a><a href="/portfolio" data-route="portfolio" data-filter="קמפיינים">קמפיינים</a><a href="/portfolio" data-route="portfolio" data-filter="מיתוג">מיתוג</a><a href="/portfolio" data-route="portfolio" data-filter="עיצוב גרפי">עיצוב גרפי</a><a href="/portfolio" data-route="portfolio" data-filter="אוטומציות">אוטומציות</a>
+                <a href="/portfolio" data-route="portfolio" data-filter="אתרים">אתרים</a><a href="/portfolio" data-route="portfolio" data-filter="SEO">קידום אתרים</a><a href="/portfolio" data-route="portfolio" data-filter="קמפיינים">קמפיינים</a><a href="/portfolio" data-route="portfolio" data-filter="מיתוג">מיתוג</a><a href="/portfolio" data-route="portfolio" data-filter="עיצוב גרפי">עיצוב גרפי</a><a href="/portfolio" data-route="portfolio" data-filter="אוטומציות">אוטומציות</a>
               </div>
               <div class="mega-col"><h4>לפי תחום</h4>
                 <a href="/portfolio" data-route="portfolio">תעשייה</a><a href="/portfolio" data-route="portfolio">ביטוח ופיננסים</a><a href="/portfolio" data-route="portfolio">בעלי מקצוע</a><a href="/portfolio" data-route="portfolio">B2B</a><a href="/portfolio" data-route="portfolio">ביוטי</a><a href="/portfolio" data-route="portfolio">טכנולוגיה</a>
@@ -543,7 +549,8 @@
       </nav>
 
       <div class="nav-right">
-        <a href="contact.html" class="btn btn-primary btn-sm" data-magnetic>קבעו שיחת אבחון</a>
+        <a href="tel:0508249824" class="nav-phone"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>050-824-9824</a>
+        <a href="contact.html" class="btn btn-primary btn-sm" data-magnetic>שיחת אבחון חינם</a>
         <button class="burger" id="burger" aria-label="פתיחת תפריט" aria-expanded="false"><span></span></button>
       </div>
     </div>
@@ -558,11 +565,11 @@
       <a href="service-branding.html">מיתוג</a>
       <a href="service-content.html">תוכן</a>
       <a href="service-graphic-design.html">עיצוב גרפי</a>
-      <a href="service-seo.html">SEO</a>
-      <a href="service-google-ads.html">Google Ads</a>
-      <a href="service-meta-ads.html">Meta Ads</a>
+      <a href="service-seo.html">קידום אתרים</a>
+      <a href="service-google-ads.html">קמפיינים בגוגל</a>
+      <a href="service-meta-ads.html">פרסום בפייסבוק</a>
       <a href="service-linkedin.html">LinkedIn</a>
-      <a href="service-local-seo.html">Local SEO</a>
+      <a href="service-local-seo.html">קידום עסק בגוגל</a>
       <a href="service-photo-video.html">צילום ווידאו</a>
     </div>
     <a href="/portfolio" data-route="portfolio">תיק עבודות</a>
@@ -581,17 +588,17 @@
     <section class="hero" id="hero">
       <div class="wrap hero-grid">
         <div class="hero-text">
-          <span class="eyebrow reveal">מערכת צמיחה דיגיטלית לעסקים</span>
-          <h1 id="heroTitle">העסק שלכם לא צריך עוד אתר.<br><span class="gradient-text">הוא צריך מערכת שמביאה יותר לקוחות.</span></h1>
-          <p class="lead reveal">רוב בעלי העסקים כבר השקיעו באתר, בפרסום או ברשתות — והבעיה היא שכל חלק עובד לבד. אנחנו מחברים אסטרטגיה, אתר, SEO, קמפיינים, AI, CRM ווואטסאפ למערכת צמיחה אחת.</p>
+          <span class="eyebrow reveal">סוכנות צמיחה לעסקים וחברות</span>
+          <h1 id="heroTitle">יותר לקוחות. יותר פניות.<br><span class="gradient-text">יותר צמיחה לעסק שלכם.</span></h1>
+          <p class="lead reveal">אנחנו בונים לעסקים מערכת שיווק שלמה — אתר, SEO, קמפיינים, AI ואוטומציות — שמחוברת ומביאה תוצאות מדידות.</p>
           <div class="hero-actions reveal">
-            <a href="contact.html" class="btn btn-primary" data-magnetic>קבעו שיחת אבחון</a>
-            <a href="/portfolio" class="btn btn-ghost" data-route="portfolio">צפו בתיק העבודות</a>
+            <a href="contact.html" class="btn btn-primary" data-magnetic>רוצים יותר לקוחות? דברו איתנו</a>
+            <a href="/portfolio" class="btn btn-ghost" data-route="portfolio">ראו את העבודות שלנו</a>
           </div>
           <div class="hero-mini reveal">
             <div class="m"><b>20+</b><span>שנות ניסיון</span></div>
-            <div class="m"><b>300+</b><span>עמודי SEO ותוכן</span></div>
-            <div class="m"><b>18+</b><span>עסקים פעילים</span></div>
+            <div class="m"><b>50+</b><span>עסקים שצמחו</span></div>
+            <div class="m"><b>300+</b><span>עמודי תוכן ו-SEO</span></div>
           </div>
         </div>
         <div class="hero-visual reveal">
@@ -599,11 +606,9 @@
             <img src="assets/moshe-black.jpg" alt="משה מולה, מייסד Mula Digital" />
             <div class="ribbon"><span class="av"></span><div><b>משה מולה</b><small>מייסד · אסטרטג צמיחה</small></div></div>
           </div>
-          <span class="chip c1"><i></i>SEO</span>
-          <span class="chip c2"><i></i>Google Ads</span>
-          <span class="chip c3"><i></i>AI</span>
-          <span class="chip c4"><i></i>CRM</span>
-          <span class="chip c5"><i></i>WhatsApp</span>
+          <span class="chip c1"><i></i>SEO + תוכן</span>
+          <span class="chip c3"><i></i>קמפיינים</span>
+          <span class="chip c4"><i></i>AI + אוטומציות</span>
         </div>
       </div>
     </section>
@@ -625,26 +630,38 @@
           <span class="eyebrow">למה זה קורה</span>
           <h2>למה עסקים טובים עדיין לא מקבלים מספיק לקוחות?</h2>
         </div>
-        <div class="prob-grid">
-          <div class="prob reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h3>לא רואים אתכם בגוגל</h3><p>הלקוחות מחפשים בדיוק את מה שאתם מציעים — ומוצאים את המתחרים.</p></div>
-          <div class="prob reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.7 14A8.7 8.7 0 0 0 20 11.5V5l-8-3-2.3.9M4.7 4.7 4 5v6.5C4 17 12 21 12 21a16 16 0 0 0 4-2.6"/><path d="m2 2 20 20"/></svg></div><h3>האתר לא מייצר אמון</h3><p>מבקרים מגיעים, מתרשמים פחות ממה שמגיע לכם, ועוזבים בלי לפנות.</p></div>
-          <div class="prob reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 5-3 3M2 22l4-4M8.5 8.5 7 10a3.5 3.5 0 0 0 0 5 3.5 3.5 0 0 0 5 0l1.5-1.5M15.5 15.5 17 14a3.5 3.5 0 0 0 0-5 3.5 3.5 0 0 0-5 0L10.5 10.5"/></svg></div><h3>הפרסום לא מחובר למכירות</h3><p>משלמים על קליקים, אבל אף אחד לא יודע מה קרה ללידים אחר כך.</p></div>
+        <div class="prob-cards">
+          <div class="prob-card">
+            <span class="prob-num">01</span>
+            <div class="prob-body">
+              <div class="prob-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+              <h3>לא רואים אתכם בגוגל</h3>
+              <p>הלקוחות מחפשים בדיוק את מה שאתם מציעים — ומוצאים את המתחרים. בלי נוכחות אורגנית חזקה, אתם משלמים על כל קליק ותלויים בתקציב פרסום.</p>
+            </div>
+          </div>
+          <div class="prob-card">
+            <span class="prob-num">02</span>
+            <div class="prob-body">
+              <div class="prob-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.7 14A8.7 8.7 0 0 0 20 11.5V5l-8-3-2.3.9M4.7 4.7 4 5v6.5C4 17 12 21 12 21a16 16 0 0 0 4-2.6"/><path d="m2 2 20 20"/></svg></div>
+              <h3>האתר לא מייצר אמון</h3>
+              <p>מבקרים מגיעים, מתרשמים פחות ממה שמגיע לכם, ועוזבים בלי לפנות. אתר שלא משדר סמכות מקצועית — מפסיד לקוחות כל יום.</p>
+            </div>
+          </div>
+          <div class="prob-card">
+            <span class="prob-num">03</span>
+            <div class="prob-body">
+              <div class="prob-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 5-3 3M2 22l4-4M8.5 8.5 7 10a3.5 3.5 0 0 0 0 5 3.5 3.5 0 0 0 5 0l1.5-1.5M15.5 15.5 17 14a3.5 3.5 0 0 0 0-5 3.5 3.5 0 0 0-5 0L10.5 10.5"/></svg></div>
+              <h3>הפרסום לא מחובר למכירות</h3>
+              <p>משלמים על קליקים, אבל אף אחד לא יודע מה קרה ללידים אחר כך. בלי חיבור בין שיווק למכירות, חצי מהתקציב הולך לפח.</p>
+            </div>
+          </div>
         </div>
 
         <div class="reframe">
           <h2>הבעיה היא לא שאתם לא טובים.<br><span class="gradient-text">הבעיה היא שכל החלקים בדיגיטל שלכם עובדים לבד.</span></h2>
-          <div class="rf-stage" id="rfStage">
-            <div class="rf-node n1"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>אתר</div>
-            <span class="rf-link"></span>
-            <div class="rf-node n2"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l15-5v12L3 13v6"/><path d="M3 11v2"/></svg></span>פרסום</div>
-            <span class="rf-link"></span>
-            <div class="rf-node n3"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span>רשתות</div>
-            <span class="rf-link"></span>
-            <div class="rf-node n4"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span>SEO</div>
-            <span class="rf-link"></span>
-            <div class="rf-node n5"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-9 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg></span>וואטסאפ</div>
-          </div>
-          <span class="rf-tag">אנחנו מחברים את הכל למערכת אחת.</span>
+          <div class="rf-divider"></div>
+          <p class="rf-sub">אתר בצד אחד, קמפיינים בצד שני, רשתות חברתיות במקום שלישי — ואף אחד לא מדבר עם אף אחד. אנחנו מחברים את הכל למערכת אחת שעובדת ביחד.</p>
+          <a href="https://wa.me/972508249824" class="btn btn-primary" target="_blank" rel="noopener">רוצים מערכת שעובדת? דברו איתנו</a>
         </div>
       </div>
     </section>
@@ -656,19 +673,17 @@
           <span class="eyebrow">מנוע הצמיחה</span>
           <h2>מערכת אחת. כל החלקים עובדים יחד.</h2>
         </div>
-        <div class="system-stage reveal">
-          <div class="orbit" id="orbit">
-            <div class="core"><b>עסק צומח</b><small>במרכז המערכת</small></div>
-            <div class="node"><div class="node-in"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></span>אסטרטגיה</div></div>
-            <div class="node"><div class="node-in"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>אתר</div></div>
-            <div class="node"><div class="node-in"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span>SEO</div></div>
-            <div class="node"><div class="node-in"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l15-5v12L3 13v6"/><path d="M3 11v2"/></svg></span>קמפיינים</div></div>
-            <div class="node"><div class="node-in"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14 5 3 3-9 9H5v-3l9-9z"/><path d="M13 6l3 3"/></svg></span>תוכן</div></div>
-            <div class="node"><div class="node-in"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg></span>AI</div></div>
-            <div class="node"><div class="node-in"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a3 3 0 0 0 3 3h3a3 3 0 0 0 0-6h-1M15 12a3 3 0 0 0-3-3H9a3 3 0 0 0 0 6h1"/></svg></span>CRM</div></div>
-            <div class="node"><div class="node-in"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-9 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg></span>וואטסאפ</div></div>
-            <div class="node"><div class="node-in"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></span>Analytics</div></div>
-          </div>
+        <div class="bento" id="bento">
+          <div class="bento-cell"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></span><b>אסטרטגיה</b><small>תכנון מותאם לעסק</small></div>
+          <div class="bento-cell"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><b>אתר</b><small>שממיר מבקרים ללקוחות</small></div>
+          <div class="bento-cell"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span><b>SEO</b><small>נוכחות אורגנית חזקה</small></div>
+          <div class="bento-cell"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l15-5v12L3 13v6"/><path d="M3 11v2"/></svg></span><b>קמפיינים</b><small>Google & Meta Ads</small></div>
+          <div class="bento-cell"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14 5 3 3-9 9H5v-3l9-9z"/><path d="M13 6l3 3"/></svg></span><b>תוכן</b><small>שמדבר בשפה של הלקוח</small></div>
+          <div class="bento-cell bento-core"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></span><b>עסק צומח</b><small>כל החלקים עובדים יחד — במרכז המערכת</small></div>
+          <div class="bento-cell"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg></span><b>AI</b><small>אוטומציות חכמות</small></div>
+          <div class="bento-cell"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a3 3 0 0 0 3 3h3a3 3 0 0 0 0-6h-1M15 12a3 3 0 0 0-3-3H9a3 3 0 0 0 0 6h1"/></svg></span><b>CRM</b><small>ניהול לידים ומכירות</small></div>
+          <div class="bento-cell"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-9 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg></span><b>וואטסאפ</b><small>תקשורת אוטומטית</small></div>
+          <div class="bento-cell bento-wide"><span class="e"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></span><b>Analytics</b><small>דשבורד מדידה — כל המספרים, במקום אחד</small></div>
         </div>
       </div>
     </section>
@@ -748,25 +763,25 @@
           <div class="srv-grid" id="srvGrid2">
             <a href="service-seo.html" class="srv-card">
               <span class="srv-ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
-              <h4>SEO</h4>
+              <h4>קידום אתרים</h4>
               <p class="srv-desc">להופיע ראשונים בגוגל — כשהלקוחות מחפשים אתכם.</p>
               <span class="srv-arrow">למידע נוסף <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></span>
             </a>
             <a href="service-local-seo.html" class="srv-card">
               <span class="srv-ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
-              <h4>Local SEO</h4>
+              <h4>קידום עסק בגוגל</h4>
               <p class="srv-desc">להיות העסק הראשון שמופיע באזור שלכם.</p>
               <span class="srv-arrow">למידע נוסף <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></span>
             </a>
             <a href="service-google-ads.html" class="srv-card">
               <span class="srv-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></span>
-              <h4>Google Ads</h4>
+              <h4>קמפיינים בגוגל</h4>
               <p class="srv-desc">קמפיינים ממוקדים שמביאים לידים מיידיים.</p>
               <span class="srv-arrow">למידע נוסף <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></span>
             </a>
             <a href="service-meta-ads.html" class="srv-card">
               <span class="srv-ic"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></span>
-              <h4>Meta Ads</h4>
+              <h4>פרסום בפייסבוק</h4>
               <p class="srv-desc">פרסום בפייסבוק ואינסטגרם שמייצר פניות.</p>
               <span class="srv-arrow">למידע נוסף <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></span>
             </a>
@@ -784,7 +799,7 @@
           <div class="srv-grid" id="srvGrid3">
             <a href="service-ai-automation.html" class="srv-card">
               <span class="srv-ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M9 9h6v6H9z"></path><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"></path></svg></span>
-              <h4>AI Automation</h4>
+              <h4>אוטומציות AI</h4>
               <p class="srv-desc">אוטומציות חכמות שחוסכות זמן ומגדילות מכירות.</p>
               <span class="srv-arrow">למידע נוסף <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></span>
             </a>
@@ -796,7 +811,7 @@
             </a>
             <a href="service-whatsapp-automation.html" class="srv-card">
               <span class="srv-ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></span>
-              <h4>WhatsApp Automation</h4>
+              <h4>אוטומציות וואטסאפ</h4>
               <p class="srv-desc">מענה אוטומטי, תזכורות, ומעקב בוואטסאפ.</p>
               <span class="srv-arrow">למידע נוסף <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></span>
             </a>
@@ -976,6 +991,7 @@
   </div>
 
   <!-- GSAP (enhancement; site works fully without it) -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
@@ -992,9 +1008,9 @@
     var posts=[
       {t:'למה אתר יפה לא מספיק כדי להביא לקוחות',cat:'אתרים',cats:['אתרים'],img:'photo-1553877522-43269d4ea984',rt:'4 דק׳ קריאה',url:'blog-atar-yafe-lo-maspik.html',ex:'עיצוב יפה זה לא אסטרטגיה. אתר שמביא לקוחות בנוי קודם כל סביב מסר, אמון ומסלול פעולה ברור.'},
       {t:'איך לדעת אם הפרסום באמת עובד',cat:'קמפיינים',cats:['קמפיינים'],img:'photo-1551288049-bebda4e38f71',rt:'5 דק׳ קריאה',ex:'לייקים זה לא תוצאה. נראה אילו מספרים באמת מעידים שהפרסום מחזיר את ההשקעה — ואיך למדוד אותם.',url:'blog-eich-ladaat-im-hapirsum-oved.html'},
-      {t:'איך AI יכול לחסוך זמן לבעל עסק',cat:'AI',cats:['AI'],img:'photo-1485827404703-89b55fcc595e',rt:'4 דק׳ קריאה',ex:'מענה ראשוני, תזכורות, סיכומים ותוכן — כך AI משחרר לכם שעות בשבוע בלי לאבד את המגע האישי.'},
-      {t:'מה זה SEO לעסקים מקומיים',cat:'עסקים מקומיים',cats:['עסקים מקומיים','SEO'],img:'photo-1460925895917-afdab827c52f',rt:'6 דק׳ קריאה',ex:'איך לגרום ללקוחות באזור שלכם למצוא אתכם בגוגל בדיוק ברגע שהם מחפשים שירות כמו שלכם.'},
-      {t:'למה וואטסאפ בלי CRM גורם לאיבוד לידים',cat:'אוטומציות',cats:['אוטומציות'],img:'photo-1556761175-b413da4baf72',rt:'5 דק׳ קריאה',ex:'פניות שנכנסות לוואטסאפ ונשכחות הן כסף שאבד. כך מחברים מעקב אוטומטי שלא נותן לאף ליד ליפול.'},
+      {t:'איך AI יכול לחסוך זמן לבעל עסק',cat:'AI',cats:['AI'],img:'photo-1485827404703-89b55fcc595e',rt:'4 דק׳ קריאה',ex:'מענה ראשוני, תזכורות, סיכומים ותוכן — כך AI משחרר לכם שעות בשבוע בלי לאבד את המגע האישי.',url:'blog-ai-chosech-zman-laasakim.html'},
+      {t:'מה זה SEO לעסקים מקומיים',cat:'עסקים מקומיים',cats:['עסקים מקומיים','SEO'],img:'photo-1460925895917-afdab827c52f',rt:'6 דק׳ קריאה',ex:'איך לגרום ללקוחות באזור שלכם למצוא אתכם בגוגל בדיוק ברגע שהם מחפשים שירות כמו שלכם.',url:'blog-seo-laasakim-mekomiyim.html'},
+      {t:'למה וואטסאפ בלי CRM גורם לאיבוד לידים',cat:'אוטומציות',cats:['אוטומציות'],img:'photo-1556761175-b413da4baf72',rt:'5 דק׳ קריאה',ex:'פניות שנכנסות לוואטסאפ ונשכחות הן כסף שאבד. כך מחברים מעקב אוטומטי שלא נותן לאף ליד ליפול.',url:'blog-whatsapp-bli-crm.html'},
       {t:'איך בונים מערכת שיווק לעסק קטן',cat:'קמפיינים',cats:['קמפיינים'],img:'photo-1504384308090-c894fdcc538d',rt:'7 דק׳ קריאה',ex:'לא צריך תקציב ענק. צריך סדר נכון: אסטרטגיה, נכס דיגיטלי, ערוץ הבאה אחד שעובד — ומדידה.'}
     ];
     var LG=function(slug){return 'assets/logos/'+slug+'.png';};
@@ -1013,8 +1029,8 @@
       {n:'שי לעתיד',logo:'shaiatid',cat:'ביטוח ופיננסים',serv:'מיתוג · אתר',res:'מיתוג ובידול בתחום הפיננסי',cats:['מיתוג','אתרים']}
     ];
     // client logos for the trust strip (first-party assets supplied by the client)
-    var clients=['harel','erplogic','tamuz','abp','iteam','cloudbeam','athletics','mizug','keter','silvi','amirbracha','eldadlevi','ray','shaiatid','finansee','yuval','nitzan','shaihaim'];
-    var clientName={harel:'הראל ביטוח',erplogic:'ERP Logic',tamuz:'Tamuz FTK',abp:'ABP Consultancy',iteam:'i-team',cloudbeam:'CloudBeam',athletics:'אתלטיקה ראשון לציון',mizug:'רשת בית המיזוג',keter:'מוצרי כתר',silvi:'סילבי ויסוצקי',amirbracha:'אמיר ברכה',eldadlevi:'אלדד לוי שמאי',ray:'ריי נכסים',shaiatid:'שי לעתיד',finansee:'Finansee',yuval:'Yuval Assaf',nitzan:'ניצן פרץ',shaihaim:'שי חיים'};
+    var clients=['harel','erplogic','tamuz','abp','iteam','cloudbeam','athletics','mizug','keter','silvi','amirbracha','eldadlevi','ray','shaiatid','finansee','yuval','nitzan','shaihaim','atal','amitmatan','burgersaloon','danirun','elisasson','harela','idantamar','shalomsamya','shlomi','talpiot','toast','up','yatzivim','yochai'];
+    var clientName={harel:'הראל ביטוח',erplogic:'ERP Logic',tamuz:'Tamuz FTK',abp:'ABP Consultancy',iteam:'i-team',cloudbeam:'CloudBeam',athletics:'אתלטיקה ראשון לציון',mizug:'רשת בית המיזוג',keter:'מוצרי כתר',silvi:'סילבי ויסוצקי',amirbracha:'אמיר ברכה',eldadlevi:'אלדד לוי שמאי',ray:'ריי נכסים',shaiatid:'שי לעתיד',finansee:'Finansee',yuval:'Yuval Assaf',nitzan:'ניצן פרץ',shaihaim:'שי חיים',atal:'אטל',amitmatan:'עמית מתן',burgersaloon:'Burger Saloon',danirun:'דני רון',elisasson:'אלי ששון',harela:'הראל א.',idantamar:'עידן תמר',shalomsamya:'שלום סמיה',shlomi:'שלומי',talpiot:'תלפיות',toast:'Toast',up:'UP',yatzivim:'יציבים',yochai:'יוחאי'};
 
     function postCard(p,idx){
       return '<article class="post post-item" data-cats="'+p.cats.join(' ')+'" data-idx="'+idx+'">'+
@@ -1192,27 +1208,7 @@
       }
     });
 
-    /* ---------- GROWTH SYSTEM orbit ---------- */
-    (function(){
-      var orbit=document.getElementById('orbit'); if(!orbit)return;
-      var nodes=orbit.querySelectorAll('.node'), n=nodes.length;
-      function layout(){
-        var size=orbit.clientWidth||520, half=(orbit.querySelector('.node-in')?orbit.querySelector('.node-in').getBoundingClientRect().width/2:50);
-        var R=Math.max(70,size/2-half-8);
-        nodes.forEach(function(nd,i){ var a=(i/n)*Math.PI*2-Math.PI/2; nd.style.transform='translate('+(Math.cos(a)*R)+'px,'+(Math.sin(a)*R)+'px)'; });
-      }
-      layout(); var rt; window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(layout,150);});
-      orbit.addEventListener('mouseenter',function(){ if(!reduce) orbit.style.animationPlayState='paused'; });
-      orbit.addEventListener('mouseleave',function(){ if(!reduce) orbit.style.animationPlayState='running'; });
-    })();
-
-    /* ---------- REFRAME connect ---------- */
-    (function(){
-      var stage=document.getElementById('rfStage'); if(!stage)return;
-      if(reduce){ stage.classList.add('connected'); return; }
-      var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ stage.classList.add('connected'); io.unobserve(en.target); } }); },{threshold:0.4});
-      io.observe(stage);
-    })();
+    /* ---------- (orbit and reframe connect removed — replaced by bento grid + clean reframe) ---------- */
 
     /* ---------- MAGNETIC BUTTONS ---------- */
     if(!isTouch && !reduce){
@@ -1222,14 +1218,27 @@
       });
     }
 
+    /* ---------- LENIS SMOOTH SCROLL ---------- */
+    var lenis;
+    if(window.Lenis && !reduce){
+      lenis=new Lenis({duration:1.2,easing:function(t){return Math.min(1,1.001-Math.pow(2,-10*t));},orientation:'vertical',gestureOrientation:'vertical',smoothWheel:true,wheelMultiplier:1,touchMultiplier:2});
+      if(!window.gsap){function raf(time){lenis.raf(time);requestAnimationFrame(raf);}requestAnimationFrame(raf);}
+    }
+
     /* ---------- GSAP ENHANCEMENTS ---------- */
     if(window.gsap && window.ScrollTrigger && !reduce){
       gsap.registerPlugin(ScrollTrigger);
+
+      if(lenis){
+        lenis.on('scroll',ScrollTrigger.update);
+        gsap.ticker.add(function(time){lenis.raf(time*1000);});
+        gsap.ticker.lagSmoothing(0);
+      }
+
       // hero headline word reveal
       var title=document.getElementById('heroTitle');
       if(title){
         var html=title.innerHTML;
-        // wrap plain text words (keep existing spans/br)
         var tmp=document.createElement('div'); tmp.innerHTML=html;
         function wrapWords(node){
           Array.prototype.slice.call(node.childNodes).forEach(function(ch){
@@ -1241,64 +1250,86 @@
               });
               ch.parentNode.replaceChild(frag,ch);
             } else if(ch.nodeType===1 && ch.tagName!=='BR'){
-              // keep gradient text as ONE unit (wrapping its words would strip the clipped gradient → invisible)
               if(ch.classList && ch.classList.contains('gradient-text')){ ch.classList.add('word'); ch.style.display='inline-block'; }
               else wrapWords(ch);
             }
           });
         }
         wrapWords(tmp); title.innerHTML=tmp.innerHTML;
-        gsap.from(title.querySelectorAll('.word'),{yPercent:120,opacity:0,duration:.7,ease:'power3.out',stagger:0.045,delay:.1});
+        gsap.from(title.querySelectorAll('.word'),{yPercent:120,opacity:0,duration:.9,ease:'power3.out',stagger:0.06,delay:.1});
       }
+
       // parallax portraits
       document.querySelectorAll('[data-parallax]').forEach(function(el){
-        gsap.to(el,{yPercent:-7,ease:'none',scrollTrigger:{trigger:el,start:'top bottom',end:'bottom top',scrub:true}});
+        gsap.to(el,{yPercent:-10,ease:'none',scrollTrigger:{trigger:el,start:'top bottom',end:'bottom top',scrub:true}});
       });
 
-      // hero lead + actions stagger
-      gsap.from('#route-home .lead',{y:30,opacity:0,duration:.6,ease:'power2.out',delay:.5});
-      gsap.from('#route-home .hero-actions',{y:20,opacity:0,duration:.5,ease:'power2.out',delay:.7});
-      gsap.from('#route-home .hero-mini .m',{y:20,opacity:0,duration:.4,stagger:.1,ease:'power2.out',delay:.9});
+      // parallax on dark section backgrounds
+      document.querySelectorAll('.reframe').forEach(function(el){
+        gsap.fromTo(el,{backgroundPosition:'50% 0%'},{backgroundPosition:'50% 30%',ease:'none',
+          scrollTrigger:{trigger:el,start:'top bottom',end:'bottom top',scrub:true}});
+      });
+
+      // hero lead + actions stagger (slower, more dramatic)
+      gsap.from('#route-home .lead',{y:40,opacity:0,duration:.9,ease:'power2.out',delay:.5});
+      gsap.from('#route-home .hero-actions',{y:30,opacity:0,duration:.8,ease:'power2.out',delay:.75});
+      gsap.from('#route-home .hero-mini .m',{y:30,opacity:0,duration:.6,stagger:.12,ease:'power2.out',delay:1});
 
       // client logo strip
-      gsap.from('.brand-strip .brand',{opacity:0,scale:.8,duration:.4,stagger:.04,ease:'power2.out',
-        scrollTrigger:{trigger:'.brand-strip',start:'top 90%',once:true}});
+      gsap.from('.brand-strip .brand',{opacity:0,scale:.85,duration:.6,stagger:.05,ease:'power2.out',
+        scrollTrigger:{trigger:'.brand-strip',start:'top 92%',once:true}});
 
-      // section heads
+      // section heads (slower, more stagger)
       gsap.utils.toArray('.s-head, .sec-head').forEach(function(head){
-        gsap.from(head.children,{y:30,opacity:0,duration:.6,stagger:.12,ease:'power2.out',
-          scrollTrigger:{trigger:head,start:'top 85%',once:true}});
+        gsap.from(head.children,{y:40,opacity:0,duration:.85,stagger:.15,ease:'power2.out',
+          scrollTrigger:{trigger:head,start:'top 88%',once:true}});
       });
 
-      // service cards stagger (per group)
+      // problem cards — alternating slide from right/left
+      document.querySelectorAll('.prob-card').forEach(function(card, i){
+        gsap.from(card,{x:i%2===0?120:-120,opacity:0,duration:1,ease:'power3.out',
+          scrollTrigger:{trigger:card,start:'top 88%',once:true}});
+      });
+
+      // reframe — fade up entrance
+      var rf=document.querySelector('.reframe');
+      if(rf){gsap.from(rf.children,{y:40,opacity:0,duration:.9,stagger:.15,ease:'power2.out',
+        scrollTrigger:{trigger:rf,start:'top 80%',once:true}});}
+
+      // bento grid — staggered scale entrance
+      var bento=document.getElementById('bento');
+      if(bento){gsap.from(bento.children,{scale:.85,opacity:0,duration:.6,stagger:.07,ease:'back.out(1.7)',
+        scrollTrigger:{trigger:bento,start:'top 85%',once:true}});}
+
+      // service cards stagger (per group — slower, more delay between cards)
       ['#srvGrid1','#srvGrid2','#srvGrid3'].forEach(function(sel){
         var el=document.querySelector(sel);
-        if(el){gsap.from(el.children,{y:40,opacity:0,duration:.45,stagger:.08,ease:'power2.out',
-          scrollTrigger:{trigger:el,start:'top 85%',once:true}});}
+        if(el){gsap.from(el.children,{y:50,opacity:0,duration:.65,stagger:.1,ease:'power2.out',
+          scrollTrigger:{trigger:el,start:'top 88%',once:true}});}
       });
 
-      // portfolio cards (scope to preview only — full grid shown via route)
-      gsap.from('#pfPreview .pf-card',{y:40,opacity:0,duration:.5,stagger:.08,ease:'power2.out',
-        scrollTrigger:{trigger:'#pfPreview',start:'top 85%',once:true}});
+      // portfolio cards
+      gsap.from('#pfPreview .pf-card',{y:50,opacity:0,duration:.7,stagger:.1,ease:'power2.out',
+        scrollTrigger:{trigger:'#pfPreview',start:'top 88%',once:true}});
 
-      // blog post cards (scope to preview only)
-      gsap.from('#blogPreview .post',{y:40,opacity:0,duration:.5,stagger:.1,ease:'power2.out',
-        scrollTrigger:{trigger:'#blogPreview',start:'top 85%',once:true}});
+      // blog post cards
+      gsap.from('#blogPreview .post',{y:50,opacity:0,duration:.7,stagger:.12,ease:'power2.out',
+        scrollTrigger:{trigger:'#blogPreview',start:'top 88%',once:true}});
 
-      // tool chips
-      gsap.from('.tool-chip, .chip',{scale:.7,opacity:0,duration:.3,stagger:.03,ease:'back.out(1.3)',
-        scrollTrigger:{trigger:'.tools-wrap, .chips',start:'top 85%',once:true}});
+      // tool chips — staggered scale-in
+      gsap.from('.tool-chip, .chip',{scale:.7,opacity:0,duration:.4,stagger:.04,ease:'back.out(1.3)',
+        scrollTrigger:{trigger:'.tools-wrap, .chips',start:'top 88%',once:true}});
 
       // orbit system
       var orbitEl=document.getElementById('orbit');
       if(orbitEl){
-        gsap.from(orbitEl,{scale:.6,opacity:0,duration:1,ease:'power2.out',
+        gsap.from(orbitEl,{scale:.6,opacity:0,duration:1.2,ease:'power2.out',
           scrollTrigger:{trigger:orbitEl,start:'top 80%',once:true}});
       }
 
-      // final CTA
-      gsap.from('.final-cta, .last-cta',{y:50,opacity:0,duration:.8,ease:'power2.out',
-        scrollTrigger:{trigger:'.final-cta, .last-cta',start:'top 85%',once:true}});
+      // final CTA — slide up with scale
+      gsap.from('.final-cta, .last-cta',{y:60,opacity:0,scale:.97,duration:1,ease:'power2.out',
+        scrollTrigger:{trigger:'.final-cta, .last-cta',start:'top 88%',once:true}});
 
       // card hover tilt
       if(!isTouch){
@@ -1307,20 +1338,18 @@
             var r=card.getBoundingClientRect();
             var x=(e.clientX-r.left)/r.width-.5;
             var y=(e.clientY-r.top)/r.height-.5;
-            card.style.transform='perspective(600px) rotateY('+x*6+'deg) rotateX('+(-y*6)+'deg) translateY(-3px)';
+            card.style.transform='perspective(600px) rotateY('+x*5+'deg) rotateX('+(-y*5)+'deg) translateY(-4px)';
           });
           card.addEventListener('mouseleave',function(){
-            card.style.transform='';card.style.transition='transform .4s ease';
-            setTimeout(function(){card.style.transition='';},400);
+            card.style.transform='';card.style.transition='transform .5s cubic-bezier(.16,1,.3,1)';
+            setTimeout(function(){card.style.transition='';},500);
           });
         });
       }
 
-      // refresh ScrollTrigger after all tweens registered
       ScrollTrigger.refresh();
 
     } else {
-      // no GSAP: ensure hero title visible
       var t=document.getElementById('heroTitle'); if(t) t.style.opacity=1;
     }
   })();
