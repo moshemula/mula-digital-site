@@ -229,24 +229,40 @@
   .tool .ti img{width:100%;height:100%;object-fit:contain;}
   .tool b{font-family:var(--f-display);font-weight:700;font-size:14.5px;color:var(--ink);white-space:nowrap;}
 
-  /* ===== PROBLEM CARDS (alternating scroll entrance) ===== */
-  .prob-cards{display:flex;flex-direction:column;gap:24px;}
-  .prob-card{display:flex;align-items:flex-start;gap:32px;padding:44px 48px;background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s var(--ease);}
-  .prob-card:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(0,0,0,.07);border-color:rgba(123,47,190,.25);}
-  .prob-num{font-family:var(--f-display);font-weight:900;font-size:clamp(56px,7vw,80px);line-height:1;color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text;flex-shrink:0;letter-spacing:-.04em;}
+  /* ===== PROBLEM CARDS (sticky scroll stacking) ===== */
+  .prob-stack{position:relative;}
+  .prob-card{position:sticky;top:calc(var(--nav-h) + 24px);display:grid;grid-template-columns:auto 1fr;align-items:start;gap:36px;padding:48px 52px;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 4px 24px rgba(0,0,0,.04);transition:box-shadow .4s var(--ease),border-color .4s var(--ease);}
+  .prob-card:nth-child(1){top:calc(var(--nav-h) + 24px);}
+  .prob-card:nth-child(2){top:calc(var(--nav-h) + 44px);}
+  .prob-card:nth-child(3){top:calc(var(--nav-h) + 64px);}
+  .prob-card+.prob-card{margin-top:-8px;}
+  .prob-card:hover{box-shadow:0 20px 44px rgba(0,0,0,.09);border-color:rgba(123,47,190,.25);}
+  .prob-num{font-family:var(--f-display);font-weight:900;font-size:clamp(64px,8vw,96px);line-height:.85;color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text;flex-shrink:0;letter-spacing:-.06em;opacity:.18;}
   .prob-icon{width:52px;height:52px;border-radius:14px;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;margin-bottom:14px;}
   .prob-icon svg{width:26px;height:26px;stroke:var(--purple);}
-  .prob-card h3{font-size:clamp(20px,2.5vw,26px);font-weight:800;margin-bottom:8px;}
-  .prob-card p{color:var(--soft);font-size:17px;line-height:1.65;max-width:560px;}
+  .prob-card h3{font-size:clamp(22px,2.8vw,28px);font-weight:800;margin-bottom:10px;}
+  .prob-card p{color:var(--soft);font-size:17px;line-height:1.7;max-width:580px;}
+  .prob-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-display);font-weight:700;font-size:12px;color:var(--red);background:rgba(232,0,61,.06);border:1px solid rgba(232,0,61,.14);padding:5px 14px;border-radius:100px;margin-top:16px;}
+  .prob-tag svg{width:14px;height:14px;stroke:currentColor;}
 
   /* ===== REFRAME band ===== */
-  .reframe{position:relative;background:var(--night);color:#fff;border-radius:36px;margin:48px 0 0;padding:clamp(72px,10vw,120px) clamp(24px,5vw,60px);overflow:hidden;text-align:center;}
+  .reframe{position:relative;background:var(--night);color:#fff;border-radius:36px;margin:60px 0 0;padding:clamp(80px,12vw,140px) clamp(24px,5vw,60px);overflow:hidden;text-align:center;}
   .reframe::before{content:"";position:absolute;inset:-50%;width:200%;height:200%;background:radial-gradient(40% 40% at 20% 30%,rgba(232,0,61,.18),transparent 60%),radial-gradient(40% 40% at 80% 70%,rgba(123,47,190,.22),transparent 60%);animation:floatGrad 12s ease-in-out infinite alternate;pointer-events:none;}
   @keyframes floatGrad{0%{transform:translate(0,0) rotate(0deg);}100%{transform:translate(3%,-3%) rotate(4deg);}}
   .reframe>*{position:relative;z-index:1;}
-  .reframe h2{font-size:clamp(26px,3.8vw,44px);font-weight:900;letter-spacing:-.02em;line-height:1.28;max-width:840px;margin:0 auto;color:#fff;}
-  .rf-divider{width:72px;height:4px;background:var(--grad);border-radius:4px;margin:36px auto;}
-  .rf-sub{font-size:clamp(16px,1.8vw,19px);color:rgba(255,255,255,.72);max-width:620px;margin:0 auto 36px;line-height:1.75;}
+  .rf-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:700;font-size:13px;color:#D9C8FF;background:rgba(123,47,190,.18);border:1px solid rgba(123,47,190,.36);padding:7px 18px;border-radius:100px;margin-bottom:32px;}
+  .rf-eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--grad);}
+  .reframe h2{font-size:clamp(28px,4.2vw,52px);font-weight:900;letter-spacing:-.03em;line-height:1.2;max-width:900px;margin:0 auto;color:#fff;}
+  .reframe h2 .gradient-text{font-size:inherit;}
+  .rf-pieces{display:flex;justify-content:center;gap:12px;margin:40px auto 10px;flex-wrap:wrap;max-width:600px;}
+  .rf-piece{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:700;font-size:14px;color:rgba(255,255,255,.7);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:10px 18px;border-radius:12px;transition:all .4s var(--ease);}
+  .rf-piece svg{width:18px;height:18px;stroke:currentColor;opacity:.6;}
+  .rf-piece.connected{color:#fff;background:linear-gradient(135deg,rgba(232,0,61,.15),rgba(123,47,190,.2));border-color:rgba(123,47,190,.4);box-shadow:0 8px 24px rgba(123,47,190,.2);}
+  .rf-piece.connected svg{opacity:1;stroke:var(--purple);}
+  .rf-arrow{display:flex;align-items:center;color:rgba(255,255,255,.2);transition:color .4s var(--ease);}
+  .rf-arrow.connected{color:rgba(123,47,190,.7);}
+  .rf-arrow svg{width:20px;height:20px;stroke:currentColor;}
+  .rf-conclusion{font-family:var(--f-display);font-weight:800;font-size:clamp(18px,2.2vw,24px);color:#fff;margin:36px auto 36px;max-width:600px;line-height:1.45;}
   .reframe .btn{font-size:17px;padding:16px 36px;}
 
   /* ===== GROWTH SYSTEM (bento grid) ===== */
@@ -421,9 +437,13 @@
     .srv-grid{grid-template-columns:repeat(2,1fr);}
     .chip.c2,.chip.c5{display:none;}
     .final{padding:60px 24px;}
-    .prob-card{flex-direction:column;gap:16px;padding:28px 24px;}
-    .prob-num{font-size:48px;}
+    .prob-card{grid-template-columns:1fr;gap:12px;padding:28px 24px;}
+    .prob-num{position:absolute;top:16px;inset-inline-end:20px;font-size:48px;}
+    .prob-card{position:relative;}
     .reframe{padding:48px 22px;border-radius:26px;}
+    .rf-pieces{gap:8px;}
+    .rf-piece{font-size:12px;padding:8px 12px;}
+    .rf-arrow{display:none;}
     .bento{grid-template-columns:repeat(2,1fr);}
     .bento-core{grid-column:1/-1;grid-row:auto;}
     .hero-mini{gap:18px;}
@@ -433,7 +453,7 @@
   @media (prefers-reduced-motion:reduce){
     *,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important;}
     .reveal,.stagger>*{opacity:1;transform:none;}
-    .prob-card{opacity:1;transform:none;}
+    .prob-card{opacity:1;transform:none;position:relative !important;top:auto !important;}
   }
   :focus-visible{outline:3px solid rgba(123,47,190,.55);outline-offset:3px;border-radius:6px;}
   .btn:active{transform:scale(.97);}
@@ -451,7 +471,7 @@
     :root{--max:1320px;}
     .hero h1{font-size:64px;}
     .s-head h2{font-size:52px;}
-    .prob-cards{gap:28px;}
+    .prob-card{padding:52px 60px;gap:40px;}
     .pf-grid{gap:28px;}
     .srv-grid{gap:18px;}
   }
@@ -469,6 +489,9 @@
     .section{padding:56px 0;}
     .final{padding:48px 18px;border-radius:22px;}
     .reframe{padding:40px 16px;border-radius:22px;}
+    .rf-pieces{gap:6px;}
+    .rf-piece{font-size:11px;padding:7px 10px;}
+    .rf-conclusion{font-size:16px;}
     .bento{grid-template-columns:1fr 1fr;gap:10px;}
     .bento-cell{padding:20px 14px;min-height:100px;}
     .bento-core{padding:32px 20px;}
@@ -632,13 +655,14 @@
           <span class="eyebrow">למה זה קורה</span>
           <h2>למה עסקים טובים עדיין לא מקבלים מספיק לקוחות?</h2>
         </div>
-        <div class="prob-cards">
+        <div class="prob-stack" id="probStack">
           <div class="prob-card">
             <span class="prob-num">01</span>
             <div class="prob-body">
               <div class="prob-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
               <h3>לא רואים אתכם בגוגל</h3>
               <p>הלקוחות מחפשים בדיוק את מה שאתם מציעים — ומוצאים את המתחרים. בלי נוכחות אורגנית חזקה, אתם משלמים על כל קליק ותלויים בתקציב פרסום.</p>
+              <span class="prob-tag"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>אובדן לקוחות ישיר</span>
             </div>
           </div>
           <div class="prob-card">
@@ -647,6 +671,7 @@
               <div class="prob-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.7 14A8.7 8.7 0 0 0 20 11.5V5l-8-3-2.3.9M4.7 4.7 4 5v6.5C4 17 12 21 12 21a16 16 0 0 0 4-2.6"/><path d="m2 2 20 20"/></svg></div>
               <h3>האתר לא מייצר אמון</h3>
               <p>מבקרים מגיעים, מתרשמים פחות ממה שמגיע לכם, ועוזבים בלי לפנות. אתר שלא משדר סמכות מקצועית — מפסיד לקוחות כל יום.</p>
+              <span class="prob-tag"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>פגיעה בשיעור ההמרה</span>
             </div>
           </div>
           <div class="prob-card">
@@ -655,14 +680,28 @@
               <div class="prob-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 5-3 3M2 22l4-4M8.5 8.5 7 10a3.5 3.5 0 0 0 0 5 3.5 3.5 0 0 0 5 0l1.5-1.5M15.5 15.5 17 14a3.5 3.5 0 0 0 0-5 3.5 3.5 0 0 0-5 0L10.5 10.5"/></svg></div>
               <h3>הפרסום לא מחובר למכירות</h3>
               <p>משלמים על קליקים, אבל אף אחד לא יודע מה קרה ללידים אחר כך. בלי חיבור בין שיווק למכירות, חצי מהתקציב הולך לפח.</p>
+              <span class="prob-tag"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>בזבוז תקציב שיווק</span>
             </div>
           </div>
         </div>
 
-        <div class="reframe">
-          <h2>הבעיה היא לא שאתם לא טובים.<br><span class="gradient-text">הבעיה היא שכל החלקים בדיגיטל שלכם עובדים לבד.</span></h2>
-          <div class="rf-divider"></div>
-          <p class="rf-sub">אתר בצד אחד, קמפיינים בצד שני, רשתות חברתיות במקום שלישי — ואף אחד לא מדבר עם אף אחד. אנחנו מחברים את הכל למערכת אחת שעובדת ביחד.</p>
+        <div class="reframe" id="reframeSection">
+          <span class="rf-eyebrow">הפתרון</span>
+          <h2>הבעיה היא לא שאתם לא טובים.<br><span class="gradient-text">הבעיה היא שהכל עובד לבד.</span></h2>
+
+          <div class="rf-pieces" id="rfPieces">
+            <div class="rf-piece"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>אתר</div>
+            <span class="rf-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg></span>
+            <div class="rf-piece"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>SEO</div>
+            <span class="rf-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg></span>
+            <div class="rf-piece"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l15-5v12L3 13v6"/><path d="M3 11v2"/></svg>קמפיינים</div>
+            <span class="rf-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg></span>
+            <div class="rf-piece"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>CRM</div>
+            <span class="rf-arrow"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg></span>
+            <div class="rf-piece"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-9 8.5 8.5 8.5 0 01-3.8-.9L3 21l1.9-5.2A8.5 8.5 0 1121 11.5z"/></svg>וואטסאפ</div>
+          </div>
+
+          <p class="rf-conclusion">אנחנו מחברים את הכל למערכת אחת שעובדת ביחד.</p>
           <a href="https://wa.me/972508249824" class="btn btn-primary" target="_blank" rel="noopener">רוצים מערכת שעובדת? דברו איתנו</a>
         </div>
       </div>
@@ -1287,16 +1326,29 @@
           scrollTrigger:{trigger:head,start:'top 88%',once:true}});
       });
 
-      // problem cards — alternating slide from right/left
+      // problem cards — scale up entrance as they become sticky
       document.querySelectorAll('.prob-card').forEach(function(card, i){
-        gsap.from(card,{x:i%2===0?120:-120,opacity:0,duration:1,ease:'power3.out',
-          scrollTrigger:{trigger:card,start:'top 88%',once:true}});
+        gsap.from(card,{y:60,opacity:0,scale:.96,duration:.8,delay:i*.08,ease:'power3.out',
+          scrollTrigger:{trigger:card,start:'top 90%',once:true}});
       });
 
-      // reframe — fade up entrance
-      var rf=document.querySelector('.reframe');
-      if(rf){gsap.from(rf.children,{y:40,opacity:0,duration:.9,stagger:.15,ease:'power2.out',
-        scrollTrigger:{trigger:rf,start:'top 80%',once:true}});}
+      // reframe — fade up + connect pieces animation
+      var rf=document.querySelector('#reframeSection');
+      if(rf){
+        gsap.from(rf.children,{y:50,opacity:0,duration:1,stagger:.12,ease:'power2.out',
+          scrollTrigger:{trigger:rf,start:'top 75%',once:true}});
+        // animate pieces connecting
+        var pieces=rf.querySelectorAll('.rf-piece');
+        var arrows=rf.querySelectorAll('.rf-arrow');
+        ScrollTrigger.create({trigger:rf,start:'top 60%',once:true,onEnter:function(){
+          pieces.forEach(function(p,i){
+            setTimeout(function(){p.classList.add('connected');},i*180);
+          });
+          arrows.forEach(function(a,i){
+            setTimeout(function(){a.classList.add('connected');},i*180+90);
+          });
+        }});
+      }
 
       // bento grid — staggered scale entrance
       var bento=document.getElementById('bento');
