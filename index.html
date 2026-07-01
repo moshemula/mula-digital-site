@@ -123,9 +123,9 @@
   .nav-phone:hover{color:var(--purple);}
   .nav-phone svg{width:16px;height:16px;stroke:currentColor;}
   @media(max-width:1024px){.nav-phone{display:none;}}
-  .nav-menu{display:flex;align-items:center;gap:2px;}
+  .nav-menu{display:flex;align-items:center;gap:0;flex:1;justify-content:center;}
   .nav-item{position:relative;}
-  .nav-link{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-display);font-weight:600;font-size:16px;color:var(--soft);padding:9px 14px;border-radius:100px;cursor:pointer;transition:color .2s var(--ease),background .2s var(--ease);background:none;border:none;}
+  .nav-link{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-display);font-weight:600;font-size:15.5px;color:var(--soft);padding:9px 18px;border-radius:100px;cursor:pointer;transition:color .2s var(--ease),background .2s var(--ease);background:none;border:none;white-space:nowrap;}
   .nav-link:hover,.nav-item:hover .nav-link{color:var(--ink);}
   .nav-link.active{color:var(--ink);background:rgba(123,47,190,.08);}
   .nav-link .caret{width:14px;height:14px;transition:transform .25s var(--ease);}
@@ -149,7 +149,9 @@
   .mega-col a:hover .mc-icon{background:rgba(123,47,190,.1);border-color:rgba(123,47,190,.2);}
   .mega-col a:hover .mc-icon svg{color:var(--purple);}
   .mega-col a .mc-desc{font-weight:400;font-size:12.5px;color:var(--muted);display:block;margin-top:2px;}
-  .mega-cta{background:var(--night);color:#fff;border-radius:0 20px 20px 0;padding:28px 24px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+  .mega-cta{background:var(--night);color:#fff;border-radius:20px 0 0 20px;padding:28px 24px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+  [dir="rtl"] .mega-grid.cols-4{direction:rtl;}
+  [dir="rtl"] .mega-cta{border-radius:20px 0 0 20px;}
   .mega-cta::before{content:"";position:absolute;top:-40px;inset-inline-end:-40px;width:120px;height:120px;background:var(--grad);border-radius:50%;opacity:.15;filter:blur(30px);}
   .mega-cta h4{color:#fff;font-size:17px;text-transform:none;letter-spacing:-.01em;margin-bottom:8px;font-family:var(--f-display);font-weight:700;}
   .mega-cta p{color:rgba(255,255,255,.6);font-size:14px;margin-bottom:18px;line-height:1.6;}
@@ -321,7 +323,7 @@
   .about-list b{font-family:var(--f-display);}
 
   /* ===== BLOG cards ===== */
-  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;justify-content:center;}
   .post{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s;cursor:pointer;}
   .post:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:var(--line-2);}
   .post .thumb{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--surface-2);}
@@ -489,6 +491,7 @@
 
       <nav class="nav-menu" aria-label="ניווט ראשי">
         <div class="nav-item"><a class="nav-link" href="/" data-route="home">בית</a></div>
+        <div class="nav-item"><a class="nav-link" href="about.html">אודות</a></div>
 
         <div class="nav-item has-mega">
           <a class="nav-link" href="/#services" data-anchor="services">שירותים <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
@@ -544,7 +547,6 @@
         </div>
 
         <div class="nav-item"><a class="nav-link" href="/blog" data-route="blog">בלוג</a></div>
-        <div class="nav-item"><a class="nav-link" href="about.html">אודות</a></div>
         <div class="nav-item"><a class="nav-link" href="contact.html">צור קשר</a></div>
       </nav>
 
@@ -852,7 +854,7 @@
     <!-- BLOG PREVIEW (3) -->
     <section class="section" id="blog-preview">
       <div class="wrap">
-        <div class="s-head reveal">
+        <div class="s-head center reveal">
           <span class="eyebrow">בלוג</span>
           <h2>ידע שמייצר יתרון עסקי</h2>
           <p>מאמרים קצרים שעוזרים לכם לחשוב נכון על הדיגיטל של העסק.</p>

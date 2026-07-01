@@ -110,7 +110,7 @@
   header.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line);}
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);gap:18px;max-width:1200px;margin-inline:auto;padding-inline:24px;}
   .nav-logo img{height:34px;width:auto;}
-  .nav-menu{display:flex;align-items:center;gap:2px;}
+  .nav-menu{display:flex;align-items:center;gap:0;flex:1;justify-content:center;}
   .nav-item{position:relative;}
   .nav-link{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-display);font-weight:600;font-size:16px;color:var(--soft);padding:9px 14px;border-radius:100px;cursor:pointer;transition:color .2s var(--ease),background .2s var(--ease);background:none;border:none;}
   .nav-link:hover,.nav-item:hover .nav-link{color:var(--ink);}
@@ -135,7 +135,7 @@
   .mega-col a:hover .mc-icon{background:rgba(123,47,190,.1);border-color:rgba(123,47,190,.2);}
   .mega-col a:hover .mc-icon svg{color:var(--purple);}
   .mega-col a .mc-desc{font-weight:400;font-size:12.5px;color:var(--muted);display:block;margin-top:2px;}
-  .mega-cta{background:var(--night);color:#fff;border-radius:0 20px 20px 0;padding:28px 24px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+  .mega-cta{background:var(--night);color:#fff;border-radius:20px 0 0 20px;padding:28px 24px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
   .mega-cta::before{content:"";position:absolute;top:-40px;inset-inline-end:-40px;width:120px;height:120px;background:var(--grad);border-radius:50%;opacity:.15;filter:blur(30px);}
   .mega-cta h4{color:#fff;font-size:17px;text-transform:none;letter-spacing:-.01em;margin-bottom:8px;font-family:var(--f-display);font-weight:700;}
   .mega-cta p{color:rgba(255,255,255,.6);font-size:14px;margin-bottom:18px;line-height:1.6;}
@@ -421,6 +421,8 @@
       <a href="/" class="nav-logo" aria-label="Mula Digital - דף הבית"><img src="assets/logo-light.png" alt="הלוגו של Mula Digital" /></a>
       <nav class="nav-menu" aria-label="ניווט ראשי">
         <div class="nav-item"><a class="nav-link" href="/">בית</a></div>
+        <div class="nav-item"><a class="nav-link" href="about.html">אודות</a></div>
+
         <div class="nav-item has-mega">
           <a class="nav-link" href="/#services">שירותים <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
           <div class="mega"><div class="mega-grid cols-4">
@@ -469,7 +471,6 @@
           </div></div>
         </div>
         <div class="nav-item"><a class="nav-link" href="/blog">בלוג</a></div>
-        <div class="nav-item"><a class="nav-link" href="about.html">אודות</a></div>
         <div class="nav-item"><a class="nav-link" href="contact.html">צור קשר</a></div>
       </nav>
       <div class="nav-right">
