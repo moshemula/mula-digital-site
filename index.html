@@ -132,8 +132,9 @@
   .nav-item.has-mega:hover .caret{transform:rotate(180deg);}
   .nav-right{display:flex;align-items:center;gap:12px;}
   /* mega panel */
-  .mega{position:absolute;top:calc(100% + 14px);inset-inline-end:0;width:min(94vw,920px);background:rgba(255,255,255,.92);backdrop-filter:saturate(200%) blur(28px);-webkit-backdrop-filter:saturate(200%) blur(28px);border:1px solid rgba(236,236,236,.7);border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.08),0 1px 3px rgba(0,0,0,.04);padding:0;opacity:0;visibility:hidden;transform:translateY(8px);transform-origin:top;transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s;z-index:90;}
-  .nav-item.has-mega:hover .mega,.nav-item.has-mega:focus-within .mega{opacity:1;visibility:visible;transform:translateY(0);}
+  .nav-item.has-mega{position:static;}
+  .mega{position:absolute;top:calc(var(--nav-h) + 2px);left:50%;transform:translateX(-50%) translateY(8px);width:min(94vw,920px);background:rgba(255,255,255,.95);backdrop-filter:saturate(200%) blur(28px);-webkit-backdrop-filter:saturate(200%) blur(28px);border:1px solid rgba(236,236,236,.7);border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.10),0 1px 3px rgba(0,0,0,.04);padding:0;opacity:0;visibility:hidden;transform-origin:top center;transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s;z-index:90;}
+  .nav-item.has-mega:hover .mega,.nav-item.has-mega:focus-within .mega{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
   .mega::before{content:"";position:absolute;top:-14px;inset-inline:0;height:14px;}
   .mega-grid{display:grid;gap:0;}
   .mega-grid.cols-4{grid-template-columns:repeat(3,1fr) 1.15fr;}
@@ -217,8 +218,8 @@
   .marquee-track{display:flex;align-items:center;gap:52px;width:max-content;animation:marquee 55s linear infinite;will-change:transform;}
   .marquee:hover .marquee-track{animation-play-state:paused;}
   @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-  .brand{flex:none;width:130px;height:50px;display:flex;align-items:center;justify-content:center;}
-  .brand img{max-height:38px;max-width:120px;width:auto;object-fit:contain;opacity:.65;filter:grayscale(.3);transition:opacity .3s var(--ease),filter .3s var(--ease),transform .3s var(--ease);}
+  .brand{flex:none;width:170px;height:68px;display:flex;align-items:center;justify-content:center;text-decoration:none;}
+  .brand img{max-height:52px;max-width:155px;width:auto;object-fit:contain;opacity:.65;filter:grayscale(.3);transition:opacity .3s var(--ease),filter .3s var(--ease),transform .3s var(--ease);}
   .brand:hover img{opacity:1;filter:none;transform:scale(1.06);}
   /* tools / tech-stack — static, centered, wrapped (no animation) */
   .tools-sec{padding:54px 0;border-top:1px solid var(--line);background:var(--surface);}
@@ -267,12 +268,12 @@
 
   /* ===== GROWTH SYSTEM (bento grid) ===== */
   .bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-flow:dense;gap:14px;max-width:980px;margin:0 auto;}
-  .bento-cell{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;min-height:130px;transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s var(--ease);}
+  .bento-cell{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;min-height:150px;transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s var(--ease);}
   .bento-cell:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,0,0,.08);border-color:rgba(123,47,190,.25);}
-  .bento-cell .e{width:48px;height:48px;border-radius:14px;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;}
+  .bento-cell .e{width:52px;height:52px;border-radius:14px;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;}
   .bento-cell .e svg{width:24px;height:24px;stroke:var(--purple);}
-  .bento-cell b{font-family:var(--f-display);font-weight:800;font-size:15px;color:var(--ink);}
-  .bento-cell small{font-size:13.5px;color:var(--muted);line-height:1.5;}
+  .bento-cell b{font-family:var(--f-display);font-weight:800;font-size:16px;color:var(--ink);}
+  .bento-cell small{font-size:14px;color:var(--muted);line-height:1.5;}
   .bento-core{grid-column:2/4;grid-row:2/4;background:var(--grad);border:none;color:#fff;border-radius:24px;padding:48px 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;box-shadow:0 24px 60px rgba(123,47,190,.3);min-height:auto;}
   .bento-core:hover{transform:translateY(-5px);box-shadow:0 30px 70px rgba(123,47,190,.4);border-color:transparent;}
   .bento-core .e{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.25);}
@@ -283,24 +284,24 @@
   .bento-wide .e{flex-shrink:0;}
 
   /* ===== PORTFOLIO cards ===== */
-  .pf-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  .pf-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
   .pf-grid.cols3{grid-template-columns:repeat(3,1fr);}
-  .pf-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);}
-  .pf-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:var(--line-2);}
-  .pf-logo-bar{width:100%;height:92px;border-radius:14px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;padding:18px 22px;margin-bottom:16px;overflow:hidden;transition:border-color .3s var(--ease),box-shadow .3s var(--ease);}
-  .pf-card:hover .pf-logo-bar{border-color:var(--line-2);box-shadow:var(--shadow-sm);}
-  .pf-logo-bar img{max-height:48px;max-width:175px;width:auto;height:auto;object-fit:contain;display:block;}
-  .pf-top{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap;}
-  .pf-cat{font-family:var(--f-display);font-weight:700;font-size:12px;color:var(--purple);background:rgba(123,47,190,.07);border:1px solid rgba(123,47,190,.14);padding:5px 12px;border-radius:100px;}
-  .pf-card h3{font-size:22px;font-weight:900;margin-bottom:6px;}
-  .pf-serv{color:var(--muted);font-size:14.5px;font-weight:600;margin-bottom:16px;}
-  .pf-result{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);}
-  .pf-result .k{font-family:var(--f-display);font-weight:700;font-size:12px;color:var(--muted);letter-spacing:.04em;margin-bottom:4px;}
-  .pf-result .v{font-family:var(--f-display);font-weight:800;font-size:17px;}
-  .pf-link{margin-top:18px;display:inline-flex;align-items:center;gap:7px;font-family:var(--f-display);font-weight:700;font-size:15px;color:var(--ink);transition:gap .2s,color .2s;cursor:pointer;}
+  .pf-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:32px;display:flex;flex-direction:column;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);}
+  .pf-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:rgba(123,47,190,.2);}
+  .pf-logo-bar{width:100%;height:110px;border-radius:16px;background:var(--surface);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;padding:22px 28px;margin-bottom:20px;overflow:hidden;transition:border-color .3s var(--ease),box-shadow .3s var(--ease);}
+  .pf-card:hover .pf-logo-bar{border-color:rgba(123,47,190,.15);box-shadow:0 4px 16px rgba(123,47,190,.08);}
+  .pf-logo-bar img{max-height:52px;max-width:180px;width:auto;height:auto;object-fit:contain;display:block;}
+  .pf-top{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap;}
+  .pf-cat{font-family:var(--f-display);font-weight:700;font-size:12px;color:var(--purple);background:rgba(123,47,190,.07);border:1px solid rgba(123,47,190,.14);padding:6px 14px;border-radius:100px;}
+  .pf-card h3{font-size:24px;font-weight:900;margin-bottom:8px;}
+  .pf-serv{color:var(--muted);font-size:15px;font-weight:600;margin-bottom:18px;}
+  .pf-result{margin-top:auto;padding-top:18px;border-top:1px solid var(--line);}
+  .pf-result .k{font-family:var(--f-display);font-weight:700;font-size:12px;color:var(--muted);letter-spacing:.04em;margin-bottom:6px;}
+  .pf-result .v{font-family:var(--f-display);font-weight:800;font-size:18px;}
+  .pf-link{margin-top:20px;display:inline-flex;align-items:center;gap:7px;font-family:var(--f-display);font-weight:700;font-size:15px;color:var(--ink);transition:gap .2s,color .2s;cursor:pointer;}
   .pf-link:hover{gap:11px;color:var(--purple);}
   .pf-link svg{width:15px;height:15px;}
-  .pf-foot{display:flex;justify-content:center;margin-top:44px;}
+  .pf-foot{display:flex;justify-content:center;margin-top:50px;}
 
   /* ===== SERVICES (3 pillars) ===== */
   /* ===== SERVICES SECTION ===== */
@@ -314,16 +315,16 @@
   .srv-group-head{display:flex;align-items:center;gap:14px;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid var(--night-line);}
   .srv-group-head .srv-num{font-family:var(--f-display);font-weight:800;font-size:13px;color:var(--purple);background:rgba(123,47,190,.15);padding:5px 13px;border-radius:100px;letter-spacing:.04em;}
   .srv-group-head h3{font-size:20px;font-weight:800;color:#fff;margin:0;}
-  .srv-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
-  .srv-card{display:flex;flex-direction:column;background:var(--night-card);border:1px solid var(--night-line);border-radius:var(--r-sm);padding:24px 20px;transition:transform .3s var(--ease),border-color .3s,box-shadow .3s;position:relative;overflow:hidden;text-decoration:none;color:#fff;}
+  .srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .srv-card{display:flex;flex-direction:column;background:var(--night-card);border:1px solid var(--night-line);border-radius:var(--r);padding:32px 28px;transition:transform .3s var(--ease),border-color .3s,box-shadow .3s;position:relative;overflow:hidden;text-decoration:none;color:#fff;}
   .srv-card::before{content:"";position:absolute;top:0;inset-inline:0;height:3px;background:var(--grad);opacity:0;transition:opacity .3s;}
   .srv-card:hover{transform:translateY(-5px);border-color:rgba(123,47,190,.4);box-shadow:0 20px 50px rgba(0,0,0,.35);}
   .srv-card:hover::before{opacity:1;}
-  .srv-ic{width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:rgba(123,47,190,.12);border-radius:11px;margin-bottom:14px;flex-shrink:0;}
-  .srv-ic svg{width:21px;height:21px;stroke:var(--purple);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
-  .srv-card h4{font-size:16px;font-weight:700;color:#fff;margin-bottom:6px;line-height:1.3;}
-  .srv-card .srv-desc{font-size:13.5px;color:rgba(255,255,255,.48);line-height:1.5;flex:1;}
-  .srv-card .srv-arrow{display:flex;align-items:center;gap:6px;font-family:var(--f-display);font-weight:600;font-size:13px;color:rgba(255,255,255,.35);margin-top:14px;transition:color .3s,gap .3s;}
+  .srv-ic{width:52px;height:52px;display:flex;align-items:center;justify-content:center;background:rgba(123,47,190,.12);border-radius:14px;margin-bottom:18px;flex-shrink:0;}
+  .srv-ic svg{width:24px;height:24px;stroke:var(--purple);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+  .srv-card h4{font-size:19px;font-weight:800;color:#fff;margin-bottom:8px;line-height:1.3;}
+  .srv-card .srv-desc{font-size:15px;color:rgba(255,255,255,.55);line-height:1.6;flex:1;}
+  .srv-card .srv-arrow{display:flex;align-items:center;gap:6px;font-family:var(--f-display);font-weight:600;font-size:14px;color:rgba(255,255,255,.35);margin-top:18px;transition:color .3s,gap .3s;}
   .srv-card .srv-arrow svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transform:scaleX(-1);}
   .srv-card:hover .srv-arrow{color:var(--purple);gap:10px;}
 
@@ -341,15 +342,15 @@
   /* ===== BLOG cards ===== */
   .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;justify-content:center;}
   .post{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s;cursor:pointer;}
-  .post:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:var(--line-2);}
+  .post:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:rgba(123,47,190,.18);}
   .post .thumb{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--surface-2);}
   .post .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease);}
   .post:hover .thumb img{transform:scale(1.05);}
-  .post .thumb .cat{position:absolute;top:14px;inset-inline-start:14px;font-family:var(--f-display);font-weight:700;font-size:12px;color:#fff;background:rgba(11,11,15,.6);backdrop-filter:blur(6px);padding:6px 13px;border-radius:100px;}
-  .post .body{padding:22px;display:flex;flex-direction:column;flex:1;}
-  .post h3{font-size:19px;font-weight:800;margin-bottom:8px;line-height:1.3;}
-  .post .ex{color:var(--soft);font-size:15px;flex:1;}
-  .post .meta{display:flex;align-items:center;justify-content:space-between;margin-top:16px;}
+  .post .thumb .cat{position:absolute;top:14px;inset-inline-start:14px;font-family:var(--f-display);font-weight:700;font-size:12px;color:#fff;background:rgba(11,11,15,.6);backdrop-filter:blur(6px);padding:6px 14px;border-radius:100px;}
+  .post .body{padding:26px;display:flex;flex-direction:column;flex:1;}
+  .post h3{font-size:20px;font-weight:800;margin-bottom:10px;line-height:1.3;}
+  .post .ex{color:var(--soft);font-size:15.5px;flex:1;line-height:1.6;}
+  .post .meta{display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);}
   .post .rt{color:var(--muted);font-size:13px;font-weight:600;}
   .post .read{font-family:var(--f-display);font-weight:700;font-size:14px;color:var(--ink);display:inline-flex;gap:6px;align-items:center;}
   .post:hover .read{color:var(--purple);}
@@ -413,7 +414,7 @@
     .blog-grid,.pf-grid.cols3{grid-template-columns:repeat(2,1fr);}
     .bento{grid-template-columns:repeat(3,1fr);}
     .bento-core{grid-column:2/4;grid-row:2/3;}
-    .srv-grid{grid-template-columns:repeat(3,1fr);}
+    .srv-grid{grid-template-columns:repeat(2,1fr);}
     .mega{width:min(94vw,640px);}
     .mega-grid.cols-4{grid-template-columns:1fr 1fr;}.mega-grid.cols-4 .mega-cta{border-radius:0 0 20px 20px;}
     .mega-grid.cols-3{grid-template-columns:1fr 1fr;}
@@ -473,7 +474,8 @@
     .s-head h2{font-size:52px;}
     .prob-card{padding:52px 60px;gap:40px;}
     .pf-grid{gap:28px;}
-    .srv-grid{gap:18px;}
+    .srv-grid{gap:20px;}
+    .srv-card{padding:36px 32px;}
   }
   /* ===== SMALL MOBILE (375 and under) ===== */
   @media (max-width:390px){
@@ -535,11 +537,11 @@
                 <a href="service-linkedin.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span><span>LinkedIn<span class="mc-desc">B2B, לידים, תוכן מקצועי</span></span></a>
               </div>
               <div class="mega-col"><h4>מערכות צמיחה</h4>
-                <a href="/#services" data-anchor="services"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 014 4c0 1.95-2 4-4 6-2-2-4-4.05-4-6a4 4 0 014-4z"/><path d="M4.93 10.93a10 10 0 100 2.14"/><path d="M2 12h2"/><path d="M20 12h2"/></svg></span><span>אוטומציות AI<span class="mc-desc">תהליכים חכמים, Make, n8n</span></span></a>
-                <a href="/#services" data-anchor="services"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span><span>CRM<span class="mc-desc">ניהול לידים ומכירות</span></span></a>
-                <a href="/#services" data-anchor="services"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span><span>אוטומציות וואטסאפ<span class="mc-desc">בוטים, שליחה אוטומטית</span></span></a>
-                <a href="/#services" data-anchor="services"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span><span>Analytics<span class="mc-desc">GA4, דוחות, תובנות</span></span></a>
-                <a href="/#services" data-anchor="services"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span><span>CRO<span class="mc-desc">אופטימיזציית המרות</span></span></a>
+                <a href="service-ai-automation.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 014 4c0 1.95-2 4-4 6-2-2-4-4.05-4-6a4 4 0 014-4z"/><path d="M4.93 10.93a10 10 0 100 2.14"/><path d="M2 12h2"/><path d="M20 12h2"/></svg></span><span>אוטומציות AI<span class="mc-desc">תהליכים חכמים, Make, n8n</span></span></a>
+                <a href="service-crm.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span><span>CRM<span class="mc-desc">ניהול לידים ומכירות</span></span></a>
+                <a href="service-whatsapp-automation.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span><span>אוטומציות וואטסאפ<span class="mc-desc">בוטים, שליחה אוטומטית</span></span></a>
+                <a href="service-analytics.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span><span>Analytics<span class="mc-desc">GA4, דוחות, תובנות</span></span></a>
+                <a href="service-cro.html"><span class="mc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span><span>CRO<span class="mc-desc">אופטימיזציית המרות</span></span></a>
               </div>
               <div class="mega-cta">
                 <h4>לא בטוחים מאיפה להתחיל?</h4>
@@ -570,6 +572,7 @@
         </div>
 
         <div class="nav-item"><a class="nav-link" href="/blog" data-route="blog">בלוג</a></div>
+        <div class="nav-item"><a class="nav-link" href="testimonials.html">המלצות</a></div>
         <div class="nav-item"><a class="nav-link" href="contact.html">צור קשר</a></div>
       </nav>
 
@@ -600,6 +603,7 @@
     <a href="/portfolio" data-route="portfolio">תיק עבודות</a>
     <a href="/blog" data-route="blog">בלוג</a>
     <a href="about.html">אודות</a>
+    <a href="testimonials.html">המלצות</a>
     <a href="contact.html">צור קשר</a>
     <div class="m-cta"><a href="contact.html" class="btn btn-primary">קבעו שיחת אבחון</a></div>
   </nav>
@@ -878,14 +882,15 @@
       <div class="wrap about">
         <div class="about-photo reveal" data-parallax><img src="assets/moshe-white.jpg" alt="משה מולה, מייסד Mula Digital" /></div>
         <div class="about-text">
-          <span class="eyebrow reveal">מי עומד מאחורי המערכת</span>
+          <span class="eyebrow reveal">Mula Digital</span>
           <p class="about-quote reveal">"אני לא מסתכל על אתר.<br><span class="gradient-text">אני מסתכל על העסק."</span></p>
+          <p class="reveal" style="color:var(--soft);font-size:17px;line-height:1.7;margin-bottom:24px;">Mula Digital היא סוכנות צמיחה שבונה לעסקים מערכת שיווק שלמה. לא עוד ספק שעושה אתר — אלא שותף שמבין את העסק, מחבר אסטרטגיה לביצוע, ומודד תוצאות.</p>
           <ul class="about-list">
-            <li class="reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span><span><b>20+ שנות ניסיון</b> בשיווק ומכירות — מהשטח, לא מהתיאוריה.</span></li>
-            <li class="reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3"></path></svg></span><span><b>עסקים מקומיים, תעשייה ו-B2B</b> — מהקטן ועד הבינלאומי.</span></li>
-            <li class="reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"></polyline><polyline points="14 7 21 7 21 14"></polyline></svg></span><span><b>גישה שמתחילה באסטרטגיה</b> ומתמקדת בתוצאות מדידות.</span></li>
+            <li class="reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span><span><b>משה מולה, מייסד</b> — 20+ שנות ניסיון בשיווק ומכירות מהשטח.</span></li>
+            <li class="reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3"></path></svg></span><span><b>50+ עסקים שצמחו</b> — מעסק מקומי ועד חברות B2B בינלאומיות.</span></li>
+            <li class="reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"></polyline><polyline points="14 7 21 7 21 14"></polyline></svg></span><span><b>מערכת, לא פרויקט</b> — אסטרטגיה, אתר, SEO, קמפיינים, CRM ואוטומציות ביחד.</span></li>
           </ul>
-          <div class="reveal" style="margin-top:24px"><a href="about.html" class="btn btn-ghost">קראו את הסיפור המלא ←</a></div>
+          <div class="reveal" style="margin-top:28px"><a href="about.html" class="btn btn-ghost">הכירו את הסיפור המלא</a></div>
         </div>
       </div>
     </section>
@@ -997,10 +1002,10 @@
           </div>
         </div>
         <div class="foot-col"><h4>ניווט</h4>
-          <a href="/" data-route="home">בית</a><a href="/portfolio" data-route="portfolio">תיק עבודות</a><a href="/blog" data-route="blog">בלוג</a><a href="about.html">אודות</a><a href="contact.html">צור קשר</a>
+          <a href="/" data-route="home">בית</a><a href="/portfolio" data-route="portfolio">תיק עבודות</a><a href="/blog" data-route="blog">בלוג</a><a href="about.html">אודות</a><a href="testimonials.html">המלצות</a><a href="contact.html">צור קשר</a>
         </div>
         <div class="foot-col"><h4>שירותים</h4>
-          <a href="/#services" data-anchor="services">בניית אתרים ומיתוג</a><a href="/#services" data-anchor="services">SEO וקידום אורגני</a><a href="/#services" data-anchor="services">קמפיינים ממומנים</a><a href="/#services" data-anchor="services">אוטומציות AI ו-CRM</a>
+          <a href="service-web-development.html">בניית אתרים ומיתוג</a><a href="service-seo.html">SEO וקידום אורגני</a><a href="service-google-ads.html">קמפיינים ממומנים</a><a href="service-ai-automation.html">אוטומציות AI ו-CRM</a>
         </div>
         <div class="foot-col foot-contact"><h4>יצירת קשר</h4>
           <a href="tel:0508249824">050-824-9824</a>
@@ -1089,7 +1094,13 @@
         '<span class="pf-link" data-route="portfolio">צפייה בפרויקט <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></span>'+
         '</article>';
     }
-    function brandLogo(slug){ return '<span class="brand"><img loading="lazy" src="'+LG(slug)+'" alt="'+(clientName[slug]||'')+'" /></span>'; }
+    var clientProject={};
+    projects.forEach(function(p,i){ clientProject[p.logo]=i; });
+    function brandLogo(slug){
+      var idx=clientProject[slug];
+      if(idx!==undefined) return '<a class="brand" href="/portfolio" data-route="portfolio" title="'+(clientName[slug]||'')+'"><img loading="lazy" src="'+LG(slug)+'" alt="'+(clientName[slug]||'')+'" /></a>';
+      return '<span class="brand"><img loading="lazy" src="'+LG(slug)+'" alt="'+(clientName[slug]||'')+'" /></span>';
+    }
 
     // inject blog (preview 3 + full 6), portfolio (preview 4 + full 12), clients strip
     document.getElementById('blogPreview').innerHTML = posts.slice(0,3).map(postCard).join('');
