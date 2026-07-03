@@ -572,10 +572,10 @@
               <div class="mega-col"><h4>לפי תחום</h4>
                 <a href="/portfolio" data-route="portfolio">תעשייה</a><a href="/portfolio" data-route="portfolio">ביטוח ופיננסים</a><a href="/portfolio" data-route="portfolio">בעלי מקצוע</a><a href="/portfolio" data-route="portfolio">B2B</a><a href="/portfolio" data-route="portfolio">ביוטי</a><a href="/portfolio" data-route="portfolio">טכנולוגיה</a>
               </div>
-              <div class="mega-col mega-feat"><h4>פרויקטים נבחרים</h4>
-                <a href="/portfolio" data-route="portfolio"><span class="mono">TF</span>Tamuz FTK Solutions</a>
-                <a href="/portfolio" data-route="portfolio"><span class="mono">AB</span>ABP Consultancy</a>
-                <a href="/portfolio" data-route="portfolio"><span class="mono">EL</span>ERP Logic</a>
+              <div class="mega-col mega-feat"><h4>קייס סטאדי</h4>
+                <a href="case-jackson.html"><span class="mono">YJ</span>יוחאי ג׳קסון אינסטלציה</a>
+                <a href="case-hibur.html"><span class="mono">חב</span>חיבור סוכנות לביטוח</a>
+                <a href="case-quickfit.html"><span class="mono">QF</span>QuickFit Studio</a>
               </div>
             </div>
           </div>
@@ -1115,7 +1115,9 @@
       {n:'אתלטיקה קלה ראשון לציון',logo:'athletics',cat:'ספורט · קהילה',serv:'מיתוג · ניהול דיגיטל',res:'מיתוג ונראות לקהילת הספורט',cats:['מיתוג','קמפיינים']},
       {n:'ריי נכסים',logo:'ray',cat:'נדל״ן',serv:'אתר · שיווק פרויקטים',res:'נראות ותדמית לפרויקטים',cats:['אתרים','קמפיינים']},
       {n:'אלדד לוי שמאי מקרקעין',logo:'eldadlevi',cat:'שמאות · מקצועי',serv:'אתר · SEO · תוכן',res:'מיצוב כסמכות מקצועית בתחום',cats:['אתרים','SEO']},
-      {n:'יוחאי ג׳קסון אינסטלציה',logo:'yochai',cat:'בעלי מקצוע · מקומי',serv:'אתר · Local SEO · קמפיינים',res:'פניות חודשיות קבועות מהאתר',cats:['אתרים','SEO','קמפיינים']},
+      {n:'יוחאי ג׳קסון אינסטלציה',logo:'yochai',cat:'בעלי מקצוע · מקומי',serv:'אתר · Local SEO · קמפיינים',res:'~10 שיחות ביום · פניות אורגניות קבועות',cats:['אתרים','SEO','קמפיינים'],url:'case-jackson.html'},
+      {n:'חיבור סוכנות לביטוח',logo:'hibur',cat:'ביטוח ופיננסים',serv:'אסטרטגיה · מיתוג · דיגיטל · תוכן',res:'סוכנות שבנויה לצמיחה עקבית',cats:['מיתוג','אתרים'],url:'case-hibur.html'},
+      {n:'QuickFit Studio',logo:'quickfit',cat:'כושר · מקומי',serv:'מיתוג · דיגיטל · קמפיינים',res:'מותג מקומי בולט ומתאמנים חדשים',cats:['מיתוג','קמפיינים'],url:'case-quickfit.html'},
       {n:'CloudBeam CRM',logo:'cloudbeam',cat:'טכנולוגיה · CRM',serv:'אתר · אוטומציות',res:'נכס דיגיטלי למוצר טכנולוגי',cats:['אתרים','אוטומציות']},
       {n:'שי לעתיד',logo:'shaiatid',cat:'ביטוח ופיננסים',serv:'מיתוג · אתר',res:'מיתוג ובידול בתחום הפיננסי',cats:['מיתוג','אתרים']}
     ];
@@ -1131,13 +1133,13 @@
         '</div></article>';
     }
     function pfCard(p){
+      var link=p.url?'<a class="pf-link" href="'+p.url+'">קרא את הקייס סטאדי <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></a>':'<span class="pf-link" data-route="portfolio">צפייה בפרויקט <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></span>';
       return '<article class="pf-card pf-item" data-cats="'+p.cats.join(' ')+'">'+
         '<div class="pf-logo-bar"><img loading="lazy" src="'+LG(p.logo)+'" alt="הלוגו של '+p.n+'" /></div>'+
         '<div class="pf-top"><span class="pf-cat">'+p.cat+'</span></div>'+
         '<h3>'+p.n+'</h3><p class="pf-serv">'+p.serv+'</p>'+
         '<div class="pf-result"><div class="k">התוצאה</div><div class="v">'+p.res+'</div></div>'+
-        '<span class="pf-link" data-route="portfolio">צפייה בפרויקט <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></span>'+
-        '</article>';
+        link+'</article>';
     }
     var clientProject={};
     projects.forEach(function(p,i){ clientProject[p.logo]=i; });
