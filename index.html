@@ -1103,27 +1103,6 @@
     document.getElementById('pfFull').innerHTML = projects.map(pfCard).join('');
     document.getElementById('marquee').innerHTML = clients.map(brandLogo).join('');
 
-    // tools / tech-stack strip (logo images + name)
-    var TL=function(f){return 'assets/tools/'+f;};
-    var tools=[
-      {n:'WordPress',img:TL('WordPress_logo.svg.png')},{n:'Elementor',img:TL('Elementor-Logo-Full-Red.png')},
-      {n:'Google Ads',img:TL('GOOGLE ADS.png')},{n:'Meta Ads',img:TL('meta-logoeps.com_.png')},
-      {n:'Facebook',img:TL('facebook-rebrand-graphic-design-.format-webp.width-2880_QzXKx5udyShzUfUC.webp')},
-      {n:'Instagram',img:TL('instagram-logo.png')},{n:'TikTok',img:TL('TikTok_logo.svg.png')},
-      {n:'LinkedIn',img:TL('LinkedIn_logo.svg')},{n:'YouTube',img:TL('youtube-logO.png')},
-      {n:'Pinterest',img:TL('pinterest.png')},{n:'Google Tag Manager',img:TL('GTM.png')},
-      {n:'Google Analytics 4',img:TL('GA4_Logo.svg')},{n:'Search Console',img:TL('google search console logo.png')},
-      {n:'Google Maps',img:TL('Google_Maps_Logo.svg.png')},{n:'Google Business',img:TL('google-my-business-logo-png-transparent.png')},
-      {n:'Microsoft Clarity',img:TL('logo-microsoft-clarity.jpg')},{n:'Microsoft',img:TL('Microsoft_logo_.png')},
-      {n:'Bing',img:TL('Bing-logo.png')},{n:'ChatGPT',img:TL('Chat-GPT-logo.webp')},
-      {n:'Claude',img:TL('Claude.jpg')},{n:'Gemini',img:TL('google-gemini_mcwu.jpg')},
-      {n:'Perplexity',img:TL('Perplexity-feature.webp')},{n:'Make',img:TL('Make-com-Logo.jpg')},
-      {n:'WhatsApp Business',img:TL('whatsapp-business-logo-png_seeklogo-481933.png')},
-      {n:'Yelp',img:TL('Yelp_Logo.svg.png')},{n:'EasyCo',img:TL('איזי-שירות-לקוחות-לוגו.png')}
-    ];
-    function toolChip(t){ return '<span class="tool"><span class="ti"><img loading="lazy" src="'+t.img+'" alt="'+t.n+'" /></span><b>'+t.n+'</b></span>'; }
-    document.getElementById('toolsWrap').innerHTML = tools.map(toolChip).join('');
-
     // duplicate the clients marquee for seamless infinite scroll
     (function(){
       var mq=document.getElementById('marquee');
