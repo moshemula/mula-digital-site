@@ -1124,11 +1124,12 @@
     window.addEventListener('scroll',function(){ var h=document.documentElement; bar.style.width=((h.scrollTop)/(h.scrollHeight-h.clientHeight)*100)+'%'; },{passive:true});
 
     /* ---------- ROUTER ---------- */
+    var BASE=location.pathname.replace(/\/(portfolio|blog)?\/?$/,'/');
     var pages={home:document.getElementById('route-home'),portfolio:document.getElementById('route-portfolio'),blog:document.getElementById('route-blog')};
     function setActiveNav(route){
       document.querySelectorAll('.nav-link').forEach(function(a){
         var r=a.getAttribute('data-route');
-        a.classList.toggle('active', (r===route) || (route==='home' && a.getAttribute('href')==='/' ));
+        a.classList.toggle('active', (r===route) || (route==='home' && (a.getAttribute('href')==='/' || a.getAttribute('href')===BASE)));
       });
     }
     function showRoute(route, opts){
@@ -1140,11 +1141,15 @@
       var root=pages[route];
       root.querySelectorAll('.reveal,.stagger').forEach(function(el){ el.classList.add('in'); stagger(el); });
       if(!opts.keepScroll) window.scrollTo({top:0,behavior:opts.smooth?'smooth':'auto'});
-      if(opts.push!==false){ try{ var path=route==='home'?'/':'/'+route; history.pushState({route:route},'',path); }catch(e){} }
+      if(opts.push!==false){ try{ var path=route==='home'?BASE:BASE+route; history.pushState({route:route},'',path); }catch(e){} }
       if(opts.filter){ applyFilter(route==='portfolio'?'pf':'blog', opts.filter); }
       closeMobile();
     }
-    function routeFromPath(){ var p=location.pathname.replace(/\/+$/,''); if(p.endsWith('/portfolio'))return 'portfolio'; if(p.endsWith('/blog'))return 'blog'; return 'home'; }
+    function routeFromPath(){
+      var q=new URLSearchParams(location.search).get('r');
+      if(q){history.replaceState({},'',BASE+(q==='home'?'':q));return q;}
+      var p=location.pathname.replace(/\/+$/,''); if(p.endsWith('/portfolio'))return 'portfolio'; if(p.endsWith('/blog'))return 'blog'; return 'home';
+    }
 
     // intercept clicks
     document.addEventListener('click',function(e){

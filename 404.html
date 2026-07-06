@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <script>
+    // GitHub Pages SPA fallback — redirects unknown paths to index.html
+    // preserving the route so the client-side router can handle it
+    var path = location.pathname;
+    var repo = '/mula-digital-site';
+    if (path.startsWith(repo)) {
+      var route = path.slice(repo.length).replace(/^\/+|\/+$/g, '');
+      if (['portfolio', 'blog'].indexOf(route) > -1) {
+        location.replace(repo + '/?r=' + route);
+      } else {
+        location.replace(repo + '/');
+      }
+    } else {
+      location.replace(repo + '/');
+    }
+  </script>
+</head>
+<body></body>
+</html>
