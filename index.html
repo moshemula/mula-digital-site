@@ -741,7 +741,7 @@
           <span class="eyebrow">מה אנחנו בונים לך</span>
           <h2>הכלים שמביאים לקוחות לעסק</h2>
         </div>
-        <div class="wwd-grid stagger">
+        <div class="wwd-grid">
           <a href="services.html#presence" class="wwd-card">
             <div class="wwd-ic"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
             <h3>נוכחות דיגיטלית</h3>
@@ -805,7 +805,7 @@
           <span class="eyebrow">איך זה עובד</span>
           <h2>מהפגישה הראשונה ועד התוצאות</h2>
         </div>
-        <div class="hiw-grid stagger">
+        <div class="hiw-grid">
           <div class="hiw-step">
             <div class="hiw-num">1</div>
             <h3>פגישת היכרות</h3>
@@ -835,7 +835,7 @@
           <h2>פרויקטים נבחרים</h2>
           <p>מבחר מהעבודות שלנו — מעסק מקומי ועד חברות B2B בינלאומיות.</p>
         </div>
-        <div class="pf-grid stagger" id="pfPreview"></div>
+        <div class="pf-grid" id="pfPreview"></div>
         <div class="pf-foot"><a href="index.html?r=portfolio" class="btn btn-ghost" data-route="portfolio">לתיק העבודות המלא</a></div>
       </div>
     </section>
@@ -892,7 +892,7 @@
           <h2>ידע שמייצר יתרון עסקי</h2>
           <p>מאמרים שעוזרים לכם לחשוב נכון על הדיגיטל של העסק.</p>
         </div>
-        <div class="blog-grid stagger" id="blogPreview"></div>
+        <div class="blog-grid" id="blogPreview"></div>
         <div class="pf-foot"><a href="index.html?r=blog" class="btn btn-ghost" data-route="blog">לכל המאמרים</a></div>
       </div>
     </section>
@@ -1326,18 +1326,18 @@
         scrollTrigger:{trigger:resSec,start:'top bottom',end:'bottom top',scrub:true}});}
 
       // client logo strip
-      gsap.from('.brand-strip .brand',{opacity:0,scale:.85,duration:.6,stagger:.05,ease:'power2.out',
+      gsap.fromTo('.brand-strip .brand',{scale:.85,opacity:0},{scale:1,opacity:1,duration:.6,stagger:.05,ease:'power2.out',
         scrollTrigger:{trigger:'.brand-strip',start:'top 92%',once:true}});
 
       // section heads (slower, more stagger)
       gsap.utils.toArray('.s-head, .sec-head').forEach(function(head){
-        gsap.from(head.children,{y:40,opacity:0,duration:.85,stagger:.15,ease:'power2.out',
+        gsap.fromTo(head.children,{y:40,opacity:0},{y:0,opacity:1,duration:.85,stagger:.15,ease:'power2.out',
           scrollTrigger:{trigger:head,start:'top 88%',once:true}});
       });
 
       // what-we-do cards entrance
       gsap.utils.toArray('.wwd-card').forEach(function(card, i){
-        gsap.from(card,{y:50,opacity:0,scale:.95,duration:.7,delay:i*.1,ease:'power3.out',
+        gsap.fromTo(card,{y:50,opacity:0,scale:.95},{y:0,opacity:1,scale:1,duration:.7,delay:i*.1,ease:'power3.out',
           scrollTrigger:{trigger:card,start:'top 90%',once:true}});
       });
 
@@ -1355,12 +1355,12 @@
 
       // how-it-works steps entrance
       gsap.utils.toArray('.hiw-step').forEach(function(step, i){
-        gsap.from(step,{y:40,opacity:0,duration:.7,delay:i*.15,ease:'power2.out',
+        gsap.fromTo(step,{y:40,opacity:0},{y:0,opacity:1,duration:.7,delay:i*.15,ease:'power2.out',
           scrollTrigger:{trigger:step,start:'top 88%',once:true}});
       });
 
       // portfolio cards — 3D entrance
-      gsap.from('#pfPreview .pf-card',{y:60,opacity:0,rotateX:8,duration:.8,stagger:.12,ease:'power3.out',
+      gsap.fromTo('#pfPreview .pf-card',{y:60,opacity:0,rotateX:8},{y:0,opacity:1,rotateX:0,duration:.8,stagger:.12,ease:'power3.out',
         scrollTrigger:{trigger:'#pfPreview',start:'top 88%',once:true}});
 
       // timeline milestones — scroll-triggered reveal
@@ -1371,12 +1371,12 @@
       });
 
       // blog post cards
-      gsap.from('#blogPreview .post',{y:50,opacity:0,duration:.7,stagger:.12,ease:'power2.out',
+      gsap.fromTo('#blogPreview .post',{y:50,opacity:0},{y:0,opacity:1,duration:.7,stagger:.12,ease:'power2.out',
         scrollTrigger:{trigger:'#blogPreview',start:'top 88%',once:true}});
 
       // dramatic CTA — fade up
       var ctaSec=document.querySelector('.cta-dramatic');
-      if(ctaSec){gsap.from(ctaSec.querySelectorAll('.reveal'),{y:50,opacity:0,duration:1,stagger:.15,ease:'power2.out',
+      if(ctaSec){gsap.fromTo(ctaSec.querySelectorAll('.reveal'),{y:50,opacity:0},{y:0,opacity:1,duration:1,stagger:.15,ease:'power2.out',
         scrollTrigger:{trigger:ctaSec,start:'top 80%',once:true}});}
 
       // card hover 3D tilt (portfolio + blog)
@@ -1396,6 +1396,13 @@
       }
 
       ScrollTrigger.refresh();
+
+      // safety fallback: ensure all content is visible after 4s even if scroll triggers fail
+      setTimeout(function(){
+        document.querySelectorAll('.hiw-step,.wwd-card,.pf-card,.post,.cta-dramatic .reveal,.brand').forEach(function(el){
+          if(parseFloat(getComputedStyle(el).opacity)<0.5){gsap.set(el,{opacity:1,y:0,scale:1,rotateX:0});}
+        });
+      },4000);
 
     } else {
       var t=document.getElementById('heroTitle'); if(t) t.style.opacity=1;
