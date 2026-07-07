@@ -8,13 +8,13 @@
   <meta name="author" content="משה מולה · Mula Digital" />
   <meta name="theme-color" content="#0B0B0F" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link rel="canonical" href="https://mosh123.netlify.app/testimonials.html" />
+  <link rel="canonical" href="https://moshemula.github.io/mula-digital-site/testimonials.html" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="he_IL" />
   <meta property="og:site_name" content="Mula Digital" />
   <meta property="og:title" content="המלצות לקוחות על Mula Digital | 5.0 כוכבים" />
   <meta property="og:description" content="20 המלצות אמיתיות מלקוחות של משה מולה. דירוג 5.0 כוכבים ב-Google." />
-  <meta property="og:image" content="https://mosh123.netlify.app/assets/moshe-white.jpg" />
+  <meta property="og:image" content="https://moshemula.github.io/mula-digital-site/assets/moshe-white.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,7 +26,7 @@
     "@context":"https://schema.org",
     "@type":"LocalBusiness",
     "name":"Mula Digital",
-    "image":"https://mosh123.netlify.app/assets/logo-dark.png",
+    "image":"https://moshemula.github.io/mula-digital-site/assets/logo-dark.png",
     "telephone":"+972-50-824-9824",
     "email":"Moshe@muladigital.co.il",
     "address":{"@type":"PostalAddress","streetAddress":"אלי הורוביץ 27","addressLocality":"רחובות","addressCountry":"IL"},
@@ -144,8 +144,7 @@
   .sec{padding:62px 0;}
   .sec.surface{background:var(--surface);border-block:1px solid var(--line);}
   .sec.dark{background:var(--night);color:#fff;}
-  .s-head{max-width:720px;margin-bottom:38px;}
-  .s-head.center{margin-inline:auto;text-align:center;}
+  .s-head{max-width:720px;margin-bottom:38px;margin-inline:auto;text-align:center;}
   .s-head h2{font-size:clamp(26px,3.6vw,40px);font-weight:900;margin:16px 0 14px;letter-spacing:-.02em;}
 
   /* === TESTIMONIAL CARDS === */
@@ -163,16 +162,24 @@
   .test-author-info span{color:var(--muted);font-size:14px;}
 
   /* === VIDEO TESTIMONIALS === */
-  .video-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
-  .video-card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:border-color .3s var(--ease),box-shadow .3s var(--ease),transform .3s var(--ease);}
-  .video-card:hover{border-color:rgba(123,47,190,.2);box-shadow:var(--shadow-md);transform:translateY(-3px);}
-  .video-thumb{position:relative;aspect-ratio:9/16;background:var(--night);display:grid;place-items:center;}
-  .video-thumb .play-btn{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.2);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.3);display:grid;place-items:center;transition:transform .3s var(--ease),background .3s;}
-  .video-card:hover .play-btn{transform:scale(1.1);background:rgba(255,255,255,.3);}
-  .play-btn svg{width:24px;height:24px;fill:#fff;margin-inline-start:3px;}
+  .video-sec{background:var(--night);color:#fff;padding:80px 0;position:relative;overflow:hidden;}
+  .video-sec::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 100% at 30% 0%,rgba(123,47,190,.2),transparent 60%),radial-gradient(50% 100% at 80% 100%,rgba(232,0,61,.12),transparent 50%);pointer-events:none;}
+  .video-sec .s-head{position:relative;z-index:1;}
+  .video-sec .s-head h2{color:#fff;}
+  .video-sec .eyebrow{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:rgba(255,255,255,.85);}
+  .video-sec .eyebrow::before{background:#fff;}
+  .video-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative;z-index:1;}
+  .video-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;overflow:hidden;transition:border-color .3s var(--ease),box-shadow .3s var(--ease),transform .3s var(--ease);cursor:pointer;}
+  .video-card:hover{border-color:rgba(123,47,190,.4);box-shadow:0 20px 50px rgba(0,0,0,.3);transform:translateY(-3px);}
+  .video-card.playing{border-color:rgba(123,47,190,.5);box-shadow:0 20px 50px rgba(123,47,190,.2);transform:none;cursor:default;}
+  .video-thumb{position:relative;aspect-ratio:9/16;background:rgba(0,0,0,.4);display:grid;place-items:center;}
+  .video-thumb iframe{position:absolute;inset:0;width:100%;height:100%;border:none;}
+  .video-thumb .play-btn{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);display:grid;place-items:center;transition:transform .3s var(--ease),background .3s;}
+  .video-card:hover .play-btn{transform:scale(1.1);background:rgba(255,255,255,.25);}
+  .play-btn svg{width:26px;height:26px;fill:#fff;margin-inline-start:3px;}
   .video-info{padding:16px 18px;}
-  .video-info b{font-family:var(--f-display);font-weight:800;font-size:15px;display:block;margin-bottom:4px;}
-  .video-info span{color:var(--muted);font-size:13px;}
+  .video-info b{font-family:var(--f-display);font-weight:800;font-size:15px;display:block;margin-bottom:4px;color:#fff;}
+  .video-info span{color:rgba(255,255,255,.55);font-size:13px;}
 
   /* === GOOGLE CTA === */
   .google-cta{text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:48px 30px;}
@@ -218,7 +225,7 @@
   @media (max-width:880px){
     .nav-menu,.nav-right .btn{display:none;}
     .burger{display:block;}
-    .video-grid{grid-template-columns:repeat(2,1fr);}
+    .video-grid{grid-template-columns:repeat(2,1fr);gap:16px;}
   }
   @media (max-width:700px){
     .test-grid{grid-template-columns:1fr;}
@@ -514,12 +521,12 @@
   </section>
 
   <!-- VIDEO TESTIMONIALS -->
-  <section class="sec">
+  <section class="video-sec">
     <div class="wrap">
-      <div class="s-head center reveal"><span class="eyebrow">המלצות בוידאו</span><h2>לקוחות מספרים בעצמם</h2></div>
+      <div class="s-head reveal"><span class="eyebrow">המלצות בוידאו</span><h2>לקוחות מספרים בעצמם</h2></div>
       <div class="video-grid">
 
-        <a class="video-card reveal" href="https://youtube.com/shorts/ZmDjsch63CU" target="_blank" rel="noopener">
+        <div class="video-card reveal" data-yt="ZmDjsch63CU">
           <div class="video-thumb">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
           </div>
@@ -527,9 +534,9 @@
             <b>עמית מתן</b>
             <span>חשמלאי מוסמך</span>
           </div>
-        </a>
+        </div>
 
-        <a class="video-card reveal" href="https://youtube.com/shorts/nZqVOFeVWmA" target="_blank" rel="noopener">
+        <div class="video-card reveal" data-yt="nZqVOFeVWmA">
           <div class="video-thumb">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
           </div>
@@ -537,9 +544,9 @@
             <b>שלומי סאסי</b>
             <span>הובלות ומשלוחים</span>
           </div>
-        </a>
+        </div>
 
-        <a class="video-card reveal" href="https://youtube.com/shorts/rswN5fVQbjQ" target="_blank" rel="noopener">
+        <div class="video-card reveal" data-yt="rswN5fVQbjQ">
           <div class="video-thumb">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
           </div>
@@ -547,9 +554,9 @@
             <b>יוחאי ג׳קסון</b>
             <span>אינסטלציה ואיתור נזילות</span>
           </div>
-        </a>
+        </div>
 
-        <a class="video-card reveal" href="https://youtube.com/shorts/Q2w-MmomRFw" target="_blank" rel="noopener">
+        <div class="video-card reveal" data-yt="Q2w-MmomRFw">
           <div class="video-thumb">
             <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
           </div>
@@ -557,7 +564,7 @@
             <b>עידן תמר</b>
             <span>סוכן ביטוח פנסיוני</span>
           </div>
-        </a>
+        </div>
 
       </div>
     </div>
@@ -643,6 +650,21 @@
     });
     var revObserver=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');revObserver.unobserve(en.target);}});},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
     document.querySelectorAll('.reveal').forEach(function(el){revObserver.observe(el);});
+    document.querySelectorAll('.video-card[data-yt]').forEach(function(card){
+      card.addEventListener('click',function(){
+        if(card.classList.contains('playing'))return;
+        var id=card.getAttribute('data-yt');
+        var thumb=card.querySelector('.video-thumb');
+        var btn=thumb.querySelector('.play-btn');
+        if(btn)btn.remove();
+        var iframe=document.createElement('iframe');
+        iframe.src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1';
+        iframe.allow='autoplay; encrypted-media';
+        iframe.setAttribute('allowfullscreen','');
+        thumb.appendChild(iframe);
+        card.classList.add('playing');
+      });
+    });
   })();
   </script>
 </body>

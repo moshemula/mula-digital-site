@@ -16,5 +16,8 @@ npm-debug.log*
 # Netlify
 .netlify/
 
+# Dev tools
+screenshot-tool/
+
 # Internal docs (optional — remove if you want it tracked)
 # mula-storyboard.md

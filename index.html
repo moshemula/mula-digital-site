@@ -17,20 +17,20 @@
   <meta name="author" content="Mula Digital · משה מולה" />
   <meta name="theme-color" content="#0B0B0F" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link rel="canonical" href="https://mosh123.netlify.app/" />
-  <link rel="alternate" hreflang="he-il" href="https://mosh123.netlify.app/" />
+  <link rel="canonical" href="https://moshemula.github.io/mula-digital-site/" />
+  <link rel="alternate" hreflang="he-il" href="https://moshemula.github.io/mula-digital-site/" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Mula Digital" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://mosh123.netlify.app/" />
+  <meta property="og:url" content="https://moshemula.github.io/mula-digital-site/" />
   <meta property="og:locale" content="he_IL" />
   <meta property="og:site_name" content="Mula Digital" />
   <meta property="og:title" content="Mula Digital · מערכת שמביאה לעסק שלכם יותר לקוחות" />
   <meta property="og:description" content="לא עוד אתר. מערכת צמיחה אחת שמחברת אסטרטגיה, אתר, SEO, קמפיינים, AI, CRM ווואטסאפ." />
-  <meta property="og:image" content="https://mosh123.netlify.app/assets/logo-dark.png" />
+  <meta property="og:image" content="https://moshemula.github.io/mula-digital-site/assets/logo-dark.png" />
   <meta property="og:image:alt" content="Mula Digital — מערכת צמיחה דיגיטלית לעסקים" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -91,10 +91,9 @@
   .eyebrow.on-dark{color:#D9C8FF;background:rgba(123,47,190,.18);border-color:rgba(123,47,190,.36);}
   .section{padding:clamp(72px,10vw,130px) 0;}
   .section.tight{padding:clamp(52px,7vw,90px) 0;}
-  .s-head{max-width:720px;margin-bottom:54px;}
+  .s-head{max-width:720px;margin-bottom:54px;margin-inline:auto;text-align:center;}
   .s-head h2{font-size:clamp(30px,4.4vw,48px);font-weight:900;margin:18px 0 14px;letter-spacing:-.025em;}
   .s-head p{color:var(--soft);font-size:20px;}
-  .s-head.center{margin-inline:auto;text-align:center;}
   /* ===== BUTTONS ===== */
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--f-display);font-weight:700;font-size:17px;padding:16px 32px;border-radius:100px;cursor:pointer;border:1px solid transparent;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease);white-space:nowrap;}
   .btn svg{width:18px;height:18px;}
@@ -250,9 +249,9 @@
   .marquee-track{display:flex;align-items:center;gap:40px;width:max-content;animation:marquee 55s linear infinite;will-change:transform;}
   .marquee:hover .marquee-track{animation-play-state:paused;}
   @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-  .brand{flex:none;width:220px;height:100px;display:flex;align-items:center;justify-content:center;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 24px;transition:border-color .3s var(--ease),box-shadow .3s var(--ease),transform .3s var(--ease);}
+  .brand{flex:none;width:220px;height:100px;display:flex;align-items:center;justify-content:center;text-decoration:none;background:transparent;border:none;border-radius:16px;padding:16px 24px;transition:border-color .3s var(--ease),box-shadow .3s var(--ease),transform .3s var(--ease);}
   .brand:hover{border-color:rgba(123,47,190,.2);box-shadow:0 4px 16px rgba(0,0,0,.06);transform:translateY(-2px);}
-  .brand img{max-height:60px;max-width:170px;width:auto;object-fit:contain;opacity:.85;filter:grayscale(.1);transition:opacity .3s var(--ease),filter .3s var(--ease);}
+  .brand img{max-height:60px;max-width:170px;width:auto;object-fit:contain;opacity:.85;filter:grayscale(.1);mix-blend-mode:multiply;transition:opacity .3s var(--ease),filter .3s var(--ease);}
   .brand:hover img{opacity:1;filter:none;}
   /* tools / tech-stack — static, centered, wrapped (no animation) */
   .tools-sec{padding:54px 0;border-top:1px solid var(--line);background:var(--surface);}
@@ -343,13 +342,7 @@
   .pf-link svg{width:15px;height:15px;}
   .pf-foot{display:flex;justify-content:center;margin-top:50px;}
 
-  /* ===== IMMERSIVE PORTFOLIO ===== */
-  #portfolio-preview{perspective:1200px;}
-  .pf-grid{transform-style:preserve-3d;}
-  .pf-card{transform-style:preserve-3d;transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s var(--ease);}
-  .pf-card:hover{transform:translateY(-8px) rotateX(2deg);box-shadow:0 30px 60px rgba(0,0,0,.12),0 0 40px rgba(123,47,190,.08);border-color:rgba(123,47,190,.3);}
-  .pf-card .pf-logo-bar{transition:border-color .3s,box-shadow .3s,transform .5s var(--ease);}
-  .pf-card:hover .pf-logo-bar{transform:translateZ(20px);border-color:rgba(123,47,190,.2);box-shadow:0 8px 24px rgba(123,47,190,.12);}
+  /* ===== PORTFOLIO HOVER ===== */
 
   /* ===== TIMELINE ABOUT ===== */
   .tl-about{padding:100px 0;position:relative;overflow:hidden;}
@@ -373,9 +366,7 @@
   .tl-foot{text-align:center;margin-top:48px;}
 
   /* ===== 3D TILT BLOG ===== */
-  .blog-3d{perspective:1000px;}
-  .blog-3d .post{transform-style:preserve-3d;transition:transform .3s var(--ease),box-shadow .3s var(--ease);}
-  .blog-3d .post:hover{box-shadow:0 25px 50px rgba(0,0,0,.1),0 0 30px rgba(123,47,190,.06);}
+  /* blog hover handled by .post:hover below */
 
   /* ===== DRAMATIC CTA ===== */
   .cta-dramatic{position:relative;background:var(--night);padding:clamp(80px,14vw,140px) 0;overflow:hidden;text-align:center;}
@@ -737,7 +728,7 @@
     <!-- WHAT WE DO — 4 service highlights -->
     <section class="wwd" id="whatwedo">
       <div class="wrap">
-        <div class="s-head reveal" style="text-align:center;">
+        <div class="s-head reveal">
           <span class="eyebrow">מה אנחנו בונים לך</span>
           <h2>הכלים שמביאים לקוחות לעסק</h2>
         </div>
@@ -773,7 +764,7 @@
     <!-- RESULTS — numbers that prove value -->
     <section class="results" id="results">
       <div class="wrap">
-        <div class="s-head reveal" style="text-align:center;">
+        <div class="s-head reveal">
           <span class="eyebrow">תוצאות</span>
           <h2>המספרים מדברים</h2>
         </div>
@@ -801,7 +792,7 @@
     <!-- HOW IT WORKS — 3-step process -->
     <section class="hiw" id="howitworks">
       <div class="wrap">
-        <div class="s-head reveal" style="text-align:center;">
+        <div class="s-head reveal">
           <span class="eyebrow">איך זה עובד</span>
           <h2>מהפגישה הראשונה ועד התוצאות</h2>
         </div>
@@ -1099,7 +1090,7 @@
     // inject blog (preview 3 + full 6), portfolio (preview 4 + full 12), clients strip
     document.getElementById('blogPreview').innerHTML = posts.slice(0,3).map(postCard).join('');
     document.getElementById('blogFull').innerHTML = posts.map(postCard).join('');
-    document.getElementById('pfPreview').innerHTML = projects.slice(0,4).map(pfCard).join('');
+    document.getElementById('pfPreview').innerHTML = projects.filter(function(p){return p.url;}).map(pfCard).join('');
     document.getElementById('pfFull').innerHTML = projects.map(pfCard).join('');
     document.getElementById('marquee').innerHTML = clients.map(brandLogo).join('');
 
@@ -1379,21 +1370,6 @@
       if(ctaSec){gsap.fromTo(ctaSec.querySelectorAll('.reveal'),{y:50,opacity:0},{y:0,opacity:1,duration:1,stagger:.15,ease:'power2.out',
         scrollTrigger:{trigger:ctaSec,start:'top 80%',once:true}});}
 
-      // card hover 3D tilt (portfolio + blog)
-      if(!isTouch){
-        document.querySelectorAll('.pf-card, .post').forEach(function(card){
-          card.addEventListener('mousemove',function(e){
-            var r=card.getBoundingClientRect();
-            var x=(e.clientX-r.left)/r.width-.5;
-            var y=(e.clientY-r.top)/r.height-.5;
-            card.style.transform='perspective(800px) rotateY('+x*6+'deg) rotateX('+(-y*6)+'deg) translateY(-6px)';
-          });
-          card.addEventListener('mouseleave',function(){
-            card.style.transform='';card.style.transition='transform .5s cubic-bezier(.16,1,.3,1)';
-            setTimeout(function(){card.style.transition='';},500);
-          });
-        });
-      }
 
       ScrollTrigger.refresh();
 

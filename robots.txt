@@ -14,4 +14,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://mosh123.netlify.app/sitemap.xml
+Sitemap: https://moshemula.github.io/mula-digital-site/sitemap.xml
