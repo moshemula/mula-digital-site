@@ -347,26 +347,46 @@
   .pf-link svg{width:15px;height:15px;}
   .pf-foot{display:flex;justify-content:center;margin-top:50px;}
 
-  /* ===== TIMELINE ABOUT ===== */
-  .tl-about{padding:100px 0;position:relative;overflow:hidden;}
-  .tl-about::before{content:"";position:absolute;top:10%;right:-15%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(123,47,190,.06),transparent 70%);pointer-events:none;}
-  .tl-quote{text-align:center;margin-bottom:64px;}
-  .tl-quote p{font-family:var(--f-display);font-weight:900;font-size:clamp(26px,4vw,44px);letter-spacing:-.03em;line-height:1.25;color:var(--ink);max-width:700px;margin:0 auto;}
+  /* ===== ABOUT — FLOATING BADGES ===== */
+  .tl-about{padding:clamp(80px,10vw,120px) 0;position:relative;overflow:hidden;background:linear-gradient(160deg,#12061a 0%,#1a0a24 25%,#0f0714 50%,#180818 75%,#12061a 100%);color:#fff;}
+  .tl-about::before{content:"";position:absolute;top:-10%;right:5%;width:50%;height:70%;border-radius:50%;background:radial-gradient(circle,rgba(123,47,190,.28),transparent 55%);pointer-events:none;filter:blur(80px);animation:tlOrb1 8s ease-in-out infinite alternate;}
+  .tl-about::after{content:"";position:absolute;bottom:-10%;left:-5%;width:45%;height:60%;border-radius:50%;background:radial-gradient(circle,rgba(232,0,61,.2),transparent 55%);pointer-events:none;filter:blur(80px);animation:tlOrb2 10s ease-in-out infinite alternate;}
+  @keyframes tlOrb1{0%{opacity:.7;transform:translate(0,0);}100%{opacity:1;transform:translate(-3%,5%);}}
+  @keyframes tlOrb2{0%{opacity:.6;transform:translate(0,0);}100%{opacity:1;transform:translate(4%,-3%);}}
+
+  .tl-layout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);align-items:center;position:relative;z-index:1;}
+  .tl-text{text-align:right;}
+  .tl-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:700;font-size:13px;color:#D9C8FF;background:rgba(123,47,190,.15);border:1px solid rgba(123,47,190,.3);padding:7px 18px;border-radius:100px;margin-bottom:28px;}
+  .tl-eyebrow svg{width:14px;height:14px;color:#D9C8FF;}
+  .tl-quote p{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,4.5vw,52px);letter-spacing:-.04em;line-height:1.15;color:#fff;margin:0;}
   .tl-quote .gradient-text{font-size:inherit;}
-  .tl-content{display:grid;grid-template-columns:280px 1fr;gap:48px;align-items:start;}
-  .tl-photo{position:sticky;top:calc(var(--nav-h) + 32px);}
-  .tl-photo img{width:100%;border-radius:24px;box-shadow:0 24px 60px rgba(0,0,0,.12);}
-  .tl-photo-glow{position:absolute;inset:-20px;border-radius:32px;background:var(--grad);opacity:.08;filter:blur(30px);z-index:-1;}
-  .tl-line{position:relative;padding-right:48px;}
-  .tl-line::before{content:"";position:absolute;top:0;bottom:0;right:16px;width:2px;background:linear-gradient(180deg,var(--line),rgba(123,47,190,.3),rgba(232,0,61,.2),var(--line));}
-  .tl-milestone{position:relative;padding:0 0 48px;opacity:0;transform:translateX(-30px);}
-  .tl-milestone.is-visible{opacity:1;transform:translateX(0);transition:opacity .7s var(--ease),transform .7s var(--ease);}
-  .tl-dot{position:absolute;top:6px;right:-48px;width:14px;height:14px;border-radius:50%;background:var(--line);border:3px solid #fff;box-shadow:0 0 0 2px var(--line);transition:background .4s,box-shadow .4s;transform:translateX(50%);}
-  .tl-milestone.is-visible .tl-dot{background:var(--purple);box-shadow:0 0 0 4px rgba(123,47,190,.2),0 0 20px rgba(123,47,190,.3);}
-  .tl-year{font-family:var(--f-display);font-weight:800;font-size:14px;color:var(--purple);background:rgba(123,47,190,.08);border:1px solid rgba(123,47,190,.16);padding:4px 14px;border-radius:100px;display:inline-block;margin-bottom:10px;}
-  .tl-milestone h3{font-family:var(--f-display);font-size:clamp(18px,2vw,22px);font-weight:800;margin-bottom:6px;}
-  .tl-milestone p{color:var(--soft);font-size:16px;line-height:1.6;}
-  .tl-foot{text-align:center;margin-top:48px;}
+  .tl-sub{color:rgba(255,255,255,.5);font-size:clamp(16px,1.6vw,19px);margin:24px 0 36px;line-height:1.7;max-width:480px;margin-inline-start:auto;}
+  .tl-foot{position:relative;z-index:1;}
+  .tl-foot .btn{background:var(--grad);border:none;color:#fff;padding:16px 36px;font-size:17px;font-weight:700;border-radius:14px;box-shadow:0 8px 28px rgba(232,0,61,.25);transition:transform .25s var(--ease),box-shadow .25s var(--ease);}
+  .tl-foot .btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(232,0,61,.35);}
+
+  .tl-visual{position:relative;display:flex;justify-content:center;align-items:center;min-height:500px;}
+  .tl-photo-wrap{position:relative;width:clamp(280px,90%,400px);}
+  .tl-photo-glow{display:none;}
+  .tl-photo-wrap img{position:relative;z-index:1;width:100%;border-radius:0;box-shadow:none;mask-image:linear-gradient(to bottom,transparent 0%,#000 8%,#000 85%,transparent 100%),linear-gradient(to right,transparent 0%,#000 8%,#000 92%,transparent 100%);mask-composite:intersect;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 8%,#000 85%,transparent 100%),linear-gradient(to right,transparent 0%,#000 8%,#000 92%,transparent 100%);-webkit-mask-composite:source-in;}
+
+  .tl-badge{position:absolute;z-index:3;display:flex;align-items:center;gap:10px;background:rgba(14,14,18,.75);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:14px 20px;font-family:var(--f-display);font-size:14px;font-weight:700;color:#fff;white-space:nowrap;box-shadow:0 8px 32px rgba(0,0,0,.3);}
+  .tl-badge-icon{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;flex-shrink:0;}
+  .tl-badge-icon svg{width:18px;height:18px;}
+  .tl-badge-icon.red{background:rgba(232,0,61,.15);color:var(--red);}
+  .tl-badge-icon.purple{background:rgba(123,47,190,.15);color:var(--purple);}
+  .tl-badge-label{display:flex;flex-direction:column;gap:2px;}
+  .tl-badge-label small{font-size:11px;font-weight:500;color:rgba(255,255,255,.45);letter-spacing:.02em;}
+
+  .tl-badge.b1{top:5%;left:-5%;animation:badgeFloat1 5s ease-in-out infinite;}
+  .tl-badge.b2{top:18%;right:-8%;animation:badgeFloat2 6s ease-in-out infinite;}
+  .tl-badge.b3{bottom:25%;left:-8%;animation:badgeFloat3 5.5s ease-in-out infinite;}
+  .tl-badge.b4{bottom:8%;right:-5%;animation:badgeFloat4 6.5s ease-in-out infinite;}
+
+  @keyframes badgeFloat1{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+  @keyframes badgeFloat2{0%,100%{transform:translateY(0);}50%{transform:translateY(8px);}}
+  @keyframes badgeFloat3{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+  @keyframes badgeFloat4{0%,100%{transform:translateY(0);}50%{transform:translateY(10px);}}
 
   /* ===== 3D TILT BLOG ===== */
   /* blog hover handled by .post:hover below */
@@ -468,8 +488,15 @@
   /* ===== RESPONSIVE ===== */
   @media (max-width:1000px){
     .blog-grid,.pf-grid.cols3{grid-template-columns:repeat(2,1fr);}
-    .tl-content{grid-template-columns:1fr;gap:32px;}
-    .tl-photo{position:relative;max-width:280px;margin:0 auto;}
+    .tl-layout{grid-template-columns:1fr;text-align:center;}
+    .tl-text{text-align:center;}
+    .tl-sub{margin-inline:auto;}
+    .tl-foot{display:flex;justify-content:center;}
+    .tl-visual{min-height:420px;}
+    .tl-badge.b1{left:-4%;top:5%;}
+    .tl-badge.b2{right:-4%;top:18%;}
+    .tl-badge.b3{left:-8%;bottom:20%;}
+    .tl-badge.b4{right:-2%;bottom:4%;}
     .mega{width:min(94vw,640px);}
     .mega-grid.cols-4{grid-template-columns:1fr 1fr;}.mega-grid.cols-4 .mega-cta{border-radius:0 0 20px 20px;}
     .mega-grid.cols-3{grid-template-columns:1fr 1fr;}
@@ -483,6 +510,9 @@
     .hero-actions .btn{min-height:48px;}
     .foot-top{grid-template-columns:1fr 1fr;gap:32px;}
     .foot-brand{grid-column:span 2;}
+    .tl-badge{padding:10px 14px;font-size:13px;border-radius:12px;}
+    .tl-badge-icon{width:30px;height:30px;border-radius:8px;}
+    .tl-badge-icon svg{width:15px;height:15px;}
   }
   @media (max-width:620px){
     body{font-size:17px;}
@@ -496,8 +526,12 @@
     .stat-grid{grid-template-columns:repeat(2,1fr);gap:24px;}
     .hiw-grid{grid-template-columns:1fr;gap:40px;}
     .hiw-grid::before{display:none;}
-    .tl-line::before{right:12px;}
-    .tl-milestone{padding-right:40px;}
+    .tl-badge-label small{display:none;}
+    .tl-visual{min-height:360px;}
+    .tl-badge.b1{left:0;top:0;}
+    .tl-badge.b2{right:0;top:15%;}
+    .tl-badge.b3{left:-4%;bottom:18%;}
+    .tl-badge.b4{right:0;bottom:2%;}
   }
   html,body{overflow-x:hidden;max-width:100%;}
   /* ===== A11Y ===== */
@@ -523,7 +557,7 @@
     .hero h1{font-size:64px;}
     .s-head h2{font-size:52px;}
     .wwd-grid{gap:28px;}
-    .tl-content{grid-template-columns:320px 1fr;}
+    .tl-layout{gap:100px;}
     .pf-grid{gap:28px;}
     .cta-dramatic h2{font-size:clamp(40px,6vw,56px);}
   }
@@ -542,8 +576,11 @@
     .stat-grid{grid-template-columns:1fr 1fr;}
     .stat-num{font-size:clamp(36px,10vw,48px);}
     .results{padding:64px 0;}
-    .tl-content{grid-template-columns:1fr;}
-    .tl-photo{max-width:200px;}
+    .tl-photo-wrap{width:clamp(220px,70%,280px);}
+    .tl-visual{min-height:320px;}
+    .tl-badge{padding:8px 12px;font-size:12px;}
+    .tl-badge-icon{width:26px;height:26px;}
+    .tl-badge-icon svg{width:13px;height:13px;}
     .cta-actions{flex-direction:column;align-items:center;}
     .foot-top{grid-template-columns:1fr;gap:28px;}
     .foot-brand{grid-column:auto;}
@@ -837,45 +874,39 @@
 
     <!-- (services section removed — covered by services.html) -->
 
-    <!-- ABOUT — STORYTELLING TIMELINE -->
+    <!-- ABOUT — FLOATING BADGES -->
     <section class="tl-about" id="about">
-      <div class="wrap">
-        <div class="tl-quote reveal">
-          <p>"אני לא מסתכל על אתר.<br><span class="gradient-text">אני מסתכל על העסק."</span></p>
-        </div>
-        <div class="tl-content">
-          <div class="tl-photo reveal">
+      <div class="wrap tl-layout">
+        <div class="tl-visual">
+          <div class="tl-photo-wrap reveal">
             <div class="tl-photo-glow"></div>
-            <img src="assets/moshe-white.jpg" alt="משה מולה, מייסד Mula Digital" />
+            <img src="assets/moshe-dark.png" alt="משה מולה, מייסד Mula Digital" />
           </div>
-          <div class="tl-line" id="timeline">
-            <div class="tl-milestone" data-tl>
-              <div class="tl-dot"></div>
-              <span class="tl-year">הגישה</span>
-              <h3>מתחילים מהעסק, לא מהאתר</h3>
-              <p>לפני שנוגעים בפיקסל אחד, אנחנו מבינים את העסק. מי הלקוחות, מה המתחרים עושים, ואיפה ההזדמנות.</p>
-            </div>
-            <div class="tl-milestone" data-tl>
-              <div class="tl-dot"></div>
-              <span class="tl-year">השיטה</span>
-              <h3>מערכת שלמה, לא פרויקט חד פעמי</h3>
-              <p>אתר, SEO, קמפיינים, CRM ואוטומציות. הכל מחובר ביחד. ככה עסקים באמת צומחים.</p>
-            </div>
-            <div class="tl-milestone" data-tl>
-              <div class="tl-dot"></div>
-              <span class="tl-year">השקיפות</span>
-              <h3>אתם רואים הכל, כל הזמן</h3>
-              <p>דאשבורד מדידה, דוחות חודשיים, גישה מלאה. אין הפתעות. אתם יודעים בדיוק מה קורה עם הכסף שלכם.</p>
-            </div>
-            <div class="tl-milestone" data-tl>
-              <div class="tl-dot"></div>
-              <span class="tl-year">התוצאה</span>
-              <h3>יותר לקוחות. יותר פניות. פחות בלאגן.</h3>
-              <p>126+ עסקים שכבר עובדים ככה. מערכת שעובדת גם כשאתם ישנים.</p>
-            </div>
+          <div class="tl-badge b1">
+            <div class="tl-badge-icon red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+            <div class="tl-badge-label">מאתרים הזדמנויות לצמיחה</div>
+          </div>
+          <div class="tl-badge b2">
+            <div class="tl-badge-icon purple"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
+            <div class="tl-badge-label">בונים אסטרטגיה מותאמת אישית</div>
+          </div>
+          <div class="tl-badge b3">
+            <div class="tl-badge-icon purple"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 13v-2z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></div>
+            <div class="tl-badge-label">תוכן וקמפיינים שמביאים לקוחות</div>
+          </div>
+          <div class="tl-badge b4">
+            <div class="tl-badge-icon red"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+            <div class="tl-badge-label"><span dir="ltr">126+</span> עסקים כבר צומחים</div>
           </div>
         </div>
-        <div class="tl-foot reveal"><a href="about.html" class="btn btn-ghost">הכירו את הסיפור המלא</a></div>
+        <div class="tl-text">
+          <span class="tl-eyebrow reveal"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>תוצאות מדברות</span>
+          <div class="tl-quote reveal">
+            <p>"<span dir="ltr">126</span> עסקים כבר עובדים ככה.<br><span class="gradient-text">השאלה היא למה אתה עדיין לא."</span></p>
+          </div>
+          <p class="tl-sub reveal"><span dir="ltr">20+</span> שנים בשטח. <span dir="ltr">9</span> שנים בדיגיטל. אותה גישה פשוטה: לא מבטיחים, מראים.</p>
+          <div class="tl-foot reveal"><a href="about.html" class="btn">הכירו את הסיפור המלא</a></div>
+        </div>
       </div>
     </section>
 
@@ -1360,12 +1391,18 @@
       gsap.fromTo('#pfPreview .pf-card',{y:60,opacity:0,rotateX:8},{y:0,opacity:1,rotateX:0,duration:.8,stagger:.12,ease:'power3.out',
         scrollTrigger:{trigger:'#pfPreview',start:'top 88%',once:true}});
 
-      // timeline milestones — scroll-triggered reveal
-      document.querySelectorAll('.tl-milestone[data-tl]').forEach(function(ms){
-        ScrollTrigger.create({trigger:ms,start:'top 82%',once:true,onEnter:function(){
-          ms.classList.add('is-visible');
-        }});
-      });
+      // about floating badges — staggered entrance
+      gsap.fromTo('.tl-badge',{scale:.7,opacity:0},{scale:1,opacity:1,duration:.6,stagger:.15,ease:'back.out(1.4)',
+        scrollTrigger:{trigger:'.tl-visual',start:'top 80%',once:true}});
+
+      // about — 3D parallax on scroll
+      if(!window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+        gsap.to('.tl-photo-wrap img',{y:-40,ease:'none',scrollTrigger:{trigger:'.tl-about',start:'top bottom',end:'bottom top',scrub:true}});
+        gsap.to('.tl-badge.b1',{y:-25,x:8,ease:'none',scrollTrigger:{trigger:'.tl-about',start:'top bottom',end:'bottom top',scrub:true}});
+        gsap.to('.tl-badge.b2',{y:-35,x:-6,ease:'none',scrollTrigger:{trigger:'.tl-about',start:'top bottom',end:'bottom top',scrub:true}});
+        gsap.to('.tl-badge.b3',{y:-15,x:10,ease:'none',scrollTrigger:{trigger:'.tl-about',start:'top bottom',end:'bottom top',scrub:true}});
+        gsap.to('.tl-badge.b4',{y:-30,x:-8,ease:'none',scrollTrigger:{trigger:'.tl-about',start:'top bottom',end:'bottom top',scrub:true}});
+      }
 
       // blog post cards
       gsap.fromTo('#blogPreview .post',{y:50,opacity:0},{y:0,opacity:1,duration:.7,stagger:.12,ease:'power2.out',
