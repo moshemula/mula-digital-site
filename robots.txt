@@ -14,4 +14,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://moshemula.github.io/mula-digital-site/sitemap.xml
+Sitemap: https://muladigital.co.il/sitemap.xml
