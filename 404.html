@@ -3,19 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <script>
-    // GitHub Pages SPA fallback — redirects unknown paths to index.html
-    // preserving the route so the client-side router can handle it
-    var path = location.pathname;
-    var repo = '/mula-digital-site';
-    if (path.startsWith(repo)) {
-      var route = path.slice(repo.length).replace(/^\/+|\/+$/g, '');
-      if (['portfolio', 'blog'].indexOf(route) > -1) {
-        location.replace(repo + '/?r=' + route);
-      } else {
-        location.replace(repo + '/');
-      }
+    var path = location.pathname.replace(/\/+$/,'');
+    var route = path.replace(/^\/+/,'');
+
+    if (['portfolio', 'blog'].indexOf(route) > -1) {
+      location.replace('/?r=' + route);
+    } else if (route && route.indexOf('.') === -1) {
+      location.replace('/' + route + '.html');
     } else {
-      location.replace(repo + '/');
+      location.replace('/');
     }
   </script>
 <!-- Google tag (gtag.js) -->

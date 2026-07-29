@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8" />
@@ -29,11 +29,12 @@
     "description":"פרסום בגוגל (Google Ads) לעסקים — קמפיינים ממוקדים שמביאים לידים ולקוחות, עם אופטימיזציה שוטפת ודוחות שקופים.",
     "provider":{
       "@type":"Organization",
+      "@id":"https://muladigital.co.il/#business",
       "name":"Mula Digital",
       "url":"https://muladigital.co.il/",
       "telephone":"+972-50-824-9824",
       "email":"Moshe@muladigital.co.il",
-      "founder":{"@type":"Person","name":"משה מולה"}
+      "founder":{"@type":"Person","@id":"https://muladigital.co.il/#moshe","name":"משה מולה","alternateName":"Moshe Mula","url":"https://muladigital.co.il/about.html","sameAs":["https://www.linkedin.com/in/moshemula/"]}
     },
     "areaServed":[{"@type":"City","name":"רחובות"},{"@type":"City","name":"נס ציונה"},{"@type":"City","name":"ראשון לציון"},{"@type":"City","name":"יבנה"},{"@type":"City","name":"אשדוד"}],
     "url":"https://muladigital.co.il/service-google-ads.html",
@@ -42,6 +43,12 @@
       "ratingValue":"5.0",
       "reviewCount":"20",
       "bestRating":"5"
+    },
+    "review":{
+      "@type":"Review",
+      "reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},
+      "author":{"@type":"Person","name":"רועי אביטל"},
+      "reviewBody":"משה בנה לנו קמפיין בגוגל מאפס. תוך שבועיים התחלנו לקבל לידים, ותוך חודש וחצי הגענו לעלות ליד של 35 שקל. שקיפות מלאה, דוחות כל חודש, ותמיד זמין לשאלות."
     }
   }
   </script>
@@ -66,7 +73,11 @@
       {"@type":"Question","name":"מה ההבדל בין SEO לפרסום בגוגל?","acceptedAnswer":{"@type":"Answer","text":"SEO זה תנועה אורגנית — לוקח זמן לבנות, אבל ברגע שאתה שם, התנועה מגיעה בחינם. פרסום בגוגל זה תנועה ממומנת — תוצאות מיידיות, אבל כל קליק עולה כסף. הגישה הנכונה? לרוב שילוב של שניהם. קמפיינים ממומנים להביא לידים עכשיו, SEO לבנות נכס ארוך טווח."}},
       {"@type":"Question","name":"האם אתה מנהל גם את התקציב?","acceptedAnswer":{"@type":"Answer","text":"כן, ניהול מלא. אני בונה את הקמפיין, מגדיר את התקציב היומי, עוקב אחרי הביצועים ומבצע אופטימיזציה שוטפת. כל שקל שנכנס מתועד. אתם מקבלים דוח חודשי שקוף עם כל המספרים — כמה הוצאתם, כמה לידים נכנסו, ומה עלות הליד."}},
       {"@type":"Question","name":"מה קורה אם הקמפיין לא עובד?","acceptedAnswer":{"@type":"Answer","text":"זה קורה. לפעמים הטירגוט לא מדויק, לפעמים דף הנחיתה לא ממיר, לפעמים המודעות צריכות שינוי. ההבדל הוא בגישה: אני לא ממשיך לשרוף תקציב. אני עוצר, מנתח את הנתונים, מבצע שינויים, בודק מחדש. אם הגישה הנוכחית לא עובדת — משנים אותה."}},
-      {"@type":"Question","name":"האם אני צריך דף נחיתה?","acceptedAnswer":{"@type":"Answer","text":"כן, וזה קריטי. לשלוח תנועה ממומנת לדף הבית זה כמו לזרוק כסף. דף נחיתה ממוקד — עם מסר ברור, הוכחה חברתית ו-CTA אחד — מכפיל את אחוז ההמרה. אני בונה דפי נחיתה כחלק מהשירות."}}
+      {"@type":"Question","name":"האם אני צריך דף נחיתה?","acceptedAnswer":{"@type":"Answer","text":"כן, וזה קריטי. לשלוח תנועה ממומנת לדף הבית זה כמו לזרוק כסף. דף נחיתה ממוקד - עם מסר ברור, הוכחה חברתית ו-CTA אחד - מכפיל את אחוז ההמרה. אני בונה דפי נחיתה כחלק מהשירות."}},
+      {"@type":"Question","name":"מה ההבדל בין גוגל אדס לפרסום בפייסבוק?","acceptedAnswer":{"@type":"Answer","text":"גוגל אדס מגיע לאנשים שמחפשים פתרון עכשיו - כוונת רכישה גבוהה. פייסבוק מגיע לאנשים שגוללים פיד - צריך לחמם אותם. לרוב עסקי שירותים ו-B2B מתחילים עם גוגל, ומוסיפים פייסבוק לרימרקטינג ולחימום קהלים."}},
+      {"@type":"Question","name":"כמה תקציב פרסום צריך כדי להתחיל?","acceptedAnswer":{"@type":"Answer","text":"תלוי בתחום ובתחרות. לעסק מקומי קטן אפשר להתחיל עם 2,000-3,000 ש\"ח בחודש תקציב פרסום. לתחומים תחרותיים כמו עורכי דין או ביטוח - מומלץ להתחיל עם 5,000+ ש\"ח. התקציב מותאם למטרות ולתחום שלך."}},
+      {"@type":"Question","name":"איך מודדים הצלחה של קמפיין בגוגל?","acceptedAnswer":{"@type":"Answer","text":"לא לפי קליקים או חשיפות - לפי לידים ועלות ליד. המדדים: כמה לידים נכנסו, כמה עלה כל ליד, מה אחוז ההמרה של דף הנחיתה, ומה ה-ROAS. כל המספרים מופיעים בדוח החודשי."}},
+      {"@type":"Question","name":"האם אפשר לפרסם בגוגל בלי אתר?","acceptedAnswer":{"@type":"Answer","text":"טכנית כן, אבל לא מומלץ. צריך מקום לשלוח את התנועה אליו. אם אין אתר - נבנה דף נחיתה ממוקד כחלק מהשירות. אם יש אתר אבל הוא לא ממיר - נשפר אותו לפני שמשקיעים בפרסום."}}
     ]
   }
   </script>
@@ -84,7 +95,7 @@
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%;}
-  body{font-family:var(--f-body);color:var(--ink);background:var(--bg);font-size:19px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  body{font-family:var(--f-body);color:var(--ink);background:var(--bg);font-size:19px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-top:var(--nav-h);}
   h1,h2,h3,h4{font-family:var(--f-display);line-height:1.16;letter-spacing:-.02em;}
   a{color:inherit;text-decoration:none;}
   img{max-width:100%;display:block;}
@@ -101,8 +112,9 @@
   #progress span{display:block;height:100%;width:0;background:var(--grad);}
 
   /* ===== NAV + MEGA MENU ===== */
-  header.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line);}
-  .nav-in{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);gap:18px;max-width:1200px;margin-inline:auto;padding-inline:24px;}
+  header.nav{position:fixed;top:12px;left:16px;right:16px;width:auto;z-index:100;background:rgba(255,255,255,.82);backdrop-filter:saturate(180%) blur(24px);-webkit-backdrop-filter:saturate(180%) blur(24px);border:1px solid rgba(236,236,236,.6);border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.06),0 1px 3px rgba(0,0,0,.03);transition:background .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);}
+  header.nav.scrolled{background:rgba(255,255,255,.92);box-shadow:0 8px 32px rgba(0,0,0,.08),0 1px 3px rgba(0,0,0,.04);}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);gap:18px;padding:0 24px;}
   .nav-logo img{height:34px;width:auto;}
   .nav-menu{display:flex;align-items:center;gap:0;flex:1;justify-content:center;}
   .nav-item{position:relative;}
@@ -110,10 +122,11 @@
   .nav-link:hover,.nav-item:hover .nav-link{color:var(--ink);}
   .nav-link.active{color:var(--ink);background:rgba(123,47,190,.08);}
   .nav-link .caret{width:14px;height:14px;transition:transform .25s var(--ease);}
-  .nav-item.has-mega:hover .caret{transform:rotate(180deg);}
+  .nav-item.mega-open .caret{transform:rotate(180deg);}
   .nav-right{display:flex;align-items:center;gap:12px;}
-  .mega{position:absolute;top:calc(100% + 14px);inset-inline-end:0;width:min(94vw,920px);background:rgba(255,255,255,.92);backdrop-filter:saturate(200%) blur(28px);-webkit-backdrop-filter:saturate(200%) blur(28px);border:1px solid rgba(236,236,236,.7);border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.08),0 1px 3px rgba(0,0,0,.04);padding:0;opacity:0;visibility:hidden;transform:translateY(8px);transform-origin:top;transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s;z-index:90;}
-  .nav-item.has-mega:hover .mega,.nav-item.has-mega:focus-within .mega{opacity:1;visibility:visible;transform:translateY(0);}
+  .mega{position:absolute;top:calc(100% + 14px);inset-inline-end:0;width:min(94vw,920px);background:rgba(255,255,255,.92);backdrop-filter:saturate(200%) blur(28px);-webkit-backdrop-filter:saturate(200%) blur(28px);border:1px solid rgba(236,236,236,.7);border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.08),0 1px 3px rgba(0,0,0,.04);padding:0;display:none;z-index:90;}
+  .nav-item.mega-open .mega{display:block;animation:megaIn .22s var(--ease) both;}
+   megaIn{from{opacity:0;transform:translateX(-50%) translateY(6px);}to{opacity:1;transform:translateX(-50%) translateY(0);}}
   .mega::before{content:"";position:absolute;top:-14px;inset-inline:0;height:14px;}
   .mega-grid{display:grid;gap:0;}
   .mega-grid.cols-4{grid-template-columns:repeat(3,1fr) 1.15fr;}
@@ -128,28 +141,66 @@
   .mega-col a:hover{background:rgba(123,47,190,.06);color:var(--purple);}
   .mega-col a:hover .mc-icon{background:rgba(123,47,190,.1);border-color:rgba(123,47,190,.2);}
   .mega-col a:hover .mc-icon svg{color:var(--purple);}
-  .mega-col a .mc-desc{font-weight:400;font-size:12.5px;color:var(--muted);display:block;margin-top:2px;}
-  .mega-cta{background:var(--night);color:#fff;border-radius:20px 0 0 20px;padding:28px 24px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+  .mega-col a .mc-desc{display:none;}
+  .mega-cta{background:var(--night);color:#fff;border-radius:0 16px 16px 0;padding:28px 24px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
   .mega-cta::before{content:"";position:absolute;top:-40px;inset-inline-end:-40px;width:120px;height:120px;background:var(--grad);border-radius:50%;opacity:.15;filter:blur(30px);}
   .mega-cta h4{color:#fff;font-size:17px;text-transform:none;letter-spacing:-.01em;margin-bottom:8px;font-family:var(--f-display);font-weight:700;}
   .mega-cta p{color:rgba(255,255,255,.6);font-size:14px;margin-bottom:18px;line-height:1.6;}
   .mega-feat a{display:flex;align-items:center;gap:11px;padding:9px 12px;border-radius:10px;font-weight:600;font-size:14.5px;transition:background .2s var(--ease),color .2s var(--ease);}
   .mega-feat a:hover{background:rgba(123,47,190,.06);color:var(--purple);}
   .mega-feat .mono{flex:none;width:34px;height:34px;border-radius:9px;background:var(--grad);color:#fff;display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:13px;}
-  .burger{display:none;width:44px;height:44px;border:1px solid var(--line-2);border-radius:12px;background:#fff;cursor:pointer;position:relative;}
-  .burger span,.burger span::before,.burger span::after{content:"";position:absolute;left:13px;width:18px;height:2px;background:var(--ink);transition:transform .25s var(--ease),opacity .2s;}
+  .mega-overlay{display:none;position:fixed;inset:0;z-index:89;}
+  .burger{display:none;width:44px;height:44px;border:1px solid var(--line-2);border-radius:12px;background:#fff;cursor:pointer;position:relative;z-index:102;transition:background .3s,border-color .3s;}
+  .burger span,.burger span::before,.burger span::after{content:"";position:absolute;left:13px;width:18px;height:2px;background:var(--ink);transition:transform .3s var(--ease),opacity .2s,background .3s;}
   .burger span{top:21px;}.burger span::before{top:-6px;}.burger span::after{top:6px;}
+  .burger.open{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);}
   .burger.open span{background:transparent;}
-  .burger.open span::before{transform:translateY(6px) rotate(45deg);}
-  .burger.open span::after{transform:translateY(-6px) rotate(-45deg);}
-  .mobile-menu{position:fixed;inset:0;z-index:95;background:rgba(255,255,255,.98);backdrop-filter:blur(18px);display:flex;flex-direction:column;padding:calc(var(--nav-h) + 24px) 28px 28px;gap:4px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .3s var(--ease),transform .3s var(--ease),visibility .3s;overflow-y:auto;}
-  .mobile-menu.open{opacity:1;visibility:visible;transform:none;}
-  .mobile-menu a,.mobile-menu .m-sub-toggle{font-family:var(--f-display);font-weight:700;font-size:26px;color:var(--ink);padding:14px 4px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;background:none;border-top:none;border-inline:none;cursor:pointer;width:100%;text-align:start;}
-  .mobile-menu .m-sub{max-height:0;overflow:hidden;transition:max-height .3s var(--ease);}
-  .mobile-menu .m-sub.open{max-height:520px;}
-  .mobile-menu .m-sub a{font-size:18px;font-weight:600;color:var(--soft);padding:11px 16px;border-bottom:1px dashed var(--line);}
-  .mobile-menu .m-cta{margin-top:22px;}
-  .mobile-menu .m-cta .btn{width:100%;}
+  .burger.open span::before{background:#fff;transform:translateY(6px) rotate(45deg);}
+  .burger.open span::after{background:#fff;transform:translateY(-6px) rotate(-45deg);}
+  .mobile-menu{position:fixed;inset:0;z-index:96;background:var(--night);display:flex;flex-direction:column;padding:0;opacity:0;visibility:hidden;transition:opacity .35s var(--ease),visibility .35s;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+  .mobile-menu.open{opacity:1;visibility:visible;}
+  .mobile-menu::before{content:"";position:fixed;top:-60px;right:-80px;width:320px;height:320px;background:radial-gradient(circle,rgba(123,47,190,.15),transparent 70%);pointer-events:none;z-index:0;}
+  .mobile-menu::after{content:"";position:fixed;bottom:-40px;left:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(232,0,61,.1),transparent 70%);pointer-events:none;z-index:0;}
+  .mm-inner{display:flex;flex-direction:column;min-height:100%;padding:calc(var(--nav-h) + 20px) 28px 28px;position:relative;z-index:1;}
+  .mm-links{display:flex;flex-direction:column;gap:0;flex:1;}
+  .mobile-menu .mm-item{font-family:var(--f-display);font-weight:800;font-size:clamp(22px,5.5vw,30px);color:#fff;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;text-decoration:none;background:none;border-top:none;border-inline:none;cursor:pointer;width:100%;text-align:start;letter-spacing:-.01em;opacity:0;transform:translateY(14px);}
+  .mobile-menu.open .mm-item{animation:mmFade .4s var(--ease) both;}
+  .mobile-menu:not(.open) .mm-item{animation:none !important;opacity:0;transform:translateY(14px);}
+  .mobile-menu.open .mm-item:nth-child(1){animation-delay:.04s;}
+  .mobile-menu.open .mm-item:nth-child(2){animation-delay:.08s;}
+  .mobile-menu.open .mm-item:nth-child(3){animation-delay:.12s;}
+  .mobile-menu.open .mm-item:nth-child(4){animation-delay:.16s;}
+  .mobile-menu.open .mm-item:nth-child(5){animation-delay:.2s;}
+  .mobile-menu.open .mm-item:nth-child(6){animation-delay:.24s;}
+  .mobile-menu.open .mm-item:nth-child(7){animation-delay:.28s;}
+  .mobile-menu.open .mm-item:nth-child(8){animation-delay:.32s;}
+  @keyframes mmFade{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+  .mobile-menu .mm-item:active{color:rgba(255,255,255,.5);}
+  .mobile-menu .mm-item .mm-arrow{width:18px;height:18px;stroke:rgba(255,255,255,.2);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s;}
+  .mobile-menu .mm-item:active .mm-arrow{stroke:rgba(255,255,255,.5);}
+  .mobile-menu .m-sub-toggle{font-family:var(--f-display);font-weight:800;font-size:clamp(22px,5.5vw,30px);color:#fff;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;background:none;border-top:none;border-inline:none;cursor:pointer;width:100%;text-align:start;letter-spacing:-.01em;opacity:0;transform:translateY(14px);}
+  .mobile-menu.open .m-sub-toggle{animation:mmFade .4s .08s var(--ease) both;}
+  .mobile-menu:not(.open) .m-sub-toggle{animation:none !important;opacity:0;transform:translateY(14px);}
+  .mobile-menu .m-sub-toggle .m-chevron{width:30px;height:30px;border-radius:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;transition:background .25s,border-color .25s,transform .3s var(--ease);}
+  .mobile-menu .m-sub-toggle .m-chevron svg{width:14px;height:14px;stroke:rgba(255,255,255,.4);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s;}
+  .mobile-menu .m-sub-toggle[aria-expanded="true"] .m-chevron{background:rgba(123,47,190,.15);border-color:rgba(123,47,190,.3);transform:rotate(180deg);}
+  .mobile-menu .m-sub-toggle[aria-expanded="true"] .m-chevron svg{stroke:var(--purple);}
+  .mobile-menu .m-sub{max-height:0;overflow:hidden;transition:max-height .4s var(--ease),padding .3s;padding:0;margin:0 0 2px;}
+  .mobile-menu .m-sub.open{max-height:600px;padding:8px 0 12px;}
+  .m-sub-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 8px;padding:0 2px;}
+  .mobile-menu .m-sub a{font-family:var(--f-display);font-size:14px;font-weight:600;color:rgba(255,255,255,.45);padding:11px 12px;border-radius:12px;text-decoration:none;display:flex;align-items:center;gap:9px;transition:background .2s,color .2s;border:none;}
+  .mobile-menu .m-sub a:active{background:rgba(255,255,255,.06);color:#fff;}
+  .m-s-ic{width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);display:grid;place-items:center;flex-shrink:0;}
+  .m-s-ic svg{width:14px;height:14px;stroke:var(--purple);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:.6;}
+  .mobile-menu .m-sub a:active .m-s-ic{background:rgba(123,47,190,.1);border-color:rgba(123,47,190,.2);}
+  .mm-bottom{margin-top:auto;padding-top:16px;opacity:0;transform:translateY(10px);}
+  .mobile-menu.open .mm-bottom{animation:mmFade .4s .35s var(--ease) both;}
+  .mobile-menu:not(.open) .mm-bottom{animation:none !important;opacity:0;transform:translateY(10px);}
+  .mm-contact{display:flex;gap:8px;margin-bottom:14px;}
+  .mm-contact a{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:13px 10px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);font-family:var(--f-display);font-size:13px;font-weight:600;color:rgba(255,255,255,.5);text-decoration:none;transition:background .2s,border-color .2s,color .2s;}
+  .mm-contact a:active{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:#fff;}
+  .mm-contact a svg{width:16px;height:16px;flex-shrink:0;}
+  .mm-cta .btn{width:100%;font-size:17px;padding:16px 32px;border-radius:16px;font-weight:800;}
   .mega-col a,.mega-feat a,.nav-logo,.m-sub-toggle{cursor:pointer;}
 
   /* buttons */
@@ -168,7 +219,7 @@
   /* ================================= */
   /* HERO — dark cinematic hero        */
   /* ================================= */
-  .srv-hero{position:relative;background:var(--night);color:#fff;overflow:hidden;padding:0 0 80px;}
+  .srv-hero{position:relative;background:var(--night);color:#fff;overflow:hidden;padding:0 0 80px;margin-top:calc(-1 * var(--nav-h));}
   .srv-hero .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1920&q=80') center/cover no-repeat;opacity:.15;pointer-events:none;}
   .srv-hero::before{content:"";position:absolute;inset:0;background:
     radial-gradient(ellipse 70% 60% at 75% 20%,rgba(123,47,190,.28),transparent 60%),
@@ -176,7 +227,7 @@
     radial-gradient(ellipse 40% 40% at 50% 50%,rgba(123,47,190,.06),transparent);
     pointer-events:none;z-index:1;}
   .srv-hero::after{content:"";position:absolute;bottom:0;inset-inline:0;height:120px;background:linear-gradient(to top,var(--night),transparent);pointer-events:none;z-index:1;}
-  .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;padding-top:60px;}
+  .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;padding-top:calc(60px + var(--nav-h));}
   .hero-content{position:relative;}
 
   .breadcrumb{display:flex;align-items:center;gap:8px;font-family:var(--f-display);font-size:14px;color:rgba(255,255,255,.45);margin-bottom:28px;flex-wrap:wrap;}
@@ -399,6 +450,32 @@
     .srv-hero h1{font-size:30px;}
   }
 
+  /* comparison table */
+  .tbl{width:100%;border-collapse:collapse;margin:28px 0;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm);}
+  .tbl th,.tbl td{padding:14px 18px;text-align:right;font-size:16px;border-bottom:1px solid var(--line);}
+  .tbl thead th{background:var(--night);color:#fff;font-family:var(--f-display);font-weight:700;font-size:14px;letter-spacing:.02em;}
+  .tbl tbody tr:hover{background:rgba(123,47,190,.04);}
+  .tbl tbody td:first-child{font-weight:600;}
+  @media(max-width:620px){.tbl{font-size:14px;display:block;overflow-x:auto;}.tbl th,.tbl td{padding:10px 12px;white-space:nowrap;}}
+
+  /* budget calculator */
+  .calc-box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px;margin:32px 0;box-shadow:var(--shadow-sm);}
+  .calc-box h3{font-size:22px;font-weight:800;margin-bottom:8px;}
+  .calc-box .calc-desc{color:var(--soft);font-size:16px;margin-bottom:24px;}
+  .calc-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;}
+  .calc-field label{display:block;font-family:var(--f-display);font-weight:700;font-size:14px;margin-bottom:6px;color:var(--ink);}
+  .calc-field select,.calc-field input{width:100%;padding:12px 16px;border:1px solid var(--line-2);border-radius:12px;font-family:var(--f-body);font-size:16px;background:#fff;color:var(--ink);transition:border-color .2s;}
+  .calc-field select:focus,.calc-field input:focus{outline:none;border-color:var(--purple);box-shadow:0 0 0 3px rgba(123,47,190,.1);}
+  .calc-result{display:none;margin-top:24px;padding:24px;border-radius:14px;background:var(--grad-soft);border:1px solid rgba(123,47,190,.15);}
+  .calc-result.show{display:block;}
+  .calc-result .cr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px;}
+  .calc-result .cr-item{text-align:center;}
+  .calc-result .cr-item b{display:block;font-family:var(--f-display);font-size:28px;font-weight:900;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+  .calc-result .cr-item span{font-size:13px;color:var(--soft);font-family:var(--f-display);font-weight:600;}
+  .calc-result .cr-note{font-size:14px;color:var(--soft);text-align:center;margin-bottom:16px;}
+  .calc-result .cr-cta{text-align:center;}
+  @media(max-width:620px){.calc-row{grid-template-columns:1fr;}.calc-result .cr-grid{grid-template-columns:1fr;gap:10px;}}
+
   /* a11y */
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important;}.reveal{opacity:1;transform:none;}}
   :focus-visible{outline:3px solid rgba(123,47,190,.55);outline-offset:3px;border-radius:6px;}
@@ -487,26 +564,39 @@
 
   <!-- mobile full-screen menu -->
   <nav class="mobile-menu" id="mobileMenu" aria-label="תפריט נייד" role="navigation">
-    <a href="index.html">בית</a>
-    <button class="m-sub-toggle" data-sub="m-services">שירותים <span>+</span></button>
-    <div class="m-sub" id="m-services">
-      <a href="service-web-development.html">בניית אתרים</a>
-      <a href="service-branding.html">מיתוג</a>
-      <a href="service-content.html">תוכן</a>
-      <a href="service-graphic-design.html">עיצוב גרפי</a>
-      <a href="service-seo.html">קידום אתרים</a>
-      <a href="service-google-ads.html">קמפיינים בגוגל</a>
-      <a href="service-meta-ads.html">פרסום בפייסבוק</a>
-      <a href="service-linkedin.html">LinkedIn</a>
-      <a href="service-local-seo.html">קידום עסק בגוגל</a>
-      <a href="service-photo-video.html">צילום ווידאו</a>
+    <div class="mm-inner">
+      <div class="mm-links">
+        <a href="index.html" class="mm-item">בית <svg class="mm-arrow" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></a>
+        <button class="m-sub-toggle" data-sub="m-services">שירותים <span class="m-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+        <div class="m-sub" id="m-services">
+          <div class="m-sub-grid">
+            <a href="service-web-development.html"><span class="m-s-ic"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>בניית אתרים</a>
+            <a href="service-branding.html"><span class="m-s-ic"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span>מיתוג</a>
+            <a href="service-content.html"><span class="m-s-ic"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span>תוכן</a>
+            <a href="service-graphic-design.html"><span class="m-s-ic"><svg viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r="2.5"/><path d="M3 21l6-6 4 4 4-4 4 4"/><rect x="2" y="2" width="20" height="20" rx="2"/></svg></span>עיצוב גרפי</a>
+            <a href="service-seo.html"><span class="m-s-ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>קידום אתרים</a>
+            <a href="service-google-ads.html"><span class="m-s-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>קמפיינים בגוגל</a>
+            <a href="service-meta-ads.html"><span class="m-s-ic"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span>פרסום בפייסבוק</a>
+            <a href="service-linkedin.html"><span class="m-s-ic"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>LinkedIn</a>
+            <a href="service-local-seo.html"><span class="m-s-ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>קידום מקומי</a>
+            <a href="service-photo-video.html"><span class="m-s-ic"><svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></span>צילום ווידאו</a>
+          </div>
+        </div>
+        <a href="index.html?r=portfolio" class="mm-item">תיק עבודות <svg class="mm-arrow" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></a>
+        <a href="index.html?r=blog" class="mm-item">בלוג <svg class="mm-arrow" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></a>
+        <a href="about.html" class="mm-item">אודות <svg class="mm-arrow" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></a>
+        <a href="testimonials.html" class="mm-item">המלצות <svg class="mm-arrow" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></a>
+        <a href="contact.html" class="mm-item">צור קשר <svg class="mm-arrow" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></a>
+      </div>
+      <div class="mm-bottom">
+        <div class="mm-contact">
+          <a href="tel:0508249824"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>050-824-9824</a>
+          <a href="https://wa.me/972508249824" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>וואטסאפ</a>
+          <a href="mailto:Moshe@muladigital.co.il"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>מייל</a>
+        </div>
+        <div class="mm-cta"><a href="contact.html" class="btn btn-primary">קבעו שיחת אבחון</a></div>
+      </div>
     </div>
-    <a href="index.html?r=portfolio">תיק עבודות</a>
-    <a href="index.html?r=blog">בלוג</a>
-    <a href="about.html">אודות</a>
-    <a href="testimonials.html">המלצות</a>
-    <a href="contact.html">צור קשר</a>
-    <div class="m-cta"><a href="contact.html" class="btn btn-primary">קבעו שיחת אבחון</a></div>
   </nav>
 
   <!-- HERO — dark cinematic -->
@@ -592,17 +682,146 @@
       </div>
       <div class="callout reveal">אם הקמפיין לא מביא לקוחות — זה לא בגלל גוגל. זה בגלל איך בנו את הקמפיין.</div>
       <div class="prose reveal">
-        <p>גוגל אדס זה כלי חזק. כשמשתמשים בו נכון, הוא מביא לידים חמים — אנשים שמחפשים <strong>בדיוק</strong> את מה שאתם מוכרים, <strong>בדיוק</strong> ברגע הזה.</p>
+        <p>גוגל אדס זה כלי חזק. כשמשתמשים בו נכון, הוא מביא לידים חמים - אנשים שמחפשים <strong>בדיוק</strong> את מה שאתם מוכרים, <strong>בדיוק</strong> ברגע הזה.</p>
         <p>אבל כשמשתמשים בו בלי אסטרטגיה? זה כמו להדליק מנוע בלי הגה.</p>
+        <p>ולמי שרוצה גם תנועה אורגנית לטווח ארוך - <a href="service-seo.html" style="color:var(--purple);font-weight:600;">קידום אתרים SEO</a> משלים את הקמפיינים ובונה נכס שעובד בלי תקציב חודשי.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOOGLE ADS vs FACEBOOK ADS comparison -->
+  <section class="sec surface">
+    <div class="wrap narrow">
+      <div class="prose">
+        <div class="s-head reveal"><span class="eyebrow">השוואה</span><h2>פרסום בגוגל מול פרסום בפייסבוק - מה מתאים לעסק שלך?</h2></div>
+        <div class="reveal">
+          <p>זו אחת השאלות שאני שומע הכי הרבה. התשובה הקצרה: תלוי מה אתה מוכר ולמי.</p>
+          <p>התשובה הארוכה? הנה ההבדלים האמיתיים:</p>
+        </div>
+        <div class="reveal" style="overflow-x:auto;">
+          <table class="tbl">
+            <thead><tr><th>קריטריון</th><th>Google Ads</th><th>Facebook / Instagram</th></tr></thead>
+            <tbody>
+              <tr><td>כוונת הגולש</td><td>גבוהה - מחפש פתרון עכשיו</td><td>נמוכה - גולל פיד, לא מחפש</td></tr>
+              <tr><td>סוג תנועה</td><td>חמה - "מחפש שרברב ברחובות"</td><td>קרה - צריך לחמם לפני המרה</td></tr>
+              <tr><td>מתאים ל</td><td>שירותים, חירום, B2B, מוצרים שמחפשים</td><td>מותגים, מוצרי צריכה, קורסים, אירועים</td></tr>
+              <tr><td>זמן עד תוצאות</td><td>ימים בודדים</td><td>שבוע-שבועיים (צריך אופטימיזציה)</td></tr>
+              <tr><td>עלות ליד (ממוצע)</td><td>30-150 ש"ח (תלוי תחום)</td><td>15-80 ש"ח (תלוי תחום)</td></tr>
+              <tr><td>איכות ליד</td><td>גבוהה - הליד חיפש אותך</td><td>בינונית - צריך סינון</td></tr>
+              <tr><td>מורכבות ניהול</td><td>גבוהה - מילות מפתח, הצעות, Quality Score</td><td>בינונית - קהלים, קריאייטיב, A/B</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="reveal">
+          <p><strong>השורה התחתונה:</strong> אם הלקוחות שלך מחפשים את מה שאתה מוכר בגוגל - תתחיל עם גוגל אדס. אם אתה צריך ליצור ביקוש ולהגיע לקהלים שעוד לא מכירים אותך - <a href="service-meta-ads.html" style="color:var(--purple);font-weight:600;">פרסום בפייסבוק ואינסטגרם</a> יכול להשלים.</p>
+          <p>הגישה שעובדת לרוב העסקים? שילוב. גוגל אדס ללידים חמים עכשיו, פייסבוק לחימום קהלים ורימרקטינג.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING TRANSPARENCY -->
+  <section class="sec">
+    <div class="wrap narrow">
+      <div class="prose">
+        <div class="s-head reveal"><span class="eyebrow">תקציבים ומחירים</span><h2>כמה עולה פרסום בגוגל? בואו נפרק את המספרים</h2></div>
+        <div class="reveal">
+          <p>עלות הפרסום בגוגל מורכבת משני חלקים נפרדים:</p>
+          <p><strong>1. דמי ניהול</strong> - מה שאתה משלם למנהל הקמפיין (לי).<br>
+          <strong>2. תקציב פרסום</strong> - מה שאתה משלם לגוגל עצמה על קליקים.</p>
+          <p>ההבדל חשוב. בעלי עסקים הרבה פעמים מבלבלים בין השניים.</p>
+        </div>
+        <div class="reveal" style="overflow-x:auto;">
+          <table class="tbl">
+            <thead><tr><th>סוג עסק</th><th>דמי ניהול (חודשי)</th><th>תקציב פרסום מומלץ</th><th>לידים צפויים</th></tr></thead>
+            <tbody>
+              <tr><td>עסק מקומי קטן</td><td>1,500-2,500 ש"ח</td><td>2,000-4,000 ש"ח</td><td>20-50 בחודש</td></tr>
+              <tr><td>עסק בינוני / מספר שירותים</td><td>2,500-4,000 ש"ח</td><td>4,000-10,000 ש"ח</td><td>40-120 בחודש</td></tr>
+              <tr><td>חברה / מסחר אלקטרוני</td><td>4,000-8,000 ש"ח</td><td>10,000-30,000 ש"ח</td><td>100-400 בחודש</td></tr>
+              <tr><td>B2B / תחום תחרותי</td><td>5,000-10,000 ש"ח</td><td>8,000-25,000+ ש"ח</td><td>20-80 בחודש</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="reveal">
+          <p><strong>שים לב:</strong> המספרים האלה הם טווחים. עלות הליד משתנה לפי תחום, מיקום, תחרות ואיכות דף הנחיתה. בשיחת האבחון אני מציג תחזית מדויקת יותר לפי התחום שלך.</p>
+        </div>
+
+        <h3 class="reveal">למה עלות הקליק משתנה בין תחומים?</h3>
+        <div class="reveal">
+          <p>גוגל אדס עובד כמכרז. ככל שיותר מפרסמים מתחרים על אותו ביטוי - המחיר עולה.</p>
+        </div>
+        <div class="reveal" style="overflow-x:auto;">
+          <table class="tbl">
+            <thead><tr><th>תחום</th><th>עלות קליק ממוצעת</th><th>רמת תחרות</th></tr></thead>
+            <tbody>
+              <tr><td>שרברבות / אינסטלציה</td><td>8-20 ש"ח</td><td>בינונית</td></tr>
+              <tr><td>עורכי דין</td><td>30-80 ש"ח</td><td>גבוהה מאוד</td></tr>
+              <tr><td>רואי חשבון</td><td>15-40 ש"ח</td><td>גבוהה</td></tr>
+              <tr><td>שיפוצים</td><td>10-25 ש"ח</td><td>בינונית-גבוהה</td></tr>
+              <tr><td>קורסים / הכשרות</td><td>5-15 ש"ח</td><td>בינונית</td></tr>
+              <tr><td>מסחר אלקטרוני</td><td>3-12 ש"ח</td><td>תלוי מוצר</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="reveal">
+          <p>עלות קליק גבוהה לא אומרת שהקמפיין לא משתלם. עורך דין שמשלם 50 ש"ח לקליק אבל סוגר תיק ב-15,000 ש"ח - ה-ROI שלו מעולה. השאלה היא לא כמה עולה הקליק, אלא כמה עולה הלקוח.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUDGET CALCULATOR -->
+  <section class="sec surface">
+    <div class="wrap narrow">
+      <div class="prose">
+        <div class="s-head reveal"><span class="eyebrow">כלי חינמי</span><h2>מחשבון תקציב פרסום בגוגל</h2></div>
+        <div class="reveal">
+          <p>רוצה לדעת כמה לידים אפשר להוציא מתקציב מסוים? הנה הערכה ראשונית.</p>
+        </div>
+        <div class="calc-box reveal" id="budgetCalc">
+          <h3>חשב את התקציב שלך</h3>
+          <p class="calc-desc">בחר תחום והזן תקציב חודשי - ותקבל הערכה של כמה לידים אפשר לצפות.</p>
+          <div class="calc-row">
+            <div class="calc-field">
+              <label for="calcIndustry">תחום העסק</label>
+              <select id="calcIndustry">
+                <option value="12">שרברבות / אינסטלציה</option>
+                <option value="50">עורכי דין</option>
+                <option value="25">רואי חשבון / ייעוץ</option>
+                <option value="15">שיפוצים / בנייה</option>
+                <option value="8">קורסים / הכשרות</option>
+                <option value="6">מסחר אלקטרוני</option>
+                <option value="10">בעלי מקצוע (חשמלאי, מנעולן...)</option>
+                <option value="20">ביטוח / פיננסים</option>
+              </select>
+            </div>
+            <div class="calc-field">
+              <label for="calcBudget">תקציב פרסום חודשי (ש"ח)</label>
+              <input type="number" id="calcBudget" placeholder="לדוגמה: 3000" min="500" step="500">
+            </div>
+          </div>
+          <button class="btn btn-primary" id="calcBtn" style="width:100%">חשב הערכה</button>
+          <div class="calc-result" id="calcResult">
+            <div class="cr-grid">
+              <div class="cr-item"><b id="crClicks">0</b><span>קליקים צפויים</span></div>
+              <div class="cr-item"><b id="crLeads">0</b><span>לידים צפויים</span></div>
+              <div class="cr-item"><b id="crCpl">0</b><span>עלות ליד משוערת</span></div>
+            </div>
+            <p class="cr-note">* ההערכה מבוססת על ממוצעים בתחום. תוצאות בפועל תלויות באיכות דף הנחיתה, המודעות, והאופטימיזציה.</p>
+            <div class="cr-cta">
+              <a href="https://wa.me/972508249824" target="_blank" rel="noopener" class="btn btn-primary btn-sm">רוצה תחזית מדויקת? דבר איתי</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- WHAT'S INCLUDED -->
-  <section class="sec surface">
+  <section class="sec">
     <div class="wrap narrow">
       <div class="prose">
-        <div class="s-head reveal"><span class="eyebrow">מה כולל השירות</span><h2>ניהול קמפיינים בגוגל — מקצה לקצה</h2></div>
+        <div class="s-head reveal"><span class="eyebrow">מה כולל השירות</span><h2>ניהול קמפיינים בגוגל - מה נכלל</h2></div>
 
         <div class="reveal">
           <h3>אסטרטגיית קמפיין</h3>
@@ -622,12 +841,12 @@
 
         <div class="reveal">
           <h3>דף נחיתה ממוקד</h3>
-          <p>תנועה ממומנת ששולחים לדף הבית? כסף ברגליים. אני בונה (או מתאים) דף נחיתה ייעודי שעשוי להמיר — עם מסר ברור, הוכחה חברתית, ו-CTA שמוביל לפעולה.</p>
+          <p>תנועה ממומנת ששולחים לדף הבית? כסף ברגליים. אני בונה (או מתאים) <a href="service-landing-pages.html" style="color:var(--purple);font-weight:600;">דף נחיתה ייעודי</a> שעשוי להמיר - עם מסר ברור, הוכחה חברתית, ו-CTA שמוביל לפעולה.</p>
         </div>
 
         <div class="reveal">
           <h3>מעקב המרות ו-A/B Testing</h3>
-          <p>מתקינים מעקב מדויק — כדי לדעת בדיוק כמה לידים נכנסו, מאיזו מודעה, ובאיזו עלות. ואז בודקים גרסאות שונות של מודעות ודפי נחיתה כדי לשפר כל הזמן.</p>
+          <p>מתקינים <a href="service-analytics.html" style="color:var(--purple);font-weight:600;">מעקב מדויק</a> - כדי לדעת בדיוק כמה לידים נכנסו, מאיזו מודעה, ובאיזו עלות. ואז בודקים גרסאות שונות של מודעות ודפי נחיתה כדי לשפר כל הזמן.</p>
         </div>
 
         <div class="reveal">
@@ -762,7 +981,23 @@
         </details>
         <details class="faq">
           <summary>האם אני צריך דף נחיתה?</summary>
-          <div class="ans">כן, וזה קריטי. לשלוח תנועה ממומנת לדף הבית זה כמו לזרוק כסף. דף נחיתה ממוקד — עם מסר ברור, הוכחה חברתית ו-CTA אחד — מכפיל את אחוז ההמרה. אני בונה דפי נחיתה כחלק מהשירות.</div>
+          <div class="ans">כן, וזה קריטי. לשלוח תנועה ממומנת לדף הבית זה כמו לזרוק כסף. דף נחיתה ממוקד - עם מסר ברור, הוכחה חברתית ו-CTA אחד - מכפיל את אחוז ההמרה. אני בונה דפי נחיתה כחלק מהשירות.</div>
+        </details>
+        <details class="faq">
+          <summary>מה ההבדל בין גוגל אדס לפרסום בפייסבוק?</summary>
+          <div class="ans">גוגל אדס מגיע לאנשים שמחפשים פתרון עכשיו - כוונת רכישה גבוהה. פייסבוק מגיע לאנשים שגוללים פיד - צריך לחמם אותם. לרוב עסקי שירותים ו-B2B מתחילים עם גוגל, ומוסיפים פייסבוק לרימרקטינג ולחימום קהלים. הגישה הנכונה היא שילוב של שניהם.</div>
+        </details>
+        <details class="faq">
+          <summary>כמה תקציב פרסום צריך כדי להתחיל?</summary>
+          <div class="ans">תלוי בתחום ובתחרות. לעסק מקומי קטן אפשר להתחיל עם 2,000-3,000 ש"ח בחודש תקציב פרסום (בנוסף לדמי הניהול). לתחומים תחרותיים כמו עורכי דין או ביטוח - מומלץ להתחיל עם 5,000+ ש"ח. אני מתאים את התקציב למטרות ולתחום שלך.</div>
+        </details>
+        <details class="faq">
+          <summary>איך מודדים הצלחה של קמפיין בגוגל?</summary>
+          <div class="ans">לא לפי קליקים או חשיפות - לפי לידים ועלות ליד. המדדים שאני עוקב אחריהם: כמה לידים נכנסו, כמה עלה כל ליד, מה אחוז ההמרה של דף הנחיתה, ומה ה-ROAS (החזר על הוצאת פרסום). כל המספרים מופיעים בדוח החודשי.</div>
+        </details>
+        <details class="faq">
+          <summary>האם אפשר לפרסם בגוגל בלי אתר?</summary>
+          <div class="ans">טכנית כן, אבל זה לא מומלץ. גם אם יש לך דף נחיתה בודד, צריך מקום לשלוח את התנועה אליו. אם אין לך אתר - אני בונה דף נחיתה ממוקד כחלק מהשירות. אם יש לך אתר אבל הוא לא ממיר - נשפר אותו לפני שמשקיעים בפרסום.</div>
         </details>
       </div>
     </div>
@@ -849,6 +1084,7 @@
       </div>
       <div class="foot-bottom">
         <span>&copy; <span id="y"></span> Mula Digital · כל הזכויות שמורות.</span>
+        <a href="privacy-policy.html" style="color:rgba(255,255,255,.6);transition:color .2s;">מדיניות פרטיות</a>
         <span>בונים מערכות צמיחה לעסקים שרוצים יותר.</span>
       </div>
     </div>
@@ -868,8 +1104,28 @@
           burger.setAttribute('aria-expanded',open?'true':'false'); document.body.style.overflow=open?'hidden':'';
         });
         document.querySelectorAll('.m-sub-toggle').forEach(function(t){
-          t.addEventListener('click',function(){ var s=document.getElementById(t.getAttribute('data-sub')); var o=s.classList.toggle('open'); t.querySelector('span').textContent=o?'−':'+'; });
+          t.setAttribute('aria-expanded','false');
+          t.addEventListener('click',function(){ var s=document.getElementById(t.getAttribute('data-sub')); var o=s.classList.toggle('open'); t.setAttribute('aria-expanded',o?'true':'false'); });
         });
+      /* click-based mega menu */
+      var megaItems=document.querySelectorAll('.nav-item.has-mega');
+      function closeAllMegas(){megaItems.forEach(function(m){m.classList.remove('mega-open');});}
+      megaItems.forEach(function(item){
+        var link=item.querySelector('.nav-link');
+        if(!link)return;
+        link.addEventListener('click',function(e){
+          if(window.innerWidth<=880)return;
+          e.preventDefault();
+          var wasOpen=item.classList.contains('mega-open');
+          closeAllMegas();
+          if(!wasOpen)item.classList.add('mega-open');
+        });
+      });
+      document.addEventListener('click',function(e){if(!e.target.closest('.nav-item.has-mega'))closeAllMegas();});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAllMegas();});
+      /* scroll detection */
+      var hdr=document.querySelector('header.nav');
+      if(hdr){var onScroll=function(){hdr.classList.toggle('scrolled',window.scrollY>30);};window.addEventListener('scroll',onScroll,{passive:true});onScroll();}
         mobile.querySelectorAll('a').forEach(function(a){
           a.addEventListener('click',function(){ mobile.classList.remove('open'); burger.classList.remove('open'); burger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; });
         });
@@ -974,6 +1230,77 @@
 
     ScrollTrigger.refresh();
   })();
+
+  /* budget calculator */
+  (function(){
+    var btn=document.getElementById('calcBtn');
+    if(!btn) return;
+    btn.addEventListener('click',function(){
+      var cpc=parseInt(document.getElementById('calcIndustry').value,10);
+      var budget=parseInt(document.getElementById('calcBudget').value,10);
+      if(!budget||budget<500){document.getElementById('calcBudget').style.borderColor='var(--red)';return;}
+      document.getElementById('calcBudget').style.borderColor='';
+      var clicks=Math.round(budget/cpc);
+      var convRate=0.05;
+      if(cpc<=8) convRate=0.04;
+      else if(cpc<=15) convRate=0.05;
+      else if(cpc<=30) convRate=0.06;
+      else convRate=0.07;
+      var leads=Math.max(1,Math.round(clicks*convRate));
+      var costPerLead=Math.round(budget/leads);
+      document.getElementById('crClicks').textContent=clicks.toLocaleString('he-IL');
+      document.getElementById('crLeads').textContent=leads+'-'+Math.round(leads*1.4);
+      document.getElementById('crCpl').textContent=costPerLead+' ₪';
+      var res=document.getElementById('calcResult');
+      res.classList.add('show');
+      res.scrollIntoView({behavior:'smooth',block:'nearest'});
+    });
+  })();
   </script>
+
+<!-- Cookie Consent Banner -->
+<div class="cookie-banner" id="cookieBanner" role="alert" aria-live="polite">
+  <div class="cookie-inner">
+    <p>האתר משתמש בקוקיז לצורך ניתוח תנועה ושיפור חוויית הגלישה. <a href="privacy-policy.html">מדיניות פרטיות</a></p>
+    <div class="cookie-btns">
+      <button class="cookie-btn cookie-accept" id="cookieAccept">מאשר</button>
+      <button class="cookie-btn cookie-decline" id="cookieDecline">דחייה</button>
+    </div>
+  </div>
+</div>
+<style>
+.cookie-banner{position:fixed;bottom:0;inset-inline:0;z-index:9999;background:rgba(11,11,15,.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid rgba(255,255,255,.08);padding:16px 24px;transform:translateY(100%);transition:transform .4s cubic-bezier(.22,.61,.36,1);font-family:'Assistant',system-ui,sans-serif;}
+.cookie-banner.show{transform:translateY(0);}
+.cookie-inner{max-width:1100px;margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.cookie-banner p{color:rgba(255,255,255,.7);font-size:14.5px;margin:0;line-height:1.5;flex:1;min-width:220px;}
+.cookie-banner a{color:rgba(255,255,255,.9);text-decoration:underline;text-underline-offset:2px;transition:color .2s;}
+.cookie-banner a:hover{color:#fff;}
+.cookie-btns{display:flex;gap:8px;flex-shrink:0;}
+.cookie-btn{font-family:'Heebo',system-ui,sans-serif;font-weight:700;font-size:14px;padding:10px 22px;border-radius:100px;cursor:pointer;border:none;transition:transform .2s,box-shadow .2s,background .2s;}
+.cookie-accept{background:linear-gradient(120deg,#E8003D,#7B2FBE);color:#fff;box-shadow:0 4px 16px rgba(232,0,61,.25);}
+.cookie-accept:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(123,47,190,.35);}
+.cookie-decline{background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.12);}
+.cookie-decline:hover{background:rgba(255,255,255,.12);color:rgba(255,255,255,.8);}
+@media(max-width:600px){.cookie-inner{flex-direction:column;text-align:center;gap:12px;}.cookie-btns{width:100%;justify-content:center;}}
+</style>
+<script>
+(function(){
+  if(localStorage.getItem('cookie_consent'))return;
+  var b=document.getElementById('cookieBanner');
+  if(!b)return;
+  setTimeout(function(){b.classList.add('show');},800);
+  document.getElementById('cookieAccept').addEventListener('click',function(){
+    localStorage.setItem('cookie_consent','accepted');
+    b.classList.remove('show');
+    setTimeout(function(){b.remove();},500);
+  });
+  document.getElementById('cookieDecline').addEventListener('click',function(){
+    localStorage.setItem('cookie_consent','declined');
+    b.classList.remove('show');
+    setTimeout(function(){b.remove();},500);
+  });
+})();
+</script>
+
 </body>
 </html>
