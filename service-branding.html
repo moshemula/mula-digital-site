@@ -92,7 +92,7 @@
     --f-display:'Heebo',system-ui,sans-serif;--f-body:'Assistant',system-ui,sans-serif;
     --r:22px;--r-sm:14px;
     --ease:cubic-bezier(.22,.61,.36,1);--spring:cubic-bezier(.34,1.56,.64,1);
-    --shadow-sm:0 4px 14px rgba(17,17,17,.05);--shadow-md:0 18px 50px rgba(17,17,17,.10);--shadow-glow:0 40px 90px rgba(123,47,190,.18);--nav-h:74px;
+    --shadow-sm:0 4px 14px rgba(17,17,17,.05);--shadow-md:0 18px 50px rgba(17,17,17,.10);--shadow-glow:0 40px 90px rgba(123,47,190,.18);--nav-h:80px;
   }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%;}
@@ -116,10 +116,10 @@
   header.nav{position:fixed;top:12px;left:16px;right:16px;width:auto;z-index:100;background:rgba(255,255,255,.82);backdrop-filter:saturate(180%) blur(24px);-webkit-backdrop-filter:saturate(180%) blur(24px);border:1px solid rgba(236,236,236,.6);border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.06),0 1px 3px rgba(0,0,0,.03);transition:background .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);}
   header.nav.scrolled{background:rgba(255,255,255,.92);box-shadow:0 8px 32px rgba(0,0,0,.08),0 1px 3px rgba(0,0,0,.04);}
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);gap:18px;padding:0 24px;}
-  .nav-logo img{height:34px;width:auto;}
+  .nav-logo img{height:36px;width:auto;}
   .nav-menu{display:flex;align-items:center;gap:0;flex:1;justify-content:center;}
   .nav-item{position:relative;}
-  .nav-link{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-display);font-weight:600;font-size:16px;color:var(--soft);padding:9px 14px;border-radius:100px;cursor:pointer;transition:color .2s var(--ease),background .2s var(--ease);background:none;border:none;}
+  .nav-link{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-display);font-weight:600;font-size:15px;color:var(--soft);padding:8px 16px;border-radius:100px;cursor:pointer;transition:color .2s var(--ease),background .2s var(--ease);background:none;border:none;}
   .nav-link:hover,.nav-item:hover .nav-link{color:var(--ink);}
   .nav-link.active{color:var(--ink);background:rgba(123,47,190,.08);}
   .nav-link .caret{width:14px;height:14px;transition:transform .25s var(--ease);}

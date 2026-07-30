@@ -322,7 +322,8 @@
   .proof-dot.is-active{background:rgba(255,255,255,.7);width:22px;border-radius:3px;}
   /* CTA */
   .hero-actions{display:flex;align-items:center;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:56px;}
-  .hero-actions .btn{font-size:18px;padding:18px 38px;}
+  .hero-actions .btn{font-size:18px;padding:18px 38px;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease);}
+  .hero-actions .btn:hover{transform:none !important;box-shadow:none !important;}
   /* trust bar */
   .hero-trust{display:flex;align-items:center;justify-content:center;gap:clamp(24px,4vw,56px);flex-wrap:wrap;padding:28px 36px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:20px;backdrop-filter:blur(8px);}
   .hero-trust .t-item{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.45);font-size:15px;font-weight:600;}
@@ -359,13 +360,16 @@
     .hero-trust{padding:20px 16px;gap:14px;flex-direction:column;border-radius:16px;}
     .hero-trust .t-item{font-size:14px;gap:8px;}
     .hero-trust .t-val{font-size:clamp(22px,6vw,32px);}
-    .wwd-grid{grid-template-columns:repeat(2,1fr);gap:12px;}
-    .wwd-card{padding:24px 16px;border-radius:16px;}
-    .wwd-ic{width:52px;height:52px;border-radius:14px;margin-bottom:14px;}
-    .wwd-ic svg{width:24px;height:24px;}
-    .wwd-card h3{font-size:17px;margin-bottom:6px;}
-    .wwd-card p{font-size:14px;line-height:1.55;margin-bottom:12px;}
-    .wwd-link{font-size:13px;}
+    .wwd-card{padding:20px 18px;border-radius:16px;grid-template-columns:auto 1fr;gap:16px;}
+    .wwd-card:nth-child(1){top:96px;}
+    .wwd-card:nth-child(2){top:108px;}
+    .wwd-card:nth-child(3){top:120px;}
+    .wwd-card:nth-child(4){top:132px;}
+    .wwd-ic{width:48px;height:48px;border-radius:12px;}
+    .wwd-ic svg{width:22px;height:22px;}
+    .wwd-card h3{font-size:17px;margin-bottom:4px;}
+    .wwd-card p{font-size:14px;line-height:1.55;}
+    .wwd-link{font-size:13px;display:none;}
     .stat-grid{grid-template-columns:repeat(2,1fr);gap:20px;}
     .stat-num{font-size:clamp(40px,10vw,56px);}
     .stat-label{font-size:15px;margin-top:8px;}
@@ -377,16 +381,14 @@
     .hiw-step p{font-size:15px;}
   }
 
-  /* ===== CLIENT LOGO STRIP ===== */
-  .clients{padding:64px 0 56px;border-bottom:1px solid var(--line);}
-  .clients .lab{text-align:center;font-family:var(--f-display);font-weight:800;font-size:clamp(22px,3vw,32px);letter-spacing:-.02em;color:var(--ink);margin-bottom:40px;}
-  .marquee{position:relative;overflow:hidden;direction:ltr;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);}
-  .marquee-track{display:flex;align-items:center;gap:40px;width:max-content;animation:marquee 55s linear infinite;will-change:transform;}
-  .marquee:hover .marquee-track{animation-play-state:paused;}
-  @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-  .brand{flex:none;width:220px;height:100px;display:flex;align-items:center;justify-content:center;text-decoration:none;background:transparent;border:none;border-radius:16px;padding:16px 24px;transition:border-color .3s var(--ease),box-shadow .3s var(--ease),transform .3s var(--ease);}
-  .brand:hover{border-color:rgba(123,47,190,.2);box-shadow:0 4px 16px rgba(0,0,0,.06);transform:translateY(-2px);}
-  .brand img{max-height:60px;max-width:170px;width:auto;object-fit:contain;opacity:.85;filter:grayscale(.1);mix-blend-mode:multiply;transition:opacity .3s var(--ease),filter .3s var(--ease);}
+  /* ===== CLIENT LOGO STRIP — SCROLL PARALLAX ===== */
+  .clients{padding:80px 0 72px;border-bottom:1px solid var(--line);overflow:hidden;}
+  .clients .lab{text-align:center;font-family:var(--f-display);font-weight:800;font-size:clamp(22px,3vw,32px);letter-spacing:-.02em;color:var(--ink);margin-bottom:48px;}
+  .logo-rows{display:flex;flex-direction:column;gap:20px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);}
+  .logo-row{display:flex;align-items:center;gap:32px;width:max-content;will-change:transform;transition:none;}
+  .brand{flex:none;width:180px;height:80px;display:flex;align-items:center;justify-content:center;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 20px;transition:border-color .3s var(--ease),box-shadow .3s var(--ease),transform .3s var(--ease);}
+  .brand:hover{border-color:rgba(123,47,190,.25);box-shadow:0 8px 24px rgba(123,47,190,.1);transform:translateY(-3px);}
+  .brand img{max-height:48px;max-width:140px;width:auto;object-fit:contain;opacity:.7;filter:grayscale(.3);mix-blend-mode:multiply;transition:opacity .3s var(--ease),filter .3s var(--ease);}
   .brand:hover img{opacity:1;filter:none;}
   /* tools / tech-stack — static, centered, wrapped (no animation) */
   .tools-sec{padding:54px 0;border-top:1px solid var(--line);background:var(--surface);}
@@ -398,20 +400,25 @@
   .tool b{font-family:var(--f-display);font-weight:700;font-size:14.5px;color:var(--ink);white-space:nowrap;}
 
   /* ===== PROBLEM CARDS (sticky scroll stacking) ===== */
-  /* === WHAT WE DO (4 service highlight cards) === */
-  .wwd{padding:100px 0;background:var(--surface);}
-  .wwd-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;}
-  .wwd-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:40px 32px 36px;text-align:center;text-decoration:none;color:var(--ink);transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);overflow:hidden;}
-  .wwd-card::before{content:"";position:absolute;top:0;right:0;left:0;height:4px;background:var(--grad);opacity:0;transition:opacity .3s var(--ease);}
-  .wwd-card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(0,0,0,.08);border-color:rgba(123,47,190,.2);}
+  /* === WHAT WE DO — STACKING CARDS === */
+  .wwd{padding:100px 0 60px;background:var(--surface);}
+  .wwd-stack{margin-top:48px;position:relative;}
+  .wwd-card{position:sticky;top:120px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:48px 44px;text-decoration:none;color:var(--ink);overflow:hidden;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:32px;box-shadow:0 4px 24px rgba(0,0,0,.06);transition:box-shadow .3s var(--ease),border-color .3s var(--ease);margin-bottom:24px;}
+  .wwd-card:nth-child(1){top:110px;}
+  .wwd-card:nth-child(2){top:130px;}
+  .wwd-card:nth-child(3){top:150px;}
+  .wwd-card:nth-child(4){top:170px;}
+  .wwd-card::before{content:"";position:absolute;top:0;right:0;bottom:0;width:5px;background:var(--grad);opacity:0;transition:opacity .3s var(--ease);}
+  .wwd-card:hover{box-shadow:0 20px 60px rgba(0,0,0,.1);border-color:rgba(123,47,190,.2);}
   .wwd-card:hover::before{opacity:1;}
-  .wwd-ic{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,rgba(232,0,61,.08),rgba(123,47,190,.1));display:grid;place-items:center;margin:0 auto 20px;}
-  .wwd-ic svg{width:28px;height:28px;stroke:var(--purple);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
-  .wwd-card h3{font-family:var(--f-display);font-size:clamp(20px,2.2vw,24px);font-weight:800;margin-bottom:10px;}
-  .wwd-card p{color:var(--soft);font-size:16px;line-height:1.65;margin-bottom:18px;}
-  .wwd-link{font-family:var(--f-display);font-weight:700;font-size:14px;color:var(--purple);display:inline-flex;align-items:center;gap:6px;transition:gap .2s var(--ease);}
+  .wwd-ic{width:72px;height:72px;border-radius:18px;background:linear-gradient(135deg,rgba(232,0,61,.08),rgba(123,47,190,.12));display:grid;place-items:center;flex-shrink:0;}
+  .wwd-ic svg{width:32px;height:32px;stroke:var(--purple);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+  .wwd-card-body{flex:1;min-width:0;}
+  .wwd-card h3{font-family:var(--f-display);font-size:clamp(22px,2.5vw,28px);font-weight:800;margin-bottom:8px;}
+  .wwd-card p{color:var(--soft);font-size:17px;line-height:1.65;margin:0;}
+  .wwd-link{font-family:var(--f-display);font-weight:700;font-size:15px;color:var(--purple);display:inline-flex;align-items:center;gap:8px;white-space:nowrap;transition:gap .2s var(--ease);}
   .wwd-link svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s var(--ease);}
-  .wwd-card:hover .wwd-link{gap:10px;}
+  .wwd-card:hover .wwd-link{gap:12px;}
   .wwd-card:hover .wwd-link svg{transform:translateX(-4px);}
 
   /* === RESULTS / NUMBERS === */
@@ -645,8 +652,8 @@
     .burger{display:block;}
     .about{grid-template-columns:1fr;gap:40px;}
     .about-photo{margin-inline:auto;}
-    .wwd-grid{grid-template-columns:repeat(2,1fr);gap:16px;}
-    .wwd-card{padding:28px 20px;}
+    .wwd-card{padding:28px 24px;grid-template-columns:auto 1fr;gap:20px;}
+    .wwd-link{display:none;}
     .stat-grid{grid-template-columns:repeat(2,1fr);gap:24px;}
     .pf-grid{grid-template-columns:repeat(2,1fr);}
     .final{margin:0 12px;border-radius:28px;}
@@ -692,8 +699,10 @@
     .tl-badge.b4{right:2%;bottom:4%;}
     .clients{padding:48px 0 40px;}
     .clients .lab{font-size:clamp(20px,5vw,26px);margin-bottom:28px;}
-    .brand{width:160px;height:72px;padding:12px 16px;}
-    .brand img{max-height:44px;max-width:120px;}
+    .logo-rows{gap:14px;}
+    .logo-row{gap:16px;}
+    .brand{width:140px;height:64px;padding:10px 14px;border-radius:12px;}
+    .brand img{max-height:38px;max-width:110px;}
     .about-quote{font-size:clamp(22px,5vw,30px);}
     .about-list li{font-size:16px;}
     .cta-dramatic{padding:clamp(56px,12vw,100px) 0;}
@@ -725,7 +734,7 @@
     :root{--max:1320px;}
     .hero h1{font-size:64px;}
     .s-head h2{font-size:52px;}
-    .wwd-grid{gap:28px;}
+    .wwd-stack{gap:28px;}
     .tl-layout{gap:100px;}
     .pf-grid{gap:28px;}
     .cta-dramatic h2{font-size:clamp(40px,6vw,56px);}
@@ -744,8 +753,7 @@
     .s-head h2{font-size:24px;}
     .section{padding:48px 0;}
     .final{padding:44px 16px;border-radius:20px;margin:0 8px;}
-    .wwd-grid{grid-template-columns:1fr;}
-    .wwd-card{padding:24px 18px;}
+    .wwd-card{padding:18px 16px;gap:14px;}
     .stat-grid{grid-template-columns:1fr 1fr;}
     .stat-num{font-size:clamp(36px,10vw,48px);}
     .results{padding:56px 0;}
@@ -942,8 +950,8 @@
         </div>
 
         <div class="hero-actions">
-          <a href="contact.html" class="btn btn-primary" data-magnetic>רוצים יותר לקוחות? דברו איתנו</a>
-          <a href="index.html?r=portfolio" class="btn btn-dark" data-route="portfolio">ראו את העבודות שלנו</a>
+          <a href="contact.html" class="btn btn-primary">בואו נדבר על הצמיחה שלכם</a>
+          <a href="index.html?r=portfolio" class="btn btn-dark" data-route="portfolio">העבודות מדברות בשבילנו</a>
         </div>
 
         <!-- trust bar -->
@@ -959,46 +967,55 @@
       <div class="hero-scroll" id="heroScroll"><span>גללו למטה</span><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></div>
     </section>
 
-    <!-- CLIENTS LOGO STRIP -->
-    <section class="clients">
+    <!-- CLIENTS LOGO STRIP — SCROLL PARALLAX -->
+    <section class="clients" id="clientsSection">
       <div class="wrap">
         <p class="lab">עסקים שכבר עובדים איתנו</p>
-        <div class="marquee">
-          <div class="marquee-track" id="marquee"></div>
-        </div>
+      </div>
+      <div class="logo-rows">
+        <div class="logo-row" id="logoRow1"></div>
+        <div class="logo-row" id="logoRow2"></div>
       </div>
     </section>
 
-    <!-- WHAT WE DO — 4 service highlights -->
+    <!-- WHAT WE DO — STACKING CARDS -->
     <section class="wwd" id="whatwedo">
       <div class="wrap">
         <div class="s-head reveal">
           <span class="eyebrow">מה אנחנו בונים לך</span>
           <h2>הכלים שמביאים לקוחות לעסק</h2>
         </div>
-        <div class="wwd-grid">
+        <div class="wwd-stack">
           <a href="services.html#presence" class="wwd-card">
             <div class="wwd-ic"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-            <h3>נוכחות דיגיטלית</h3>
-            <p>אתר שממיר, מיתוג שמשדר סמכות, תוכן שמדבר בשפה של הלקוחות שלכם.</p>
+            <div class="wwd-card-body">
+              <h3>נוכחות דיגיטלית</h3>
+              <p>אתר שממיר, מיתוג שמשדר סמכות, תוכן שמדבר בשפה של הלקוחות שלכם.</p>
+            </div>
             <span class="wwd-link">לשירותי נוכחות <svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
           </a>
           <a href="services.html#acquisition" class="wwd-card">
             <div class="wwd-ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
-            <h3>הבאת לקוחות</h3>
-            <p>SEO, קמפיינים בגוגל ובפייסבוק, ולינקדאין. תנועה ממוקדת שמייצרת פניות.</p>
+            <div class="wwd-card-body">
+              <h3>הבאת לקוחות</h3>
+              <p>SEO, קמפיינים בגוגל ובפייסבוק, ולינקדאין. תנועה ממוקדת שמייצרת פניות.</p>
+            </div>
             <span class="wwd-link">לשירותי שיווק <svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
           </a>
           <a href="services.html#growth" class="wwd-card">
             <div class="wwd-ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg></div>
-            <h3>מערכות צמיחה</h3>
-            <p>CRM, אוטומציות AI, וואטסאפ עסקי. שום ליד לא נופל בין הכיסאות.</p>
+            <div class="wwd-card-body">
+              <h3>מערכות צמיחה</h3>
+              <p>CRM, אוטומציות AI, וואטסאפ עסקי. שום ליד לא נופל בין הכיסאות.</p>
+            </div>
             <span class="wwd-link">למערכות צמיחה <svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
           </a>
           <a href="services.html" class="wwd-card">
             <div class="wwd-ic"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
-            <h3>מדידה ואופטימיזציה</h3>
-            <p>דאשבורדים, אנליטיקס ו-CRO. אתם יודעים בדיוק מה עובד ומה צריך לשפר.</p>
+            <div class="wwd-card-body">
+              <h3>מדידה ואופטימיזציה</h3>
+              <p>דאשבורדים, אנליטיקס ו-CRO. אתם יודעים בדיוק מה עובד ומה צריך לשפר.</p>
+            </div>
             <span class="wwd-link">לכל השירותים <svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
           </a>
         </div>
@@ -1336,14 +1353,20 @@
     document.getElementById('blogFull').innerHTML = posts.map(postCard).join('');
     document.getElementById('pfPreview').innerHTML = projects.filter(function(p){return p.url;}).map(pfCard).join('');
     document.getElementById('pfFull').innerHTML = projects.map(pfCard).join('');
-    document.getElementById('marquee').innerHTML = clients.map(brandLogo).join('');
-
-    // duplicate the clients marquee for seamless infinite scroll
+    // split clients into two rows for scroll parallax
     (function(){
-      var mq=document.getElementById('marquee');
-      if(!mq) return;
-      var content=mq.innerHTML;
-      mq.innerHTML = content + content;
+      var half=Math.ceil(clients.length/2);
+      var row1=clients.slice(0,half);
+      var row2=clients.slice(half);
+      var r1El=document.getElementById('logoRow1');
+      var r2El=document.getElementById('logoRow2');
+      if(!r1El||!r2El) return;
+      var r1Html=row1.map(brandLogo).join('');
+      var r2Html=row2.map(brandLogo).join('');
+      r1El.innerHTML=r1Html+r1Html+r1Html;
+      r2El.innerHTML=r2Html+r2Html+r2Html;
+      r1El.style.transform='translateX(-25%)';
+      r2El.style.transform='translateX(-10%)';
     })();
 
     /* ---------- REVEAL / STAGGER ---------- */
@@ -1666,9 +1689,13 @@
       if(resSec){gsap.fromTo(resSec,{backgroundPosition:'50% 0%'},{backgroundPosition:'50% 30%',ease:'none',
         scrollTrigger:{trigger:resSec,start:'top bottom',end:'bottom top',scrub:true}});}
 
-      // ========== CLIENT LOGO STRIP — WAVE ==========
-      gsap.fromTo('.brand-strip .brand',{y:30,opacity:0,scale:.85},{y:0,scale:1,opacity:1,duration:.5,stagger:{each:.04,from:'edges'},ease:'back.out(1.2)',
-        scrollTrigger:{trigger:'.brand-strip',start:'top 92%',once:true}});
+      // ========== CLIENT LOGO ROWS — SCROLL PARALLAX ==========
+      var logoRow1=document.getElementById('logoRow1');
+      var logoRow2=document.getElementById('logoRow2');
+      if(logoRow1&&logoRow2){
+        gsap.to(logoRow1,{x:'-=300',ease:'none',scrollTrigger:{trigger:'#clientsSection',start:'top bottom',end:'bottom top',scrub:0.5}});
+        gsap.to(logoRow2,{x:'+=300',ease:'none',scrollTrigger:{trigger:'#clientsSection',start:'top bottom',end:'bottom top',scrub:0.5}});
+      }
 
       // ========== SECTION HEADS — WORD REVEAL ==========
       gsap.utils.toArray('.s-head, .sec-head').forEach(function(head){
@@ -1690,10 +1717,10 @@
         }
       });
 
-      // ========== WHAT-WE-DO CARDS — 3D FLIP ==========
+      // ========== WHAT-WE-DO — STACKING CARDS ENTRANCE ==========
       gsap.utils.toArray('.wwd-card').forEach(function(card, i){
-        gsap.fromTo(card,{y:60,opacity:0,rotateY:12,transformPerspective:800},{y:0,opacity:1,rotateY:0,duration:.8,delay:i*.12,ease:'power3.out',
-          scrollTrigger:{trigger:card,start:'top 90%',once:true}});
+        gsap.fromTo(card,{y:40,opacity:0,scale:.96},{y:0,opacity:1,scale:1,duration:.7,delay:i*.08,ease:'power3.out',
+          scrollTrigger:{trigger:card,start:'top 92%',once:true}});
       });
 
       // ========== RESULTS — COUNT-UP ==========

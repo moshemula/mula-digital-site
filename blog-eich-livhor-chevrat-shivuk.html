@@ -72,7 +72,7 @@
    --bg:#FFFFFF;--ink:#111111;--soft:#3f3f46;--muted:#71717A;--line:#ECECEC;--line-2:#E2E2E2;
    --surface:#FAFAFA;--surface-2:#F3F3F5;--night:#0B0B0F;--night-2:#15151c;--night-line:#262630;
    --red:#E8003D;--purple:#7B2FBE;--grad:linear-gradient(120deg,#E8003D,#7B2FBE);
-   --nav-h:62px;--wrap:820px;--font-h:'Heebo',sans-serif;--font-b:'Assistant',sans-serif;
+   --nav-h:80px;--wrap:820px;--font-h:'Heebo',sans-serif;--font-b:'Assistant',sans-serif;
    --f-display:'Heebo',system-ui,-apple-system,sans-serif;
    --ease:cubic-bezier(.22,.61,.36,1);
   }
@@ -94,9 +94,9 @@
   .nav.scrolled{background:rgba(255,255,255,.92);box-shadow:0 8px 32px rgba(0,0,0,.08);}
   .nav-in{display:flex;align-items:center;height:100%;padding:0 24px;gap:24px;}
   .nav-logo{display:flex;align-items:center;flex-shrink:0;}
-  .nav-logo img{height:28px;}
+  .nav-logo img{height:36px;}
   .nav-menu{display:flex;align-items:center;gap:4px;flex:1;justify-content:center;}
-  .nav-link{font-family:var(--font-h);font-weight:600;font-size:15px;padding:8px 12px;border-radius:8px;transition:background .2s;display:flex;align-items:center;gap:4px;white-space:nowrap;}
+  .nav-link{font-family:var(--font-h);font-weight:600;font-size:15px;padding:8px 16px;border-radius:8px;transition:background .2s;display:flex;align-items:center;gap:4px;white-space:nowrap;}
   .nav-link:hover{background:var(--surface);}
   .caret{width:14px;height:14px;transition:transform .25s;}
   .nav-right{display:flex;align-items:center;gap:12px;}
@@ -344,7 +344,7 @@
     .burger{display:block;}
     .nav{top:8px;left:10px;right:10px;border-radius:14px;}
     .nav-in{padding:0 16px;}
-    .nav-logo img{height:26px;}
+    .nav-logo img{height:30px;}
   }
   @media(max-width:880px){
     .foot-top{grid-template-columns:1fr 1fr;gap:32px;}
