@@ -1101,7 +1101,7 @@
     var metricEls=document.querySelectorAll('.metric b[data-count]');
     if(metricEls.length){ScrollTrigger.create({trigger:'.metrics',start:'top 88%',once:true,onEnter:function(){metricEls.forEach(function(el){var target=parseInt(el.getAttribute('data-count'),10);var text=el.closest('.metric').querySelector('span').textContent;var suffix='';if(text.indexOf('%')>-1||target===100) suffix='%';else if(target<100) suffix='+';gsap.to({v:0},{v:target,duration:1.6,ease:'power2.out',onUpdate:function(){el.textContent=Math.round(this.targets()[0].v)+suffix;}});});gsap.from('.metric',{y:30,opacity:0,duration:.5,stagger:.12,ease:'power2.out'});}});}
     gsap.set('.reveal',{opacity:1,y:0});
-    gsap.utils.toArray('.reveal').forEach(function(el){gsap.from(el,{y:30,opacity:0,duration:.7,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}});});
+    gsap.utils.toArray('.reveal').forEach(function(el){if(el.classList.contains('tl-step')||el.classList.contains('adv')||el.classList.contains('testi-card')) return;gsap.from(el,{y:30,opacity:0,duration:.7,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}});});
     gsap.from('.tl-step',{y:40,opacity:0,duration:.6,stagger:.15,ease:'power2.out',scrollTrigger:{trigger:'.timeline',start:'top 82%',once:true}});
     gsap.from('.adv',{y:30,opacity:0,duration:.5,stagger:.1,ease:'power2.out',scrollTrigger:{trigger:'.advs',start:'top 85%',once:true}});
     gsap.from('.testi-card',{y:30,opacity:0,duration:.5,stagger:.12,ease:'power2.out',scrollTrigger:{trigger:'.testi-grid',start:'top 85%',once:true}});
