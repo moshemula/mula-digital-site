@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
   ╔══════════════════════════════════════════════════════════════╗
-  ║  Mula Digital — Website 3.0                                   ║
+  ║  Mula Digital - Website 3.0                                   ║
   ║  מסע מכירה · עברית · RTL · SPA (בית · תיק עבודות · בלוג)      ║
   ║  Mega menu · GSAP · CSS 3D · No build tools · Netlify-ready   ║
   ╚══════════════════════════════════════════════════════════════╝
@@ -33,7 +33,7 @@
   <meta property="og:image" content="https://muladigital.co.il/assets/moshe-black.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="משה מולה, מייסד Mula Digital — מערכת צמיחה דיגיטלית לעסקים" />
+  <meta property="og:image:alt" content="משה מולה, מייסד Mula Digital - מערכת צמיחה דיגיטלית לעסקים" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Mula Digital · מערכת שמביאה לעסק שלכם יותר לקוחות" />
   <meta name="twitter:description" content="מערכת צמיחה אחת שמחברת אסטרטגיה, אתר, SEO, קמפיינים, AI, CRM ווואטסאפ." />
@@ -188,7 +188,7 @@
   .nav-link .caret{width:13px;height:13px;transition:transform .25s var(--ease);}
   .nav-item.mega-open .caret{transform:rotate(180deg);}
   .nav-right{display:flex;align-items:center;gap:12px;}
-  /* mega panel — click based */
+  /* mega panel - click based */
   .nav-item.has-mega{position:static;}
   .mega{position:absolute;top:calc(var(--nav-h) + 8px);left:50%;transform:translateX(-50%);width:min(94vw,880px);background:rgba(255,255,255,.97);backdrop-filter:saturate(200%) blur(28px);-webkit-backdrop-filter:saturate(200%) blur(28px);border:1px solid rgba(236,236,236,.65);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.10),0 1px 3px rgba(0,0,0,.04);padding:0;display:none;z-index:90;}
   .nav-item.mega-open .mega{display:block;animation:megaIn .22s var(--ease) both;}
@@ -218,74 +218,86 @@
   .mega-feat .mono{flex:none;width:32px;height:32px;border-radius:8px;background:var(--grad);color:#fff;display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:13px;}
   .mega-overlay{display:none;position:fixed;inset:0;z-index:89;}
   /* burger */
-  .burger{display:none;width:44px;height:44px;border:1px solid var(--line-2);border-radius:12px;background:#fff;cursor:pointer;position:relative;z-index:102;transition:background .3s,border-color .3s;}
-  .burger span,.burger span::before,.burger span::after{content:"";position:absolute;left:13px;width:18px;height:2px;background:var(--ink);transition:transform .3s var(--ease),opacity .2s,background .3s;}
-  .burger span{top:21px;}.burger span::before{top:-6px;}.burger span::after{top:6px;}
-  .burger.open{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);}
+  .burger{display:none;width:42px;height:42px;border:1px solid rgba(0,0,0,.08);border-radius:10px;background:rgba(0,0,0,.03);cursor:pointer;position:relative;z-index:102;transition:background .25s var(--ease),border-color .25s var(--ease),box-shadow .25s var(--ease);}
+  .burger:active{background:rgba(0,0,0,.07);border-color:rgba(0,0,0,.12);}
+  .burger span,.burger span::before,.burger span::after{content:"";position:absolute;left:12px;width:18px;height:1.5px;border-radius:2px;background:var(--ink);transition:transform .3s var(--ease),opacity .2s,background .3s,width .3s var(--ease);}
+  .burger span{top:20px;}.burger span::before{top:-5px;width:14px;}.burger span::after{top:5px;width:10px;}
+  .burger.open{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.1);box-shadow:none;}
   .burger.open span{background:transparent;}
-  .burger.open span::before{background:#fff;transform:translateY(6px) rotate(45deg);}
-  .burger.open span::after{background:#fff;transform:translateY(-6px) rotate(-45deg);}
+  .burger.open span::before{background:#fff;width:18px;transform:translateY(5px) rotate(45deg);}
+  .burger.open span::after{background:#fff;width:18px;transform:translateY(-5px) rotate(-45deg);}
 
-  /* mobile full-screen menu — premium dark */
-  .mobile-menu{position:fixed;inset:0;z-index:96;background:var(--night);display:flex;flex-direction:column;padding:0;opacity:0;visibility:hidden;transition:opacity .35s var(--ease),visibility .35s;overflow-y:auto;-webkit-overflow-scrolling:touch;}
-  .mobile-menu.open{opacity:1;visibility:visible;}
-  .mobile-menu::before{content:"";position:fixed;top:-60px;right:-80px;width:320px;height:320px;background:radial-gradient(circle,rgba(123,47,190,.15),transparent 70%);pointer-events:none;z-index:0;}
-  .mobile-menu::after{content:"";position:fixed;bottom:-40px;left:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(232,0,61,.1),transparent 70%);pointer-events:none;z-index:0;}
-  .mm-inner{display:flex;flex-direction:column;min-height:100%;padding:calc(var(--nav-h) + 20px) 28px 28px;position:relative;z-index:1;}
+  /* mobile full-screen menu - premium slide */
+  .mm-overlay{position:fixed;inset:0;z-index:95;background:rgba(0,0,0,.5);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:opacity .35s var(--ease),visibility .35s;}
+  .mm-overlay.open{opacity:1;visibility:visible;}
+  .mobile-menu{position:fixed;top:0;right:0;bottom:0;width:min(88vw,380px);z-index:96;background:var(--night);display:flex;flex-direction:column;padding:0;transform:translateX(100%);visibility:hidden;transition:transform .4s cubic-bezier(.32,.72,.35,1),visibility .4s;overflow-y:auto;-webkit-overflow-scrolling:touch;box-shadow:-8px 0 40px rgba(0,0,0,.4);}
+  .mobile-menu.open{transform:translateX(0);visibility:visible;}
+  .mobile-menu::before{content:"";position:absolute;top:0;right:0;width:3px;height:100%;background:var(--grad);opacity:.6;pointer-events:none;z-index:2;}
+  .mm-inner{display:flex;flex-direction:column;min-height:100%;padding:24px 24px 28px;position:relative;z-index:1;}
+  .mm-brand{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.08);}
+  .mm-brand img{height:28px;width:auto;}
+  .mm-close{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;cursor:pointer;transition:background .2s,border-color .2s;}
+  .mm-close:active{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.15);}
+  .mm-close svg{width:18px;height:18px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;}
   .mm-links{display:flex;flex-direction:column;gap:0;flex:1;}
 
   /* main links */
-  .mobile-menu .mm-item{font-family:var(--f-display);font-weight:800;font-size:clamp(22px,5.5vw,30px);color:#fff;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;text-decoration:none;background:none;border-top:none;border-inline:none;cursor:pointer;width:100%;text-align:start;letter-spacing:-.01em;opacity:0;transform:translateY(14px);}
-  .mobile-menu.open .mm-item{animation:mmFade .4s var(--ease) both;}
-  .mobile-menu:not(.open) .mm-item{animation:none !important;opacity:0;transform:translateY(14px);}
-  .mobile-menu.open .mm-item:nth-child(1){animation-delay:.04s;}
-  .mobile-menu.open .mm-item:nth-child(2){animation-delay:.08s;}
-  .mobile-menu.open .mm-item:nth-child(3){animation-delay:.12s;}
-  .mobile-menu.open .mm-item:nth-child(4){animation-delay:.16s;}
-  .mobile-menu.open .mm-item:nth-child(5){animation-delay:.2s;}
-  .mobile-menu.open .mm-item:nth-child(6){animation-delay:.24s;}
-  .mobile-menu.open .mm-item:nth-child(7){animation-delay:.28s;}
-  .mobile-menu.open .mm-item:nth-child(8){animation-delay:.32s;}
-  @keyframes mmFade{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
-  .mobile-menu .mm-item:active{color:rgba(255,255,255,.5);}
-  .mobile-menu .mm-item .mm-arrow{width:18px;height:18px;stroke:rgba(255,255,255,.2);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s;}
-  .mobile-menu .mm-item:active .mm-arrow{stroke:rgba(255,255,255,.5);}
+  .mobile-menu .mm-item{font-family:var(--f-display);font-weight:700;font-size:17px;color:rgba(255,255,255,.8);padding:14px 12px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;text-decoration:none;background:none;border:none;cursor:pointer;width:100%;text-align:start;letter-spacing:-.01em;opacity:0;transform:translateX(20px);transition:background .2s,color .2s;}
+  .mobile-menu.open .mm-item{animation:mmSlide .35s var(--ease) both;}
+  .mobile-menu:not(.open) .mm-item{animation:none !important;opacity:0;transform:translateX(20px);}
+  .mobile-menu.open .mm-item:nth-child(1){animation-delay:.06s;}
+  .mobile-menu.open .mm-item:nth-child(2){animation-delay:.1s;}
+  .mobile-menu.open .mm-item:nth-child(3){animation-delay:.14s;}
+  .mobile-menu.open .mm-item:nth-child(4){animation-delay:.18s;}
+  .mobile-menu.open .mm-item:nth-child(5){animation-delay:.22s;}
+  .mobile-menu.open .mm-item:nth-child(6){animation-delay:.26s;}
+  .mobile-menu.open .mm-item:nth-child(7){animation-delay:.3s;}
+  .mobile-menu.open .mm-item:nth-child(8){animation-delay:.34s;}
+  @keyframes mmSlide{from{opacity:0;transform:translateX(20px);}to{opacity:1;transform:none;}}
+  .mobile-menu .mm-item:active{background:rgba(255,255,255,.06);color:#fff;}
+  .mobile-menu .mm-item .mm-arrow{width:16px;height:16px;stroke:rgba(255,255,255,.2);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s,transform .2s;}
+  .mobile-menu .mm-item:active .mm-arrow{stroke:rgba(255,255,255,.5);transform:translateX(-3px);}
 
   /* services toggle */
-  .mobile-menu .m-sub-toggle{font-family:var(--f-display);font-weight:800;font-size:clamp(22px,5.5vw,30px);color:#fff;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;background:none;border-top:none;border-inline:none;cursor:pointer;width:100%;text-align:start;letter-spacing:-.01em;opacity:0;transform:translateY(14px);}
-  .mobile-menu.open .m-sub-toggle{animation:mmFade .4s .08s var(--ease) both;}
-  .mobile-menu:not(.open) .m-sub-toggle{animation:none !important;opacity:0;transform:translateY(14px);}
-  .mobile-menu .m-sub-toggle .m-chevron{width:30px;height:30px;border-radius:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;transition:background .25s,border-color .25s,transform .3s var(--ease);}
-  .mobile-menu .m-sub-toggle .m-chevron svg{width:14px;height:14px;stroke:rgba(255,255,255,.4);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s;}
+  .mobile-menu .m-sub-toggle{font-family:var(--f-display);font-weight:700;font-size:17px;color:rgba(255,255,255,.8);padding:14px 12px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;width:100%;text-align:start;letter-spacing:-.01em;opacity:0;transform:translateX(20px);transition:background .2s,color .2s;}
+  .mobile-menu.open .m-sub-toggle{animation:mmSlide .35s .06s var(--ease) both;}
+  .mobile-menu:not(.open) .m-sub-toggle{animation:none !important;opacity:0;transform:translateX(20px);}
+  .mobile-menu .m-sub-toggle .m-chevron{width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;transition:background .25s,border-color .25s,transform .3s var(--ease);}
+  .mobile-menu .m-sub-toggle .m-chevron svg{width:12px;height:12px;stroke:rgba(255,255,255,.4);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s;}
+  .mobile-menu .m-sub-toggle[aria-expanded="true"]{background:rgba(255,255,255,.04);color:#fff;}
   .mobile-menu .m-sub-toggle[aria-expanded="true"] .m-chevron{background:rgba(123,47,190,.15);border-color:rgba(123,47,190,.3);transform:rotate(180deg);}
   .mobile-menu .m-sub-toggle[aria-expanded="true"] .m-chevron svg{stroke:var(--purple);}
+  .mobile-menu .m-sub-toggle:active{background:rgba(255,255,255,.06);}
 
   /* services sub-menu */
   .mobile-menu .m-sub{max-height:0;overflow:hidden;transition:max-height .4s var(--ease),padding .3s;padding:0;margin:0 0 2px;}
-  .mobile-menu .m-sub.open{max-height:600px;padding:8px 0 12px;}
-  .m-sub-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 8px;padding:0 2px;}
-  .mobile-menu .m-sub a{font-family:var(--f-display);font-size:14px;font-weight:600;color:rgba(255,255,255,.45);padding:11px 12px;border-radius:12px;text-decoration:none;display:flex;align-items:center;gap:9px;transition:background .2s,color .2s;border:none;}
+  .mobile-menu .m-sub.open{max-height:600px;padding:6px 0 10px;}
+  .m-sub-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 6px;padding:0 4px;}
+  .mobile-menu .m-sub a{font-family:var(--f-display);font-size:13px;font-weight:600;color:rgba(255,255,255,.78);padding:10px 10px;border-radius:10px;text-decoration:none;display:flex;align-items:center;gap:8px;transition:background .2s,color .2s;border:none;}
   .mobile-menu .m-sub a:active{background:rgba(255,255,255,.06);color:#fff;}
-  .m-s-ic{width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);display:grid;place-items:center;flex-shrink:0;transition:background .2s,border-color .2s;}
-  .m-s-ic svg{width:14px;height:14px;stroke:var(--purple);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:.6;}
+  .m-s-ic{width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);display:grid;place-items:center;flex-shrink:0;transition:background .2s,border-color .2s;}
+  .m-s-ic svg{width:13px;height:13px;stroke:var(--purple);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;opacity:.6;}
   .mobile-menu .m-sub a:active .m-s-ic{background:rgba(123,47,190,.1);border-color:rgba(123,47,190,.2);}
 
+  /* divider */
+  .mm-divider{height:1px;background:rgba(255,255,255,.06);margin:8px 12px;}
+
   /* bottom: contact strip + CTA */
-  .mm-bottom{margin-top:auto;padding-top:16px;opacity:0;transform:translateY(10px);}
-  .mobile-menu.open .mm-bottom{animation:mmFade .4s .35s var(--ease) both;}
-  .mobile-menu:not(.open) .mm-bottom{animation:none !important;opacity:0;transform:translateY(10px);}
-  .mm-contact{display:flex;gap:8px;margin-bottom:14px;}
-  .mm-contact a{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:13px 10px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);font-family:var(--f-display);font-size:13px;font-weight:600;color:rgba(255,255,255,.5);text-decoration:none;transition:background .2s,border-color .2s,color .2s;}
+  .mm-bottom{margin-top:auto;padding-top:16px;opacity:0;transform:translateX(20px);}
+  .mobile-menu.open .mm-bottom{animation:mmSlide .35s .35s var(--ease) both;}
+  .mobile-menu:not(.open) .mm-bottom{animation:none !important;opacity:0;transform:translateX(20px);}
+  .mm-contact{display:flex;gap:6px;margin-bottom:14px;}
+  .mm-contact a{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;padding:12px 6px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);font-family:var(--f-display);font-size:11px;font-weight:600;color:rgba(255,255,255,.7);text-decoration:none;transition:background .2s,border-color .2s,color .2s;white-space:nowrap;overflow:hidden;}
   .mm-contact a:active{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:#fff;}
-  .mm-contact a svg{width:16px;height:16px;flex-shrink:0;}
-  .mm-cta .btn{width:100%;font-size:17px;padding:16px 32px;border-radius:16px;font-weight:800;}
+  .mm-contact a svg{width:15px;height:15px;flex-shrink:0;}
+  .mm-cta .btn{width:100%;font-size:16px;padding:15px 28px;border-radius:14px;font-weight:800;}
 
   /* ===== PAGES ===== */
   .page{display:none;}
   .page.is-active{display:block;animation:pageIn .5s var(--ease);}
   @keyframes pageIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
 
-  /* ===== HERO — LIVE PROOF ===== */
+  /* ===== HERO - LIVE PROOF ===== */
   /* ===== HERO ===== */
   .hero{position:relative;background:var(--night);display:flex;align-items:center;justify-content:center;min-height:100dvh;overflow:hidden;margin-top:calc(-1 * var(--nav-h));padding-top:var(--nav-h);}
   .hero::before{content:"";position:absolute;inset:0;background:
@@ -381,7 +393,7 @@
     .hiw-step p{font-size:15px;}
   }
 
-  /* ===== CLIENT LOGO STRIP — SCROLL PARALLAX ===== */
+  /* ===== CLIENT LOGO STRIP - SCROLL PARALLAX ===== */
   .clients{padding:80px 0 72px;border-bottom:1px solid var(--line);overflow:hidden;}
   .clients .lab{text-align:center;font-family:var(--f-display);font-weight:800;font-size:clamp(22px,3vw,32px);letter-spacing:-.02em;color:var(--ink);margin-bottom:48px;}
   .logo-rows{display:flex;flex-direction:column;gap:20px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);}
@@ -390,7 +402,7 @@
   .brand:hover{border-color:rgba(123,47,190,.25);box-shadow:0 8px 24px rgba(123,47,190,.1);transform:translateY(-3px);}
   .brand img{max-height:48px;max-width:140px;width:auto;object-fit:contain;opacity:.7;filter:grayscale(.3);mix-blend-mode:multiply;transition:opacity .3s var(--ease),filter .3s var(--ease);}
   .brand:hover img{opacity:1;filter:none;}
-  /* tools / tech-stack — static, centered, wrapped (no animation) */
+  /* tools / tech-stack - static, centered, wrapped (no animation) */
   .tools-sec{padding:54px 0;border-top:1px solid var(--line);background:var(--surface);}
   .tools-wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:960px;margin:22px auto 0;}
   .tool{flex:none;display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line-2);border-radius:100px;padding:8px 16px 8px 8px;box-shadow:var(--shadow-sm);transition:transform .2s var(--ease),border-color .2s var(--ease),box-shadow .2s var(--ease);}
@@ -400,7 +412,7 @@
   .tool b{font-family:var(--f-display);font-weight:700;font-size:14.5px;color:var(--ink);white-space:nowrap;}
 
   /* ===== PROBLEM CARDS (sticky scroll stacking) ===== */
-  /* === WHAT WE DO — STACKING CARDS === */
+  /* === WHAT WE DO - STACKING CARDS === */
   .wwd{padding:100px 0 60px;background:var(--surface);}
   .wwd-stack{margin-top:48px;position:relative;}
   .wwd-card{position:sticky;top:120px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:48px 44px;text-decoration:none;color:var(--ink);overflow:hidden;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:32px;box-shadow:0 4px 24px rgba(0,0,0,.06);transition:box-shadow .3s var(--ease),border-color .3s var(--ease);margin-bottom:24px;}
@@ -462,7 +474,7 @@
   .rf-conclusion{font-family:var(--f-display);font-weight:800;font-size:clamp(18px,2.2vw,24px);color:#fff;margin:36px auto 36px;max-width:600px;line-height:1.45;}
   .reframe .btn{font-size:17px;padding:16px 36px;}
 
-  /* ===== (bento/tools/services removed — covered by wwd + services.html) ===== */
+  /* ===== (bento/tools/services removed - covered by wwd + services.html) ===== */
 
   /* ===== PORTFOLIO cards ===== */
   .pf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
@@ -489,7 +501,7 @@
   .pf-link svg{width:15px;height:15px;}
   .pf-foot{display:flex;justify-content:center;margin-top:50px;}
 
-  /* ===== ABOUT — FLOATING BADGES ===== */
+  /* ===== ABOUT - FLOATING BADGES ===== */
   .tl-about{padding:clamp(80px,10vw,120px) 0;position:relative;overflow:hidden;background:linear-gradient(160deg,#12061a 0%,#1a0a24 25%,#0f0714 50%,#180818 75%,#12061a 100%);color:#fff;}
   .tl-about::before{content:"";position:absolute;top:-10%;right:5%;width:50%;height:70%;border-radius:50%;background:radial-gradient(circle,rgba(123,47,190,.28),transparent 55%);pointer-events:none;filter:blur(80px);animation:tlOrb1 8s ease-in-out infinite alternate;}
   .tl-about::after{content:"";position:absolute;bottom:-10%;left:-5%;width:45%;height:60%;border-radius:50%;background:radial-gradient(circle,rgba(232,0,61,.2),transparent 55%);pointer-events:none;filter:blur(80px);animation:tlOrb2 10s ease-in-out infinite alternate;}
@@ -766,9 +778,10 @@
     .tl-badge.b2,.tl-badge.b4{right:0;}
     .foot-top{grid-template-columns:1fr;gap:28px;}
     .foot-brand{grid-column:auto;}
-    .mobile-menu .mm-item,.mobile-menu .m-sub-toggle{font-size:clamp(20px,5vw,26px);padding:13px 0;}
-    .m-sub-grid{grid-template-columns:1fr 1fr;gap:3px 6px;}
-    .mobile-menu .m-sub a{font-size:13px;padding:10px 10px;}
+    .mobile-menu{width:min(92vw,380px);}
+    .mobile-menu .mm-item,.mobile-menu .m-sub-toggle{font-size:16px;padding:13px 10px;}
+    .m-sub-grid{grid-template-columns:1fr 1fr;gap:3px 5px;}
+    .mobile-menu .m-sub a{font-size:12px;padding:9px 8px;}
     .m-s-ic{width:26px;height:26px;border-radius:7px;}
     .m-s-ic svg{width:12px;height:12px;}
     .mm-contact a{font-size:12px;padding:11px 8px;}
@@ -866,9 +879,15 @@
     </div>
   </header>
 
-  <!-- mobile full-screen menu -->
+  <!-- mobile menu overlay -->
+  <div class="mm-overlay" id="mmOverlay"></div>
+  <!-- mobile slide-in menu -->
   <nav class="mobile-menu" id="mobileMenu" aria-label="תפריט נייד" role="navigation">
     <div class="mm-inner">
+      <div class="mm-brand">
+        <img src="assets/logo-light.png" alt="Mula Digital" />
+        <button class="mm-close" id="mmClose" aria-label="סגירת תפריט"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      </div>
       <div class="mm-links">
         <button class="m-sub-toggle" data-sub="m-services">שירותים <span class="m-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
         <div class="m-sub" id="m-services">
@@ -891,6 +910,7 @@
         <a href="testimonials.html" class="mm-item">המלצות <svg class="mm-arrow" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></a>
         <a href="contact.html" class="mm-item">צור קשר <svg class="mm-arrow" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></a>
       </div>
+      <div class="mm-divider"></div>
       <div class="mm-bottom">
         <div class="mm-contact">
           <a href="tel:0508249824"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>050-824-9824</a>
@@ -907,7 +927,7 @@
   <!-- ============================================================ -->
   <main id="route-home" class="page is-active">
 
-    <!-- HERO — LIVE PROOF -->
+    <!-- HERO - LIVE PROOF -->
     <section class="hero" id="hero">
       <div class="hero-deco hero-deco-1"></div>
       <div class="hero-deco hero-deco-2"></div>
@@ -919,7 +939,7 @@
         <h1 class="hero-title" id="heroTitle">יותר לקוחות. יותר פניות.<span class="hero-title-big">יותר צמיחה.</span></h1>
         <p class="hero-lead">סוכנות שיווק דיגיטלי שבונה לעסקים מערכת צמיחה שלמה: בניית אתרים, קידום אורגני, פרסום ברשתות חברתיות ואינסטגרם, קמפיינים בגוגל, אוטומציות AI ו-CRM. הכל מחובר, הכל מדיד, הכל עובד.</p>
 
-        <!-- proof ticker — real Google reviews -->
+        <!-- proof ticker - real Google reviews -->
         <div class="hero-proof" id="heroProof">
           <div class="proof-slide is-active" data-proof="0">
             <div class="proof-logo"><img src="assets/logos/eldadlevi.png" alt="אלדד לוי"></div>
@@ -967,7 +987,7 @@
       <div class="hero-scroll" id="heroScroll"><span>גללו למטה</span><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></div>
     </section>
 
-    <!-- CLIENTS LOGO STRIP — SCROLL PARALLAX -->
+    <!-- CLIENTS LOGO STRIP - SCROLL PARALLAX -->
     <section class="clients" id="clientsSection">
       <div class="wrap">
         <p class="lab">עסקים שכבר עובדים איתנו</p>
@@ -978,7 +998,7 @@
       </div>
     </section>
 
-    <!-- WHAT WE DO — STACKING CARDS -->
+    <!-- WHAT WE DO - STACKING CARDS -->
     <section class="wwd" id="whatwedo">
       <div class="wrap">
         <div class="s-head reveal">
@@ -1022,7 +1042,7 @@
       </div>
     </section>
 
-    <!-- RESULTS — numbers that prove value -->
+    <!-- RESULTS - numbers that prove value -->
     <section class="results" id="results">
       <div class="wrap">
         <div class="s-head reveal">
@@ -1050,7 +1070,7 @@
       </div>
     </section>
 
-    <!-- HOW IT WORKS — 3-step process -->
+    <!-- HOW IT WORKS - 3-step process -->
     <section class="hiw" id="howitworks">
       <div class="wrap">
         <div class="s-head reveal">
@@ -1077,7 +1097,7 @@
       </div>
     </section>
 
-    <!-- (growth system + tools removed — covered by wwd section + services.html) -->
+    <!-- (growth system + tools removed - covered by wwd section + services.html) -->
 
     <!-- PORTFOLIO PREVIEW (4) -->
     <section class="section" id="portfolio-preview">
@@ -1085,16 +1105,16 @@
         <div class="s-head reveal">
           <span class="eyebrow">תיק עבודות</span>
           <h2>פרויקטים נבחרים</h2>
-          <p>מבחר מהעבודות שלנו — מעסק מקומי ועד חברות B2B בינלאומיות.</p>
+          <p>מבחר מהעבודות שלנו - מעסק מקומי ועד חברות B2B בינלאומיות.</p>
         </div>
         <div class="pf-grid" id="pfPreview"></div>
         <div class="pf-foot"><a href="index.html?r=portfolio" class="btn btn-ghost" data-route="portfolio">לתיק העבודות המלא</a></div>
       </div>
     </section>
 
-    <!-- (services section removed — covered by services.html) -->
+    <!-- (services section removed - covered by services.html) -->
 
-    <!-- ABOUT — FLOATING BADGES -->
+    <!-- ABOUT - FLOATING BADGES -->
     <section class="tl-about" id="about">
       <div class="wrap tl-layout">
         <div class="tl-visual">
@@ -1130,7 +1150,7 @@
       </div>
     </section>
 
-    <!-- BLOG PREVIEW — 3D TILT -->
+    <!-- BLOG PREVIEW - 3D TILT -->
     <section class="section blog-3d" id="blog-preview">
       <div class="wrap">
         <div class="s-head center reveal">
@@ -1174,7 +1194,7 @@
       <div class="wrap">
         <span class="eyebrow reveal">תיק עבודות</span>
         <h2 class="reveal" style="font-size:clamp(32px,5vw,48px);">העבודות שמאחורי המערכות</h2>
-        <p class="reveal">מבחר פרויקטים — אתרים, SEO, קמפיינים, מיתוג ואוטומציות — לעסקים מקומיים, תעשייה ו-B2B.</p>
+        <p class="reveal">מבחר פרויקטים - אתרים, SEO, קמפיינים, מיתוג ואוטומציות - לעסקים מקומיים, תעשייה ו-B2B.</p>
         <div class="filters" id="pfFilters">
           <button class="filter active" data-f="הכל">הכל</button>
           <button class="filter" data-f="אתרים">אתרים</button>
@@ -1232,7 +1252,7 @@
       <div class="foot-top">
         <div class="foot-brand">
           <img src="assets/logo-dark.png" alt="הלוגו של Mula Digital" />
-          <p>לא עוד אתר. מערכת צמיחה אחת שמחברת אסטרטגיה, אתר, SEO, קמפיינים, AI, CRM ווואטסאפ — ומביאה לעסק יותר לקוחות.</p>
+          <p>לא עוד אתר. מערכת צמיחה אחת שמחברת אסטרטגיה, אתר, SEO, קמפיינים, AI, CRM ווואטסאפ - ומביאה לעסק יותר לקוחות.</p>
           <div class="foot-social">
             <a href="tel:0508249824" aria-label="טלפון" title="התקשרו"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
             <a href="mailto:Moshe@muladigital.co.il" aria-label="אימייל" title="אימייל"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
@@ -1271,7 +1291,7 @@
         <div class="mcat" id="mCat"></div>
         <h3 id="mTitle"></h3>
         <p id="mEx"></p>
-        <div class="note">המאמר המלא בהכנה. בקרוב כאן יתפרסם תוכן מורחב — בינתיים נשמח לדבר ולענות על כל שאלה.</div>
+        <div class="note">המאמר המלא בהכנה. בקרוב כאן יתפרסם תוכן מורחב - בינתיים נשמח לדבר ולענות על כל שאלה.</div>
       </div>
     </div>
   </div>
@@ -1295,11 +1315,11 @@
       {t:'כמה עולה לבנות אתר בשנת 2026',cat:'אתרים',cats:['אתרים'],img:'photo-1460925895917-afdab827c52f',rt:'18 דק׳ קריאה',url:'blog-kama-ole-livnot-atar.html',ex:'טבלת מחירים עדכנית, מחשבון עלויות שנה ראשונה, השוואת פרילנסר מול סוכנות, ודוגמאות אמיתיות מהשטח.'},
       {t:'איך לבחור חברת שיווק דיגיטלי בלי לזרוק כסף',cat:'שיווק דיגיטלי',cats:['קמפיינים','SEO'],img:'photo-1552664730-d307ca884978',rt:'15 דק׳ קריאה',url:'blog-eich-livhor-chevrat-shivuk.html',ex:'8 סימנים לחברה טובה, 7 דגלים אדומים, 12 שאלות שחובה לשאול לפני חתימה. מדריך מעשי מהשטח.'},
       {t:'למה אתר יפה לא מספיק כדי להביא לקוחות',cat:'אתרים',cats:['אתרים'],img:'photo-1553877522-43269d4ea984',rt:'4 דק׳ קריאה',url:'blog-atar-yafe-lo-maspik.html',ex:'עיצוב יפה זה לא אסטרטגיה. אתר שמביא לקוחות בנוי קודם כל סביב מסר, אמון ומסלול פעולה ברור.'},
-      {t:'איך לדעת אם הפרסום באמת עובד',cat:'קמפיינים',cats:['קמפיינים'],img:'photo-1551288049-bebda4e38f71',rt:'5 דק׳ קריאה',ex:'לייקים זה לא תוצאה. נראה אילו מספרים באמת מעידים שהפרסום מחזיר את ההשקעה — ואיך למדוד אותם.',url:'blog-eich-ladaat-im-hapirsum-oved.html'},
-      {t:'איך AI יכול לחסוך זמן לבעל עסק',cat:'AI',cats:['AI'],img:'photo-1485827404703-89b55fcc595e',rt:'4 דק׳ קריאה',ex:'מענה ראשוני, תזכורות, סיכומים ותוכן — כך AI משחרר לכם שעות בשבוע בלי לאבד את המגע האישי.',url:'blog-ai-chosech-zman-laasakim.html'},
+      {t:'איך לדעת אם הפרסום באמת עובד',cat:'קמפיינים',cats:['קמפיינים'],img:'photo-1551288049-bebda4e38f71',rt:'5 דק׳ קריאה',ex:'לייקים זה לא תוצאה. נראה אילו מספרים באמת מעידים שהפרסום מחזיר את ההשקעה - ואיך למדוד אותם.',url:'blog-eich-ladaat-im-hapirsum-oved.html'},
+      {t:'איך AI יכול לחסוך זמן לבעל עסק',cat:'AI',cats:['AI'],img:'photo-1485827404703-89b55fcc595e',rt:'4 דק׳ קריאה',ex:'מענה ראשוני, תזכורות, סיכומים ותוכן - כך AI משחרר לכם שעות בשבוע בלי לאבד את המגע האישי.',url:'blog-ai-chosech-zman-laasakim.html'},
       {t:'מה זה SEO לעסקים מקומיים',cat:'עסקים מקומיים',cats:['עסקים מקומיים','SEO'],img:'photo-1460925895917-afdab827c52f',rt:'6 דק׳ קריאה',ex:'איך לגרום ללקוחות באזור שלכם למצוא אתכם בגוגל בדיוק ברגע שהם מחפשים שירות כמו שלכם.',url:'blog-seo-laasakim-mekomiyim.html'},
       {t:'למה וואטסאפ בלי CRM גורם לאיבוד לידים',cat:'אוטומציות',cats:['אוטומציות'],img:'photo-1556761175-b413da4baf72',rt:'5 דק׳ קריאה',ex:'פניות שנכנסות לוואטסאפ ונשכחות הן כסף שאבד. כך מחברים מעקב אוטומטי שלא נותן לאף ליד ליפול.',url:'blog-whatsapp-bli-crm.html'},
-      {t:'איך בונים מערכת שיווק לעסק קטן',cat:'קמפיינים',cats:['קמפיינים'],img:'photo-1504384308090-c894fdcc538d',rt:'7 דק׳ קריאה',ex:'לא צריך תקציב ענק. צריך סדר נכון: אסטרטגיה, נכס דיגיטלי, ערוץ הבאה אחד שעובד — ומדידה.'}
+      {t:'איך בונים מערכת שיווק לעסק קטן',cat:'קמפיינים',cats:['קמפיינים'],img:'photo-1504384308090-c894fdcc538d',rt:'7 דק׳ קריאה',ex:'לא צריך תקציב ענק. צריך סדר נכון: אסטרטגיה, נכס דיגיטלי, ערוץ הבאה אחד שעובד - ומדידה.'}
     ];
     var LG=function(slug){return 'assets/logos/'+slug+'.png';};
     var projects=[
@@ -1450,18 +1470,28 @@
 
     /* ---------- MOBILE MENU ---------- */
     function closeMobile(){
-      var mm=document.getElementById('mobileMenu'), bg=document.getElementById('burger');
+      var mm=document.getElementById('mobileMenu'), bg=document.getElementById('burger'), ov=document.getElementById('mmOverlay');
       if(mm) mm.classList.remove('open');
+      if(ov) ov.classList.remove('open');
       if(bg){ bg.classList.remove('open'); bg.setAttribute('aria-expanded','false'); }
       document.body.style.overflow='';
     }
     (function(){
-      /* burger / mobile menu */
-      var burger=document.getElementById('burger'), mobile=document.getElementById('mobileMenu');
+      var burger=document.getElementById('burger'), mobile=document.getElementById('mobileMenu'), overlay=document.getElementById('mmOverlay'), closeBtn=document.getElementById('mmClose');
       burger.addEventListener('click',function(){
         var open=mobile.classList.toggle('open'); burger.classList.toggle('open',open);
+        if(overlay) overlay.classList.toggle('open',open);
         burger.setAttribute('aria-expanded',open?'true':'false'); document.body.style.overflow=open?'hidden':'';
       });
+      if(closeBtn) closeBtn.addEventListener('click',closeMobile);
+      if(overlay) overlay.addEventListener('click',closeMobile);
+      /* swipe to close (swipe right in RTL = close) */
+      var touchStartX=0,touchDelta=0;
+      mobile.addEventListener('touchstart',function(e){touchStartX=e.touches[0].clientX;touchDelta=0;},{passive:true});
+      mobile.addEventListener('touchmove',function(e){touchDelta=e.touches[0].clientX-touchStartX;},{passive:true});
+      mobile.addEventListener('touchend',function(){if(touchDelta>60)closeMobile();},{passive:true});
+      /* escape key */
+      document.addEventListener('keydown',function(e){if(e.key==='Escape'&&mobile.classList.contains('open'))closeMobile();});
       document.querySelectorAll('.m-sub-toggle').forEach(function(t){
         t.setAttribute('aria-expanded','false');
         t.addEventListener('click',function(){ var s=document.getElementById(t.getAttribute('data-sub')); var o=s.classList.toggle('open'); t.setAttribute('aria-expanded',o?'true':'false'); });
@@ -1527,7 +1557,7 @@
       }
     });
 
-    /* ---------- (orbit and reframe connect removed — replaced by bento grid + clean reframe) ---------- */
+    /* ---------- (orbit and reframe connect removed - replaced by bento grid + clean reframe) ---------- */
 
     /* ---------- MAGNETIC BUTTONS ---------- */
     if(!isTouch && !reduce){
@@ -1603,7 +1633,7 @@
         });
       });
 
-      // ========== HERO — TEXT SPLIT + ENTRANCE ==========
+      // ========== HERO - TEXT SPLIT + ENTRANCE ==========
       var heroTitle=document.getElementById('heroTitle');
       var heroScroll=document.getElementById('heroScroll');
       var heroProof=document.getElementById('heroProof');
@@ -1689,7 +1719,7 @@
       if(resSec){gsap.fromTo(resSec,{backgroundPosition:'50% 0%'},{backgroundPosition:'50% 30%',ease:'none',
         scrollTrigger:{trigger:resSec,start:'top bottom',end:'bottom top',scrub:true}});}
 
-      // ========== CLIENT LOGO ROWS — SCROLL PARALLAX ==========
+      // ========== CLIENT LOGO ROWS - SCROLL PARALLAX ==========
       var logoRow1=document.getElementById('logoRow1');
       var logoRow2=document.getElementById('logoRow2');
       if(logoRow1&&logoRow2){
@@ -1697,7 +1727,7 @@
         gsap.to(logoRow2,{x:'+=300',ease:'none',scrollTrigger:{trigger:'#clientsSection',start:'top bottom',end:'bottom top',scrub:0.5}});
       }
 
-      // ========== SECTION HEADS — WORD REVEAL ==========
+      // ========== SECTION HEADS - WORD REVEAL ==========
       gsap.utils.toArray('.s-head, .sec-head').forEach(function(head){
         var h2=head.querySelector('h2');
         if(h2 && h2.childElementCount===0){
@@ -1717,13 +1747,13 @@
         }
       });
 
-      // ========== WHAT-WE-DO — STACKING CARDS ENTRANCE ==========
+      // ========== WHAT-WE-DO - STACKING CARDS ENTRANCE ==========
       gsap.utils.toArray('.wwd-card').forEach(function(card, i){
         gsap.fromTo(card,{y:40,opacity:0,scale:.96},{y:0,opacity:1,scale:1,duration:.7,delay:i*.08,ease:'power3.out',
           scrollTrigger:{trigger:card,start:'top 92%',once:true}});
       });
 
-      // ========== RESULTS — COUNT-UP ==========
+      // ========== RESULTS - COUNT-UP ==========
       document.querySelectorAll('.stat-num[data-count]').forEach(function(el){
         ScrollTrigger.create({trigger:el,start:'top 85%',once:true,onEnter:function(){
           var target=parseInt(el.dataset.count);
@@ -1734,13 +1764,13 @@
         }});
       });
 
-      // ========== HOW-IT-WORKS — STAGGERED SLIDE ==========
+      // ========== HOW-IT-WORKS - STAGGERED SLIDE ==========
       gsap.utils.toArray('.hiw-step').forEach(function(step, i){
         gsap.fromTo(step,{x:i%2===0?-60:60,opacity:0,rotateZ:i%2===0?-2:2},{x:0,opacity:1,rotateZ:0,duration:.9,delay:i*.1,ease:'power3.out',
           scrollTrigger:{trigger:step,start:'top 88%',once:true}});
       });
 
-      // ========== PORTFOLIO CARDS — CINEMATIC 3D ==========
+      // ========== PORTFOLIO CARDS - CINEMATIC 3D ==========
       gsap.fromTo('#pfPreview .pf-card',{y:80,opacity:0,rotateX:12,scale:.92,transformPerspective:1000},
         {y:0,opacity:1,rotateX:0,scale:1,duration:1,stagger:.15,ease:'power3.out',
         scrollTrigger:{trigger:'#pfPreview',start:'top 88%',once:true}});
@@ -1763,18 +1793,18 @@
       gsap.to('.tl-badge.b3',{y:-15,x:10,ease:'none',scrollTrigger:{trigger:'.tl-about',start:'top bottom',end:'bottom top',scrub:true}});
       gsap.to('.tl-badge.b4',{y:-30,x:-8,ease:'none',scrollTrigger:{trigger:'.tl-about',start:'top bottom',end:'bottom top',scrub:true}});
 
-      // ========== BLOG POSTS — CASCADE ==========
+      // ========== BLOG POSTS - CASCADE ==========
       gsap.fromTo('#blogPreview .post',{y:60,opacity:0,scale:.94},{y:0,opacity:1,scale:1,duration:.8,stagger:.14,ease:'power3.out',
         scrollTrigger:{trigger:'#blogPreview',start:'top 88%',once:true}});
 
-      // ========== DRAMATIC CTA — CINEMATIC ==========
+      // ========== DRAMATIC CTA - CINEMATIC ==========
       var ctaSec=document.querySelector('.cta-dramatic');
       if(ctaSec){
         var ctaTl=gsap.timeline({scrollTrigger:{trigger:ctaSec,start:'top 80%',once:true}});
         ctaTl.fromTo(ctaSec.querySelectorAll('.reveal'),{y:60,opacity:0,scale:.95},{y:0,opacity:1,scale:1,duration:1.1,stagger:.18,ease:'power4.out'});
       }
 
-      // ========== HERO DECO ORBS — PARALLAX DEPTH ==========
+      // ========== HERO DECO ORBS - PARALLAX DEPTH ==========
       gsap.utils.toArray('.hero-deco').forEach(function(deco, i){
         var speed=-20-(i*12);
         gsap.to(deco,{y:speed,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});

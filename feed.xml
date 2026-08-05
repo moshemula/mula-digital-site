@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mula Digital Blog</title>
+    <description>מאמרים על שיווק דיגיטלי, SEO, קמפיינים ומערכות צמיחה לעסקים. מאת משה מולה.</description>
+    <link>https://muladigital.co.il/</link>
+    <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml"/>
+    <language>he</language>
+    <lastBuildDate>Tue, 15 Jul 2026 10:00:00 +0300</lastBuildDate>
+    <managingEditor>Moshe@muladigital.co.il (משה מולה)</managingEditor>
+    <image>
+      <url>https://muladigital.co.il/assets/logo-dark.png</url>
+      <title>Mula Digital Blog</title>
+      <link>https://muladigital.co.il/</link>
+    </image>
+
+    <item>
+      <title>איך לבחור חברת שיווק דיגיטלי בלי לזרוק כסף</title>
+      <link>https://muladigital.co.il/blog-eich-livhor-chevrat-shivuk.html</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-eich-livhor-chevrat-shivuk.html</guid>
+      <pubDate>Tue, 15 Jul 2026 10:00:00 +0300</pubDate>
+      <description>מדריך מעשי: 8 סימנים לחברת שיווק שתביא תוצאות, 7 דגלים אדומים, 12 שאלות שחובה לשאול לפני חתימה. מאת משה מולה.</description>
+      <author>Moshe@muladigital.co.il (משה מולה)</author>
+      <category>שיווק דיגיטלי</category>
+    </item>
+
+    <item>
+      <title>למה אתר יפה לא מספיק כדי להביא לקוחות</title>
+      <link>https://muladigital.co.il/blog-atar-yafe-lo-maspik.html</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-atar-yafe-lo-maspik.html</guid>
+      <pubDate>Mon, 01 Jun 2026 10:00:00 +0300</pubDate>
+      <description>עיצוב יפה מרשים את העין אבל לא בהכרח מביא פניות. מדריך עומק: 12 הסיבות, ההבדל בין אתר תדמית לאתר שמוכר, מחשבון הפסד ובדיקת אתר.</description>
+      <author>Moshe@muladigital.co.il (משה מולה)</author>
+      <category>אתרים</category>
+    </item>
+
+  </channel>
+</rss>
