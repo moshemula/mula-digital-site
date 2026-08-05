@@ -394,14 +394,23 @@
   }
 
   /* ===== CLIENT LOGO STRIP - SCROLL PARALLAX ===== */
-  .clients{padding:80px 0 72px;border-bottom:1px solid var(--line);overflow:hidden;}
-  .clients .lab{text-align:center;font-family:var(--f-display);font-weight:800;font-size:clamp(22px,3vw,32px);letter-spacing:-.02em;color:var(--ink);margin-bottom:48px;}
-  .logo-rows{display:flex;flex-direction:column;gap:20px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);}
-  .logo-row{display:flex;align-items:center;gap:32px;width:max-content;will-change:transform;transition:none;}
-  .brand{flex:none;width:180px;height:80px;display:flex;align-items:center;justify-content:center;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 20px;transition:border-color .3s var(--ease),box-shadow .3s var(--ease),transform .3s var(--ease);}
-  .brand:hover{border-color:rgba(123,47,190,.25);box-shadow:0 8px 24px rgba(123,47,190,.1);transform:translateY(-3px);}
-  .brand img{max-height:48px;max-width:140px;width:auto;object-fit:contain;opacity:.7;filter:grayscale(.3);mix-blend-mode:multiply;transition:opacity .3s var(--ease),filter .3s var(--ease);}
-  .brand:hover img{opacity:1;filter:none;}
+  .clients{padding:96px 0 88px;overflow:hidden;position:relative;background:linear-gradient(180deg,#FAFAFA 0%,#fff 50%,#FAFAFA 100%);}
+  .clients::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--line) 20%,var(--line) 80%,transparent);}
+  .clients::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--line) 20%,var(--line) 80%,transparent);}
+  .clients .lab{text-align:center;font-family:var(--f-display);font-weight:800;font-size:clamp(22px,3vw,32px);letter-spacing:-.02em;color:var(--ink);margin-bottom:12px;}
+  .clients .lab-sub{text-align:center;font-size:16px;color:var(--soft);margin-bottom:52px;font-weight:400;}
+  .logo-rows{display:flex;flex-direction:column;gap:24px;direction:ltr;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+  .logo-row{display:flex;direction:ltr;align-items:center;gap:28px;width:max-content;will-change:transform;}
+  .logo-row.scroll-right{animation:marquee-right 60s linear infinite;}
+  .logo-row.scroll-left{animation:marquee-left 55s linear infinite;}
+  .logo-rows:hover .logo-row{animation-play-state:paused;}
+  @keyframes marquee-right{0%{transform:translateX(0);}100%{transform:translateX(calc(-100% / 3));}}
+  @keyframes marquee-left{0%{transform:translateX(calc(-100% / 3));}100%{transform:translateX(0);}}
+  .brand{flex:none;width:220px;height:100px;display:flex;align-items:center;justify-content:center;text-decoration:none;background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:16px;padding:16px 28px;box-shadow:0 1px 3px rgba(0,0,0,.04),0 4px 12px rgba(0,0,0,.02);transition:border-color .3s var(--ease),box-shadow .35s var(--ease),transform .35s var(--ease);}
+  .brand:hover{border-color:rgba(123,47,190,.2);box-shadow:0 4px 16px rgba(123,47,190,.1),0 8px 32px rgba(232,0,61,.06);transform:translateY(-4px) scale(1.03);}
+  .brand img{max-height:64px;max-width:175px;width:auto;object-fit:contain;opacity:.8;mix-blend-mode:multiply;transition:opacity .35s var(--ease);}
+  .brand:hover img{opacity:1;}
+  @media(prefers-reduced-motion:reduce){.logo-row{animation:none!important;}}
   /* tools / tech-stack - static, centered, wrapped (no animation) */
   .tools-sec{padding:54px 0;border-top:1px solid var(--line);background:var(--surface);}
   .tools-wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:960px;margin:22px auto 0;}
@@ -724,12 +733,15 @@
     .tl-badge.b2{right:2%;top:16%;}
     .tl-badge.b3{left:0;bottom:20%;}
     .tl-badge.b4{right:2%;bottom:4%;}
-    .clients{padding:48px 0 40px;}
-    .clients .lab{font-size:clamp(20px,5vw,26px);margin-bottom:28px;}
-    .logo-rows{gap:14px;}
+    .clients{padding:56px 0 48px;}
+    .clients .lab{font-size:clamp(20px,5vw,26px);margin-bottom:6px;}
+    .clients .lab-sub{font-size:14px;margin-bottom:32px;}
+    .logo-rows{gap:16px;}
     .logo-row{gap:16px;}
-    .brand{width:140px;height:64px;padding:10px 14px;border-radius:12px;}
-    .brand img{max-height:38px;max-width:110px;}
+    .logo-row.scroll-right{animation-duration:40s;}
+    .logo-row.scroll-left{animation-duration:38s;}
+    .brand{width:160px;height:76px;padding:12px 16px;border-radius:12px;}
+    .brand img{max-height:50px;max-width:130px;}
     .about-quote{font-size:clamp(22px,5vw,30px);}
     .about-list li{font-size:16px;}
     .cta-dramatic{padding:clamp(56px,12vw,100px) 0;}
@@ -1006,10 +1018,11 @@
     <section class="clients" id="clientsSection">
       <div class="wrap">
         <p class="lab">עסקים שכבר עובדים איתנו</p>
+        <p class="lab-sub">מעסקים מקומיים ועד חברות תעשייה וארגונים</p>
       </div>
       <div class="logo-rows">
-        <div class="logo-row" id="logoRow1"></div>
-        <div class="logo-row" id="logoRow2"></div>
+        <div class="logo-row scroll-right" id="logoRow1"></div>
+        <div class="logo-row scroll-left" id="logoRow2"></div>
       </div>
     </section>
 
@@ -1401,8 +1414,6 @@
       var r2Html=row2.map(brandLogo).join('');
       r1El.innerHTML=r1Html+r1Html+r1Html;
       r2El.innerHTML=r2Html+r2Html+r2Html;
-      r1El.style.transform='translateX(-25%)';
-      r2El.style.transform='translateX(-10%)';
     })();
 
     /* ---------- REVEAL / STAGGER ---------- */
@@ -1735,13 +1746,8 @@
       if(resSec){gsap.fromTo(resSec,{backgroundPosition:'50% 0%'},{backgroundPosition:'50% 30%',ease:'none',
         scrollTrigger:{trigger:resSec,start:'top bottom',end:'bottom top',scrub:true}});}
 
-      // ========== CLIENT LOGO ROWS - SCROLL PARALLAX ==========
-      var logoRow1=document.getElementById('logoRow1');
-      var logoRow2=document.getElementById('logoRow2');
-      if(logoRow1&&logoRow2){
-        gsap.to(logoRow1,{x:'-=300',ease:'none',scrollTrigger:{trigger:'#clientsSection',start:'top bottom',end:'bottom top',scrub:0.5}});
-        gsap.to(logoRow2,{x:'+=300',ease:'none',scrollTrigger:{trigger:'#clientsSection',start:'top bottom',end:'bottom top',scrub:0.5}});
-      }
+      // ========== CLIENT LOGO ROWS - CSS INFINITE MARQUEE ==========
+      // Animation handled by CSS @keyframes marquee-rtl / marquee-ltr
 
       // ========== SECTION HEADS - WORD REVEAL ==========
       gsap.utils.toArray('.s-head, .sec-head').forEach(function(head){
