@@ -201,6 +201,44 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- עמודי ערים -->
+  <url>
+    <loc>https://muladigital.co.il/city-rehovot.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://muladigital.co.il/city-rishon.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://muladigital.co.il/city-nes-tziona.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://muladigital.co.il/city-yavne.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://muladigital.co.il/city-ashdod.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://muladigital.co.il/city-lod-ramle.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- קייס סטאדי -->
   <url>
     <loc>https://muladigital.co.il/case-jackson.html</loc>
@@ -222,6 +260,54 @@
   </url>
 
   <!-- בלוג -->
+  <url>
+    <loc>https://muladigital.co.il/blog-google-ads-guide.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://muladigital.co.il/blog-crm-laasakim-ktanim.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://muladigital.co.il/blog-google-ads-vs-facebook.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://muladigital.co.il/blog-eich-livhor-sochnut-digital.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://muladigital.co.il/blog-kiddum-ai-geo.html</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://muladigital.co.il/blog-google-business-profile.html</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://muladigital.co.il/blog-tochen-shemavi-lekochot.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://muladigital.co.il/blog-daf-nchita-shemammir.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://muladigital.co.il/blog-kama-ole-kiddum-bGoogle.html</loc>
     <lastmod>2026-08-06</lastmod>
@@ -271,7 +357,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/privacy-policy</loc>
+    <loc>https://muladigital.co.il/privacy-policy.html</loc>
     <lastmod>2026-07-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

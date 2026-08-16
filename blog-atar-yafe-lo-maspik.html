@@ -13,6 +13,7 @@
   <link rel="canonical" href="https://muladigital.co.il/blog-atar-yafe-lo-maspik.html" />
 
   <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://muladigital.co.il/blog-atar-yafe-lo-maspik.html" />
   <meta property="og:locale" content="he_IL" />
   <meta property="og:site_name" content="Mula Digital" />
   <meta property="og:title" content="למה אתר יפה לא מספיק כדי להביא לקוחות (ומה באמת גורם לאתר להמיר)" />
@@ -62,7 +63,7 @@
   {
     "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
     {"@type":"ListItem","position":1,"name":"בית","item":"https://muladigital.co.il/"},
-    {"@type":"ListItem","position":2,"name":"בלוג","item":"https://muladigital.co.il/index.html?r=blog"},
+    {"@type":"ListItem","position":2,"name":"בלוג","item":"https://muladigital.co.il/#blog"},
     {"@type":"ListItem","position":3,"name":"למה אתר יפה לא מספיק כדי להביא לקוחות","item":"https://muladigital.co.il/blog-atar-yafe-lo-maspik.html"}
   ]}
   </script>
@@ -343,10 +344,27 @@
   .article-tags .label{font-size:14px;color:var(--soft);font-family:var(--f-display);font-weight:600;}
   .article-tags .tag{font-size:13px;padding:6px 14px;border-radius:100px;border:1px solid var(--line-2);color:var(--soft);background:transparent;}
   .article-tags .tag:hover{border-color:var(--purple);color:var(--purple);}
-  .endcta{text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:42px 30px;margin:28px 0 50px;}
-  .endcta h2{font-size:clamp(24px,3.6vw,34px);font-weight:900;margin-bottom:10px;}
-  .endcta p{color:var(--soft);margin-bottom:22px;}
-  .endcta .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  /* end CTA — premium animated */
+  .endcta{position:relative;text-align:center;padding:64px 28px 56px;margin:48px 0 0;border-radius:28px;color:#fff;overflow:hidden;isolation:isolate;}
+  .endcta::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(160deg,#0B0B0F 0%,#15102a 40%,#1a0a1e 70%,#0B0B0F 100%);}
+  .endcta::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 60% 50% at 50% 120%,rgba(123,47,190,.25),transparent 70%),radial-gradient(ellipse 40% 40% at 80% 10%,rgba(232,0,61,.12),transparent 60%);pointer-events:none;}
+  .endcta .cta-glow{position:absolute;top:-50%;left:50%;transform:translateX(-50%);width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(123,47,190,.18),transparent 70%);filter:blur(40px);animation:ctaFloat 6s ease-in-out infinite;pointer-events:none;z-index:-1;}
+  @keyframes ctaFloat{0%,100%{transform:translateX(-50%) translateY(0);opacity:.7;}50%{transform:translateX(-40%) translateY(20px);opacity:1;}}
+  .endcta .cta-ring{position:absolute;inset:3px;border-radius:26px;border:1px solid transparent;background:linear-gradient(var(--night),var(--night)) padding-box,linear-gradient(135deg,rgba(232,0,61,.3),rgba(123,47,190,.3),rgba(232,0,61,.1)) border-box;pointer-events:none;z-index:-1;}
+  .endcta .cta-icon{width:56px;height:56px;margin:0 auto 18px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}
+  .endcta .cta-icon svg{width:28px;height:28px;stroke-width:1.5;}
+  .endcta h2{color:#fff;font-size:clamp(24px,4.5vw,36px);font-weight:900;margin:0 0 10px;padding:0;line-height:1.15;}
+  .endcta h2 span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+  .endcta .cta-sub{color:rgba(255,255,255,.55);font-size:16px;margin-bottom:10px;max-width:440px;margin-inline:auto;line-height:1.6;}
+  .endcta .cta-trust{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:28px;font-size:13px;color:rgba(255,255,255,.4);flex-wrap:wrap;}
+  .endcta .cta-trust span{display:inline-flex;align-items:center;gap:5px;}
+  .endcta .cta-trust svg{width:14px;height:14px;stroke:rgba(255,255,255,.35);fill:none;stroke-width:2;}
+  .endcta .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .endcta .btn-primary{font-size:17px;padding:16px 38px;border-radius:16px;box-shadow:0 8px 32px rgba(232,0,61,.25),0 0 0 0 rgba(123,47,190,.3);animation:ctaPulse 3s ease-in-out infinite;}
+  @keyframes ctaPulse{0%,100%{box-shadow:0 8px 32px rgba(232,0,61,.25),0 0 0 0 rgba(123,47,190,.3);}50%{box-shadow:0 12px 40px rgba(232,0,61,.3),0 0 0 6px rgba(123,47,190,.08);}}
+  .endcta .btn-ghost{border-color:rgba(255,255,255,.15);color:rgba(255,255,255,.7);font-size:15px;padding:14px 28px;border-radius:16px;}
+  .endcta .btn-ghost:hover{border-color:rgba(255,255,255,.4);color:#fff;background:rgba(255,255,255,.06);}
+  @media(prefers-reduced-motion:reduce){.endcta .cta-glow{animation:none;}.endcta .btn-primary{animation:none;}}
 
   /* inline lead form */
   .lead-form-wrap{position:relative;margin:44px 0;padding:36px 30px 32px;border-radius:20px;background:linear-gradient(135deg,#0B0B0F 0%,#1a1a2e 100%);border:1px solid rgba(123,47,190,.2);overflow:hidden;}
@@ -1024,8 +1042,16 @@
     </div>
 
     <div class="endcta">
-      <h2>אם העסק שלך טוב - הגיע הזמן שגם האתר יראה את זה.</h2>
-      <p>נקבע שיחת אבחון קצרה ונבין איפה אתה מפסיד פניות - בלי התחייבות.</p>
+      <div class="cta-glow"></div>
+      <div class="cta-ring"></div>
+      <div class="cta-icon"><svg viewBox="0 0 24 24" fill="none" stroke="url(#cg)" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="cg" x1="0" y1="0" x2="24" y2="24"><stop offset="0%" stop-color="#E8003D"/><stop offset="100%" stop-color="#7B2FBE"/></linearGradient></defs><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+      <h2>אם העסק שלך טוב - הגיע הזמן שגם <span>האתר יראה את זה.</span></h2>
+      <p class="cta-sub">נקבע שיחת אבחון קצרה ונבין איפה אתה מפסיד פניות - בלי התחייבות.</p>
+      <div class="cta-trust">
+        <span><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>בלי התחייבות</span>
+        <span><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>תוך 24 שעות</span>
+        <span><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>שיחה של 15 דקות</span>
+      </div>
       <div class="row">
         <a href="contact.html" class="btn btn-primary">קבעו שיחת אבחון</a>
         <a href="index.html?r=blog" class="btn btn-ghost">למאמרים נוספים</a>
