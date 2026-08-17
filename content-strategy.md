@@ -15,7 +15,7 @@
 
 ---
 
-## מה כבר פורסם (8 מאמרים)
+## מה כבר פורסם (16 מאמרים)
 
 | # | ביטוי מפתח | קובץ | סטטוס |
 |---|-----------|------|-------|
@@ -27,6 +27,14 @@
 | 6 | SEO מקומי / SEO לעסקים מקומיים | blog-seo-laasakim-mekomiyim.html | פורסם |
 | 7 | וואטסאפ CRM / מעקב לידים | blog-whatsapp-bli-crm.html | פורסם |
 | 8 | כמה עולה קידום אתר בגוגל | blog-kama-ole-kiddum-bGoogle.html | פורסם |
+| 9 | איך לבנות דף נחיתה שממיר | blog-daf-nchita-shemammir.html | פורסם |
+| 10 | איך לכתוב תוכן שמביא לקוחות מגוגל | blog-tochen-shemavi-lekochot.html | פורסם |
+| 11 | גוגל לעסק שלי - המדריך המלא 2026 | blog-google-business-profile.html | פורסם |
+| 12 | קידום ב-AI - מדריך GEO מלא 2026 | blog-kiddum-ai-geo.html | פורסם |
+| 13 | איך לבחור סוכנות דיגיטל לעסק קטן | blog-eich-livhor-sochnut-digital.html | פורסם |
+| 14 | פרסום בגוגל מול פייסבוק - איפה לשים את הכסף | blog-google-ads-vs-facebook.html | פורסם |
+| 15 | מה זה CRM ולמה כל עסק קטן חייב אחד | blog-crm-laasakim-ktanim.html | פורסם |
+| 16 | איך Google Ads עובד - מדריך למתחילים | blog-google-ads-guide.html | פורסם |
 
 ---
 
@@ -34,6 +42,9 @@
 
 ### שירותים כלליים (17)
 בניית אתרים, SEO, SEO מקומי, Google Ads, Meta Ads, תוכן, מיתוג, עיצוב גרפי, דפי נחיתה, לינקדאין, CRM, אנליטיקס, צילום ווידאו, וואטסאפ אוטומציה, CRO, AI אוטומציה, בניית אתר כללי
+
+### עמודי ערים (6)
+רחובות, ראשון לציון, נס ציונה, יבנה, אשדוד, לוד/רמלה
 
 ### עמודי מקצוע (11)
 קבלן שיפוצים, שיפוצניק, חשמלאי, אינסטלטור, עסק קטן, עורך דין, מטפלים, מאמני כושר, קוסמטיקאיות, רואה חשבון, סוכן ביטוח
@@ -113,7 +124,12 @@
 - מאמרים: blog-seo-laasakim-mekomiyim.html, blog-kama-ole-kiddum-bGoogle.html, blog-atar-yafe-lo-maspik.html
 - רעיון: מדריך Google Business Profile מקשר את כולם
 
-**אשכול 4: מערכות ואוטומציות**
+**אשכול 4: המרות ודפי נחיתה**
+- עמוד עוגן: service-landing-pages.html + service-cro.html
+- מאמרים: blog-daf-nchita-shemammir.html, blog-atar-yafe-lo-maspik.html
+- רעיון: מאמר "A/B Testing למתחילים" או "איך להכפיל המרות בלי להוסיף תנועה"
+
+**אשכול 5: מערכות ואוטומציות**
 - עמוד עוגן: service-crm.html + service-whatsapp-automation.html
 - מאמרים: blog-whatsapp-bli-crm.html, blog-ai-chosech-zman-laasakim.html
 - פער גדול: אין מאמר עוגן שמחבר CRM + וואטסאפ + AI = "איך לבנות מערכת שלא מאבדת לידים"

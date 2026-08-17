@@ -3,9 +3,9 @@
   "configurations": [
     {
       "name": "mula-site",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "8002", "--no-clipboard"],
-      "port": 8002
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8000"],
+      "port": 8000
     }
   ]
 }
