@@ -1346,11 +1346,30 @@
       /* click-based mega menu */
       var megaItems=document.querySelectorAll('.nav-item.has-mega');
       function closeAllMegas(){megaItems.forEach(function(m){m.classList.remove('mega-open');});}
+      var megaHover=window.matchMedia('(hover:hover) and (pointer:fine)');
+      var megaCloseTimer;
+      function megaHoverOn(){return megaHover.matches&&window.innerWidth>880;}
+      megaItems.forEach(function(item){
+        item.addEventListener('mouseenter',function(){
+          if(!megaHoverOn())return;
+          clearTimeout(megaCloseTimer);
+          if(item.classList.contains('mega-open'))return;
+          closeAllMegas();
+          item.classList.add('mega-open');
+        });
+        item.addEventListener('mouseleave',function(){
+          if(!megaHoverOn())return;
+          clearTimeout(megaCloseTimer);
+          megaCloseTimer=setTimeout(function(){item.classList.remove('mega-open');},220);
+        });
+      });
+
       megaItems.forEach(function(item){
         var link=item.querySelector('.nav-link');
         if(!link)return;
         link.addEventListener('click',function(e){
           if(window.innerWidth<=880)return;
+          if(megaHoverOn())return;
           e.preventDefault();
           var wasOpen=item.classList.contains('mega-open');
           closeAllMegas();

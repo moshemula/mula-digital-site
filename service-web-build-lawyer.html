@@ -1356,6 +1356,8 @@
         if(!link)return;
         link.addEventListener('click',function(e){
           if(window.innerWidth<=880)return;
+          /* the panel is already open on hover, so let the click through */
+          if(megaHoverOn())return;
           e.preventDefault();
           var wasOpen=item.classList.contains('mega-open');
           closeAllMegas();
@@ -1364,6 +1366,25 @@
       });
       document.addEventListener('click',function(e){if(!e.target.closest('.nav-item.has-mega'))closeAllMegas();});
       document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAllMegas();});
+      /* hover opens it on a real pointer; click still works for touch */
+      var megaHover=window.matchMedia('(hover:hover) and (pointer:fine)');
+      var megaCloseTimer;
+      function megaHoverOn(){return megaHover.matches&&window.innerWidth>880;}
+      megaItems.forEach(function(item){
+        item.addEventListener('mouseenter',function(){
+          if(!megaHoverOn())return;
+          clearTimeout(megaCloseTimer);
+          if(item.classList.contains('mega-open'))return;
+          closeAllMegas();
+          item.classList.add('mega-open');
+        });
+        item.addEventListener('mouseleave',function(){
+          if(!megaHoverOn())return;
+          clearTimeout(megaCloseTimer);
+          megaCloseTimer=setTimeout(function(){item.classList.remove('mega-open');},220);
+        });
+      });
+
       /* scroll detection */
       var hdr=document.querySelector('header.nav');
       if(hdr){var onScroll=function(){hdr.classList.toggle('scrolled',window.scrollY>30);};window.addEventListener('scroll',onScroll,{passive:true});onScroll();}
