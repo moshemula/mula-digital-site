@@ -12,8 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ===================== SEO / META ===================== -->
-  <title>סוכנות דיגיטל ברחובות | שיווק דיגיטלי לעסקים | Mula Digital</title>
-  <meta name="description" content="Mula Digital - סוכנות שיווק דיגיטלי ומשרד פרסום ברחובות. קידום אורגני, פרסום ברשתות חברתיות ואינסטגרם, בניית אתרים, קמפיינים בגוגל ומערכות צמיחה לעסקים." />
+  <title>סוכנות שיווק דיגיטלי שמביאה לעסקים לקוחות | Mula Digital</title>
+  <meta name="description" content="126 עסקים כבר צומחים איתנו. בניית אתרים, קידום אורגני, קמפיינים בגוגל וברשתות, אוטומציות AI ו-CRM - מערכת צמיחה אחת מחוברת ומדידה. מרחובות, לעסקים בכל הארץ." />
   <meta name="author" content="Mula Digital · משה מולה" />
   <meta name="theme-color" content="#0B0B0F" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
@@ -524,6 +524,9 @@
   .tl-quote p{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,4.5vw,52px);letter-spacing:-.04em;line-height:1.15;color:#fff;margin:0;}
   .tl-quote .gradient-text{font-size:inherit;}
   .tl-sub{color:rgba(255,255,255,.5);font-size:clamp(16px,1.6vw,19px);margin:24px 0 36px;line-height:1.7;max-width:480px;margin-inline-start:auto;}
+  .tl-areas{margin-top:-22px;font-size:15px;}
+  .tl-areas a{color:rgba(255,255,255,.72);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;text-decoration-color:rgba(255,255,255,.28);transition:color .2s,text-decoration-color .2s;}
+  .tl-areas a:hover,.tl-areas a:focus-visible{color:#fff;text-decoration-color:rgba(255,255,255,.7);}
   .tl-foot{position:relative;z-index:1;}
   .tl-foot .btn{background:var(--grad);border:none;color:#fff;padding:16px 36px;font-size:17px;font-weight:700;border-radius:14px;box-shadow:0 8px 28px rgba(232,0,61,.25);transition:transform .25s var(--ease),box-shadow .25s var(--ease);}
   .tl-foot .btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(232,0,61,.35);}
@@ -959,8 +962,8 @@
       <div class="hero-deco hero-deco-4"></div>
       <div class="hero-deco hero-deco-5"></div>
       <div class="hero-inner">
-        <span class="eyebrow">סוכנות שיווק דיגיטלי ומשרד פרסום ברחובות</span>
-        <h1 class="hero-title" id="heroTitle">סוכנות דיגיטל ברחובות<span class="hero-title-big">שמביאה לעסקים לקוחות.</span></h1>
+        <span class="eyebrow">מרחובות, לעסקים בכל הארץ</span>
+        <h1 class="hero-title" id="heroTitle">סוכנות הדיגיטל<span class="hero-title-big">שמביאה לעסקים לקוחות.</span></h1>
         <p class="hero-lead">סוכנות שיווק דיגיטלי שבונה לעסקים מערכת צמיחה שלמה: בניית אתרים, קידום אורגני, פרסום ברשתות חברתיות ואינסטגרם, קמפיינים בגוגל, אוטומציות AI ו-CRM. הכל מחובר, הכל מדיד, הכל עובד.</p>
 
         <!-- proof ticker - real Google reviews -->
@@ -1170,6 +1173,7 @@
             <p>"<span dir="ltr">126</span> עסקים כבר עובדים ככה.<br><span class="gradient-text">השאלה היא למה אתה עדיין לא."</span></p>
           </div>
           <p class="tl-sub reveal"><span dir="ltr">20+</span> שנים בשטח. <span dir="ltr">9</span> שנים בדיגיטל. אותה גישה פשוטה: לא מבטיחים, מראים.</p>
+          <p class="tl-sub tl-areas reveal">המשרד ב<a href="city-rehovot.html">רחובות</a>, והלקוחות בכל הארץ - <a href="city-rishon.html">ראשון לציון</a>, <a href="city-nes-tziona.html">נס ציונה</a>, <a href="city-yavne.html">יבנה</a>, <a href="city-ashdod.html">אשדוד</a>, <a href="city-lod-ramle.html">לוד ורמלה</a> ומעבר.</p>
           <div class="tl-foot reveal"><a href="about.html" class="btn">הכירו את הסיפור המלא</a></div>
         </div>
       </div>
@@ -1338,8 +1342,11 @@
 
     /* ---------- DATA ---------- */
     var U='https://images.unsplash.com/';
-    var IMG=function(id){return U+id+'?w=800&q=70&auto=format&fit=crop';};
+    // a local asset (assets/...) or a full url passes through untouched;
+    // anything else is an unsplash photo id
+    var IMG=function(id){return /^(assets\/|https?:)/.test(id)?id:U+id+'?w=800&q=70&auto=format&fit=crop';};
     var posts=[
+      {t:'לקוח לכל החיים - למה עצמאי עם לקוחות לטווח ארוך מפסיד הכי הרבה בלי אתר',cat:'אסטרטגיה',cats:['אתרים','אסטרטגיה'],img:'assets/cover-lakoach.jpg',rt:'14 דק׳ קריאה',url:'blog-lakoach-lekol-hachaim.html',ex:'החשבון האמיתי של לקוח שנשאר עשור, מה עולות השנים שגוגל לא ידע עליכם, ומתי אתר הוא לא הדבר הראשון שצריך.'},
       {t:'קידום ב-AI: איך להופיע בתשובות של ChatGPT, Gemini ו-Perplexity',cat:'SEO',cats:['SEO','AI'],img:'photo-1677442136019-21780ecad995',rt:'24 דק׳ קריאה',url:'blog-kiddum-ai-geo.html',ex:'15 טקטיקות מוכחות, סטטיסטיקות מחקר, צ\'קליסט 20 נקודות, השוואת פלטפורמות, וטבלת עלויות. המדריך הכי מלא בעברית.'},
       {t:'גוגל לעסק שלי 2026 - המדריך האסטרטגי המלא',cat:'SEO מקומי',cats:['SEO','קידום מקומי'],img:'photo-1553877522-43269d4ea984',rt:'25 דק׳ קריאה',url:'blog-google-business-profile.html',ex:'צ\'קליסט 20 נקודות, 7 גורמי דירוג, אימות וידאו, אסטרטגיית ביקורות, 10 טעויות נפוצות, וקשר ל-AI. מדריך מהשטח.'},
       {t:'איך לכתוב תוכן שמביא לקוחות מגוגל - המדריך המלא 2026',cat:'תוכן',cats:['SEO','תוכן'],img:'photo-1455390582262-044cdead277a',rt:'22 דק׳ קריאה',url:'blog-tochen-shemavi-lekochot.html',ex:'8 שלבים לכתיבת מאמר שגוגל אוהב, טבלת עלויות, צ\'קליסט 15 נקודות לפני פרסום, ומתי שיווק תוכן לא מתאים לך.'},
@@ -1872,46 +1879,56 @@
   </script>
 
 <!-- Cookie Consent Banner -->
-<div class="cookie-banner" id="cookieBanner" role="alert" aria-live="polite">
-  <div class="cookie-inner">
-    <p>האתר משתמש בקוקיז לצורך ניתוח תנועה ושיפור חוויית הגלישה. <a href="privacy-policy.html">מדיניות פרטיות</a></p>
-    <div class="cookie-btns">
-      <button class="cookie-btn cookie-accept" id="cookieAccept">מאשר</button>
-      <button class="cookie-btn cookie-decline" id="cookieDecline">דחייה</button>
-    </div>
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="הודעה על שימוש בקוקיז">
+  <button class="cookie-x" id="cookieClose" type="button" aria-label="סגירת ההודעה">&times;</button>
+  <p>האתר משתמש בקוקיז לצורך ניתוח תנועה ושיפור חוויית הגלישה. <a href="privacy-policy.html">מדיניות פרטיות</a></p>
+  <div class="cookie-btns">
+    <button class="cookie-btn cookie-accept" id="cookieAccept" type="button">מאשר</button>
+    <button class="cookie-btn cookie-decline" id="cookieDecline" type="button">דחייה</button>
   </div>
 </div>
 <style>
-.cookie-banner{position:fixed;bottom:0;inset-inline:0;z-index:9999;background:rgba(11,11,15,.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid rgba(255,255,255,.08);padding:16px 24px;transform:translateY(100%);transition:transform .4s cubic-bezier(.22,.61,.36,1);font-family:'Assistant',system-ui,sans-serif;}
-.cookie-banner.show{transform:translateY(0);}
-.cookie-inner{max-width:1100px;margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
-.cookie-banner p{color:rgba(255,255,255,.7);font-size:14.5px;margin:0;line-height:1.5;flex:1;min-width:220px;}
-.cookie-banner a{color:rgba(255,255,255,.9);text-decoration:underline;text-underline-offset:2px;transition:color .2s;}
+.cookie-banner{position:fixed;bottom:20px;inset-inline-start:20px;z-index:9999;
+  width:min(340px,calc(100vw - 32px));background:rgba(11,11,15,.96);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:18px 20px 16px;
+  box-shadow:0 14px 44px rgba(0,0,0,.38);
+  transform:translateY(calc(100% + 40px));opacity:0;visibility:hidden;
+  transition:transform .45s cubic-bezier(.22,.61,.36,1),opacity .35s,visibility .45s;
+  font-family:'Assistant',system-ui,sans-serif;}
+.cookie-banner.show{transform:translateY(0);opacity:1;visibility:visible;}
+.cookie-x{position:absolute;top:8px;inset-inline-end:8px;width:28px;height:28px;display:grid;place-items:center;
+  background:none;border:none;border-radius:50%;color:rgba(255,255,255,.45);font-size:20px;line-height:1;
+  cursor:pointer;transition:color .2s,background .2s;}
+.cookie-x:hover,.cookie-x:focus-visible{color:#fff;background:rgba(255,255,255,.1);}
+.cookie-banner p{color:rgba(255,255,255,.72);font-size:13.5px;margin:0 0 14px;line-height:1.6;padding-inline-end:24px;}
+.cookie-banner a{color:rgba(255,255,255,.92);text-decoration:underline;text-underline-offset:2px;transition:color .2s;}
 .cookie-banner a:hover{color:#fff;}
-.cookie-btns{display:flex;gap:8px;flex-shrink:0;}
-.cookie-btn{font-family:'Heebo',system-ui,sans-serif;font-weight:700;font-size:14px;padding:10px 22px;border-radius:100px;cursor:pointer;border:none;transition:transform .2s,box-shadow .2s,background .2s;}
+.cookie-btns{display:flex;gap:8px;}
+.cookie-btn{font-family:'Heebo',system-ui,sans-serif;font-weight:700;font-size:13.5px;padding:9px 20px;
+  border-radius:100px;cursor:pointer;border:none;transition:transform .2s,box-shadow .2s,background .2s;}
 .cookie-accept{background:linear-gradient(120deg,#E8003D,#7B2FBE);color:#fff;box-shadow:0 4px 16px rgba(232,0,61,.25);}
 .cookie-accept:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(123,47,190,.35);}
 .cookie-decline{background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.12);}
 .cookie-decline:hover{background:rgba(255,255,255,.12);color:rgba(255,255,255,.8);}
-@media(max-width:600px){.cookie-inner{flex-direction:column;text-align:center;gap:12px;}.cookie-btns{width:100%;justify-content:center;}}
+@media (max-width:520px){.cookie-banner{bottom:84px;inset-inline-start:14px;padding:16px 18px 14px;}}
+@media (prefers-reduced-motion:reduce){.cookie-banner{transition:opacity .2s,visibility .2s;transform:none;}}
 </style>
 <script>
 (function(){
   if(localStorage.getItem('cookie_consent'))return;
   var b=document.getElementById('cookieBanner');
   if(!b)return;
-  setTimeout(function(){b.classList.add('show');},800);
-  document.getElementById('cookieAccept').addEventListener('click',function(){
-    localStorage.setItem('cookie_consent','accepted');
+  setTimeout(function(){b.classList.add('show');},1200);
+  function close(choice){
+    localStorage.setItem('cookie_consent',choice);
     b.classList.remove('show');
     setTimeout(function(){b.remove();},500);
-  });
-  document.getElementById('cookieDecline').addEventListener('click',function(){
-    localStorage.setItem('cookie_consent','declined');
-    b.classList.remove('show');
-    setTimeout(function(){b.remove();},500);
-  });
+  }
+  document.getElementById('cookieAccept').addEventListener('click',function(){close('accepted');});
+  document.getElementById('cookieDecline').addEventListener('click',function(){close('declined');});
+  // X closes without granting consent, and stays closed so it never nags again
+  document.getElementById('cookieClose').addEventListener('click',function(){close('dismissed');});
 })();
 </script>
 
