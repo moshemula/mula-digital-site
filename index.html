@@ -524,9 +524,6 @@
   .tl-quote p{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,4.5vw,52px);letter-spacing:-.04em;line-height:1.15;color:#fff;margin:0;}
   .tl-quote .gradient-text{font-size:inherit;}
   .tl-sub{color:rgba(255,255,255,.5);font-size:clamp(16px,1.6vw,19px);margin:24px 0 36px;line-height:1.7;max-width:480px;margin-inline-start:auto;}
-  .tl-areas{margin-top:-22px;font-size:15px;}
-  .tl-areas a{color:rgba(255,255,255,.72);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;text-decoration-color:rgba(255,255,255,.28);transition:color .2s,text-decoration-color .2s;}
-  .tl-areas a:hover,.tl-areas a:focus-visible{color:#fff;text-decoration-color:rgba(255,255,255,.7);}
   .tl-foot{position:relative;z-index:1;}
   .tl-foot .btn{background:var(--grad);border:none;color:#fff;padding:16px 36px;font-size:17px;font-weight:700;border-radius:14px;box-shadow:0 8px 28px rgba(232,0,61,.25);transition:transform .25s var(--ease),box-shadow .25s var(--ease);}
   .tl-foot .btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(232,0,61,.35);}
@@ -863,6 +860,29 @@
     .mega-col{padding:14px 12px;}
     .mega-col a{padding:5px 8px;}
   }
+
+  /* --- service areas band --- */
+  .areas-sec{padding:clamp(48px,6vw,76px) 0;background:var(--surface);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .areas-sec .s-head{margin-bottom:clamp(24px,3vw,34px);}
+  .areas-sub{color:var(--soft);font-size:clamp(15px,1.7vw,17px);margin-top:10px;
+    max-width:52ch;margin-inline:auto;text-wrap:balance;}
+  .areas-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(8px,1.2vw,12px);}
+  .area-chip{display:inline-flex;align-items:center;gap:8px;
+    padding:clamp(9px,1.1vw,11px) clamp(16px,2vw,22px);border-radius:100px;
+    background:#fff;border:1px solid var(--line);color:var(--ink);
+    font-family:var(--f-display);font-weight:600;font-size:clamp(14px,1.5vw,15.5px);
+    text-decoration:none;line-height:1;
+    transition:border-color .25s var(--ease),box-shadow .25s var(--ease),
+      transform .25s var(--ease),color .25s var(--ease);}
+  .area-chip:hover,.area-chip:focus-visible{color:var(--purple);
+    border-color:rgba(123,47,190,.28);transform:translateY(-2px);
+    box-shadow:0 6px 18px rgba(123,47,190,.12);}
+  .area-chip.is-base{background:var(--night);color:#fff;border-color:var(--night);}
+  .area-chip.is-base:hover{color:#fff;border-color:var(--night);
+    box-shadow:0 8px 22px rgba(11,11,15,.28);}
+  .area-dot{width:6px;height:6px;border-radius:50%;background:var(--grad);flex:none;}
+
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GEHNCC9X6F"></script>
@@ -1194,6 +1214,25 @@
     <!-- (services section removed - covered by services.html) -->
 
     <!-- ABOUT - FLOATING BADGES -->
+    <!-- SERVICE AREAS -->
+    <section class="areas-sec" id="areas" aria-label="אזורי שירות">
+      <div class="wrap">
+        <div class="s-head center reveal">
+          <span class="eyebrow">אזורי שירות</span>
+          <h2>מרחובות, לעסקים בכל הארץ</h2>
+          <p class="areas-sub">המשרד ברחובות. הלקוחות בכל הארץ, ורובם מעולם לא היו צריכים להגיע אליו.</p>
+        </div>
+        <div class="areas-chips reveal">
+          <a class="area-chip is-base" href="city-rehovot.html"><span class="area-dot" aria-hidden="true"></span>רחובות</a>
+          <a class="area-chip" href="city-rishon.html">ראשון לציון</a>
+          <a class="area-chip" href="city-nes-tziona.html">נס ציונה</a>
+          <a class="area-chip" href="city-yavne.html">יבנה</a>
+          <a class="area-chip" href="city-ashdod.html">אשדוד</a>
+          <a class="area-chip" href="city-lod-ramle.html">לוד ורמלה</a>
+        </div>
+      </div>
+    </section>
+
     <section class="tl-about" id="about">
       <div class="wrap tl-layout">
         <div class="tl-visual">
@@ -1224,7 +1263,6 @@
             <p>"<span dir="ltr">126</span> עסקים כבר עובדים ככה.<br><span class="gradient-text">השאלה היא למה אתה עדיין לא."</span></p>
           </div>
           <p class="tl-sub reveal"><span dir="ltr">20+</span> שנים בשטח. <span dir="ltr">9</span> שנים בדיגיטל. אותה גישה פשוטה: לא מבטיחים, מראים.</p>
-          <p class="tl-sub tl-areas reveal">המשרד ב<a href="city-rehovot.html">רחובות</a>, והלקוחות בכל הארץ - <a href="city-rishon.html">ראשון לציון</a>, <a href="city-nes-tziona.html">נס ציונה</a>, <a href="city-yavne.html">יבנה</a>, <a href="city-ashdod.html">אשדוד</a>, <a href="city-lod-ramle.html">לוד ורמלה</a> ומעבר.</p>
           <div class="tl-foot reveal"><a href="about.html" class="btn">הכירו את הסיפור המלא</a></div>
         </div>
       </div>
