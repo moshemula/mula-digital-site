@@ -889,6 +889,61 @@
       border-top:1px solid var(--line);padding-top:24px;}
   }
 
+
+  /* --- portfolio cards as live browser windows --- */
+  .pf-win{position:absolute;inset:0;background:#fff;overflow:hidden;}
+  .pf-bar{position:absolute;inset-block-start:0;inset-inline:0;height:26px;z-index:4;
+    display:flex;align-items:center;gap:5px;padding:0 10px;
+    background:rgba(16,15,20,.9);backdrop-filter:blur(10px);
+    border-block-end:1px solid rgba(255,255,255,.08);}
+  .pf-bar i{width:6px;height:6px;border-radius:50%;background:#3A3446;flex:none;}
+  .pf-bar span{flex:1;height:12px;border-radius:100px;background:rgba(255,255,255,.07);
+    margin-inline-start:6px;max-width:190px;}
+  .pf-scroll{position:absolute;inset:26px 0 0 0;overflow:hidden;}
+  .pf-scroll img{display:block;width:100%;height:auto;
+    transform:translate3d(0,0,0);transition:transform 6s cubic-bezier(.33,0,.2,1);}
+  .pf-card:hover .pf-scroll img,.pf-card:focus-within .pf-scroll img{transform:translate3d(0,var(--travel,0),0);}
+  .pf-scroll img.hold{transition:none;}
+  .pf-lens{position:absolute;width:132px;height:132px;border-radius:50%;pointer-events:none;z-index:5;
+    border:2px solid rgba(255,255,255,.55);
+    box-shadow:0 12px 32px rgba(0,0,0,.45),inset 0 0 0 1px rgba(0,0,0,.3);
+    background-repeat:no-repeat;opacity:0;transform:scale(.85);
+    transition:opacity .2s,transform .3s cubic-bezier(.16,1,.3,1);}
+  .pf-lens.on{opacity:1;transform:scale(1);}
+  .pf-card:hover .pf-win{cursor:none;}
+  @media (prefers-reduced-motion:reduce){
+    .pf-scroll img{transition:none;}
+    .pf-card:hover .pf-scroll img{transform:none;}
+  }
+
+  /* while a live card is hovered, get the label out of the way */
+  .pf-card:has(.pf-win):hover .pf-hero-overlay,
+  .pf-card:has(.pf-win):hover .pf-hero-text{opacity:0;transition:opacity .35s var(--ease);}
+  .pf-card:has(.pf-win) .pf-hero-overlay,
+  .pf-card:has(.pf-win) .pf-hero-text{transition:opacity .45s var(--ease);}
+  .pf-card:has(.pf-win):hover .pf-logo-circle{transform:scale(.82);opacity:.9;}
+  .pf-card:has(.pf-win) .pf-logo-circle{transition:transform .4s var(--ease),opacity .4s;}
+
+  /* --- word-by-word scroll reveal --- */
+  .wsplit .w{display:inline-block;opacity:.3;will-change:opacity;}
+  .wsplit .w.lit{opacity:1;}
+  @media (prefers-reduced-motion:reduce){.wsplit .w{opacity:1 !important;}}
+
+  /* --- keyword ribbon --- */
+  .ribbon{overflow:hidden;background:var(--night);border-block:1px solid rgba(255,255,255,.07);
+    padding:clamp(13px,1.7vw,18px) 0;}
+  .ribbon-track{display:flex;width:max-content;gap:0;
+    animation:ribbon 42s linear infinite;will-change:transform;}
+  .ribbon:hover .ribbon-track{animation-play-state:paused;}
+  @keyframes ribbon{from{transform:translateX(0);}to{transform:translateX(calc(-100% / 3));}}
+  .ribbon-set{display:flex;align-items:center;flex:none;}
+  .ribbon-set span{font-family:var(--f-display);font-weight:800;color:#fff;
+    font-size:clamp(15px,2.1vw,24px);letter-spacing:-.01em;white-space:nowrap;
+    padding-inline:clamp(14px,1.8vw,22px);}
+  .ribbon-set b{color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text;
+    font-size:clamp(13px,1.7vw,19px);line-height:1;}
+  @media (prefers-reduced-motion:reduce){.ribbon-track{animation:none;}}
+
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GEHNCC9X6F"></script>
@@ -1147,6 +1202,15 @@
       </div>
     </section>
 
+  <!-- KEYWORD RIBBON -->
+    <section class="ribbon" aria-hidden="true">
+      <div class="ribbon-track">
+        <div class="ribbon-set"><span>בניית אתרים</span><b>&#10022;</b><span>קידום אורגני</span><b>&#10022;</b><span>גוגל אדס</span><b>&#10022;</b><span>מטא</span><b>&#10022;</b><span>לינקדאין</span><b>&#10022;</b><span>מיתוג</span><b>&#10022;</b><span>דפי נחיתה</span><b>&#10022;</b><span>אוטומציות AI</span><b>&#10022;</b><span>CRM</span><b>&#10022;</b><span>וואטסאפ עסקי</span><b>&#10022;</b><span>אנליטיקס</span><b>&#10022;</b><span>CRO</span><b>&#10022;</b><span>תוכן</span><b>&#10022;</b><span>צילום ווידאו</span><b>&#10022;</b><span>עיצוב גרפי</span><b>&#10022;</b></div>
+        <div class="ribbon-set"><span>בניית אתרים</span><b>&#10022;</b><span>קידום אורגני</span><b>&#10022;</b><span>גוגל אדס</span><b>&#10022;</b><span>מטא</span><b>&#10022;</b><span>לינקדאין</span><b>&#10022;</b><span>מיתוג</span><b>&#10022;</b><span>דפי נחיתה</span><b>&#10022;</b><span>אוטומציות AI</span><b>&#10022;</b><span>CRM</span><b>&#10022;</b><span>וואטסאפ עסקי</span><b>&#10022;</b><span>אנליטיקס</span><b>&#10022;</b><span>CRO</span><b>&#10022;</b><span>תוכן</span><b>&#10022;</b><span>צילום ווידאו</span><b>&#10022;</b><span>עיצוב גרפי</span><b>&#10022;</b></div>
+        <div class="ribbon-set"><span>בניית אתרים</span><b>&#10022;</b><span>קידום אורגני</span><b>&#10022;</b><span>גוגל אדס</span><b>&#10022;</b><span>מטא</span><b>&#10022;</b><span>לינקדאין</span><b>&#10022;</b><span>מיתוג</span><b>&#10022;</b><span>דפי נחיתה</span><b>&#10022;</b><span>אוטומציות AI</span><b>&#10022;</b><span>CRM</span><b>&#10022;</b><span>וואטסאפ עסקי</span><b>&#10022;</b><span>אנליטיקס</span><b>&#10022;</b><span>CRO</span><b>&#10022;</b><span>תוכן</span><b>&#10022;</b><span>צילום ווידאו</span><b>&#10022;</b><span>עיצוב גרפי</span><b>&#10022;</b></div>
+      </div>
+    </section>
+
     <!-- RESULTS - numbers that prove value -->
     <section class="results" id="results">
       <div class="wrap">
@@ -1272,7 +1336,7 @@
         </div>
         <div class="tl-text">
           <span class="tl-eyebrow reveal"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>תוצאות מדברות</span>
-          <div class="tl-quote reveal">
+          <div class="tl-quote reveal" data-words>
             <p><span dir="ltr">126</span> עסקים כבר עובדים ככה.<br><span class="gradient-text">השאלה היא למה אתה עדיין לא.</span></p>
           </div>
           <p class="tl-sub reveal"><span dir="ltr">20+</span> שנים בשטח. <span dir="ltr">9</span> שנים בדיגיטל. אותה גישה פשוטה: לא מבטיחים, מראים.</p>
@@ -1469,19 +1533,19 @@
     ];
     var LG=function(slug){return 'assets/logos/'+slug+'.png';};
     var projects=[
-      {n:'Tamuz FTK Solutions',logo:'tamuz',cat:'תעשייה · B2B',serv:'אתר · מיתוג · נראות B2B · לינקדאין',res:'מיתוג ונראות תעשייתית בעברית ובאנגלית',cats:['אתרים','מיתוג'],img:'assets/portfolio/b2b/tamuz-1280.webp'},
+      {n:'Tamuz FTK Solutions',logo:'tamuz',cat:'תעשייה · B2B',serv:'אתר · מיתוג · נראות B2B · לינקדאין',res:'מיתוג ונראות תעשייתית בעברית ובאנגלית',cats:['אתרים','מיתוג'],img:'assets/portfolio/b2b/tamuz-1280.webp',strip:'tamuz'},
       {n:'ABP Consultancy',logo:'abp',cat:'B2B · לינקדאין',serv:'אסטרטגיית לינקדאין · תוכן AI · וידאו',res:'מיצוב סמכות ונוכחות מקצועית עקבית',cats:['קמפיינים','אוטומציות']},
-      {n:'ERP Logic',logo:'erplogic',cat:'ארגוני · SAP',serv:'אתר · SEO · תוכן B2B',res:'~500 כניסות אורגניות בחודש · נראות בינלאומית',cats:['אתרים','SEO'],img:'assets/portfolio/b2b/erplogic-1280.webp'},
+      {n:'ERP Logic',logo:'erplogic',cat:'ארגוני · SAP',serv:'אתר · SEO · תוכן B2B',res:'~500 כניסות אורגניות בחודש · נראות בינלאומית',cats:['אתרים','SEO'],img:'assets/portfolio/b2b/erplogic-1280.webp',strip:'erplogic'},
       {n:'רשת בית המיזוג',logo:'mizug',cat:'מיזוג אוויר',serv:'אתר · קמפיינים · SEO',res:'יותר פניות מהאזורים הרלוונטיים',cats:['אתרים','קמפיינים','SEO']},
       {n:'הראל ביטוח',logo:'harel',cat:'ביטוח ופיננסים',serv:'קמפיינים · תוכן',res:'נוכחות דיגיטלית בתחום הביטוח',cats:['קמפיינים']},
       {n:'סילבי ויסוצקי',logo:'silvi',cat:'ביוטי · נתניה',serv:'קמפיינים · תוכן · קהילה · עיצוב גבות',res:'זרם פניות קבוע וקהילה פעילה',cats:['קמפיינים']},
-      {n:'אתלטיקה קלה ראשון לציון',logo:'athletics',cat:'ספורט · קהילה',serv:'מיתוג · ניהול דיגיטל',res:'מיתוג ונראות לקהילת הספורט',cats:['מיתוג','קמפיינים'],img:'assets/portfolio/fitness/athletics-1280.webp'},
+      {n:'אתלטיקה קלה ראשון לציון',logo:'athletics',cat:'ספורט · קהילה',serv:'מיתוג · ניהול דיגיטל',res:'מיתוג ונראות לקהילת הספורט',cats:['מיתוג','קמפיינים'],img:'assets/portfolio/fitness/athletics-1280.webp',strip:'athletics'},
       {n:'ריי נכסים',logo:'ray',cat:'נדל״ן',serv:'אתר · שיווק פרויקטים',res:'נראות ותדמית לפרויקטים',cats:['אתרים','קמפיינים']},
-      {n:'אלדד לוי שמאי מקרקעין',logo:'eldadlevi',cat:'שמאות · מקצועי',serv:'אתר · SEO · תוכן',res:'מיצוב כסמכות מקצועית בתחום',cats:['אתרים','SEO'],img:'assets/portfolio/accountant/eldadlevi-1280.webp'},
-      {n:'יוחאי ג׳קסון אינסטלציה',logo:'yochai',cat:'בעלי מקצוע · מקומי',serv:'אתר · Local SEO · קמפיינים',res:'~10 שיחות ביום · ~800 מבקרים אורגניים בחודש',cats:['אתרים','SEO','קמפיינים'],url:'case-jackson.html',img:'assets/portfolio/installer/yochai-1280.webp'},
-      {n:'חיבור סוכנות לביטוח',logo:'hibur',cat:'ביטוח ופיננסים',serv:'אסטרטגיה · מיתוג · דיגיטל · תוכן',res:'מותג חזק, נוכחות דיגיטלית, תשתית לצמיחה',cats:['מיתוג','אתרים'],url:'case-hibur.html',img:'assets/portfolio/insurance/maayan-1280.webp'},
+      {n:'אלדד לוי שמאי מקרקעין',logo:'eldadlevi',cat:'שמאות · מקצועי',serv:'אתר · SEO · תוכן',res:'מיצוב כסמכות מקצועית בתחום',cats:['אתרים','SEO'],img:'assets/portfolio/accountant/eldadlevi-1280.webp',strip:'eldadlevi'},
+      {n:'יוחאי ג׳קסון אינסטלציה',logo:'yochai',cat:'בעלי מקצוע · מקומי',serv:'אתר · Local SEO · קמפיינים',res:'~10 שיחות ביום · ~800 מבקרים אורגניים בחודש',cats:['אתרים','SEO','קמפיינים'],url:'case-jackson.html',img:'assets/portfolio/installer/yochai-1280.webp',strip:'yochai'},
+      {n:'חיבור סוכנות לביטוח',logo:'hibur',cat:'ביטוח ופיננסים',serv:'אסטרטגיה · מיתוג · דיגיטל · תוכן',res:'מותג חזק, נוכחות דיגיטלית, תשתית לצמיחה',cats:['מיתוג','אתרים'],url:'case-hibur.html',img:'assets/portfolio/insurance/maayan-1280.webp',strip:'maayan'},
       {n:'QuickFit Studio',logo:'quickfit',cat:'כושר · מקומי',serv:'מיתוג · דיגיטל · קמפיינים',res:'מותג מקומי בולט ומתאמנים חדשים כל חודש',cats:['מיתוג','קמפיינים'],url:'case-quickfit.html',img:'assets/case-quickfit.png'},
-      {n:'CloudBeam CRM',logo:'cloudbeam',cat:'טכנולוגיה · CRM',serv:'אתר · אוטומציות',res:'נכס דיגיטלי למוצר טכנולוגי',cats:['אתרים','אוטומציות'],img:'assets/portfolio/b2b/cloudbeam-1280.webp'},
+      {n:'CloudBeam CRM',logo:'cloudbeam',cat:'טכנולוגיה · CRM',serv:'אתר · אוטומציות',res:'נכס דיגיטלי למוצר טכנולוגי',cats:['אתרים','אוטומציות'],img:'assets/portfolio/b2b/cloudbeam-1280.webp',strip:'cloudbeam'},
       {n:'שי לעתיד',logo:'shaiatid',cat:'ביטוח ופיננסים',serv:'מיתוג · אתר',res:'מיתוג ובידול בתחום הפיננסי',cats:['מיתוג','אתרים'],img:'assets/portfolio/insurance/shai-elimelech-1280.webp'}
     ];
     // client logos for the trust strip (first-party assets supplied by the client)
@@ -1496,7 +1560,16 @@
         '</div></article>';
     }
     function pfCard(p){
-      var heroImg=p.img?'<img loading="lazy" src="'+p.img+'" alt="'+p.n+'" />':'<div style="width:100%;height:100%;background:linear-gradient(135deg,var(--night),#1a1a2e);"></div>';
+      var heroImg;
+      if(p.strip){
+        var st='assets/portfolio/strips/'+p.strip+'.webp';
+        heroImg='<div class="pf-win" data-strip="'+st+'">'+
+          '<div class="pf-bar" aria-hidden="true"><i></i><i></i><i></i><span></span></div>'+
+          '<div class="pf-scroll"><img loading="lazy" src="'+st+'" alt="'+p.n+' - האתר שנבנה" /></div>'+
+          '<span class="pf-lens" aria-hidden="true"></span></div>';
+      } else {
+        heroImg=p.img?'<img loading="lazy" src="'+p.img+'" alt="'+p.n+'" />':'<div style="width:100%;height:100%;background:linear-gradient(135deg,var(--night),#1a1a2e);"></div>';
+      }
       var link=p.url?'<a class="pf-link" href="'+p.url+'">קראו את הסיפור המלא <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></a>':'';
       return '<article class="pf-card pf-item" data-cats="'+p.cats.join(' ')+'">'+
         '<div class="pf-hero">'+heroImg+'<div class="pf-hero-overlay"></div>'+
@@ -1531,6 +1604,116 @@
       var r2Html=row2.map(brandLogo).join('');
       r1El.innerHTML=r1Html+r1Html+r1Html;
       r2El.innerHTML=r2Html+r2Html+r2Html;
+    })();
+
+
+    /* --- live portfolio windows --- */
+    (function(){
+      var LENS = 132, ZOOM = 2.2;
+      function wire(win){
+        if(win.dataset.wired) return;
+        win.dataset.wired = "1";
+        var card = win.closest(".pf-card");
+        var view = win.querySelector(".pf-scroll");
+        var img  = win.querySelector(".pf-scroll img");
+        var lens = win.querySelector(".pf-lens");
+
+        function travel(){
+          var shown = img.getBoundingClientRect().height;
+          var d = Math.max(0, Math.round(shown - view.clientHeight));
+          win.style.setProperty("--travel", "-" + d + "px");
+        }
+        if(img.complete) travel(); else img.addEventListener("load", travel);
+        window.addEventListener("resize", travel);
+
+        /* current translateY, mid-transition */
+        function offset(){
+          var t = getComputedStyle(img).transform;
+          if(!t || t === "none") return 0;
+          var m = t.match(/matrix\(([^)]+)\)/);
+          return m ? parseFloat(m[1].split(",")[5]) : 0;
+        }
+
+        var idle;
+        function hideLens(){
+          lens.classList.remove("on");
+          img.classList.remove("hold");
+          img.style.transform = "";
+        }
+        card.addEventListener("pointermove", function(e){
+          var r = view.getBoundingClientRect();
+          var x = e.clientX - r.left, y = e.clientY - r.top;
+          if(x < 0 || y < 0 || x > r.width || y > r.height){ hideLens(); return; }
+          lens.style.left = (x - LENS/2) + "px";
+          lens.style.top  = (y + 26 - LENS/2) + "px";
+          if(lens.classList.contains("on")){
+            var off = offset();
+            lens.style.backgroundSize = (r.width * ZOOM) + "px " + (img.getBoundingClientRect().height * ZOOM) + "px";
+            lens.style.backgroundPosition = (-(x * ZOOM - LENS/2)) + "px " + (-((y - off) * ZOOM - LENS/2)) + "px";
+          }
+          clearTimeout(idle);
+          idle = setTimeout(function(){
+            /* the pointer stopped: freeze the scroll and open the glass */
+            img.style.transform = "translate3d(0," + offset() + "px,0)";
+            img.classList.add("hold");
+            if(!lens.style.backgroundImage)
+              lens.style.backgroundImage = "url(" + win.dataset.strip + ")";
+            lens.classList.add("on");
+            var off = offset();
+            lens.style.backgroundSize = (r.width * ZOOM) + "px " + (img.getBoundingClientRect().height * ZOOM) + "px";
+            lens.style.backgroundPosition = (-(x * ZOOM - LENS/2)) + "px " + (-((y - off) * ZOOM - LENS/2)) + "px";
+          }, 550);
+        });
+        card.addEventListener("pointerleave", function(){ clearTimeout(idle); hideLens(); });
+      }
+      var fine = window.matchMedia("(hover:hover) and (pointer:fine)").matches;
+      window.wirePortfolio = function(){
+        document.querySelectorAll(".pf-win").forEach(function(w){
+          var img = w.querySelector(".pf-scroll img");
+          var view = w.querySelector(".pf-scroll");
+          function t(){ w.style.setProperty("--travel","-"+Math.max(0,Math.round(img.getBoundingClientRect().height-view.clientHeight))+"px"); }
+          if(img.complete) t(); else img.addEventListener("load", t);
+          if(fine) wire(w);
+        });
+      };
+      window.wirePortfolio();
+    })();
+
+
+    /* --- word-by-word reveal, scrubbed with the scroll --- */
+    (function(){
+      if(!window.gsap || !window.ScrollTrigger) return;
+      if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+      function splitWords(el){
+        if(el.dataset.split) return [].slice.call(el.querySelectorAll(".w"));
+        el.dataset.split = "1";
+        var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+        var nodes = [], n;
+        while((n = walker.nextNode())) if(n.nodeValue.trim()) nodes.push(n);
+        nodes.forEach(function(node){
+          var frag = document.createDocumentFragment();
+          node.nodeValue.split(/(\s+)/).forEach(function(part){
+            if(!part) return;
+            if(/^\s+$/.test(part)){ frag.appendChild(document.createTextNode(part)); return; }
+            var sp = document.createElement("span");
+            sp.className = "w"; sp.textContent = part;
+            frag.appendChild(sp);
+          });
+          node.parentNode.replaceChild(frag, node);
+        });
+        el.classList.add("wsplit");
+        return [].slice.call(el.querySelectorAll(".w"));
+      }
+
+      document.querySelectorAll("[data-words]").forEach(function(el){
+        var words = splitWords(el);
+        if(!words.length) return;
+        gsap.to(words, {
+          opacity: 1, ease: "none", stagger: 0.35,
+          scrollTrigger: {trigger: el, start: "top 78%", end: "bottom 58%", scrub: 0.6}
+        });
+      });
     })();
 
     /* ---------- REVEAL / STAGGER ---------- */
