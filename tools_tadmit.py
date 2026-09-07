@@ -163,3 +163,42 @@ out = head_body + body + tail
 
 io.open(DST, "w", encoding="utf-8").write(out)
 print("wrote %s  (%d KB)" % (DST, len(out.encode("utf-8")) // 1024))
+
+# ---- מעקב המרות: לחיצת טלפון / וואטסאפ ----
+TRACK = u"""
+  <script>
+  /* מעקב המרות לדף הנחיתה - נשלח ל-GA4 וממנו מייבאים ל-Google Ads */
+  (function(){
+    function fire(name, label){
+      if(typeof gtag!=='function') return;   /* gtag.js עדיין לא נטען - לא מפילים את השאר */
+      gtag('event', name, {
+        event_category:'lead',
+        event_label:label,
+        page_location:location.href,
+        send_to:'G-GEHNCC9X6F'
+      });
+    }
+    document.addEventListener('click', function(e){
+      var a = e.target.closest('a[href]');
+      if(!a) return;
+      var h = a.getAttribute('href') || '';
+      if(h.indexOf('tel:') === 0)        fire('click_phone','atar-tadmit');
+      else if(h.indexOf('wa.me') > -1)   fire('click_whatsapp','atar-tadmit');
+      else if(h.indexOf('mailto:') === 0) fire('click_email','atar-tadmit');
+    }, true);
+    /* גלילה של 75% = עניין אמיתי, שימושי כאות משני ל-Ads */
+    var deep=false;
+    addEventListener('scroll', function(){
+      if(deep) return;
+      var p=(scrollY+innerHeight)/document.body.scrollHeight;
+      if(p>=.75){ deep=true; fire('scroll_75','atar-tadmit'); }
+    }, {passive:true});
+  })();
+  </script>
+"""
+
+t = io.open(DST, encoding="utf-8").read()
+if "click_whatsapp" not in t:
+    t = t.replace("</body>", TRACK + "</body>", 1)
+    io.open(DST, "w", encoding="utf-8").write(t)
+    print("tracking: injected")
