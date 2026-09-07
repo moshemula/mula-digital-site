@@ -21,3 +21,5 @@ screenshot-tool/
 
 # Internal docs (optional — remove if you want it tracked)
 # mula-storyboard.md
+__pycache__/
+*.pyc
