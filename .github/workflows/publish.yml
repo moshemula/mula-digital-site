@@ -1,0 +1,64 @@
+name: פיד ופרסום בגוגל לעסק
+
+# רץ בכל דחיפה ל-main. feed.xml מוחרג כדי שהקומיט של
+# הוורקפלואו עצמו לא יפעיל אותו שוב.
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'feed.xml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: משיכת הקוד
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2      # צריך את הקומיט הקודם כדי לזהות מה נוסף
+
+      - name: התקנת פייתון
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: זיהוי דפים חדשים בדחיפה הזו
+        id: newpages
+        run: |
+          if [ "$(git rev-list --count HEAD)" -gt 1 ]; then
+            ADDED=$(git diff --name-only --diff-filter=A HEAD^ HEAD -- '*.html' | tr '\n' ' ')
+          else
+            ADDED=""
+          fi
+          echo "added=${ADDED}" >> "$GITHUB_OUTPUT"
+          echo "דפים חדשים: ${ADDED:-אין}"
+
+      - name: בניית feed.xml מחדש
+        run: python tools_feed.py
+
+      - name: שמירת הפיד אם השתנה
+        run: |
+          if [ -n "$(git status --porcelain feed.xml)" ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add feed.xml
+            git commit -m "עדכון אוטומטי של feed.xml [skip ci]"
+            git push
+            echo "הפיד עודכן ונדחף"
+          else
+            echo "אין שינוי בפיד"
+          fi
+
+      - name: פרסום הדפים החדשים בגוגל לעסק
+        if: steps.newpages.outputs.added != ''
+        env:
+          GBP_CLIENT_ID:     ${{ secrets.GBP_CLIENT_ID }}
+          GBP_CLIENT_SECRET: ${{ secrets.GBP_CLIENT_SECRET }}
+          GBP_REFRESH_TOKEN: ${{ secrets.GBP_REFRESH_TOKEN }}
+          GBP_ACCOUNT_ID:    ${{ secrets.GBP_ACCOUNT_ID }}
+          GBP_LOCATION_ID:   ${{ secrets.GBP_LOCATION_ID }}
+        run: python tools_gbp_post.py ${{ steps.newpages.outputs.added }}
