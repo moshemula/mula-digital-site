@@ -7,7 +7,15 @@ on:
     branches: [main]
     paths-ignore:
       - 'feed.xml'
+  # הפעלה ידנית: Actions -> הוורקפלואו הזה -> Run workflow
+  # משאירים ריק = רק בונה את הפיד.
+  # כותבים שם קובץ = מפרסם אותו ב-GBP עכשיו.
   workflow_dispatch:
+    inputs:
+      page:
+        description: 'שם הקובץ לפרסום ב-GBP (למשל daf-nechita.html). ריק = רק בניית פיד'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -34,8 +42,13 @@ jobs:
           else
             ADDED=""
           fi
+          MANUAL="${{ github.event.inputs.page }}"
+          if [ -n "$MANUAL" ]; then
+            ADDED="$MANUAL"
+            echo "פרסום ידני: $MANUAL"
+          fi
           echo "added=${ADDED}" >> "$GITHUB_OUTPUT"
-          echo "דפים חדשים: ${ADDED:-אין}"
+          echo "לפרסום: ${ADDED:-אין}"
 
       - name: בניית feed.xml מחדש
         run: python tools_feed.py
