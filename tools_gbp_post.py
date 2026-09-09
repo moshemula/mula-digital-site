@@ -83,8 +83,13 @@ def post(page, token):
         "languageCode": "he",
         "summary": build_summary(page),
         "topicType": "STANDARD",
-        "callToAction": {"actionType": "LEARN_MORE", "url": page["link"]},
     }
+    # CALL משתמש בטלפון של המיקום ולא מקבל כתובת
+    cta = page.get("cta") or "LEARN_MORE"
+    if cta == "CALL":
+        payload["callToAction"] = {"actionType": "CALL"}
+    else:
+        payload["callToAction"] = {"actionType": cta, "url": page["link"]}
     if page["img"]:
         payload["media"] = [{"mediaFormat": "PHOTO", "sourceUrl": page["img"]}]
 
