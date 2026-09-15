@@ -299,7 +299,7 @@
   .wa-float svg{width:22px;height:22px;fill:#fff;}
   /* sticky mobile CTA */
   .sticky-cta{display:none;}
-  @media(max-width:768px){
+  @media(max-width:768px){ .showcase-inner[style]{grid-template-columns:1fr !important} 
     .sticky-cta{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:89;background:rgba(11,11,15,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,.06);padding:10px 16px;gap:10px;align-items:center;justify-content:center;}
     .sticky-cta a{flex:1;text-align:center;font-family:var(--f-display);font-weight:700;font-size:14px;padding:12px 8px;border-radius:12px;text-decoration:none;transition:background .2s;}
     .sticky-cta .sc-call{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.1);}
@@ -880,65 +880,98 @@
       </div>
     </section>
 
-  <!-- ===== 5b. התוכן כמנוע תנועה ===== -->
+  <!-- ===== 5b. איך הגענו לשם ===== -->
   <section class="cs-section" style="background:var(--surface);">
     <div class="wrap-full">
       <h2 class="reveal">
         <span class="sec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-        התוכן הפך למנוע התנועה
+        איך הגענו לשם
       </h2>
-      <p class="reveal">לא הסתפקנו בדפי שירות. כתבנו תוכן שעונה על שאלות שאנשים באמת מקלידים בגוגל, ובנינו כל מאמר ממקרה אמיתי מהשטח: מה הייתה הבעיה, מה יוחאי מצא, באיזה ציוד השתמש, איך זה נפתר. מישהו מחפש "מה זה סודה קאוסטית", קורא תשובה מקצועית של יוחאי, ובפעם הבאה שיש לו סתימה הוא כבר יודע למי להתקשר.</p>
+      <p class="reveal">לא בטריק ולא בקמפיין. בשיטה שחוזרת על עצמה: להבין מה הלקוחות של יוחאי מקלידים בגוגל ברגע שיש להם בעיה, לבנות לכל צורך כזה דף שעונה עליו באמת, ולחבר הכל למערכת אחת. את הביטויים והדפים המדויקים אני שומר ליוחאי. את השיטה אפשר להראות.</p>
       <div class="metrics-secondary">
         <div class="metric-sm">
-          <div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.24V7.5a2.5 2.5 0 015 0v3.74"/><path d="M14 10.44V7.5a2.5 2.5 0 015 0v5.5a7 7 0 01-7 7h-1.3a7 7 0 01-5.6-2.8L2 13.5a2 2 0 013-2.6l1 1.2V4.5a2.5 2.5 0 015 0"/></svg></div>
+          <div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
           <div>
-            <span class="ms-num">644 קליקים</span>
-            <span class="ms-label">דף הבית: מי שמחפש אינסטלטור באזור</span>
+            <span class="ms-num">מאמר אחד</span>
+            <span class="ms-label">שעונה על שאלה נפוצה מביא לבדו מאות קליקים בחודש, ומהם לקוחות</span>
+          </div>
+        </div>
+        <div class="metric-sm">
+          <div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <div>
+            <span class="ms-num">עשרות דפי שירות</span>
+            <span class="ms-label">דף נפרד לכל סוג עבודה, לא עמוד כללי אחד, וכל אחד מדורג בנפרד</span>
+          </div>
+        </div>
+        <div class="metric-sm">
+          <div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <span class="ms-num">דפי אזורים</span>
+            <span class="ms-label">תוכן מקומי אמיתי לכל עיר שיוחאי עובד בה, לא עמודים משוכפלים</span>
           </div>
         </div>
         <div class="metric-sm">
           <div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.24V7.5a2.5 2.5 0 015 0v3.74"/><path d="M14 10.44V7.5a2.5 2.5 0 015 0v5.5a7 7 0 01-7 7h-1.3a7 7 0 01-5.6-2.8L2 13.5a2 2 0 013-2.6l1 1.2V4.5a2.5 2.5 0 015 0"/></svg></div>
           <div>
-            <span class="ms-num">504 קליקים</span>
-            <span class="ms-label">סודה קאוסטית: מאמר שעונה על שאלה, ומביא לקוחות</span>
+            <span class="ms-num">תוכן ממקרים אמיתיים</span>
+            <span class="ms-label">בעיה שהלקוח נתקל בה, מה נמצא, איך נפתר: כל עבודה בשטח הופכת לדף</span>
+          </div>
+        </div>
+        <div class="metric-sm">
+          <div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <div>
+            <span class="ms-num">Google Business</span>
+            <span class="ms-label">פרופיל מחוזק, ביקורות 5 כוכבים, וחיבור בין החיפוש, המפה והאתר</span>
           </div>
         </div>
         <div class="metric-sm">
           <div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.24V7.5a2.5 2.5 0 015 0v3.74"/><path d="M14 10.44V7.5a2.5 2.5 0 015 0v5.5a7 7 0 01-7 7h-1.3a7 7 0 01-5.6-2.8L2 13.5a2 2 0 013-2.6l1 1.2V4.5a2.5 2.5 0 015 0"/></svg></div>
           <div>
-            <span class="ms-num">412 קליקים</span>
-            <span class="ms-label">התקנת צנרת דלוחין: דף שירות עם הסבר מקצועי</span>
-          </div>
-        </div>
-        <div class="metric-sm">
-          <div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.24V7.5a2.5 2.5 0 015 0v3.74"/><path d="M14 10.44V7.5a2.5 2.5 0 015 0v5.5a7 7 0 01-7 7h-1.3a7 7 0 01-5.6-2.8L2 13.5a2 2 0 013-2.6l1 1.2V4.5a2.5 2.5 0 015 0"/></svg></div>
-          <div>
-            <span class="ms-num">356 קליקים</span>
-            <span class="ms-label">תיקון צנרת ביוב ללא הרס: השירות שמבדל את יוחאי</span>
-          </div>
-        </div>
-        <div class="metric-sm">
-          <div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.24V7.5a2.5 2.5 0 015 0v3.74"/><path d="M14 10.44V7.5a2.5 2.5 0 015 0v5.5a7 7 0 01-7 7h-1.3a7 7 0 01-5.6-2.8L2 13.5a2 2 0 013-2.6l1 1.2V4.5a2.5 2.5 0 015 0"/></svg></div>
-          <div>
-            <span class="ms-num">139 קליקים</span>
-            <span class="ms-label">תיקון צנרת ללא הרס: עוד ניסוח, עוד קהל</span>
-          </div>
-        </div>
-        <div class="metric-sm">
-          <div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.24V7.5a2.5 2.5 0 015 0v3.74"/><path d="M14 10.44V7.5a2.5 2.5 0 015 0v5.5a7 7 0 01-7 7h-1.3a7 7 0 01-5.6-2.8L2 13.5a2 2 0 013-2.6l1 1.2V4.5a2.5 2.5 0 015 0"/></svg></div>
-          <div>
-            <span class="ms-num">119 קליקים</span>
-            <span class="ms-label">מחירון אינסטלציה: שקיפות שמביאה פניות</span>
+            <span class="ms-num">לידים בכל דרך</span>
+            <span class="ms-label">טופס אחרי מאמר, וואטסאפ מדף שירות, טלפון ישיר, דף עיר</span>
           </div>
         </div>
       </div>
-      <div class="story-callout reveal" style="margin-top:32px">
-        <span class="story-label">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          דפי ערים עם תוכן אמיתי, לא עמודים משוכפלים
-        </span>
-        <p>לכל אזור שיוחאי רוצה לעבוד בו נבנה דף משלו, עם מידע מקומי: סוגי הבנייה בעיר, צנרת ישנה מול חדשה, שורשים בביוב, תקלות אופייניות. הדף של אינסטלטור בנס ציונה, למשל, מדורג בגוגל ומביא פניות מתושבי העיר. השיטה הורחבה לערים נוספות במרכז.</p>
-        <p>והפניות לא נשארות ברמת הקליקים: לקוחות משאירים פרטים אחרי מאמר, לוחצים על וואטסאפ, או מתקשרים ישירות מתוך דף השירות. האתר מייצר פניות באופן קבוע גם כשאין קמפיין ממומן פעיל.</p>
+    </div>
+  </section>
+
+  <!-- ===== 5c. הרשתות ===== -->
+  <section class="cs-section">
+    <div class="wrap-full">
+      <h2 class="reveal">
+        <span class="sec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></span>
+        לא רק גוגל: פייסבוק, טיקטוק ויוטיוב
+      </h2>
+      <p class="reveal">מי שמחפש אינסטלטור בגוגל צריך לפגוש את אותו יוחאי גם בפייסבוק, בטיקטוק וביוטיוב. אותו לוגו, אותה שפה, אותם צילומים מהשטח. הרשתות לא מביאות את הפנייה הראשונה, הן סוגרות את הספק: הלקוח בודק, רואה עסק חי עם אנשים אמיתיים, ומתקשר.</p>
+      <div class="metrics-secondary">
+        <div class="metric-sm">
+          <div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div>
+            <span class="ms-num">עמוד Facebook</span>
+            <span class="ms-label">3.7K+ עוקבים, קאבר מעוצב, פוסטים מהשטח שמייצרים מעורבות ופניות</span>
+          </div>
+        </div>
+        <div class="metric-sm">
+          <div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+          <div>
+            <span class="ms-num">TikTok</span>
+            <span class="ms-label">סרטונים קצרים מעבודות אמיתיות: התקלה, הפתרון, התוצאה</span>
+          </div>
+        </div>
+        <div class="metric-sm">
+          <div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+          <div>
+            <span class="ms-num">ערוץ YouTube</span>
+            <span class="ms-label">63+ סרטונים, ערוץ מעוצב, תוכן שמסביר ומוכר לאורך זמן</span>
+          </div>
+        </div>
+        <div class="metric-sm">
+          <div class="ms-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div>
+            <span class="ms-num">ייעוץ תוכן שוטף</span>
+            <span class="ms-label">מה לצלם, איזה מקרה הופך לסרטון, איך להסביר כדי שהלקוח יבין</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -961,11 +994,12 @@
       </h2>
       <div class="video-container" id="ytVideo" data-vid="rswN5fVQbjQ">
         <img src="https://img.youtube.com/vi/rswN5fVQbjQ/maxresdefault.jpg" alt="יוחאי ג׳קסון מספר על העבודה עם Mula Digital" loading="lazy" />
-        <button class="video-play-btn" aria-label="הפעל סרטון">
+        <button type="button" class="video-play-btn" aria-label="הפעל סרטון">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
         </button>
       </div>
       <p class="video-credit">יוחאי ג׳קסון, מייסד יוחאי ג׳קסון אינסטלציה</p>
+      <p class="video-credit" style="margin-top:8px"><a href="https://www.youtube.com/watch?v=rswN5fVQbjQ" target="_blank" rel="noopener" style="color:#D9C8FF;text-decoration:underline">לא נפתח? לצפייה ישירות ביוטיוב</a></p>
     </div>
   </section>
 
@@ -1062,7 +1096,8 @@
   (function(){
     var vc = document.getElementById('ytVideo');
     if(!vc) return;
-    vc.addEventListener('click', function(){
+    function playVideo(){
+      if(vc.querySelector('iframe')) return;
       var vid = vc.getAttribute('data-vid');
       var iframe = document.createElement('iframe');
       iframe.src = 'https://www.youtube.com/embed/' + vid + '?autoplay=1&rel=0';
@@ -1072,7 +1107,11 @@
       vc.innerHTML = '';
       vc.appendChild(iframe);
       vc.style.cursor = 'default';
-    });
+    }
+    vc.addEventListener('click', playVideo);
+    var btn = vc.querySelector('.video-play-btn');
+    if(btn){ btn.addEventListener('click', function(e){ e.stopPropagation(); playVideo(); }); }
+    vc.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); playVideo(); } });
   })();
 
   // GSAP animations
