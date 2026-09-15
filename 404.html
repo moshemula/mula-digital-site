@@ -6,7 +6,14 @@
     var path = location.pathname.replace(/\/+$/,'');
     var route = path.replace(/^\/+/,'');
 
-    if (['portfolio', 'blog'].indexOf(route) > -1) {
+    var legacy = {
+      'בלוג': '/blog.html', 'אודות': '/about.html', 'בניית-אתרים': '/service-web-development.html',
+      'דף-הבית': '/', 'category/כללי': '/blog.html', 'author/atal': '/about.html', 'blog': '/blog.html'
+    };
+    try { route = decodeURIComponent(route); } catch (e) {}
+    if (legacy[route]) {
+      location.replace(legacy[route]);
+    } else if (route === 'portfolio') {
       location.replace('/?r=' + route);
     } else if (route && route.indexOf('.') === -1) {
       location.replace('/' + route + '.html');
