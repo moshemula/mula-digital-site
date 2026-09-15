@@ -5,13 +5,22 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Tue, 15 Sep 2026 18:57:27 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 19:15:34 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>שיווק בלינקדאין לעסקים: המדריך המלא 2026</title>
+      <link>https://muladigital.co.il/blog-shivuk-linkedin-laasakim.html</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-shivuk-linkedin-laasakim.html</guid>
+      <description>איך עושים שיווק בלינקדאין שמביא לידים B2B ב-2026: פרופיל, תוכן, Outreach, אוטומציה, פרסום ממומן ומחירים אמיתיים. מדריך מהשטח של משה מולה, אחרי 20 שנה במכירות B2B.</description>
+      <pubDate>Tue, 15 Sep 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
+    </item>
     <item>
       <title>בניית דף נחיתה לעסק</title>
       <link>https://muladigital.co.il/daf-nechita.html</link>
