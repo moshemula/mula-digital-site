@@ -5,13 +5,22 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Tue, 15 Sep 2026 19:15:34 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 09:36:09 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>כמה עולה הטמעת מערכת CRM לעסק קטן 2026</title>
+      <link>https://muladigital.co.il/blog-kama-ole-hatmaat-crm.html</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-kama-ole-hatmaat-crm.html</guid>
+      <description>הטמעת מערכת CRM לעסק קטן: בסיסית 3,000-5,000 ₪, מלאה 8,000-15,000 ₪, רישוי מ-60 ₪ למשתמש. מה נכנס למחיר, ומתי לא צריך הטמעה בכלל.</description>
+      <pubDate>Wed, 16 Sep 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
+    </item>
     <item>
       <title>שיווק בלינקדאין לעסקים: המדריך המלא 2026</title>
       <link>https://muladigital.co.il/blog-shivuk-linkedin-laasakim.html</link>
