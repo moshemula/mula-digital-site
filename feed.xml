@@ -5,13 +5,22 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Thu, 17 Sep 2026 09:36:09 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 11:24:45 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>לידים B2B לעסקים: איך בונים מכונת לידים</title>
+      <link>https://muladigital.co.il/blog-leadim-b2b-laasakim.html</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-leadim-b2b-laasakim.html</guid>
+      <description>לידים B2B לעסקים בלי לקנות רשימות: לקוח מוגדר, לינקדאין, דף נחיתה, CRM ומעקב. כמה זה עולה (מ-3,000 ₪ בחודש) ומה מביא פגישות.</description>
+      <pubDate>Thu, 24 Sep 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
+    </item>
     <item>
       <title>כמה עולה הטמעת מערכת CRM לעסק קטן 2026</title>
       <link>https://muladigital.co.il/blog-kama-ole-hatmaat-crm.html</link>
