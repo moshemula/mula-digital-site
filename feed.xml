@@ -5,7 +5,7 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Thu, 24 Sep 2026 11:24:45 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 11:36:18 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
@@ -20,6 +20,51 @@
       <pubDate>Thu, 24 Sep 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
+    </item>
+    <item>
+      <title>בניית אתרים למטפלים: מה חייב להיות באתר</title>
+      <link>https://muladigital.co.il/blog-bniyat-atar-lemetaplim.html</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-bniyat-atar-lemetaplim.html</guid>
+      <description>בניית אתרים למטפלים: 9 דברים שחייבים להיות באתר כדי שיביא מטופלים, כמה זה עולה (5,000-10,000 ₪) ומה לבדוק לפני שבונים. מדריך מהשטח.</description>
+      <pubDate>Wed, 23 Sep 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
+    </item>
+    <item>
+      <title>פרסום ב-ChatGPT בישראל: מה ראיתי בחשבון שלי</title>
+      <link>https://muladigital.co.il/blog-pirsum-bechatgpt.html</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-pirsum-bechatgpt.html</guid>
+      <description>פרסום ב-ChatGPT בישראל: 2,066 חשיפות, 53 קליקים ו-1.79 ₪ לקליק בחמשת הימים הראשונים. מי רואה את המודעות, מה חסר ולמי זה מתאים.</description>
+      <pubDate>Wed, 23 Sep 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1676299081847-824916de030a?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1676299081847-824916de030a?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
+    </item>
+    <item>
+      <title>קידום עסק בגוגל: 9 צעדים לפי סדר</title>
+      <link>https://muladigital.co.il/blog-eich-lekadem-esek-begoogle.html</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-eich-lekadem-esek-begoogle.html</guid>
+      <description>קידום עסק בגוגל בלי לשרוף כסף על קליקים: 9 צעדים לפי סדר, מה עושים לבד, ומחירים אמיתיים (1,500 עד 4,000 שקל לחודש). מדריך מהשטח.</description>
+      <pubDate>Tue, 22 Sep 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
+    </item>
+    <item>
+      <title>אוטומציה בוואטסאפ לעסקים: 12 תרחישים</title>
+      <link>https://muladigital.co.il/blog-automatzia-whatsapp-laasakim.html</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-automatzia-whatsapp-laasakim.html</guid>
+      <description>אוטומציה בוואטסאפ לעסקים: 12 תרחישים שעובדים, מה אסור לאוטמט, איך לא לאבד את המספר העסקי, וכמה זה עולה - הקמה 3,000-5,000 ₪, מלאה 6,000-12,000 ₪.</description>
+      <pubDate>Sun, 20 Sep 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
+    </item>
+    <item>
+      <title>ספק שירותי GEO: איך בוחרים נכון</title>
+      <link>https://muladigital.co.il/blog-sapak-sherutey-geo.html</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-sapak-sherutey-geo.html</guid>
+      <description>ספק שירותי GEO: 12 שאלות לשאול לפני שסוגרים, 9 תשובות שהן נורה אדומה, בדיקה של 20 דקות, ומחירים אמיתיים - 1,500 עד 10,000 ₪ בחודש.</description>
+      <pubDate>Sun, 20 Sep 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
     <item>
       <title>כמה עולה הטמעת מערכת CRM לעסק קטן 2026</title>
