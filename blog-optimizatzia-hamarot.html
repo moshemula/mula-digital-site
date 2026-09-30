@@ -266,6 +266,9 @@
   .checklist li{padding:8px 0;border-bottom:1px solid var(--line);font-size:17px;display:flex;align-items:flex-start;gap:10px;}
   .checklist li:last-child{border-bottom:none;}
   .checklist li::before{content:"";flex:none;width:20px;height:20px;border:2px solid var(--purple);border-radius:6px;margin-top:3px;}
+  .checklist.numbered ul{counter-reset:ck;}
+  .checklist.numbered li{counter-increment:ck;}
+  .checklist.numbered li::before{content:counter(ck);border:none;border-radius:50%;background:rgba(123,47,190,.1);color:var(--purple);font-family:var(--f-display);font-weight:800;font-size:13px;line-height:22px;width:22px;height:22px;text-align:center;margin-top:3px;}
 
   /* FAQ */
   .faq{margin:18px 0 36px;}
@@ -598,7 +601,7 @@
         <li><a href="#s6">בדיקות A/B: מתי זה עובד ומתי זה בזבוז</a></li>
         <li><a href="#s7">ההמרה לא נגמרת בטופס</a></li>
         <li><a href="#s8">כמה עולה אופטימיזציית המרות</a></li>
-        <li><a href="#s9">בדיקה עצמית של 15 דקות</a></li>
+        <li><a href="#s9">מה אתר שממיר צריך לכלול</a></li>
         <li><a href="#s10">איך נראה תהליך עבודה נכון</a></li>
         <li><a href="#faq">שאלות נפוצות</a></li>
       </ol>
@@ -843,11 +846,11 @@
     </ul>
 
     <!-- S9 -->
-    <h2 id="s9"><span class="n">09</span> בדיקה עצמית של 15 דקות</h2>
-    <p>קח את הטלפון, פתח את האתר שלך כאילו אתה לקוח שלא מכיר אותך, ועבור על הרשימה:</p>
+    <h2 id="s9"><span class="n">09</span> מה אתר שממיר צריך לכלול</h2>
+    <p>זו הרשימה שאני עובר עליה בכל אתר שאני בודק. אפשר לעבור עליה בטלפון, בעיניים של לקוח שלא מכיר אותך:</p>
 
-    <div class="checklist">
-      <h4>12 דברים לבדוק באתר שלך היום</h4>
+    <div class="checklist numbered">
+      <h4>12 דברים שאתר שממיר צריך לכלול</h4>
       <ul>
         <li>בשלוש שניות ברור מה אתה עושה, בשביל מי ובאיזה אזור</li>
         <li>העמוד נטען מהר בטלפון, גם בלי וויפיי</li>
