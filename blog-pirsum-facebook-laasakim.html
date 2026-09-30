@@ -266,6 +266,9 @@
   .checklist li{padding:8px 0;border-bottom:1px solid var(--line);font-size:17px;display:flex;align-items:flex-start;gap:10px;}
   .checklist li:last-child{border-bottom:none;}
   .checklist li::before{content:"";flex:none;width:20px;height:20px;border:2px solid var(--purple);border-radius:6px;margin-top:3px;}
+  .checklist.numbered ul{counter-reset:ck;}
+  .checklist.numbered li{counter-increment:ck;}
+  .checklist.numbered li::before{content:counter(ck);border:none;border-radius:50%;background:rgba(123,47,190,.1);color:var(--purple);font-family:var(--f-display);font-weight:800;font-size:13px;line-height:22px;width:22px;height:22px;text-align:center;margin-top:3px;}
 
   /* FAQ */
   .faq{margin:18px 0 36px;}
@@ -867,8 +870,8 @@
     <h2 id="s11"><span class="n">11</span> צ'קליסט לפני שמעלים קמפיין</h2>
     <p>לפני שמוציאים את השקל הראשון, תעבור על הרשימה הזו:</p>
 
-    <div class="checklist">
-      <h4>12 דברים שצריכים להיות מוכנים</h4>
+    <div class="checklist numbered">
+      <h4>12 דברים שצריכים להיות מוכנים לפני הקמפיין</h4>
       <ul>
         <li>עמוד פייסבוק עסקי מסודר וחשבון אינסטגרם מחובר אליו</li>
         <li>חשבון מודעות במנהל העסקים של Meta, בבעלות שלך ולא של הסוכנות</li>
