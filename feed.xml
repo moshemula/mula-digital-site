@@ -5,13 +5,31 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Thu, 24 Sep 2026 11:36:18 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 09:24:12 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>אופטימיזציית המרות: יש כניסות ואין פניות?</title>
+      <link>https://muladigital.co.il/blog-optimizatzia-hamarot.html</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-optimizatzia-hamarot.html</guid>
+      <description>אופטימיזציית המרות לאתר שמקבל כניסות ולא פניות: 7 מקומות שבהם האתר מאבד לידים, מה מודדים, ומחירים אמיתיים (אבחון 2,000-5,000 ₪).</description>
+      <pubDate>Wed, 30 Sep 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&amp;amp;q=70" medium="image" />
+    </item>
+    <item>
+      <title>פרסום בפייסבוק לעסקים: כמה זה עולה ומה מקבלים</title>
+      <link>https://muladigital.co.il/blog-pirsum-facebook-laasakim.html</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-pirsum-facebook-laasakim.html</guid>
+      <description>פרסום בפייסבוק לעסקים: דמי ניהול מ-2,500 ₪ ותקציב מדיה מ-3,000 ₪ בחודש. מה מקבלים, שני מקרים אמיתיים, ומה להכין לפני שמעלים קמפיין.</description>
+      <pubDate>Wed, 30 Sep 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://muladigital.co.il/assets/cover-pirsum-facebook.jpg" type="image/jpeg" />
+      <media:content url="https://muladigital.co.il/assets/cover-pirsum-facebook.jpg" medium="image" />
+    </item>
     <item>
       <title>לידים B2B לעסקים: איך בונים מכונת לידים</title>
       <link>https://muladigital.co.il/blog-leadim-b2b-laasakim.html</link>
@@ -175,10 +193,10 @@
       <media:content url="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
     <item>
-      <title>כמה עולה קידום אתרים בגוגל? מחירון כנה ל-2026</title>
+      <title>קידום אתרים בגוגל מחיר: 2,000-5,000 ₪ לחודש</title>
       <link>https://muladigital.co.il/blog-kama-ole-kiddum-bGoogle.html</link>
       <guid isPermaLink="true">https://muladigital.co.il/blog-kama-ole-kiddum-bGoogle.html</guid>
-      <description>כמה עולה קידום אתרים בגוגל ב-2026? מחירון אורגני (2,000-5,000 ₪ לחודש) מול ממומן, 9 דגלים אדומים בהצעת מחיר, ואיך לחשב אם ההשקעה מחזירה את עצמה.</description>
+      <description>כמה עולה קידום אתרים בגוגל? אורגני 2,000-5,000 ₪ לחודש, ממומן מ-2,000 ₪ מדיה ודמי ניהול מ-2,000 ₪. מה מקבלים בכל מחיר ואיך מזהים הצעה גרועה.</description>
       <pubDate>Thu, 06 Aug 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
