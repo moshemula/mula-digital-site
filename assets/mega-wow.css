@@ -1,0 +1,128 @@
+/* =====================================================================
+   Mula Digital · מגה מניו - שכבת "וואו"
+   1. לוח כהה מזכוכית עם מסגרת גרדיאנט נעה
+   2. תצוגה מקדימה של תיק עבודות בריחוף
+   3. אייקונים שמצטיירים בריחוף
+   נטען אחרי mega.css ודורס אותו
+   ===================================================================== */
+@property --mxa{syntax:'<angle>';inherits:false;initial-value:0deg;}
+
+/* ---------- 1. לוח כהה ---------- */
+header.nav .mega.mx{
+  background:#0E0D15;background-image:radial-gradient(120% 80% at 100% 0%,rgba(123,47,190,.16),transparent 55%),radial-gradient(90% 70% at 0% 100%,rgba(232,0,61,.08),transparent 60%);
+  -webkit-backdrop-filter:saturate(160%) blur(26px);backdrop-filter:saturate(160%) blur(26px);
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 40px 100px -20px rgba(0,0,0,.6),0 0 0 1px rgba(123,47,190,.12),0 30px 80px -30px rgba(123,47,190,.45);
+  color:#fff;
+  scrollbar-color:rgba(255,255,255,.2) transparent;
+}
+/* מסגרת גרדיאנט שמסתובבת לאט סביב הלוח */
+header.nav .mega.mx::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;pointer-events:none;z-index:3;
+  background:conic-gradient(from var(--mxa),transparent 0deg,transparent 200deg,#E8003D 260deg,#7B2FBE 320deg,transparent 360deg);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
+  animation:mxSpin 7s linear infinite;
+}
+@keyframes mxSpin{to{--mxa:360deg;}}
+/* זוהר רך בפינה */
+header.nav .mega.mx > .mx-grid{position:relative;}
+header.nav .mega.mx > .mx-grid::before{content:"";position:absolute;width:520px;height:320px;top:-160px;inset-inline-start:-120px;background:radial-gradient(ellipse at center,rgba(123,47,190,.28),transparent 65%);pointer-events:none;}
+
+header.nav .mx-col + .mx-col{border-inline-start-color:rgba(255,255,255,.07);}
+header.nav .mx-h{color:#fff;}
+header.nav .mx-sub{color:rgba(255,255,255,.5);}
+header.nav .mx-link{color:#fff;}
+header.nav .mx-tx b{color:rgba(255,255,255,.95);}
+header.nav .mx-tx small{color:rgba(255,255,255,.5);}
+header.nav .mx-ic{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.09);}
+header.nav .mx-ic svg{color:#C9A8FF;}
+header.nav .mx-link:hover,header.nav .mx-link:focus-visible{background:rgba(255,255,255,.06);}
+header.nav .mx-link:hover .mx-tx b{color:#fff;}
+header.nav .mx-arr{color:#D9C8FF;}
+header.nav .mx-link:hover .mx-ic,header.nav .mx-link:focus-visible .mx-ic{box-shadow:0 8px 22px -6px rgba(224,17,95,.6);}
+
+/* עמודת הצד: כרטיס בהיר יותר בתוך הלוח הכהה */
+header.nav .mx-side{background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border-inline-start:1px solid rgba(255,255,255,.07);}
+header.nav .mx-side::before{opacity:.35;}
+
+/* פס תחתון */
+header.nav .mx-foot{background:rgba(255,255,255,.03);border-top-color:rgba(255,255,255,.07);}
+header.nav .mx-chip{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.88);}
+header.nav .mx-chip svg{color:#C9A8FF;}
+header.nav .mx-chip:hover{border-color:rgba(201,168,255,.5);color:#fff;background:rgba(123,47,190,.18);}
+header.nav .mx-chip-hot{background:rgba(123,47,190,.22);border-color:rgba(201,168,255,.4);color:#fff;}
+header.nav .mx-all{color:#D9C8FF;}
+header.nav .mx-all:hover{color:#fff;}
+
+/* ---------- 2. תיק עבודות + תצוגה מקדימה ---------- */
+header.nav .mx-port .mx-grid{grid-template-columns:minmax(0,1fr) 400px;}
+header.nav .mx-cases{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
+header.nav .mx-case{background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.08);color:#fff;padding:10px 12px;}
+header.nav .mx-logo{border-color:transparent;width:46px;height:46px;}
+header.nav .mx-case{grid-template-columns:46px minmax(0,1fr);}
+header.nav .mx-ctx b{color:#fff;}
+header.nav .mx-ctx small{color:rgba(255,255,255,.5);}
+header.nav .mx-ctx em{color:#D9C8FF;}
+header.nav .mx-case:hover,header.nav .mx-case:focus-visible,header.nav .mx-case.is-on{background:rgba(123,47,190,.16);border-color:rgba(201,168,255,.45);box-shadow:0 14px 34px -14px rgba(123,47,190,.7);transform:translateY(-2px);}
+header.nav .mx-case:hover .mx-ctx b,header.nav .mx-case.is-on .mx-ctx b{color:#fff;}
+
+header.nav .mx-pv-side{padding:22px;gap:12px;justify-content:flex-start;}
+header.nav .mx-prev{display:flex;flex-direction:column;align-self:stretch;width:100%;border-radius:18px;overflow:hidden;text-decoration:none;color:#fff;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);box-shadow:0 24px 50px -24px rgba(0,0,0,.8);transition:border-color .25s;}
+header.nav .mx-prev:hover{border-color:rgba(201,168,255,.45);}
+header.nav .mx-prev-img{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;background:#000;}
+header.nav .mx-prev-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .4s var(--mx-ease),transform 6s ease-out;transform:scale(1.02);}
+header.nav .mx-prev:hover .mx-prev-img img{transform:scale(1.07);}
+header.nav .mx-prev-img img.mx-out{opacity:0;}
+header.nav .mx-prev-cap{display:flex;flex-direction:column;gap:2px;padding:14px 16px 16px;transition:opacity .3s;}
+header.nav .mx-prev-cap small{font-size:12.5px;color:rgba(255,255,255,.55);}
+header.nav .mx-prev-cap b{font-family:var(--mx-display);font-weight:800;font-size:19px;line-height:1.3;}
+header.nav .mx-prev-cap em{font-style:normal;font-weight:700;font-size:13px;color:#fff;background:var(--mx-grad);align-self:flex-start;padding:3px 11px;border-radius:100px;margin-top:6px;}
+header.nav .mx-prev-go{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-family:var(--mx-display);font-weight:700;font-size:13px;color:#D9C8FF;}
+header.nav .mx-prev-go .mx-arr{opacity:1;transform:none;color:#D9C8FF;}
+header.nav .mx-prev-cap.mx-out{opacity:0;}
+
+header.nav .mx-ws{align-self:stretch;display:flex;flex-direction:column;gap:10px;padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.03);text-decoration:none;color:#fff;transition:border-color .2s,background .2s;}
+header.nav .mx-ws:hover,header.nav .mx-ws.is-on{border-color:rgba(201,168,255,.45);background:rgba(123,47,190,.14);}
+header.nav .mx-ws-t{display:flex;align-items:center;gap:8px;}
+header.nav .mx-ws-t svg{width:18px;height:18px;color:#C9A8FF;flex:none;}
+header.nav .mx-ws-t b{font-family:var(--mx-display);font-weight:800;font-size:15px;}
+header.nav .mx-ws .mx-orgs img{height:36px;}
+header.nav .mx-pv-side .mx-side-l{justify-content:flex-start;padding-inline-start:4px;}
+
+/* ---------- 3. אייקונים שמצטיירים ---------- */
+header.nav .mx-ic{transition:background .25s var(--mx-ease),border-color .25s,transform .35s cubic-bezier(.34,1.56,.64,1),box-shadow .25s;}
+header.nav .mx-link:hover .mx-ic,header.nav .mx-link:focus-visible .mx-ic{transform:rotate(-6deg) scale(1.08);}
+header.nav .mx-link:hover .mx-ic svg :is(path,line,polyline,polygon,circle,rect,ellipse),
+header.nav .mx-link:focus-visible .mx-ic svg :is(path,line,polyline,polygon,circle,rect,ellipse){
+  stroke-dasharray:100;animation:mxDraw .75s cubic-bezier(.65,0,.35,1) both;
+}
+@keyframes mxDraw{from{stroke-dashoffset:100;}to{stroke-dashoffset:0;}}
+
+/* ---------- מסכים בינוניים ---------- */
+@media (min-width:881px) and (max-width:1180px){
+  header.nav .mx-port .mx-grid{grid-template-columns:minmax(0,1fr) 320px;}
+  header.nav .mx-port .mx-side{grid-column:auto;display:flex;flex-direction:column;}
+  header.nav .mx-side{border-inline-start:0;border-top:1px solid rgba(255,255,255,.07);}
+  header.nav .mx-port .mx-side{border-top:0;border-inline-start:1px solid rgba(255,255,255,.07);}
+}
+@media (min-width:881px) and (max-width:1020px){
+  header.nav .mx-port .mx-grid{grid-template-columns:1fr;}
+  header.nav .mx-port .mx-side{display:grid;grid-template-columns:1fr 1fr;align-items:start;}
+  header.nav .mx-port .mx-side-l{grid-column:1/-1;}
+  header.nav .mx-cases{grid-template-columns:repeat(3,minmax(0,1fr));}
+}
+
+/* ---------- מי שביקש פחות תנועה ---------- */
+@media (prefers-reduced-motion:reduce){
+  header.nav .mega.mx::after{animation:none;}
+  header.nav .mx-link:hover .mx-ic svg *{animation:none;}
+  header.nav .mx-link:hover .mx-ic{transform:none;}
+  header.nav .mx-prev-img img{transition:none;}
+}
+
+/* כרטיס "לכל תיק העבודות" בתוך הרשת */
+header.nav .mx-case-all{border-style:dashed;border-color:rgba(201,168,255,.35);background:transparent;}
+header.nav .mx-all-ic{width:46px;height:46px;border-radius:13px;background:var(--mx-grad);display:grid;place-items:center;}
+header.nav .mx-all-ic .mx-arr{opacity:1;transform:none;color:#fff;width:20px;height:20px;}
+header.nav .mx-case-all .mx-ctx b{color:#D9C8FF;}
