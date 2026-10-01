@@ -256,6 +256,28 @@
   .metric-sm .ms-num{font-family:var(--f-display);font-weight:900;font-size:20px;color:var(--ink);display:block;}
   .metric-sm .ms-label{font-size:14px;color:var(--muted);line-height:1.5;}
 
+  /* Video testimonial */
+  .tm-sec{background:var(--night);color:#fff;padding:96px 0;position:relative;overflow:hidden;}
+  .tm-sec::before{content:"";position:absolute;top:-120px;inset-inline-start:50%;transform:translateX(-50%);width:900px;height:420px;background:radial-gradient(ellipse at center,rgba(123,47,190,.16),transparent 70%);pointer-events:none;}
+  .tm-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:56px;align-items:center;}
+  .tm-eyebrow{font-size:14px;font-weight:700;color:#D9C8FF;margin-bottom:14px;display:block;}
+  .tm-stars{display:flex;gap:6px;margin-bottom:18px;}
+  .tm-stars svg{width:26px;height:26px;filter:drop-shadow(0 2px 6px rgba(251,191,36,.4));}
+  .tm-text{font-family:var(--f-display);font-weight:700;font-size:clamp(19px,2.3vw,25px);line-height:1.75;color:#fff;margin-bottom:22px;}
+  .tm-text::before{content:"\201D";display:block;font-size:72px;line-height:.7;margin-bottom:10px;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+  .tm-author{font-family:var(--f-display);font-weight:700;font-size:16px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;white-space:nowrap;color:rgba(255,255,255,.85);}
+  .tm-author::before{content:'';width:32px;height:2px;background:var(--grad);border-radius:2px;}
+  .tm-author small{font-weight:500;color:rgba(255,255,255,.5);font-size:14px;}
+  .tm-vid{max-width:320px;width:100%;margin:0 auto;}
+  .tm-frame{position:relative;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.45);cursor:pointer;border:0;padding:0;display:block;width:100%;}
+  .tm-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+  .tm-frame:hover img{transform:scale(1.04);}
+  .tm-frame .tm-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.35);display:grid;place-items:center;}
+  .tm-frame .tm-play svg{width:28px;height:28px;fill:#fff;margin-inline-start:4px;}
+  .tm-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .tm-link{display:block;text-align:center;margin-top:12px;font-size:14px;color:rgba(255,255,255,.65);text-decoration:underline;}
+  @media (max-width:860px){.tm-sec{padding:72px 0;}.tm-grid{grid-template-columns:1fr;gap:36px;}}
+
   /* Full-width quote band */
   .quote-band{background:var(--night);color:#fff;padding:100px 0;position:relative;overflow:hidden;}
   .quote-band::before{content:"";position:absolute;top:-100px;inset-inline-start:50%;transform:translateX(-50%);width:800px;height:400px;background:radial-gradient(ellipse at center,rgba(123,47,190,.12),transparent 70%);pointer-events:none;}
@@ -855,6 +877,28 @@
       </div>
     </div>
   </section>
+  <!-- ===== המלצת וידאו ===== -->
+  <section class="tm-sec">
+    <div class="wrap-full tm-grid">
+      <div class="reveal">
+        <span class="tm-eyebrow">עמית מספר בעצמו</span>
+        <div class="tm-stars" aria-label="5 כוכבים"><svg viewBox="0 0 24 24" fill="#FBBF24" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="#FBBF24" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="#FBBF24" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="#FBBF24" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="#FBBF24" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p class="tm-text">הפכתי לעצמאי לפני בערך ארבע שנים, והיו לי חששות מאיפה להביא לקוחות. בהתחלה לא כל כך האמנתי בכל השיטות האלה, אבל אמרתי: יאללה, מה לא נעשה בשביל לקדם את העסק. ניסיתי, והיום אני מגיע למצב שאני בוחר עבודות. מסעדות, דברים הרבה יותר גדולים, שלפני שנה אפילו לא חשבתי עליהם.</p>
+        <div class="tm-author">עמית מתן <small>חשמלאי מוסמך · מתוך סרטון ההמלצה</small></div>
+      </div>
+      <div class="tm-vid reveal">
+        <button type="button" class="tm-frame" data-vid="ZmDjsch63CU" aria-label="הפעל את סרטון ההמלצה של עמית מתן">
+          <img src="https://i.ytimg.com/vi/ZmDjsch63CU/oardefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ZmDjsch63CU/hqdefault.jpg'" alt="עמית מתן, חשמלאי מוסמך, מספר על העבודה עם Mula Digital" loading="lazy">
+          <span class="tm-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <a class="tm-link" href="https://www.youtube.com/shorts/ZmDjsch63CU" target="_blank" rel="noopener">לצפייה ביוטיוב</a>
+      </div>
+    </div>
+  </section>
+  <script>
+  document.querySelectorAll('.tm-frame[data-vid]').forEach(function(b){b.addEventListener('click',function(){if(b.querySelector('iframe'))return;var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.getAttribute('data-vid')+'?autoplay=1&rel=0';f.allow='autoplay; encrypted-media; picture-in-picture';f.setAttribute('allowfullscreen','');f.title=b.getAttribute('aria-label');b.innerHTML='';b.appendChild(f);});});
+  </script>
+
   <!-- ===== ערוצי וידאו ===== -->
   <section class="cs-section vc-sec">
     <div class="wrap-full">
