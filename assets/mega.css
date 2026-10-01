@@ -177,3 +177,30 @@ header.nav .mx-cases-wrap .mx-all{margin-top:auto;margin-inline-start:0;align-se
 @media (max-width:480px){
   .mobile-menu{width:100% !important;}
 }
+
+/* =====================================================================
+   כללי לכל האתר: אנימציות כניסה מהצד לא יוצרות גלילה לרוחב במובייל
+   (clip ולא hidden, כדי לא לשבור אלמנטים דביקים)
+   ===================================================================== */
+html,body{overflow-x:clip;}
+
+/* מסכים נמוכים (לפטופ 13", טאבלט לרוחב): התפריט נכנס בלי גלילה פנימית */
+@media (min-width:881px) and (max-height:860px){
+  header.nav .mx-col{padding-top:20px;padding-bottom:12px;}
+  header.nav .mx-sub{display:none;}
+  header.nav .mx-h{margin-bottom:10px;}
+  header.nav .mx-link{padding-top:6px;padding-bottom:6px;}
+  header.nav .mx-ic{width:34px;height:34px;}
+  header.nav .mx-link{grid-template-columns:34px minmax(0,1fr) 16px;}
+  header.nav .mx-checks{display:none;}
+  header.nav .mx-foot{padding-top:10px;padding-bottom:10px;}
+  header.nav .mx-cases-wrap{padding-top:18px;padding-bottom:16px;}
+  header.nav .mx-case{padding-top:8px;padding-bottom:8px;}
+}
+@media (min-width:881px) and (max-width:1180px) and (max-height:860px){
+  header.nav .mx-side{padding:14px 24px;gap:8px 20px;}
+  header.nav .mx-side-t{display:none;}
+  header.nav .mx-side .mx-btn{grid-row:auto;}
+  header.nav .mx-contact{grid-column:auto;}
+  header.nav .mx-side:not(.mx-pv-side){grid-template-columns:auto auto 1fr;}
+}
