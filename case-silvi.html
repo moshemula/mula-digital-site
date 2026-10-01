@@ -443,6 +443,43 @@
     .mega-col{padding:14px 12px;}
     .mega-col a{padding:5px 8px;}
   }
+
+  /* ===== HERO STAGE (B) + WORK WALL (C) ===== */
+  .cs-hero{padding-bottom:0;}
+  .hx-stage{position:relative;width:100%;height:580px;--hx-glow:#7B2FBE;}
+  .hx-stage::before{content:"";position:absolute;width:520px;height:520px;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,var(--hx-glow),transparent 66%);opacity:.7;filter:blur(24px);pointer-events:none;}
+  .hx-main{position:absolute;left:50%;top:50%;z-index:2;box-shadow:0 40px 90px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.08);overflow:hidden;background:#000;}
+  .hx-main--phone{width:250px;aspect-ratio:9/16;border:9px solid #1b1b22;border-radius:38px;transform:translate(-50%,-50%) rotate(-3deg);}
+  .hx-main--phone video,.hx-main--phone img{width:100%;height:100%;object-fit:cover;display:block;}
+  .hx-main--browser{width:min(470px,92%);border-radius:14px;transform:translate(-50%,-50%) rotate(-2deg);background:#fff;}
+  .hx-bar{display:flex;align-items:center;gap:6px;height:30px;padding:0 12px;background:#1b1b22;}
+  .hx-bar i{width:9px;height:9px;border-radius:50%;background:#3a3a46;}
+  .hx-bar span{margin-inline-start:auto;font-size:11px;color:rgba(255,255,255,.55);font-family:var(--f-body);direction:ltr;}
+  .hx-main--browser img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;display:block;}
+  .hx-main--image{width:min(500px,96%);border-radius:20px;transform:translate(-50%,-50%);}
+  .hx-main--image img{width:100%;display:block;}
+  .hx-card{position:absolute;z-index:3;margin:0;background:#fff;color:#111;border-radius:16px;padding:8px;box-shadow:0 24px 60px rgba(0,0,0,.45);}
+  .hx-card img{display:block;width:100%;height:auto;border-radius:10px;}
+  .cs-mockup.hx-stage img{box-shadow:none;border:0;border-radius:0;}
+  .cs-mockup.hx-stage .hx-card img{border-radius:10px;}
+  .cs-mockup.hx-stage .hx-main--image img{border-radius:20px;}
+  .hx-card figcaption{font-size:12px;font-weight:700;color:#555;padding:6px 4px 2px;font-family:var(--f-display);}
+  .hx-c1{width:230px;top:24px;inset-inline-end:0;transform:rotate(4deg);}
+  .hx-c3{width:190px;bottom:36px;inset-inline-start:4px;transform:rotate(-4deg);}
+  .hx-metric{position:absolute;z-index:4;inset-inline-end:16px;bottom:64px;padding:16px 20px;border-radius:16px;background:rgba(20,20,28,.82);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);max-width:240px;box-shadow:0 20px 50px rgba(0,0,0,.4);}
+  .hx-metric b{display:block;font-family:var(--f-display);font-weight:900;font-size:40px;line-height:1.05;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:brightness(1.35);}
+  .hx-metric b.sm{font-size:26px;}
+  .hx-metric span{display:block;font-size:13px;line-height:1.5;color:rgba(255,255,255,.82);margin-top:4px;}
+  .hx-wall{position:relative;z-index:1;margin-top:40px;padding:26px 0 56px;overflow:hidden;-webkit-mask-image:linear-gradient(to left,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(to left,transparent,#000 10%,#000 90%,transparent);}
+  .hx-track{display:flex;align-items:center;gap:18px;width:max-content;transform:rotate(-2deg);animation:hxmove 60s linear infinite;}
+  .hx-track img{height:240px;width:auto;border-radius:14px;box-shadow:0 18px 40px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08);flex:none;display:block;}
+  .hx-wall:hover .hx-track{animation-play-state:paused;}
+  @keyframes hxmove{to{transform:translateX(50%) rotate(-2deg);}}
+  @media (prefers-reduced-motion:reduce){.hx-track{animation:none;}}
+  @media (max-width:960px){.hx-stage{height:500px;max-width:520px;margin-inline:auto;}}
+  @media (max-width:560px){.hx-stage{height:440px;}.hx-main--phone{width:190px;border-width:7px;border-radius:30px;}.hx-main--browser{width:88%;}
+    .hx-c1{width:160px;top:6px;}.hx-c3{width:135px;bottom:14px;}.hx-metric{bottom:30px;inset-inline-end:6px;padding:12px 14px;max-width:190px;}.hx-metric b{font-size:30px;}.hx-metric b.sm{font-size:20px;}
+    .hx-stage::before{width:340px;height:340px;}.hx-track img{height:170px;}.hx-wall{margin-top:24px;padding-bottom:40px;}}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GEHNCC9X6F"></script>
@@ -610,11 +647,15 @@
             </div>
           </div>
         </div>
-        <div class="cs-mockup">
-          <img src="assets/case-silvi-monitor.webp" alt="עמוד הפייסבוק של סילבי ויסוצקי עם הקאבר הממותג, על מסך שולחני" loading="eager" />
+        <div class="cs-mockup hx-stage" style="--hx-glow:#c4896a">
+          <div class="hx-main hx-main--phone"><img src="assets/case-hero/silvi-main.webp" alt="העבודה עבור סילבי ויסוצקי עיצוב גבות" /></div>
+          <figure class="hx-card hx-c1"><img src="assets/case-hero/silvi-c1.webp" alt="מודעת מיקרובליידינג" loading="eager" /><figcaption>מודעת מיקרובליידינג</figcaption></figure>
+          <div class="hx-metric"><b>215</b><span>שיחות חדשות · כ-22 ₪ לשיחה</span></div>
+          <figure class="hx-card hx-c3"><img src="assets/case-hero/silvi-c3.webp" alt="קמפיין עיצוב גבות" loading="eager" /><figcaption>קמפיין עיצוב גבות</figcaption></figure>
         </div>
       </div>
     </div>
+      <div class="hx-wall" aria-hidden="true"><div class="hx-track"><img src="assets/case-hero/silvi-w1.webp" alt="" loading="lazy" /><img src="assets/case-hero/silvi-w2.webp" alt="" loading="lazy" /><img src="assets/case-hero/silvi-w3.webp" alt="" loading="lazy" /><img src="assets/case-hero/silvi-w4.webp" alt="" loading="lazy" /><img src="assets/case-silvi-monitor.webp" alt="" loading="lazy" /><img src="assets/case-hero/silvi-w5.webp" alt="" loading="lazy" /><img src="assets/case-hero/silvi-w1.webp" alt="" loading="lazy" /><img src="assets/case-hero/silvi-w2.webp" alt="" loading="lazy" /><img src="assets/case-hero/silvi-w3.webp" alt="" loading="lazy" /><img src="assets/case-hero/silvi-w4.webp" alt="" loading="lazy" /><img src="assets/case-silvi-monitor.webp" alt="" loading="lazy" /><img src="assets/case-hero/silvi-w5.webp" alt="" loading="lazy" /></div></div>
   </section>
 
   <section class="cs-section">
