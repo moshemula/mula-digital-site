@@ -1,0 +1,122 @@
+/* =====================================================================
+   Mula Digital · פתיחה לדפי שירות - "במת הוכחה"
+   עבודה אמיתית מתיק העבודות + תוצאה אמיתית, במקום שלד אפור.
+   נטען אחרי ה-CSS של כל דף ודורס את הפתיחה הישנה.
+   ===================================================================== */
+
+/* ---------- רקע: בלי תמונות חיצוניות, רשת עדינה + הילות מותג ---------- */
+.srv-hero .hero-bg{background:none !important;opacity:1 !important;}
+.srv-hero .hero-bg::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:56px 56px;
+  -webkit-mask-image:radial-gradient(ellipse 80% 70% at 30% 40%,#000 20%,transparent 75%);
+          mask-image:radial-gradient(ellipse 80% 70% at 30% 40%,#000 20%,transparent 75%);
+}
+.srv-hero .hero-bg::after{
+  content:"";position:absolute;width:620px;height:620px;border-radius:50%;
+  top:-120px;inset-inline-end:-160px;
+  background:radial-gradient(circle,rgba(232,0,61,.22),rgba(123,47,190,.18) 40%,transparent 70%);
+  filter:blur(20px);
+}
+.srv-hero .hero-inner{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;}
+.srv-hero .hero-visual{padding-top:28px;}
+.srv-hero .hero-content{min-width:0;}
+
+/* ---------- הבמה ---------- */
+.sh-stage{position:relative;width:100%;max-width:600px;aspect-ratio:1/.84;margin-inline:auto;isolation:isolate;}
+.sh-stage::before{content:"";position:absolute;inset:12% 8% 8% 8%;border-radius:40px;background:var(--grad);opacity:.22;filter:blur(60px);z-index:-1;}
+
+/* חלון ראשי */
+.sh-stage img{height:auto;max-width:none;}
+.sh-main{position:absolute;top:7%;inset-inline-start:0;width:88%;margin:0;border-radius:16px;overflow:hidden;background:#15141c;
+  box-shadow:0 50px 100px -30px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.1);
+  transform:perspective(1600px) rotateY(7deg) rotateX(2deg);transform-origin:right center;transition:transform .6s cubic-bezier(.22,1,.36,1);}
+.sh-stage:hover .sh-main{transform:perspective(1600px) rotateY(3deg) rotateX(1deg);}
+.sh-bar{height:32px;display:flex;align-items:center;gap:7px;padding:0 12px;background:linear-gradient(#22212c,#1a1922);border-bottom:1px solid rgba(255,255,255,.06);}
+.sh-bar i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.18);flex:none;}
+.sh-bar i:nth-child(1){background:#FF5F57;}.sh-bar i:nth-child(2){background:#FEBC2E;}.sh-bar i:nth-child(3){background:#28C840;}
+.sh-bar span{flex:1;min-width:0;margin-inline-start:8px;height:20px;border-radius:7px;background:rgba(255,255,255,.07);color:rgba(255,255,255,.6);font-size:11px;font-weight:600;display:flex;align-items:center;padding:0 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.sh-main img{display:block;width:100%;aspect-ratio:16/9.6;object-fit:cover;object-position:top center;}
+
+/* וריאציה: פוסט ממומן (פייסבוק/אינסטגרם) */
+.sh-post .sh-main{width:62%;inset-inline-start:8%;top:3%;background:#fff;border-radius:20px;transform:perspective(1600px) rotateY(5deg) rotate(-1.5deg);}
+.sh-post .sh-main img{aspect-ratio:4/4.6;object-position:center top;}
+.sh-post-head{display:flex;align-items:center;gap:9px;padding:10px 12px;color:#111;}
+.sh-post-head em{width:30px;height:30px;border-radius:50%;background:var(--grad);flex:none;display:block;}
+.sh-post-head b{display:block;font-size:13px;line-height:1.2;color:#111;}
+.sh-post-head small{display:block;font-size:11px;color:#777;}
+.sh-post-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;font-size:12.5px;font-weight:700;color:#111;border-top:1px solid #eee;}
+.sh-post-foot span{background:#1877F2;color:#fff;border-radius:8px;padding:6px 10px;font-size:12px;}
+
+/* וריאציה: טלפון עם סרטון אנכי */
+.sh-phone .sh-main{width:41%;inset-inline-start:10%;top:0;border-radius:36px;padding:9px;background:#0b0b10;border:1px solid rgba(255,255,255,.16);transform:perspective(1600px) rotateY(8deg) rotate(-2deg);}
+.sh-phone .sh-main img{aspect-ratio:9/18.5;border-radius:28px;object-position:center;}
+.sh-phone .sh-main::after{content:"";position:absolute;top:16px;left:50%;transform:translateX(-50%);width:34%;height:18px;border-radius:10px;background:#0b0b10;}
+.sh-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.2);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.4);display:grid;place-items:center;}
+.sh-play svg{width:22px;height:22px;fill:#fff;margin-inline-start:4px;}
+
+/* וריאציה: כרטיס מערכת (וואטסאפ/דשבורד) */
+.sh-app .sh-main{width:64%;inset-inline-start:4%;top:4%;background:#fff;}
+.sh-app .sh-main img{aspect-ratio:1/.95;object-position:top center;}
+
+/* חלון משני */
+.sh-second{position:absolute;bottom:9%;inset-inline-end:0;width:46%;margin:0;border-radius:14px;overflow:hidden;background:#fff;
+  box-shadow:0 34px 70px -24px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.14);transform:rotate(3deg);z-index:2;transition:transform .6s cubic-bezier(.22,1,.36,1);}
+.sh-stage:hover .sh-second{transform:rotate(1deg) translateY(-6px);}
+.sh-second img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top center;}
+.sh-second.sh-tall img{aspect-ratio:4/5;object-position:center 20%;}
+.sh-second.sh-wide{width:72%;bottom:6%;}
+.sh-second.sh-wide img{aspect-ratio:auto;object-fit:contain;background:#fff;}
+.sh-post .sh-second,.sh-phone .sh-second,.sh-app .sh-second{bottom:14%;}
+
+/* תוצאה אמיתית */
+.sh-chip{position:absolute;top:0;inset-inline-end:2%;z-index:4;min-width:150px;max-width:230px;padding:14px 18px 13px;border-radius:18px;
+  background:rgba(16,14,24,.82);-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);
+  border:1px solid rgba(255,255,255,.14);box-shadow:0 24px 50px -18px rgba(0,0,0,.8);animation:shFloat 7s ease-in-out infinite;}
+.sh-chip::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(232,0,61,.8),rgba(123,47,190,.8) 60%,transparent);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;}
+.sh-chip b{display:block;font-family:var(--f-display);font-weight:900;font-size:34px;line-height:1;letter-spacing:-.02em;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;direction:ltr;text-align:right;}
+.sh-chip span{display:block;margin-top:6px;font-size:13px;line-height:1.45;font-weight:600;color:rgba(255,255,255,.75);}
+.sh-chip .sh-stars{display:flex;gap:2px;margin-top:6px;}
+.sh-chip .sh-stars svg{width:13px;height:13px;fill:#FBBC04;}
+
+/* קישור לתיק העבודות */
+.sh-case{position:absolute;bottom:0;inset-inline-start:3%;z-index:4;display:inline-flex;align-items:center;gap:8px;max-width:94%;
+  padding:9px 14px 9px 12px;border-radius:100px;background:#fff;color:#111;text-decoration:none;font-size:13px;font-weight:600;
+  box-shadow:0 18px 40px -14px rgba(0,0,0,.7);transition:transform .25s,box-shadow .25s;}
+.sh-case small{color:#777;font-size:12px;font-weight:600;white-space:nowrap;}
+.sh-case b{font-family:var(--f-display);font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.sh-case svg{width:15px;height:15px;color:var(--purple,#7B2FBE);flex:none;}
+.sh-case:hover{transform:translateY(-2px);box-shadow:0 22px 44px -14px rgba(123,47,190,.6);}
+.sh-case .sh-dot{width:8px;height:8px;border-radius:50%;background:#34D399;box-shadow:0 0 0 3px rgba(52,211,153,.2);flex:none;}
+
+@keyframes shFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+
+/* ---------- מסכים ---------- */
+@media (max-width:1100px){
+  .srv-hero .hero-inner{gap:36px;}
+  .sh-chip b{font-size:28px;}
+}
+@media (max-width:900px){
+  .srv-hero .hero-inner{grid-template-columns:1fr;}
+  .sh-stage{max-width:520px;}
+}
+@media (max-width:620px){
+  .srv-hero .hero-visual{display:flex !important;margin-top:4px;}
+  .sh-stage{aspect-ratio:1/.92;max-width:100%;}
+  .sh-chip{min-width:0;max-width:56%;padding:11px 13px;}
+  .sh-chip b{font-size:24px;}
+  .sh-chip span{font-size:12px;}
+  .sh-case{font-size:12px;padding:8px 12px;}
+  .sh-case small{display:none;}
+  .sh-bar{height:24px;}
+  .sh-bar span{height:15px;font-size:9.5px;}
+  .sh-bar i{width:7px;height:7px;}
+  .sh-main{transform:none;}
+  .sh-stage:hover .sh-main{transform:none;}
+}
+@media (prefers-reduced-motion:reduce){
+  .sh-chip{animation:none;}
+  .sh-main,.sh-second{transition:none;}
+}

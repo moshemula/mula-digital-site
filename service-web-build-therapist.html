@@ -205,7 +205,7 @@
   /* HERO */
   /* ================================= */
   .srv-hero{position:relative;background:var(--night);color:#fff;overflow:hidden;padding:0 0 80px;margin-top:calc(-1 * var(--nav-h));}
-  .srv-hero .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1920&q=80') center/cover no-repeat;opacity:.18;pointer-events:none;}
+  .srv-hero .hero-bg{position:absolute;inset:0;opacity:.18;pointer-events:none;}
   .srv-hero::before{content:"";position:absolute;inset:0;background:
     radial-gradient(ellipse 70% 60% at 75% 20%,rgba(123,47,190,.28),transparent 60%),
     radial-gradient(ellipse 50% 50% at 10% 80%,rgba(232,0,61,.16),transparent 60%),
@@ -582,6 +582,7 @@
 </script>
   <link rel="stylesheet" href="assets/mega.css?v=3" />
   <link rel="stylesheet" href="assets/mega-wow.css?v=2" />
+  <link rel="stylesheet" href="assets/srv-hero.css?v=1" />
 </head>
 <body>
   <div id="progress"><span></span></div>
@@ -684,28 +685,11 @@
           </a>
         </div>
         <div class="hero-visual">
-          <div class="browser-mock">
-            <div class="browser-bar">
-              <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
-              <span class="browser-url">muladigital.co.il</span>
-            </div>
-            <div class="browser-body">
-              <div class="mock-nav"><span></span><span></span><span></span><span></span><span></span></div>
-              <div class="mock-hero-block"><div class="mock-h"></div><div class="mock-h2"></div><div class="mock-btn"></div></div>
-              <div class="mock-cards">
-                <div class="mock-card"><div class="mc-ic"></div><div class="mc-line"></div><div class="mc-line"></div></div>
-                <div class="mock-card"><div class="mc-ic"></div><div class="mc-line"></div><div class="mc-line"></div></div>
-                <div class="mock-card"><div class="mc-ic"></div><div class="mc-line"></div><div class="mc-line"></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="mock-badge mock-badge-1">
-            <span class="mb-ic"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span>
-            <div><b>+340%</b><small>חשיפה בגוגל</small></div>
-          </div>
-          <div class="mock-badge mock-badge-2">
-            <span class="mb-ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-            <div><b>מטופלים חדשים</b><small>כל חודש</small></div>
+          <div class="sh-stage">
+            <figure class="sh-main"><div class="sh-bar"><i></i><i></i><i></i><span>דקלה שליט · עיסוי עד הבית</span></div><img src="assets/srv-hero/dikla.webp" alt="דקלה שליט · עיסוי עד הבית" width="1000" height="600" fetchpriority="high" /></figure>
+            <figure class="sh-second "><img src="assets/srv-hero/alex.webp" alt="" loading="lazy" /></figure>
+            <div class="sh-chip"><b>8</b><span>לקוחות חמים ביום שמחפשים בדיוק את מה שהיא עושה</span></div>
+            
           </div>
         </div>
       </div>

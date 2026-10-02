@@ -170,7 +170,7 @@
 
   /* HERO - color swatches design */
   .srv-hero{position:relative;background:var(--night);color:#fff;overflow:hidden;padding:0 0 80px;margin-top:calc(-1 * var(--nav-h));}
-  .srv-hero .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1558655146-d09347e92766?w=1920&q=80') center/cover no-repeat;opacity:.15;pointer-events:none;}
+  .srv-hero .hero-bg{position:absolute;inset:0;opacity:.15;pointer-events:none;}
   .srv-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 75% 20%,rgba(123,47,190,.28),transparent 60%),radial-gradient(ellipse 50% 50% at 10% 80%,rgba(232,0,61,.16),transparent 60%);pointer-events:none;z-index:1;}
   .srv-hero::after{content:"";position:absolute;bottom:0;inset-inline:0;height:120px;background:linear-gradient(to top,var(--night),transparent);pointer-events:none;z-index:1;}
   .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;padding-top:calc(60px + var(--nav-h));}
@@ -406,6 +406,7 @@
 </script>
   <link rel="stylesheet" href="assets/mega.css?v=3" />
   <link rel="stylesheet" href="assets/mega-wow.css?v=2" />
+  <link rel="stylesheet" href="assets/srv-hero.css?v=1" />
 </head>
 <body>
   <div id="progress"><span></span></div>
@@ -490,20 +491,11 @@
           </a>
         </div>
         <div class="hero-visual">
-          <div class="palette-mock">
-            <div class="palette-card">
-              <div class="pm-logo">M</div>
-              <div class="pm-swatches"><div class="pm-sw"></div><div class="pm-sw"></div><div class="pm-sw"></div><div class="pm-sw"></div><div class="pm-sw"></div></div>
-              <div class="pm-typo"><span>Heebo</span><small>Display</small><span>Assistant</span><small>Body</small></div>
-            </div>
-            <div class="pal-badge pal-badge-1">
-              <span class="pb-ic"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>
-              <div><b>זהות אחידה</b><small>בכל הפלטפורמות</small></div>
-            </div>
-            <div class="pal-badge pal-badge-2">
-              <span class="pb-ic"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
-              <div><b>קבצים לדפוס+דיגיטל</b><small>AI, PDF, SVG, PNG</small></div>
-            </div>
+          <div class="sh-stage sh-app">
+            <figure class="sh-main"><div class="sh-bar"><i></i><i></i><i></i><span>מודעות · הדרך הנכונה</span></div><img src="assets/srv-hero/hdads.webp" alt="מודעות · הדרך הנכונה" fetchpriority="high" /></figure>
+            <figure class="sh-second sh-tall"><img src="assets/srv-hero/silviad.webp" alt="" loading="lazy" /></figure>
+            <div class="sh-chip"><b>5.0</b><span class="sh-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg></span><span>דירוג בגוגל · 20 ביקורות</span></div>
+            <a class="sh-case" href="case-haderech-hanechona.html"><span class="sh-dot"></span><small>מתוך תיק העבודות</small><b>הדרך הנכונה נדל״ן</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
           </div>
         </div>
       </div>

@@ -156,7 +156,7 @@
   .btn-sm{padding:10px 18px;font-size:14px;}
 
   .srv-hero{position:relative;background:var(--night);color:#fff;overflow:hidden;padding:0 0 80px;margin-top:calc(-1 * var(--nav-h));}
-  .srv-hero .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80') center/cover no-repeat;opacity:.12;pointer-events:none;}
+  .srv-hero .hero-bg{position:absolute;inset:0;opacity:.12;pointer-events:none;}
   .srv-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 75% 20%,rgba(10,102,194,.2),transparent 60%),radial-gradient(ellipse 50% 50% at 10% 80%,rgba(123,47,190,.16),transparent 60%);pointer-events:none;z-index:1;}
   .srv-hero::after{content:"";position:absolute;bottom:0;inset-inline:0;height:120px;background:linear-gradient(to top,var(--night),transparent);pointer-events:none;z-index:1;}
   .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;padding-top:calc(60px + var(--nav-h));}
@@ -393,6 +393,7 @@
 </script>
   <link rel="stylesheet" href="assets/mega.css?v=3" />
   <link rel="stylesheet" href="assets/mega-wow.css?v=2" />
+  <link rel="stylesheet" href="assets/srv-hero.css?v=1" />
 </head>
 <body>
   <div id="progress"><span></span></div>
@@ -474,30 +475,11 @@
           </a>
         </div>
         <div class="hero-visual">
-          <div class="li-mock">
-            <div class="li-banner"><div class="li-avatar"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div></div>
-            <div class="li-body">
-              <div class="li-name">השם שלך</div>
-              <div class="li-title">CEO & Founder · 500+ Connections</div>
-              <div class="li-stats">
-                <div class="li-stat"><b>12K</b><span>חשיפות/שבוע</span></div>
-                <div class="li-stat"><b>340</b><span>פרופיל ביקורים</span></div>
-                <div class="li-stat"><b>28</b><span>לידים/חודש</span></div>
-              </div>
-              <div class="li-post">
-                <div class="li-post-head"><div class="li-post-av"></div><span class="li-post-name">השם שלך</span><span class="li-post-time">2 שעות</span></div>
-                <div class="li-post-text">3 דברים שלמדתי אחרי 200 פגישות B2B השנה...</div>
-                <div class="li-post-engagement"><span>127 לייקים</span><span>34 תגובות</span><span>8 שיתופים</span></div>
-              </div>
-            </div>
-            <div class="li-badge li-badge-1">
-              <span class="lb-ic"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span>
-              <div><b>+520% חשיפה</b><small>תוך 3 חודשים</small></div>
-            </div>
-            <div class="li-badge li-badge-2">
-              <span class="lb-ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-              <div><b>28 לידים B2B</b><small>ממוצע חודשי</small></div>
-            </div>
+          <div class="sh-stage sh-app">
+            <figure class="sh-main"><div class="sh-bar"><i></i><i></i><i></i><span>LinkedIn Campaign Manager</span></div><img src="assets/srv-hero/liads.webp" alt="LinkedIn Campaign Manager" fetchpriority="high" /></figure>
+            <figure class="sh-second sh-tall"><img src="assets/srv-hero/eli.webp" alt="" loading="lazy" /></figure>
+            <div class="sh-chip"><b>16,171</b><span>חשיפות בלינקדאין · CTR 1.01%</span></div>
+            <a class="sh-case" href="case-abp.html"><span class="sh-dot"></span><small>מתוך תיק העבודות</small><b>ABP Consultancy</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
           </div>
         </div>
       </div>

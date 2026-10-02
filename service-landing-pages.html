@@ -199,7 +199,7 @@
 
   /* HERO */
   .srv-hero{position:relative;background:var(--night);color:#fff;overflow:hidden;padding:0 0 80px;margin-top:calc(-1 * var(--nav-h));}
-  .srv-hero .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80') center/cover no-repeat;opacity:.15;pointer-events:none;}
+  .srv-hero .hero-bg{position:absolute;inset:0;opacity:.15;pointer-events:none;}
   .srv-hero::before{content:"";position:absolute;inset:0;background:
     radial-gradient(ellipse 70% 60% at 75% 20%,rgba(123,47,190,.28),transparent 60%),
     radial-gradient(ellipse 50% 50% at 10% 80%,rgba(232,0,61,.16),transparent 60%),
@@ -509,6 +509,7 @@
 </script>
   <link rel="stylesheet" href="assets/mega.css?v=3" />
   <link rel="stylesheet" href="assets/mega-wow.css?v=2" />
+  <link rel="stylesheet" href="assets/srv-hero.css?v=1" />
 </head>
 <body>
   <div id="progress"><span></span></div>
@@ -603,24 +604,11 @@
           </a>
         </div>
         <div class="hero-visual">
-          <div class="typewriter-mock">
-            <div class="tw-line"><div class="tw-h1"></div><div class="tw-cursor"></div></div>
-            <div class="tw-line"><div class="tw-p w90"></div></div>
-            <div class="tw-line"><div class="tw-p w80"></div></div>
-            <div class="tw-line"><div class="tw-p w60"></div></div>
-            <div class="tw-gap"></div>
-            <div class="tw-line"><div class="tw-h2"></div></div>
-            <div class="tw-line"><div class="tw-p w80"></div></div>
-            <div class="tw-line"><div class="tw-p w90"></div></div>
-            <div class="tw-line"><div class="tw-p w45"></div></div>
-            <div class="tw-badge tw-badge-1">
-              <span class="tb-ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>
-              <div><b>196 לידים</b><small>מטפסי Meta, נדל״ן</small></div>
-            </div>
-            <div class="tw-badge tw-badge-2">
-              <span class="tb-ic"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span>
-              <div><b>כ-42 ₪ לליד</b><small>באותו קמפיין</small></div>
-            </div>
+          <div class="sh-stage">
+            <figure class="sh-main"><div class="sh-bar"><i></i><i></i><i></i><span>דף נחיתה · חיבור</span></div><img src="assets/srv-hero/hiburland.webp" alt="דף נחיתה · חיבור" width="1000" height="600" fetchpriority="high" /></figure>
+            <figure class="sh-second sh-tall"><img src="assets/srv-hero/lead.webp" alt="" loading="lazy" /></figure>
+            <div class="sh-chip"><b>196</b><span>לידים מטפסי Meta · כ-42 ₪ לליד</span></div>
+            <a class="sh-case" href="case-haderech-hanechona.html"><span class="sh-dot"></span><small>מתוך תיק העבודות</small><b>הדרך הנכונה נדל״ן</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
           </div>
         </div>
       </div>

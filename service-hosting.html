@@ -175,7 +175,7 @@
 
   /* HERO */
   .srv-hero{position:relative;background:var(--night);color:#fff;overflow:hidden;padding:0 0 80px;margin-top:calc(-1 * var(--nav-h));}
-  .srv-hero .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80') center/cover no-repeat;opacity:.15;pointer-events:none;}
+  .srv-hero .hero-bg{position:absolute;inset:0;opacity:.15;pointer-events:none;}
   .srv-hero::before{content:"";position:absolute;inset:0;background:
     radial-gradient(ellipse 70% 60% at 75% 20%,rgba(123,47,190,.28),transparent 60%),
     radial-gradient(ellipse 50% 50% at 10% 80%,rgba(232,0,61,.16),transparent 60%),
@@ -497,6 +497,7 @@
   .hs-price-cta .btn{width:100%;justify-content:center;}
   @media (max-width:520px){.hs-price ul{grid-template-columns:1fr;}.hs-row i{display:none;}.hs-row{grid-template-columns:40px minmax(0,1fr);}}
 </style>
+  <link rel="stylesheet" href="assets/srv-hero.css?v=1" />
 </head>
 <body>
   <div id="progress"><span></span></div>

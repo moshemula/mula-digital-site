@@ -233,7 +233,7 @@
   /* HERO - dark cinematic hero        */
   /* ================================= */
   .srv-hero{position:relative;background:var(--night);color:#fff;overflow:hidden;padding:0 0 80px;margin-top:calc(-1 * var(--nav-h));}
-  .srv-hero .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920&q=80') center/cover no-repeat;opacity:.18;pointer-events:none;}
+  .srv-hero .hero-bg{position:absolute;inset:0;opacity:.18;pointer-events:none;}
   .srv-hero::before{content:"";position:absolute;inset:0;background:
     radial-gradient(ellipse 70% 60% at 75% 20%,rgba(123,47,190,.28),transparent 60%),
     radial-gradient(ellipse 50% 50% at 10% 80%,rgba(232,0,61,.16),transparent 60%),
@@ -661,6 +661,7 @@
 </script>
   <link rel="stylesheet" href="assets/mega.css?v=3" />
   <link rel="stylesheet" href="assets/mega-wow.css?v=2" />
+  <link rel="stylesheet" href="assets/srv-hero.css?v=1" />
 </head>
 <body>
   <div id="progress"><span></span></div>
@@ -760,28 +761,11 @@
           </a>
         </div>
         <div class="hero-visual">
-          <div class="browser-mock">
-            <div class="browser-bar">
-              <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
-              <span class="browser-url">muladigital.co.il</span>
-            </div>
-            <div class="browser-body">
-              <div class="mock-nav"><span></span><span></span><span></span><span></span><span></span></div>
-              <div class="mock-hero-block"><div class="mock-h"></div><div class="mock-h2"></div><div class="mock-btn"></div></div>
-              <div class="mock-cards">
-                <div class="mock-card"><div class="mc-ic"></div><div class="mc-line"></div><div class="mc-line"></div></div>
-                <div class="mock-card"><div class="mc-ic"></div><div class="mc-line"></div><div class="mc-line"></div></div>
-                <div class="mock-card"><div class="mc-ic"></div><div class="mc-line"></div><div class="mc-line"></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="mock-badge mock-badge-1">
-            <span class="mb-ic"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span>
-            <div><b>ציון 96+</b><small>PageSpeed</small></div>
-          </div>
-          <div class="mock-badge mock-badge-2">
-            <span class="mb-ic"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
-            <div><b>מותאם מובייל</b><small>100% רספונסיבי</small></div>
+          <div class="sh-stage">
+            <figure class="sh-main"><div class="sh-bar"><i></i><i></i><i></i><span>עמית מתן · חשמלאי מוסמך</span></div><img src="assets/srv-hero/amit.webp" alt="עמית מתן · חשמלאי מוסמך" width="1000" height="600" fetchpriority="high" /></figure>
+            <figure class="sh-second "><img src="assets/srv-hero/fastel.webp" alt="" loading="lazy" /></figure>
+            <div class="sh-chip"><b>30</b><span>פניות מסוננות בחודש</span></div>
+            <a class="sh-case" href="case-amit-matan.html"><span class="sh-dot"></span><small>מתוך תיק העבודות</small><b>עמית מתן</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
           </div>
         </div>
       </div>
