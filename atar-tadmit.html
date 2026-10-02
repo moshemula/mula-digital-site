@@ -1443,7 +1443,7 @@
 
     /* -- general reveal -- */
     gsap.set('.reveal',{opacity:1,y:0});
-    gsap.utils.toArray('.reveal').forEach(function(el){
+    gsap.utils.toArray('.reveal').filter(function(el){return !el.matches('.adv,.rel-card,.testi-card,.tl-step,.video-card');}).forEach(function(el){
       gsap.from(el,{y:30,opacity:0,duration:.7,ease:'power2.out',
         scrollTrigger:{trigger:el,start:'top 88%',once:true}});
     });
@@ -1571,6 +1571,6 @@
     }, {passive:true});
   })();
   </script>
-<script src="assets/mega.js?v=3" defer></script>
+<script src="assets/mega.js?v=4" defer></script>
 </body>
 </html>

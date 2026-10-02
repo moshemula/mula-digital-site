@@ -75,3 +75,20 @@
     });
   });
 })();
+
+/* רשת ביטחון לאנימציות כניסה: תוכן שכבר עברנו לידו לעולם לא נשאר שקוף */
+(function(){
+  var sel='.reveal,.tl-step,.ct-card,.rel-card,.adv,.pillar,.step-card,.svc-card,.sg-card,.deliverable-card,.metric-hero-card,.metric-sm,.cc';
+  var t;
+  function heal(){
+    var vh=window.innerHeight;
+    document.querySelectorAll(sel).forEach(function(el){
+      var r=el.getBoundingClientRect();
+      if(r.top<vh*0.9 && r.bottom>-2000 && parseFloat(getComputedStyle(el).opacity)<0.05){
+        el.style.opacity='1'; el.style.transform='none'; el.classList.add('in');
+      }
+    });
+  }
+  window.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(heal,1600);},{passive:true});
+  window.addEventListener('load',function(){setTimeout(heal,2500);});
+})();
