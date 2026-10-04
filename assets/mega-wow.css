@@ -126,3 +126,6 @@ header.nav .mx-case-all{border-style:dashed;border-color:rgba(201,168,255,.35);b
 header.nav .mx-all-ic{width:46px;height:46px;border-radius:13px;background:var(--mx-grad);display:grid;place-items:center;}
 header.nav .mx-all-ic .mx-arr{opacity:1;transform:none;color:#fff;width:20px;height:20px;}
 header.nav .mx-case-all .mx-ctx b{color:#D9C8FF;}
+
+/* כרטיס "לכל תיק העבודות" לרוחב כל השורה */
+header.nav .mx-cases .mx-case-all{grid-column:1/-1;}
