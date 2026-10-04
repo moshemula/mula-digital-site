@@ -578,6 +578,75 @@
   .tz-phones .hd-phone__screen{aspect-ratio:9/19.5;}
   .hd-block.tz-stack{grid-template-columns:1fr;gap:24px;max-width:960px;margin-inline:auto;}
   .hd-block.tz-stack .hd-block__text p{max-width:760px;}
+  /* ===== v2 ===== */
+  .tz-ba-sec{padding-top:72px;padding-bottom:40px;}
+  .tz-compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 60px rgba(17,17,17,.08);}
+  .tz-col{padding:34px 34px 30px;}
+  .tz-col h3{font-size:24px;margin:10px 0 16px;}
+  .tz-col ul{list-style:none;display:grid;gap:10px;}
+  .tz-col li{position:relative;padding-inline-start:28px;font-size:17px;line-height:1.6;}
+  .tz-col li::before{content:"";position:absolute;inset-inline-start:0;top:8px;width:16px;height:16px;border-radius:50%;}
+  .tz-col--before{background:var(--surface);color:var(--soft);}
+  .tz-col--before li::before{background:#e4e4e7;box-shadow:inset 0 0 0 4px #fafafa;}
+  .tz-col--after{background:#0E0D15;color:#fff;}
+  .tz-col--after h3{color:#fff;}
+  .tz-col--after li::before{background:var(--grad);}
+  .tz-k{display:inline-block;font-family:var(--f-display);font-weight:800;font-size:13px;padding:4px 12px;border-radius:100px;background:#e9e9ee;color:#333;}
+  .tz-col--after .tz-k{background:var(--grad);color:#fff;}
+  .tz-dark{position:relative;background:#0B0B0F;color:#fff;padding:0 0 96px;overflow:hidden;}
+  .tz-dark--plain{padding-top:96px;}
+  .tz-dark h2{color:#fff;font-size:clamp(30px,4vw,46px);margin:10px 0 18px;}
+  .tz-dark .hd-kicker{color:#D9C8FF;}
+  .tz-lead{color:rgba(255,255,255,.78);max-width:780px;font-size:19px;}
+  .tz-cap{color:rgba(255,255,255,.6);font-size:14px;margin-top:12px;}
+  .tz-cap a{color:#D9C8FF;font-weight:700;border-bottom:1px solid currentColor;}
+  .tz-band{height:min(56vw,520px);background-size:cover;background-position:center;margin-bottom:64px;position:relative;}
+  .tz-band::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(11,11,15,.1) 40%,#0B0B0F);}
+  .tz-floor{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:12px;margin:34px 0 40px;}
+  .tz-floor figure{margin:0;border-radius:14px;overflow:hidden;}
+  .tz-floor img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s var(--ease);}
+  .tz-floor figure:hover img{transform:scale(1.04);}
+  .tz-floor .tz-f-big{grid-column:span 2;grid-row:span 2;}
+  .tz-prod-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:36px;align-items:center;}
+  .tz-mgmt{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .tz-mgmt img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:14px;}
+  .tz-mgmt p{grid-column:1/-1;color:rgba(255,255,255,.78);font-size:16px;line-height:1.7;}
+  .tz-mgmt p b{color:#fff;}
+  .tz-chain{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:28px 0 32px;counter-reset:ch;}
+  .tz-chain>div{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 20px 20px;counter-increment:ch;}
+  .tz-chain>div::before{content:counter(ch);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--grad);color:#fff;font-family:var(--f-display);font-weight:800;font-size:14px;margin-bottom:12px;}
+  .tz-chain b{display:block;font-family:var(--f-display);font-size:18px;margin-bottom:6px;}
+  .tz-chain span{display:block;font-size:15.5px;line-height:1.65;color:var(--soft);}
+  .tz-air{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:28px;align-items:center;}
+  .tz-short{margin:0;}
+  .tz-short__screen{position:relative;aspect-ratio:9/16;border:7px solid #1b1b22;border-radius:30px;overflow:hidden;background:#000;box-shadow:0 30px 70px rgba(0,0,0,.35);}
+  .tz-short figcaption{text-align:center;font-size:14px;font-weight:600;margin-top:10px;color:var(--soft);}
+  .tz-dark .tz-short figcaption{color:rgba(255,255,255,.75);}
+  .tz-shorts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:34px;}
+  .tz-eb{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start;margin-top:28px;}
+  .tz-eb-list{list-style:none;display:grid;gap:14px;}
+  .tz-eb-list li{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px;font-size:16px;line-height:1.65;color:var(--soft);}
+  .tz-eb-list b{display:block;font-family:var(--f-display);font-size:18px;color:var(--ink);margin-bottom:4px;}
+  .tz-eb-list em{display:block;font-style:normal;font-weight:800;color:var(--ink);margin-top:8px;font-family:var(--f-display);}
+  .tz-sales{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:28px;}
+  .tz-sales-card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;}
+  .tz-sales-card img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:top;}
+  .tz-sales-card div{padding:16px 18px 20px;}
+  .tz-sales-card b{display:block;font-family:var(--f-display);font-size:18px;margin-bottom:6px;}
+  .tz-sales-card span{font-size:15px;line-height:1.65;color:var(--soft);}
+  .tz-final{text-align:center;}
+  .tz-quote{font-family:var(--f-display);font-weight:900;font-size:clamp(28px,4.2vw,50px);line-height:1.25;letter-spacing:-.02em;color:#fff;max-width:960px;margin-inline:auto;}
+  @media (max-width:1000px){.tz-chain,.tz-sales{grid-template-columns:1fr 1fr;}.tz-shorts{grid-template-columns:repeat(2,minmax(0,1fr));max-width:560px;margin-inline:auto;}.tz-prod-grid,.tz-eb{grid-template-columns:1fr;}.tz-floor{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px;}}
+  @media (max-width:700px){.tz-compare{grid-template-columns:1fr;}.tz-col{padding:26px 22px;}.tz-air{grid-template-columns:1fr;}.tz-air .tz-short{max-width:240px;margin-inline:auto;}}
+  @media (max-width:520px){.tz-chain,.tz-sales{grid-template-columns:1fr;}.tz-floor{grid-auto-rows:120px;gap:8px;}.tz-shorts{gap:12px;}.tz-dark{padding-bottom:72px;}.tz-dark--plain{padding-top:72px;}.tz-band{margin-bottom:40px;}}
+  .tz-final .tz-quote{font-size:clamp(28px,4.2vw,50px);color:#fff;margin-inline:auto;}
+  .tz-floor figure img{height:100%!important;}
+  .tz-air .ab-shot img{height:auto;}
+  .tz-steps{grid-template-columns:repeat(3,minmax(0,1fr));}
+  .hd-block.tz-nt{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);}
+  @media (max-width:900px){.tz-steps{grid-template-columns:1fr 1fr;}.hd-block.tz-nt{grid-template-columns:1fr;}}
+  @media (max-width:520px){.tz-steps{grid-template-columns:1fr;}}
+  .tz-eb .tz-grid--2{grid-template-columns:1fr 1fr;}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GEHNCC9X6F"></script>
@@ -696,7 +765,38 @@
         </div>
       </div>
     </div>
-      <div class="hx-wall" aria-hidden="true"><div class="hx-track"><img src="assets/case-tamuz/photo-management.webp" alt="" loading="lazy" /><img src="assets/case-tamuz/site-departments.webp" alt="" loading="lazy" /><img src="assets/case-tamuz/cover-facebook.webp" alt="" loading="lazy" /><img src="assets/case-tamuz/post-rosh.webp" alt="" loading="lazy" /><img src="assets/case-tamuz/brand-stationery.webp" alt="" loading="lazy" /><img src="assets/case-tamuz/photo-solder.webp" alt="" loading="lazy" /><img src="assets/case-tamuz/site-standards.webp" alt="" loading="lazy" /><img src="assets/case-tamuz/brand-jobs.webp" alt="" loading="lazy" /><img src="assets/case-tamuz/post-managers.webp" alt="" loading="lazy" /><img src="assets/case-tamuz/photo-npi.webp" alt="" loading="lazy" /></div></div>
+      <div class="hx-wall" aria-hidden="true"><div class="hx-track"><img src="assets/case-tamuz/floor-assembly-1.webp" alt="" loading="lazy" /><img src="assets/case-tamuz/site-departments.webp" alt="" loading="lazy" /><img src="assets/case-tamuz/floor-cnc.webp" alt="" loading="lazy" /><img src="assets/case-tamuz/post-scale.webp" alt="" loading="lazy" /><img src="assets/case-tamuz/brand-stationery.webp" alt="" loading="lazy" /><img src="assets/case-tamuz/floor-wiring.webp" alt="" loading="lazy" /><img src="assets/case-tamuz/newtech-booth.webp" alt="" loading="lazy" /><img src="assets/case-tamuz/floor-team.webp" alt="" loading="lazy" /><img src="assets/case-tamuz/brand-jobs.webp" alt="" loading="lazy" /><img src="assets/case-tamuz/airobotics-floor.webp" alt="" loading="lazy" /></div></div>
+  </section>
+
+
+  <!-- ===== לפני / אחרי ===== -->
+  <section class="cs-section tz-ba-sec">
+    <div class="wrap-full">
+      <div class="tz-compare reveal">
+        <div class="tz-col tz-col--before">
+          <span class="tz-k">לפני · ינואר 2024</span>
+          <h3>יכולות של מפעל גדול. נראות של עמוד אחד.</h3>
+          <ul>
+            <li>עמוד בודד בתוך האתר של קבוצת האם</li>
+            <li>שני שמות שגוגל התבלבל ביניהם</li>
+            <li>לוגו שנבנה לשם הישן</li>
+            <li>רשתות חברתיות לא מנוהלות, ובלי עמוד לינקדאין פעיל</li>
+            <li>בלי דרך ליצור קשר עם אנשי מפתח, ובלי דף משרות</li>
+          </ul>
+        </div>
+        <div class="tz-col tz-col--after">
+          <span class="tz-k">אחרי · היום</span>
+          <h3>מותג תעשייתי אחד, עם מערכת שיווק שעובדת סביבו.</h3>
+          <ul>
+            <li>שם אחד, לוגו חדש וספר מותג מלא</li>
+            <li>אתר עם עמוד לכל מחלקה ולכל שירות, ועמוד תקנים</li>
+            <li>יום הפקה במפעל, סרטון תדמית וערוץ וידאו מרצפת הייצור</li>
+            <li>עמוד לינקדאין חדש שנבנה מאפס, פייסבוק ויוטיוב באותה שפה</li>
+            <li>עשרות משרות ששווקו, קמפיין גיוס לקורס חיווט ודוכן בתערוכה</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ===== 1. הסיפור ===== -->
@@ -748,6 +848,35 @@
             <span class="cb-text"><strong>גם גיוס הוא שיווק</strong><br>מפעל בפריפריה צריך להביא עובדים טובים. בלי דף קריירה מסודר, מי שחיפש עבודה לא מצא איפה להתחיל</span>
           </li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== יום ההפקה ===== -->
+  <section class="tz-dark">
+    <div class="tz-band" style="background-image:url('assets/case-tamuz/factory-hall.webp')" role="img" aria-label="אולם ההרכבות של תמוז"></div>
+    <div class="wrap-full">
+      <span class="hd-kicker">יום ההפקה</span>
+      <h2 class="reveal">ירדנו לרצפת הייצור</h2>
+      <p class="reveal tz-lead">תמוז לא צריכה תמונות סטוק. יש לה מכונות CNC, קווי הרכבה, חיווט, רובוטים ומאות אנשים שעושים עבודה מדויקת. אז הבאנו צלם ועורך למפעל, וצילמנו את מה שקורה שם באמת: את רצפת הייצור, את המחלקות ואת ההנהלה, אחד אחד. מאותו יום יצא גם סרטון התדמית, עם קריינות.</p>
+      <div class="tz-floor reveal">
+        <figure class="tz-f-big"><img src="assets/case-tamuz/floor-assembly-1.webp" alt="הרכבה ואינטגרציה ברצפת הייצור של תמוז" loading="lazy" width="1200" height="800" /></figure>
+        <figure><img src="assets/case-tamuz/floor-cnc.webp" alt="עיבוד שבבי CNC במפעל" loading="lazy" width="1200" height="800" /></figure>
+        <figure><img src="assets/case-tamuz/floor-wiring.webp" alt="עבודת חיווט והלחמה" loading="lazy" width="1000" height="1000" /></figure>
+        <figure><img src="assets/case-tamuz/floor-machining.webp" alt="עבודה על מכונה במפעל" loading="lazy" width="1200" height="800" /></figure>
+        <figure><img src="assets/case-tamuz/floor-team.webp" alt="צוות ההרכבות בעבודה" loading="lazy" width="1200" height="800" /></figure>
+      </div>
+      <div class="tz-prod-grid">
+        <div class="tz-mgmt reveal">
+          <img src="assets/case-tamuz/mgmt-1.webp" alt="צילום תדמית להנהלה" loading="lazy" width="700" height="1050" />
+          <img src="assets/case-tamuz/mgmt-2.webp" alt="צילום תדמית להנהלה" loading="lazy" width="700" height="1050" />
+          <p><b>צילומי תדמית לכל מנהל מחלקה.</b> באתר, בלינקדאין ובחתימת המייל. לקוח שנכנס לעמוד של מחלקת האיכות רואה מי מנהל אותה.</p>
+        </div>
+        <div class="reveal">
+          <div class="tz-video"><iframe srcdoc="&lt;style&gt;*{margin:0;padding:0;overflow:hidden}html,body{height:100%;background:#000}a{display:block;height:100%;position:relative}img{width:100%;height:100%;object-fit:cover}i{position:absolute;top:50%;left:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(0,0,0,.55);border:2px solid rgba(255,255,255,.85)}i:after{content:&#x27;&#x27;;position:absolute;left:25px;top:18px;border-style:solid;border-width:13px 0 13px 21px;border-color:transparent transparent transparent #fff}a:hover i{background:#E8003D;border-color:#E8003D}&lt;/style&gt;&lt;a href=&#x27;https://www.youtube-nocookie.com/embed/oA0AwJibyOA?autoplay=1&amp;rel=0&#x27;&gt;&lt;img src=&#x27;https://i.ytimg.com/vi/oA0AwJibyOA/maxresdefault.jpg&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;i&gt;&lt;/i&gt;&lt;/a&gt;" src="https://www.youtube-nocookie.com/embed/oA0AwJibyOA?rel=0" title="סרטון התדמית של Tamuz FTK Solutions" loading="lazy" allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div>
+          <p class="tz-cap">סרטון התדמית, בערוץ היוטיוב של תמוז ובדף הבית של האתר.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -812,6 +941,24 @@
           <p>קאברים ותוכן ללינקדאין, פייסבוק ויוטיוב, פוסטים של חיי המפעל, ועד ברזנט למשאית ופלייר.</p>
           <p class="dc-b">אותו מותג בכל נקודת מגע: במסך, בתיבת המייל ועל הכביש.</p>
         </div>
+              <div class="deliverable-card">
+          <div class="dc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="url(#tzg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h3>וידאו מרצפת הייצור</h3>
+          <p>סרטונים קצרים על קובוטים, ריתוך רובוטי, CNC ואינטגרציה, בערוץ היוטיוב וברשתות.</p>
+          <p class="dc-b">מהנדס רואה את היכולת בעבודה, לא רק קורא עליה.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="dc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="url(#tzg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h3>גיוס עובדים ברשתות</h3>
+          <p>עשרות משרות מכל הסוגים, וקמפיין ממומן לגיוס לקורס חיווט.</p>
+          <p class="dc-b">המפעל מגייס דרך אותו מותג שהוא מוכר בו.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="dc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="url(#tzg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h3>דוכן לתערוכת NEW-TECH</h3>
+          <p>עיצוב הדוכן בשפת המותג החדשה, עם השירותים והיכולות של המפעל.</p>
+          <p class="dc-b">בתערוכה, תמוז נראית כמו שהיא נראית באתר.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -859,17 +1006,6 @@
         <figure class="hd-phone"><div class="hd-phone__screen"><img src="assets/case-tamuz/site-career-m.webp" alt="דף הקריירה במובייל" loading="lazy" width="600" height="1298" /></div><figcaption>דף הקריירה במובייל</figcaption></figure>
       </div>
 
-      <div class="hd-block tz-stack reveal" style="margin-top:72px">
-        <div class="hd-block__text">
-          <span class="hd-kicker">וידאו</span>
-          <h3>סרטון התדמית</h3>
-          <p>המפעל, המכונות, האנשים והיכולות, בסרטון אחד עם קריינות. הסרטון עלה לערוץ היוטיוב של החברה ומוטמע בדף הבית של האתר, כך שכל מבקר יכול לראות את המפעל לפני שהוא מרים טלפון.</p>
-        </div>
-        <div class="tz-video">
-          <iframe srcdoc="&lt;style&gt;*{margin:0;padding:0;overflow:hidden}html,body{height:100%;background:#000}a{display:block;height:100%;position:relative}img{width:100%;height:100%;object-fit:cover}i{position:absolute;top:50%;left:50%;width:68px;height:68px;margin:-34px 0 0 -34px;border-radius:50%;background:rgba(0,0,0,.55);border:2px solid rgba(255,255,255,.85)}i:after{content:&#x27;&#x27;;position:absolute;left:27px;top:20px;border-style:solid;border-width:14px 0 14px 22px;border-color:transparent transparent transparent #fff}a:hover i{background:#E8003D;border-color:#E8003D}&lt;/style&gt;&lt;a href=&#x27;https://www.youtube-nocookie.com/embed/oA0AwJibyOA?autoplay=1&amp;rel=0&#x27;&gt;&lt;img src=&#x27;https://i.ytimg.com/vi/oA0AwJibyOA/maxresdefault.jpg&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;i&gt;&lt;/i&gt;&lt;/a&gt;" src="https://www.youtube-nocookie.com/embed/oA0AwJibyOA?rel=0" title="סרטון התדמית של Tamuz FTK Solutions" loading="lazy" allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
-        </div>
-      </div>
-
       <div class="hd-subhead reveal">
         <span class="hd-kicker">רשתות ותוכן</span>
         <h3>מפעל שיש לו פנים</h3>
@@ -883,7 +1019,7 @@
         <figure class="ab-shot"><img src="assets/case-tamuz/post-rosh.webp" alt="ברכת שנה טובה בעיצוב המותג" loading="lazy" width="900" height="900" /><figcaption>ברכה לחג</figcaption></figure>
         <figure class="ab-shot"><img src="assets/case-tamuz/post-partner.webp" alt="פוסט תדמית על שותפות Turn-Key" loading="lazy" width="900" height="900" /><figcaption>פוסט תדמית</figcaption></figure>
         <figure class="ab-shot"><img src="assets/case-tamuz/post-managers.webp" alt="פוסט מגיבוש המנהלים" loading="lazy" width="1000" height="750" /><figcaption>גיבוש מנהלים</figcaption></figure>
-        <figure class="ab-shot"><img src="assets/case-tamuz/post-2026.webp" alt="פוסט פתיחת שנת 2026" loading="lazy" width="900" height="600" /><figcaption>פוסט לשנה החדשה</figcaption></figure>
+        <figure class="ab-shot"><img src="assets/case-tamuz/post-sukkot.webp" alt="ברכת חג סוכות בעיצוב המותג" loading="lazy" width="900" height="900" /><figcaption>חג סוכות במפעל</figcaption></figure>
       </div>
 
       <div class="hd-block tz-stack reveal" style="margin-top:72px">
@@ -900,15 +1036,105 @@
     </div>
   </section>
 
+  <!-- ===== קייס בתוך קייס ===== -->
   <section class="cs-section">
     <div class="wrap-full">
-      <h2 class="reveal">הסדר שעבדנו לפיו</h2>
-      <p class="reveal">בפרויקט מיתוג של חברה תעשייתית, הסדר הוא חצי מהעבודה. ככה כל שלב נבנה על חומר אמיתי מהשלב שלפניו.</p>
-      <ol class="ab-steps reveal">
-        <li><b>מאפיינים</b>פגישה עם ההנהלה, מיפוי המצב הקיים, מטרות ומחקר מילות מפתח</li>
-        <li><b>ממתגים</b>שם אחד, לוגו, צבעים וספר מותג</li>
-        <li><b>מצלמים</b>יום צילום במפעל, צילומי הנהלה וסרטון תדמית</li>
-        <li><b>בונים ומפיצים</b>אתר עם עמודי מחלקות ושירותים, דף קריירה, וערוצים חברתיים באותה שפה</li>
+      <span class="hd-kicker">קייס בתוך הקייס</span>
+      <h2 class="reveal">מערכת אחת על הרצפה, סיפור שלם לשוק</h2>
+      <p class="reveal">ברצפת ההרכבות של תמוז נבנתה מערכת מורכבת עבור Airobotics, חברה שמפתחת רחפנים אוטונומיים. לא הסתפקנו בתמונה ובפוסט. ככה הפכנו את זה לתוכן:</p>
+      <div class="tz-chain reveal">
+        <div><b>מה ראינו</b><span>מערכת גדולה בתהליך הרכבה ואינטגרציה: חשמל, מכניקה ואלקטרוניקה, על רצפת הייצור.</span></div>
+        <div><b>מה הסיפור</b><span>חברת הייטק שבונה מוצר מתקדם בחרה בתמוז כשותפה לייצור. זו בדיוק ההוכחה שמהנדס בחברה אחרת צריך לראות.</span></div>
+        <div><b>איך צילמנו</b><span>את ההרכבה עצמה, ואת הלקוח מספר במילים שלו למה הוא עובד עם תמוז.</span></div>
+        <div><b>מה עלה</b><span>סרטון המלצה של הלקוח, סרטון משותף, ותמונות לאתר ולרשתות.</span></div>
+      </div>
+      <div class="tz-air reveal">
+        <figure class="ab-shot"><img src="assets/case-tamuz/airobotics-floor.webp" alt="הרכבה ואינטגרציה של מערכת עבור Airobotics ברצפת הייצור של תמוז" loading="lazy" width="1400" height="932" /><figcaption>הרכבה ואינטגרציה של המערכת, ברצפת הייצור של תמוז.</figcaption></figure>
+        <figure class="tz-short"><div class="tz-short__screen"><iframe srcdoc="&lt;style&gt;*{margin:0;padding:0;overflow:hidden}html,body{height:100%;background:#000}a{display:block;height:100%;position:relative}img{width:100%;height:100%;object-fit:cover}i{position:absolute;top:50%;left:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(0,0,0,.55);border:2px solid rgba(255,255,255,.85)}i:after{content:&#x27;&#x27;;position:absolute;left:25px;top:18px;border-style:solid;border-width:13px 0 13px 21px;border-color:transparent transparent transparent #fff}a:hover i{background:#E8003D;border-color:#E8003D}&lt;/style&gt;&lt;a href=&#x27;https://www.youtube-nocookie.com/embed/SMYR70jx9YM?autoplay=1&amp;rel=0&#x27;&gt;&lt;img src=&#x27;https://i.ytimg.com/vi/SMYR70jx9YM/oar2.jpg&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;i&gt;&lt;/i&gt;&lt;/a&gt;" src="https://www.youtube-nocookie.com/embed/SMYR70jx9YM?rel=0" title="אייל גלאור מחברת Airobotics ממליץ על Tamuz FTK Solutions" loading="lazy" allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div><figcaption>אייל גלאור, Airobotics, על העבודה עם תמוז</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== וידאו מהרצפה (כהה) ===== -->
+  <section class="tz-dark tz-dark--plain">
+    <div class="wrap-full">
+      <span class="hd-kicker">וידאו מרצפת הייצור</span>
+      <h2 class="reveal">היכולת, בעבודה</h2>
+      <p class="reveal tz-lead">"יש לנו קובוטים" זה משפט. סרטון של קובוט שמרתך לבד זו הוכחה. בערוץ היוטיוב של תמוז יש היום יותר מ-20 סרטונים, רובם מרצפת הייצור, והם עולים גם ללינקדאין ולפייסבוק.</p>
+      <div class="tz-shorts reveal">
+        <figure class="tz-short"><div class="tz-short__screen"><iframe srcdoc="&lt;style&gt;*{margin:0;padding:0;overflow:hidden}html,body{height:100%;background:#000}a{display:block;height:100%;position:relative}img{width:100%;height:100%;object-fit:cover}i{position:absolute;top:50%;left:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(0,0,0,.55);border:2px solid rgba(255,255,255,.85)}i:after{content:&#x27;&#x27;;position:absolute;left:25px;top:18px;border-style:solid;border-width:13px 0 13px 21px;border-color:transparent transparent transparent #fff}a:hover i{background:#E8003D;border-color:#E8003D}&lt;/style&gt;&lt;a href=&#x27;https://www.youtube-nocookie.com/embed/ACsCd3GaB54?autoplay=1&amp;rel=0&#x27;&gt;&lt;img src=&#x27;https://i.ytimg.com/vi/ACsCd3GaB54/oar2.jpg&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;i&gt;&lt;/i&gt;&lt;/a&gt;" src="https://www.youtube-nocookie.com/embed/ACsCd3GaB54?rel=0" title="קובוט ריתוך" loading="lazy" allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div><figcaption>קובוט ריתוך</figcaption></figure>
+        <figure class="tz-short"><div class="tz-short__screen"><iframe srcdoc="&lt;style&gt;*{margin:0;padding:0;overflow:hidden}html,body{height:100%;background:#000}a{display:block;height:100%;position:relative}img{width:100%;height:100%;object-fit:cover}i{position:absolute;top:50%;left:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(0,0,0,.55);border:2px solid rgba(255,255,255,.85)}i:after{content:&#x27;&#x27;;position:absolute;left:25px;top:18px;border-style:solid;border-width:13px 0 13px 21px;border-color:transparent transparent transparent #fff}a:hover i{background:#E8003D;border-color:#E8003D}&lt;/style&gt;&lt;a href=&#x27;https://www.youtube-nocookie.com/embed/AMmlG_lkHvU?autoplay=1&amp;rel=0&#x27;&gt;&lt;img src=&#x27;https://i.ytimg.com/vi/AMmlG_lkHvU/oar2.jpg&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;i&gt;&lt;/i&gt;&lt;/a&gt;" src="https://www.youtube-nocookie.com/embed/AMmlG_lkHvU?rel=0" title="עיבוד חלק מורכב במכונת CNC עם 5 צירים ובשילוב קובוט" loading="lazy" allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div><figcaption>CNC עם 5 צירים וקובוט</figcaption></figure>
+        <figure class="tz-short"><div class="tz-short__screen"><iframe srcdoc="&lt;style&gt;*{margin:0;padding:0;overflow:hidden}html,body{height:100%;background:#000}a{display:block;height:100%;position:relative}img{width:100%;height:100%;object-fit:cover}i{position:absolute;top:50%;left:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(0,0,0,.55);border:2px solid rgba(255,255,255,.85)}i:after{content:&#x27;&#x27;;position:absolute;left:25px;top:18px;border-style:solid;border-width:13px 0 13px 21px;border-color:transparent transparent transparent #fff}a:hover i{background:#E8003D;border-color:#E8003D}&lt;/style&gt;&lt;a href=&#x27;https://www.youtube-nocookie.com/embed/lDbb2DhwF7g?autoplay=1&amp;rel=0&#x27;&gt;&lt;img src=&#x27;https://i.ytimg.com/vi/lDbb2DhwF7g/oar2.jpg&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;i&gt;&lt;/i&gt;&lt;/a&gt;" src="https://www.youtube-nocookie.com/embed/lDbb2DhwF7g?rel=0" title="אינטגרציה מלאה של עשרות תתי מערכות" loading="lazy" allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div><figcaption>אינטגרציה של עשרות תתי-מערכות</figcaption></figure>
+        <figure class="tz-short"><div class="tz-short__screen"><iframe srcdoc="&lt;style&gt;*{margin:0;padding:0;overflow:hidden}html,body{height:100%;background:#000}a{display:block;height:100%;position:relative}img{width:100%;height:100%;object-fit:cover}i{position:absolute;top:50%;left:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(0,0,0,.55);border:2px solid rgba(255,255,255,.85)}i:after{content:&#x27;&#x27;;position:absolute;left:25px;top:18px;border-style:solid;border-width:13px 0 13px 21px;border-color:transparent transparent transparent #fff}a:hover i{background:#E8003D;border-color:#E8003D}&lt;/style&gt;&lt;a href=&#x27;https://www.youtube-nocookie.com/embed/w5ZiOa-TmUA?autoplay=1&amp;rel=0&#x27;&gt;&lt;img src=&#x27;https://i.ytimg.com/vi/w5ZiOa-TmUA/oar2.jpg&#x27; alt=&#x27;&#x27; loading=&#x27;lazy&#x27;&gt;&lt;i&gt;&lt;/i&gt;&lt;/a&gt;" src="https://www.youtube-nocookie.com/embed/w5ZiOa-TmUA?rel=0" title="ככה נראה שדרוג קו ייצור שמעלה איכות ומוריד סיכונים" loading="lazy" allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div><figcaption>שדרוג קו ייצור</figcaption></figure>
+      </div>
+      <p class="tz-cap"><a href="https://www.youtube.com/@TamuzFTKSolutions" target="_blank" rel="noopener">לערוץ היוטיוב של תמוז</a></p>
+    </div>
+  </section>
+
+  <!-- ===== מיתוג מעסיק ===== -->
+  <section class="cs-section">
+    <div class="wrap-full">
+      <span class="hd-kicker">מיתוג מעסיק</span>
+      <h2 class="reveal">שיווק גם כלפי העובדים</h2>
+      <p class="reveal">מפעל בפריפריה מתחרה על עובדים טובים לא פחות משהוא מתחרה על לקוחות. אז גיוס קיבל אצלנו מקום משלו, באותו מותג ובאותה רמה:</p>
+      <div class="tz-eb">
+        <ul class="tz-eb-list reveal">
+          <li><b>עשרות משרות מכל הסוגים</b>שיווקנו ברשתות: ייצור, הנדסה, איכות, רכש, תפעול ועוד. כל משרה בעיצוב אחיד.<em>מועמד מזהה את תמוז, לא עוד מודעת "דרושים".</em></li>
+          <li><b>קמפיין גיוס לקורס חיווט</b>קמפיין ממומן ברשתות החברתיות, לגיוס משתתפים לקורס.<em>המפעל מכשיר את כוח האדם שהוא צריך, במקום לחכות שיגיע.</em></li>
+          <li><b>דף קריירה באתר</b>עם המשרות הפתוחות ושליחת קורות חיים ישירה.<em>כל פוסט גיוס מוביל למקום אחד מסודר.</em></li>
+          <li><b>חיי המפעל ברשתות</b>חגים, גיבוש מנהלים ואירועי צוות.<em>מי ששוקל להצטרף רואה איך נראה לעבוד שם.</em></li>
+        </ul>
+        <div class="tz-grid tz-grid--2 reveal" style="margin:0">
+          <figure class="ab-shot"><img src="assets/case-tamuz/brand-jobs.webp" alt="פוסטי גיוס בעיצוב אחיד" loading="lazy" width="1400" height="996" /><figcaption>פוסטי גיוס</figcaption></figure>
+          <figure class="ab-shot"><img src="assets/case-tamuz/post-managers.webp" alt="פוסט מגיבוש המנהלים" loading="lazy" width="1000" height="750" /><figcaption>גיבוש מנהלים</figcaption></figure>
+          <figure class="ab-shot"><img src="assets/case-tamuz/post-sukkot.webp" alt="ברכת חג סוכות" loading="lazy" width="900" height="900" /><figcaption>חג במפעל</figcaption></figure>
+          <figure class="ab-shot"><img src="assets/case-tamuz/site-career.webp" alt="דף הקריירה באתר" loading="lazy" width="1440" height="900" /><figcaption>דף הקריירה</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== חיבור למכירות ===== -->
+  <section class="cs-section" style="background:var(--surface);">
+    <div class="wrap-full">
+      <span class="hd-kicker">השיווק מחובר למכירות</span>
+      <h2 class="reveal">תוכן שעוזר לצוות המכירות לפתוח שיחה</h2>
+      <p class="reveal">הלקוח של תמוז הוא מהנדס, איש רכש או מנהל פרויקט בחברת הייטק, רפואה או ביטחון. הוא מחפש ספק ברגעים מסוימים מאוד: כשמוצר עובר מאב טיפוס לייצור סדרתי, כשההזמנות גדלות והייצור הקיים לא מספיק, או כשצריך ספק מאושר עם תקנים. בנינו את התוכן סביב הרגעים האלה.</p>
+      <div class="tz-sales">
+        <div class="tz-sales-card reveal"><img src="assets/case-tamuz/post-npi.webp" alt="פוסט: מ-NPI לייצור סדרתי" loading="lazy" width="896" height="1112" /><div><b>מאב טיפוס לסדרה</b><span>תוכן שמדבר על המעבר מ-NPI לייצור סדרתי. בדיוק הנקודה שבה חברת פיתוח מחפשת שותף לייצור.</span></div></div>
+        <div class="tz-sales-card reveal"><img src="assets/case-tamuz/post-scale.webp" alt="פוסט: יכולת ייצור בכל קנה מידה" loading="lazy" width="1200" height="800" /><div><b>גדילה בהזמנות</b><span>"יכולת ייצור בכל קנה מידה": מסר ללקוח שהייצור הקיים שלו כבר לא עומד בקצב.</span></div></div>
+        <div class="tz-sales-card reveal"><img style="object-position:center" src="assets/case-tamuz/post-kla.webp" alt="תוכן לתעשיית המוליכים למחצה" loading="lazy" width="800" height="1120" /><div><b>לפי תעשייה</b><span>ויז'ואלים לתעשיות שתמוז כבר עובדת בהן, כמו מוליכים למחצה ומכשור רפואי. לקוח רואה מוצר שדומה לשלו.</span></div></div>
+        <div class="tz-sales-card reveal"><img src="assets/case-tamuz/site-quality.webp" alt="עמוד תקני האיכות באתר" loading="lazy" width="1440" height="900" /><div><b>אישור ספק</b><span>עמוד תקנים עם התעודות עצמן. איש הרכש מקבל את מה שהוא צריך בלי לחכות למייל.</span></div></div>
+      </div>
+      <p class="reveal" style="margin-top:28px">ולצד התוכן הדיגיטלי, כלים לפגישה עצמה: מצגת חברה שעברה כמה סבבים מול הצוות של תמוז, פלייר שמציג את כל היכולות בעמוד אחד, וחתימות מייל אחידות לכל המנהלים.</p>
+    </div>
+  </section>
+
+  <!-- ===== NEW-TECH ===== -->
+  <section class="cs-section">
+    <div class="wrap-full">
+      <div class="hd-block tz-nt reveal">
+        <div class="hd-block__text">
+          <span class="hd-kicker">תערוכת NEW-TECH</span>
+          <h3>המותג עולה לבמה</h3>
+          <p>בתערוכה, לקוחות פוטנציאליים עוברים בין עשרות דוכנים בכמה דקות. עיצבנו לתמוז דוכן בשפת המותג החדשה: הלוגו, הצבעים והיכולות של המפעל, כך שמי שראה את האתר או את הלינקדאין מזהה את תמוז מרחוק.</p>
+        </div>
+        <figure class="ab-shot"><img src="assets/case-tamuz/newtech-booth.webp" alt="עיצוב הדוכן של תמוז לתערוכת NEW-TECH" loading="lazy" width="1400" height="933" /><figcaption>עיצוב הדוכן לתערוכת NEW-TECH.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="wrap-full">
+      <h2 class="reveal">איך עבדנו עם תמוז</h2>
+      <p class="reveal">לא תבנית של משרד פרסום. תהליך שנבנה סביב מפעל.</p>
+      <ol class="ab-steps tz-steps reveal">
+        <li><b>לומדים את היכולת</b>אפיון עם ההנהלה ושאלון לכל מנהל מחלקה: מה אתם עושים שאחרים לא</li>
+        <li><b>יורדים לרצפה</b>יום הפקה במפעל: מכונות, קווי הרכבה, אנשים והנהלה</li>
+        <li><b>מזהים את הסיפור</b>מה מהנדס בחברה אחרת צריך לראות כדי לסמוך על תמוז</li>
+        <li><b>מייצרים מדיה</b>מותג, אתר, סרטון תדמית, סרטונים קצרים, פוסטים ומשרות</li>
+        <li><b>מפיצים לקהל הנכון</b>לינקדאין, יוטיוב, פייסבוק, תערוכה וקמפיינים ממומנים</li>
+        <li><b>מחברים למכירות</b>מצגת, פלייר, עמוד תקנים ותוכן לפי הרגעים שבהם לקוח מחפש ספק</li>
       </ol>
     </div>
   </section>
@@ -917,17 +1143,17 @@
   <section class="cs-section" style="background:var(--surface);">
     <div class="wrap-full">
       <h2 class="reveal">התוצאות</h2>
-      <p class="reveal" style="color:var(--muted);font-size:15px;margin-bottom:24px">מה שקיים היום ברשת, לעומת מה שהיה בינואר 2024.</p>
+      <p class="reveal" style="color:var(--muted);font-size:15px;margin-bottom:24px">מה שקיים היום, לעומת ינואר 2024. ולמה זה חשוב לעסק.</p>
       <div class="metrics-hero">
-        <div class="metric-hero-card"><span class="mh-num">שם אחד</span><span class="mh-label">ומותג אחד, במקום שני שמות שגוגל התבלבל ביניהם</span></div>
-        <div class="metric-hero-card"><span class="mh-num">15 עמודים</span><span class="mh-label">ייעודיים לשירותים ולמחלקות, במקום עמוד אחד באתר של קבוצת האם</span></div>
-        <div class="metric-hero-card"><span class="mh-num">7 תקנים</span><span class="mh-label">מוצגים באתר, כולל ISO 9001, ISO 13485 ו-AS9100</span></div>
+        <div class="metric-hero-card"><span class="mh-num">מ-0</span><span class="mh-label">עמוד לינקדאין שפתחנו ובנינו מאפס. הערוץ שבו מהנדסים ואנשי רכש בודקים ספקים</span></div>
+        <div class="metric-hero-card"><span class="mh-num">עשרות משרות</span><span class="mh-label">שיווקנו ברשתות, ועוד קמפיין גיוס לקורס חיווט. מפעל שמגייס דרך המותג שלו</span></div>
+        <div class="metric-hero-card"><span class="mh-num">מעל 20 סרטונים</span><span class="mh-label">בערוץ היוטיוב, רובם מרצפת הייצור. הוכחה ליכולת במקום הבטחה</span></div>
       </div>
       <div class="metrics-secondary">
-        <div class="metric-sm"><div><span class="ms-num">22 עמודים</span><span class="ms-label">בספר המותג, מהלוגו ועד חתימת המייל והחולצות</span></div></div>
-        <div class="metric-sm"><div><span class="ms-num">4 ערוצים</span><span class="ms-label">אתר, LinkedIn, Facebook ו-YouTube, באותה שפה ויזואלית</span></div></div>
-        <div class="metric-sm"><div><span class="ms-num">דף קריירה</span><span class="ms-label">עם המשרות הפתוחות ושליחת קורות חיים ישירה</span></div></div>
-        <div class="metric-sm"><div><span class="ms-num">חיפוש בגוגל</span><span class="ms-label">חיפוש של שם החברה מוביל היום לאתר ולעמודים הרשמיים שלה</span></div></div>
+        <div class="metric-sm"><div><span class="ms-num">15 עמודים</span><span class="ms-label">באתר, אחד לכל שירות ולכל מחלקה, במקום עמוד אחד באתר של קבוצת האם. כל חיפוש מגיע לתשובה מדויקת</span></div></div>
+        <div class="metric-sm"><div><span class="ms-num">שם אחד</span><span class="ms-label">במקום שניים. חיפוש של שם החברה בגוגל מוביל היום לאתר ולעמודים הרשמיים שלה</span></div></div>
+        <div class="metric-sm"><div><span class="ms-num">7 תקנים</span><span class="ms-label">גלויים באתר, כולל ISO 13485 ו-AS9100. פחות שאלות בתהליך אישור ספק</span></div></div>
+        <div class="metric-sm"><div><span class="ms-num">דוכן אחד</span><span class="ms-label">בתערוכת NEW-TECH, באותה שפה כמו האתר והרשתות</span></div></div>
       </div>
       <div class="hd-insight reveal">
         <span class="hd-kicker">תובנה מהשטח</span>
@@ -938,13 +1164,9 @@
   </section>
 
   <!-- ===== 7. מה לומדים ===== -->
-  <section class="value-section">
+  <section class="value-section tz-final">
     <div class="wrap-full">
-      <h2 class="reveal">
-        <span class="sec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span>
-        מה לומדים מהקייס הזה
-      </h2>
-      <p>אצל הרבה חברות ייצור, הפער הוא לא ביכולות. הוא בנראות. המפעל יודע לייצר מערכות מורכבות ללקוחות הכי תובעניים בשוק, אבל ברשת הוא נראה קטן ומבולבל. מה שעבד פה זה הסדר: קודם מותג אחד ברור, אחר כך חומר אמיתי מהמפעל, ורק אז אתר וערוצים. ככה הנוכחות ברשת מתחילה להיראות כמו המפעל עצמו.</p>
+      <p class="tz-quote reveal">תמוז כבר ידעה לייצר מערכות מורכבות.<br><span class="gradient-text">אנחנו בנינו את הדרך לגרום לשוק לראות את זה.</span></p>
     </div>
   </section>
 
@@ -970,8 +1192,8 @@
   <section class="cs-cta-dramatic-fw reveal">
     <div class="cta-glow-center"></div>
     <div class="wrap">
-      <h2>המפעל שלכם גדול יותר ממה שרואים ברשת?</h2>
-      <p>חברות ייצור, תעשייה ו-B2B טכני: שיחה קצרה. נבין מי בודק אתכם לפני שהוא מתקשר, ומה הוא צריך לראות כדי לבחור בכם.</p>
+      <h2>מפעל, חברת ייצור או B2B תעשייתי?</h2>
+      <p>אם היכולות שלכם גדולות יותר ממה שרואים ברשת, בואו נדבר. שיחה קצרה: נבין מי הלקוח שלכם, באיזה רגע הוא מחפש ספק, ומה הוא צריך לראות כדי לבחור בכם.</p>
       <div class="row">
         <a href="contact.html" class="btn btn-primary btn-lg">
           דברו איתנו
