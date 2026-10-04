@@ -7,8 +7,8 @@
     var route = path.replace(/^\/+/,'');
 
     var legacy = {
-      'בלוג': '/blog.html', 'אודות': '/about.html', 'בניית-אתרים': '/service-web-development.html',
-      'דף-הבית': '/', 'category/כללי': '/blog.html', 'author/atal': '/about.html', 'blog': '/blog.html'
+      'בלוג': '/blog', 'אודות': '/about', 'בניית-אתרים': '/service-web-development',
+      'דף-הבית': '/', 'category/כללי': '/blog', 'author/atal': '/about', 'blog': '/blog'
     };
     try { route = decodeURIComponent(route); } catch (e) {}
     if (legacy[route]) {

@@ -7,25 +7,25 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/about.html</loc>
+    <loc>https://muladigital.co.il/about</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/contact.html</loc>
+    <loc>https://muladigital.co.il/contact</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/testimonials.html</loc>
+    <loc>https://muladigital.co.il/testimonials</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/services.html</loc>
+    <loc>https://muladigital.co.il/services</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -33,169 +33,169 @@
 
   <!-- שירותים -->
   <url>
-    <loc>https://muladigital.co.il/service-web-build.html</loc>
+    <loc>https://muladigital.co.il/service-web-build</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-web-build-installer.html</loc>
+    <loc>https://muladigital.co.il/service-web-build-installer</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-web-build-electrician.html</loc>
+    <loc>https://muladigital.co.il/service-web-build-electrician</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-web-build-insurance.html</loc>
+    <loc>https://muladigital.co.il/service-web-build-insurance</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-web-build-lawyer.html</loc>
+    <loc>https://muladigital.co.il/service-web-build-lawyer</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-web-build-accountant.html</loc>
+    <loc>https://muladigital.co.il/service-web-build-accountant</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-web-build-renovator.html</loc>
+    <loc>https://muladigital.co.il/service-web-build-renovator</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-web-build-contractor.html</loc>
+    <loc>https://muladigital.co.il/service-web-build-contractor</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-web-build-smallbiz.html</loc>
+    <loc>https://muladigital.co.il/service-web-build-smallbiz</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-web-build-therapist.html</loc>
+    <loc>https://muladigital.co.il/service-web-build-therapist</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-web-build-fitness.html</loc>
+    <loc>https://muladigital.co.il/service-web-build-fitness</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-web-build-cosmetician.html</loc>
+    <loc>https://muladigital.co.il/service-web-build-cosmetician</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-web-development.html</loc>
+    <loc>https://muladigital.co.il/service-web-development</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-branding.html</loc>
+    <loc>https://muladigital.co.il/service-branding</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-content.html</loc>
+    <loc>https://muladigital.co.il/service-content</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-graphic-design.html</loc>
+    <loc>https://muladigital.co.il/service-graphic-design</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-photo-video.html</loc>
+    <loc>https://muladigital.co.il/service-photo-video</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-seo.html</loc>
+    <loc>https://muladigital.co.il/service-seo</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-local-seo.html</loc>
+    <loc>https://muladigital.co.il/service-local-seo</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-google-ads.html</loc>
+    <loc>https://muladigital.co.il/service-google-ads</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-meta-ads.html</loc>
+    <loc>https://muladigital.co.il/service-meta-ads</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-linkedin.html</loc>
+    <loc>https://muladigital.co.il/service-linkedin</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-ai-automation.html</loc>
+    <loc>https://muladigital.co.il/service-ai-automation</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-crm.html</loc>
+    <loc>https://muladigital.co.il/service-crm</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-whatsapp-automation.html</loc>
+    <loc>https://muladigital.co.il/service-whatsapp-automation</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-analytics.html</loc>
+    <loc>https://muladigital.co.il/service-analytics</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-cro.html</loc>
+    <loc>https://muladigital.co.il/service-cro</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-landing-pages.html</loc>
+    <loc>https://muladigital.co.il/service-landing-pages</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -203,37 +203,37 @@
 
   <!-- עמודי ערים -->
   <url>
-    <loc>https://muladigital.co.il/city-rehovot.html</loc>
+    <loc>https://muladigital.co.il/city-rehovot</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/city-rishon.html</loc>
+    <loc>https://muladigital.co.il/city-rishon</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/city-nes-tziona.html</loc>
+    <loc>https://muladigital.co.il/city-nes-tziona</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/city-yavne.html</loc>
+    <loc>https://muladigital.co.il/city-yavne</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/city-ashdod.html</loc>
+    <loc>https://muladigital.co.il/city-ashdod</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/city-lod-ramle.html</loc>
+    <loc>https://muladigital.co.il/city-lod-ramle</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -241,19 +241,19 @@
 
   <!-- קייס סטאדי -->
   <url>
-    <loc>https://muladigital.co.il/case-jackson.html</loc>
+    <loc>https://muladigital.co.il/case-jackson</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/case-hibur.html</loc>
+    <loc>https://muladigital.co.il/case-hibur</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/case-quickfit.html</loc>
+    <loc>https://muladigital.co.il/case-quickfit</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -261,334 +261,334 @@
 
   <!-- בלוג -->
   <url>
-    <loc>https://muladigital.co.il/blog-google-ads-guide.html</loc>
+    <loc>https://muladigital.co.il/blog-google-ads-guide</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-crm-laasakim-ktanim.html</loc>
+    <loc>https://muladigital.co.il/blog-crm-laasakim-ktanim</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-google-ads-vs-facebook.html</loc>
+    <loc>https://muladigital.co.il/blog-google-ads-vs-facebook</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-eich-livhor-sochnut-digital.html</loc>
+    <loc>https://muladigital.co.il/blog-eich-livhor-sochnut-digital</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-kiddum-ai-geo.html</loc>
+    <loc>https://muladigital.co.il/blog-kiddum-ai-geo</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-google-business-profile.html</loc>
+    <loc>https://muladigital.co.il/blog-google-business-profile</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-lakoach-lekol-hachaim.html</loc>
+    <loc>https://muladigital.co.il/blog-lakoach-lekol-hachaim</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-tochen-shemavi-lekochot.html</loc>
+    <loc>https://muladigital.co.il/blog-tochen-shemavi-lekochot</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-daf-nchita-shemammir.html</loc>
+    <loc>https://muladigital.co.il/blog-daf-nchita-shemammir</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-kama-ole-kiddum-bGoogle.html</loc>
+    <loc>https://muladigital.co.il/blog-kama-ole-kiddum-bGoogle</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-kama-ole-livnot-atar.html</loc>
+    <loc>https://muladigital.co.il/blog-kama-ole-livnot-atar</loc>
     <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-atar-yafe-lo-maspik.html</loc>
+    <loc>https://muladigital.co.il/blog-atar-yafe-lo-maspik</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-eich-livhor-chevrat-shivuk.html</loc>
+    <loc>https://muladigital.co.il/blog-eich-livhor-chevrat-shivuk</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-eich-ladaat-im-hapirsum-oved.html</loc>
+    <loc>https://muladigital.co.il/blog-eich-ladaat-im-hapirsum-oved</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-ai-chosech-zman-laasakim.html</loc>
+    <loc>https://muladigital.co.il/blog-ai-chosech-zman-laasakim</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-seo-laasakim-mekomiyim.html</loc>
+    <loc>https://muladigital.co.il/blog-seo-laasakim-mekomiyim</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-whatsapp-bli-crm.html</loc>
+    <loc>https://muladigital.co.il/blog-whatsapp-bli-crm</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/privacy-policy.html</loc>
+    <loc>https://muladigital.co.il/privacy-policy</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/atar-tadmit.html</loc>
+    <loc>https://muladigital.co.il/atar-tadmit</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/daf-nechita.html</loc>
+    <loc>https://muladigital.co.il/daf-nechita</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog.html</loc>
+    <loc>https://muladigital.co.il/blog</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-shivuk-linkedin-laasakim.html</loc>
+    <loc>https://muladigital.co.il/blog-shivuk-linkedin-laasakim</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/case-haderech-hanechona.html</loc>
+    <loc>https://muladigital.co.il/case-haderech-hanechona</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-kama-ole-hatmaat-crm.html</loc>
+    <loc>https://muladigital.co.il/blog-kama-ole-hatmaat-crm</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/case-amit-matan.html</loc>
+    <loc>https://muladigital.co.il/case-amit-matan</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/case-eldad-levi.html</loc>
+    <loc>https://muladigital.co.il/case-eldad-levi</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/case-silvi.html</loc>
+    <loc>https://muladigital.co.il/case-silvi</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-leadim-b2b-laasakim.html</loc>
+    <loc>https://muladigital.co.il/blog-leadim-b2b-laasakim</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-automatzia-whatsapp-laasakim.html</loc>
+    <loc>https://muladigital.co.il/blog-automatzia-whatsapp-laasakim</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-bniyat-atar-lemetaplim.html</loc>
+    <loc>https://muladigital.co.il/blog-bniyat-atar-lemetaplim</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-sapak-sherutey-geo.html</loc>
+    <loc>https://muladigital.co.il/blog-sapak-sherutey-geo</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-chatgpt-ads.html</loc>
+    <loc>https://muladigital.co.il/service-chatgpt-ads</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-pirsum-bechatgpt.html</loc>
+    <loc>https://muladigital.co.il/blog-pirsum-bechatgpt</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-eich-lekadem-esek-begoogle.html</loc>
+    <loc>https://muladigital.co.il/blog-eich-lekadem-esek-begoogle</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-gmb-expert.html</loc>
+    <loc>https://muladigital.co.il/service-gmb-expert</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-optimizatzia-hamarot.html</loc>
+    <loc>https://muladigital.co.il/blog-optimizatzia-hamarot</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/blog-pirsum-facebook-laasakim.html</loc>
+    <loc>https://muladigital.co.il/blog-pirsum-facebook-laasakim</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/case-abp.html</loc>
+    <loc>https://muladigital.co.il/case-abp</loc>
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/case-tamuz.html</loc>
+    <loc>https://muladigital.co.il/case-tamuz</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/case-erp-logic.html</loc>
+    <loc>https://muladigital.co.il/case-erp-logic</loc>
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/hartzaot-vesadnaot.html</loc>
+    <loc>https://muladigital.co.il/hartzaot-vesadnaot</loc>
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/case-ray-nechasim.html</loc>
+    <loc>https://muladigital.co.il/case-ray-nechasim</loc>
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/hartzaot-ai-lairgunim.html</loc>
+    <loc>https://muladigital.co.il/hartzaot-ai-lairgunim</loc>
     <lastmod>2026-10-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/service-hosting.html</loc>
+    <loc>https://muladigital.co.il/service-hosting</loc>
     <lastmod>2026-10-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/hatsharat-negishut.html</loc>
+    <loc>https://muladigital.co.il/hatsharat-negishut</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/shivuk-lesochnei-bituach.html</loc>
+    <loc>https://muladigital.co.il/shivuk-lesochnei-bituach</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/shivuk-lemisradei-tivuch.html</loc>
+    <loc>https://muladigital.co.il/shivuk-lemisradei-tivuch</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/mechiron.html</loc>
+    <loc>https://muladigital.co.il/mechiron</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/eich-ani-oved.html</loc>
+    <loc>https://muladigital.co.il/eich-ani-oved</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/hashvaa-sochnut-mul-freelancer.html</loc>
+    <loc>https://muladigital.co.il/hashvaa-sochnut-mul-freelancer</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/hashvaa-wordpress-mul-wix.html</loc>
+    <loc>https://muladigital.co.il/hashvaa-wordpress-mul-wix</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/hashvaa-kidum-organi-mul-kampeinim.html</loc>
+    <loc>https://muladigital.co.il/hashvaa-kidum-organi-mul-kampeinim</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/city-gedera.html</loc>
+    <loc>https://muladigital.co.il/city-gedera</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/city-mazkeret-batya.html</loc>
+    <loc>https://muladigital.co.il/city-mazkeret-batya</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/city-kiryat-ekron.html</loc>
+    <loc>https://muladigital.co.il/city-kiryat-ekron</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/city-beer-yaakov.html</loc>
+    <loc>https://muladigital.co.il/city-beer-yaakov</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/city-ashkelon.html</loc>
+    <loc>https://muladigital.co.il/city-ashkelon</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://muladigital.co.il/tochen-veerutzim.html</loc>
+    <loc>https://muladigital.co.il/tochen-veerutzim</loc>
     <lastmod>2026-10-04</lastmod>
     <priority>0.8</priority>
   </url>

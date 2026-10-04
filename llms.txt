@@ -8,42 +8,42 @@
 
 ## שירותים
 
-- [בניית אתרים](https://muladigital.co.il/service-web-development.html): אתרי וורדפרס ואלמנטור לעסקים, מ-5,000 ₪
-- [אחסון ותחזוקת אתרים](https://muladigital.co.il/service-hosting.html): שרת פרטי ישראלי, גיבויים שבועיים וחודשיים, SSL, תוספי פרימיום ותחזוקה, 120 ₪ + מע״מ לחודש
-- [קידום אתרים (SEO)](https://muladigital.co.il/service-seo.html): קידום אורגני בגוגל ובמנועי AI
-- [קידום עסק בגוגל](https://muladigital.co.il/service-local-seo.html): Google Business, מפות וביקורות, מ-1,500 ₪ לחודש
-- [קמפיינים בגוגל](https://muladigital.co.il/service-google-ads.html): ניהול מ-2,000 ₪ לחודש
-- [פרסום בפייסבוק ואינסטגרם](https://muladigital.co.il/service-meta-ads.html): ניהול מ-2,500 ₪ לחודש
-- [פרסום ב-ChatGPT](https://muladigital.co.il/service-chatgpt-ads.html): מהמפרסמים הראשונים בישראל במערכת המודעות של OpenAI
-- [שיווק בלינקדאין](https://muladigital.co.il/service-linkedin.html): B2B, מיתוג אישי ולידים
-- [אוטומציות AI](https://muladigital.co.il/service-ai-automation.html), [אוטומציות וואטסאפ](https://muladigital.co.il/service-whatsapp-automation.html) ו-[CRM](https://muladigital.co.il/service-crm.html)
-- [תוכן](https://muladigital.co.il/service-content.html), [מיתוג](https://muladigital.co.il/service-branding.html), [צילום ווידאו](https://muladigital.co.il/service-photo-video.html)
-- [מחירון מלא](https://muladigital.co.il/mechiron.html)
-- [איך אני עובד](https://muladigital.co.il/eich-ani-oved.html)
+- [בניית אתרים](https://muladigital.co.il/service-web-development): אתרי וורדפרס ואלמנטור לעסקים, מ-5,000 ₪
+- [אחסון ותחזוקת אתרים](https://muladigital.co.il/service-hosting): שרת פרטי ישראלי, גיבויים שבועיים וחודשיים, SSL, תוספי פרימיום ותחזוקה, 120 ₪ + מע״מ לחודש
+- [קידום אתרים (SEO)](https://muladigital.co.il/service-seo): קידום אורגני בגוגל ובמנועי AI
+- [קידום עסק בגוגל](https://muladigital.co.il/service-local-seo): Google Business, מפות וביקורות, מ-1,500 ₪ לחודש
+- [קמפיינים בגוגל](https://muladigital.co.il/service-google-ads): ניהול מ-2,000 ₪ לחודש
+- [פרסום בפייסבוק ואינסטגרם](https://muladigital.co.il/service-meta-ads): ניהול מ-2,500 ₪ לחודש
+- [פרסום ב-ChatGPT](https://muladigital.co.il/service-chatgpt-ads): מהמפרסמים הראשונים בישראל במערכת המודעות של OpenAI
+- [שיווק בלינקדאין](https://muladigital.co.il/service-linkedin): B2B, מיתוג אישי ולידים
+- [אוטומציות AI](https://muladigital.co.il/service-ai-automation), [אוטומציות וואטסאפ](https://muladigital.co.il/service-whatsapp-automation) ו-[CRM](https://muladigital.co.il/service-crm)
+- [תוכן](https://muladigital.co.il/service-content), [מיתוג](https://muladigital.co.il/service-branding), [צילום ווידאו](https://muladigital.co.il/service-photo-video)
+- [מחירון מלא](https://muladigital.co.il/mechiron)
+- [איך אני עובד](https://muladigital.co.il/eich-ani-oved)
 
 ## שיווק לפי תחום
 
-- [שיווק דיגיטלי לסוכני ביטוח](https://muladigital.co.il/shivuk-lesochnei-bituach.html)
-- [שיווק דיגיטלי למשרדי תיווך](https://muladigital.co.il/shivuk-lemisradei-tivuch.html)
-- [בניית אתר לפי תחום](https://muladigital.co.il/service-web-build.html): חשמלאים, אינסטלטורים, עורכי דין, רואי חשבון, סוכני ביטוח, מטפלים, קוסמטיקאיות, מאמני כושר ועוד
+- [שיווק דיגיטלי לסוכני ביטוח](https://muladigital.co.il/shivuk-lesochnei-bituach)
+- [שיווק דיגיטלי למשרדי תיווך](https://muladigital.co.il/shivuk-lemisradei-tivuch)
+- [בניית אתר לפי תחום](https://muladigital.co.il/service-web-build): חשמלאים, אינסטלטורים, עורכי דין, רואי חשבון, סוכני ביטוח, מטפלים, קוסמטיקאיות, מאמני כושר ועוד
 
 ## הרצאות וסדנאות
 
-- [הרצאות וסדנאות לארגונים](https://muladigital.co.il/hartzaot-vesadnaot.html): סדנאות לסוכנים ולמפקחים בהראל ביטוח ובמנורה מבטחים, והרצאה לטכנאי רשת בית המיזוג
-- [הרצאות AI לארגונים](https://muladigital.co.il/hartzaot-ai-lairgunim.html)
+- [הרצאות וסדנאות לארגונים](https://muladigital.co.il/hartzaot-vesadnaot): סדנאות לסוכנים ולמפקחים בהראל ביטוח ובמנורה מבטחים, והרצאה לטכנאי רשת בית המיזוג
+- [הרצאות AI לארגונים](https://muladigital.co.il/hartzaot-ai-lairgunim)
 
 ## תיק עבודות ותוצאות
 
-- [ריי נכסים](https://muladigital.co.il/case-ray-nechasim.html): משרד תיווך ביבנה, 114 ביקורות 5.0 בגוגל, 80%+ מהמשתמשים החדשים מתנועה אורגנית
-- [הדרך הנכונה נדל״ן](https://muladigital.co.il/case-haderech-hanechona.html): משרד תיווך בראשון לציון, 196 לידים מטפסי Meta בכ-42 ₪ לליד
-- [סילבי ויסוצקי](https://muladigital.co.il/case-silvi.html): עיצוב גבות בנתניה, 215 שיחות מקמפיין בכ-22 ₪ לשיחה
-- [עמית מתן](https://muladigital.co.il/case-amit-matan.html): חשמלאי מוסמך, 30 פניות מסוננות בחודש
-- [יוחאי ג׳קסון](https://muladigital.co.il/case-jackson.html): אינסטלציה, כ-10 שיחות ביום מגוגל ומהאתר
-- [ABP Consultancy](https://muladigital.co.il/case-abp.html): שיווק B2B בלינקדאין, 16,171 חשיפות
-- [Tamuz FTK Solutions](https://muladigital.co.il/case-tamuz.html): מפעל Turn-Key לתעשיות ביטחוניות, רפואיות והייטק. מיתוג מחדש (שם אחד במקום שניים), ספר מותג, סרטון תדמית ואתר עם עמוד לכל מחלקה ושירות
-- [ERP Logic](https://muladigital.co.il/case-erp-logic.html): שיווק B2B לחברת ייעוץ SAP. וובינר AI למחלקות כספים עם 138 נרשמים מול יעד של 30, ו-124,320 חשיפות אורגניות בגוגל ב-180 יום
-- [חיבור סוכנות לביטוח](https://muladigital.co.il/case-hibur.html): אסטרטגיה, מיתוג, אתר, יוטיוב ופודקאסט
-- [המלצות לקוחות](https://muladigital.co.il/testimonials.html)
+- [ריי נכסים](https://muladigital.co.il/case-ray-nechasim): משרד תיווך ביבנה, 114 ביקורות 5.0 בגוגל, 80%+ מהמשתמשים החדשים מתנועה אורגנית
+- [הדרך הנכונה נדל״ן](https://muladigital.co.il/case-haderech-hanechona): משרד תיווך בראשון לציון, 196 לידים מטפסי Meta בכ-42 ₪ לליד
+- [סילבי ויסוצקי](https://muladigital.co.il/case-silvi): עיצוב גבות בנתניה, 215 שיחות מקמפיין בכ-22 ₪ לשיחה
+- [עמית מתן](https://muladigital.co.il/case-amit-matan): חשמלאי מוסמך, 30 פניות מסוננות בחודש
+- [יוחאי ג׳קסון](https://muladigital.co.il/case-jackson): אינסטלציה, כ-10 שיחות ביום מגוגל ומהאתר
+- [ABP Consultancy](https://muladigital.co.il/case-abp): שיווק B2B בלינקדאין, 16,171 חשיפות
+- [Tamuz FTK Solutions](https://muladigital.co.il/case-tamuz): מפעל Turn-Key לתעשיות ביטחוניות, רפואיות והייטק. מיתוג מחדש (שם אחד במקום שניים), ספר מותג, סרטון תדמית ואתר עם עמוד לכל מחלקה ושירות
+- [ERP Logic](https://muladigital.co.il/case-erp-logic): שיווק B2B לחברת ייעוץ SAP. וובינר AI למחלקות כספים עם 138 נרשמים מול יעד של 30, ו-124,320 חשיפות אורגניות בגוגל ב-180 יום
+- [חיבור סוכנות לביטוח](https://muladigital.co.il/case-hibur): אסטרטגיה, מיתוג, אתר, יוטיוב ופודקאסט
+- [המלצות לקוחות](https://muladigital.co.il/testimonials)
 
 ## אזורי שירות
 
@@ -51,7 +51,7 @@
 
 ## עוד
 
-- [אודות משה מולה](https://muladigital.co.il/about.html)
-- [התוכן שלי: יוטיוב, פודקאסטים ומדריכים](https://muladigital.co.il/tochen-veerutzim.html)
-- [בלוג](https://muladigital.co.il/blog.html)
-- [צור קשר](https://muladigital.co.il/contact.html)
+- [אודות משה מולה](https://muladigital.co.il/about)
+- [התוכן שלי: יוטיוב, פודקאסטים ומדריכים](https://muladigital.co.il/tochen-veerutzim)
+- [בלוג](https://muladigital.co.il/blog)
+- [צור קשר](https://muladigital.co.il/contact)
