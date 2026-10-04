@@ -57,7 +57,7 @@ header.nav .mx-all:hover{color:#fff;}
 
 /* ---------- 2. תיק עבודות + תצוגה מקדימה ---------- */
 header.nav .mx-port .mx-grid{grid-template-columns:minmax(0,1fr) 400px;}
-header.nav .mx-cases{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}
+header.nav .mx-cases{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
 header.nav .mx-case{background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.08);color:#fff;padding:10px 12px;}
 header.nav .mx-logo{border-color:transparent;width:46px;height:46px;}
 header.nav .mx-case{grid-template-columns:46px minmax(0,1fr);}
