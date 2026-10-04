@@ -993,6 +993,18 @@
 </script>
   <link rel="stylesheet" href="assets/mega.css?v=3" />
   <link rel="stylesheet" href="assets/mega-wow.css?v=5" />
+<style>
+.pf-behind{background:#0B0B0F;color:#fff;border-radius:28px;padding:48px 44px;}
+.pf-behind .eyebrow{color:#c9a8ff;}
+.pf-behind h2{color:#fff;font-size:clamp(26px,3.4vw,38px);margin:10px 0 28px;}
+.pf-behind-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;}
+.pf-behind-grid>div{border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:22px 20px;background:rgba(255,255,255,.03);}
+.pf-behind-grid h3{color:#fff;font-size:19px;margin:0 0 8px;}
+.pf-behind-grid p{color:rgba(255,255,255,.75);font-size:15px;line-height:1.7;margin:0 0 10px;}
+.pf-behind-grid .dc-b{color:#fff;font-weight:700;margin:0;}
+@media (max-width:1000px){.pf-behind-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:620px){.pf-behind{padding:30px 20px;border-radius:22px;}.pf-behind-grid{grid-template-columns:1fr;}}
+</style>
 </head>
 <body>
 
@@ -1392,7 +1404,7 @@
       <div class="wrap">
         <span class="eyebrow reveal">תיק עבודות</span>
         <h2 class="reveal" style="font-size:clamp(32px,5vw,48px);">העבודות שמאחורי המערכות</h2>
-        <p class="reveal">מבחר פרויקטים - אתרים, SEO, קמפיינים, מיתוג ואוטומציות - לעסקים מקומיים, תעשייה ו-B2B.</p>
+        <p class="reveal">מבחר פרויקטים: אתרים, SEO, קמפיינים, מיתוג ואוטומציות, לעסקים מקומיים, תעשייה ו-B2B. מאחורי כל אחד מהם יש הרבה יותר ממה שרואים בתמונות.</p>
         <div class="filters" id="pfFilters">
           <button class="filter active" data-f="הכל">הכל</button>
           <button class="filter" data-f="אתרים">אתרים</button>
@@ -1406,6 +1418,20 @@
     <section class="section tight">
       <div class="wrap">
         <div class="pf-grid cols3" id="pfFull"></div>
+      </div>
+    </section>
+    <section class="section tight">
+      <div class="wrap">
+        <div class="pf-behind reveal">
+          <span class="eyebrow">מה שלא רואים בתמונות</span>
+          <h2>כל קייס כאן הוא הרבה שעות של חשיבה, לא רק ביצוע</h2>
+          <div class="pf-behind-grid">
+            <div><h3>חשיבה עם הלקוח</h3><p>שעות של ישיבות, שיחות ושאלות קשות. להבין את העסק, את הלקוחות שלו ואת מה שבאמת חוסם אותו.</p><p class="dc-b">התוכנית נבנית על העסק, לא על תבנית.</p></div>
+            <div><h3>חשיבה גם מחוץ לפגישות</h3><p>הרבה מהעבודה קורית בין הפגישות: לחקור את השוק, את המתחרים ואת הקהל, ולחזור עם כיוון.</p><p class="dc-b">מגיעים לכל פגישה עם הצעה, לא עם שאלה.</p></div>
+            <div><h3>פיתוח עסקי</h3><p>לא רק שיווק של מה שקיים. לזהות קהל חדש, מסלול חדש או הצעה שהעסק עוד לא מכר.</p><p class="dc-b">השיווק מגדיל את העסק, לא רק את החשיפה.</p></div>
+            <div><h3>רעיונות שעולים תוך כדי</h3><p>הקונספטים הכי טובים נולדים באמצע העבודה, מתוך מה שרואים בשטח ובנתונים. מרימים אותם ומוציאים לפועל.</p><p class="dc-b">רעיון טוב לא נשאר במחברת.</p></div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="section tight">
