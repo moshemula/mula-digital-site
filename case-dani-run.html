@@ -824,6 +824,13 @@
 .dr-review .ab-shot img{width:100%;height:auto;}
 @media (max-width:900px){.dr-review{grid-template-columns:1fr;}.dr-review blockquote{padding:24px 20px;}}
 .tz-short__screen.dr-sq1{aspect-ratio:940/788;}.tz-short__screen.dr-sq1 video{object-fit:cover;}
+.dr-rvs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px;}
+.dr-rv{margin:0;background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 22px 18px;display:flex;flex-direction:column;box-shadow:0 14px 36px rgba(17,17,17,.05);}
+.dr-stars{color:#f5b301;letter-spacing:2px;font-size:15px;}
+.dr-rv blockquote{margin:10px 0 14px;font-size:16px;line-height:1.7;color:var(--ink,#111);flex:1;}
+.dr-rv figcaption{font-size:13.5px;font-weight:700;color:var(--soft);}
+@media (max-width:1000px){.dr-rvs{grid-template-columns:1fr 1fr;}}
+@media (max-width:640px){.dr-rvs{grid-template-columns:1fr;}}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GEHNCC9X6F"></script>
@@ -1031,7 +1038,7 @@
       <div class="hd-block tz-nt reveal">
         <div class="hd-block__text">
           <h3>"הבית של הספורטאים ביבנה"</h3>
-          <p>בנינו לקבוצה אתר מלא ב-WordPress, עם תוכן למתחילים ולמתקדמים, לילדים ולמבוגרים: אימוני כביש, שטח וכוח, הכנה למרוצים ותוכניות אישיות.</p>
+          <p>בהמשך הדרך בנינו לקבוצה אתר מלא ב-WordPress, עם תוכן למתחילים ולמתקדמים, לילדים ולמבוגרים: אימוני כביש, שטח וכוח, הכנה למרוצים ותוכניות אישיות.</p>
           <p>עמוד האודות לא אמר "דני זיוי הוא מאמן ריצה מוסמך". הוא סיפר איך דני התחיל, איך הגיע לעולם הריצה ואיך עבר מלרוץ בעצמו לאמן אחרים.</p>
           <p class="dc-b">בעולם הכושר אנשים לא קונים רק תוכנית. הם קונים אמון באדם שמוביל אותה.</p>
         </div>
@@ -1040,17 +1047,18 @@
       <div class="hd-block tz-nt reveal" style="margin-top:48px">
         <div class="hd-block__text">
           <h3>דף נחיתה לכל מחזור</h3>
-          <p>כל קמפיין הוביל למקום אחד ברור: לא עמוד בית עמוס, אלא עמוד שעונה על הכול. למי הקבוצה, מה היעד, כמה זמן זה דורש, מתי ואיפה נפגשים, מי המאמן ומה עושים כדי להצטרף. הטפסים חוברו ל-Elementor ולרשימת דיוור.</p>
+          <p>כל קמפיין הוביל למקום אחד ברור: לא עמוד בית עמוס, אלא עמוד שעונה על הכול. למי הקבוצה, מה היעד, כמה זמן זה דורש, מתי ואיפה נפגשים, מי המאמן ומה עושים כדי להצטרף. הטפסים חוברו לרשימת התפוצה, כך שכל נרשם נכנס ישר למערכת.</p>
           <p class="dc-b">אדם שמגיע ממודעה מקבל את כל התשובות במסך אחד, ומשאיר פרטים.</p>
         </div>
         <figure class="ab-shot"><img src="assets/case-danirun/lp.webp" alt="דף הנחיתה לקבוצת מתחילים, מחזור 15, אפריל 2023" loading="lazy" /><figcaption>דף הנחיתה לקבוצת המתחילים, מחזור 15 (אפריל 2023)</figcaption></figure>
       </div>
-      <p class="reveal er-src" style="margin-top:34px">מתוך קבצי הייצוא של הטפסים ורשימת הדיוור:</p>
-      <div class="sh-ranks dr-ranks reveal">
-        <div><b>157</b><span>אנשים שנרשמו לרשימת הדיוור דרך דף הנחיתה (נכון למרץ 2022)</span></div>
-        <div><b>32</b><span>פניות בטופס האתר בתוך 7 שבועות (מרץ עד אפריל 2022)</span></div>
-        <div><b>55</b><span>לידים מקמפיין טופס לידים ב-Meta</span></div>
+      <div class="hd-insight reveal" style="margin-top:34px">
+        <span class="hd-kicker">Smoove ואחר כך WordPress</span>
+        <h3>מערכת שאוספת את הלידים, מחזור אחרי מחזור</h3>
+        <p>בשנים הראשונות דפי הנחיתה, הטפסים ורשימות התפוצה רצו על Smoove. שם נאספו רוב הלידים ופרטי הנרשמים, ומשם יצאו ההודעות והתזכורות לפני כל מחזור. בהמשך עברנו לאתר WordPress מלא עם טפסי Elementor.</p>
+        <p class="dc-b">מאות פניות נאגרו במקום אחד, וכל מחזור חדש התחיל עם רשימה חמה של אנשים שכבר הביעו עניין.</p>
       </div>
+</div>
     </div>
   </section>
 
@@ -1119,6 +1127,7 @@
           <span class="hd-kicker">7+ שנים</span>
           <h3>קבוצה שהמשיכה לרוץ גם כשהחיים לא היו בשגרה</h3>
           <p>DANI RUN פעלה ברציפות יותר מ-7 שנים. כולל תקופת הקורונה, כולל מלחמות, וכולל תקופות שבהן השגרה הייתה רחוקה. והקבוצה המשיכה לפעול לאורך כל התקופות האלה.</p>
+          <p>ויש פה גם משהו אישי: אני עצמי רצתי בקבוצה הזו. ככה ראיתי מבפנים את מה שניסינו לשדר מבחוץ.</p>
           <p class="dc-b">מותג קהילתי שמחזיק כל כך הרבה זמן הוא כבר לא קמפיין. הוא חלק מהעיר. וחלק מהאנשים שהתחילו לרוץ בזכותו, רצים עד היום.</p>
         </div>
         <div class="dr-pair">
@@ -1134,14 +1143,26 @@
     <div class="wrap-full">
       <h2 class="reveal">מה עשינו עבור DANI RUN</h2>
       <div class="dr-chips reveal">
-        <span>אסטרטגיית שיווק</span><span>בניית המותג</span><span>אתר WordPress</span><span>דפי נחיתה</span><span>טפסי לידים ב-Elementor</span><span>תוכן לאתר ועמוד אודות</span><span>קופי לקמפיינים</span><span>Meta Ads</span><span>שיווק בפייסבוק</span><span>קריאייטיב ווידאו</span><span>Facebook Live</span><span>תוכן קהילתי</span><span>Google Business ופוסטים</span><span>אופטימיזציית המרות</span><span>תחזוקה ותמיכה טכנית</span><span>ליווי שיווקי לאורך שנים</span>
+        <span>אסטרטגיית שיווק</span><span>בניית המותג</span><span>אתר WordPress</span><span>דפי נחיתה</span><span>דפי נחיתה ורשימות תפוצה ב-Smoove</span><span>טפסי לידים ב-Elementor</span><span>תוכן לאתר ועמוד אודות</span><span>קופי לקמפיינים</span><span>Meta Ads</span><span>שיווק בפייסבוק</span><span>קריאייטיב ווידאו</span><span>Facebook Live</span><span>תוכן קהילתי</span><span>Google Business ופוסטים</span><span>אופטימיזציית המרות</span><span>תחזוקה ותמיכה טכנית</span><span>ליווי שיווקי לאורך שנים</span>
       </div>
     </div>
   </section>
 
 
-  <!-- ===== המלצה ===== -->
+
+  <!-- ===== המלצות מתאמנים ===== -->
   <section class="cs-section">
+    <div class="wrap-full">
+      <span class="hd-kicker">מה המתאמנים כתבו</span>
+      <h2 class="reveal">"הצלחתי לרוץ חצי שעה, כמו שדני הבטיח"</h2>
+      <p class="reveal">ההבטחה מהמודעות התקיימה בשטח, והמתאמנים כתבו את זה בעצמם. כמה מההמלצות שהשאירו על הקבוצה בפייסבוק, מתוך הרבה שהגיעו לאורך השנים:</p>
+      <div class="dr-rvs reveal"><figure class="dr-rv"><div class="dr-stars" aria-label="ממליצה">★★★★★</div><blockquote>אחרי פציעה לא האמנתי שאצליח לרוץ, אבל בזכות התמיכה המקצועית והמנטלית של דני והקבוצה חזרתי לריצה, וממשיכה כבר שנה לקחת חלק פעיל וקבוע באימוני הקבוצה.</blockquote><figcaption>שרית ג. · המלצה בפייסבוק, 2023</figcaption></figure><figure class="dr-rv"><div class="dr-stars" aria-label="ממליצה">★★★★★</div><blockquote>למרות שהייתי סקפטית, הצלחתי לרוץ חצי שעה כמו שדני הבטיח.</blockquote><figcaption>רויטל ד. · המלצה בפייסבוק, 2019</figcaption></figure><figure class="dr-rv"><div class="dr-stars" aria-label="ממליצה">★★★★★</div><blockquote>דני המאמן קיבל אותי לקבוצה באופן אישי וליווה אותי באימונים הראשונים. זה הקנה לי ביטחון לחזור לאימון הבא. בהדרגה הכרתי את החברים בקבוצה: תומכים, מפרגנים ובעיקר מקסימים.</blockquote><figcaption>דורית ק. · המלצה בפייסבוק, 2023</figcaption></figure><figure class="dr-rv"><div class="dr-stars" aria-label="ממליצה">★★★★★</div><blockquote>מאמן מקצועי, נותן יחס אישי, לא מוותר לאף אחד, מעצים, מחבר את הריצה לעולמות נוספים, יסודי, מתמיד. בקיצור, ממליצה בחום.</blockquote><figcaption>ענבל ס. · המלצה בפייסבוק, 2020</figcaption></figure><figure class="dr-rv"><div class="dr-stars" aria-label="ממליצה">★★★★★</div><blockquote>דני ועוזריו מצליחים, במחויבות ובאהבת אדם שלהם, לתת כוחות ומוטיבציה להתגבר על כל מכשול כדי להשיג את המטרה. נהנית מכל רגע באימון.</blockquote><figcaption>יעל ג. · המלצה בפייסבוק, 2019</figcaption></figure><figure class="dr-rv"><div class="dr-stars" aria-label="ממליצה">★★★★★</div><blockquote>הנחישות, האמונה וההערכה, חוש ההומור שלו, ובכלל כאדם. לקראת כל אימון ההתרגשות גדלה לאתגר הבא.</blockquote><figcaption>אילנה פ. · המלצה בפייסבוק, 2019</figcaption></figure></div>
+      <p class="reveal dc-b" style="margin-top:22px">ההמלצות האלה חזרו לתוך השיווק: מתחיל שמתלבט רואה אנשים כמוהו שעשו את זה, וזה שובר את ההתנגדות טוב יותר מכל מודעה.</p>
+    </div>
+  </section>
+
+  <!-- ===== המלצה ===== -->
+  <section class="cs-section" style="background:var(--surface);">
     <div class="wrap-full">
       <span class="hd-kicker">מה דני אומר</span>
       <h2 class="reveal">"מעל 100 לקוחות חדשים בקמפיין הראשון בלבד!"</h2>
