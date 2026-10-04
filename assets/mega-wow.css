@@ -129,3 +129,11 @@ header.nav .mx-case-all .mx-ctx b{color:#D9C8FF;}
 
 /* כרטיס "לכל תיק העבודות" לרוחב כל השורה */
 header.nav .mx-cases .mx-case-all{grid-column:1/-1;}
+
+/* 12 כרטיסים: במסכים בינוניים 3 בשורה, כדי שהלוח לא יגלול */
+@media (min-width:881px) and (max-width:1180px){
+  header.nav .mx-cases{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;}
+  header.nav .mx-case{padding:8px 10px;grid-template-columns:38px minmax(0,1fr);}
+  header.nav .mx-logo{width:38px;height:38px;}
+  header.nav .mx-ctx em{font-size:12px;}
+}
