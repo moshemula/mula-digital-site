@@ -90,6 +90,25 @@
   .ticker span::after{content:"•";margin-inline-start:40px;color:var(--red)}
   @keyframes tick{to{transform:translateX(-50%)}}
 
+  /* diagnosis sample */
+  .diag{display:grid;gap:14px}
+  .chat{background:var(--surface);border:1px solid var(--line2);border-radius:20px;padding:16px 16px 14px;position:relative}
+  .chat .who{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+  .chat .who img{width:36px;height:36px;border-radius:50%;object-fit:cover}
+  .chat .who b{font-size:14.5px;display:block}
+  .chat .who span{font-size:12px;color:var(--muted)}
+  .chat .tag{position:absolute;top:14px;left:14px;font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--muted);border:1px solid var(--line2);border-radius:6px;padding:3px 7px;text-transform:uppercase}
+  .fix{display:grid;grid-template-columns:34px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--line)}
+  .fix i{font-style:normal;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:900;font-size:14px;background:rgba(232,0,61,.12);color:#FF4D7A}
+  .fix b{display:block;font-size:16px;line-height:1.35;margin-bottom:6px}
+  .fix p{font-size:14.5px;color:var(--muted);line-height:1.5}
+  .fix p em{font-style:normal;color:var(--fg);font-weight:700}
+  .fix .cost{margin-top:6px;font-size:13px;color:#FF4D7A;font-weight:700}
+  .chat .foot{margin-top:10px;font-size:13px;color:var(--dim);line-height:1.5}
+  .why{margin-top:18px;padding:14px 16px;border-radius:14px;background:var(--surface2);border:1px solid var(--line2);font-size:15px;line-height:1.55;color:var(--muted)}
+  .why b{color:var(--fg)}
+  @media (min-width:900px){ .diag{grid-template-columns:1fr 1fr;align-items:start} }
+
   /* sections */
   section{padding-block:72px}
   .sec-h{margin-bottom:28px}
@@ -235,11 +254,33 @@
   <span><b>250+</b> לידים בחודש למשרד תיווך</span><span><b>10+</b> פניות ביום לטכנאי גז</span><span><b>30</b> לידים מסוננים בחודש לחשמלאי</span><span><b>8</b> לקוחות חמים ביום לעיסוי עד הבית</span><span><b>15 שנה</b> בשיווק, גוגל ומטא</span>
 </div></div>
 
+<section id="sample">
+  <div class="wrap">
+    <div class="sec-h reveal"><div class="k">מה אתה מקבל</div><h2>לא "ייעוץ". שלושה דברים לתקן.<br>ככה זה נראה בוואטסאפ.</h2>
+      <p>זה הפורמט שאתה מקבל תוך 24 שעות. הדוגמה כאן היא שלושת הדברים שאני מוצא הכי הרבה. <b style="color:var(--fg)">אצלך זה יהיה על האתר שלך, אחרי שאני עובר עליו בעצמי.</b></p></div>
+    <div class="diag">
+      <div class="chat reveal">
+        <span class="tag">דוגמה לפורמט</span>
+        <div class="who"><img src="./moshe-face.webp" alt="" loading="lazy"><div><b>משה מולה</b><span>עברתי על האתר. 3 דברים:</span></div></div>
+        <div class="fix"><i>1</i><div><b>הטלפון בסוף הדף.</b><p>במובייל זה 6 מסכי גלילה עד הכפתור. מי שמתלבט לא מגיע לשם. <em>לתקן:</em> וואטסאפ וחיוג צפים, זמינים מהשנייה הראשונה.</p><div class="cost">ככה נראית "תנועה יש, שיחות אין".</div></div></div>
+        <div class="fix"><i>2</i><div><b>המודעה מבטיחה דבר אחד, הדף פותח בדבר אחר.</b><p>לחצו על "התקנה תוך 24 שעות", נחתו על "ברוכים הבאים לחברת...". הלקוח לא מוצא את מה שלחץ עליו ויוצא. <em>לתקן:</em> כותרת הדף = ההבטחה של המודעה. מילה במילה.</p><div class="cost">הסיבה מספר אחת לקליקים שנשרפים.</div></div></div>
+        <div class="fix"><i>3</i><div><b>אין סיבה להאמין לך.</b><p>"מקצועיות ואמינות" זה לא הוכחה, זה מה שכולם כותבים. <em>לתקן:</em> תמונה אמיתית שלך, מספר אחד ספציפי, ומשפט אחד של לקוח.</p><div class="cost">זה ההבדל בין "נראה בסדר" ל"אני מתקשר".</div></div></div>
+        <div class="foot">בכתב, קונקרטי, בלי מילים גדולות. רוצה שנעבור על זה 20 דקות בטלפון אחרי? גם זה ללא עלות.</div>
+      </div>
+      <div class="reveal">
+        <div class="why"><b>למה זה חינם?</b> כי מי שרואה את שלושת הדברים ומבין שאני יודע בדיוק מה חוסם לו את הטלפון, בדרך כלל רוצה שאני אעשה את זה. זה המודל. בלי "ייעוץ חינם" שהוא בעצם פגישת מכירה, ובלי התחייבות.</div>
+        <div class="why" style="margin-top:12px"><b>ומה אם לא תרצה להמשיך?</b> יש לך שלושה תיקונים ביד. תעשה אותם לבד, או עם מי שבונה לך את האתר. יצאת מורווח, אני יצאתי עם עוד אתר שעברתי עליו.</div>
+        <a class="btn btn-wa" href="#pains" style="margin-top:16px;width:100%" onclick="try{gtag('event','cta_scroll',{pain:'sample'})}catch(e){}">שלח לי קישור עכשיו</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="work" class="gallery">
   <div class="wrap"><div class="sec-h reveal">
     <div class="k">ככה זה נראה אצל הלקוחות</div>
-    <h2>אתרים ודפי נחיתה שהטלפון מצלצל בגללם.<br>לא רק יפים. עובדים.</h2>
-    <p>חלק ממה שבניתי ללקוחות. מאחורי כל אתר כזה יש קמפיין בגוגל או במטא שמזרים תנועה, ומסר שגורם ללקוח להרים טלפון. <b style="color:var(--fg)">בדיוק את זה אני בודק באתר שלך ב-3 התיקונים.</b></p>
+    <h2>לא רק יפים.<br>בנויים כדי שהטלפון יצלצל.</h2>
+    <p>חלק ממה שבניתי ללקוחות. בכל אחד מהם הוואטסאפ והטלפון במרחק לחיצה אחת, הכותרת אומרת בדיוק מה שהמודעה הבטיחה, והלקוח מבין תוך 3 שניות למה להתקשר. <b style="color:var(--fg)">בדיוק שלושת הדברים שאני בודק באתר שלך.</b></p>
   </div></div>
   <div class="railwrap"><div class="rail" id="rail">
     <figure class="shot"><div class="dots"><i></i><i></i><i></i></div><img src="./tamuz.webp" alt="" loading="lazy"><figcaption><b>תמוז FTK</b><span>תעשייה · B2B</span></figcaption></figure>
@@ -258,7 +299,7 @@
 
 <section>
   <div class="wrap">
-    <div class="sec-h reveal"><div class="k">תוצאות</div><h2>ככה זה נראה כשזה עובד</h2></div>
+    <div class="sec-h reveal"><div class="k">תוצאות</div><h2>ככה זה נראה כשזה עובד</h2><p>לקוחות אמיתיים, לפי תחום ובלי שמות. מי שרוצה פרטים מקבל אותם בשיחה.</p></div>
     <div class="proof">
       <div class="stat reveal"><div class="n" data-count="250">0<em>+</em></div><div class="l">לידים בחודש אחד</div><div class="d">משרד תיווך מוביל בראשון לציון. על כ-8 נכסים בלבד.</div></div>
       <div class="stat reveal"><div class="n" data-count="10">0<em>+</em></div><div class="l">פניות ביום</div><div class="d">טכנאי גז רמה 2. גוגל ומטא, כל יום.</div></div>
@@ -278,7 +319,7 @@
         <div class="st"><i>2</i><p>אני עובר עליו ומחזיר לך <b>3 דברים קונקרטיים שגורמים ללקוח לברוח,</b> בכתב, תוך 24 שעות.</p></div>
         <div class="st"><i>3</i><p>רוצה אחר כך 20 דקות בטלפון לעבור על זה יחד? <b>גם זה ללא עלות.</b> לא רוצה? יצאת מורווח.</p></div>
       </div>
-      <p class="fine">עונה משה, לא נציג.</p>
+      <p class="fine">עונה משה, לא נציג. ולא, אני לא מתקשר אחר כך "לבדוק אם קיבלת".</p>
     </div>
   </div>
 </section>
