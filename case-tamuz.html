@@ -665,6 +665,7 @@
 </script>
   <link rel="stylesheet" href="assets/mega.css?v=3" />
   <link rel="stylesheet" href="assets/mega-wow.css?v=5" />
+<link rel="stylesheet" href="assets/motion.css?v=1" />
 </head>
 <body>
   <a href="#case-content" class="skip-link">דלג לתוכן</a>
@@ -976,10 +977,14 @@
         <h3>מתמוז יזרעאל ל-TAMUZ FTK Solutions</h3>
         <p>הלוגו הישן נבנה לשם הישן, בכתום. החדש כחול, נקי ותעשייתי, עם סמל שעובד גם קטן, על חולצה, על כרטיס ועל קאבר.</p>
       </div>
-      <div class="tz-ba reveal">
-        <figure class="ab-shot"><span class="tz-tag">לפני</span><img src="assets/case-tamuz/logo-old.webp" alt="הלוגו הישן: תמוז יזרעאל" loading="lazy" width="1400" height="996" /><figcaption>הלוגו הישן, מתוך ספר המותג.</figcaption></figure>
-        <figure class="ab-shot"><span class="tz-tag tz-tag--new">אחרי</span><img src="assets/case-tamuz/logo-new.webp" alt="הלוגו החדש: TAMUZ FTK Solutions" loading="lazy" width="1400" height="996" /><figcaption>הלוגו החדש, שם אחד ומותג אחד.</figcaption></figure>
+      <div class="mo-ba reveal" aria-label="השוואת הלוגו הישן והחדש. גררו כדי להשוות">
+        <img src="assets/case-tamuz/logo-new.webp" alt="הלוגו החדש: TAMUZ FTK Solutions" loading="lazy" />
+        <img class="mo-ba-old" src="assets/case-tamuz/logo-old.webp" alt="הלוגו הישן: תמוז יזרעאל" loading="lazy" />
+        <span class="mo-ba-tag r">לפני</span><span class="mo-ba-tag l new">אחרי</span>
+        <span class="mo-ba-handle"></span>
+        <input type="range" min="0" max="100" value="50" aria-label="גררו כדי להשוות בין הלוגו הישן לחדש" />
       </div>
+      <p class="mo-ba-cap reveal">גררו את הידית: מימין הלוגו הישן של תמוז יזרעאל, משמאל המותג החדש, שם אחד ומותג אחד.</p>
       <div class="tz-grid tz-grid--4 reveal">
         <figure class="ab-shot"><img src="assets/case-tamuz/brand-card.webp" alt="כרטיס ביקור בעיצוב החדש" loading="lazy" width="1400" height="996" /><figcaption>כרטיס ביקור</figcaption></figure>
         <figure class="ab-shot"><img src="assets/case-tamuz/brand-stationery.webp" alt="נייר מכתבים בעיצוב החדש" loading="lazy" width="1400" height="996" /><figcaption>נייר מכתבים</figcaption></figure>
@@ -1434,5 +1439,6 @@
 
 <!-- Sticky mobile CTA -->
 <script src="assets/mega.js?v=4" defer></script>
+<script src="assets/motion.js?v=1" defer></script>
 </body>
 </html>
