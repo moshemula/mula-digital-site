@@ -475,7 +475,8 @@
 .cgd-spons{font-size:11px;color:#8b8b98;letter-spacing:.02em;}
 .cgd-card{position:relative;display:flex;gap:12px;align-items:center;margin-top:6px;background:#1b1b22;border:1px solid #2e2e38;border-radius:16px;padding:12px;}
 .cgd-card::after{content:"";position:absolute;inset:-1px;border-radius:16px;padding:1px;background:linear-gradient(120deg,#E8003D,#7B2FBE);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .8s;}
-.cgd-logo{flex:none;width:54px;height:54px;border-radius:12px;background:linear-gradient(120deg,#E8003D,#7B2FBE);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:24px;color:#fff;}
+.cgd-photo{padding:0;overflow:hidden;}.cgd-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.cgd-logo{flex:none;width:64px;height:64px;border-radius:12px;background:linear-gradient(120deg,#E8003D,#7B2FBE);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:24px;color:#fff;}
 .cgd-txt b{display:block;color:#fff;font-size:15px;margin-bottom:2px;}.cgd-txt p{margin:0;color:#c4c4cf;font-size:14px;}.cgd-txt small{color:#8b8b98;font-size:12px;}
 .cgd-input{display:flex;align-items:center;justify-content:space-between;margin:6px 14px 14px;background:#1d1d24;border:1px solid #2e2e38;border-radius:99px;padding:10px 16px;color:#77778a;font-size:14px;}
 .cgd-input i{width:26px;height:26px;border-radius:50%;background:#3a3a44;}
@@ -644,19 +645,19 @@
         <div class="cgd-win">
           <div class="cgd-top"><span class="cgd-dots"><i></i><i></i><i></i></span><span class="cgd-title">ChatGPT</span><span class="cgd-plan">Free</span></div>
           <div class="cgd-body">
-            <div class="cgd-user"><p class="cgd-type" data-text="אני משקיע בפרסום בגוגל כבר חצי שנה והטלפון כמעט לא מצלצל. מה אני עושה לא נכון?"></p></div>
+            <div class="cgd-user"><p class="cgd-type" data-text="הכיריים בבית לא נדלקות, רק מתקתקות. אפשר לתקן את זה לבד או שצריך טכנאי?"></p></div>
             <div class="cgd-think"><i></i><i></i><i></i></div>
             <div class="cgd-ans">
-              <p>יכולות להיות כמה סיבות, וכדאי לבדוק אותן לפי הסדר:</p>
-              <p><b>1.</b> מילות מפתח רחבות מדי, שמביאות קליקים של אנשים שלא מחפשים לקנות.</p>
-              <p><b>2.</b> דף נחיתה שלא ממשיך את מה שהמודעה הבטיחה.</p>
-              <p><b>3.</b> אין מדידת המרות, אז אי אפשר לדעת מה עובד.</p>
+              <p>יש כמה סיבות נפוצות. כדאי לבדוק לפי הסדר:</p>
+              <p><b>1.</b> המבער רטוב או מלוכלך. מנקים, מייבשים ומנסים שוב.</p>
+              <p><b>2.</b> המצת חלש או תקול, ואז הניצוץ לא מספיק.</p>
+              <p><b>3.</b> אם זה לא עוזר, או שיש ריח של גז, עדיף טכנאי גז מוסמך.</p>
             </div>
             <div class="cgd-ad">
               <span class="cgd-spons">Sponsored</span>
               <div class="cgd-card">
-                <div class="cgd-logo">M</div>
-                <div class="cgd-txt"><b>מתחרה לוקח לך לקוחות?</b><p>שיחת אבחון קצרה, בלי עלות ובלי התחייבות.</p><small>muladigital.co.il</small></div>
+                <div class="cgd-logo cgd-photo"><img src="assets/case-shai/field-stove.webp" alt="" loading="lazy" /></div>
+                <div class="cgd-txt"><b>הכיריים לא נדלקות?</b><p>טכנאי גז מוסמך. מגיע עוד היום, מחיר ברור מראש.</p><small>טכנאי גז במרכז · לאתר</small></div>
               </div>
             </div>
           </div>
@@ -665,10 +666,10 @@
         <ol class="cgd-steps">
           <li data-s="1"><b>הלקוח שואל</b><span>במילים שלו, עם הבעיה האמיתית</span></li>
           <li data-s="2"><b>ChatGPT עונה</b><span>התשובה נשארת נקייה, בלי פרסום בתוכה</span></li>
-          <li data-s="3"><b>המודעה שלך מופיעה</b><span>מתחת לתשובה, מסומנת כממומנת, בדיוק כשהנושא רלוונטי</span></li>
+          <li data-s="3"><b>המודעה של בעל המקצוע מופיעה</b><span>מתחת לתשובה, מסומנת כממומנת, בדיוק ברגע שהלקוח צריך אותו</span></li>
         </ol>
       </div>
-      <figcaption><button type="button" class="cgd-replay" aria-label="הפעל שוב">↻ הפעל שוב</button> הדמיה. כך נראה הרגע שבו לקוח פוגש את המודעה שלך.</figcaption>
+      <figcaption><button type="button" class="cgd-replay" aria-label="הפעל שוב">↻ הפעל שוב</button> הדמיה. כך נראה הרגע שבו לקוח פוגש מודעה של בעל מקצוע.</figcaption>
     </figure>
 
     <!-- S2 -->
