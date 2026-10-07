@@ -373,6 +373,39 @@
   <link rel="stylesheet" href="assets/mega.css?v=3" />
   <link rel="stylesheet" href="assets/mega-wow.css?v=5" />
   <link rel="stylesheet" href="assets/srv-hero.css?v=1" />
+<style>
+.wad-sec{padding-top:40px;}
+.wad{display:grid;grid-template-columns:minmax(0,360px) minmax(0,320px);gap:34px;justify-content:center;align-items:center;margin-top:28px;}
+.wad-phone{background:#0b141a;border-radius:34px;border:8px solid #16161c;box-shadow:0 34px 80px -28px rgba(17,17,17,.55);overflow:hidden;height:560px;display:flex;flex-direction:column;}
+.wad-bar{display:flex;align-items:center;gap:10px;background:#1f2c34;color:#e9edef;padding:12px 14px;}
+.wad-av{width:36px;height:36px;border-radius:50%;background:linear-gradient(120deg,#E8003D,#7B2FBE);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;}
+.wad-bar b{display:block;font-size:15px}.wad-bar small{font-size:12px;color:#8696a0}.wad-time{margin-inline-start:auto;font-size:12px;color:#8696a0;}
+.wad-chat{flex:1;padding:16px 12px;display:flex;flex-direction:column;gap:8px;background:#0b141a radial-gradient(circle at 20% 20%,rgba(255,255,255,.03),transparent 60%);overflow:hidden;}
+.wad-b{max-width:82%;border-radius:12px;padding:8px 11px 6px;color:#e9edef;font-size:14.5px;line-height:1.55;opacity:0;transform:translateY(10px) scale(.98);transition:opacity .4s,transform .4s cubic-bezier(.2,.8,.2,1);}
+.wad-b p{margin:0}.wad-b span{display:block;text-align:left;font-size:10.5px;color:#8696a0;margin-top:2px;}
+.wad-in{align-self:flex-start;background:#202c33;border-start-start-radius:3px;}
+.wad-out{align-self:flex-end;background:#005c4b;border-start-end-radius:3px;}
+.wad-typing{align-self:flex-end;display:flex;gap:4px;background:#005c4b;border-radius:12px;padding:10px 12px;opacity:0;height:0;padding-block:0;transition:opacity .3s;}
+.wad-typing i{width:6px;height:6px;border-radius:50%;background:#cde;animation:wadDot 1s infinite;}.wad-typing i:nth-child(2){animation-delay:.15s}.wad-typing i:nth-child(3){animation-delay:.3s}
+@keyframes wadDot{0%,80%,100%{opacity:.35;transform:none}40%{opacity:1;transform:translateY(-3px)}}
+.wad-btns{align-self:flex-end;display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end;max-width:90%;opacity:0;transform:translateY(8px);transition:opacity .4s,transform .4s;}
+.wad-btns button{font:inherit;font-size:13px;background:#1f2c34;color:#53bdeb;border:0;border-radius:99px;padding:6px 12px;transition:background .3s,color .3s;}
+.wad-btns button:nth-child(2).on{background:#53bdeb;color:#0b141a;}
+.wad-side{display:grid;gap:14px;}
+.wad-card{background:#fff;border:1px solid var(--line,#ececec);border-radius:18px;padding:16px 18px;box-shadow:0 18px 40px -22px rgba(17,17,17,.35);opacity:0;transform:translateX(-14px);transition:opacity .5s,transform .5s cubic-bezier(.2,.8,.2,1);}
+.wad-k{display:inline-block;font-size:11.5px;font-weight:800;color:#7B2FBE;background:rgba(123,47,190,.08);border-radius:99px;padding:3px 10px;margin-bottom:6px;}
+.wad-card b{display:block;font-size:16px;margin-bottom:6px;}.wad-card p{margin:0;font-size:14px;color:#555;}
+.wad-card ul{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:14px;}.wad-card li em{font-style:normal;color:#888;display:inline-block;width:52px;}
+.wad-st{color:#fff;background:#E8003D;border-radius:6px;padding:1px 8px;font-size:12.5px;transition:background .4s;}
+.wad.done .wad-st{background:#16a34a;}
+.wad-cap{text-align:center;font-size:13.5px;color:#777;margin:16px 0 4px;}
+.wad-replay{border:1px solid #ddd;background:#fff;border-radius:99px;padding:5px 12px;font:inherit;font-size:13px;cursor:pointer;margin-inline-end:8px;}
+.wad-benefit{text-align:center;font-size:17px;margin:4px 0 0;}
+.wad .show{opacity:1!important;transform:none!important;}
+.wad .wad-typing.show{height:auto;padding-block:10px;}
+@media (max-width:820px){.wad{grid-template-columns:1fr;max-width:380px;margin-inline:auto;}.wad-phone{height:520px;}.wad-card{transform:translateY(10px);}}
+@media (prefers-reduced-motion:reduce){.wad *{transition:none!important;animation:none!important;}}
+</style>
 </head>
 <body>
   <div id="progress"><span></span></div>
@@ -505,6 +538,32 @@
           <p>כל שיחת וואטסאפ מסונכרנת ל-<a href="service-crm" style="color:var(--purple);font-weight:600;">CRM</a>. אתם רואים את התמונה המלאה -- מי כתב, מה נאמר, מה הסטטוס.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section wad-sec" id="waDemoSec">
+    <div class="wrap">
+      <div class="s-head center reveal"><span class="eyebrow">הדמיה חיה</span><h2>ככה נראית פנייה שנענית לבד</h2><p>לקוח כותב לכם בוואטסאפ ב-23:40. אתם ישנים. המערכת לא.</p></div>
+      <div class="wad" id="waDemo">
+        <div class="wad-phone">
+          <div class="wad-bar"><span class="wad-av">ע</span><div><b>העסק שלך</b><small id="wadStatus">מחובר/ת</small></div><span class="wad-time">23:40</span></div>
+          <div class="wad-chat">
+            <div class="wad-b wad-in"><p>היי, ראיתי אתכם בגוגל. כמה עולה ומתי אפשר להתחיל?</p><span>23:40</span></div>
+            <div class="wad-typing"><i></i><i></i><i></i></div>
+            <div class="wad-b wad-out"><p>היי! תודה שפנית. קיבלנו את ההודעה. כדי שנחזור אליך עם תשובה מדויקת, מה הכי מתאים לך?</p><span>23:40 ✓✓</span></div>
+            <div class="wad-btns"><button type="button" tabindex="-1">הצעת מחיר</button><button type="button" tabindex="-1">לקבוע שיחה</button><button type="button" tabindex="-1">שאלה אחרת</button></div>
+            <div class="wad-b wad-in wad-pick"><p>לקבוע שיחה</p><span>23:41</span></div>
+            <div class="wad-b wad-out wad-last"><p>מעולה. שריינו לך שיחה מחר ב-10:00. נתראה!</p><span>23:41 ✓✓</span></div>
+          </div>
+        </div>
+        <div class="wad-side">
+          <div class="wad-card wad-crm"><span class="wad-k">CRM</span><b>ליד חדש נכנס</b><ul><li><em>מקור</em>וואטסאפ · גוגל</li><li><em>בקשה</em>לקבוע שיחה</li><li><em>סטטוס</em><strong class="wad-st">חדש</strong></li></ul></div>
+          <div class="wad-card wad-cal"><span class="wad-k">יומן</span><b>שיחה נקבעה</b><p>מחר · 10:00</p></div>
+          <div class="wad-card wad-ping"><span class="wad-k">התראה</span><b>בעל העסק עודכן</b><p>הכל מחכה לך בבוקר, מסודר.</p></div>
+        </div>
+      </div>
+      <p class="wad-cap"><button type="button" class="wad-replay">↻ הפעל שוב</button> הדמיה. ההודעות, הכפתורים והחיבורים נבנים לפי העסק שלכם.</p>
+      <p class="wad-benefit"><strong>אף פנייה לא נשארת בלי מענה, גם כשאתם לא ליד הטלפון.</strong></p>
     </div>
   </section>
 
@@ -873,5 +932,14 @@
 
 <!-- Sticky mobile CTA -->
 <script src="assets/mega.js?v=4" defer></script>
+<script>
+(function(){var r=document.getElementById('waDemo');if(!r)return;var q=function(x){return r.querySelector(x)},T=[],red=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var seq=[['.wad-b.wad-in',300],['.wad-typing',1300],['-.wad-typing',2700],['.wad-b.wad-out',2700],['.wad-btns',3300],['.wad-crm',3600],['btn',5000],['.wad-pick',5600],['.wad-b.wad-last',6600],['.wad-cal',7000],['.wad-ping',7700],['done',8000]];
+function reset(){T.forEach(clearTimeout);T=[];r.classList.remove('done');r.querySelectorAll('.show').forEach(function(e){e.classList.remove('show')});var b=q('.wad-btns button:nth-child(2)');b.classList.remove('on');}
+function act(k){if(k==='done'){r.classList.add('done');return;}if(k==='btn'){q('.wad-btns button:nth-child(2)').classList.add('on');return;}if(k[0]==='-'){q(k.slice(1)).classList.remove('show');return;}q(k).classList.add('show');}
+function play(){reset();if(red){seq.forEach(function(s){act(s[0])});return;}seq.forEach(function(s){T.push(setTimeout(function(){act(s[0])},s[1]))});}
+document.querySelector('.wad-replay').addEventListener('click',play);
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();play();}},{threshold:.35});io.observe(r);}else play();})();
+</script>
 </body>
 </html>
