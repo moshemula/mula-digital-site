@@ -8,6 +8,7 @@
 
 ## שירותים
 
+- [מנהל שיווק חיצוני (CMO as a Service)](https://muladigital.co.il/menahel-shivuk-chitzoni): מנהל שיווק במיקור חוץ שגם חושב וגם מבצע: אסטרטגיה, פיתוח עסקי, אתר, קמפיינים, תוכן, CRM ואוטומציות תחת אחריות אחת. בליווי חודשי
 - [בניית אתרים](https://muladigital.co.il/service-web-development): אתרי וורדפרס ואלמנטור לעסקים, מ-5,000 ₪
 - [אחסון ותחזוקת אתרים](https://muladigital.co.il/service-hosting): שרת פרטי ישראלי, גיבויים שבועיים וחודשיים, SSL, תוספי פרימיום ותחזוקה, 120 ₪ + מע״מ לחודש
 - [קידום אתרים (SEO)](https://muladigital.co.il/service-seo): קידום אורגני בגוגל ובמנועי AI
