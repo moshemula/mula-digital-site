@@ -5,7 +5,7 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Thu, 01 Oct 2026 09:24:12 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 18:42:56 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
@@ -49,10 +49,10 @@
       <media:content url="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
     <item>
-      <title>פרסום ב-ChatGPT בישראל: מה ראיתי בחשבון שלי</title>
+      <title>פרסום ב-ChatGPT בישראל: המדריך המלא מהחשבון שלי</title>
       <link>https://muladigital.co.il/blog-pirsum-bechatgpt</link>
       <guid isPermaLink="true">https://muladigital.co.il/blog-pirsum-bechatgpt</guid>
-      <description>פרסום ב-ChatGPT בישראל: 2,066 חשיפות, 53 קליקים ו-1.79 ₪ לקליק בחמשת הימים הראשונים. מי רואה את המודעות, מה חסר ולמי זה מתאים.</description>
+      <description>פרסום ב-ChatGPT בישראל, מהחשבון שלי: 1.79 ₪ לקליק, הקמה שלב אחר שלב, context hints, פיקסל ו-Conversions API, מגבלות תווים ומי בכלל אסור לו לפרסם.</description>
       <pubDate>Wed, 23 Sep 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1676299081847-824916de030a?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1676299081847-824916de030a?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
