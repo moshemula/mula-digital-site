@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8" />
@@ -482,34 +482,59 @@
   </nav>
 
   <!-- HERO -->
-  <section class="srv-hero">
-    <div class="hero-shape hero-shape-1"></div>
-    <div class="hero-shape hero-shape-2"></div>
-    <div class="hero-shape hero-shape-3"></div>
-    <div class="hero-shape hero-shape-4"></div>
+  <section class="srv-hero sv-hero">
     <div class="wrap">
-      <div class="hero-inner">
-        <nav class="breadcrumb" aria-label="פירורי לחם">
-          <a href="/">בית</a>
-          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          <span style="color:rgba(255,255,255,.7)">שירותים</span>
-        </nav>
-        <h1><span class="accent">השירותים שלנו</span></h1>
-        <p class="subtitle">לא מתחילים מהכלי. מתחילים מהעסק. מבינים מה חסר, בונים מה שצריך, ומחברים הכל למערכת אחת שמביאה תוצאות.</p>
+      <div class="sv-in">
+        <nav class="breadcrumb" aria-label="פירורי לחם"><a href="/">בית</a><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg><span style="color:rgba(255,255,255,.7)">שירותים</span></nav>
+        <h1>לא עוד ספק.<br><span class="accent">מערכת אחת שמביאה לקוחות.</span></h1>
+        <p class="subtitle">לא מתחילים מהכלי. מתחילים מהעסק: מבינים מה חסר, בונים את מה שצריך, ומחברים הכול למערכת אחת.</p>
+        <p class="sv-b">פחות ספקים לתאם. יותר פניות שאפשר למדוד.</p>
+        <ol class="sv-steps" aria-label="שלושת השלבים">
+          <li><a href="#sv-1"><b>01</b><span>בניית נוכחות</span><small>אתר, מיתוג, תוכן</small></a></li>
+          <li><a href="#sv-2"><b>02</b><span>הבאת לקוחות</span><small>גוגל, Meta, לינקדאין</small></a></li>
+          <li><a href="#sv-3"><b>03</b><span>מערכות צמיחה</span><small>CRM, אוטומציות, AI</small></a></li>
+        </ol>
+        <div class="sv-line" aria-hidden="true"><i></i></div>
+        <div class="hero-actions"><a href="tel:0508249824" class="btn btn-primary">לקביעת שיחת אבחון</a><a href="menahel-shivuk-chitzoni" class="btn btn-dark">רוצים אחראי אחד על הכול?</a></div>
       </div>
     </div>
   </section>
+<style>
+.sv-hero{padding:calc(var(--nav-h) + 70px) 0 80px!important;}
+.sv-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 55% 60% at 80% 10%,rgba(232,0,61,.22),transparent 60%),radial-gradient(ellipse 50% 60% at 10% 90%,rgba(123,47,190,.28),transparent 60%);pointer-events:none;}
+.sv-in{position:relative;z-index:2;max-width:880px;margin-inline:auto;text-align:center;}
+.sv-in .breadcrumb{justify-content:center;}
+.sv-hero h1{font-size:clamp(36px,5.6vw,66px);font-weight:900;line-height:1.08;letter-spacing:-.03em;margin-bottom:18px;}
+.sv-hero h1 .accent{background:linear-gradient(120deg,#ff3d6e,#a46bff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.sv-hero .subtitle{margin:0 auto 10px;max-width:640px;color:rgba(255,255,255,.7);}
+.sv-b{font-family:var(--f-display);font-weight:800;color:#fff;font-size:clamp(17px,2vw,20px);margin:0 0 34px;}
+.sv-steps{list-style:none;padding:0;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:820px;position:relative;z-index:1;}
+.sv-steps a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:18px 12px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);transition:transform .3s var(--ease),border-color .3s,background .3s;opacity:0;transform:translateY(14px);animation:svIn .6s var(--ease) forwards;}
+.sv-steps li:nth-child(2) a{animation-delay:.25s}.sv-steps li:nth-child(3) a{animation-delay:.5s}
+@keyframes svIn{to{opacity:1;transform:none}}
+.sv-steps a:hover{border-color:rgba(164,107,255,.5);background:rgba(255,255,255,.08);transform:translateY(-3px);}
+.sv-steps b{font-family:var(--f-display);font-weight:900;font-size:13px;color:#ff6b93;letter-spacing:.08em;}
+.sv-steps span{font-family:var(--f-display);font-weight:800;font-size:18px;color:#fff;}
+.sv-steps small{font-size:13.5px;color:rgba(255,255,255,.55);}
+.sv-line{height:3px;max-width:820px;margin:-2px auto 34px;border-radius:3px;background:rgba(255,255,255,.08);overflow:hidden;}
+.sv-line i{display:block;height:100%;width:0;background:var(--grad);animation:svLine 1.6s .4s var(--ease) forwards;margin-inline-start:0;}
+@keyframes svLine{to{width:100%}}
+.sv-hero .hero-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;}
+.svc-category{scroll-margin-top:110px;}
+@media(max-width:620px){.sv-hero{padding:calc(var(--nav-h) + 40px) 0 56px!important;}.sv-steps{grid-template-columns:1fr;gap:10px;}.sv-steps a{flex-direction:row;justify-content:flex-start;gap:12px;padding:14px 16px;text-align:start;}.sv-steps small{margin-inline-start:auto;}.sv-line{display:none;}.sv-hero .hero-actions{flex-direction:column;margin-top:18px;}.sv-hero .hero-actions .btn{width:100%;}}
+@media (prefers-reduced-motion:reduce){.sv-steps a{animation:none;opacity:1;transform:none}.sv-line i{animation:none;width:100%}}
+</style>
 
   <!-- SERVICES BY CATEGORY -->
   <section class="sec">
     <div class="wrap">
 
       <!-- === בניית נוכחות === -->
-      <div class="svc-category">
+      <div class="svc-category" id="sv-1">
         <div class="cat-header reveal">
           <span class="eyebrow">שלב 01</span>
           <h2>בניית נוכחות</h2>
-          <p>לפני שמביאים לקוחות - צריך שיהיה לאן להביא אותם. הנוכחות הדיגיטלית היא הבסיס.</p>
+          <p>לפני שמביאים לקוחות, צריך שיהיה לאן להביא אותם. הנוכחות הדיגיטלית היא הבסיס.</p>
         </div>
         <div class="svc-grid">
 
@@ -518,7 +543,7 @@
             <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
             <h3>בניית אתרים</h3>
             <p class="svc-desc">אתר שמביא לקוחות, לא רק נראה טוב. WordPress, Elementor, Shopify.</p>
-            <span class="svc-link">קרא עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+            <span class="svc-link">קראו עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
           </a>
 
           <!-- 2. מיתוג -->
@@ -526,7 +551,7 @@
             <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
             <h3>מיתוג</h3>
             <p class="svc-desc">לוגו, שפה חזותית ובידול שמשדרים מקצועיות ואמינות.</p>
-            <span class="svc-link">קרא עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+            <span class="svc-link">קראו עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
           </a>
 
           <!-- 3. תוכן -->
@@ -534,7 +559,7 @@
             <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
             <h3>תוכן</h3>
             <p class="svc-desc">קופירייטינג, מאמרי SEO ותוכן לרשתות שמדבר בשפה של הלקוחות.</p>
-            <span class="svc-link">קרא עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+            <span class="svc-link">קראו עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
           </a>
 
           <!-- 4. עיצוב גרפי -->
@@ -542,7 +567,7 @@
             <div class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r="2.5"/><path d="M17.5 22H6.5a4 4 0 01-4-4V6a4 4 0 014-4h11a4 4 0 014 4v12a4 4 0 01-4 4z"/><path d="M2.5 15.5L8 10l4 4 3-3 6.5 6.5"/></svg></div>
             <h3>עיצוב גרפי</h3>
             <p class="svc-desc">פוסטים, באנרים ומצגות שתופסים את העין ומעבירים מסר.</p>
-            <span class="svc-link">קרא עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+            <span class="svc-link">קראו עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
           </a>
 
           <!-- 5. צילום ווידאו -->
@@ -550,7 +575,7 @@
             <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
             <h3>צילום ווידאו</h3>
             <p class="svc-desc">צילומי תדמית, מוצרים ורילסים שמעלים את הרמה של המותג.</p>
-            <span class="svc-link">קרא עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+            <span class="svc-link">קראו עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
           </a>
 
           <!-- 6. דפי נחיתה -->
@@ -558,14 +583,14 @@
             <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/></svg></div>
             <h3>דפי נחיתה</h3>
             <p class="svc-desc">עמוד אחד ממוקד שממיר מבקרים ללידים. A/B, אופטימיזציה, תוצאות.</p>
-            <span class="svc-link">קרא עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+            <span class="svc-link">קראו עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
           </a>
 
         </div>
       </div>
 
       <!-- === הבאת לקוחות === -->
-      <div class="svc-category">
+      <div class="svc-category" id="sv-2">
         <div class="cat-header reveal">
           <span class="eyebrow">שלב 02</span>
           <h2>הבאת לקוחות</h2>
@@ -578,7 +603,7 @@
             <div class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
             <h3>קידום אתרים SEO</h3>
             <p class="svc-desc">להופיע בגוגל כשהלקוחות מחפשים. SEO אורגני, תוכן ובניית קישורים.</p>
-            <span class="svc-link">קרא עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+            <span class="svc-link">קראו עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
           </a>
 
           <!-- 8. קידום עסק בגוגל -->
@@ -586,7 +611,7 @@
             <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
             <h3>קידום עסק בגוגל</h3>
             <p class="svc-desc">חבילת ה-3 במפות גוגל, ביקורות וניהול פרופיל עסקי.</p>
-            <span class="svc-link">קרא עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+            <span class="svc-link">קראו עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
           </a>
 
           <!-- 9. קמפיינים בגוגל -->
@@ -594,7 +619,7 @@
             <div class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
             <h3>קמפיינים בגוגל</h3>
             <p class="svc-desc">קמפיינים ממוקדים בחיפוש, שופינג ודיספליי שמביאים לידים מהיום הראשון.</p>
-            <span class="svc-link">קרא עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+            <span class="svc-link">קראו עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
           </a>
 
           <!-- 10. פרסום בפייסבוק -->
@@ -602,7 +627,7 @@
             <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
             <h3>פרסום בפייסבוק</h3>
             <p class="svc-desc">קמפיינים ב-Facebook, Instagram ו-Reels שמגיעים לקהל הנכון.</p>
-            <span class="svc-link">קרא עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+            <span class="svc-link">קראו עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
           </a>
 
           <!-- 11. LinkedIn -->
@@ -610,18 +635,18 @@
             <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
             <h3>LinkedIn</h3>
             <p class="svc-desc">נוכחות B2B, לידים מקצועיים ותוכן שבונה סמכות בתחום.</p>
-            <span class="svc-link">קרא עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+            <span class="svc-link">קראו עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
           </a>
 
         </div>
       </div>
 
       <!-- === מערכות צמיחה === -->
-      <div class="svc-category">
+      <div class="svc-category" id="sv-3">
         <div class="cat-header reveal">
           <span class="eyebrow">שלב 03</span>
           <h2>מערכות צמיחה</h2>
-          <p>כשיש תנועה ופניות - צריך מערכות שיודעות לנהל, לעקוב ולסגור. בלי לאבד אף ליד בדרך.</p>
+          <p>כשיש תנועה ופניות, צריך מערכות שיודעות לנהל, לעקוב ולסגור. בלי לאבד אף ליד בדרך.</p>
         </div>
         <div class="svc-grid">
 
@@ -629,8 +654,8 @@
           <a href="service-ai-automation" class="svc-card reveal">
             <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 014 4c0 1.95-2 4-4 6-2-2-4-4.05-4-6a4 4 0 014-4z"/><path d="M4.93 10.93a10 10 0 100 2.14"/><path d="M2 12h2"/><path d="M20 12h2"/></svg></div>
             <h3>אוטומציות AI</h3>
-            <p class="svc-desc">תהליכים חכמים שחוסכים שעות עבודה. Make, n8n, ואינטגרציות.</p>
-            <span class="svc-link">קרא עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+            <p class="svc-desc">תהליכים חכמים שחוסכים שעות עבודה. Make, n8n ואינטגרציות.</p>
+            <span class="svc-link">קראו עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
           </a>
 
           <!-- 13. CRM -->
@@ -638,7 +663,7 @@
             <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
             <h3>CRM</h3>
             <p class="svc-desc">ניהול לידים ומכירות במקום אחד. שום פנייה לא נופלת בין הכיסאות.</p>
-            <span class="svc-link">קרא עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+            <span class="svc-link">קראו עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
           </a>
 
           <!-- 14. אוטומציות וואטסאפ -->
@@ -646,7 +671,7 @@
             <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
             <h3>אוטומציות וואטסאפ</h3>
             <p class="svc-desc">בוטים, מענה אוטומטי ושליחה חכמה שעובדים 24/7.</p>
-            <span class="svc-link">קרא עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+            <span class="svc-link">קראו עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
           </a>
 
           <!-- 15. Analytics -->
@@ -654,7 +679,7 @@
             <div class="svc-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
             <h3>Analytics</h3>
             <p class="svc-desc">GA4, דוחות ותובנות שעוזרים לקבל החלטות מבוססות נתונים.</p>
-            <span class="svc-link">קרא עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+            <span class="svc-link">קראו עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
           </a>
 
           <!-- 16. CRO -->
@@ -662,7 +687,7 @@
             <div class="svc-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
             <h3>CRO</h3>
             <p class="svc-desc">אופטימיזציית המרות. יותר לידים מאותה תנועה, בלי להוציא שקל נוסף.</p>
-            <span class="svc-link">קרא עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+            <span class="svc-link">קראו עוד <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
           </a>
 
         </div>
@@ -681,7 +706,7 @@
         <div class="row">
           <a href="tel:0508249824" class="btn btn-primary">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            שיחת אבחון - 050-824-9824
+            שיחת אבחון: 050-824-9824
           </a>
           <a href="https://wa.me/972508249824" target="_blank" rel="noopener" class="btn btn-dark">
             <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
@@ -699,7 +724,7 @@
         <img src="assets/moshe-black.jpg" alt="משה מולה - Mula Digital" />
         <div>
           <h3>משה מולה</h3>
-          <p>20+ שנות ניסיון במכירות, שיווק וניהול עסקי. 9+ שנים בדיגיטל. לא מתחיל מהכלי - מתחיל מהעסק. מבין מה גורם ללקוח לסגור עסקה, ובונה מערכות שמביאות את זה לפרקטיקה.</p>
+          <p>20+ שנות ניסיון במכירות, שיווק וניהול עסקי. 9+ שנים בדיגיטל. לא מתחיל מהכלי. מתחיל מהעסק. מבין מה גורם ללקוח לסגור עסקה, ובונה מערכות שמביאות את זה לפרקטיקה.</p>
           <a href="about">קראו עוד על משה <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></a>
         </div>
       </div>
@@ -712,7 +737,7 @@
       <div class="foot-top">
         <div class="foot-brand">
           <img src="assets/logo-dark.png" alt="הלוגו של Mula Digital" />
-          <p>לא עוד אתר. מערכת צמיחה אחת שמחברת אסטרטגיה, אתר, SEO, קמפיינים, AI, CRM ווואטסאפ - ומביאה לעסק יותר לקוחות.</p>
+          <p>לא עוד אתר. מערכת צמיחה אחת שמחברת אסטרטגיה, אתר, SEO, קמפיינים, AI, CRM ווואטסאפ, ומביאה לעסק יותר לקוחות.</p>
           <div class="foot-social">
             <a href="tel:0508249824" aria-label="טלפון"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
             <a href="mailto:Moshe@muladigital.co.il" aria-label="אימייל"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
