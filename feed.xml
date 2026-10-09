@@ -5,7 +5,7 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Wed, 07 Oct 2026 18:42:56 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 22:33:26 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
@@ -121,7 +121,7 @@
       <media:content url="https://muladigital.co.il/assets/moshe-white.jpg" medium="image" />
     </item>
     <item>
-      <title>לקוח לכל החיים - למה עצמאי מפסיד בלי אתר</title>
+      <title>לקוח לכל החיים: למה עצמאי מפסיד בלי אתר</title>
       <link>https://muladigital.co.il/blog-lakoach-lekol-hachaim</link>
       <guid isPermaLink="true">https://muladigital.co.il/blog-lakoach-lekol-hachaim</guid>
       <description>סוכן ביטוח, רואה חשבון, יועץ מס ועורך דין - לקוח אצלם נשאר שנים, ולכן ההחזר על לקוח מהרשת הוא מהגבוהים בשוק. אז למה כל כך הרבה מהם עדיין בלי אתר?</description>
@@ -151,13 +151,13 @@
       <title>איך Google Ads עובד? מדריך למתחילים 2026</title>
       <link>https://muladigital.co.il/blog-google-ads-guide</link>
       <guid isPermaLink="true">https://muladigital.co.il/blog-google-ads-guide</guid>
-      <description>איך Google Ads עובד בפועל? מכרז, Quality Score, סוגי קמפיינים, תקציבים ריאליים לעסקים בישראל, 5 טעויות שורפות כסף ואיך למדוד הצלחה. מדריך מהשטח.</description>
+      <description>איך Google Ads עובד בפועל? מכרז, Quality Score, סוגי קמפיינים, תקציבים ריאליים לעסקים בישראל, 5 טעויות ששורפות כסף ואיך למדוד הצלחה. מדריך מהשטח.</description>
       <pubDate>Thu, 13 Aug 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
     <item>
-      <title>פרסום בגוגל מול פייסבוק - איפה לשים את הכסף?</title>
+      <title>פרסום בגוגל מול פייסבוק: איפה לשים את הכסף?</title>
       <link>https://muladigital.co.il/blog-google-ads-vs-facebook</link>
       <guid isPermaLink="true">https://muladigital.co.il/blog-google-ads-vs-facebook</guid>
       <description>השוואה מעמיקה בין Google Ads לפייסבוק ואינסטגרם: מתי להשתמש בכל פלטפורמה, כמה עולה, 5 תרחישים מהשטח ומסגרת להחלטה נכונה. מדריך מעשי לבעלי עסקים.</description>
@@ -166,7 +166,7 @@
       <media:content url="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
     <item>
-      <title>גוגל לעסק שלי 2026 - המדריך האסטרטגי המלא</title>
+      <title>גוגל לעסק שלי 2026: המדריך האסטרטגי המלא</title>
       <link>https://muladigital.co.il/blog-google-business-profile</link>
       <guid isPermaLink="true">https://muladigital.co.il/blog-google-business-profile</guid>
       <description>מדריך מלא לפרופיל עסקי בגוגל 2026. אימות וידאו, ביקורות, אופטימיזציה, טעויות נפוצות, צ'קליסט 20 נקודות ודוגמאות מהשטח. מדריך מעשי.</description>
@@ -175,7 +175,7 @@
       <media:content url="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
     <item>
-      <title>קידום ב-AI - מדריך GEO מלא להופיע בתשובות AI 2026</title>
+      <title>קידום ב-AI: מדריך GEO מלא להופיע בתשובות AI 2026</title>
       <link>https://muladigital.co.il/blog-kiddum-ai-geo</link>
       <guid isPermaLink="true">https://muladigital.co.il/blog-kiddum-ai-geo</guid>
       <description>מדריך מלא לקידום עסקים במנועי AI. איך להופיע בתשובות של ChatGPT ו-Gemini? 15 טקטיקות מוכחות, סטטיסטיקות, צ'קליסט ודוגמאות מהשטח.</description>
@@ -238,7 +238,7 @@
       <media:content url="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
     <item>
-      <title>SEO לעסקים מקומיים - מדריך מעשי 2026</title>
+      <title>SEO לעסקים מקומיים: מדריך מעשי 2026</title>
       <link>https://muladigital.co.il/blog-seo-laasakim-mekomiyim</link>
       <guid isPermaLink="true">https://muladigital.co.il/blog-seo-laasakim-mekomiyim</guid>
       <description>SEO מקומי זה לא קסם - זה תהליך. מדריך מעשי: איך לגרום לעסק שלך להופיע בגוגל כשלקוחות מחפשים באזור, עם Google Business, מפות, ביקורות ותוכן.</description>
