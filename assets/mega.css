@@ -204,3 +204,5 @@ html,body{overflow-x:clip;}
   header.nav .mx-contact{grid-column:auto;}
   header.nav .mx-side:not(.mx-pv-side){grid-template-columns:auto auto 1fr;}
 }
+
+/* geo-safe */.brand img,.mx-logo img,.m-s-ic.m-logo img{height:auto;}.foot-social{flex-wrap:wrap;}
