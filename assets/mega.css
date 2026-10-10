@@ -206,3 +206,11 @@ html,body{overflow-x:clip;}
 }
 
 /* geo-safe */.brand img,.mx-logo img,.m-s-ic.m-logo img{height:auto;}.foot-social{flex-wrap:wrap;}
+/* mobile menu v2: above header, cookie bar and floating buttons */
+.mm-overlay{z-index:1190!important;}
+.mobile-menu{z-index:1200!important;}
+body:has(.mobile-menu.open) .cookie-banner,body:has(.mobile-menu.open) .wa-float,body:has(.mobile-menu.open) .sticky-cta{opacity:0!important;visibility:hidden!important;pointer-events:none!important;}
+body:has(.mobile-menu.open) header.nav{opacity:0;pointer-events:none;transition:opacity .2s;}
+body:has(.cookie-banner.show) .wa-float{opacity:0;pointer-events:none;}
+/* hero clears the floating header on phones and tablets */
+@media (max-width:1000px){.srv-hero .hero-inner{padding-top:calc(var(--nav-h) + 36px)!important;}}
