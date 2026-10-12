@@ -27,7 +27,7 @@ jobs:
       - name: משיכת הקוד
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2      # צריך את הקומיט הקודם כדי לזהות מה נוסף
+          fetch-depth: 0      # כל ההיסטוריה, כדי לזהות מה נוסף ומה השתנה בדחיפה
 
       - name: התקנת פייתון
         uses: actions/setup-python@v5
@@ -49,6 +49,15 @@ jobs:
           fi
           echo "added=${ADDED}" >> "$GITHUB_OUTPUT"
           echo "לפרסום: ${ADDED:-אין}"
+
+      - name: עדכון בינג ומנועי חיפוש (IndexNow) על דפים חדשים ומעודכנים
+        if: github.event_name == 'push'
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          BASE="$BEFORE"
+          if [ -z "$BASE" ] || ! git cat-file -e "$BASE" 2>/dev/null; then BASE="HEAD^"; fi
+          python3 tools_indexnow.py $(git diff --name-only --diff-filter=AM "$BASE" HEAD -- '*.html' 'sitemap.xml' | tr '\n' ' ') || echo "IndexNow נכשל, ממשיכים"
 
       - name: בניית feed.xml מחדש
         run: python tools_feed.py
