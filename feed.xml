@@ -5,13 +5,22 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Fri, 09 Oct 2026 22:33:26 +0300</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 12:28:23 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>למה האתר שלי לא מופיע בגוגל? 10 סיבות</title>
+      <link>https://muladigital.co.il/blog-lama-haatar-lo-mofia-begoogle</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-lama-haatar-lo-mofia-begoogle</guid>
+      <description>האתר לא מופיע בגוגל? 10 סיבות נפוצות, בדיקה עצמית ב-15 דקות עם Search Console, מה לתקן לבד, ומתי זו בכלל לא תקלה אלא תחרות.</description>
+      <pubDate>Sun, 11 Oct 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&amp;amp;q=70" medium="image" />
+    </item>
     <item>
       <title>אופטימיזציית המרות: יש כניסות ואין פניות?</title>
       <link>https://muladigital.co.il/blog-optimizatzia-hamarot</link>
