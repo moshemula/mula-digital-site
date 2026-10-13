@@ -7,9 +7,31 @@
     "h1": "קידום בגוגל לעסקים",
     "accent": "כל המדריכים, לפי הסדר",
     "start": "האתר עדיין לא מופיע בגוגל? מתחילים במאמר הראשון. כבר מופיעים ורוצים יותר פניות? קפצו לשלב שמתאים לכם.",
-    "articles": ["blog-lama-haatar-lo-mofia-begoogle", "blog-eich-lekadem-esek-begoogle", "blog-google-business-profile", "blog-seo-laasakim-mekomiyim", "blog-tochen-shemavi-lekochot", "blog-kama-ole-kiddum-bGoogle"],
-    "extra": ["hashvaa-kidum-organi-mul-kampeinim"],
-    "services": [["service-seo", "קידום אתרים (SEO)"], ["service-local-seo", "קידום עסק בגוגל מפות"], ["service-gmb-expert", "ניהול פרופיל העסק בגוגל"]]
+    "articles": [
+      "blog-lama-haatar-lo-mofia-begoogle",
+      "blog-eich-lekadem-esek-begoogle",
+      "blog-google-business-profile",
+      "blog-seo-laasakim-mekomiyim",
+      "blog-tochen-shemavi-lekochot",
+      "blog-kama-ole-kiddum-bGoogle"
+    ],
+    "extra": [
+      "hashvaa-kidum-organi-mul-kampeinim"
+    ],
+    "services": [
+      [
+        "service-seo",
+        "קידום אתרים (SEO)"
+      ],
+      [
+        "service-local-seo",
+        "קידום עסק בגוגל מפות"
+      ],
+      [
+        "service-gmb-expert",
+        "ניהול פרופיל העסק בגוגל"
+      ]
+    ]
   },
   {
     "slug": "madrich-kidum-ai-geo",
@@ -19,9 +41,27 @@
     "h1": "קידום ב-AI ו-GEO",
     "accent": "להופיע כשהלקוח שואל את ChatGPT",
     "start": "חדשים בנושא? מתחילים במדריך ה-GEO. רוצים תוצאות כבר עכשיו? המאמר על פרסום ב-ChatGPT מראה את המספרים מהחשבון שלי.",
-    "articles": ["blog-kiddum-ai-geo", "blog-sapak-sherutey-geo", "blog-pirsum-bechatgpt", "blog-ai-chosech-zman-laasakim"],
+    "articles": [
+      "blog-kiddum-ai-geo",
+      "blog-sapak-sherutey-geo",
+      "blog-pirsum-bechatgpt",
+      "blog-ai-chosech-zman-laasakim"
+    ],
     "extra": [],
-    "services": [["service-chatgpt-ads", "ניהול קמפיינים ב-ChatGPT"], ["service-seo", "קידום אורגני ו-GEO"], ["service-ai-automation", "אוטומציות AI לעסקים"]]
+    "services": [
+      [
+        "service-chatgpt-ads",
+        "ניהול קמפיינים ב-ChatGPT"
+      ],
+      [
+        "service-seo",
+        "קידום אורגני ו-GEO"
+      ],
+      [
+        "service-ai-automation",
+        "אוטומציות AI לעסקים"
+      ]
+    ]
   },
   {
     "slug": "madrich-atar-shemavi-lekochot",
@@ -31,9 +71,32 @@
     "h1": "אתר שמביא לקוחות",
     "accent": "מהעיצוב ועד הפנייה",
     "start": "לפני שבונים או מחדשים אתר, מתחילים במאמר הראשון. יש אתר ויש כניסות אבל אין פניות? המאמר על אופטימיזציית המרות הוא בשבילכם.",
-    "articles": ["blog-atar-yafe-lo-maspik", "blog-lakoach-lekol-hachaim", "blog-kama-ole-livnot-atar", "blog-daf-nchita-shemammir", "blog-optimizatzia-hamarot", "blog-bniyat-atar-lemetaplim"],
-    "extra": ["hashvaa-wordpress-mul-wix"],
-    "services": [["service-web-development", "בניית אתרים"], ["service-landing-pages", "בניית דפי נחיתה"], ["service-cro", "אופטימיזציית המרות"]]
+    "articles": [
+      "blog-atar-yafe-lo-maspik",
+      "blog-eich-lemateg-esek-katan",
+      "blog-lakoach-lekol-hachaim",
+      "blog-kama-ole-livnot-atar",
+      "blog-daf-nchita-shemammir",
+      "blog-optimizatzia-hamarot",
+      "blog-bniyat-atar-lemetaplim"
+    ],
+    "extra": [
+      "hashvaa-wordpress-mul-wix"
+    ],
+    "services": [
+      [
+        "service-web-development",
+        "בניית אתרים"
+      ],
+      [
+        "service-landing-pages",
+        "בניית דפי נחיתה"
+      ],
+      [
+        "service-cro",
+        "אופטימיזציית המרות"
+      ]
+    ]
   },
   {
     "slug": "madrich-pirsum-mumman",
@@ -43,9 +106,32 @@
     "h1": "פרסום ממומן לעסקים",
     "accent": "איפה לשים את הכסף, ואיך לדעת שזה עובד",
     "start": "עוד לא החלטתם איפה לפרסם? מתחילים בהשוואה בין גוגל לפייסבוק. כבר מפרסמים? המאמר על מדידה יגיד לכם אם הכסף חוזר.",
-    "articles": ["blog-google-ads-vs-facebook", "blog-google-ads-guide", "blog-pirsum-facebook-laasakim", "blog-shivuk-linkedin-laasakim", "blog-eich-ladaat-im-hapirsum-oved", "blog-eich-livhor-chevrat-shivuk", "blog-eich-livhor-sochnut-digital"],
-    "extra": ["hashvaa-sochnut-mul-freelancer"],
-    "services": [["service-google-ads", "קמפיינים בגוגל"], ["service-meta-ads", "פרסום בפייסבוק ואינסטגרם"], ["service-linkedin", "שיווק בלינקדאין"]]
+    "articles": [
+      "blog-google-ads-vs-facebook",
+      "blog-google-ads-guide",
+      "blog-pirsum-facebook-laasakim",
+      "blog-shivuk-linkedin-laasakim",
+      "blog-eich-ladaat-im-hapirsum-oved",
+      "blog-eich-livhor-chevrat-shivuk",
+      "blog-eich-livhor-sochnut-digital"
+    ],
+    "extra": [
+      "hashvaa-sochnut-mul-freelancer"
+    ],
+    "services": [
+      [
+        "service-google-ads",
+        "קמפיינים בגוגל"
+      ],
+      [
+        "service-meta-ads",
+        "פרסום בפייסבוק ואינסטגרם"
+      ],
+      [
+        "service-linkedin",
+        "שיווק בלינקדאין"
+      ]
+    ]
   },
   {
     "slug": "madrich-crm-veautomatzia",
@@ -55,8 +141,28 @@
     "h1": "לידים, CRM ואוטומציה",
     "accent": "שאף פנייה לא תלך לאיבוד",
     "start": "מנהלים לידים בוואטסאפ ובראש? מתחילים במאמר הראשון. כבר יודעים שצריך CRM? המאמר על עלות ההטמעה יעזור לתכנן תקציב.",
-    "articles": ["blog-whatsapp-bli-crm", "blog-crm-laasakim-ktanim", "blog-kama-ole-hatmaat-crm", "blog-automatzia-whatsapp-laasakim", "blog-leadim-b2b-laasakim"],
+    "articles": [
+      "blog-kama-leadim-ani-mefaspes",
+      "blog-whatsapp-bli-crm",
+      "blog-crm-laasakim-ktanim",
+      "blog-kama-ole-hatmaat-crm",
+      "blog-automatzia-whatsapp-laasakim",
+      "blog-leadim-b2b-laasakim"
+    ],
     "extra": [],
-    "services": [["service-crm", "הטמעת CRM"], ["service-whatsapp-automation", "אוטומציות וואטסאפ"], ["service-ai-automation", "אוטומציות AI"]]
+    "services": [
+      [
+        "service-crm",
+        "הטמעת CRM"
+      ],
+      [
+        "service-whatsapp-automation",
+        "אוטומציות וואטסאפ"
+      ],
+      [
+        "service-ai-automation",
+        "אוטומציות AI"
+      ]
+    ]
   }
 ]
