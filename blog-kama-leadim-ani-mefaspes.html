@@ -553,6 +553,100 @@
 
   <article class="wrap">
 
+
+    <style>
+    /* ===== motion graphics (mg) ===== */
+    .mg{position:relative;margin:34px 0 38px;border-radius:24px;overflow:hidden;font-family:var(--f-body);}
+    .mg-k{display:inline-block;font:700 12px/1 var(--f-display);letter-spacing:.06em;padding:7px 12px;border-radius:100px;margin-bottom:12px;}
+    .mg h4{font:800 clamp(20px,3.2vw,26px)/1.25 var(--f-display);margin:0 0 6px;letter-spacing:-.02em;}
+    .mg .mg-sub{font-size:16px;line-height:1.6;margin:0;}
+    .mg .mg-note{font-size:13px;line-height:1.5;margin:18px 0 0;opacity:.75;}
+    .mg-dark{background:radial-gradient(ellipse 80% 60% at 85% 0%,rgba(123,47,190,.35),transparent 60%),radial-gradient(ellipse 60% 50% at 0% 100%,rgba(232,0,61,.22),transparent 60%),var(--night);color:#fff;padding:30px 28px 28px;}
+    .mg-dark .mg-k{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.14);}
+    .mg-dark .mg-sub{color:rgba(255,255,255,.72);}
+    .mg-light{background:var(--surface);border:1px solid var(--line);padding:30px 28px 28px;}
+    .mg-light .mg-k{background:rgba(123,47,190,.08);color:var(--purple);}
+    .mg-light .mg-sub{color:var(--soft);}
+
+    /* 1. leaky pipeline */
+    .mg-leak .pipe{position:relative;margin-top:24px;padding-inline-start:46px;}
+    .mg-leak .pipe::before{content:"";position:absolute;inset-inline-start:16px;top:8px;bottom:8px;width:6px;border-radius:6px;background:linear-gradient(180deg,#E8003D,#7B2FBE 75%,rgba(255,255,255,.25));}
+    .mg-leak .flow{position:absolute;inset-inline-start:13px;top:8px;bottom:8px;width:12px;overflow:hidden;pointer-events:none;}
+    .mg-leak .flow i{position:absolute;inset-inline-start:0;top:-14px;width:12px;height:12px;border-radius:50%;background:#fff;box-shadow:0 0 12px rgba(255,255,255,.9);animation:mgDown 4.8s linear infinite;}
+    .mg-leak .flow i:nth-child(2){animation-delay:-1.2s}.mg-leak .flow i:nth-child(3){animation-delay:-2.4s}.mg-leak .flow i:nth-child(4){animation-delay:-3.6s}
+    @keyframes mgDown{0%{top:-14px;opacity:0}8%{opacity:1}92%{opacity:1}100%{top:100%;opacity:0}}
+    .mg-leak .st{position:relative;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;padding:14px 16px;margin:0 0 12px;border-radius:16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);}
+    .mg-leak .st::before{content:"";position:absolute;inset-inline-start:-36px;top:50%;width:16px;height:16px;margin-top:-8px;border-radius:50%;background:var(--night);border:3px solid #fff;}
+    .mg-leak .st b{display:block;font:800 17px/1.3 var(--f-display);}
+    .mg-leak .st span{display:block;font-size:14px;line-height:1.5;color:rgba(255,255,255,.65);margin-top:2px;}
+    .mg-leak .st .n{font:900 13px/1 var(--f-display);color:#fff;background:var(--grad);border-radius:9px;width:32px;height:32px;display:grid;place-items:center;}
+    .mg-leak .st.leak .drip{position:absolute;inset-inline-start:-28px;top:50%;width:8px;height:8px;margin-top:-4px;border-radius:50%;background:#E8003D;opacity:0;animation:mgDrip 2.6s ease-in infinite;}
+    .mg-leak .st.leak:nth-of-type(2) .drip{animation-delay:.3s}.mg-leak .st.leak:nth-of-type(3) .drip{animation-delay:.9s}.mg-leak .st.leak:nth-of-type(4) .drip{animation-delay:1.5s}.mg-leak .st.leak:nth-of-type(5) .drip{animation-delay:2.1s}
+    @keyframes mgDrip{0%{opacity:0;transform:translate(0,0)}15%{opacity:1}100%{opacity:0;transform:translate(-26px,34px) scale(.6)}}
+    [dir="rtl"] .mg-leak .st.leak .drip{animation-name:mgDripR}
+    @keyframes mgDripR{0%{opacity:0;transform:translate(0,0)}15%{opacity:1}100%{opacity:0;transform:translate(26px,34px) scale(.6)}}
+    .mg-leak .st.leak .tag{font:700 12px/1 var(--f-display);color:#ff5c85;background:rgba(232,0,61,.14);border:1px solid rgba(232,0,61,.35);padding:6px 10px;border-radius:100px;white-space:nowrap;}
+    .mg-leak .st.in-top,.mg-leak .st.out{background:transparent;border:none;padding:4px 16px;}
+    .mg-leak .st.in-top b{font-size:15px;color:rgba(255,255,255,.8)}
+    .mg-leak .st.out{margin:4px 0 0;}
+    .mg-leak .st.out b{font-size:20px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;filter:brightness(1.35);}
+    .mg-leak .st.out::before{border-color:#7B2FBE;background:#7B2FBE;}
+
+    /* 2. response clock */
+    .mg-clock .bar{position:relative;display:grid;grid-template-columns:1fr 1.4fr 1.6fr 2fr;gap:4px;margin:26px 0 10px;height:18px;}
+    .mg-clock .bar i{display:block;border-radius:6px;transform-origin:right center;transform:scaleX(1);}
+    .mg-clock .bar i:nth-child(1){background:#E8003D}.mg-clock .bar i:nth-child(2){background:#B5179E}.mg-clock .bar i:nth-child(3){background:#7B2FBE}.mg-clock .bar i:nth-child(4){background:#C9C9D1}
+    .mg-clock.mg-anim .bar i{transform:scaleX(0);transition:transform .55s cubic-bezier(.22,.61,.36,1);}
+    .mg-clock.mg-anim.in .bar i{transform:scaleX(1)}
+    .mg-clock.mg-anim.in .bar i:nth-child(2){transition-delay:.45s}.mg-clock.mg-anim.in .bar i:nth-child(3){transition-delay:.9s}.mg-clock.mg-anim.in .bar i:nth-child(4){transition-delay:1.35s}
+    .mg-clock .lbl{display:grid;grid-template-columns:1fr 1.4fr 1.6fr 2fr;gap:4px;font-size:13px;line-height:1.35;color:var(--soft);}
+    .mg-clock .lbl b{display:block;font:800 14px/1.3 var(--f-display);color:var(--ink);}
+    .mg-clock .temp{display:flex;justify-content:space-between;font:700 12px/1 var(--f-display);color:var(--muted);margin-top:14px;}
+    .mg-clock .temp span:first-child{color:#E8003D}
+    .mg-clock .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px;}
+    .mg-clock .stats div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 12px;text-align:center;}
+    .mg-clock .stats strong{display:block;font:900 clamp(24px,4vw,32px)/1 var(--f-display);background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;}
+    .mg-clock .stats span{display:block;font-size:13px;line-height:1.4;color:var(--soft);margin-top:6px;}
+    .mg-clock .mg-note a{color:var(--purple);font-weight:700;}
+
+    /* 3. money formula */
+    .mg-formula .eq{display:flex;align-items:stretch;gap:10px;margin-top:24px;}
+    .mg-formula .t{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:16px 12px;text-align:center;}
+    .mg-formula .t strong{display:block;font:900 clamp(26px,3.4vw,34px)/1.05 var(--f-display);letter-spacing:-.02em;white-space:nowrap;}
+    .mg-formula .t span{display:block;font-size:13px;line-height:1.4;color:rgba(255,255,255,.65);margin-top:6px;}
+    .mg-formula .op{display:grid;place-items:center;font:800 22px/1 var(--f-display);color:rgba(255,255,255,.55);}
+    .mg-formula .t.res{flex:1.3;background:var(--grad);border:none;box-shadow:0 14px 40px rgba(232,0,61,.35);}
+    .mg-formula .t.res span{color:rgba(255,255,255,.9)}
+    .mg-formula .year{margin-top:14px;text-align:center;font:700 15px/1.4 var(--f-display);color:rgba(255,255,255,.8);}
+    .mg-formula .year b{color:#fff;font-weight:900}
+
+    /* 4. seven days */
+    .mg-week .days{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:22px;}
+    .mg-week .d{border-radius:14px;border:1px solid var(--line);background:#fff;padding:12px 4px 10px;text-align:center;}
+    .mg-week .d b{display:block;font:800 15px/1 var(--f-display);}
+    .mg-week .d svg{width:20px;height:20px;margin:8px auto 0;display:block;stroke:var(--muted);fill:none;stroke-width:2.4;}
+    .mg-week.mg-anim .d{transition:background .35s,border-color .35s,color .35s;}
+    .mg-week .d.on,.mg-week:not(.mg-anim) .d{background:var(--night);border-color:var(--night);color:#fff;}
+    .mg-week .d.on svg,.mg-week:not(.mg-anim) .d svg{stroke:#ff5c85;}
+    .mg-week .sum{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin-top:20px;font:800 16px/1.3 var(--f-display);text-align:center;}
+    .mg-week .sum .pill{background:var(--grad);color:#fff;border-radius:100px;padding:8px 16px;}
+
+    @media(max-width:640px){
+      .mg-dark,.mg-light{padding:24px 18px 22px;border-radius:20px;}
+      .mg-formula .eq{flex-direction:column;gap:6px;}
+      .mg-formula .op{padding:2px 0;}
+      .mg-clock .stats{gap:6px}.mg-clock .stats div{padding:12px 6px;border-radius:13px}.mg-clock .stats strong{font-size:21px}.mg-clock .stats span{font-size:11.5px}
+      .mg-clock .lbl{font-size:11.5px}.mg-clock .lbl b{font-size:12.5px}
+      .mg-week .days{gap:5px}.mg-week .d{padding:10px 2px 8px;border-radius:11px}.mg-week .d b{font-size:13px}
+      .mg-leak .st .tag{display:none}
+    }
+    @media (prefers-reduced-motion:reduce){
+      .mg *{animation:none!important;transition:none!important;}
+      .mg-leak .flow{display:none}
+      .mg-clock.mg-anim .bar i{transform:scaleX(1)}
+      .mg-week .d{background:var(--night)!important;color:#fff!important}
+    }
+    </style>
     <div class="answer">
       <div class="q">בקצרה: איך אני יודע כמה לידים אני מפספס בחודש?</div>
       <p>סופרים, לא מנחשים. <strong>במשך 7 ימים רושמים כל ניסיון של לקוח לפנות אליך</strong>: שיחות שלא נענו (מיומן השיחות בטלפון), הודעות וואטסאפ שנענו אחרי יותר משעה, טפסים מהאתר (כולל תיקיית הספאם), ופניות שקיבלו מענה ראשון ואז אף אחד לא חזר אליהן. מחברים את ארבעת המספרים, <strong>מכפילים ב-4 כדי לקבל חודש</strong>, ואז מכפילים באחוז הסגירה הרגיל שלך ובשווי עסקה ממוצע. <strong>התוצאה היא הסכום שנשאר על הרצפה כל חודש</strong>, וברוב העסקים שאני בודק הוא מפתיע.</p>
@@ -586,6 +680,22 @@
     <h2 id="s1"><span class="n">01</span> איפה בדיוק לידים הולכים לאיבוד?</h2>
     <p><strong>ברוב העסקים הקטנים, לידים הולכים לאיבוד בארבע נקודות קבועות: שיחה שלא נענתה, תגובה איטית, טופס שלא הגיע, ומעקב שלא קרה.</strong> יש גם נקודה חמישית, אנשים שכמעט פנו, אבל אותה מודדים אחרת.</p>
     <p>הבעיה היא שכל דליפה כזו שקטה. אין התראה שאומרת "הפסדת עכשיו לקוח". השיחה שלא נענתה נראית כמו עוד שורה אדומה ביומן. הטופס שנפל לספאם לא נראה בכלל. ולכן רוב בעלי העסקים מעריכים את הנזק לפי תחושה, ותחושה כמעט תמיד מקטינה אותו.</p>
+
+    <figure class="mg mg-dark mg-leak" aria-label="איור: ארבע נקודות שבהן פניות הולכות לאיבוד בדרך ללקוח">
+      <span class="mg-k">ככה זה נראה</span>
+      <h4>כל פנייה עוברת 4 נקודות. בכל אחת היא יכולה לנזול.</h4>
+      <p class="mg-sub">מה שנשאר בסוף הצינור הם הלקוחות שלך. המטרה של הספירה: לדעת כמה טיפות נופלות בכל נקודה.</p>
+      <div class="pipe">
+        <div class="flow" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="st in-top"><div><b>כל מי שניסה לפנות אליך</b></div></div>
+        <div class="st leak"><i class="drip" aria-hidden="true"></i><div><b>שיחה שלא נענתה</b><span>היית בעבודה, ולא חזרת באותו יום</span></div><em class="tag">דליפה</em></div>
+        <div class="st leak"><i class="drip" aria-hidden="true"></i><div><b>תגובה איטית</b><span>ענית, אבל הלקוח כבר דיבר עם מתחרה</span></div><em class="tag">דליפה</em></div>
+        <div class="st leak"><i class="drip" aria-hidden="true"></i><div><b>טופס שלא הגיע</b><span>נפל לספאם או לתיבה שאף אחד לא בודק</span></div><em class="tag">דליפה</em></div>
+        <div class="st leak"><i class="drip" aria-hidden="true"></i><div><b>מעקב שלא קרה</b><span>קיבל מחיר, ואף אחד לא חזר אליו</span></div><em class="tag">דליפה</em></div>
+        <div class="st out"><div><b>הלקוחות שלך</b></div></div>
+      </div>
+    </figure>
+
 
     <table class="compare-table">
       <thead><tr><th>נקודת הדליפה</th><th>איך זה נראה ביום-יום</th><th>איפה סופרים</th><th>כמה זמן לוקחת הבדיקה</th></tr></thead>
@@ -641,6 +751,22 @@
       <li><strong>42 שעות</strong> היה זמן התגובה הממוצע, בקרב אלה שחזרו תוך 30 יום.</li>
     </ul>
     <p>ובניתוח נוסף שהופיע באותו מאמר, של יותר ממיליון לידים, חברות שניסו ליצור קשר תוך שעה היו <strong>בסיכוי גבוה פי כמעט שבעה</strong> לנהל שיחה משמעותית עם מקבל ההחלטות, לעומת חברות שניסו שעה מאוחר יותר.</p>
+
+    <figure class="mg mg-light mg-clock mg-anim" aria-label="איור: ככל שעובר זמן מהפנייה, הליד מתקרר">
+      <span class="mg-k">שעון הליד</span>
+      <h4>הליד הכי חם בדקות שאחרי שהוא פנה</h4>
+      <p class="mg-sub">כל שעה שעוברת, הוא חוזר לחיים שלו. או לגוגל.</p>
+      <div class="bar" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="lbl"><div><b>עד שעה</b>תפסת אותו</div><div><b>1 עד 4 שעות</b>כבר פנה גם למתחרה</div><div><b>אותו יום</b>אתה אחד מכמה</div><div><b>למחרת</b>ברוב המקרים הלך</div></div>
+      <div class="temp"><span>חם</span><span>קר</span></div>
+      <div class="stats">
+        <div><strong>37%</strong><span>מהחברות חזרו לפנייה תוך שעה</span></div>
+        <div><strong>42 שעות</strong><span>זמן התגובה הממוצע</span></div>
+        <div><strong>23%</strong><span>לא חזרו בכלל</span></div>
+      </div>
+      <p class="mg-note">הנתונים: בדיקה של 2,241 חברות בארה"ב, <a href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" target="_blank" rel="noopener">Harvard Business Review, 2011</a>. החלוקה לשעות בפס היא כלל אצבע שלי, לא נתון מחקרי.</p>
+    </figure>
+
     <p>שוב, זה מחקר אמריקאי ולא חדש. אבל הכיוון שלו מתאים בדיוק למה שאני רואה בשטח: <strong>הליד הכי חם הוא בדקות שאחרי שהוא פנה</strong>. אחר כך הוא חוזר לחיים שלו, או לגוגל.</p>
 
     <h3>איך בודקים את זמן התגובה שלך בוואטסאפ</h3>
@@ -772,6 +898,24 @@
       </tbody>
     </table>
 
+
+    <figure class="mg mg-dark mg-formula" aria-label="איור: הנוסחה לחישוב הכסף שנשאר על הרצפה">
+      <span class="mg-k">הנוסחה, בשורה אחת</span>
+      <h4>כמה שווים הלידים שהלכו לאיבוד?</h4>
+      <p class="mg-sub">אותו תרחיש מהטבלה. תחליף את שלושת המספרים הראשונים במספרים שלך.</p>
+      <div class="eq">
+        <div class="t"><strong data-count="32">32</strong><span>לידים שאבדו בחודש</span></div>
+        <div class="op" aria-hidden="true">×</div>
+        <div class="t"><strong data-count="25" data-suffix="%">25%</strong><span>אחוז הסגירה שלך</span></div>
+        <div class="op" aria-hidden="true">×</div>
+        <div class="t"><strong data-count="1500" data-suffix=" ₪">1,500 ₪</strong><span>שווי עסקה ממוצע</span></div>
+        <div class="op" aria-hidden="true">=</div>
+        <div class="t res"><strong data-count="12000" data-suffix=" ₪">12,000 ₪</strong><span>נשארים על הרצפה כל חודש</span></div>
+      </div>
+      <p class="year">בשנה זה <b>144,000 ₪</b>. מלקוחות שכבר ניסו לפנות אליך.</p>
+      <p class="mg-note">המספרים להמחשה בלבד, לא נתונים של לקוח אמיתי.</p>
+    </figure>
+
     <p>שלוש מסקנות מהחישוב:</p>
     <ol>
       <li><strong>8 לידים בשבוע לא נשמעים כמו הרבה.</strong> זה פחות משניים ביום. בדיוק בגלל זה אף אחד לא שם לב אליהם. אבל בשנה זה סכום שמשנה עסק.</li>
@@ -787,6 +931,14 @@
     <!-- S8 -->
     <h2 id="s8"><span class="n">08</span> איך עושים את הספירה של 7 ימים בפועל?</h2>
     <p><strong>בוחרים שבוע רגיל, פותחים גיליון אחד עם חמש עמודות, ומקדישים 10 דקות בסוף כל יום למילוי.</strong> בסוף השבוע יש לך את כל המספרים לחישוב מהפרק הקודם.</p>
+
+    <figure class="mg mg-light mg-week mg-anim" aria-label="איור: ספירה של 10 דקות בערב במשך 7 ימים">
+      <span class="mg-k">השבוע שמחליף ניחוש במספר</span>
+      <h4>10 דקות בערב. 7 ערבים. מספר אחד.</h4>
+      <div class="days"><div class="d"><b>א׳</b><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="d"><b>ב׳</b><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="d"><b>ג׳</b><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="d"><b>ד׳</b><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="d"><b>ה׳</b><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="d"><b>ו׳</b><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="d"><b>ש׳</b><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+      <div class="sum"><span>סך הדליפה בשבוע</span><span aria-hidden="true">× 4 =</span><span class="pill">כמה לידים אתה מפספס בחודש</span></div>
+    </figure>
+
 
     <h3>הגיליון</h3>
     <p>זה כל מה שצריך. אפשר בגיליון של גוגל, באקסל, או במחברת.</p>
@@ -981,6 +1133,23 @@
       </div>
     </div>
 
+
+    <script>
+    (function(){
+      var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var els=document.querySelectorAll('.mg-anim,.mg-formula');
+      if(reduce||!('IntersectionObserver' in window))return;
+      function fmt(n){return n.toLocaleString('en-US');}
+      function count(el){var to=+el.getAttribute('data-count'),suf=el.getAttribute('data-suffix')||'',t0=null;
+        function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1100,1),e=1-Math.pow(1-p,3);el.textContent=fmt(Math.round(to*e))+suf;if(p<1)requestAnimationFrame(step);}
+        requestAnimationFrame(step);}
+      var io=new IntersectionObserver(function(en){en.forEach(function(x){if(!x.isIntersecting)return;var el=x.target;io.unobserve(el);el.classList.add('in');
+        if(el.classList.contains('mg-formula'))el.querySelectorAll('[data-count]').forEach(count);
+        if(el.classList.contains('mg-week'))el.querySelectorAll('.d').forEach(function(d,i){setTimeout(function(){d.classList.add('on');},180*i);});
+      });},{threshold:.35});
+      els.forEach(function(el){io.observe(el);});
+    })();
+    </script>
   </article>
 
   <footer class="site">
