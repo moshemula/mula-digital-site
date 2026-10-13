@@ -5,13 +5,22 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Mon, 12 Oct 2026 12:28:23 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 14:40:21 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>איך אני יודע כמה לידים אני מפספס בחודש?</title>
+      <link>https://muladigital.co.il/blog-kama-leadim-ani-mefaspes</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-kama-leadim-ani-mefaspes</guid>
+      <description>סופרים שבוע אחד: שיחות שלא נענו, תגובה איטית, טפסים שלא הגיעו ומעקב שלא קרה. ככה תדע כמה לידים אתה מפספס בחודש וכמה הם שווים בשקלים.</description>
+      <pubDate>Tue, 13 Oct 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1200&amp;amp;q=70" medium="image" />
+    </item>
     <item>
       <title>למה האתר שלי לא מופיע בגוגל? 10 סיבות</title>
       <link>https://muladigital.co.il/blog-lama-haatar-lo-mofia-begoogle</link>
