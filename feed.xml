@@ -5,7 +5,7 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Tue, 20 Oct 2026 12:31:07 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 13:33:04 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
@@ -20,6 +20,15 @@
       <pubDate>Tue, 20 Oct 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1611262588024-d12430b98920?w=1200&amp;amp;q=70" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1611262588024-d12430b98920?w=1200&amp;amp;q=70" medium="image" />
+    </item>
+    <item>
+      <title>איך לצלם סרטון לעסק בטלפון שנראה מקצועי?</title>
+      <link>https://muladigital.co.il/blog-eich-letzalem-sirton-batelefon</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-eich-letzalem-sirton-batelefon</guid>
+      <description>סאונד נקי, אור מהחלון, טלפון יציב ופתיחה שעוצרת גלילה. מדריך לעסק קטן: הגדרות, לאורך או לרוחב, מבנה של 30 שניות, יום צילום אחד וצ'קליסט.</description>
+      <pubDate>Tue, 20 Oct 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1607968565043-36af90dde238?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1607968565043-36af90dde238?w=1200&amp;amp;q=70" medium="image" />
     </item>
     <item>
       <title>איך לבנות תוכנית שיווק שנתית לעסק קטן?</title>
