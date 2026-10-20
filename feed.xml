@@ -5,13 +5,22 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Thu, 15 Oct 2026 09:20:25 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 10:47:58 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>איך לעצב פוסט לאינסטגרם שנראה מקצועי?</title>
+      <link>https://muladigital.co.il/blog-eich-leatzev-post-leinstagram</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-eich-leatzev-post-leinstagram</guid>
+      <description>מסר אחד, כותרת אחת, צבעים ופונטים קבועים וגודל 1080x1350. מדריך צעד אחר צעד לעסק קטן: גדלים ל-2026, תבניות, צ'קליסט ומתי עיצוב לא הבעיה.</description>
+      <pubDate>Tue, 20 Oct 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1611262588024-d12430b98920?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1611262588024-d12430b98920?w=1200&amp;amp;q=70" medium="image" />
+    </item>
     <item>
       <title>כמה עולה ניהול קמפיין בגוגל לעסק קטן?</title>
       <link>https://muladigital.co.il/blog-kama-ole-nihul-kampein-begoogle</link>
