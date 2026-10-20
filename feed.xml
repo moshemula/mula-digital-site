@@ -5,7 +5,7 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Tue, 20 Oct 2026 10:47:58 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 12:31:07 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
@@ -18,6 +18,42 @@
       <guid isPermaLink="true">https://muladigital.co.il/blog-eich-leatzev-post-leinstagram</guid>
       <description>מסר אחד, כותרת אחת, צבעים ופונטים קבועים וגודל 1080x1350. מדריך צעד אחר צעד לעסק קטן: גדלים ל-2026, תבניות, צ'קליסט ומתי עיצוב לא הבעיה.</description>
       <pubDate>Tue, 20 Oct 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1611262588024-d12430b98920?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1611262588024-d12430b98920?w=1200&amp;amp;q=70" medium="image" />
+    </item>
+    <item>
+      <title>איך לבנות תוכנית שיווק שנתית לעסק קטן?</title>
+      <link>https://muladigital.co.il/blog-tochnit-shivuk-shnatit</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-tochnit-shivuk-shnatit</guid>
+      <description>מתחילים מיעד במספר לקוחות, בוחרים 2-3 ערוצים, מחשבים תקציב לפי עלות לפנייה ופורסים על 12 חודשים. תבנית שנתית למילוי, עם חגי 2027 ומדדים.</description>
+      <pubDate>Mon, 19 Oct 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1200&amp;amp;q=70" medium="image" />
+    </item>
+    <item>
+      <title>איך להשיג ביקורות בגוגל בלי לבקש בצורה מביכה?</title>
+      <link>https://muladigital.co.il/blog-eich-lehasig-bikorot-begoogle</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-eich-lehasig-bikorot-begoogle</guid>
+      <description>מבקשים מכל לקוח, ברגע שהעבודה נגמרה, בהודעה אישית עם קישור ישיר. תסריטים לוואטסאפ, תזמון, אוטומציה, ומה אסור לפי Google.</description>
+      <pubDate>Sun, 18 Oct 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=1200&amp;amp;q=70" medium="image" />
+    </item>
+    <item>
+      <title>איך לעשות רימרקטינג לעסק קטן?</title>
+      <link>https://muladigital.co.il/blog-eich-laasot-remarketing</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-eich-laasot-remarketing</guid>
+      <description>מתקינים תג Google ופיקסל, בונים 3 קהלים ומחריגים את מי שפנה. כמה כניסות צריך, מה לכתוב במודעה, כמה תקציב, ומתי לא כדאי.</description>
+      <pubDate>Sat, 17 Oct 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=1200&amp;amp;q=70" medium="image" />
+    </item>
+    <item>
+      <title>כמה עולה ניהול סושיאל לעסק קטן?</title>
+      <link>https://muladigital.co.il/blog-kama-ole-nihul-social</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-kama-ole-nihul-social</guid>
+      <description>ניהול בסיסי של פייסבוק ואינסטגרם: 1,500 עד 4,000 ₪ לחודש לפי מה שמשרדים מפרסמים. מה כלול בכל מחיר, מה לכתוב בהסכם ואיך יודעים שזה משתלם.</description>
+      <pubDate>Fri, 16 Oct 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1611262588024-d12430b98920?w=1200&amp;amp;q=70" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1611262588024-d12430b98920?w=1200&amp;amp;q=70" medium="image" />
     </item>
