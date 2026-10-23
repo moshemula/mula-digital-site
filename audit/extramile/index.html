@@ -159,6 +159,23 @@ html.expired .expired-screen{display:grid;min-height:100vh;place-items:center;ba
 .rv.in .cmp.own{transition-delay:.25s}
 @media (max-width:700px){.compare{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.rv .cmp{opacity:1;transform:none;transition:none}}
+.chat{gap:12px}
+.bubble-q{justify-self:start;background:#1F4E8C;color:#FFFFFF;border-radius:18px;padding:8px 16px;font-size:15px;font-weight:700}
+.bubble-a{background:var(--card);border-radius:14px;padding:14px 16px;display:grid;gap:8px}
+.a-title{font-size:16px}
+.a-row{display:grid;grid-template-columns:24px 1fr auto;gap:10px;align-items:center;font-size:15px;padding:6px 0;border-bottom:1px solid var(--line);min-width:0}
+.a-row:last-child{border-bottom:0}
+.a-row i{font-style:normal;font-weight:800;color:var(--muted);text-align:center}
+.a-row span{min-width:0;line-height:1.35}
+.a-row small{color:var(--good);font-size:12.5px;white-space:nowrap}
+.a-row.you{border:2px dashed var(--bad);border-radius:10px;padding:8px 10px;margin-top:4px}
+.a-row.you i,.a-row.you span{color:var(--bad);font-weight:800}
+.a-row.you small{color:var(--bad);white-space:normal;text-align:left}
+.rv .a-row,.rv .bubble-q{opacity:0;transform:translateY(8px);transition:opacity .45s ease,transform .45s ease}
+.rv.in .a-row,.rv.in .bubble-q{opacity:1;transform:none}
+.rv.in .a-row:nth-child(2){transition-delay:.35s}.rv.in .a-row:nth-child(3){transition-delay:.5s}.rv.in .a-row:nth-child(4){transition-delay:.65s}.rv.in .a-row:nth-child(5){transition-delay:.95s}
+@media (max-width:480px){.a-row{grid-template-columns:22px 1fr}.a-row small{grid-column:2}}
+@media (prefers-reduced-motion:reduce){.rv .a-row,.rv .bubble-q{opacity:1;transform:none;transition:none}}
 /* scorecard */
 .score{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .sc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:8px;align-content:start;min-width:0}
@@ -426,6 +443,29 @@ button:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
         </div>
       </div>
       <p>אין בפרופיל אף עדכון או פוסט. גוגל רואה פרופיל שלא זז. ובנוסף, רוב הסוכנים שלכם כמעט לא מוזכרים בביקורות. מי שמגיע לסוכן אחר במשרד לא מוצא עליו מילה אחת ברשת.</p>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chap-head">
+      <div class="eyebrow">שתי מילים על <span class="ltr">ChatGPT</span></div>
+      <h2>היום שואלים גם את <span class="ltr">ChatGPT</span> איזה מתווך לבחור</h2>
+    </div>
+    <div class="issue">
+      <p>יותר ויותר אנשים כבר לא מחפשים בגוגל. הם כותבים ל־<span class="ltr">ChatGPT</span> "מתווך ברחובות", ומקבלים רשימה מוכנה עם המלצה, דירוג וטלפון.</p>
+      <div class="ev chat" aria-label="התשובה של ChatGPT לשאלה מתווך ברחובות">
+        <div class="cap">התשובה של <span class="ltr">ChatGPT</span> לשאלה "מתווך ברחובות", 23 באוקטובר 2026</div>
+        <div class="bubble-q">מתווך ברחובות</div>
+        <div class="bubble-a">
+          <b class="a-title">מתווכים מומלצים ברחובות</b>
+          <div class="a-row"><i>1</i><span>באר הנדל"ן</span><small>5.0 · 149 ביקורות</small></div>
+          <div class="a-row"><i>2</i><span>סיני נכסים</span><small>4.9 · 229 ביקורות</small></div>
+          <div class="a-row"><i>3</i><span>עומרי בוזגלו, סוכן נדל"ן</span><small>5.0 · 76 ביקורות</small></div>
+          <div class="a-row you"><i>?</i><span><span class="ltr">EXTRAMILE</span> קשרי נדל"ן</span><small>מופיע על המפה, לא בראש הרשימה</small></div>
+        </div>
+      </div>
+      <p>שאלתי בעצמי. אתם מופיעים על המפה שבתשובה, אבל שלושת המשרדים ש־<span class="ltr">ChatGPT</span> ממליץ עליהם ראשונים הם אחרים.</p>
+      <p class="cost">מי שמופיע ראשון בתשובה מקבל את השיחה הראשונה. והתשובה הזאת נבנית ממה שכתוב ומוצג עליכם ברשת.</p>
     </div>
   </section>
 
