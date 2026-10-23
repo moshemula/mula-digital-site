@@ -141,6 +141,24 @@ html.expired .expired-screen{display:grid;min-height:100vh;place-items:center;ba
 .expired-card h1{font-size:clamp(26px,5vw,34px)}
 .expired-card p{color:var(--muted);font-size:17px;line-height:1.7}
 .expired-card .num2{font-size:24px;font-weight:800;direction:ltr;unicode-bidi:isolate;color:var(--ink)}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-block:4px}
+.cmp{border-radius:14px;padding:18px;display:grid;gap:12px;align-content:start;min-width:0}
+.cmp.portal{background:var(--soft);border:1px solid var(--line)}
+.cmp.own{background:var(--card);border:2px solid var(--brand);box-shadow:0 14px 30px -20px rgba(11,125,176,.55)}
+.cmp-h{display:flex;align-items:center;gap:10px}
+.cmp-h b{font-family:var(--f-display);font-size:19px;font-weight:800}
+.cmp-h svg{width:22px;height:22px;flex:none;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cmp.portal svg{stroke:var(--muted)} .cmp.own svg{stroke:var(--brand-deep)}
+.cmp ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.cmp li{display:grid;grid-template-columns:18px 1fr;gap:8px;align-items:start;font-size:15.5px;line-height:1.55}
+.cmp li::before{content:"";width:8px;height:8px;border-radius:50%;margin:8px 5px 0}
+.cmp.portal li{color:var(--muted)} .cmp.portal li::before{background:var(--line)}
+.cmp.own li{color:var(--ink);font-weight:600} .cmp.own li::before{background:var(--brand)}
+.rv .cmp{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+.rv.in .cmp{opacity:1;transform:none}
+.rv.in .cmp.own{transition-delay:.25s}
+@media (max-width:700px){.compare{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.rv .cmp{opacity:1;transform:none;transition:none}}
 /* scorecard */
 .score{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .sc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:8px;align-content:start;min-width:0}
@@ -523,6 +541,39 @@ button:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
     <div class="issue">
       <h3>אין יוטיוב, אין טיקטוק, אין לינקדאין, ואין סרטון של אף סוכן</h3>
       <p>בתיווך בוחרים אדם, לא משרד. יש לכם שחקן נבחרת לשעבר בתור בעלים, וצוות עם סיפורים טובים. אף אחד מהם לא נראה ונשמע ברשת.</p>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <div class="chap-head">
+      <div class="eyebrow">מילה על יד2 ומדלן</div>
+      <h2>הפורטלים עובדים. אבל שם אתם עוד שורה ברשימה.</h2>
+    </div>
+    <div class="issue">
+      <p>אני יודע שאתם כנראה עובדים עם יד2 ומדלן, ומשקיעים בהם לא מעט כסף. אני לא בא להמעיט בהם. להפך, אלה פלטפורמות מצוינות, והן חלק חשוב מהעבודה של כל משרד תיווך.</p>
+      <p>אבל בפורטל אתם נמצאים בתחרות צמודה. ליד הנכס שלכם יש נכסים של משרדים אחרים, של סוכנים עצמאיים ושל בעלי דירות שמפרסמים לבד.</p>
+      <div class="compare">
+        <div class="cmp portal">
+          <div class="cmp-h"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><b>בפורטל</b></div>
+          <ul>
+            <li>הנכס שלכם מופיע ליד עשרות נכסים אחרים</li>
+            <li>מתחרים על אותו קונה עם משרדים ובעלי דירות</li>
+            <li>הלקוח בוחר נכס, לא בוחר אתכם</li>
+            <li>הקשר נגמר כשהעסקה נגמרת</li>
+          </ul>
+        </div>
+        <div class="cmp own">
+          <div class="cmp-h"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><b>בערוצים שלכם</b></div>
+          <ul>
+            <li>הלקוח פוגש אתכם, לא רשימה</li>
+            <li>רואה את ארז ואת הצוות, ושומע איך אתם עובדים</li>
+            <li>בוחר בכם עוד לפני שבחר נכס</li>
+            <li>חוזר אליכם, וממליץ עליכם הלאה</li>
+          </ul>
+        </div>
+      </div>
+      <p class="cost">לקוח שבחר בכם בגלל מי שאתם, חוזר אליכם בעסקה הבאה ושולח אליכם את החברים שלו.</p>
+      <p>הפורטלים מביאים פניות על נכס. גוגל, האתר, הסרטונים והרשתות שלכם הם המקום שבו בונים קשר רגשי, ולקוח לטווח ארוך.</p>
     </div>
   </section>
 
