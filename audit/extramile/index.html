@@ -156,11 +156,14 @@ h1 .l2{color:var(--brand-deep)}
 
 /* map rank */
 .rank{display:grid;gap:5px}
-.rk{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;background:var(--card);border-radius:8px;padding:8px 12px;font-size:15px;min-width:0}
+.rk{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;background:var(--card);border-radius:8px;padding:8px 12px;font-size:15px;min-width:0}
 .rk b{color:var(--muted);text-align:center;font-variant-numeric:tabular-nums}
-.rk span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.rk span{min-width:0;line-height:1.35}
+.rk small{white-space:nowrap}
 .rk small{color:var(--muted);font-size:12px}
 .rk.pack{outline:2px solid var(--brand);outline-offset:-2px}
+.rk.ad b{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:1px 0}
+.rk.ad{opacity:.85}
 .gap{font-size:13px;color:var(--muted);text-align:right;padding-right:12px;letter-spacing:.15em}
 .rk.you{border:2px dashed var(--bad);background:transparent}
 .rk.you span,.rk.you b{color:var(--bad);font-weight:800}
@@ -304,7 +307,7 @@ button:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
     </div>
     <div class="score">
       <div class="sc g"><div class="name">ביקורות בגוגל</div><div class="meter"><i style="--w:92%"></i></div><div class="state">חזק מאוד</div><p>76 ביקורות, 5.0, ותגובה כמעט לכל אחת.</p></div>
-      <div class="sc b"><div class="name">נראות במפות גוגל</div><div class="meter"><i style="--w:22%"></i></div><div class="state">חלש</div><p>בערך מקום 18 על "מתווך ברחובות".</p></div>
+      <div class="sc b"><div class="name">נראות בחיפוש בגוגל</div><div class="meter"><i style="--w:22%"></i></div><div class="state">חלש</div><p>לא בתיבת העסקים על "מתווך ברחובות".</p></div>
       <div class="sc m"><div class="name">פרופיל העסק בגוגל</div><div class="meter"><i style="--w:45%"></i></div><div class="state">דורש טיפול</div><p>תמונה אחת מ־2022, בלי עדכונים.</p></div>
       <div class="sc m"><div class="name">האתר</div><div class="meter"><i style="--w:50%"></i></div><div class="state">דורש טיפול</div><p>בסיס טוב, עם תקלות שמורידות אמון.</p></div>
       <div class="sc m"><div class="name">פייסבוק</div><div class="meter"><i style="--w:48%"></i></div><div class="state">דורש טיפול</div><p>קאבר מעולה, תוכן שלא מייצר שיחה.</p></div>
@@ -333,20 +336,20 @@ button:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
     </div>
 
     <div class="issue">
-      <h3>מי שמחפש "מתווך ברחובות" במפות לא מגיע אליכם</h3>
-      <div class="ev" aria-label="דירוג במפות גוגל">
-        <div class="cap">גוגל מפות, החיפוש "מתווך ברחובות", 23 באוקטובר 2026</div>
+      <h3>מי שמחפש "מתווך ברחובות" בגוגל לא מגיע אליכם</h3>
+      <div class="ev" aria-label="תוצאות החיפוש מתווך ברחובות בגוגל">
+        <div class="cap">גוגל, החיפוש "מתווך ברחובות", 23 באוקטובר 2026. תיבת העסקים שמעל התוצאות</div>
         <div class="rank">
-          <div class="rk pack"><b>1</b><span>באר הנדל"ן</span><small>שלושת הראשונים</small></div>
-          <div class="rk pack"><b>2</b><span>סיני נכסים</span><small></small></div>
-          <div class="rk pack"><b>3</b><span>דירה למכירה ברחובות ההולנדית</span><small></small></div>
-          <div class="rk"><b>4</b><span>נכס, ייעוץ שיווק ויזמות נדל"ן</span><small></small></div>
-          <div class="rk"><b>5</b><span>יוסי אלייב, י.א. נדל"ן</span><small></small></div>
-          <div class="gap">· · · 12 משרדים נוספים · · ·</div>
-          <div class="rk you"><b>18</b><span><span class="ltr">EXTRAMILE</span> קשרי נדל"ן</span><small>76 ביקורות, 5.0</small></div>
+          <div class="rk ad"><b>מודעה</b><span>עומרי בוזגלו, סוכן נדל״ן ברחובות</span><small>80 ביקורות · ממומן</small></div>
+          <div class="rk pack"><b>1</b><span>באר הנדל"ן</span><small>149 ביקורות</small></div>
+          <div class="rk pack"><b>2</b><span>יוסי אלייב, י.א. נדל"ן</span><small>45 ביקורות</small></div>
+          <div class="rk pack"><b>3</b><span>תיווך זילברברג</span><small>17 ביקורות</small></div>
+          <div class="gap">עסקים נוספים</div>
+          <div class="rk you"><b>?</b><span><span class="ltr">EXTRAMILE</span> קשרי נדל"ן</span><small>לא מופיע · 76 ביקורות</small></div>
         </div>
       </div>
-      <p>בחיפוש הרגיל בגוגל, גוגל מציג רק שלושה משרדים מהמפה. אתם נמצאים בערך במקום ה־18. משרדים עם הרבה פחות ביקורות עוקפים אתכם. גם בתוצאות הרגילות שמתחת למפה, ארבעה משרדים מתחרים מופיעים בעמוד הראשון ואתם לא.</p>
+      <p>בתיבת העסקים שגוגל מציג מעל התוצאות יש מודעה ממומנת אחת ושלושה משרדים. אתם לא שם, גם כששניים מהם עם הרבה פחות ביקורות. במפות המלאות אתם בערך במקום ה־18.</p>
+      <p>גם בתוצאות הרגילות שמתחת, ארבעה משרדים מתחרים מופיעים בעמוד הראשון. אתם מוזכרים שם רק כשם אחד ברשימה של מדלן.</p>
       <p class="cost">בעל דירה שמחפש מתווך בגוגל פוגש את המתחרים שלכם קודם, גם כשהמוניטין שלכם חזק משלהם.</p>
     </div>
 
