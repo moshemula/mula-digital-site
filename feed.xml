@@ -5,13 +5,22 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Tue, 20 Oct 2026 13:33:04 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 19:13:15 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>מה רואים כשמחפשים את השם שלי בגוגל?</title>
+      <link>https://muladigital.co.il/blog-ma-roim-kshemechapsim-et-hashem-sheli</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-ma-roim-kshemechapsim-et-hashem-sheli</guid>
+      <description>מחפשים כמו זר: בטלפון, בגלישה בסתר ובשבעה ניסוחים. מדריך לעסק קטן: איך קוראים את התוצאות, מה אפשר להוריד מגוגל, מה בונים קודם ומה AI אומר עליך.</description>
+      <pubDate>Sat, 24 Oct 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?w=1200&amp;amp;q=70" medium="image" />
+    </item>
     <item>
       <title>איך לעצב פוסט לאינסטגרם שנראה מקצועי?</title>
       <link>https://muladigital.co.il/blog-eich-leatzev-post-leinstagram</link>
@@ -362,15 +371,6 @@
       <pubDate>Mon, 15 Jun 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
-    </item>
-    <item>
-      <title>למה אתר יפה לא מספיק כדי להביא לקוחות</title>
-      <link>https://muladigital.co.il/blog-atar-yafe-lo-maspik</link>
-      <guid isPermaLink="true">https://muladigital.co.il/blog-atar-yafe-lo-maspik</guid>
-      <description>אתר יפה מרשים את העין אבל לא בהכרח מביא פניות. מדריך עומק של משה מולה: 12 הסיבות, ההבדל בין אתר תדמית לאתר שמוכר, מחשבון הפסד ובדיקת אתר ב-60 שניות.</description>
-      <pubDate>Mon, 01 Jun 2026 10:00:00 +0300</pubDate>
-      <enclosure url="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
-      <media:content url="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
   </channel>
 </rss>
