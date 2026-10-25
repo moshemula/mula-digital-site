@@ -5,13 +5,22 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Sat, 24 Oct 2026 21:35:59 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 10:47:52 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>מה זה אפיון אתר, ואיך יודעים שעשו אותו נכון?</title>
+      <link>https://muladigital.co.il/blog-ma-ze-afyon-atar</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-ma-ze-afyon-atar</guid>
+      <description>אפיון אתר הוא התכנון שלפני העיצוב: לקוח, מפת עמודים, שלד ומסרים, בכתב. מה מקבלים בסוף, אילו שאלות שואלים, כמה זה עולה, ובדיקה עצמית ב-10 סעיפים.</description>
+      <pubDate>Sun, 25 Oct 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1586717799252-bd134ad00e26?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1586717799252-bd134ad00e26?w=1200&amp;amp;q=70" medium="image" />
+    </item>
     <item>
       <title>מה רואים כשמחפשים את השם שלי בגוגל?</title>
       <link>https://muladigital.co.il/blog-ma-roim-kshemechapsim-et-hashem-sheli</link>
@@ -362,15 +371,6 @@
       <pubDate>Wed, 15 Jul 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
-    </item>
-    <item>
-      <title>למה וואטסאפ בלי CRM גורם לאיבוד לידים (ואיך לתקן)</title>
-      <link>https://muladigital.co.il/blog-whatsapp-bli-crm</link>
-      <guid isPermaLink="true">https://muladigital.co.il/blog-whatsapp-bli-crm</guid>
-      <description>פניות נכנסות לוואטסאפ ונעלמות. בלי מערכת מעקב - לידים נופלים. מדריך מעשי: איך לחבר וואטסאפ ל-CRM ולעצור את הדליפה.</description>
-      <pubDate>Wed, 24 Jun 2026 10:00:00 +0300</pubDate>
-      <enclosure url="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
-      <media:content url="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
   </channel>
 </rss>
