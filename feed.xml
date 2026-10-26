@@ -5,13 +5,22 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Sun, 25 Oct 2026 10:47:52 +0300</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 11:06:01 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>חברת שיווק גדולה או מנהל שיווק אחד?</title>
+      <link>https://muladigital.co.il/blog-chevra-gdola-o-menahel-shivuk</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-chevra-gdola-o-menahel-shivuk</guid>
+      <description>לרוב העסקים הקטנים עדיף אחד שמחזיק את הכל ואחראי על התוצאה. מי באמת יטפל בך, מה לשאול לפני חתימה, מה צריך להיות ביד אחרי 90 יום, ומתי חברה גדולה עדיפה.</description>
+      <pubDate>Mon, 26 Oct 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;amp;q=70" medium="image" />
+    </item>
     <item>
       <title>מה זה אפיון אתר, ואיך יודעים שעשו אותו נכון?</title>
       <link>https://muladigital.co.il/blog-ma-ze-afyon-atar</link>
@@ -362,15 +371,6 @@
       <pubDate>Wed, 22 Jul 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
-    </item>
-    <item>
-      <title>איך לבחור חברת שיווק דיגיטלי בלי לזרוק כסף</title>
-      <link>https://muladigital.co.il/blog-eich-livhor-chevrat-shivuk</link>
-      <guid isPermaLink="true">https://muladigital.co.il/blog-eich-livhor-chevrat-shivuk</guid>
-      <description>מדריך מעשי לבחירת חברת שיווק דיגיטלי: 8 סימנים לחברה טובה, 7 דגלים אדומים, שאלות שחובה לשאול לפני חתימה. מאת משה מולה, 20+ שנות ניסיון.</description>
-      <pubDate>Wed, 15 Jul 2026 10:00:00 +0300</pubDate>
-      <enclosure url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
-      <media:content url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
   </channel>
 </rss>
