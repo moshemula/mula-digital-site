@@ -5,13 +5,22 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Mon, 26 Oct 2026 11:06:01 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 22:05:24 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>איך עוברים מוויקס לוורדפרס בלי לאבד גוגל?</title>
+      <link>https://muladigital.co.il/blog-lehaavir-atar-mewix-lewordpress</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-lehaavir-atar-mewix-lewordpress</guid>
+      <description>לא מעבירים, בונים מחדש: שומרים על אותן כתובות, מפנים ב-301 כל כתובת שמשתנה ובודקים ב-Search Console. מה שומרים, סדר יום המעבר, כמה זמן וכמה זה עולה.</description>
+      <pubDate>Wed, 28 Oct 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&amp;amp;q=70" medium="image" />
+    </item>
     <item>
       <title>חברת שיווק גדולה או מנהל שיווק אחד?</title>
       <link>https://muladigital.co.il/blog-chevra-gdola-o-menahel-shivuk</link>
@@ -362,15 +371,6 @@
       <pubDate>Thu, 06 Aug 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
-    </item>
-    <item>
-      <title>כמה עולה לבנות אתר? מדריך מחירים 2026</title>
-      <link>https://muladigital.co.il/blog-kama-ole-livnot-atar</link>
-      <guid isPermaLink="true">https://muladigital.co.il/blog-kama-ole-livnot-atar</guid>
-      <description>כמה עולה לבנות אתר עסקי? טבלת מחירים עדכנית, מחשבון עלויות, השוואה בין פרילנסר לסוכנות, ודוגמאות אמיתיות מהשטח.</description>
-      <pubDate>Wed, 22 Jul 2026 10:00:00 +0300</pubDate>
-      <enclosure url="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
-      <media:content url="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
   </channel>
 </rss>
