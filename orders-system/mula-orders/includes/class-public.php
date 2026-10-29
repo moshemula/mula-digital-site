@@ -16,6 +16,52 @@ class MO_Public {
 		add_filter( 'rest_endpoints', array( __CLASS__, 'hide_users_endpoint' ) );
 	}
 
+	/**
+	 * רכיבי המעטפת (סגנון, הדר, פוטר, סקריפט תפריט) נלקחים מהאתר החי,
+	 * כך שהעמוד תמיד זהה לאתר. נשמרים במטמון ל־12 שעות, ועותק אחרון תקין נשמר כגיבוי.
+	 */
+	public static function shell( $part ) {
+		$parts = get_transient( 'mo_shell' );
+		if ( ! is_array( $parts ) ) {
+			$parts = self::fetch_shell();
+			if ( $parts ) {
+				set_transient( 'mo_shell', $parts, 12 * HOUR_IN_SECONDS );
+				update_option( 'mo_shell_backup', $parts, false );
+			} else {
+				$parts = get_option( 'mo_shell_backup', array() );
+				set_transient( 'mo_shell', $parts, 15 * MINUTE_IN_SECONDS );
+			}
+		}
+		return isset( $parts[ $part ] ) ? $parts[ $part ] : '';
+	}
+
+	private static function fetch_shell() {
+		$r = wp_remote_get( MO_SITE . 'contact', array( 'timeout' => 12 ) );
+		if ( is_wp_error( $r ) || 200 !== wp_remote_retrieve_response_code( $r ) ) { return null; }
+		$h = wp_remote_retrieve_body( $r );
+		$out = array();
+		if ( preg_match( '#<style>\s*:root\{.*?</style>#s', $h, $m ) ) { $out['style'] = $m[0]; }
+		$a = strpos( $h, '<header class="nav"' );
+		$b = strpos( $h, '<!-- HERO -->' );
+		if ( false !== $a && false !== $b && $b > $a ) { $out['header'] = substr( $h, $a, $b - $a ); }
+		$a = strpos( $h, '<footer class="site">' );
+		$b = strpos( $h, '</footer>', (int) $a );
+		if ( false !== $a && false !== $b ) { $out['footer'] = substr( $h, $a, $b - $a + 9 ); }
+		// סקריפט התפריט: מהסקריפט שאחרי הפוטר, בלי ספריות האנימציה ובלי קוד הטופס של עמוד צור קשר
+		$a = strpos( $h, '<script>', (int) $b );
+		$e = strpos( $h, '</script>', (int) $a );
+		if ( false !== $a && false !== $e ) {
+			$js = substr( $h, $a, $e - $a + 9 );
+			$f  = strpos( $js, '// Form: show success' );
+			if ( false !== $f ) {
+				$end = strrpos( $js, '})();' );
+				$js  = substr( $js, 0, $f ) . substr( $js, $end );
+			}
+			$out['script'] = $js;
+		}
+		return ( isset( $out['style'], $out['header'], $out['footer'] ) ) ? $out : null;
+	}
+
 	public static function activate() {
 		self::rewrites();
 		flush_rewrite_rules();

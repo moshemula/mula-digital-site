@@ -5,7 +5,6 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-$shell   = MO_DIR . 'templates/shell/';
 $is_prev = ( 'preview' === $mode );
 $status  = $o->eff_status;
 $open    = in_array( $status, MO_Store::OPEN_STATUSES, true ) && ! $is_prev;
@@ -51,7 +50,7 @@ $render_svc = function ( $s ) use ( $money, $svc_icon ) {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <?php readfile( $shell . 'style.html' ); ?>
+  <?php echo MO_Public::shell( 'style' ); // phpcs:ignore ?>
   <link rel="stylesheet" href="assets/mega.css?v=4" />
   <link rel="stylesheet" href="assets/mega-wow.css?v=5" />
   <link rel="stylesheet" href="<?php echo esc_url( MO_URL . 'assets/order.css?v=' . MO_VERSION ); ?>" />
@@ -60,7 +59,7 @@ $render_svc = function ( $s ) use ( $money, $svc_icon ) {
 <?php if ( $is_prev ) : ?>
   <div class="o-admin-bar">תצוגת מנהל · כך הלקוח יראה את ההזמנה · <?php echo esc_html( MO_Store::STATUSES[ $o->status ] ); ?></div>
 <?php endif; ?>
-  <?php readfile( $shell . 'header.html' ); ?>
+  <?php echo MO_Public::shell( 'header' ); // phpcs:ignore ?>
 
   <section class="c-hero o-hero">
     <div class="c-hero-ov"></div>
@@ -295,8 +294,8 @@ $render_svc = function ( $s ) use ( $money, $svc_icon ) {
     <div class="o-toast" id="oToast" role="status" aria-live="polite"></div>
   </main>
 
-  <?php readfile( $shell . 'footer.html' ); ?>
-  <?php readfile( $shell . 'script.html' ); ?>
+  <?php echo MO_Public::shell( 'footer' ); // phpcs:ignore ?>
+  <?php echo MO_Public::shell( 'script' ); // phpcs:ignore ?>
   <script>
   window.MO = <?php echo wp_json_encode( array(
 	'rest'     => $rest,
