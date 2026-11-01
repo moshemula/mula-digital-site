@@ -5,13 +5,49 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Sun, 01 Nov 2026 19:29:44 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 22:54:23 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>איך לבנות ניוזלטר לעסק קטן שאנשים פותחים?</title>
+      <link>https://muladigital.co.il/blog-eich-livnot-newsletter-laesek-katan</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-eich-livnot-newsletter-laesek-katan</guid>
+      <description>ניוזלטר שנפתח מתחיל בשם שולח של בן אדם, נושא שמדבר על הבעיה של הקורא ורשימה של מי שהסכים. איך בונים רשימה, מה מותר בחוק, מה כותבים וכמה זה עולה.</description>
+      <pubDate>Sun, 01 Nov 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1526554850534-7c78330d5f90?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1526554850534-7c78330d5f90?w=1200&amp;amp;q=70" medium="image" />
+    </item>
+    <item>
+      <title>גוגל מבלבל אותי עם מישהו עם אותו שם?</title>
+      <link>https://muladigital.co.il/blog-google-mevalbel-oti-im-mishehu-acher</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-google-mevalbel-oti-im-mishehu-acher</guid>
+      <description>לא מעלימים את השני, מבדלים את עצמך: תיאור קבוע ליד השם, עמוד אודות, סימון מובנה עם sameAs ודיווח על כרטיס ידע. כולל מה עושים מול AI.</description>
+      <pubDate>Sat, 31 Oct 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1516382799247-87df95d790b7?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1516382799247-87df95d790b7?w=1200&amp;amp;q=70" medium="image" />
+    </item>
+    <item>
+      <title>איך להפיק וובינר שמביא לידים?</title>
+      <link>https://muladigital.co.il/blog-eich-lehafik-webinar-shemavi-leadim</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-eich-lehafik-webinar-shemavi-leadim</guid>
+      <description>בוחרים בעיה אחת, בונים דף הרשמה קצר, מפרסמים שבועיים לפני, שולחים זימון ותזכורות, והלידים נסגרים במעקב שאחרי. עם דוגמה אמיתית: 177 נרשמים מול יעד של 30.</description>
+      <pubDate>Fri, 30 Oct 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=1200&amp;amp;q=70" medium="image" />
+    </item>
+    <item>
+      <title>איך לחבר את האתר ל-Google Analytics?</title>
+      <link>https://muladigital.co.il/blog-eich-lechaber-google-analytics</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-eich-lechaber-google-analytics</guid>
+      <description>יוצרים נכס ב-GA4, מחברים את התג, מסמנים וואטסאפ, טלפון וטופס כאירועים מרכזיים, ובודקים 4 דוחות. צעד אחר צעד לוורדפרס ולוויקס, בעברית פשוטה.</description>
+      <pubDate>Thu, 29 Oct 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1556155092-490a1ba16284?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1556155092-490a1ba16284?w=1200&amp;amp;q=70" medium="image" />
+    </item>
     <item>
       <title>איך עוברים מוויקס לוורדפרס בלי לאבד גוגל?</title>
       <link>https://muladigital.co.il/blog-lehaavir-atar-mewix-lewordpress</link>
@@ -20,6 +56,15 @@
       <pubDate>Wed, 28 Oct 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&amp;amp;q=70" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&amp;amp;q=70" medium="image" />
+    </item>
+    <item>
+      <title>איך לדעת אם צריך אתר חדש או לשפר את הקיים?</title>
+      <link>https://muladigital.co.il/blog-atar-chadash-o-leshaper</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-atar-chadash-o-leshaper</guid>
+      <description>בעיה במראה, במהירות או בתוכן? משפרים. בעיה ביסוד, בקהל או בבעלות? בונים חדש. בדיקה עצמית, מחירים, תרחיש מספרי ואיך עוברים בלי לאבד את גוגל.</description>
+      <pubDate>Tue, 27 Oct 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&amp;amp;q=70" medium="image" />
     </item>
     <item>
       <title>חברת שיווק גדולה או מנהל שיווק אחד?</title>
@@ -184,10 +229,10 @@
       <media:content url="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&amp;amp;q=70" medium="image" />
     </item>
     <item>
-      <title>פרסום בפייסבוק לעסקים: כמה זה עולה ומה מקבלים</title>
+      <title>פרסום בפייסבוק לעסקים: כמה עולה ואיך מתחילים</title>
       <link>https://muladigital.co.il/blog-pirsum-facebook-laasakim</link>
       <guid isPermaLink="true">https://muladigital.co.il/blog-pirsum-facebook-laasakim</guid>
-      <description>פרסום בפייסבוק לעסקים: דמי ניהול מ-2,500 ₪ ותקציב מדיה מ-3,000 ₪ בחודש. מה מקבלים, שני מקרים אמיתיים, ומה להכין לפני שמעלים קמפיין.</description>
+      <description>פרסום בפייסבוק לעסקים: דמי ניהול מ-2,500 ₪ ותקציב מדיה מ-3,000 ₪ בחודש. איך מתחילים בשבעה צעדים, מה מקבלים, ושני מקרים אמיתיים.</description>
       <pubDate>Wed, 30 Sep 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://muladigital.co.il/assets/cover-pirsum-facebook.jpg" type="image/jpeg" />
       <media:content url="https://muladigital.co.il/assets/cover-pirsum-facebook.jpg" medium="image" />
@@ -202,10 +247,10 @@
       <media:content url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
     <item>
-      <title>בניית אתרים למטפלים: מה חייב להיות באתר</title>
+      <title>בניית וקידום אתרים למטפלים: המדריך המלא</title>
       <link>https://muladigital.co.il/blog-bniyat-atar-lemetaplim</link>
       <guid isPermaLink="true">https://muladigital.co.il/blog-bniyat-atar-lemetaplim</guid>
-      <description>בניית אתרים למטפלים: 9 דברים שחייבים להיות באתר כדי שיביא מטופלים, כמה זה עולה (5,000-10,000 ₪) ומה לבדוק לפני שבונים. מדריך מהשטח.</description>
+      <description>בניית וקידום אתרים למטפלים: 9 דברים שחייבים להיות באתר, איך מופיעים בגוגל ובמפה, כמה זה עולה (5,000-10,000 ₪) ומה לבדוק לפני שבונים.</description>
       <pubDate>Wed, 23 Sep 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
@@ -238,19 +283,19 @@
       <media:content url="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
     <item>
-      <title>ספק שירותי GEO: איך בוחרים נכון</title>
+      <title>סוכנות GEO או ספק GEO: איך בוחרים נכון</title>
       <link>https://muladigital.co.il/blog-sapak-sherutey-geo</link>
       <guid isPermaLink="true">https://muladigital.co.il/blog-sapak-sherutey-geo</guid>
-      <description>ספק שירותי GEO: 12 שאלות לשאול לפני שסוגרים, 9 תשובות שהן נורה אדומה, בדיקה של 20 דקות, ומחירים אמיתיים - 1,500 עד 10,000 ₪ בחודש.</description>
+      <description>סוכנות GEO או ספק GEO? 12 שאלות לשאול לפני שסוגרים, 9 תשובות שהן נורה אדומה, בדיקה של 20 דקות ומחירים: 1,500 עד 10,000 ₪ בחודש.</description>
       <pubDate>Sun, 20 Sep 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
     <item>
-      <title>כמה עולה הטמעת מערכת CRM לעסק קטן 2026</title>
+      <title>הטמעת מערכת CRM לעסק קטן: כמה זה עולה ב-2026</title>
       <link>https://muladigital.co.il/blog-kama-ole-hatmaat-crm</link>
       <guid isPermaLink="true">https://muladigital.co.il/blog-kama-ole-hatmaat-crm</guid>
-      <description>הטמעת מערכת CRM לעסק קטן: בסיסית 3,000-5,000 ₪, מלאה 8,000-15,000 ₪, רישוי מ-60 ₪ למשתמש. מה נכנס למחיר, ומתי לא צריך הטמעה בכלל.</description>
+      <description>הטמעת מערכת CRM לעסק קטן: בסיסית 3,000-5,000 ₪, מלאה 8,000-15,000 ₪. מה נכנס למחיר, הטמעה מול בנייה מאפס, ומתי לא צריך בכלל.</description>
       <pubDate>Wed, 16 Sep 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
@@ -310,10 +355,10 @@
       <media:content url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
     <item>
-      <title>איך Google Ads עובד? מדריך למתחילים 2026</title>
+      <title>מה זה גוגל אדס ואיך הוא עובד? מדריך 2026</title>
       <link>https://muladigital.co.il/blog-google-ads-guide</link>
       <guid isPermaLink="true">https://muladigital.co.il/blog-google-ads-guide</guid>
-      <description>איך Google Ads עובד בפועל? מכרז, Quality Score, סוגי קמפיינים, תקציבים ריאליים לעסקים בישראל, 5 טעויות ששורפות כסף ואיך למדוד הצלחה. מדריך מהשטח.</description>
+      <description>מה זה גוגל אדס ואיך הוא עובד בפועל? מכרז, Quality Score, סוגי קמפיינים, תקציב ריאלי לעסק בישראל ו-5 טעויות ששורפות כסף. מדריך מהשטח.</description>
       <pubDate>Thu, 13 Aug 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
@@ -326,51 +371,6 @@
       <pubDate>Thu, 13 Aug 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
-    </item>
-    <item>
-      <title>גוגל לעסק שלי 2026: המדריך האסטרטגי המלא</title>
-      <link>https://muladigital.co.il/blog-google-business-profile</link>
-      <guid isPermaLink="true">https://muladigital.co.il/blog-google-business-profile</guid>
-      <description>מדריך מלא לפרופיל עסקי בגוגל 2026. אימות וידאו, ביקורות, אופטימיזציה, טעויות נפוצות, צ'קליסט 20 נקודות ודוגמאות מהשטח. מדריך מעשי.</description>
-      <pubDate>Wed, 12 Aug 2026 10:00:00 +0300</pubDate>
-      <enclosure url="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
-      <media:content url="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
-    </item>
-    <item>
-      <title>קידום ב-AI: מדריך GEO מלא להופיע בתשובות AI 2026</title>
-      <link>https://muladigital.co.il/blog-kiddum-ai-geo</link>
-      <guid isPermaLink="true">https://muladigital.co.il/blog-kiddum-ai-geo</guid>
-      <description>מדריך מלא לקידום עסקים במנועי AI. איך להופיע בתשובות של ChatGPT ו-Gemini? 15 טקטיקות מוכחות, סטטיסטיקות, צ'קליסט ודוגמאות מהשטח.</description>
-      <pubDate>Wed, 12 Aug 2026 10:00:00 +0300</pubDate>
-      <enclosure url="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
-      <media:content url="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
-    </item>
-    <item>
-      <title>איך לבנות דף נחיתה שממיר? מדריך מעשי 2026</title>
-      <link>https://muladigital.co.il/blog-daf-nchita-shemammir</link>
-      <guid isPermaLink="true">https://muladigital.co.il/blog-daf-nchita-shemammir</guid>
-      <description>איך בונים דף נחיתה שבאמת ממיר גולשים ללקוחות? 9 עקרונות פסיכולוגיים, צ'קליסט של 23 נקודות, טעויות נפוצות, ומתי דף נחיתה לא מתאים לך. מדריך מהשטח.</description>
-      <pubDate>Thu, 06 Aug 2026 10:00:00 +0300</pubDate>
-      <enclosure url="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
-      <media:content url="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
-    </item>
-    <item>
-      <title>קידום אתרים בגוגל מחיר: 2,000-5,000 ₪ לחודש</title>
-      <link>https://muladigital.co.il/blog-kama-ole-kiddum-bGoogle</link>
-      <guid isPermaLink="true">https://muladigital.co.il/blog-kama-ole-kiddum-bGoogle</guid>
-      <description>כמה עולה קידום אתרים בגוגל? אורגני 2,000-5,000 ₪ לחודש, ממומן מ-2,000 ₪ מדיה ודמי ניהול מ-2,000 ₪. מה מקבלים בכל מחיר ואיך מזהים הצעה גרועה.</description>
-      <pubDate>Thu, 06 Aug 2026 10:00:00 +0300</pubDate>
-      <enclosure url="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
-      <media:content url="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
-    </item>
-    <item>
-      <title>איך לכתוב תוכן שמביא לקוחות מגוגל? מדריך 2026</title>
-      <link>https://muladigital.co.il/blog-tochen-shemavi-lekochot</link>
-      <guid isPermaLink="true">https://muladigital.co.il/blog-tochen-shemavi-lekochot</guid>
-      <description>מדריך מעשי לבעלי עסקים: איך לכתוב תוכן שגוגל מדרג גבוה ולקוחות קוראים. 8 שלבים, טבלת עלויות, צ'קליסט 15 נקודות, ומתי תוכן לא מתאים לך. מניסיון של שנים בשטח.</description>
-      <pubDate>Thu, 06 Aug 2026 10:00:00 +0300</pubDate>
-      <enclosure url="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
-      <media:content url="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
   </channel>
 </rss>
