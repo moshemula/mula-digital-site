@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /preview/
 
 # בוטים של AI לחיפוש (נראות ב-AI) — מותר
 User-agent: GPTBot
@@ -15,6 +16,3 @@ User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://muladigital.co.il/sitemap.xml
-
-User-agent: *
-Disallow: /preview/
