@@ -15,3 +15,6 @@ User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://muladigital.co.il/sitemap.xml
+
+User-agent: *
+Disallow: /preview/
