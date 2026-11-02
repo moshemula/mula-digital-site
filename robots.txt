@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Disallow: /preview/
 
 # בוטים של AI לחיפוש (נראות ב-AI) — מותר
 User-agent: GPTBot
