@@ -62,6 +62,7 @@ class MO_Store {
 			sent_at datetime NULL,
 			opened_at datetime NULL,
 			signed_at datetime NULL,
+			sign_data longtext NULL,
 			PRIMARY KEY  (id),
 			UNIQUE KEY token_hash (token_hash),
 			KEY number (number),

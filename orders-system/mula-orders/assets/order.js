@@ -121,7 +121,21 @@
 
   /* ---------- sign ---------- */
   var signBtn = document.querySelector('.o-sign'), why = document.getElementById('signWhy');
+  var signTxt = document.getElementById('signTxt');
   var c1 = document.getElementById('c1'), c2 = document.getElementById('c2');
+  var signer = document.getElementById('oSigner'), idle = document.getElementById('oSlotIdle');
+  var slot = document.getElementById('oDocSlot');
+  var codeIn = document.getElementById('sgCode'), nameIn = document.getElementById('sgName');
+  var resend = document.getElementById('sgResend');
+  var mode = 'start', ink = 0, resendT = null;
+
+  function fieldErr(f, msg) {
+    var map = { code: 'sgCodeErr', sig: 'sgSigErr', name: 'sgNameErr' };
+    var el = document.getElementById(map[f]); if (!el) return;
+    el.textContent = msg || ''; el.hidden = !msg;
+    var row = el.closest('.o-sg-row'); if (row) row.classList.toggle('has-err', !!msg);
+  }
+
   function refreshSign() {
     if (!signBtn) return;
     var reason = '';
@@ -130,28 +144,127 @@
     else if (M.missing) reason = 'החתימה תיפתח כשכל התנאים יושלמו.';
     else if (!saved) reason = 'צריך להשלים ולשמור את פרטי הלקוח.';
     else if (!(c1.checked && c2.checked)) reason = 'סמנו את שתי ההסכמות כדי להמשיך.';
-    else if (!M.provider) reason = 'החתימה תיפתח בקרוב. ספק החתימה עדיין מתחבר.';
     signBtn.disabled = !!reason;
     if (why) why.textContent = reason;
+    if (signTxt) signTxt.textContent = mode === 'confirm' ? 'חתימה על ההזמנה' : 'שליחת קוד לחתימה';
   }
   if (c1) { c1.addEventListener('change', refreshSign); c2.addEventListener('change', refreshSign); }
-  if (signBtn) signBtn.addEventListener('click', function () {
-    if (signBtn.disabled || busy) return;
+
+  function countdown(sec) {
+    if (!resend) return;
+    clearInterval(resendT);
+    resend.disabled = true;
+    var left = sec;
+    resend.textContent = 'שליחה מחדש בעוד ' + left;
+    resendT = setInterval(function () {
+      left--;
+      if (left <= 0) { clearInterval(resendT); resend.disabled = false; resend.textContent = 'שליחה מחדש'; return; }
+      resend.textContent = 'שליחה מחדש בעוד ' + left;
+    }, 1000);
+  }
+
+  function startSign(isResend) {
     busy = true; signBtn.classList.add('is-busy');
-    post('sign', { c1: c1.checked, c2: c2.checked }).then(function (j) {
+    return post('sign/start', { c1: c1.checked, c2: c2.checked }).then(function (j) {
       busy = false; signBtn.classList.remove('is-busy');
-      if (j.embed_url) {
-        var slot = document.getElementById('oDocSlot');
-        slot.innerHTML = '';
-        var f = document.createElement('iframe');
-        f.src = j.embed_url; f.title = 'חתימה על ההזמנה';
-        f.style.cssText = 'width:100%;min-height:640px;border:0;display:block';
-        slot.appendChild(f);
+      if (j.ok) {
+        document.getElementById('sgTo').textContent = j.to;
+        if (!isResend) {
+          idle.hidden = true; signer.hidden = false; slot.classList.add('is-live');
+          if (nameIn && !nameIn.placeholder && form) nameIn.placeholder = form.signer.value;
+          pad.fit();
+        }
+        mode = 'confirm'; refreshSign(); countdown(j.gap || 45);
+        fieldErr('code', '');
+        codeIn.value = ''; codeIn.focus();
+        toast('שלחנו קוד אל ' + j.to);
         return;
       }
-      toast(j.message || 'החתימה אינה זמינה כרגע.', true);
+      if (j.data && j.data.wait) countdown(j.data.wait);
+      toast(j.message || 'לא הצלחנו לשלוח קוד. נסו שוב.', true);
     }).catch(function () { busy = false; signBtn.classList.remove('is-busy'); toast('אין חיבור. נסו שוב.', true); });
+  }
+
+  function confirmSign() {
+    var code = (codeIn.value || '').replace(/\D/g, '');
+    var name = (nameIn.value || '').trim();
+    var bad = false;
+    fieldErr('code', code.length === 6 ? '' : 'הקוד כולל 6 ספרות.'); if (code.length !== 6) bad = bad || 'code';
+    fieldErr('sig', ink >= 60 ? '' : 'חסרה חתימה. חתמו במסגרת.'); if (ink < 60) bad = bad || 'sig';
+    fieldErr('name', name.length > 1 ? '' : 'הקלידו את השם המלא.'); if (name.length < 2) bad = bad || 'name';
+    if (bad) { var f = { code: codeIn, sig: document.getElementById('sgPad'), name: nameIn }[bad]; if (f && f.focus) f.focus(); return; }
+    busy = true; signBtn.classList.add('is-busy');
+    post('sign/confirm', { c1: c1.checked, c2: c2.checked, code: code, name: name, sig: pad.data(), ink: Math.round(ink) }).then(function (j) {
+      busy = false; signBtn.classList.remove('is-busy');
+      if (j.ok) { done(j); return; }
+      if (j.field) {
+        fieldErr(j.field, j.error);
+        if (j.expired) { mode = 'confirm'; if (resend) { clearInterval(resendT); resend.disabled = false; resend.textContent = 'שליחת קוד חדש'; } }
+        return;
+      }
+      toast(j.error || j.message || 'החתימה לא הושלמה. נסו שוב.', true);
+    }).catch(function () { busy = false; signBtn.classList.remove('is-busy'); toast('אין חיבור. נסו שוב.', true); });
+  }
+
+  function done(j) {
+    signer.hidden = true;
+    var d = document.getElementById('oDone'); d.hidden = false;
+    slot.classList.add('is-done');
+    var cp = document.getElementById('oCopy'); if (cp && j.copy) cp.href = j.copy; else if (cp) cp.hidden = true;
+    document.querySelectorAll('.o-consent,.o-nav-sign,#signWhy,[data-fix]').forEach(function (el) { el.hidden = true; });
+    var st = document.querySelector('.o-status');
+    if (st) st.innerHTML = '<i style="background:#19B36B;box-shadow:0 0 0 4px rgba(25,179,107,.18)"></i>נחתמה';
+    M.open = false;
+    d.setAttribute('tabindex', '-1'); d.focus();
+  }
+
+  if (signBtn) signBtn.addEventListener('click', function () {
+    if (signBtn.disabled || busy) return;
+    if (mode === 'confirm') confirmSign(); else startSign(false);
   });
+  if (resend) resend.addEventListener('click', function () { if (!busy) startSign(true); });
+  if (codeIn) codeIn.addEventListener('input', function () { codeIn.value = codeIn.value.replace(/\D/g, '').slice(0, 6); fieldErr('code', ''); });
+  if (nameIn) nameIn.addEventListener('input', function () { fieldErr('name', ''); });
+
+  /* ---------- signature pad ---------- */
+  var pad = (function () {
+    var cv = document.getElementById('sgPad');
+    if (!cv) return { fit: function () {}, data: function () { return ''; } };
+    var ctx = cv.getContext('2d'), wrap = document.getElementById('sgPadWrap'), hint = document.getElementById('sgHint');
+    var drawing = false, last = null, strokes = [];
+    function fit() {
+      var r = wrap.getBoundingClientRect(), dpr = Math.max(1, Math.min(window.devicePixelRatio || 1, 2));
+      if (!r.width) return;
+      cv.width = Math.round(r.width * dpr); cv.height = Math.round(r.height * dpr);
+      cv.style.width = r.width + 'px'; cv.style.height = r.height + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.strokeStyle = '#0B0B0F';
+      redraw();
+    }
+    function line(a, b) {
+      var w = Math.max(1.4, Math.min(3.2, 3.4 - Math.hypot(b.x - a.x, b.y - a.y) * 0.08));
+      ctx.lineWidth = w; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+    }
+    function redraw() {
+      ctx.clearRect(0, 0, cv.width, cv.height);
+      strokes.forEach(function (s) { for (var i = 1; i < s.length; i++) line(s[i - 1], s[i]); if (s.length === 1) line(s[0], { x: s[0].x + .5, y: s[0].y + .5 }); });
+    }
+    function pt(e) { var r = cv.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; }
+    cv.addEventListener('pointerdown', function (e) {
+      e.preventDefault(); drawing = true; last = pt(e); strokes.push([last]);
+      try { cv.setPointerCapture(e.pointerId); } catch (x) {}
+      hint.hidden = true; fieldErr('sig', '');
+    });
+    cv.addEventListener('pointermove', function (e) {
+      if (!drawing) return;
+      var p = pt(e); ink += Math.hypot(p.x - last.x, p.y - last.y);
+      line(last, p); strokes[strokes.length - 1].push(p); last = p;
+    });
+    ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (t) { cv.addEventListener(t, function () { drawing = false; }); });
+    document.getElementById('sgClear').addEventListener('click', function () { strokes = []; ink = 0; redraw(); hint.hidden = false; });
+    window.addEventListener('resize', function () { if (!signer.hidden) fit(); });
+    return { fit: fit, data: function () { return cv.toDataURL('image/png'); } };
+  })();
 
   /* ---------- navigation ---------- */
   document.querySelectorAll('[data-next]').forEach(function (b) {

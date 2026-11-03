@@ -206,6 +206,9 @@ class MO_Admin {
 			self::readonly_doc( $o );
 		}
 
+		if ( 'signed' === $o->status ) {
+			echo '<div class="mo-card"><h2>עותק חתום</h2><p>נחתם ב־' . self::dt( $o->signed_at ) . '. המסמך כולל חתימה, פרטי לקוח ודף תיעוד.</p><p><a class="button button-primary" target="_blank" rel="noopener" href="' . esc_url( MO_Sign::admin_copy_url( $o->id ) ) . '">פתיחת העותק החתום</a></p></div>';
+		}
 		self::events_box( $o );
 		echo '</div><div class="mo-side">';
 		self::side_actions( $o, $missing, $post );
@@ -253,7 +256,7 @@ class MO_Admin {
 			'created' => 'נוצרה', 'edited' => 'נערכה', 'sent' => 'ננעלה ונוצר קישור', 'opened' => 'הלקוח פתח את הקישור לראשונה', 'visit' => 'ביקור חוזר של הלקוח',
 			'client_details_saved' => 'הלקוח שמר פרטים', 'fix_requested' => 'בקשת תיקון', 'cancelled' => 'בוטלה', 'replaced' => 'הוחלפה בגרסה חדשה',
 			'access_renewed' => 'גישה חודשה (קישור חדש)', 'expired_link_visit' => 'ניסיון כניסה לקישור שפג', 'sign_attempt_no_provider' => 'ניסיון חתימה (ספק לא מחובר)',
-			'integrity_fail' => 'שגיאת שלמות מסמך', 'link_copied' => 'הקישור הועתק', 'note' => 'הערה',
+			'integrity_fail' => 'שגיאת שלמות מסמך', 'sign_code_sent' => 'נשלח קוד אימות לחתימה', 'sign_code_wrong' => 'קוד אימות שגוי', 'sign_code_locked' => 'הקוד ננעל אחרי ניסיונות שגויים', 'sign_code_failed' => 'שליחת קוד נכשלה', 'signed' => 'ההזמנה נחתמה', 'signed_copy_sent' => 'עותק חתום נשלח לשני הצדדים', 'copy_viewed' => 'הלקוח צפה בעותק החתום', 'link_copied' => 'הקישור הועתק', 'note' => 'הערה',
 		);
 		$ev = MO_Store::events( $o->id );
 		echo '<div class="mo-card"><h2>תיעוד פעולות</h2><ul class="mo-events">';
@@ -370,8 +373,8 @@ class MO_Admin {
 		echo '<p><label class="mo-label">מייל להתראות (פתיחה, בקשת תיקון)</label><input class="mo-full" type="email" dir="ltr" name="notify" value="' . esc_attr( get_option( 'mo_notify_email', get_option( 'admin_email' ) ) ) . '"></p>';
 		echo '<p><label class="mo-label">תוקף ברירת מחדל לקישור (ימים)</label><input type="number" min="1" max="90" dir="ltr" name="days" value="' . (int) get_option( 'mo_days', 14 ) . '"></p>';
 		submit_button( 'שמירה' );
-		echo '</form><div class="mo-card mo-narrow"><h2>ספק חתימה</h2>';
-		echo get_option( 'mo_provider' ) ? '<p>מחובר.</p>' : '<p class="mo-warn">לא מחובר עדיין. כל עוד אין ספק, כפתור החתימה אצל הלקוח נשאר נעול ולא נוצר שום תהליך חתימה.</p>';
+		echo '</form><div class="mo-card mo-narrow"><h2>חתימה דיגיטלית</h2>';
+		echo '<p>חתימה פנימית פעילה. הלקוח מאמת את עצמו בקוד חד־פעמי שנשלח לדוא״ל שלו, חותם ביד ומקליד את שמו. המסמך ננעל, ועותק חתום עם דף תיעוד נשלח אליו ואליך.</p><p class="mo-muted">חשוב: המיילים יוצאים מהשרת. כדי שלא ייפלו לספאם, כדאי לחבר תוסף SMTP לתיבת המייל של העסק.</p>';
 		echo '</div></div>';
 	}
 

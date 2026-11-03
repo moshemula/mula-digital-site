@@ -241,7 +241,7 @@ $render_svc = function ( $s ) use ( $money, $svc_icon ) {
               <p>בודקים את המסמך המלא, מאשרים וחותמים.</p>
             </header>
             <?php if ( $signed ) : ?>
-              <div class="o-locked"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><strong>ההזמנה נחתמה.</strong> עותק חתום נשלח לדוא״ל שמסרתם.</div></div>
+              <div class="o-locked"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><strong>ההזמנה נחתמה.</strong> עותק חתום נשלח לדוא״ל שמסרתם.<?php if ( $token ) : ?> <a class="o-link" href="<?php echo esc_url( MO_Sign::copy_url_client( $token ) ); ?>" target="_blank" rel="noopener">לצפייה בעותק החתום</a><?php endif; ?></div></div>
             <?php elseif ( ! $open && ! $is_prev ) : ?>
               <div class="o-missing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg><div>ההזמנה אינה פתוחה לחתימה.</div></div>
             <?php endif; ?>
@@ -258,8 +258,43 @@ $render_svc = function ( $s ) use ( $money, $svc_icon ) {
                 <span>המסמך המלא לחתימה</span>
               </div>
               <div class="o-doc-slot" id="oDocSlot">
-                <p><strong>כאן ייטען רכיב החתימה.</strong></p>
-                <p>המסמך הנעול, זיהוי החותם והחתימה עצמה יתבצעו מתוך העמוד.</p>
+                <div class="o-slot-idle" id="oSlotIdle">
+                  <p><strong>החתימה מתבצעת כאן, בתוך העמוד.</strong></p>
+                  <p>מסמנים את שתי ההסכמות, מקבלים קוד לדוא״ל, חותמים ביד ומקלידים את השם. פחות מדקה.</p>
+                </div>
+                <?php if ( $open ) : ?>
+                <div class="o-signer" id="oSigner" hidden>
+                  <div class="o-sg-row" data-sf="code">
+                    <label for="sgCode"><span class="o-sg-n">1</span><span>הקלידו את הקוד שנשלח אל <bdi id="sgTo"></bdi></span></label>
+                    <div class="o-sg-code">
+                      <input id="sgCode" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="[0-9]*" dir="ltr" placeholder="••••••" aria-describedby="sgCodeErr">
+                      <button type="button" class="o-link" id="sgResend" disabled>שליחה מחדש</button>
+                    </div>
+                    <p class="o-sg-err" id="sgCodeErr" hidden></p>
+                  </div>
+                  <div class="o-sg-row" data-sf="sig">
+                    <label id="sgPadL"><span class="o-sg-n">2</span>חתמו כאן באצבע או בעכבר</label>
+                    <div class="o-pad" id="sgPadWrap">
+                      <canvas id="sgPad" role="img" aria-labelledby="sgPadL"></canvas>
+                      <span class="o-pad-line" aria-hidden="true"></span>
+                      <span class="o-pad-hint" id="sgHint" aria-hidden="true">חתימה</span>
+                      <button type="button" class="o-pad-clear" id="sgClear">ניקוי</button>
+                    </div>
+                    <p class="o-sg-err" id="sgSigErr" hidden></p>
+                  </div>
+                  <div class="o-sg-row" data-sf="name">
+                    <label for="sgName"><span class="o-sg-n">3</span>הקלידו את שמכם המלא</label>
+                    <input id="sgName" type="text" autocomplete="name" placeholder="<?php echo $cv( 'signer' ); ?>" aria-describedby="sgNameErr">
+                    <p class="o-sg-err" id="sgNameErr" hidden></p>
+                  </div>
+                </div>
+                <div class="o-signed-ok" id="oDone" hidden>
+                  <span class="o-signed-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                  <h3>ההזמנה נחתמה</h3>
+                  <p>עותק חתום עם דף תיעוד נשלח לדוא״ל שלכם. משה יחזור אליכם לתיאום הצעד הבא.</p>
+                  <a class="btn btn-primary" id="oCopy" href="#" target="_blank" rel="noopener">לצפייה בעותק החתום</a>
+                </div>
+                <?php endif; ?>
               </div>
             </div>
 
@@ -272,7 +307,7 @@ $render_svc = function ( $s ) use ( $money, $svc_icon ) {
               <button type="button" class="btn btn-ghost o-prev" data-prev="3">חזרה</button>
               <button type="button" class="btn btn-primary o-sign" disabled aria-describedby="signWhy">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
-                מעבר לחתימה</button>
+                <span id="signTxt">שליחת קוד לחתימה</span></button>
             </div>
             <p class="o-why" id="signWhy"></p>
             <?php endif; ?>
@@ -305,6 +340,7 @@ $render_svc = function ( $s ) use ( $money, $svc_icon ) {
 	'missing'  => $n_miss,
 	'provider' => (bool) $provider,
 	'saved'    => $client_ready,
+	'signer'   => isset( $c['signer'] ) ? $c['signer'] : '',
   ) ); ?>;
   </script>
   <script src="<?php echo esc_url( MO_URL . 'assets/order.js?v=' . MO_VERSION ); ?>"></script>

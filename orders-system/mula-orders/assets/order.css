@@ -191,4 +191,34 @@
 .o-ready{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:14px;background:#EEF8F2;border:1px solid #CBEBD9;color:#0B5E38;font-size:15px;margin-bottom:16px;}
 .o-ready svg{width:20px;height:20px;flex:none;margin-top:2px;}
 .o-admin-bar{background:#FFF3DA;color:#6B4A0E;text-align:center;font-family:var(--f-display);font-weight:700;font-size:14px;padding:10px 16px;position:relative;z-index:101;}
-@media print{header.nav,.mobile-menu,.mm-overlay,footer.site,.o-steps,.o-progress,.o-nav,.o-fix,.o-flag,.o-help,.o-sum-more,.o-dlg,.o-consent,.o-why{display:none!important;}.o-panel{display:block!important;border:0;box-shadow:none;}.o-panel[hidden]{display:block!important;}.o-notes{max-height:none!important;}.o-hero{background:#fff!important;}.o-title,.o-meta dd{color:#000!important;-webkit-text-fill-color:#000!important;}}
+/* ---- חתימה פנימית ---- */
+.o-signer[hidden],.o-signed-ok[hidden],.o-slot-idle[hidden]{display:none!important;}
+.o-sg-row label>span:not(.o-sg-n){min-width:0;}
+.o-sg-row label bdi{font-weight:800;}
+.o-doc-slot.is-live,.o-doc-slot.is-done{display:block;text-align:start;place-content:initial;background:#fff;padding:24px 22px;color:var(--ink);}
+.o-signer{display:grid;gap:22px;}
+.o-sg-row label{display:flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:700;font-size:15.5px;margin-bottom:10px;}
+.o-sg-n{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--grad);color:#fff;font-size:13px;font-weight:800;line-height:1;}
+.o-sg-row input[type=text]{width:100%;height:50px;border:1px solid var(--line-2,#DCDCE2);border-radius:12px;padding:0 14px;font:inherit;font-size:16px;background:#fff;color:var(--ink);transition:border-color .2s,box-shadow .2s;}
+.o-sg-row input[type=text]:focus{outline:none;border-color:#7B2FBE;box-shadow:0 0 0 4px rgba(123,47,190,.12);}
+.o-sg-code{display:flex;align-items:center;gap:14px;}
+.o-sg-code input{max-width:220px;text-align:center;font-family:var(--f-display)!important;font-weight:800!important;font-size:24px!important;letter-spacing:10px;}
+.o-sg-code .o-link{white-space:nowrap;}
+.o-sg-code .o-link[disabled]{opacity:.5;cursor:default;text-decoration:none;}
+.o-sg-err{margin:8px 0 0;color:#C8102E;font-size:14px;}
+.o-sg-row.has-err input,.o-sg-row.has-err .o-pad{border-color:#E8003D;}
+.o-pad{position:relative;height:190px;border:1px solid var(--line-2,#DCDCE2);border-radius:14px;background:#FCFCFE;overflow:hidden;}
+.o-pad canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair;}
+.o-pad-line{position:absolute;inset-inline:24px;bottom:46px;border-bottom:1.5px dashed #CFCFD8;pointer-events:none;}
+.o-pad-hint{position:absolute;inset-inline-start:26px;bottom:52px;font-family:var(--f-display);font-weight:700;font-size:14px;color:#B3B3BE;pointer-events:none;}
+.o-pad-clear{position:absolute;top:10px;inset-inline-end:10px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:5px 12px;font:inherit;font-size:13.5px;color:var(--muted);cursor:pointer;transition:color .2s,border-color .2s;}
+.o-pad-clear:hover{color:var(--ink);border-color:var(--ink);}
+.o-signed-ok{text-align:center;padding:14px 6px 6px;display:grid;justify-items:center;gap:8px;}
+.o-signed-ic{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:rgba(25,179,107,.12);color:#19B36B;animation:oPop .5s var(--ease,ease) both;}
+.o-signed-ic svg{width:30px;height:30px;}
+.o-signed-ok h3{font-family:var(--f-display);font-weight:900;font-size:22px;margin:6px 0 0;}
+.o-signed-ok p{margin:0 0 8px;color:var(--muted);max-width:420px;}
+@keyframes oPop{from{transform:scale(.6);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.o-signed-ic{animation:none;}}
+@media (max-width:640px){.o-doc-slot.is-live{padding:18px 14px;}.o-sg-code{flex-wrap:wrap;}.o-sg-code input{max-width:none;}.o-pad{height:170px;}}
+@media print{header.nav,.mobile-menu,.mm-overlay,footer.site,.o-steps,.o-progress,.o-nav,.o-fix,.o-flag,.o-help,.o-sum-more,.o-dlg,.o-consent,.o-why,.o-signer{display:none!important;}.o-panel{display:block!important;border:0;box-shadow:none;}.o-panel[hidden]{display:block!important;}.o-notes{max-height:none!important;}.o-hero{background:#fff!important;}.o-title,.o-meta dd{color:#000!important;-webkit-text-fill-color:#000!important;}}

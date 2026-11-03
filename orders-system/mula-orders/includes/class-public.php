@@ -109,6 +109,11 @@ class MO_Public {
 				}
 				$o = MO_Store::get( $o->id );
 			}
+			if ( isset( $_GET['copy'] ) && 'signed' === $o->status ) {
+				MO_Store::log( $o->id, 'copy_viewed', null, 'client' );
+				echo MO_Sign::copy_html( $o, true ); // phpcs:ignore
+				exit;
+			}
 			self::render( $o, 'client', $token );
 		}
 
@@ -133,7 +138,7 @@ class MO_Public {
 		$doc      = ( 'preview' !== $mode && $o->doc_json ) ? json_decode( $o->doc_json, true ) : MO_Store::document( $o );
 		$missing  = array();
 		foreach ( $doc['terms'] as $t ) { if ( '' === trim( $t['body'] ) ) { $missing[] = $t['key']; } }
-		$provider = get_option( 'mo_provider', '' );
+		$provider = 'internal';
 		$rest     = esc_url_raw( rest_url( 'mo/v1/' ) );
 		status_header( 200 );
 		include MO_DIR . 'templates/order-page.php';
@@ -153,10 +158,9 @@ class MO_Public {
 		$args = array( 'methods' => 'POST', 'permission_callback' => '__return_true' );
 		register_rest_route( 'mo/v1', '/client', $args + array( 'callback' => array( __CLASS__, 'api_client' ) ) );
 		register_rest_route( 'mo/v1', '/fix', $args + array( 'callback' => array( __CLASS__, 'api_fix' ) ) );
-		register_rest_route( 'mo/v1', '/sign', $args + array( 'callback' => array( __CLASS__, 'api_sign' ) ) );
 	}
 
-	private static function limited( $bucket, $max = 20 ) {
+	public static function limited( $bucket, $max = 20 ) {
 		$k = 'mo_rl_' . substr( MO_Store::ip_hash(), 0, 24 ) . '_' . $bucket;
 		$n = (int) get_transient( $k );
 		if ( $n >= $max ) { return true; }
@@ -165,7 +169,7 @@ class MO_Public {
 	}
 
 	/** מאתר הזמנה פתוחה לפי טוקן או מחזיר שגיאה */
-	private static function open_order( $req ) {
+	public static function open_order( $req ) {
 		$o = MO_Store::get_by_token( (string) $req->get_param( 'token' ) );
 		if ( ! $o ) { return new WP_Error( 'mo_link', 'הקישור אינו פעיל.', array( 'status' => 404 ) ); }
 		if ( 'expired' === $o->eff_status ) { return new WP_Error( 'mo_expired', 'תוקף הקישור הסתיים.', array( 'status' => 410 ) ); }
@@ -218,33 +222,6 @@ class MO_Public {
 		MO_Store::set_status( $o->id, 'fix_requested', 'fix_requested', array( 'text' => $text ), 'client' );
 		self::notify( $o, 'בקשת תיקון בהזמנה ' . $o->number, "הלקוח ביקש תיקון:\n\n" . $text );
 		return array( 'ok' => true );
-	}
-
-	/**
-	 * חתימה. בודק בצד השרת שכל התנאים מתקיימים.
-	 * כל עוד לא הוגדר ספק חתימה, לא נוצר תהליך חתימה.
-	 */
-	public static function api_sign( WP_REST_Request $req ) {
-		if ( self::limited( 'sign', 10 ) ) { return new WP_Error( 'mo_rate', 'יותר מדי ניסיונות.', array( 'status' => 429 ) ); }
-		$o = self::open_order( $req );
-		if ( is_wp_error( $o ) ) { return $o; }
-		$doc = json_decode( $o->doc_json, true );
-		if ( ! $doc || hash( 'sha256', $o->doc_json ) !== $o->doc_hash ) {
-			MO_Store::log( $o->id, 'integrity_fail', null, 'system' );
-			return new WP_Error( 'mo_integrity', 'שגיאת שלמות מסמך. דברו עם משה.', array( 'status' => 500 ) );
-		}
-		foreach ( $doc['terms'] as $t ) {
-			if ( '' === trim( $t['body'] ) ) { return new WP_Error( 'mo_terms', 'יש תנאים שעדיין לא הושלמו.', array( 'status' => 409 ) ); }
-		}
-		list( , $err ) = self::validate_client( $o->client );
-		if ( $err ) { return new WP_Error( 'mo_client', 'פרטי הלקוח לא הושלמו.', array( 'status' => 409 ) ); }
-		if ( ! $req->get_param( 'c1' ) || ! $req->get_param( 'c2' ) ) { return new WP_Error( 'mo_consent', 'צריך לסמן את שתי ההסכמות.', array( 'status' => 409 ) ); }
-		if ( ! get_option( 'mo_provider' ) ) {
-			MO_Store::log( $o->id, 'sign_attempt_no_provider', null, 'client' );
-			return new WP_Error( 'mo_provider', 'החתימה תיפתח בקרוב. ספק החתימה עדיין לא חובר.', array( 'status' => 503 ) );
-		}
-		// כאן יחובר ספק החתימה שייבחר: יצירת תהליך חד־פעמי (idempotent לפי doc_hash) והחזרת כתובת הטמעה.
-		return new WP_Error( 'mo_provider', 'ספק החתימה אינו זמין כרגע.', array( 'status' => 503 ) );
 	}
 
 	public static function notify( $o, $subject, $body ) {
