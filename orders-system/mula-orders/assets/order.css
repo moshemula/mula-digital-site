@@ -217,6 +217,7 @@
 .o-signed-ic{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:rgba(25,179,107,.12);color:#19B36B;animation:oPop .5s var(--ease,ease) both;}
 .o-signed-ic svg{width:30px;height:30px;}
 .o-signed-ok h3{font-family:var(--f-display);font-weight:900;font-size:22px;margin:6px 0 0;}
+.o-signed-ok .btn{text-decoration:none;}
 .o-signed-ok p{margin:0 0 8px;color:var(--muted);max-width:420px;}
 @keyframes oPop{from{transform:scale(.6);opacity:0}to{transform:none;opacity:1}}
 @media (prefers-reduced-motion:reduce){.o-signed-ic{animation:none;}}
