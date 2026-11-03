@@ -1,0 +1,1344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="googlebot" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#22275A">
+<meta name="description" content="Homepage design concept prepared by Mula Digital for Elbatech Group.">
+<meta property="og:title" content="Elbatech Group · Homepage concept by Mula Digital">
+<meta property="og:description" content="From drawing to deployed system. A new homepage concept for Elbatech Group.">
+<meta property="og:image" content="https://muladigital.co.il/preview/elbatech/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.png">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>Elbatech Group · Homepage Concept</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: Elbatech brand system. White ground, navy #22275A structure, green #54B83D action,
+   division colors from the group logos. Geist type: light/strong weight contrast, tight display tracking.
+   Real Elbatech footage + photography; one 3D centerpiece: drawing becomes a working machine. */
+:root{
+  --bg:#FFFFFF;
+  --mist:#F3F5FA;
+  --navy:#22275A;
+  --navy-2:#393F81;
+  --navy-3:#161A40;
+  --green:#54B83D;
+  --green-d:#43A02D;
+  --ink:#1A1E3C;
+  --mute:#5C6182;
+  --line:#E1E4EE;
+  --d-tech:#D8414C; --d-elipse:#26A6D8; --d-tamuz:#6C7480; --d-ind:#6B3F9B; --d-china:#1F6FB8; --d-log:#A86CA9;
+  --f-sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"Geist Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --gut-l:max(16px, env(safe-area-inset-left, 0px));
+  --gut-r:max(16px, env(safe-area-inset-right, 0px));
+  --maxw:1320px;
+  --ease:cubic-bezier(.2,.75,.15,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-sans);font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;font-feature-settings:"ss01","cv11"}
+body.lock{overflow:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:90;background:var(--bg)}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--f-sans);text-wrap:balance;margin:0;color:var(--navy)}
+p{margin:0}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
+.mono{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--green-d);display:flex;gap:12px;align-items:center;font-weight:500}
+.eyebrow::before{content:"";width:28px;height:1.5px;background:var(--green)}
+.h2{font-size:clamp(38px,5vw,76px);font-weight:620;line-height:.98;letter-spacing:-.045em}
+.h2 .lt,.lt{font-weight:300;color:var(--navy-2)}
+.lead{color:var(--mute);font-size:clamp(17px,1.3vw,19px);line-height:1.6;max-width:56ch;letter-spacing:-.005em}
+.benefit{font-weight:600;color:var(--navy);border-left:3px solid var(--green);padding-left:14px;line-height:1.45;letter-spacing:-.01em}
+.btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--f-sans);font-weight:560;font-size:15px;letter-spacing:-.005em;text-decoration:none;padding:14px 16px 14px 24px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:background .3s var(--ease),color .3s,border-color .3s}
+.btn .arr{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.2);font-size:13px;transition:transform .3s var(--ease)}
+.btn:hover .arr{transform:translateX(3px) rotate(-45deg)}
+.btn.green{background:var(--green);color:#fff}
+.btn.green:hover{background:var(--green-d)}
+.btn.ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.btn.ghost .arr{background:rgba(255,255,255,.14)}
+.btn.ghost:hover{background:#fff;color:var(--navy)}
+.btn.navy{background:var(--navy);color:#fff}
+.btn.navy:hover{background:var(--navy-2)}
+.btn.sm{padding:9px 10px 9px 18px;font-size:14px}
+.btn.sm .arr{width:22px;height:22px}
+
+/* ===== HEADER + MEGA MENU ===== */
+.conceptbar{background:var(--navy-3);color:#AEB3D6;font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-align:center;padding-block:6px;padding-left:var(--gut-l);padding-right:var(--gut-r)}
+.conceptbar b{color:var(--green);font-weight:500}
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:80}
+.util{background:#fff;border-bottom:1px solid var(--line)}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;height:36px;gap:16px}
+.util nav{display:flex;gap:22px;align-items:center}
+.util a{font-size:13px;color:var(--mute);text-decoration:none}
+.util a:hover{color:var(--navy)}
+.util .lang{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;color:var(--navy)}
+.util .lang span{color:var(--mute)}
+.nav{background:rgba(255,255,255,.94);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line);position:relative}
+.nav > .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:78px}
+.nav .logo img{height:46px;width:auto}
+.menu{position:relative;display:flex;gap:4px;list-style:none;margin:0;padding:0;height:100%;align-items:center}
+.menu > li{height:100%;display:flex;align-items:center}
+.menu button,.menu > li > a{font-family:var(--f-sans);background:none;border:0;cursor:pointer;font-size:15px;font-weight:520;color:var(--navy);letter-spacing:-.01em;padding:10px 14px;border-radius:8px;display:flex;align-items:center;gap:6px;text-decoration:none;transition:background .2s}
+.menu button:hover,.menu button[aria-expanded="true"],.menu > li > a:hover{background:var(--mist)}
+.menu button svg{transition:transform .3s var(--ease)}
+.menu button[aria-expanded="true"] svg{transform:rotate(180deg)}
+.menu .ink{position:absolute;bottom:0;height:2px;background:var(--green);left:0;width:0;transition:left .35s var(--ease),width .35s var(--ease),opacity .2s;opacity:0}
+.head-right{display:flex;align-items:center;gap:10px}
+.burger{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;place-items:center}
+.burger i{display:block;width:18px;height:1.5px;background:var(--navy);position:relative}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:18px;height:1.5px;background:var(--navy)}
+.burger i::before{top:-6px}.burger i::after{top:6px}
+
+.mega{position:absolute;left:0;right:0;top:100%;height:0;overflow:hidden;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 40px 80px -40px rgba(22,26,64,.35);transition:height .45s var(--ease)}
+.mega .panel{position:absolute;inset:0 0 auto 0;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .25s,transform .45s var(--ease),visibility 0s .25s}
+.mega .panel.on{opacity:1;visibility:visible;transform:none;transition:opacity .3s .05s,transform .5s var(--ease),visibility 0s}
+.mega .panel .wrap{display:grid;grid-template-columns:3fr 6fr 3fr;gap:40px;padding-block:40px 44px}
+.mega .st{opacity:0;transform:translateY(10px);transition:opacity .4s,transform .5s var(--ease)}
+.mega .panel.on .st{opacity:1;transform:none;transition-delay:calc(var(--i,0) * 45ms + 80ms)}
+.mp-intro{display:flex;flex-direction:column;gap:16px;border-right:1px solid var(--line);padding-right:32px}
+.mp-intro h3{font-size:30px;font-weight:620;letter-spacing:-.04em;line-height:1.02}
+.mp-intro p{color:var(--mute);font-size:15px}
+.mp-intro .btn{align-self:flex-start;margin-top:auto}
+.divgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.divcard{position:relative;display:flex;flex-direction:column;gap:10px;padding:18px 18px 16px 20px;border-radius:10px;text-decoration:none;border:1px solid var(--line);overflow:hidden;transition:background .25s,border-color .25s}
+.divcard::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--dc);transform:scaleY(.25);transform-origin:top;transition:transform .4s var(--ease)}
+.divcard:hover{background:var(--mist);border-color:transparent}
+.divcard:hover::before{transform:scaleY(1)}
+.divcard img{height:34px;width:auto;object-fit:contain;object-position:left}
+.divcard span{font-size:13.5px;color:var(--mute);line-height:1.4}
+.divcard .go{position:absolute;right:14px;top:16px;color:var(--dc);opacity:0;transform:translateX(-6px);transition:.3s var(--ease)}
+.divcard:hover .go{opacity:1;transform:none}
+.feature{position:relative;border-radius:12px;overflow:hidden;min-height:280px;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none;color:#fff;isolation:isolate;background:var(--navy)}
+.feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1s var(--ease)}
+.feature::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(22,26,64,.92),rgba(22,26,64,.1) 65%);z-index:-1}
+.feature:hover img{transform:scale(1.06)}
+.feature .in{padding:20px;display:grid;gap:6px}
+.feature b{font-size:19px;font-weight:600;letter-spacing:-.02em;line-height:1.2}
+.feature small{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
+.sol{display:grid;grid-template-columns:1fr 1fr;gap:4px 28px}
+.sol a{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;padding:14px 12px;border-radius:10px;text-decoration:none;transition:background .2s}
+.sol a:hover{background:var(--mist)}
+.sol .ic{grid-row:span 2;width:38px;height:38px;border-radius:9px;background:var(--mist);display:grid;place-items:center;font-family:var(--f-mono);font-size:12px;color:var(--navy);font-weight:500;transition:background .25s,color .25s}
+.sol a:hover .ic{background:var(--green);color:#fff}
+.sol b{font-weight:580;color:var(--navy);letter-spacing:-.015em;font-size:15.5px}
+.sol span{font-size:13px;color:var(--mute);line-height:1.35}
+.ind{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;grid-column:2 / 4}
+.indt{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/5;text-decoration:none;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate;background:var(--navy);max-width:100%}
+.indt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1s var(--ease)}
+.indt::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(22,26,64,.92),rgba(22,26,64,0) 60%);z-index:-1}
+.indt:hover img{transform:scale(1.07)}
+.indt .in{padding:16px;display:grid;gap:4px}
+.indt b{font-size:17px;font-weight:600;letter-spacing:-.02em}
+.indt small{font-size:12.5px;color:rgba(255,255,255,.75);line-height:1.35}
+.indt.logos{background:var(--mist);color:var(--navy)}
+.indt.logos::before{display:none}
+.indt.logos .lg{position:absolute;inset:0 0 40% 0;display:grid;place-items:center;gap:14px;padding:18px;z-index:-1}
+.indt.logos .lg img{position:static;width:auto;max-width:70%;height:auto;max-height:48px;object-fit:contain;mix-blend-mode:multiply}
+.indt.logos small{color:var(--mute)}
+.camp{grid-column:2 / 4;display:grid;grid-template-columns:1.4fr 1fr;gap:24px}
+.facts{display:grid;gap:10px;align-content:start}
+.facts .f{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.facts .f b{font-weight:600;color:var(--navy)}
+.facts .f span{color:var(--mute)}
+.qgrid{grid-column:2 / 4;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.qchip{padding:18px;border-radius:10px;background:var(--mist);display:grid;gap:6px}
+.qchip b{font-size:18px;font-weight:620;letter-spacing:-.03em;color:var(--navy)}
+.qchip span{font-size:12.5px;color:var(--mute);line-height:1.35}
+.qchip i{font-style:normal;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;color:var(--green-d);text-transform:uppercase}
+.mega-foot{border-top:1px solid var(--line);background:var(--mist)}
+.mega-foot .wrap{display:flex !important;justify-content:space-between;align-items:center;padding-block:14px !important;gap:20px}
+.mega-foot span{font-size:13px;color:var(--mute)}
+.scrim{position:fixed;inset:0;background:rgba(22,26,64,.35);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .35s,visibility 0s .35s;z-index:70}
+.scrim.on{opacity:1;visibility:visible;transition:opacity .35s}
+
+/* mobile sheet */
+.msheet{position:fixed;inset:0;z-index:100;background:var(--navy-3);color:#fff;display:flex;flex-direction:column;transform:translateY(-100%);transition:transform .55s var(--ease);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);padding-left:var(--gut-l);padding-right:var(--gut-r)}
+.msheet.on{transform:none}
+.msheet .top{display:flex;justify-content:space-between;align-items:center;height:72px;border-bottom:1px solid rgba(255,255,255,.12)}
+.msheet .top .flogo{display:inline-flex;background:#fff;border-radius:10px;padding:8px 12px}.msheet .top img{height:30px;width:auto}
+.msheet .x{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:none;color:#fff;font-size:20px;cursor:pointer}
+.msheet .body{flex:1;overflow-y:auto;padding-block:12px 24px}
+.msheet details{border-bottom:1px solid rgba(255,255,255,.12)}
+.msheet summary{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-size:26px;font-weight:560;letter-spacing:-.03em;cursor:pointer}
+.msheet summary::-webkit-details-marker{display:none}
+.msheet summary::after{content:"+";font-weight:300;color:var(--green);font-size:28px;transition:transform .3s}
+.msheet details[open] summary::after{transform:rotate(45deg)}
+.msheet .sub{display:grid;gap:8px;padding-bottom:20px}
+.msheet .sub a{color:rgba(255,255,255,.82);text-decoration:none;font-size:16px;padding:6px 0}
+.msheet .logos{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.msheet .logos a{background:#fff;border-radius:8px;padding:10px;display:grid;place-items:center}
+.msheet .logos img{height:28px;width:auto}
+.msheet .foot{padding-block:16px;border-top:1px solid rgba(255,255,255,.12);display:grid;gap:12px}
+.msheet .foot .btn{justify-content:space-between}
+
+@media (max-width:1100px){.menu,.util{display:none}.burger{display:grid}.nav > .wrap{height:66px}.nav .logo img{height:38px}.head-right .btn{display:none}}
+@media (min-width:1101px){.msheet{display:none}}
+
+/* ===== HERO ===== */
+.hero{position:relative;color:#fff;background:var(--navy-3) url("hero-poster.jpg") right center/cover no-repeat;overflow:hidden}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% center;filter:contrast(1.06) saturate(.85)}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(22,26,64,.97) 0%,rgba(22,26,64,.86) 34%,rgba(22,26,64,.35) 68%,rgba(22,26,64,.25) 100%),linear-gradient(0deg,rgba(22,26,64,.7),transparent 45%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1.3px);background-size:4px 4px;pointer-events:none}
+.hero .wrap{position:relative;z-index:2;min-height:min(86svh,860px);display:flex;flex-direction:column;justify-content:center;gap:26px;padding-block:96px 180px}
+.hero .eyebrow{color:var(--green)}
+.hero h1{color:#fff;font-size:clamp(50px,7.6vw,124px);font-weight:300;line-height:.9;letter-spacing:-.055em;max-width:11ch}
+.hero h1 strong{font-weight:640;display:block}
+.hero h1 em{font-style:normal;color:var(--green);font-weight:640}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+.hero h1 .ln > span{display:block}
+/* intro */
+.intro{position:fixed;inset:0;z-index:200;background:#fff;display:grid;place-items:center;pointer-events:none}
+.intro .in{display:grid;justify-items:center;gap:22px}
+.intro img{width:min(280px,60vw);height:auto}
+.intro .bar{width:min(220px,50vw);height:3px;border-radius:3px;background:var(--line);overflow:hidden}
+.intro .bar i{display:block;height:100%;width:0;background:var(--green)}
+.intro .mono{font-size:10.5px;letter-spacing:.2em}
+.hero h1 .ln > span{transition:transform 1.15s cubic-bezier(.16,.84,.2,1) .05s}
+.hero h1 .ln:nth-child(2) > span{transition-delay:.17s}
+.hero-seq{transition:opacity .9s ease .35s,transform 1s cubic-bezier(.16,.84,.2,1) .35s}
+.hero .ctas.hero-seq{transition-delay:.48s,.48s}
+.hero .eyebrow.hero-seq{transition-delay:0s,0s}
+.hero .side span{transition:opacity .8s ease .5s,transform .9s cubic-bezier(.16,.84,.2,1) .5s}
+html.intro-on .hero-seq{opacity:0;transform:translateY(22px)}
+html.intro-on .hero .side span{opacity:0;transform:translateX(20px)}
+html.intro-on .hero h1 .ln > span{transform:translateY(110%)}
+html.intro-on .hero video{opacity:0;transform:scale(1.08)}
+.hero video{transition:opacity 1.4s ease,transform 2.2s var(--ease)}
+
+.hero .lead{color:rgba(255,255,255,.82);max-width:46ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero .side{position:absolute;z-index:2;right:var(--gut-r);top:96px;display:grid;gap:10px;justify-items:end}
+.hero .side span{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;padding:7px 11px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(22,26,64,.4);backdrop-filter:blur(6px)}
+.hero .line{position:absolute;z-index:2;left:0;bottom:0;height:3px;width:34%;background:var(--green)}
+@media (max-width:900px){.hero .side{display:none}.hero .wrap{padding-block:60px 160px}}
+
+.statcard{position:relative;z-index:5;margin-top:-118px}
+.statcard .card{background:#fff;border-radius:14px;box-shadow:0 40px 70px -40px rgba(22,26,64,.45);display:grid;grid-template-columns:repeat(5,1fr);overflow:hidden}
+.stat{padding:30px 26px;display:flex;flex-direction:column;gap:6px;border-left:1px solid var(--line);min-width:0}
+.stat:first-child{border-left:0}
+.stat b{font-weight:600;font-size:clamp(34px,3.4vw,52px);line-height:1;letter-spacing:-.05em;color:var(--navy);font-variant-numeric:tabular-nums}
+.stat b sup{color:var(--green);font-size:.5em;vertical-align:top;margin-left:2px}
+.stat span{font-size:14px;color:var(--mute)}
+@media (max-width:900px){.statcard .card{grid-template-columns:1fr 1fr}.stat{border-left:0;border-top:1px solid var(--line)}.stat:nth-child(-n+2){border-top:0}.stat:last-child{grid-column:1/-1}}
+
+/* ===== SECTORS ===== */
+.sectors{padding-block:120px 90px}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:48px}
+.sec-head > div{display:grid;gap:18px}
+.sec-cards{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.scard{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .3s}
+.scard:hover{transform:translateY(-6px);box-shadow:0 40px 70px -40px rgba(22,26,64,.45);border-color:transparent}
+.scard .media{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--navy);max-width:100%}
+.scard .media img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.scard:hover .media img{transform:scale(1.05)}
+.scard .media::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;background:linear-gradient(0deg,rgba(22,26,64,.35),transparent)}
+.scard .tag{position:absolute;z-index:2;left:20px;top:20px;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);color:var(--navy);font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:8px 12px;border-radius:999px;font-weight:500}
+.scard .tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green)}
+.scard .in{padding:34px 36px 32px;display:flex;flex-direction:column;gap:16px;flex:1}
+.scard h3{font-size:clamp(26px,2.3vw,34px);font-weight:620;letter-spacing:-.04em;line-height:1.08}
+.scard p{color:var(--mute);font-size:16.5px}
+.scard .foot{margin-top:auto;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.scard .specs{display:flex;flex-wrap:wrap;gap:6px}
+.scard .specs span{font-family:var(--f-mono);font-size:11px;padding:5px 9px;border-radius:6px;background:var(--mist);color:var(--navy)}
+.scard .more{display:inline-flex;gap:10px;align-items:center;font-weight:580;color:var(--navy);font-size:15px}
+.scard .more i{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;font-style:normal;transition:transform .4s var(--ease)}
+.scard:hover .more i{transform:rotate(-45deg)}
+.markets{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.markets span{padding:10px 16px;border-radius:999px;background:var(--mist);color:var(--navy);font-weight:520;font-size:14px;display:flex;align-items:center;gap:8px}
+.markets span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green)}
+@media (max-width:900px){.sectors{padding-block:80px 56px}.sec-head,.sec-cards{grid-template-columns:1fr}.scard .in{padding:26px 22px}}
+
+/* ===== MACHINE ===== */
+.machine{position:relative;background:var(--mist);overflow:hidden}
+.m-stage{position:relative;height:100svh;min-height:640px}
+.m-stage .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(57,63,129,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(57,63,129,.09) 1px,transparent 1px),linear-gradient(rgba(57,63,129,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(57,63,129,.04) 1px,transparent 1px);background-size:120px 120px,120px 120px,24px 24px,24px 24px;transition:opacity .6s}
+.m-stage .glow{position:absolute;inset:0;background:radial-gradient(ellipse 45% 55% at 66% 55%,#fff 0%,rgba(255,255,255,.6) 40%,transparent 75%);pointer-events:none}
+#machGL{position:absolute;top:0;left:var(--side);width:calc(100% - var(--side));height:100%;display:block}
+.m-stage{--side:min(470px,36vw)}
+.m-side{position:absolute;z-index:3;left:0;top:0;bottom:0;width:var(--side);padding:132px 28px 28px max(28px,var(--gut-l));display:flex;flex-direction:column;justify-content:center;gap:clamp(18px,3.4vh,34px);overflow:hidden;background:linear-gradient(90deg,var(--mist) 70%,rgba(243,245,250,0))}
+.m-head{display:grid;gap:14px}
+.m-head .h2{font-size:clamp(30px,min(3.3vw,5.6vh),58px);line-height:1;letter-spacing:-.045em}
+.m-head .h2 em{font-style:normal;color:var(--green-d)}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.steps li{cursor:pointer;position:relative;padding:clamp(6px,1vh,10px) 14px clamp(6px,1vh,10px) 18px;border-radius:10px;transition:background .4s,opacity .4s,box-shadow .4s;opacity:.55}
+.steps li::before{content:"";position:absolute;left:0;top:10px;bottom:10px;width:2px;background:rgba(34,39,90,.15);border-radius:2px}
+.steps li.on{opacity:1;background:#fff;box-shadow:0 20px 40px -26px rgba(22,26,64,.45)}
+.steps li.on::before{background:var(--green)}
+.steps li.done{opacity:.8}
+.steps li.done::before{background:var(--green)}
+.steps li:not(.on):hover{opacity:.95;background:rgba(255,255,255,.55)}
+.steps li:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.drag-hint{position:absolute;z-index:4;left:calc(var(--side) + (100% - var(--side))/2);top:132px;transform:translate(-50%,8px);display:flex;align-items:center;gap:10px;padding:9px 16px 9px 12px;border-radius:999px;background:var(--navy);color:#fff;font-size:13.5px;font-weight:520;opacity:0;pointer-events:none;transition:opacity .4s,transform .5s var(--ease);box-shadow:0 18px 30px -18px rgba(22,26,64,.6)}
+.drag-hint.on{opacity:1;transform:translate(-50%,0)}
+.drag-hint i{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--green);font-style:normal;font-size:12px}
+#machGL.grab{cursor:grab}#machGL.grabbing{cursor:grabbing}
+#machGL{touch-action:pan-y}
+@media (max-width:900px){.drag-hint{left:50%;top:auto;bottom:196px}}
+
+.steps .k{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--green-d)}
+.steps b{display:block;font-size:clamp(14px,1.9vh,16.5px);font-weight:600;letter-spacing:-.02em;color:var(--navy);line-height:1.3}
+.steps p{display:none;font-size:14px;color:var(--mute);line-height:1.45;margin-top:4px}
+.steps li.on p{display:block}
+.steps .bn{display:none;margin-top:6px;font-size:14px;font-weight:600;color:var(--navy)}
+.steps li.on .bn{display:block}
+.m-hud{position:absolute;z-index:3;right:var(--gut-r);bottom:28px;padding:14px 20px;border-radius:14px;background:rgba(243,245,250,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;gap:28px;align-items:flex-end;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);pointer-events:none}
+.m-hud b{display:block;font-family:var(--f-sans);font-size:30px;font-weight:600;letter-spacing:-.04em;color:var(--navy);text-transform:none;font-variant-numeric:tabular-nums}
+.m-hud .state.ok{color:var(--green-d)}
+.m-hud .bar{width:170px;height:3px;background:rgba(34,39,90,.12);border-radius:2px;margin-top:10px;overflow:hidden}
+.m-hud .bar i{display:block;height:100%;width:0;background:var(--green)}
+.mlabels{position:absolute;inset:0;z-index:2;pointer-events:none}
+.ml{position:absolute;left:0;top:0;white-space:nowrap;transition:opacity .35s;will-change:transform}
+.ml .t{display:inline-block;font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);background:#fff;padding:6px 10px;border-radius:6px;box-shadow:0 10px 24px -12px rgba(22,26,64,.4);font-weight:500}
+.ml .t small{display:block;font-size:10px;color:var(--mute);font-weight:400;letter-spacing:.04em;text-transform:none;font-family:var(--f-sans)}
+.ml::before{content:"";position:absolute;left:-14px;top:13px;width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(84,184,61,.22)}
+.ml.flip::before{left:auto;right:-14px}
+.ml.dim .t{background:transparent;box-shadow:none;color:var(--navy-2);font-size:12px;padding:0}
+.ml.dim::before{display:none}
+@media (max-width:900px){
+  .m-stage{height:100svh;min-height:600px;--side:0px}
+  .m-stage .glow{background:radial-gradient(ellipse 70% 40% at 50% 50%,#fff,transparent 75%)}
+  #machGL{left:0;width:100%;top:190px;height:calc(100% - 370px)}
+  .m-side{width:auto;right:0;padding:84px var(--gut-r) 16px var(--gut-l);justify-content:space-between;background:none;pointer-events:none}
+  .m-side > *{pointer-events:auto}
+  .m-head .h2{font-size:31px}
+  .steps li:not(.on){display:none}
+  .m-hud{display:none}
+  .ml .t{font-size:10px}.ml .t small{display:none}
+}
+@media (max-height:720px) and (min-width:901px){.steps li:not(.on) .k{display:none}.m-side{padding-top:124px}}
+
+/* ===== GROUP ===== */
+.group{position:relative;overflow:hidden;padding-top:110px}
+.group .sec-head{margin-bottom:40px}
+.track{display:flex;gap:22px;padding-left:var(--gut-l);padding-right:var(--gut-r);padding-bottom:110px;will-change:transform}
+.dcard{flex:0 0 min(400px,84vw);background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px;display:flex;flex-direction:column;gap:16px;position:relative;min-width:0;transition:transform .4s var(--ease),box-shadow .4s}
+.dcard::before{content:"";position:absolute;left:30px;right:30px;top:0;height:3px;border-radius:0 0 3px 3px;background:var(--dc)}
+.dcard:hover{transform:translateY(-6px);box-shadow:0 30px 50px -30px rgba(22,26,64,.35)}
+.dcard .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.dcard .top img{height:42px;width:auto}
+.dcard .no{font-family:var(--f-mono);font-size:13px;color:var(--dc);font-weight:500;letter-spacing:.1em}
+.dcard h3{font-size:26px;font-weight:600;letter-spacing:-.035em;line-height:1.1}
+.dcard p{color:var(--mute);font-size:16px}
+.dcard .spec{margin-top:auto;padding-top:14px;border-top:1px dashed var(--line);display:flex;flex-wrap:wrap;gap:6px}
+.dcard .spec span{font-family:var(--f-mono);font-size:11px;padding:4px 8px;border-radius:5px;background:var(--mist);color:var(--navy)}
+@media (max-width:900px){.group{padding-top:80px}.track{flex-direction:column;padding-bottom:80px}.dcard{flex:1 1 auto}}
+
+/* ===== CAMPUS ===== */
+.campus{background:var(--navy-3);color:#fff;position:relative;overflow:hidden}
+.campus h2,.campus h3{color:#fff}
+.reveal-img{position:relative;height:100svh;min-height:560px;max-height:1000px;overflow:hidden}
+.reveal-img .frame{position:absolute;inset:0;clip-path:inset(14% 18% 14% 18% round 14px);will-change:clip-path}
+.reveal-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);will-change:transform}
+.reveal-img .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(22,26,64,.92),rgba(22,26,64,.15) 55%,transparent)}
+.reveal-img .over{position:absolute;inset:auto 0 0 0;z-index:2;padding-block:0 70px}
+.reveal-img .over .wrap{display:flex;flex-direction:column;gap:18px}
+.reveal-img .eyebrow{color:var(--green)}
+.reveal-img h2{font-size:clamp(44px,7vw,112px);font-weight:300;line-height:.92;letter-spacing:-.055em;max-width:12ch}
+.reveal-img h2 strong{font-weight:640;color:var(--green)}
+.campus-body{padding-block:90px 110px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.campus-body .lead{color:rgba(255,255,255,.8)}
+.campus-body .benefit{color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{padding:9px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.22);font-size:14px;display:flex;gap:8px;align-items:center}
+.chips span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green)}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.photos figure{margin:0;border-radius:12px;overflow:hidden;position:relative}
+.photos img{width:100%;aspect-ratio:1/1;object-fit:cover;max-width:100%}
+.photos figcaption{position:absolute;left:10px;bottom:10px;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;background:rgba(22,26,64,.85);padding:5px 9px;border-radius:5px}
+.timeline{position:relative;padding-left:24px}
+.timeline::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:2px;background:rgba(255,255,255,.16)}
+.timeline .fill{position:absolute;left:5px;top:8px;width:2px;height:0;background:var(--green)}
+.timeline ol{margin:0;padding:0}
+.timeline li{list-style:none;position:relative;padding:8px 0;display:grid;grid-template-columns:120px 1fr;gap:12px;color:rgba(255,255,255,.6);font-size:16px;transition:color .3s}
+.timeline li::before{content:"";position:absolute;left:-23px;top:15px;width:10px;height:10px;border-radius:50%;background:var(--navy-3);border:2px solid rgba(255,255,255,.35);transition:.3s}
+.timeline li.on{color:#fff}
+.timeline li.on::before{background:var(--green);border-color:var(--green)}
+.timeline time{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding-top:3px;color:var(--green)}
+.films{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.film{display:flex;gap:12px;align-items:center;padding:14px;border-radius:12px;background:rgba(255,255,255,.06);text-decoration:none;transition:background .25s;min-width:0}
+.film:hover{background:rgba(255,255,255,.12)}
+.film .play{flex:0 0 40px;height:40px;border-radius:50%;background:var(--green);display:grid;place-items:center;font-size:12px}
+.film b{display:block;font-weight:560;font-size:14.5px;line-height:1.3}
+.film small{font-family:var(--f-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+@media (max-width:900px){.reveal-img{height:80svh;min-height:480px}.campus-body{grid-template-columns:1fr;padding-block:60px 80px;gap:44px}.films{grid-template-columns:1fr}}
+
+/* ===== QUALITY ===== */
+.quality{padding-block:120px}
+.certs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.cert{position:relative;overflow:hidden;background:var(--mist);border-radius:14px;padding:26px;display:flex;flex-direction:column;gap:10px;min-height:200px;min-width:0}
+.cert code{font-family:var(--f-sans);font-weight:620;font-size:24px;letter-spacing:-.035em;line-height:1;color:var(--navy)}
+.cert p{color:var(--mute);font-size:14.5px;line-height:1.5}
+.cert .tag{margin-top:auto;font-size:13px;font-weight:580;color:var(--green-d);display:flex;gap:8px;align-items:center}
+.cert .tag::before{content:"✓";display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--green);color:#fff;font-size:11px}
+.cert.hl{background:var(--navy);justify-content:center}
+.cert.hl .benefit{color:#fff;font-size:19px}
+@media (max-width:900px){.quality{padding-block:80px}.certs{grid-template-columns:1fr 1fr}.cert code{font-size:20px}}
+
+.clients{border-block:1px solid var(--line);padding-block:36px;overflow:hidden}
+.clients .lab{text-align:center;margin-bottom:24px}
+.marquee{display:flex;width:max-content;animation:mq 36s linear infinite}
+.marquee:hover{animation-play-state:paused}
+.marquee img{height:44px;max-width:170px;object-fit:contain;width:auto;margin:0 40px;filter:grayscale(1);opacity:.65;transition:filter .3s,opacity .3s;mix-blend-mode:multiply}
+.marquee img:hover{filter:none;opacity:1}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+.leader{padding-block:120px;background:linear-gradient(180deg,#fff 0%,var(--mist) 100%)}
+.leader .wrap{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:72px;align-items:center}
+.ceo{margin:0;position:relative}
+.ceo .ph{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:var(--navy);max-width:100%}
+.ceo .ph::after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(0deg,rgba(22,26,64,.75),transparent)}
+.ceo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;filter:saturate(.9) contrast(1.03)}
+.ceo::before{content:"";position:absolute;left:-14px;top:-14px;width:120px;height:120px;border-left:3px solid var(--green);border-top:3px solid var(--green);border-radius:20px 0 0 0;z-index:1}
+.ceo figcaption{position:absolute;left:24px;bottom:22px;right:24px;z-index:2;color:#fff;display:grid;gap:4px}
+.ceo figcaption b{font-size:26px;font-weight:620;letter-spacing:-.035em}
+.ceo figcaption span{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
+.msg{display:grid;gap:28px;min-width:0}
+.msg-top{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.draft{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);border:1px dashed var(--mute);border-radius:999px;padding:5px 10px}
+.msg .h2{font-size:clamp(32px,3.6vw,54px)}
+.leader .bio{display:grid;gap:18px;color:var(--mute);font-size:18.5px;max-width:60ch;letter-spacing:-.01em}
+.leader .bio strong{color:var(--navy);font-weight:600}
+.sig{display:grid;gap:8px;padding-top:22px;border-top:1px solid var(--line)}
+.sig .sign{font-size:30px;font-weight:300;letter-spacing:-.04em;color:var(--navy)}
+.sig .mono{font-size:11px;line-height:1.7;letter-spacing:.06em}
+@media (max-width:900px){.leader{padding-block:80px}.leader .wrap{grid-template-columns:1fr;gap:44px}.ceo{max-width:420px}.ceo::before{left:-8px;top:-8px;width:80px;height:80px}}
+.cta{background:var(--green);color:#fff;position:relative;overflow:hidden}
+.cta .wrap{position:relative;z-index:2;padding-block:110px;display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:end}
+.cta h2{color:#fff;font-size:clamp(44px,6.4vw,100px);font-weight:300;line-height:.92;letter-spacing:-.055em}
+.cta h2 strong{font-weight:640;color:var(--navy-3);display:block}
+.cta .side{display:grid;gap:18px;justify-items:start}
+.cta address{font-style:normal;color:rgba(255,255,255,.95);font-size:15px}
+.cta .ring{position:absolute;right:-140px;top:-140px;width:560px;height:560px;border-radius:50%;border:80px solid rgba(255,255,255,.12)}
+@media (max-width:900px){.cta .wrap{grid-template-columns:1fr;padding-block:80px}}
+footer{background:var(--navy-3);color:#C9CDE6;padding-block:44px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+footer .flogo{display:inline-flex;background:#fff;border-radius:12px;padding:12px 16px}
+footer .flogo img{height:40px;width:auto}
+footer .mono{color:#9EA3C8}
+
+.rv{transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .rv.pre{opacity:.001;transform:translateY(28px)}
+@media (prefers-reduced-motion:reduce){
+  .marquee{animation:none;flex-wrap:wrap;width:auto;justify-content:center}
+  .rv{transition:none}.js .rv.pre{opacity:1;transform:none}
+  .reveal-img .frame{clip-path:none}.reveal-img img{transform:none}
+  .mega,.mega .panel,.mega .st,.msheet{transition:none}
+}
+</style>
+
+</head>
+<body>
+<div class="intro" id="intro" aria-hidden="true"><div class="in"><img src="logo.png" alt=""><div class="bar"><i id="introBar"></i></div><span class="mono">Turnkey partner · since 1991</span></div></div>
+<div class="conceptbar"><b>Design concept</b> by Mula Digital<span class="hide-sm"> for Elbatech Group</span> · not the official website</div>
+
+<header class="site-head" id="siteHead">
+  <div class="util"><div class="wrap">
+    <span class="mono" style="font-size:11px">Elbatech Group · Ashdod, Israel · AS9100D · ISO 13485</span>
+    <nav aria-label="Utility"><a href="#group">Careers</a><a href="#quality">Quality &amp; Certifications</a><a href="#contact">Contact</a><span class="lang">EN <span>/ עב</span></span></nav>
+  </div></div>
+  <div class="nav">
+    <div class="wrap">
+      <a class="logo" href="#top" aria-label="Elbatech Group home"><img src="logo.png" alt="Elbatech Group"></a>
+      <ul class="menu" id="menu">
+        <li><button data-mega="group" aria-expanded="false" aria-controls="mp-group">The Group <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button></li>
+        <li><button data-mega="solutions" aria-expanded="false" aria-controls="mp-solutions">Solutions <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button></li>
+        <li><button data-mega="industries" aria-expanded="false" aria-controls="mp-industries">Industries <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button></li>
+        <li><button data-mega="campus" aria-expanded="false" aria-controls="mp-campus">Campus <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button></li>
+        <li><button data-mega="quality" aria-expanded="false" aria-controls="mp-quality">Quality <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button></li>
+        <li><a href="#machine">How we build</a></li>
+        <li class="ink" id="ink" aria-hidden="true"></li>
+      </ul>
+      <div class="head-right">
+        <a class="btn green sm" href="#contact">Start a project <span class="arr">→</span></a>
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="msheet"><i></i></button>
+      </div>
+    </div>
+
+    <div class="mega" id="mega">
+      <!-- GROUP -->
+      <div class="panel" id="mp-group" role="region" aria-label="The Group">
+        <div class="wrap">
+          <div class="mp-intro st" style="--i:0"><span class="eyebrow">The Elbatech Group</span><h3>Six companies.<br><span class="lt">One turnkey chain.</span></h3><p>Every link from engineering to delivery, inside one group and one quality system.</p><a class="btn navy sm" href="#group">Meet the group <span class="arr">→</span></a></div>
+          <div class="divgrid">
+            <a class="divcard st" style="--i:1;--dc:var(--d-elipse)" href="#group"><img src="co-elipse.png" alt="Elipse Engineering"><span>Complete engineering design and turnkey solutions</span><em class="go">→</em></a>
+            <a class="divcard st" style="--i:2;--dc:var(--d-tech)" href="#group"><img src="co-tech.png" alt="Elbatech Technologies"><span>Full turnkey for aviation, defense and high-tech</span><em class="go">→</em></a>
+            <a class="divcard st" style="--i:3;--dc:var(--d-tamuz)" href="#group"><img src="co-tamuz.png" alt="Tamuz FTK Solutions"><span>HLA of systems and machines at full turnkey</span><em class="go">→</em></a>
+            <a class="divcard st" style="--i:4;--dc:var(--d-ind)" href="#group"><img src="co-ind.png" alt="Elbatech Industrial"><span>Sales, purchasing, logistics and kits</span><em class="go">→</em></a>
+            <a class="divcard st" style="--i:5;--dc:var(--d-china)" href="#group"><img src="co-china.png" alt="Elbatech China"><span>All East sourcing and production capabilities</span><em class="go">→</em></a>
+            <a class="divcard st" style="--i:6;--dc:var(--d-log)" href="#group"><img src="co-log.png" alt="Elbatech Logistics"><span>Traceable, climate-controlled logistics</span><em class="go">→</em></a>
+          </div>
+          <a class="feature st" style="--i:7" href="#campus"><img src="campus.jpg" alt="" loading="lazy"><div class="in"><small>New · Ashdod Hi-Tech Park</small><b>The Elbatech Campus. Every company under one roof.</b></div></a>
+        </div>
+      </div>
+      <!-- SOLUTIONS -->
+      <div class="panel" id="mp-solutions" role="region" aria-label="Solutions">
+        <div class="wrap">
+          <div class="mp-intro st" style="--i:0"><span class="eyebrow">Solutions</span><h3>From design<br><span class="lt">to high-level assembly.</span></h3><p>Take one link of the chain, or hand us the whole product.</p><a class="btn navy sm" href="#machine">See how we build <span class="arr">→</span></a></div>
+          <div class="sol">
+            <a class="st" style="--i:1" href="#machine"><span class="ic">01</span><b>Design &amp; Engineering</b><span>NPI, design to cost, build to spec</span></a>
+            <a class="st" style="--i:2" href="#machine"><span class="ic">02</span><b>Cable &amp; Harness</b><span>IPC/WHMA-A-620 wiring and harnesses</span></a>
+            <a class="st" style="--i:3" href="#machine"><span class="ic">03</span><b>Electro-mechanical HLA</b><span>Systems and machines at full turnkey</span></a>
+            <a class="st" style="--i:4" href="#machine"><span class="ic">04</span><b>Cabinets &amp; Drawers</b><span>Electrical cabinets built and documented</span></a>
+            <a class="st" style="--i:5" href="#machine"><span class="ic">05</span><b>RF &amp; DF Lab</b><span>RF module assembly, integration and test</span></a>
+            <a class="st" style="--i:6" href="#machine"><span class="ic">06</span><b>CNC &amp; Metal Workshop</b><span>Machining and sheet metal in house</span></a>
+            <a class="st" style="--i:7" href="#group"><span class="ic">07</span><b>Sourcing &amp; Kits</b><span>Quote, procure and ship complete kits</span></a>
+            <a class="st" style="--i:8" href="#group"><span class="ic">08</span><b>Logistics &amp; Storage</b><span>ESD-safe, fully traceable warehousing</span></a>
+          </div>
+          <a class="feature st" style="--i:9" href="#machine"><img src="kla.jpg" alt="" loading="lazy"><div class="in"><small>Interactive · 3D</small><b>Watch a drawing become a working machine.</b></div></a>
+        </div>
+      </div>
+      <!-- INDUSTRIES -->
+      <div class="panel" id="mp-industries" role="region" aria-label="Industries">
+        <div class="wrap">
+          <div class="mp-intro st" style="--i:0"><span class="eyebrow">Industries</span><h3>Two sectors.<br><span class="lt">One standard.</span></h3><p>Defense programs and global high-tech leaders trust the same floors.</p><a class="btn navy sm" href="#sectors">All industries <span class="arr">→</span></a></div>
+          <div class="ind">
+            <a class="indt st" style="--i:1" href="#sectors"><img src="radar.jpg" alt="" loading="lazy"><div class="in"><b>Airborne &amp; Defense</b><small>Radar and military systems</small></div></a>
+            <a class="indt st" style="--i:2" href="#sectors"><img src="kla.jpg" alt="" loading="lazy"><div class="in"><b>Semiconductor</b><small>Machinery HLA</small></div></a>
+            <a class="indt logos st" style="--i:3" href="#sectors"><div class="lg"><img src="cl-landa-hd.png" alt="Landa"><img src="cl-hp.png" alt="HP" style="max-height:44px"></div><div class="in"><b>Digital Printing</b><small>Press sub-systems</small></div></a>
+            <a class="indt logos st" style="--i:4" href="#sectors"><div class="lg"><img src="cl-lumenis.jpg" alt="Lumenis"><img src="cl-s1.jpg" alt="Alma Lasers"></div><div class="in"><b>Medical Devices</b><small>Built under ISO 13485</small></div></a>
+          </div>
+        </div>
+      </div>
+      <!-- CAMPUS -->
+      <div class="panel" id="mp-campus" role="region" aria-label="Campus">
+        <div class="wrap">
+          <div class="mp-intro st" style="--i:0"><span class="eyebrow">Elbatech Campus</span><h3>The whole group.<br><span class="lt">One home.</span></h3><p>Green construction, zero emissions, renewable energy, robotic logistics.</p><a class="btn navy sm" href="#campus">Explore the campus <span class="arr">→</span></a></div>
+          <div class="camp">
+            <a class="feature st" style="--i:1;min-height:300px" href="#campus"><img src="drone.jpg" alt="" loading="lazy"><div class="in"><small>Drone · Nov 2024</small><b>Glass shell complete</b></div></a>
+            <div class="facts st" style="--i:2">
+              <div class="f"><b>Plot</b><span>≈ 8 dunam</span></div>
+              <div class="f"><b>Location</b><span>Ashdod Hi-Tech Park</span></div>
+              <div class="f"><b>Energy</b><span>Renewable, zero emissions</span></div>
+              <div class="f"><b>Logistics</b><span>Robotic logistics center</span></div>
+              <div class="f"><b>Started</b><span>Jan 2022</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- QUALITY -->
+      <div class="panel" id="mp-quality" role="region" aria-label="Quality">
+        <div class="wrap">
+          <div class="mp-intro st" style="--i:0"><span class="eyebrow">Quality on top</span><h3>Zero-failure<br><span class="lt">is a system.</span></h3><p>Certified to the standards aerospace, defense and medical buyers ask for first.</p><a class="btn navy sm" href="https://elbatech.co.il/quality-and-certifications/" target="_blank" rel="noopener">Certificates <span class="arr">→</span></a></div>
+          <div class="qgrid">
+            <div class="qchip st" style="--i:1"><i>Aerospace</i><b>AS9100D</b><span>Traceability and revision control</span></div>
+            <div class="qchip st" style="--i:2"><i>Quality</i><b>ISO 9001</b><span>Process-based management</span></div>
+            <div class="qchip st" style="--i:3"><i>Medical</i><b>ISO 13485</b><span>Medical device manufacturing</span></div>
+            <div class="qchip st" style="--i:4"><i>Soldering</i><b>J-STD-001</b><span>Incl. space &amp; military addendum</span></div>
+            <div class="qchip st" style="--i:5"><i>Electronics</i><b>IPC-A-610</b><span>Acceptability of assemblies</span></div>
+            <div class="qchip st" style="--i:6"><i>Wiring</i><b>IPC/WHMA-A-620</b><span>Cable and harness</span></div>
+            <div class="qchip st" style="--i:7"><i>Rework</i><b>IPC-7711/21</b><span>Repair and modification</span></div>
+            <div class="qchip st" style="--i:8;background:var(--navy)"><i style="color:var(--green)">Status</i><b style="color:#fff">Audit-ready</b><span style="color:#C9CDE6">Across every company</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="mega-foot" style="position:absolute;left:0;right:0;bottom:0"><div class="wrap"><span>Elbatech Group · 30+ years · 1,200 people · 114 active customers</span><a class="btn green sm" href="#contact">Start a project <span class="arr">→</span></a></div></div>
+    </div>
+  </div>
+</header>
+<div class="scrim" id="scrim" aria-hidden="true"></div>
+
+<!-- mobile sheet -->
+<div class="msheet" id="msheet" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="top"><span class="flogo"><img src="logo.png" alt="Elbatech Group"></span><button class="x" id="mclose" aria-label="Close menu">×</button></div>
+  <div class="body">
+    <details open><summary>The Group</summary><div class="sub"><div class="logos">
+      <a href="#group"><img src="co-elipse.png" alt="Elipse Engineering"></a><a href="#group"><img src="co-tech.png" alt="Elbatech Technologies"></a><a href="#group"><img src="co-tamuz.png" alt="Tamuz FTK"></a><a href="#group"><img src="co-ind.png" alt="Elbatech Industrial"></a><a href="#group"><img src="co-china.png" alt="Elbatech China"></a><a href="#group"><img src="co-log.png" alt="Elbatech Logistics"></a>
+    </div></div></details>
+    <details><summary>Solutions</summary><div class="sub"><a href="#machine">Design &amp; Engineering</a><a href="#machine">Cable &amp; Harness</a><a href="#machine">Electro-mechanical HLA</a><a href="#machine">Cabinets &amp; Drawers</a><a href="#machine">RF &amp; DF Lab</a><a href="#machine">CNC &amp; Metal Workshop</a><a href="#group">Sourcing &amp; Kits</a><a href="#group">Logistics &amp; Storage</a></div></details>
+    <details><summary>Industries</summary><div class="sub"><a href="#sectors">Airborne &amp; Defense</a><a href="#sectors">Semiconductor Machinery</a><a href="#sectors">Digital Printing</a><a href="#sectors">Medical Devices</a></div></details>
+    <details><summary>Campus</summary><div class="sub"><a href="#campus">The new Elbatech Campus</a><a href="https://www.youtube.com/watch?v=osdqVjNX_SA" target="_blank" rel="noopener">VR walkthrough</a></div></details>
+    <details><summary>Quality</summary><div class="sub"><a href="#quality">AS9100D · ISO 9001 · ISO 13485</a><a href="#quality">IPC-A-610 · IPC/WHMA-A-620 · J-STD-001</a></div></details>
+  </div>
+  <div class="foot"><a class="btn green" href="#contact">Start a project <span class="arr">→</span></a><span class="mono" style="color:#9EA3C8">EN / עב · Careers · Contact</span></div>
+</div>
+
+<main id="top">
+<section class="hero" aria-label="Elbatech Group">
+  <video autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg" aria-hidden="true"><source src="hero.mp4" type="video/mp4"></video>
+  <div class="side" aria-hidden="true"><span>AS9100D:2016</span><span>ISO 13485:2016</span><span>IPC/WHMA-A-620</span></div>
+  <div class="wrap">
+    <span class="eyebrow hero-seq">Aerospace · Defense · High-tech · Medical</span>
+    <h1><span class="ln"><span>Your <em>turnkey</em></span></span><span class="ln"><span><strong>partner.</strong></span></span></h1>
+    <p class="lead hero-seq">One partner from the first drawing to the delivered system. Design, engineering, production, high-level assembly and logistics, all under one quality system.</p>
+    <div class="ctas hero-seq">
+      <a class="btn green" href="#contact">Start a project <span class="arr">→</span></a>
+      <a class="btn ghost" href="#machine">See how we build <span class="arr">→</span></a>
+    </div>
+  </div>
+  <div class="line" aria-hidden="true"></div>
+</section>
+
+<div class="statcard">
+  <div class="wrap">
+    <div class="card">
+      <div class="stat"><b data-count="1200">1,200</b><span>People across the group</span></div>
+      <div class="stat"><b data-count="30" data-sup="+">30<sup>+</sup></b><span>Years of aerospace-grade work</span></div>
+      <div class="stat"><b data-count="114">114</b><span>Active customers worldwide</span></div>
+      <div class="stat"><b data-count="6">6</b><span>Companies, one accountable group</span></div>
+      <div class="stat"><b data-count="23000">23,000</b><span>m² of production space</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="sectors" id="sectors" aria-labelledby="secTitle">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Industries</span><h2 class="h2" id="secTitle">Two sectors.<br><span class="lt">One standard.</span></h2></div>
+      <p class="lead">The discipline that builds radar systems for defense programs also builds machines for the world's leading semiconductor, printing and medical companies. Same floors. Same process. Same standard.</p>
+    </div>
+    <div class="sec-cards">
+      <a class="scard rv" href="https://elbatech.co.il/solutions/" target="_blank" rel="noopener">
+        <div class="media"><img src="mmr.jpg" alt="Multi-mission radar system deployed in the field" loading="lazy"><span class="tag">Aerospace &amp; Defense</span></div>
+        <div class="in">
+          <h3>Built for programs where failure is not an option.</h3>
+          <p>Electro-mechanical design, production and logistics on a full turnkey basis for aerospace, defense and military systems.</p>
+          <p class="benefit">Full traceability on every part, every revision, every unit.</p>
+          <div class="foot"><div class="specs"><span>AS9100D</span><span>J-STD-001 space &amp; military</span></div><span class="more">Defense solutions <i>→</i></span></div>
+        </div>
+      </a>
+      <a class="scard rv" href="https://elbatech.co.il/solutions/" target="_blank" rel="noopener">
+        <div class="media"><img src="kla.jpg" alt="Semiconductor inspection machine assembled for a global high-tech customer" loading="lazy"><span class="tag">Civilian &amp; High-tech</span></div>
+        <div class="in">
+          <h3>The assembly floor behind global high-tech leaders.</h3>
+          <p>High-level assembly of semiconductor, digital printing and medical machines. Cables and harnesses, cabinets and drawers, CNC machining and NPI.</p>
+          <p class="benefit">Your engineers stay on the next product. We build this one.</p>
+          <div class="foot"><div class="specs"><span>ISO 13485</span><span>IPC-A-610</span></div><span class="more">High-tech solutions <i>→</i></span></div>
+        </div>
+      </a>
+    </div>
+    <div class="markets" aria-label="Markets"><span>Airborne &amp; Defense</span><span>Semiconductor Machinery</span><span>Digital Printing</span><span>Medical Devices</span></div>
+  </div>
+</section>
+
+<!-- MACHINE -->
+<section class="machine" id="machine" aria-labelledby="mTitle">
+  <div class="m-stage" id="mStage">
+    <div class="grid" id="mGrid" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
+    <canvas id="machGL" role="img" aria-label="3D autonomous drone station built from a technical drawing as you scroll: structure, electrical cabinet, cable harness, battery-swap robot, landing lift, hexacopter drone and a test launch"></canvas>
+    <div class="mlabels" id="mlabels" aria-hidden="true"></div>
+    <div class="m-side">
+      <div class="m-head">
+        <span class="eyebrow">How we build</span>
+        <h2 class="h2" id="mTitle"><span class="lt">You bring the design.</span><br>We build the <em>system.</em></h2>
+      </div>
+      <ol class="steps" id="steps" aria-label="Build steps, select one to jump to it">
+      <li><span class="k">01 · Design input</span><b>Start with a drawing</b><p>A concept, a spec or a full build-to-print package. Elipse Engineering reviews it for manufacturability and cost before a single part is cut.</p><span class="bn">Problems get solved on paper, not on the floor.</span></li>
+      <li><span class="k">02 · Mechanics</span><b>Frame, CNC and metal work</b><p>Base, structure and extrusions machined and assembled in our own workshop.</p><span class="bn">Precision parts from one accountable supplier.</span></li>
+      <li><span class="k">03 · Electrical</span><b>Cabinets built to spec</b><p>Breakers, drives, PLC and terminals laid out, labeled and documented to your schematic.</p><span class="bn">Every wire traceable back to the drawing.</span></li>
+      <li><span class="k">04 · Cable &amp; harness</span><b>Every cable routed and tied</b><p>Harnesses and cable trays built and inspected to IPC/WHMA-A-620.</p><span class="bn">Clean routing that holds up for years in the field.</span></li>
+      <li><span class="k">05 · Robotics &amp; HLA</span><b>Robotics, drone, integration</b><p>Battery-swap robot, landing lift, sensors and the drone itself integrated into one autonomous system.</p><span class="bn">One team owns the whole system.</span></li>
+      <li><span class="k">06 · Test &amp; deliver</span><b>Tested until it flies</b><p>Full functional test, AS9100D documentation and a real launch before the system leaves our floor.</p><span class="bn">Ready to deploy the day it arrives.</span></li>
+    </ol>
+    </div>
+    <div class="drag-hint" id="dragHint" aria-hidden="true"><i>⟲</i>Drag to explore the system</div>
+    <div class="m-hud" aria-hidden="true">
+      <div>Build progress<b id="mPct">0%</b><div class="bar"><i id="mBar"></i></div></div>
+      <div>Status<b class="state" id="mState">Drawing</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="group" id="group" aria-labelledby="grpTitle">
+  <div class="wrap sec-head">
+    <div><span class="eyebrow">The Elbatech Group</span><h2 class="h2" id="grpTitle">Six companies.<br><span class="lt">One turnkey chain.</span></h2></div>
+    <p class="lead">Every link of your product's journey, from engineering to delivery, stays inside one group. No hand-offs to outside suppliers. No gaps in accountability.</p>
+  </div>
+  <div class="track" id="track">
+    <article class="dcard" style="--dc:var(--d-elipse)"><div class="top"><img src="co-elipse.png" alt="Elipse Engineering"><span class="no">01 / 06</span></div><h3>Design &amp; engineering</h3><p>Complete engineering design, from a first concept to a full build-to-spec package.</p><p class="benefit">Designed to be built, so the first build is the right one.</p><div class="spec"><span>NPI</span><span>Design to cost</span><span>Build to spec</span></div></article>
+    <article class="dcard" style="--dc:var(--d-ind)"><div class="top"><img src="co-ind.png" alt="Elbatech Industrial"><span class="no">02 / 06</span></div><h3>Sourcing &amp; kits</h3><p>Sales, purchasing, logistics and complete kits of electronic and electromechanical products.</p><p class="benefit">One order covers your whole bill of materials.</p><div class="spec"><span>Purchasing</span><span>KITs</span><span>Traceability</span></div></article>
+    <article class="dcard" style="--dc:var(--d-china)"><div class="top"><img src="co-china.png" alt="Elbatech China"><span class="no">03 / 06</span></div><h3>East sourcing</h3><p>All sourcing and production capabilities in the East, coordinated and controlled from Israel.</p><p class="benefit">Global pricing with Israeli accountability.</p><div class="spec"><span>Sourcing</span><span>Production</span><span>QA</span></div></article>
+    <article class="dcard" style="--dc:var(--d-tech)"><div class="top"><img src="co-tech.png" alt="Elbatech Technologies"><span class="no">04 / 06</span></div><h3>Build</h3><p>Full turnkey for aviation, defense and high-tech. Cable and harness, RF and DF lab integration, PCB and RF module assembly.</p><p class="benefit">Critical sub-assemblies stay under one quality system.</p><div class="spec"><span>IPC/WHMA-A-620</span><span>IPC-A-610</span><span>RF lab</span></div></article>
+    <article class="dcard" style="--dc:var(--d-tamuz)"><div class="top"><img src="co-tamuz.png" alt="Tamuz FTK Solutions"><span class="no">05 / 06</span></div><h3>High-level assembly</h3><p>High-level assembly of complete systems and machines for high-tech, medical and defense customers.</p><p class="benefit">A tested machine, ready for your customer.</p><div class="spec"><span>HLA</span><span>AS9100D</span><span>ISO 13485</span></div></article>
+    <article class="dcard" style="--dc:var(--d-log)"><div class="top"><img src="co-log.png" alt="Elbatech Logistics"><span class="no">06 / 06</span></div><h3>Store &amp; deliver</h3><p>Fully traceable storage of sub-assemblies and components in a climate-controlled building dedicated to the task.</p><p class="benefit">Stock is ready the moment your line needs it.</p><div class="spec"><span>ESD safe</span><span>Climate control</span><span>Robotic storage</span></div></article>
+  </div>
+</section>
+
+<section class="campus" id="campus" aria-labelledby="campTitle">
+  <div class="reveal-img" id="revealImg">
+    <div class="frame" id="frame"><img id="campusImg" src="campus.jpg" alt="Rendering of the new Elbatech campus with its glass facade"></div>
+    <div class="over"><div class="wrap">
+      <span class="eyebrow">Elbatech Campus · Ashdod Hi-Tech Park</span>
+      <h2 id="campTitle">The whole group. <strong>One home.</strong></h2>
+    </div></div>
+  </div>
+  <div class="wrap campus-body">
+    <div style="display:grid;gap:24px">
+      <p class="lead">A new campus in the Ashdod Hi-Tech Park, built with green technology, zero emissions and renewable energy. About 8 dunams that bring every Elbatech company into one building.</p>
+      <p class="benefit">Shorter hand-offs. Faster programs. One address for your entire product.</p>
+      <div class="chips"><span>≈ 8 dunam</span><span>Zero emissions</span><span>Renewable energy</span><span>Robotic logistics center</span></div>
+      <div class="photos">
+        <figure><img src="drone.jpg" alt="Drone view of the campus with its glass shell" loading="lazy"><figcaption>Drone · Nov 2024</figcaption></figure>
+        <figure><img src="lobby.jpg" alt="Rendering of the campus entrance lobby" loading="lazy"><figcaption>Entrance · render</figcaption></figure>
+      </div>
+    </div>
+    <div style="display:grid;gap:28px">
+      <h3 style="font-size:30px;font-weight:600;letter-spacing:-.035em">From raft to glass shell</h3>
+      <div class="timeline" id="timeline"><span class="fill" id="tlFill"></span>
+        <ol>
+          <li><time>Jan 2022</time><span>Cornerstone laid</span></li>
+          <li><time>Aug 2022</time><span>Raft foundation cast</span></li>
+          <li><time>Mar 2023</time><span>Level −1 complete</span></li>
+          <li><time>Aug–Dec 2023</time><span>Floors 2 to 5 rise</span></li>
+          <li><time>Jan 2024</time><span>Floor 6 and production floors</span></li>
+          <li><time>Apr 2024</time><span>Structure complete</span></li>
+          <li><time>May 2024</time><span>External aluminum shell</span></li>
+          <li><time>Jul–Nov 2024</time><span>Glass building shell</span></li>
+        </ol>
+      </div>
+      <div class="films">
+        <a class="film" href="https://www.youtube.com/watch?v=osdqVjNX_SA" target="_blank" rel="noopener"><span class="play">▶</span><span><b>VR walkthrough of the campus</b><small>Simulation</small></span></a>
+        <a class="film" href="https://www.youtube.com/watch?v=NbP0BGgGbRc" target="_blank" rel="noopener"><span class="play">▶</span><span><b>The robotic logistics center</b><small>Render</small></span></a>
+        <a class="film" href="https://www.youtube.com/watch?v=qO61Sv3Gv5I" target="_blank" rel="noopener"><span class="play">▶</span><span><b>Glass shell, front view</b><small>Drone · Nov 2024</small></span></a>
+        <a class="film" href="https://www.youtube.com/watch?v=dNs3PPu8lS8" target="_blank" rel="noopener"><span class="play">▶</span><span><b>Laying the cornerstone</b><small>Jan 2022</small></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quality" id="quality" aria-labelledby="qTitle">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:0">
+      <div><span class="eyebrow">Quality on top</span><h2 class="h2" id="qTitle">Certified to the standards<br><span class="lt">your auditors ask for first.</span></h2></div>
+      <p class="lead">Meticulous planning, methodic execution, no-compromise quality. Every process, operator and revision documented, in every company of the group.</p>
+    </div>
+    <div class="certs">
+      <div class="cert rv"><code>AS9100D:2016</code><p>Aerospace quality management with component traceability and controlled revisions.</p><span class="tag">Valid 2027</span></div>
+      <div class="cert rv"><code>ISO 9001:2015</code><p>Process-based quality management across the group's production floors.</p><span class="tag">Certified</span></div>
+      <div class="cert rv"><code>ISO 13485:2016</code><p>Medical device manufacturing under strict process control.</p><span class="tag">Certified</span></div>
+      <div class="cert rv"><code>J-STD-001</code><p>Soldered assemblies, including the space and military hardware addendum.</p><span class="tag">Qualified</span></div>
+      <div class="cert rv"><code>IPC-A-610</code><p>Acceptability of electronic assemblies.</p><span class="tag">Qualified</span></div>
+      <div class="cert rv"><code>IPC/WHMA-A-620</code><p>Cable and wire harness assemblies.</p><span class="tag">Qualified</span></div>
+      <div class="cert rv"><code>IPC-7711/21</code><p>Rework, modification and repair of electronic assemblies.</p><span class="tag">Qualified</span></div>
+      <div class="cert hl rv"><p class="benefit">Audit-ready from day one. Your qualification moves faster.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="clients" aria-label="Customers">
+  <p class="mono lab">Trusted across defense, semiconductor, printing and medical</p>
+  <div class="marquee">
+    <img src="cl-s3.jpg" alt="IAI ELTA"><img src="cl-kla-hd.png" alt="KLA"><img src="cl-hp.png" alt="HP"><img src="cl-landa-hd.png" alt="Landa"><img src="cl-mod.png" alt="Israel Ministry of Defense"><img src="cl-bsci.png" alt="Boston Scientific"><img src="cl-lumenis.jpg" alt="Lumenis"><img src="cl-may.png" alt="Maytronics"><img src="cl-s1.jpg" alt="Alma Lasers"><img src="cl-asi.png" alt="Applied Spectral Imaging"><img src="cl-s2.jpg" alt="IAI"><img src="cl-airo.png" alt="Airobotics">
+    <img src="cl-s3.jpg" alt="" aria-hidden="true"><img src="cl-kla-hd.png" alt="" aria-hidden="true"><img src="cl-hp.png" alt="" aria-hidden="true"><img src="cl-landa-hd.png" alt="" aria-hidden="true"><img src="cl-mod.png" alt="" aria-hidden="true"><img src="cl-bsci.png" alt="" aria-hidden="true"><img src="cl-lumenis.jpg" alt="" aria-hidden="true"><img src="cl-may.png" alt="" aria-hidden="true"><img src="cl-s1.jpg" alt="" aria-hidden="true"><img src="cl-asi.png" alt="" aria-hidden="true"><img src="cl-s2.jpg" alt="" aria-hidden="true"><img src="cl-airo.png" alt="" aria-hidden="true">
+  </div>
+</section>
+
+<section class="leader" id="leadership" aria-labelledby="leadTitle">
+  <div class="wrap">
+    <figure class="ceo">
+      <div class="ph"><img src="rami.jpg" alt="Rami Zorea, CEO of Elbatech Group" loading="lazy"></div>
+      <figcaption><b>Rami Zorea</b><span>Chief Executive Officer · since 2010</span></figcaption>
+    </figure>
+    <div class="msg">
+      <div class="msg-top"><span class="eyebrow">A message from our CEO</span><span class="draft">Draft text · for Rami's approval</span></div>
+      <h2 class="h2" id="leadTitle">Our customers bring us a drawing.<br><span class="lt">We return a system they can put their name on.</span></h2>
+      <div class="bio">
+        <p>For more than 30 years, Elbatech has grown alongside Israel's aerospace and defense industry, and alongside some of the world's leading high-tech companies. Meticulous planning, methodic execution, no-compromise quality and on-time delivery are the reasons the most demanding customers choose us.</p>
+        <p>Today the group brings together <strong>six companies, about 1,200 people and 114 active customers</strong>. With our new campus in the Ashdod Hi-Tech Park, every link of the turnkey chain will work under one roof, with shorter handoffs and one quality system.</p>
+      </div>
+      <div class="sig">
+        <span class="sign">Rami Zorea</span>
+        <span class="mono">About 40 years in Israel's aerospace industry · Former Vice Manager, ELTA Systems Technology plant · B.Sc. Mechanical Engineering, Technion</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact" aria-labelledby="ctaTitle">
+  <div class="ring" aria-hidden="true"></div>
+  <div class="wrap">
+    <h2 id="ctaTitle">Ready to get started? <strong>Send us the drawing.</strong></h2>
+    <div class="side">
+      <a class="btn navy" href="https://elbatech.co.il/contact-us/" target="_blank" rel="noopener">Contact us <span class="arr">→</span></a>
+      <p style="font-size:18px;max-width:34ch;color:#fff">Tell us what you are building. Our engineers will take it from there.</p>
+      <address>Elbatech Group Headquarters<br>27 Hateena St., Park Hameah<br>Nir Galim Industrial Area, Ashdod</address>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="flogo"><img src="logo.png" alt="Elbatech Group"></span>
+    <span class="mono">Design · Engineering · Production · Logistics</span>
+    <span class="mono">© 2027 Elbatech Group · Concept by <a href="https://muladigital.co.il/" style="color:#fff;text-decoration:none">Mula Digital</a></span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/environments/RoomEnvironment.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/geometries/RoundedBoxGeometry.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function(){
+"use strict";
+document.documentElement.classList.add('js');
+var INTRO=!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&!!window.gsap;
+if(INTRO)document.documentElement.classList.add('intro-on');else{var _i=document.getElementById('intro');if(_i)_i.remove();}
+var REDUCE=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var HAS3=!!window.THREE, HASG=!!(window.gsap&&window.ScrollTrigger);
+if(HASG)gsap.registerPlugin(ScrollTrigger);
+var clamp=function(v,a,b){return Math.max(a,Math.min(b,v));};
+var ease=function(t){t=clamp(t,0,1);return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;};
+var lerp=function(a,b,t){return a+(b-a)*t;};
+function watch(el,cb){if(!('IntersectionObserver' in window)){cb(true);return;}new IntersectionObserver(function(es){es.forEach(function(e){cb(e.isIntersecting);});},{rootMargin:'150px'}).observe(el);}
+if(window.innerWidth<600){var hs=document.querySelector('.hide-sm');if(hs)hs.remove();}
+var vid=document.querySelector('.hero video');if(vid&&REDUCE){vid.removeAttribute('autoplay');vid.pause();}
+
+/* ============ MEGA MENU ============ */
+function initMega(){
+  var mega=document.getElementById('mega'),scrim=document.getElementById('scrim'),ink=document.getElementById('ink'),menu=document.getElementById('menu');
+  var trig=[].slice.call(document.querySelectorAll('[data-mega]'));
+  var foot=mega.querySelector('.mega-foot');
+  var openId=null,tOpen=null,tClose=null;
+  function moveInk(b){if(!b){ink.style.opacity=0;return;}var r=b.getBoundingClientRect(),m=menu.getBoundingClientRect();ink.style.left=(r.left-m.left+14)+'px';ink.style.width=(r.width-28)+'px';ink.style.opacity=1;}
+  function open(id){
+    clearTimeout(tClose);if(openId===id)return;openId=id;
+    var panel=document.getElementById('mp-'+id);
+    [].forEach.call(mega.querySelectorAll('.panel'),function(p){p.classList.toggle('on',p===panel);});
+    trig.forEach(function(t){t.setAttribute('aria-expanded',t.dataset.mega===id?'true':'false');});
+    moveInk(trig.filter(function(t){return t.dataset.mega===id;})[0]);
+    mega.style.height=(panel.offsetHeight+foot.offsetHeight)+'px';
+    scrim.classList.add('on');
+  }
+  function close(){clearTimeout(tOpen);openId=null;mega.style.height='0px';scrim.classList.remove('on');trig.forEach(function(t){t.setAttribute('aria-expanded','false');});moveInk(null);
+    setTimeout(function(){if(!openId)[].forEach.call(mega.querySelectorAll('.panel'),function(p){p.classList.remove('on');});},350);}
+  trig.forEach(function(t){
+    t.addEventListener('mouseenter',function(){clearTimeout(tOpen);tOpen=setTimeout(function(){open(t.dataset.mega);},openId?0:90);});
+    t.addEventListener('click',function(){if(openId===t.dataset.mega)close();else open(t.dataset.mega);});
+    t.addEventListener('keydown',function(e){if(e.key==='ArrowDown'){e.preventDefault();open(t.dataset.mega);var f=document.querySelector('#mp-'+t.dataset.mega+' a');if(f)f.focus();}});
+  });
+  var nav=document.querySelector('.nav');
+  nav.addEventListener('mouseleave',function(){clearTimeout(tOpen);tClose=setTimeout(close,220);});
+  nav.addEventListener('mouseenter',function(){clearTimeout(tClose);});
+  [].forEach.call(menu.querySelectorAll('li > a'),function(a){a.addEventListener('mouseenter',function(){if(openId)close();});});
+  scrim.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&openId){var t=trig.filter(function(x){return x.dataset.mega===openId;})[0];close();if(t)t.focus();}});
+  mega.addEventListener('click',function(e){if(e.target.closest('a'))close();});
+  window.addEventListener('resize',function(){if(openId){var p=document.getElementById('mp-'+openId);mega.style.height=(p.offsetHeight+foot.offsetHeight)+'px';}});
+  // mobile
+  var sheet=document.getElementById('msheet'),burger=document.getElementById('burger'),mclose=document.getElementById('mclose');
+  function so(){if(window.__lenis)window.__lenis.stop();sheet.hidden=false;requestAnimationFrame(function(){sheet.classList.add('on');});document.body.classList.add('lock');burger.setAttribute('aria-expanded','true');mclose.focus();}
+  function sc(){if(window.__lenis)window.__lenis.start();sheet.classList.remove('on');document.body.classList.remove('lock');burger.setAttribute('aria-expanded','false');setTimeout(function(){sheet.hidden=true;},REDUCE?0:550);burger.focus();}
+  burger.addEventListener('click',so);mclose.addEventListener('click',sc);
+  sheet.addEventListener('click',function(e){if(e.target.closest('.sub a, .foot a'))sc();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!sheet.hidden)sc();});
+}
+
+/* ============ 3D MACHINE ============ */
+function canvasTex(w,h,draw){var c=document.createElement('canvas');c.width=w;c.height=h;draw(c.getContext('2d'),w,h);var t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;t.anisotropy=8;return t;}
+function initMachine(){
+  var stage=document.getElementById('mStage'),canvas=document.getElementById('machGL'),labEl=document.getElementById('mlabels');
+  var mobile=window.innerWidth<=900;
+  var renderer=new THREE.WebGLRenderer({canvas:canvas,antialias:true,alpha:true,powerPreference:'high-performance'});
+  var dpr=window.devicePixelRatio||1;renderer.setPixelRatio(mobile?Math.min(Math.max(dpr,1.5),2.5):Math.min(Math.max(dpr*1.5,2),3));
+  renderer.outputEncoding=THREE.sRGBEncoding;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.92;
+  var SH=!mobile;renderer.shadowMap.enabled=SH;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+  var scene=new THREE.Scene();
+  if(THREE.RoomEnvironment){var pm=new THREE.PMREMGenerator(renderer);scene.environment=pm.fromScene(new THREE.RoomEnvironment(),.04).texture;}
+  var camera=new THREE.PerspectiveCamera(30,1,.1,200);
+  scene.add(new THREE.HemisphereLight(0xffffff,0xd7dbe8,.35));
+  var sun=new THREE.DirectionalLight(0xffffff,1.6);sun.position.set(6,12,7);sun.castShadow=SH;
+  sun.shadow.mapSize.set(mobile?1024:4096,mobile?1024:4096);sun.shadow.normalBias=.02;sun.shadow.camera.left=-7;sun.shadow.camera.right=7;sun.shadow.camera.top=7;sun.shadow.camera.bottom=-7;sun.shadow.radius=6;sun.shadow.bias=-.0004;scene.add(sun);
+  var ground=new THREE.Mesh(new THREE.PlaneGeometry(40,40),new THREE.ShadowMaterial({opacity:.16}));ground.rotation.x=-Math.PI/2;ground.receiveShadow=true;scene.add(ground);
+  var M=new THREE.Group();scene.add(M);
+
+  /* ---- materials ---- */
+  var std=function(c,m,r,extra){var o={color:c,metalness:m,roughness:r};for(var k in extra)o[k]=extra[k];var mt=new THREE.MeshStandardMaterial(o);mt.color.convertSRGBToLinear();return mt;};
+  var mNavy=std(0x22275a,.1,.5,{envMapIntensity:.6}), mNavyD=std(0x161a40,.1,.55,{envMapIntensity:.5}), mAlu=std(0xd4d9e0,.85,.28), mAluD=std(0x9aa1ab,.85,.35), mSteel=std(0xb9c0c8,.9,.22);
+  var mWhite=std(0xf4f6f9,.05,.45), mWhiteP=std(0xf7f8fb,.05,.28), mPlate=std(0xe7eaf0,.2,.55), mGrey=std(0x9da4b0,.1,.6), mDark=std(0x23262f,.2,.55), mBlack=std(0x14161c,.1,.6);
+  var mGreen=std(0x54b83d,.15,.45), mDuct=std(0xc7ccd4,.05,.65), mGlass=std(0xdbe8f5,.1,.05,{transparent:true,opacity:.14});
+  var mGranite=std(0x2d3240,.1,.35), mRobot=std(0xf2f4f7,.1,.3), mYellow=std(0xf2c230,.1,.5);
+  var carbTex=canvasTex(64,64,function(g,w,h){for(var y=0;y<h;y+=8)for(var x=0;x<w;x+=8){var on=((x+y)/8)%2;g.fillStyle=on?'#30333d':'#17191f';g.fillRect(x,y,8,4);g.fillStyle=on?'#17191f':'#30333d';g.fillRect(x,y+4,8,4);}});
+  carbTex.wrapS=carbTex.wrapT=THREE.RepeatWrapping;carbTex.repeat.set(1,5);
+  var mCarbon=std(0xffffff,.35,.32,{map:carbTex});
+  var solarTex=canvasTex(512,256,function(g,w,h){g.fillStyle='#141838';g.fillRect(0,0,w,h);for(var y=4;y<h;y+=42)for(var x=4;x<w;x+=42){g.fillStyle='#1d2350';g.fillRect(x,y,38,38);g.strokeStyle='#2c3470';g.lineWidth=1;g.beginPath();g.moveTo(x+19,y);g.lineTo(x+19,y+38);g.moveTo(x,y+19);g.lineTo(x+38,y+19);g.stroke();}});
+  var mSolar=std(0xffffff,.4,.22,{map:solarTex});
+  var padTex=canvasTex(512,512,function(g,w,h){g.fillStyle='#1b1f45';g.fillRect(0,0,w,h);g.strokeStyle='#ffffff';g.lineWidth=12;g.beginPath();g.arc(256,256,196,0,Math.PI*2);g.stroke();g.strokeStyle='#54b83d';g.lineWidth=5;g.beginPath();g.arc(256,256,226,0,Math.PI*2);g.stroke();
+    g.fillStyle='#54b83d';g.font='bold 230px sans-serif';g.textAlign='center';g.textBaseline='middle';g.fillText('H',256,268);
+    g.fillStyle='#f2c230';for(var i=0;i<4;i++){g.save();g.translate(256,256);g.rotate(i*Math.PI/2);g.fillRect(-248,-248,70,14);g.fillRect(-248,-248,14,70);g.restore();}});
+  var mPad=std(0xffffff,.1,.45,{map:padTex});
+  var lineBase=new THREE.LineBasicMaterial({color:0x393F81,transparent:true,opacity:.6});
+  var RB=THREE.RoundedBoxGeometry;
+  function bx(w,h,d,mat,x,y,z,round){var g=(round&&RB)?new RB(w,h,d,4,Math.min(round,Math.min(w,h,d)/2.2)):new THREE.BoxGeometry(w,h,d);var m=new THREE.Mesh(g,mat);m.position.set(x||0,y||0,z||0);return m;}
+  function cy(rt,rb,h,mat,x,y,z,seg){var m=new THREE.Mesh(new THREE.CylinderGeometry(rt,rb,h,seg||32),mat);m.position.set(x||0,y||0,z||0);return m;}
+  var V=function(x,y,z){return new THREE.Vector3(x,y,z);};
+
+  var items=[];
+  function item(g,a,b,opt){opt=opt||{};(opt.parent||M).add(g);
+    var lm=lineBase.clone(),map=new Map();
+    g.traverse(function(o){if(!o.isMesh)return;
+      if(!opt.noLines){var e=new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry,30),lm);o.add(e);}
+      var ms=Array.isArray(o.material)?o.material:[o.material];
+      var nm=ms.map(function(m){if(!map.has(m)){var c=m.clone();c.userData.base=m.opacity;c.userData.wasT=m.transparent;c.transparent=true;c.opacity=0;c.depthWrite=false;map.set(m,c);}return map.get(m);});
+      o.material=Array.isArray(o.material)?nm:nm[0];o.castShadow=SH&&!opt.noShadow;o.receiveShadow=SH;});
+    var meshes=[];g.traverse(function(o){if(o.isMesh)meshes.push(o);});
+    var it={meshes:meshes,cast:SH&&!opt.noShadow,g:g,a:a,b:b,lm:lm,mats:[],home:g.position.clone(),drop:opt.drop===undefined?.35:opt.drop,off:opt.off||null,k:-1};
+    map.forEach(function(v){it.mats.push(v);});items.push(it);return it;}
+
+  /* ===== DIMENSIONS ===== */
+  var BX0=-2.0,BX1=.9,Z=1.25,Y0=.45,Y1=2.3,MX0=.95,MX1=2.05,E=.07;
+  var PX=(BX0+BX1)/2,PZ0=.05,PADY=Y0+.62;
+
+  /* ---- BASE SKID ---- */
+  var base=new THREE.Group();
+  base.add(bx(4.25,.3,2.7,mNavy,.02,.28,0,.03));
+  base.add(bx(4.29,.035,2.74,mAluD,.02,.445,0,.01));
+  base.add(bx(4.26,.035,.01,mGreen,.02,.34,1.356));
+  [-1.0,1.05].forEach(function(x){base.add(bx(.55,.1,.02,mBlack,x,.24,1.357,.01));});
+  [-1.9,-.6,.7,1.95].forEach(function(x){[1.15,-1.15].forEach(function(z){base.add(cy(.05,.05,.16,mSteel,x,.08,z,20));base.add(cy(.11,.11,.03,mBlack,x,.015,z,28));});});
+  item(base,.1,.18,{drop:.25});
+
+  /* ---- BAY FRAME ---- */
+  var frame=new THREE.Group();
+  [[BX0,Z],[BX0,-Z],[BX1,Z],[BX1,-Z]].forEach(function(p){frame.add(bx(E,Y1-Y0,E,mAlu,p[0],(Y0+Y1)/2,p[1],.012));});
+  [Z,-Z].forEach(function(z){frame.add(bx(BX1-BX0,E,E,mAlu,PX,Y1,z,.012));frame.add(bx(BX1-BX0,E,E,mAlu,PX,Y0+.04,z,.012));});
+  [BX0,BX1].forEach(function(x){frame.add(bx(E,E,2*Z,mAlu,x,Y1,0,.012));});
+  item(frame,.15,.25);
+  var floor=new THREE.Group();floor.add(bx(BX1-BX0-.08,.04,2*Z-.08,mGranite,PX,Y0+.02,0));
+  for(var fx=BX0+.25;fx<BX1;fx+=.32)floor.add(bx(.01,.005,2*Z-.2,mBlack,fx,Y0+.043,0));
+  item(floor,.17,.26,{drop:0});
+
+  /* ---- PANELS ---- */
+  var panels=new THREE.Group();
+  panels.add(bx(BX1-BX0,Y1-Y0-.06,.04,mWhiteP,PX,(Y0+Y1)/2,-Z+.02,.01));
+  panels.add(bx(.04,Y1-Y0-.06,2*Z-.06,mWhiteP,BX0+.02,(Y0+Y1)/2,0,.01));
+  panels.add(bx(.006,.2,2*Z-.12,mNavy,BX0-.004,Y0+.42,0));panels.add(bx(.006,.03,2*Z-.12,mGreen,BX0-.004,Y0+.56,0));
+  panels.add(bx(BX1-BX0,.36,.045,mNavy,PX,Y0+.18,Z-.02,.01));
+  panels.add(bx(BX1-BX0,.026,.05,mGreen,PX,Y0+.37,Z-.02));
+  // service hatch + vents on left panel
+  panels.add(bx(.008,.6,.5,mPlate,BX0-.006,1.5,-.55,.01));for(var vi=0;vi<7;vi++)panels.add(bx(.01,.02,.38,mDark,BX0-.008,1.32+vi*.05,-.55));
+  item(panels,.2,.3);
+
+  /* ---- CLAMSHELL ROOF ---- */
+  var roof=new THREE.Group(),doorA=new THREE.Group(),doorB=new THREE.Group(),dw=BX1-BX0+.12;
+  doorA.position.set(0,Y1+.05,Z+.02);doorB.position.set(0,Y1+.05,-Z-.02);
+  [[doorA,-1],[doorB,1]].forEach(function(d){var g=d[0],s=d[1],w=Z+.02;
+    g.add(bx(dw,.07,w,mWhiteP,PX,0,s*w/2,.025));
+    g.add(bx(dw-.24,.012,w-.3,mSolar,PX,.04,s*(w/2+.04)));
+    g.add(bx(dw,.03,.06,mGreen,PX,.02,s*(w-.03)));
+    [-1.6,-.55,.5].forEach(function(x){g.add(cy(.035,.035,.14,mSteel,x,0,0,16).rotateX(Math.PI/2).rotateZ(Math.PI/2));});
+  });
+  roof.add(doorA);roof.add(doorB);
+  // actuators
+  item(roof,.26,.34,{drop:.3});
+
+  /* ---- LANDING PAD + LIFT ---- */
+  var padItem=new THREE.Group(),lift=new THREE.Group();padItem.add(lift);
+  var col=cy(.14,.14,1,mSteel,PX,0,PZ0,28);padItem.add(col);
+  var colBase=cy(.3,.34,.08,mNavyD,PX,Y0+.08,PZ0,32);padItem.add(colBase);
+  var pad=new THREE.Mesh(new THREE.BoxGeometry(1.9,.07,1.9),[mNavyD,mNavyD,mPad,mNavyD,mNavyD,mNavyD]);pad.position.set(PX,0,PZ0);lift.add(pad);
+  var padRim=bx(1.96,.04,1.96,mAluD,PX,-.05,PZ0,.01);lift.add(padRim);
+  var bars=[];[[0,.86],[0,-.86],[.86,0],[-.86,0]].forEach(function(o,i){var b=bx(i<2?1.5:.06,.06,i<2?.06:1.5,mGreen,PX+o[0],.065,PZ0+o[1],.02);lift.add(b);bars.push({m:b,x:o[0],z:o[1]});});
+  lift.position.y=PADY;
+  item(padItem,.3,.38);
+
+  /* ---- BATTERY CAROUSEL ---- */
+  var rack=new THREE.Group(),RX=-1.68,RZ=-.62,ledMats=[];
+  [[-.18,-1.0],[.18,-1.0],[-.18,-.22],[.18,-.22]].forEach(function(p){rack.add(bx(.04,1.45,.04,mAlu,RX+p[0],Y0+.73,p[1]));});
+  for(var lv=0;lv<3;lv++){var yy=Y0+.32+lv*.42;rack.add(bx(.42,.025,.84,mAluD,RX,yy,RZ));
+    for(var sl=0;sl<3;sl++){var zz=RZ-.27+sl*.27;rack.add(bx(.3,.1,.2,mNavy,RX,yy+.065,zz,.012));var lm2=new THREE.MeshBasicMaterial({color:0x7be05f});ledMats.push(lm2);var led=new THREE.Mesh(new THREE.BoxGeometry(.006,.02,.14),lm2);led.position.set(RX+.153,yy+.07,zz);rack.add(led);}}
+  item(rack,.48,.56);
+
+  /* ---- ROBOT ARM ---- */
+  var robot=new THREE.Group();robot.position.set(-1.0,Y0+.04,-.88);
+  robot.add(cy(.15,.17,.1,mNavyD,0,.05,0,40));
+  var j1=new THREE.Group();j1.position.y=.1;robot.add(j1);
+  j1.add(cy(.12,.13,.2,mRobot,0,.1,0,40));j1.add(cy(.132,.132,.03,mGreen,0,.18,0,40));
+  var j2=new THREE.Group();j2.position.set(0,.24,0);j1.add(j2);
+  j2.add(cy(.09,.09,.22,mNavyD,0,0,0,32).rotateX(Math.PI/2));j2.add(bx(.12,.55,.14,mRobot,0,.275,0,.045));
+  var j3=new THREE.Group();j3.position.set(0,.55,0);j2.add(j3);
+  j3.add(cy(.075,.075,.18,mNavyD,0,0,0,32).rotateX(Math.PI/2));j3.add(bx(.1,.45,.11,mRobot,0,.225,0,.04));
+  var j4=new THREE.Group();j4.position.set(0,.45,0);j3.add(j4);
+  j4.add(cy(.055,.055,.11,mNavyD,0,0,0,28).rotateX(Math.PI/2));j4.add(cy(.045,.045,.1,mRobot,0,.07,0,28));
+  var grip=new THREE.Group();grip.position.y=.14;j4.add(grip);
+  grip.add(bx(.14,.03,.06,mDark));var f1=bx(.015,.08,.04,mSteel,-.05,.05,0),f2=bx(.015,.08,.04,mSteel,.05,.05,0);grip.add(f1);grip.add(f2);
+  grip.add(bx(.26,.08,.18,mNavy,0,.12,0,.012));
+  item(robot,.6,.7,{drop:.4});
+
+  /* ---- EQUIPMENT MODULE + ELECTRICAL CABINET ---- */
+  var CX0=MX0,CX1=MX1,CZ0=.42,CZ1=Z,CY0=Y0,CY1=Y1;
+  var mod=new THREE.Group();
+  mod.add(bx(MX1-MX0,Y1-Y0,Z+CZ0,mNavy,(MX0+MX1)/2,(Y0+Y1)/2,(-Z+CZ0)/2,.02));
+  // HVAC grille on right side
+  for(var hv=0;hv<12;hv++)mod.add(bx(.012,.025,.9,mDark,MX1+.006,1.0+hv*.06,-.42));
+  mod.add(bx(.01,.8,1.0,mNavyD,MX1+.004,1.33,-.42));
+  var fanG=new THREE.Group();fanG.position.set(MX1+.02,1.95,-.42);fanG.add(cy(.17,.17,.02,mDark,0,0,0,32).rotateZ(Math.PI/2));
+  var fanBlades=new THREE.Group();for(var fb=0;fb<5;fb++){var bl=bx(.005,.14,.05,mSteel,0,.07,0);var pv=new THREE.Group();pv.rotation.x=fb*Math.PI*2/5;pv.add(bl);fanBlades.add(pv);}fanBlades.position.x=.015;fanG.add(fanBlades);mod.add(fanG);
+  item(mod,.2,.3);
+  var cab=new THREE.Group();
+  cab.add(bx(.04,CY1-CY0,CZ1-CZ0,mNavy,CX0,(CY0+CY1)/2,(CZ0+CZ1)/2));
+  cab.add(bx(.04,CY1-CY0,CZ1-CZ0,mNavy,CX1,(CY0+CY1)/2,(CZ0+CZ1)/2));
+  cab.add(bx(CX1-CX0+.04,.05,CZ1-CZ0+.02,mNavy,(CX0+CX1)/2,CY1,(CZ0+CZ1)/2,.01));
+  cab.add(bx(CX1-CX0+.04,.1,CZ1-CZ0+.02,mNavyD,(CX0+CX1)/2,CY0+.05,(CZ0+CZ1)/2));
+  var hinge=new THREE.Group();hinge.position.set(CX1+.02,0,CZ1);
+  hinge.add(bx(CX1-CX0,CY1-CY0-.04,.035,mNavy,-(CX1-CX0)/2,(CY0+CY1)/2,0,.008));
+  hinge.add(bx(.5,.35,.02,mPlate,-(CX1-CX0)/2,1.7,-.03));hinge.add(bx(.03,.22,.04,mSteel,-(CX1-CX0)+.08,1.45,.04,.01));
+  hinge.rotation.y=Math.PI*.6;cab.add(hinge);
+  var logoTex=new THREE.TextureLoader().load('logo.png');logoTex.encoding=THREE.sRGBEncoding;logoTex.anisotropy=8;
+  cab.add(bx(.78,.24,.015,mWhite,(CX0+CX1)/2,CY1+.17,CZ1-.06,.01));
+  var plate=new THREE.Mesh(new THREE.PlaneGeometry(.7,.18),new THREE.MeshStandardMaterial({map:logoTex,transparent:true,roughness:.4}));plate.position.set((CX0+CX1)/2,CY1+.17,CZ1-.05);cab.add(plate);
+  cab.add(bx(.04,.12,.04,mSteel,(CX0+CX1)/2-.3,CY1+.06,CZ1-.06));cab.add(bx(.04,.12,.04,mSteel,(CX0+CX1)/2+.3,CY1+.06,CZ1-.06));
+  item(cab,.22,.3);
+
+  var IX0=CX0+.06,IX1=CX1-.06,PZ=CZ0+.03;
+  var interior=new THREE.Group();
+  interior.add(bx(IX1-IX0,CY1-CY0-.18,.012,mPlate,(IX0+IX1)/2,(CY0+CY1)/2,PZ));
+  var ductTex=canvasTex(256,32,function(g,w,h){g.fillStyle='#c7ccd4';g.fillRect(0,0,w,h);g.fillStyle='#8f96a2';for(var x=6;x<w;x+=14)g.fillRect(x,0,6,h*.55);});
+  var mDuctT=std(0xffffff,.05,.6,{map:ductTex});
+  [2.2,1.8,1.4,1.0].forEach(function(y){interior.add(bx(IX1-IX0-.14,.06,.07,mDuctT,(IX0+IX1)/2,y-.2,PZ+.04));interior.add(bx(IX1-IX0-.18,.012,.02,mSteel,(IX0+IX1)/2,y,PZ+.02));});
+  interior.add(bx(.07,CY1-CY0-.35,.07,mDuct,IX0+.04,(CY0+CY1)/2-.05,PZ+.04));interior.add(bx(.07,CY1-CY0-.35,.07,mDuct,IX1-.04,(CY0+CY1)/2-.05,PZ+.04));
+  item(interior,.3,.36,{drop:0});
+  var comps=[];
+  var r1=new THREE.Group();
+  r1.add(bx(.14,.16,.1,mDark,IX0+.18,2.2,PZ+.06,.01));r1.add(bx(.03,.08,.03,std(0xd62f2f,.1,.5),IX0+.18,2.2,PZ+.12));
+  for(var i=0;i<10;i++){var x=IX0+.32+i*.054;r1.add(bx(.05,.12,.08,mWhite,x,2.2,PZ+.05,.006));r1.add(bx(.016,.03,.012,i%4===0?mGreen:mNavyD,x,2.22,PZ+.095));comps.push(V(x,2.14,PZ+.07));}
+  item(r1,.33,.39,{drop:0});
+  var r2=new THREE.Group();
+  for(i=0;i<5;i++){var x2=IX0+.14+i*.075;r2.add(bx(.065,.11,.09,mGrey,x2,1.81,PZ+.055,.006));r2.add(bx(.04,.025,.01,mNavyD,x2,1.84,PZ+.1));comps.push(V(x2,1.75,PZ+.07));}
+  var scrTex=canvasTex(64,32,function(g){g.fillStyle='#0b1a10';g.fillRect(0,0,64,32);g.fillStyle='#7bdc6a';g.font='bold 14px monospace';g.fillText('50.0',6,22);});
+  for(i=0;i<2;i++){var x3=IX0+.6+i*.14;r2.add(bx(.11,.24,.12,mNavyD,x3,1.81,PZ+.07,.01));var s=new THREE.Mesh(new THREE.PlaneGeometry(.07,.035),new THREE.MeshStandardMaterial({map:scrTex,emissive:0x2b6b25,emissiveIntensity:.6}));s.position.set(x3,1.88,PZ+.132);r2.add(s);comps.push(V(x3,1.7,PZ+.07));}
+  item(r2,.36,.42,{drop:0});
+  var r3=new THREE.Group(),ledM=new THREE.MeshBasicMaterial({color:0x7be05f});
+  r3.add(bx(.12,.13,.09,mNavy,IX0+.16,1.41,PZ+.055,.008));r3.add(bx(.08,.02,.005,mGreen,IX0+.16,1.45,PZ+.102));
+  for(i=0;i<8;i++){var x4=IX0+.25+i*.04;r3.add(bx(.035,.13,.09,mWhite,x4,1.41,PZ+.055,.004));for(var l=0;l<3;l++){var ld=new THREE.Mesh(new THREE.BoxGeometry(.008,.008,.004),ledM);ld.position.set(x4,1.45-l*.02,PZ+.102);r3.add(ld);}comps.push(V(x4,1.35,PZ+.07));}
+  r3.add(bx(.18,.13,.11,mSteel,IX1-.17,1.41,PZ+.065,.008));comps.push(V(IX1-.17,1.35,PZ+.07));
+  item(r3,.39,.45,{drop:0});
+  var r4=new THREE.Group(),tcols=[mGrey,mGrey,std(0x2f6fd0,.1,.5),mGrey,std(0x7fbf3a,.1,.5)];
+  for(i=0;i<34;i++){var x5=IX0+.1+i*.026;r4.add(bx(.022,.07,.07,tcols[i%5],x5,1.01,PZ+.045));if(i%2===0)comps.push(V(x5,.97,PZ+.06));}
+  item(r4,.42,.47,{drop:0});
+
+  /* ---- WIRING ---- */
+  var wires=[],wcols=[0x2f6fd0,0x14161c,0x9aa1ab,0xd62f2f,0x14161c,0x2f6fd0];
+  function tube(points,r,col,seg){var c=new THREE.CatmullRomCurve3(points);var g=new THREE.TubeGeometry(c,seg||40,r,10,false);return new THREE.Mesh(g,std(col,.15,.45));}
+  var wg=new THREE.Group();
+  comps.forEach(function(p,i){var rowY=p.y>2.1?2.0:p.y>1.7?1.6:p.y>1.3?1.2:.8;
+    var t=tube([p.clone(),V(p.x,p.y-.04,p.z+.01),V(p.x+.01,rowY+.02,PZ+.05),V(p.x+(i%3-1)*.01,rowY,PZ+.04)],.0065,wcols[i%wcols.length],24);wg.add(t);wires.push(t);});
+  for(i=0;i<6;i++){var zo=PZ+.05+(i>2?.012:0),xo=IX0+.04+(i%3-1)*.012;var t2=tube([V(xo,2.2,zo),V(xo,1.5,zo),V(xo,.8,zo)],.008,wcols[i],20);wg.add(t2);wires.push(t2);}
+  M.add(wg);var wireWin=[.45,.56];
+
+  /* ---- CABLE TRAY (back wall) + MAIN HARNESS ---- */
+  var tray=new THREE.Group(),TY=Y1-.22,TZ=-Z-.12;
+  [-.1,.1].forEach(function(dy){tray.add(bx(4.0,.012,.05,mSteel,0,TY+dy,TZ));});
+  for(var rx=-1.9;rx<=1.95;rx+=.16)tray.add(bx(.02,.2,.02,mSteel,rx,TY,TZ-.02));
+  [-1.6,-.4,.8,1.8].forEach(function(x){tray.add(bx(.03,.03,.14,mSteel,x,TY,TZ+.06));});
+  item(tray,.48,.54);
+  var harness=[],hg=new THREE.Group(),hcols=[0x14161c,0x22275a,0x54b83d,0x9aa1ab,0x14161c,0xe8913a];
+  for(i=0;i<6;i++){var dz=(i%3-1)*.04,dy=(i>2?-.04:.03);
+    var h=tube([V(1.75+dz,CY1+.03,-.2),V(1.75+dz,CY1+.1,-.9),V(1.75,TY+dy+.1,TZ+.02),V(1.2,TY+dy,TZ-.05+dz*.3),V(-.2,TY+dy,TZ-.05+dz*.3),V(-.9,TY+dy,TZ-.05+dz*.3),V(-1.05,TY-.3,TZ+.02),V(-1.05+dz,Y0+.35,-Z+.03)],.02,hcols[i],160);
+    hg.add(h);harness.push(h);}
+  var ties=[];for(i=0;i<9;i++){var tie=new THREE.Mesh(new THREE.TorusGeometry(.08,.012,8,20),mBlack);tie.position.set(1.15-i*.24,TY-.005,TZ-.05);tie.rotation.y=Math.PI/2;tie.visible=false;hg.add(tie);ties.push({m:tie,k:i/9});}
+  M.add(hg);var harnWin=[.52,.62];
+
+  /* ---- MAST, WEATHER STATION, SIGNAL TOWER ---- */
+  var mast=new THREE.Group();
+  mast.add(cy(.03,.03,1.0,mSteel,1.25,CY1+.5,-.9,16));
+  mast.add(cy(.09,.09,.04,mWhite,1.25,CY1+1.02,-.9,32));mast.add(new THREE.Mesh(new THREE.SphereGeometry(.09,24,12,0,Math.PI*2,0,Math.PI/2),mWhite));mast.children[mast.children.length-1].position.set(1.25,CY1+1.04,-.9);
+  mast.add(bx(.5,.02,.02,mSteel,1.25,CY1+.8,-.9));
+  mast.add(cy(.008,.008,.5,mBlack,1.02,CY1+1.05,-.9,8));mast.add(cy(.008,.008,.4,mBlack,1.48,CY1+1.0,-.9,8));
+  var anemo=new THREE.Group();anemo.position.set(1.85,CY1+.78,-.3);
+  anemo.add(cy(.02,.02,.7,mSteel,0,-.35,0,12));
+  var cups=new THREE.Group();for(var cpi=0;cpi<3;cpi++){var arm=new THREE.Group();arm.rotation.y=cpi*Math.PI*2/3;arm.add(bx(.18,.008,.008,mSteel,.09,0,0));var cupm=new THREE.Mesh(new THREE.SphereGeometry(.035,16,8,0,Math.PI),mWhite);cupm.position.set(.18,0,0);cupm.rotation.y=Math.PI/2;arm.add(cupm);cups.add(arm);}anemo.add(cups);
+  mast.add(anemo);
+  item(mast,.82,.9);
+  var tower=new THREE.Group(),lampCols=[0xd62f2f,0xf2a230,0x54b83d,0xffffff],lamps=[];
+  tower.add(cy(.02,.02,.2,mSteel,1.75,CY1+.12,-.95,16));
+  for(i=0;i<4;i++){var lmm=new THREE.MeshStandardMaterial({color:lampCols[i],emissive:lampCols[i],emissiveIntensity:0,transparent:true,opacity:.85,roughness:.2});var lp=cy(.045,.045,.07,lmm,1.75,CY1+.26+i*.075,-.95,28);tower.add(lp);lamps.push(lmm);}
+  tower.add(cy(.045,.04,.025,mDark,1.75,CY1+.555,-.95,28));
+  item(tower,.84,.9);
+
+  /* ---- FRONT GLASS + HMI ---- */
+  var glass=new THREE.Group();
+  glass.add(bx(BX1-BX0-E,Y1-Y0-.46,.012,mGlass,PX,(Y0+.38+Y1)/2,Z));
+  glass.add(bx(.03,.42,.04,mSteel,-.2,1.5,Z+.03,.01));glass.add(bx(.03,.42,.04,mSteel,-.9,1.5,Z+.03,.01));
+  glass.add(bx(.2,.13,.004,mYellow,BX0+.25,2.05,Z+.01));
+  item(glass,.84,.9,{drop:0,noShadow:true});
+  var hmiTex=canvasTex(512,320,function(g,w,h){
+    g.fillStyle='#161a40';g.fillRect(0,0,w,h);g.fillStyle='#22275a';g.fillRect(0,0,w,44);
+    g.fillStyle='#54b83d';g.fillRect(16,14,16,16);g.fillStyle='#fff';g.font='600 18px sans-serif';g.fillText('DRONE DOCK 01',44,29);
+    g.fillStyle='#54b83d';g.font='600 16px sans-serif';g.fillText('● READY',w-110,29);
+    var labs=['BATTERY','ROOF','LIFT','GPS','WIND'];
+    for(var i=0;i<5;i++){g.fillStyle='#9aa1d0';g.font='13px monospace';g.fillText(labs[i],20,80+i*38);g.fillStyle='#2a2f6a';g.fillRect(110,68+i*38,250,14);g.fillStyle='#54b83d';g.fillRect(110,68+i*38,150+i*20,14);}
+    g.strokeStyle='#54b83d';g.lineWidth=3;g.beginPath();g.arc(440,150,48,-Math.PI/2,Math.PI*1.4);g.stroke();
+    g.fillStyle='#fff';g.font='600 26px sans-serif';g.fillText('PASS',408,160);
+    g.fillStyle='#9aa1d0';g.font='12px monospace';g.fillText('FLIGHT TEST',404,220);
+    g.fillStyle='#2a2f6a';g.fillRect(16,h-48,w-32,32);g.fillStyle='#fff';g.font='13px monospace';g.fillText('ELBATECH · AS9100D · TRACEABILITY ON',30,h-27);});
+  var hmi=new THREE.Group();
+  var scr=new THREE.Group();scr.position.set(.62,1.62,Z+.2);scr.rotation.y=-.35;scr.rotation.x=-.1;
+  scr.add(bx(.56,.38,.05,mDark,0,0,0,.015));
+  var hmiMat=new THREE.MeshStandardMaterial({map:hmiTex,emissive:0xffffff,emissiveMap:hmiTex,emissiveIntensity:0,roughness:.3});
+  var sface=new THREE.Mesh(new THREE.PlaneGeometry(.5,.31),hmiMat);sface.position.z=.027;scr.add(sface);hmi.add(scr);
+  hmi.add(bx(.04,.04,.2,mSteel,.7,1.62,Z+.08));
+  hmi.add(bx(.1,.1,.06,mYellow,.62,1.2,Z+.06,.01));hmi.add(cy(.035,.035,.04,std(0xd62f2f,.1,.4),.62,1.2,Z+.105,24).rotateX(Math.PI/2));
+  item(hmi,.84,.9);
+
+  /* ===== DRONE (hexacopter) ===== */
+  var drone=new THREE.Group();M.add(drone);drone.scale.setScalar(1.1);drone.position.set(PX,PADY+.035,PZ0);
+  var body=new THREE.Group();
+  body.add(bx(.56,.13,.46,mWhiteP,0,.27,0,.05));
+  body.add(bx(.57,.03,.47,mNavy,0,.21,0,.012));
+  body.add(bx(.5,.012,.03,mGreen,0,.34,.2));
+  var hub=new THREE.Mesh(new THREE.SphereGeometry(.22,40,20,0,Math.PI*2,0,Math.PI/2),mWhiteP);hub.scale.set(1.15,.45,.95);hub.position.y=.335;body.add(hub);
+  item(body,.62,.72,{parent:drone,off:V(0,.9,0)});
+  var bat=new THREE.Group();bat.add(bx(.3,.07,.2,mNavy,-.05,.44,0,.015));bat.add(bx(.02,.04,.14,new THREE.MeshBasicMaterial({color:0x7be05f}),.105,.44,0));
+  item(bat,.7,.78,{parent:drone,off:V(0,1.5,0)});
+  var gps=new THREE.Group();gps.add(cy(.008,.008,.14,mSteel,.12,.5,0,8));gps.add(cy(.055,.055,.02,mDark,.12,.57,0,24));
+  item(gps,.72,.8,{parent:drone,off:V(.3,1.7,0)});
+  var props=[],discs=[],navLeds=[];
+  for(var ai=0;ai<6;ai++){
+    var ang=ai*Math.PI/3+Math.PI/6,dirx=Math.cos(ang),dirz=-Math.sin(ang);
+    var armG=new THREE.Group();armG.rotation.y=ang;
+    var tube1=cy(.024,.024,.56,mCarbon,.5,.29,0,16);tube1.rotation.z=Math.PI/2;armG.add(tube1);
+    armG.add(bx(.08,.05,.07,mNavy,.24,.29,0,.01));
+    armG.add(cy(.05,.055,.07,mBlack,.78,.33,0,28));armG.add(cy(.058,.05,.045,mSteel,.78,.385,0,28));
+    var nl=new THREE.MeshBasicMaterial({color:ai<3?0x54d84a:0xe84a4a});navLeds.push(nl);var nlm=new THREE.Mesh(new THREE.SphereGeometry(.018,12,8),nl);nlm.position.set(.78,.29,0);armG.add(nlm);
+    item(armG,.66,.76,{parent:drone,off:V(dirx*.7,.35,dirz*.7)});
+    var pg=new THREE.Group();pg.position.set(dirx*.78,.42,dirz*.78);
+    var hubP=cy(.02,.02,.03,mSteel,0,0,0,16);pg.add(hubP);
+    var b1=bx(.44,.006,.045,mDark,0,.005,0,.003);b1.rotation.x=.12;var b2=b1.clone();b2.rotation.y=Math.PI;pg.add(b1);pg.add(b2);
+    item(pg,.72,.82,{parent:drone,off:V(dirx*.4,1.1,dirz*.4),noLines:true});
+    var disc=new THREE.Mesh(new THREE.CircleGeometry(.23,40),new THREE.MeshBasicMaterial({color:0x22275a,transparent:true,opacity:0,depthWrite:false,side:THREE.DoubleSide}));disc.rotation.x=-Math.PI/2;disc.position.set(dirx*.78,.425,dirz*.78);drone.add(disc);
+    props.push({g:pg,b:[b1,b2]});discs.push(disc.material);
+  }
+  var gear=new THREE.Group();
+  [.24,-.24].forEach(function(z){var sk=cy(.016,.016,.72,mCarbon,0,.015,z,12);sk.rotation.z=Math.PI/2;gear.add(sk);
+    [.2,-.2].forEach(function(x){var lg=cy(.014,.014,.22,mCarbon,x,.12,z*.85,10);lg.rotation.x=z>0?.18:-.18;gear.add(lg);});});
+  item(gear,.64,.74,{parent:drone,off:V(0,-.0,.0),drop:.0});
+  var gim=new THREE.Group();gim.add(bx(.08,.06,.08,mDark,.2,.17,0,.01));
+  var camb=new THREE.Mesh(new THREE.SphereGeometry(.065,24,16),mDark);camb.position.set(.22,.1,0);gim.add(camb);
+  var lens=cy(.03,.03,.03,std(0x0b0d1a,.6,.1),.285,.1,0,20);lens.rotation.z=Math.PI/2;gim.add(lens);
+  item(gim,.74,.82,{parent:drone,off:V(.8,0,0)});
+
+  /* ---- QA scan ---- */
+  var scan=new THREE.Mesh(new THREE.PlaneGeometry(2.8,2.4),new THREE.MeshBasicMaterial({color:0x54b83d,transparent:true,opacity:0,side:THREE.DoubleSide,depthWrite:false,blending:THREE.AdditiveBlending}));
+  scan.rotation.y=Math.PI/2;scan.position.y=1.4;M.add(scan);
+  var scanEdge=new THREE.Mesh(new THREE.PlaneGeometry(.02,2.4),new THREE.MeshBasicMaterial({color:0x54b83d,transparent:true,opacity:0}));scanEdge.rotation.y=Math.PI/2;scanEdge.position.y=1.4;M.add(scanEdge);
+
+  /* ---- labels ---- */
+  var L=[
+    {t:'4,250 mm',d:1,p:V(0,.05,1.6),w:[0,.14]},
+    {t:'2,300 mm',d:1,p:V(BX0-.45,1.4,Z),w:[0,.14]},
+    {t:'Rev. B · Build to print',d:1,p:V(1.4,3.5,-.3),w:[0,.14]},
+    {t:'Exploded drone assembly',d:1,p:V(PX-.4,3.0,PZ0),w:[0,.14]},
+    {t:'Machine base',s:'Welded skid, leveling feet',p:V(-1.3,.3,1.37),w:[.12,.28]},
+    {t:'Aluminium structure',s:'CNC-cut extrusions',p:V(BX0,1.95,Z),w:[.16,.3]},
+    {t:'Clamshell roof',s:'Solar-clad, weather sealed',p:V(-1.2,Y1+.12,.7),w:[.27,.36]},
+    {t:'Electrical cabinet',s:'Built to spec, documented',p:V(MX1,2.0,1.0),w:[.3,.37]},
+    {t:'PLC & I/O',s:'Programmed and tested',p:V(IX0+.4,1.48,PZ+.1),w:[.39,.5]},
+    {t:'VFD drives',s:'Motion power',p:V(IX0+.66,1.95,PZ+.12),w:[.38,.47]},
+    {t:'Terminals & ducts',s:'Labeled, traceable',p:V(IX0+.6,1.05,PZ+.1),w:[.42,.52]},
+    {t:'Main harness',s:'IPC/WHMA-A-620',p:V(.3,TY+.05,TZ-.06),w:[.53,.62]},
+    {t:'Cable tray',s:'Routed and tied',p:V(-1.4,TY-.1,TZ-.04),w:[.52,.6]},
+    {t:'HVAC unit',s:'Climate controlled',p:V(MX1,1.6,-.42),w:[.5,.6]},
+    {t:'Battery carousel',s:'9 hot-swap packs',p:V(RX,1.8,RZ),w:[.62,.71]},
+    {t:'Robot arm',s:'Automatic battery swap',p:V(-1.0,1.75,-.88),w:[.63,.72]},
+    {t:'Landing pad & lift',s:'Self-centering',p:V(PX+.9,PADY+.1,PZ0+.9),w:[.64,.72]},
+    {t:'Hexacopter drone',s:'Assembled and flight-tested',o:drone,p:V(0,.62,0),w:[.73,.86]},
+    {t:'Gimbal camera',s:'Payload integration',o:drone,p:V(.3,.08,0),w:[.76,.86]},
+    {t:'GPS & weather mast',s:'Sensors integrated',p:V(1.25,CY1+1.1,-.9),w:[.83,.92]},
+    {t:'Autonomous launch',s:'Tested before it ships',o:drone,p:V(0,.65,0),w:[.95,1.01]}
+  ];
+  L.forEach(function(l){var d=document.createElement('div');d.className='ml'+(l.d?' dim':'');d.innerHTML='<span class="t">'+l.t+(l.s?'<small>'+l.s+'</small>':'')+'</span>';labEl.appendChild(d);l.el=d;});
+
+  /* ---- camera path ---- */
+  var K=[
+    {p:0,  pos:[8.6,6.2,11.4],tg:[0,1.6,0]},
+    {p:.28,pos:[7.8,4.6,9.8], tg:[0,1.3,0]},
+    {p:.36,pos:[4.6,2.4,5.6], tg:[1.5,1.45,.85]},
+    {p:.47,pos:[4.0,2.1,4.7], tg:[1.5,1.45,.85]},
+    {p:.55,pos:[6.0,4.8,-6.8],tg:[0,1.7,-1.2]},
+    {p:.6, pos:[7.6,4.6,.8],  tg:[-.3,1.4,-.3]},
+    {p:.67,pos:[-1.2,2.5,6.0],tg:[-.9,1.2,-.3]},
+    {p:.8, pos:[2.6,2.6,4.8], tg:[-.55,1.35,.05]},
+    {p:.9, pos:[6.4,3.8,8.2], tg:[0,1.8,0]},
+    {p:1,  pos:[5.8,4.1,8.4], tg:[-.4,2.55,0]}
+  ];
+  function camAt(p,out,tg){var i=0;while(i<K.length-2&&p>K[i+1].p)i++;var a=K[i],b=K[i+1],t=ease((p-a.p)/(b.p-a.p));
+    out.set(lerp(a.pos[0],b.pos[0],t),lerp(a.pos[1],b.pos[1],t),lerp(a.pos[2],b.pos[2],t));tg.set(lerp(a.tg[0],b.tg[0],t),lerp(a.tg[1],b.tg[1],t),lerp(a.tg[2],b.tg[2],t));}
+
+  var W=1,H=1,narrow=false;
+  function size(){var r=canvas.getBoundingClientRect();W=Math.max(1,r.width);H=Math.max(1,r.height);narrow=window.innerWidth<=900;renderer.setSize(W,H,false);camera.aspect=W/H;camera.fov=narrow?38:30;camera.updateProjectionMatrix();}
+  size();window.addEventListener('resize',size);
+
+  var steps=[].slice.call(document.querySelectorAll('#steps li')),bounds=[0,.14,.3,.47,.62,.86,1.01],lastStep=-1;
+  var pctEl=document.getElementById('mPct'),barEl=document.getElementById('mBar'),stEl=document.getElementById('mState'),grid=document.getElementById('mGrid'),lastSt='';
+  function setStep(p){var s=0;while(s<6&&p>=bounds[s+1])s++;s=Math.min(5,s);if(s===lastStep)return;lastStep=s;steps.forEach(function(li,i){li.classList.toggle('on',i===s);li.classList.toggle('done',i<s);});}
+  var target=REDUCE?1:0,prog=target;
+  var mst=null;
+  if(HASG&&!REDUCE){mst=ScrollTrigger.create({trigger:stage,start:'top top',end:function(){return '+='+(window.innerHeight*(narrow?3.6:4.8));},pin:true,pinSpacing:true,scrub:true,invalidateOnRefresh:true,onUpdate:function(s){target=s.progress;}});}
+  var jumpTo=[.04,.2,.4,.56,.76,.995];
+  steps.forEach(function(li,i){li.tabIndex=0;li.setAttribute('role','button');
+    function go(){if(mst){var y=mst.start+(mst.end-mst.start)*jumpTo[i];if(window.__lenis)window.__lenis.scrollTo(y,{duration:1.6});else window.scrollTo({top:y,behavior:'smooth'});}else{target=jumpTo[i];}}
+    li.addEventListener('click',go);li.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});});
+  // drag to orbit once the system is complete
+  var yaw=0,yawT=0,pitch=0,pitchT=0,drag=null,canDrag=false,hint=document.getElementById('dragHint'),hinted=false;
+  canvas.addEventListener('pointerdown',function(e){if(!canDrag)return;drag={x:e.clientX,y:e.clientY,yw:yawT,pt:pitchT,id:e.pointerId,moved:false};canvas.classList.add('grabbing');});
+  window.addEventListener('pointermove',function(e){if(!drag)return;var dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+    if(!drag.moved&&Math.abs(dx)>6){drag.moved=true;try{canvas.setPointerCapture(drag.id);}catch(_){}}
+    if(drag.moved){yawT=drag.yw-dx*.0075;pitchT=clamp(drag.pt+dy*.004,-.35,.5);hinted=true;}});
+  window.addEventListener('pointerup',function(){if(drag){drag=null;canvas.classList.remove('grabbing');}});
+  window.addEventListener('pointercancel',function(){drag=null;canvas.classList.remove('grabbing');});
+  var vis=false;watch(stage,function(v){vis=v;});
+  window.__mach=function(v){target=prog=v;};
+  var clock=new THREE.Clock(),cp=new THREE.Vector3(),ct=new THREE.Vector3(),tmp=new THREE.Vector3(),lastT=0,propAng=0;
+  var mx=0,my=0;window.addEventListener('pointermove',function(e){mx=e.clientX/window.innerWidth-.5;my=e.clientY/window.innerHeight-.5;},{passive:true});
+  (function frame(){
+    requestAnimationFrame(frame);if(!vis)return;
+    var t=clock.getElapsedTime(),dt=Math.min(.05,t-lastT);lastT=t;
+    prog+=(target-prog)*.075;var p=prog;
+    items.forEach(function(it){var k=ease((p-it.a)/(it.b-it.a));it.k=k;
+      it.mats.forEach(function(m){m.opacity=m.userData.base*k;var solid=k>.995&&!m.userData.wasT;m.depthWrite=solid||k>.6;m.transparent=!solid;});
+      it.lm.opacity=.55*(1-k);it.lm.visible=k<.99;
+      if(it.off)it.g.position.set(it.home.x+it.off.x*(1-k),it.home.y+it.off.y*(1-k),it.home.z+it.off.z*(1-k));
+      else it.g.position.y=it.home.y+it.drop*(1-k);
+      var cs=it.cast&&k>.5;if(cs!==it.cs){it.cs=cs;it.meshes.forEach(function(o){o.castShadow=cs;});}});
+    var wk=clamp((p-wireWin[0])/(wireWin[1]-wireWin[0]),0,1);
+    wires.forEach(function(w,i){var n=w.geometry.index.count,f=clamp(wk*1.4-(i%10)*.04,0,1);w.geometry.setDrawRange(0,Math.floor(n*f/3)*3);w.visible=f>0;});
+    var hk=clamp((p-harnWin[0])/(harnWin[1]-harnWin[0]),0,1);
+    harness.forEach(function(w,i){var n=w.geometry.index.count,f=clamp(hk*1.2-i*.03,0,1);w.geometry.setDrawRange(0,Math.floor(n*f/3)*3);w.visible=f>0;});
+    ties.forEach(function(o){o.m.visible=hk>o.k+.1;});
+    var mo=REDUCE?0:1;
+    fanBlades.rotation.x=t*6*mo*clamp((p-.5)/.05,0,1);cups.rotation.y=t*3*mo*clamp((p-.86)/.03,0,1);
+    ledMats.forEach(function(m,i){m.color.setHex(p>.7&&((Math.floor(t*2)+i)%5===0)&&mo?0xffffff:0x7be05f);});
+    // robot arm: swap cycle, then park
+    var run=clamp((p-.74)/.05,0,1)*(1-clamp((p-.86)/.03,0,1))*mo;
+    var sw=Math.sin(t*.9)*.5+.5;
+    var j1r=lerp(1.25,lerp(.5,2.05,sw),run),park=clamp((p-.86)/.03,0,1);
+    j1.rotation.y=lerp(j1r,.5,park);
+    j2.rotation.z=lerp(.25+run*(.35+.12*Math.sin(t*1.8)),.1,park);
+    j3.rotation.z=lerp(.7+run*(.45+.15*Math.sin(t*1.8+1)),.35,park);
+    j4.rotation.y=run*Math.sin(t*1.2)*.6;
+    var gp=(Math.sin(t*1.8)*.5+.5)*run;f1.position.x=-.05+gp*.015;f2.position.x=.05-gp*.015;
+    // pad centering bars pulse
+    var cen=clamp((p-.8)/.03,0,1)*(1-clamp((p-.85)/.03,0,1));
+    bars.forEach(function(b){b.m.position.x=PX+b.x*(1-.08*cen);b.m.position.z=PZ0+b.z*(1-.08*cen);});
+    // roof opens, lift rises, drone launches
+    var open=ease((p-.86)/.05);doorA.rotation.x=open*2.05;doorB.rotation.x=-open*2.05;
+    var lk=ease((p-.9)/.04),ly=PADY+lk*(Y1+.12-PADY);lift.position.y=ly;
+    col.scale.y=Math.max(.01,ly-Y0-.08);col.position.y=Y0+.08+(ly-Y0-.08)/2;
+    var spin=clamp((p-.905)/.03,0,1);
+    propAng+=dt*(spin*38+(p>.72&&p<.9?0:0));
+    props.forEach(function(pr,i){pr.g.rotation.y=(i%2?-1:1)*propAng;pr.b.forEach(function(b){b.visible=spin<.55;});});
+    discs.forEach(function(m){m.opacity=.16*spin;});
+    var fly=ease((p-.94)/.06);
+    var hov=fly*(Math.sin(t*1.6)*.05)*mo;
+    drone.position.set(PX+fly*.15*Math.sin(t*.5)*mo,ly+.035+fly*1.55+hov,PZ0);
+    drone.rotation.y=fly*(.5+Math.sin(t*.35)*.12*mo);drone.rotation.z=fly*Math.sin(t*.9)*.03*mo;drone.rotation.x=fly*Math.cos(t*.7)*.025*mo;
+    navLeds.forEach(function(m,i){var on=p>.88&&(mo?((t*2+i*.2)%1)<.5:true);m.color.setHex(on?(i<3?0x54d84a:0xe84a4a):0x2a2d36);});
+    var on=clamp((p-.84)/.04,0,1);hmiMat.emissiveIntensity=.95*on;
+    var pass=p>.97;
+    lamps.forEach(function(m,i){m.emissiveIntensity=i===2?(pass?2.2:(on?.8+Math.sin(t*6)*.5:0)):(i===1&&on&&!pass?.6:0);});
+    var sp=clamp((p-.84)/.06,0,1),sOn=sp>0&&sp<1;scan.material.opacity=sOn?.12:0;scanEdge.material.opacity=sOn?.9:0;scan.position.x=scanEdge.position.x=-2.2+4.4*sp;
+    grid.style.opacity=String(1-.55*ease((p-.1)/.3));
+    camAt(p,cp,ct);var dist=narrow?1.22:Math.max(1,1.45/camera.aspect);
+    var cd=p>.96;if(cd!==canDrag){canDrag=cd;canvas.classList.toggle('grab',cd);}
+    if(!cd&&!drag){yawT=0;pitchT=0;}
+    if(cd&&!drag&&!hinted&&!REDUCE)yawT+=dt*.08;
+    hint.classList.toggle('on',cd&&!hinted);
+    yaw+=(yawT-yaw)*.08;pitch+=(pitchT-pitch)*.08;
+    var ox=(cp.x-ct.x)*dist,oy=(cp.y-ct.y)*dist,oz=(cp.z-ct.z)*dist,cyw=Math.cos(yaw),syw=Math.sin(yaw);
+    var rx=ox*cyw+oz*syw,rz=-ox*syw+oz*cyw,rr=Math.sqrt(rx*rx+rz*rz),ry=oy+rr*Math.sin(pitch)*.9;
+    camera.position.set(ct.x+rx+mx*.6,ct.y+ry-my*.3,ct.z+rz);
+    camera.lookAt(ct.x,ct.y-.1,ct.z);
+    renderer.render(scene,camera);
+    var cr=canvas.getBoundingClientRect(),sr=stage.getBoundingClientRect();
+    L.forEach(function(l){var a=l.w[0],b=l.w[1],o=p<a?0:p>b?0:Math.min(1,(p-a)/.02,(b-p)/.02);
+      if(o<=0.01){l.el.style.opacity=0;return;}
+      tmp.copy(l.p);(l.o||M).localToWorld(tmp);tmp.project(camera);
+      if(tmp.z>1){l.el.style.opacity=0;return;}
+      var x=(tmp.x*.5+.5)*cr.width+(cr.left-sr.left),y=(-tmp.y*.5+.5)*cr.height+(cr.top-sr.top);
+      var flip=x>cr.width*.62,ew=l.el.offsetWidth;l.el.classList.toggle('flip',flip);
+      l.el.style.transform='translate('+(flip?(x-ew-16):(x+16)).toFixed(1)+'px,'+(y-14).toFixed(1)+'px)';l.el.style.opacity=o;});
+    var pct=Math.round(clamp(p,0,1)*100);pctEl.textContent=pct+'%';barEl.style.width=pct+'%';
+    var st=p<.14?'Drawing':p<.3?'Mechanics':p<.47?'Electrical':p<.62?'Cabling':p<.86?'Integration':p<.97?'Flight test':'Pass · ready to deploy';
+    if(st!==lastSt){stEl.textContent=st;stEl.classList.toggle('ok',p>=.97);lastSt=st;}
+    setStep(p);
+  })();
+}
+
+/* ============ GROUP CHAIN ============ */
+function initGroup(){
+  if(!HASG||REDUCE)return;
+  gsap.matchMedia().add('(min-width: 901px)',function(){
+    var sec=document.getElementById('group'),track=document.getElementById('track');
+    var dist=function(){return Math.max(0,track.scrollWidth-window.innerWidth);};
+    var tw=gsap.to(track,{x:function(){return -dist();},ease:'none',scrollTrigger:{trigger:sec,start:function(){return sec.offsetHeight<=window.innerHeight?'center center':'top top';},end:function(){return '+='+dist();},pin:true,scrub:.6,invalidateOnRefresh:true}});
+    return function(){tw.scrollTrigger&&tw.scrollTrigger.kill();tw.kill();gsap.set(track,{x:0});};
+  });
+}
+/* ============ CAMPUS ============ */
+function initCampus(){
+  var items=[].slice.call(document.querySelectorAll('#timeline li')),fill=document.getElementById('tlFill'),tl=document.getElementById('timeline');
+  function setTL(k){var n=Math.round(k*items.length);items.forEach(function(li,i){li.classList.toggle('on',i<n);});fill.style.height=(k*100)+'%';}
+  if(!HASG||REDUCE){setTL(1);return;}
+  gsap.fromTo('#frame',{clipPath:'inset(14% 18% 14% 18% round 14px)'},{clipPath:'inset(0% 0% 0% 0% round 0px)',ease:'none',scrollTrigger:{trigger:'#revealImg',start:'top 75%',end:'top top',scrub:true}});
+  gsap.fromTo('#campusImg',{scale:1.15,yPercent:-4},{scale:1,yPercent:4,ease:'none',scrollTrigger:{trigger:'#revealImg',start:'top bottom',end:'bottom top',scrub:true}});
+  ScrollTrigger.create({trigger:tl,start:'top 80%',end:'bottom 45%',scrub:true,onUpdate:function(s){setTL(s.progress);}});
+  setTL(0);
+}
+function initCounts(){
+  if(REDUCE||!('IntersectionObserver' in window))return;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);
+    var el=e.target,end=+el.dataset.count,sup=el.dataset.sup?'<sup>'+el.dataset.sup+'</sup>':'',s0=performance.now();
+    (function tick(now){var k=ease((now-s0)/1400);el.innerHTML=Math.round(end*k).toLocaleString('en-US')+sup;if(k<1)requestAnimationFrame(tick);})(s0);});},{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){io.observe(el);});
+}
+function initReveal(){
+  if(REDUCE||!('IntersectionObserver' in window))return;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el,i){if(el.getBoundingClientRect().top>window.innerHeight){el.classList.add('pre');el.style.transitionDelay=((i%4)*80)+'ms';io.observe(el);}});
+}
+
+/* ============ SMOOTH SCROLL ============ */
+function initLenis(){
+  if(REDUCE||!window.Lenis||!HASG)return;
+  var lenis=new Lenis({duration:1.15,easing:function(t){return Math.min(1,1.001-Math.pow(2,-10*t));},smoothWheel:true,wheelMultiplier:1,touchMultiplier:1.4});
+  window.__lenis=lenis;
+  lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(function(t){lenis.raf(t*1000);});
+  document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href');if(id.length<2)return;var el=document.querySelector(id);if(!el)return;
+    e.preventDefault();var off=-(document.getElementById('siteHead').offsetHeight||80);lenis.scrollTo(el,{offset:off,duration:1.6});});
+}
+/* ============ INTRO ============ */
+function initIntro(){
+  var el=document.getElementById('intro');if(!INTRO||!el)return;
+  var root=document.documentElement,done=false;
+  if(window.__lenis)window.__lenis.stop();
+  function finish(){if(done)return;done=true;root.classList.remove('intro-on');if(el.parentNode)el.remove();if(window.__lenis)window.__lenis.start();}
+  var tl=gsap.timeline({paused:true,onComplete:finish});
+  tl.to('#introBar',{width:'100%',duration:.9,ease:'power2.inOut'})
+    .to('#intro .in',{opacity:0,y:-16,duration:.35,ease:'power2.in'},'+=.05')
+    .to(el,{clipPath:'inset(0 0 100% 0)',duration:.75,ease:'power4.inOut'},'-=.05')
+    .add(function(){root.classList.remove('intro-on');},'-=.4');
+  var started=false;function go(){if(started)return;started=true;requestAnimationFrame(function(){requestAnimationFrame(function(){tl.play(0);setTimeout(function(){if(!done)finish();},4200);});});}
+  if(document.readyState==='complete')go();else window.addEventListener('load',go);
+  setTimeout(go,1800);
+}
+try{initLenis();}catch(e){console.warn(e);}
+try{initIntro();}catch(e){console.warn(e);document.documentElement.classList.remove('intro-on');}
+try{initMega();}catch(e){console.warn(e);}
+try{if(HAS3)initMachine();else document.querySelectorAll('#steps li').forEach(function(li){li.classList.add('on');});}catch(e){console.warn(e);}
+try{initGroup();}catch(e){console.warn(e);}
+try{initCampus();}catch(e){console.warn(e);}
+initCounts();initReveal();
+if(HASG)window.addEventListener('load',function(){ScrollTrigger.refresh();});
+})();
+</script>
+
+</body>
+</html>
