@@ -31,7 +31,7 @@ PDF_FOR = {
     'kobot':       'industrial-muladigital-co-il',
     'lasercut':    'engineering-muladigital-co-il',
     'atal':        'atalair-muladigital-co-il',
-    'konstantin':  'kostyains-muladigital-co-il',
+    'insagent':    'kostyains-muladigital-co-il',
     'up':          'up-ins-co-il',
     'tamarfin':    'tamar-fin-co-il',
     'ytzm':        'ytzm-co-il',
