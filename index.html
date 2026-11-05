@@ -1149,7 +1149,7 @@
       </div>
       <div class="logo-rows">
         <div class="logo-row scroll-right" id="logoRow1"></div>
-        <div class="logo-row scroll-left" id="logoRow2"></div>
+        <div class="logo-row scroll-left" id="logoRow2" data-wall-row="3"></div>
       </div>
     </section>
 
@@ -1715,16 +1715,12 @@
     document.getElementById('pfFull').innerHTML = projects.map(pfCard).join('');
     // split clients into two rows for scroll parallax
     (function(){
-      var half=Math.ceil(clients.length/2);
-      var row1=clients.slice(0,half);
-      var row2=clients.slice(half);
+      var row1=clients;
       var r1El=document.getElementById('logoRow1');
       var r2El=document.getElementById('logoRow2');
-      if(!r1El||!r2El) return;
+      if(!r1El) return;
       var r1Html=row1.map(brandLogo).join('');
-      var r2Html=row2.map(brandLogo).join('');
       r1El.innerHTML=r1Html+r1Html+r1Html;
-      r2El.innerHTML=r2Html+r2Html+r2Html;
     })();
 
 
@@ -2372,5 +2368,16 @@
 
 <!-- Sticky mobile CTA -->
 <script src="assets/mega.js?v=5" defer></script>
+<style id="logo-wall-css">
+.brand{width:clamp(128px,12.5vw,176px)!important;height:clamp(60px,6vw,80px)!important;padding:10px 16px!important}
+.brand img{max-height:clamp(34px,3.8vw,50px)!important;max-width:clamp(96px,10.5vw,140px)!important}
+.brand-wall img{mix-blend-mode:normal!important;opacity:.95!important}
+.logo-rows{gap:16px!important}
+.logo-row{gap:18px!important}
+.logo-row.scroll-right{animation-duration:110s!important}
+.logo-row.scroll-left{animation-duration:120s!important}
+@media(max-width:768px){.logo-row{gap:12px!important}.logo-row.scroll-right{animation-duration:80s!important}.logo-row.scroll-left{animation-duration:88s!important}}
+</style>
+<script src="assets/logo-wall.js" defer></script>
 </body>
 </html>
