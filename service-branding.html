@@ -526,8 +526,48 @@
   <link rel="stylesheet" href="assets/mega-wow.css?v=5" />
   <link rel="stylesheet" href="assets/srv-hero.css?v=1" />
 <link rel="stylesheet" href="assets/srv-up.css?v=1" />
+<link rel="stylesheet" href="assets/sv3.css?v=1" />
+<style id="v3-page">
+.bd{position:relative;display:grid;gap:14px}
+.bd-board{display:grid;grid-template-columns:1.3fr 1fr;gap:14px}
+.bd-canvas{position:relative;background:#F3EEE4;border-radius:24px;padding:18px;box-shadow:0 40px 90px rgba(0,0,0,.5);min-width:0}
+.bd-canvas svg{display:block;width:100%;height:auto}
+.bd-grid line{stroke:rgba(31,77,58,.12);stroke-width:1}
+.bd-con *{fill:none;stroke:#C8643B;stroke-width:1.2;stroke-dasharray:4 5;opacity:.0;transition:opacity .8s}
+.bd-mark{fill:#1F4D3A;opacity:0;transform-origin:160px 160px;transform:scale(.86);transition:opacity .9s,transform 1.1s cubic-bezier(.2,.9,.2,1)}
+.bd-dot{fill:#C8643B;opacity:0;transform-origin:230px 90px;transform:scale(0);transition:opacity .4s,transform .7s cubic-bezier(.3,1.6,.5,1)}
+.bd-tag{position:absolute;font-size:11.5px;font-weight:700;color:#C8643B;background:#fff;border-radius:999px;padding:4px 10px;opacity:0;transition:opacity .5s}
+.bd-tag.t1{top:14px;right:14px}.bd-tag.t2{bottom:14px;left:14px}
+.bd-side{display:grid;gap:14px;min-width:0}
+.bd-pal,.bd-type{background:var(--n1);border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:16px;min-width:0}
+.bd small{display:block;font-size:12px;font-weight:700;color:rgba(255,255,255,.5);margin-bottom:10px}
+.bd-pal div{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.bd-pal i{display:block;height:52px;border-radius:12px;background:var(--c);position:relative;transform:translateY(10px);opacity:0;transition:transform .6s cubic-bezier(.2,.9,.2,1),opacity .6s}
+.bd-pal i b{position:absolute;bottom:5px;right:7px;font-size:10px;font-weight:700;color:rgba(255,255,255,.85);direction:ltr}.bd-pal i:nth-child(3) b{color:#5b4f3c}.bd-pal i:nth-child(4){box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)}
+.bd-type b{display:block;font-weight:900;font-size:58px;line-height:1;color:#E9DCC3;letter-spacing:-.03em}
+.bd-type span{display:block;font-size:12.5px;color:rgba(255,255,255,.62);margin-top:6px}
+.bd-type b,.bd-type span{opacity:0;transition:opacity .6s}
+.bd-apps{display:grid;grid-template-columns:1.6fr .8fr 1.2fr;gap:14px}
+.bd-apps>div{border-radius:18px;min-height:86px;display:flex;align-items:center;gap:12px;padding:14px 16px;opacity:0;transform:translateY(14px);transition:opacity .6s,transform .7s cubic-bezier(.2,.9,.2,1);min-width:0}
+.bd-apps svg{width:40px;height:40px;flex-shrink:0}
+.bd-apps svg path{fill:currentColor}.bd-apps svg circle{fill:#C8643B}
+.bd-biz{background:#F3EEE4;color:#1F4D3A}
+.bd-biz b{display:block;font-weight:900;font-size:20px;line-height:1}
+.bd-biz span{font-size:12px;color:#4d5b52}
+.bd-icon{background:#1F4D3A;color:#E9DCC3;justify-content:center}
+.bd-sign{background:#141414;color:#E9DCC3;flex-direction:column;justify-content:center;gap:2px}
+.bd-sign b{font-weight:900;font-size:26px;line-height:1}
+.bd-sign span{font-size:10px;letter-spacing:.4em;color:#C8643B}
+.bd.s1 .bd-con *{opacity:1}.bd.s1 .bd-tag{opacity:1}
+.bd.s2 .bd-mark{opacity:1;transform:none}.bd.s2 .bd-dot{opacity:1;transform:none}
+.bd.s2 .bd-con *{opacity:.35}
+.bd.s3 .bd-pal i{opacity:1;transform:none}.bd.s3 .bd-pal i:nth-child(2){transition-delay:.12s}.bd.s3 .bd-pal i:nth-child(3){transition-delay:.24s}.bd.s3 .bd-pal i:nth-child(4){transition-delay:.36s}
+.bd.s3 .bd-type b,.bd.s3 .bd-type span{opacity:1}
+.bd.s4 .bd-apps>div{opacity:1;transform:none}.bd.s4 .bd-apps>div:nth-child(2){transition-delay:.15s}.bd.s4 .bd-apps>div:nth-child(3){transition-delay:.3s}
+@media (max-width:560px){.bd-board{grid-template-columns:1fr}.bd-side{grid-template-columns:1fr 1fr}.bd-type b{font-size:42px}.bd-apps{grid-template-columns:1fr 1fr}.bd-apps .bd-biz{grid-column:1/-1}}
+</style>
 </head>
-<body>
+<body class="v3" data-proc="zig">
   <div id="progress"><span></span></div>
 
   <header class="nav" role="banner">
@@ -589,57 +629,55 @@
   </nav>
 
   <!-- HERO - dark cinematic -->
-  <section class="srv-hero">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="hero-shape hero-shape-1"></div>
-    <div class="hero-shape hero-shape-2"></div>
-    <div class="hero-shape hero-shape-3"></div>
-    <div class="hero-shape hero-shape-4"></div>
-    <div class="wrap">
-      <div class="hero-inner">
-        <div class="hero-content">
-          <nav class="breadcrumb" aria-label="פירורי לחם">
-            <a href="/">בית</a>
-            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            <a href="services">שירותים</a>
-            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            <span style="color:rgba(255,255,255,.7)">מיתוג עסקי</span>
-          </nav>
+  <section class="v3-hero v3-branding">
+    <div class="v3-bg dots" aria-hidden="true"></div>
+    <div class="v3-w">
+      <div class="v3-in rev">
+        <div class="v3-copy">
+          <nav class="v3-crumb" aria-label="פירורי לחם"><a href="/">בית</a><span aria-hidden="true">/</span><a href="services">שירותים</a><span aria-hidden="true">/</span><span>מיתוג עסקי</span></nav>
           <h1><span class="accent">מיתוג</span> עסקי</h1>
-          <p class="subtitle">זהות שגורמת ללקוחות לסמוך עליכם עוד לפני שדיברתם איתם. מיתוג שמבדל, משדר מקצועיות, ועובד בכל נקודת מגע.</p>
-          <div class="hero-actions">
-            <a href="tel:0508249824" class="btn btn-primary">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              שיחת אבחון · 050-824-9824
-            </a>
-            <a href="https://wa.me/972508249824" class="btn btn-white" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
-              שלחו וואטסאפ
-            </a>
+          <p class="v3-sub">זהות שגורמת ללקוחות לסמוך עליכם עוד לפני שדיברתם איתם. מיתוג שמבדל, משדר מקצועיות, ועובד בכל נקודת מגע.</p>
+          <div class="v3-ctas">
+            <a href="tel:0508249824" class="v3-btn pri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>שיחת אבחון · 050-824-9824</a>
+            <a href="https://wa.me/972508249824" class="v3-btn gh" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>שלחו וואטסאפ</a>
           </div>
-          <a href="https://share.google/px8zW59yHP21QZPyc" target="_blank" rel="noopener" class="google-trust">
-            <svg class="g-icon" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-            <div class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
-            <b>5.0</b>
-            <small>20 ביקורות בגוגל</small>
-          </a>
+          <a href="https://share.google/px8zW59yHP21QZPyc" target="_blank" rel="noopener" class="v3-trust"><span class="st" aria-hidden="true">★★★★★</span><b>5.0</b><span>20 ביקורות בגוגל</span></a>
         </div>
-        <div class="hero-visual">
-          <div class="sh-stage sh-app">
-            <figure class="sh-main"><div class="sh-bar"><i></i><i></i><i></i><span>מודעות · הדרך הנכונה</span></div><img src="assets/srv-hero/hdads.webp" alt="מודעות · הדרך הנכונה" fetchpriority="high" /></figure>
-            <figure class="sh-second sh-tall"><img src="assets/srv-hero/silviad.webp" alt="עוד עבודה מתיק העבודות" loading="lazy" /></figure>
-            <div class="sh-chip"><b>196</b><span>לידים מטפסי Meta למותג נדל״ן</span></div>
-            <a class="sh-case" href="case-haderech-hanechona"><span class="sh-dot"></span><small>מתוך תיק העבודות</small><b>הדרך הנכונה נדל״ן</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
-          </div>
-        </div>
-      </div>
+        <div class="v3-vis">
 
-      <div class="metrics">
-        <div class="metric"><b data-count="250">0</b><span>לידים בחודש אחד לתיווך נדל״ן</span></div>
-        <div class="metric"><b data-count="126">0</b><span>עסקים שליוויתי</span></div>
-        <div class="metric"><b data-count="9">0</b><span>שנים בדיגיטל</span></div>
-        <div class="metric"><b>5.0</b><span>דירוג בגוגל · 20 ביקורות</span></div>
+<div class="bd" role="img" aria-label="המחשה: בניית מותג. רשת בנייה, סמל, פלטת צבעים, טיפוגרפיה וכרטיס ביקור">
+  <div class="bd-board">
+    <div class="bd-canvas">
+      <svg viewBox="0 0 320 320" aria-hidden="true">
+        <g class="bd-grid">
+          <line x1="0" y1="80" x2="320" y2="80"/><line x1="0" y1="160" x2="320" y2="160"/><line x1="0" y1="240" x2="320" y2="240"/>
+          <line x1="80" y1="0" x2="80" y2="320"/><line x1="160" y1="0" x2="160" y2="320"/><line x1="240" y1="0" x2="240" y2="320"/>
+        </g>
+        <g class="bd-con">
+          <circle cx="160" cy="160" r="110"/><circle cx="160" cy="160" r="70"/><circle cx="200" cy="120" r="40"/>
+          <line x1="50" y1="270" x2="270" y2="50"/><rect x="90" y="90" width="140" height="140"/>
+        </g>
+        <path class="bd-mark" d="M160 50a110 110 0 1 0 110 110h-70a40 40 0 1 1-40-40z"/>
+        <circle class="bd-dot" cx="230" cy="90" r="22"/>
+      </svg>
+      <span class="bd-tag t1">רשת בנייה</span><span class="bd-tag t2">יחס זהב</span>
+    </div>
+    <div class="bd-side">
+      <div class="bd-pal"><small>פלטה</small><div><i style="--c:#1F4D3A"><b>#1F4D3A</b></i><i style="--c:#C8643B"><b>#C8643B</b></i><i style="--c:#E9DCC3"><b>#E9DCC3</b></i><i style="--c:#141414"><b>#141414</b></i></div></div>
+      <div class="bd-type"><small>טיפוגרפיה</small><b>אבג</b><span>Heebo Black · כותרות</span><span>Assistant · גוף</span></div>
+    </div>
+  </div>
+  <div class="bd-apps">
+    <div class="bd-biz"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 6a14 14 0 1 0 14 14h-9a5 5 0 1 1-5-5z"/><circle cx="29" cy="11" r="3"/></svg><div><b>אורן</b><span>סטודיו לעיצוב פנים</span></div></div>
+    <div class="bd-icon"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 6a14 14 0 1 0 14 14h-9a5 5 0 1 1-5-5z"/><circle cx="29" cy="11" r="3"/></svg></div>
+    <div class="bd-sign"><b>אורן</b><span>STUDIO</span></div>
+  </div>
+</div>
+<p class="v3-note">מותג להמחשה. השם והצבעים הומצאו כדי להראות את התהליך.</p>
+
+        </div>
       </div>
+      <div class="v3-proof"><div><b data-to="250" data-suf="+">250+</b><span>לידים בחודש אחד לתיווך נדל״ן</span></div><div><b data-to="126" data-suf="+">126+</b><span>עסקים שליוויתי</span></div><div><b data-to="9" data-suf="+">9+</b><span>שנים בדיגיטל</span></div><div><b>5.0</b><span>דירוג בגוגל · 20 ביקורות</span></div></div>
     </div>
   </section>
 
@@ -1372,5 +1410,29 @@
 <!-- Sticky mobile CTA -->
 <script src="assets/mega.js?v=5" defer></script>
 <script src="assets/srv-up.js?v=1" defer></script>
+<script id="v3-js">
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // proof counters
+  var nums=[].slice.call(document.querySelectorAll('.v3-proof b[data-to]'));
+  function run(b){var to=+b.getAttribute('data-to'),suf=b.getAttribute('data-suf')||'';if(reduce){b.textContent=to.toLocaleString('he-IL')+suf;return}
+    var t0=null;function f(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1400),e=1-Math.pow(1-k,3);b.textContent=Math.round(to*e).toLocaleString('he-IL')+suf;if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run(e.target);io.unobserve(e.target)}})},{threshold:.4});nums.forEach(function(b){io.observe(b)})}else nums.forEach(run);
+  // process progress
+  var tl=document.querySelector('.process-sec .timeline');
+  if(tl){var steps=[].slice.call(tl.querySelectorAll('.tl-step'));
+    if(reduce||!('IntersectionObserver' in window)){tl.style.setProperty('--v3p','100%')}
+    else{var seen=0;var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var i=steps.indexOf(e.target)+1;if(i>seen){seen=i;tl.style.setProperty('--v3p',(seen/steps.length*100)+'%')}}})},{rootMargin:'0px 0px -35% 0px'});steps.forEach(function(s){io2.observe(s)})}}
+  window.__v3reduce=reduce;
+})();
+</script>
+<script id="v3-page-js">
+(function(){var b=document.querySelector('.bd');if(!b)return;var R=window.__v3reduce;
+function all(){b.classList.add('s1','s2','s3','s4')}
+if(R){all();return}
+function play(){b.classList.remove('s1','s2','s3','s4');[['s1',300],['s2',1500],['s3',2600],['s4',3700]].forEach(function(x){setTimeout(function(){b.classList.add(x[0])},x[1])})}
+var started=false;function go(){if(started)return;started=true;play();setInterval(play,11000)}
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){go();io.disconnect()}},{threshold:.3});io.observe(b)}else all();})();
+</script>
 </body>
 </html>

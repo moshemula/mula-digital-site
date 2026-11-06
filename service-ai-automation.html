@@ -390,8 +390,42 @@
   <link rel="stylesheet" href="assets/mega-wow.css?v=5" />
   <link rel="stylesheet" href="assets/srv-hero.css?v=1" />
 <link rel="stylesheet" href="assets/srv-up.css?v=1" />
+<link rel="stylesheet" href="assets/sv3.css?v=1" />
+<style id="v3-page">
+.af{padding:20px;text-align:right}
+.af-head{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:14px}
+.af-head b{font-weight:800}
+.af-on{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:#7CF0B0;background:rgba(52,168,83,.14);border-radius:999px;padding:4px 10px}
+.af-on i{width:7px;height:7px;border-radius:50%;background:#34D27B;animation:afP 1.6s infinite}
+@keyframes afP{50%{opacity:.3}}
+.af-flow{margin-top:16px;display:grid;gap:0}
+.af-n{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:11px 14px;transition:background .4s,border-color .4s,box-shadow .4s;min-width:0}
+.af-n b{display:block;font-weight:800;font-size:15px}
+.af-n small{display:block;font-size:12.5px;color:rgba(255,255,255,.55);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.af-n>div{min-width:0}
+.af-ic{width:36px;height:36px;border-radius:11px;background:rgba(255,255,255,.08);display:grid;place-items:center;flex-shrink:0;transition:background .4s}
+.af-ic svg{width:19px;height:19px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.af-n.on{background:rgba(201,164,255,.08);border-color:rgba(201,164,255,.5);box-shadow:0 0 0 4px rgba(123,47,190,.14),0 12px 30px rgba(123,47,190,.25)}
+.af-n.on .af-ic{background:linear-gradient(120deg,#E8003D,#7B2FBE)}
+.af-n.on .af-ic.wa{background:#25D366}
+.af-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.af-c{height:22px;position:relative;display:flex;justify-content:center;gap:42%}
+.af-c i{width:2px;height:100%;background:rgba(255,255,255,.12);position:relative;overflow:hidden;display:block}
+.af-c i::after{content:"";position:absolute;inset-inline:0;top:-60%;height:60%;background:linear-gradient(#E8003D,#C9A4FF);opacity:0}
+.af-c.go i::after{animation:afF .5s linear forwards;opacity:1}
+@keyframes afF{to{top:100%}}
+.af-log{margin-top:16px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:end;border-top:1px solid rgba(255,255,255,.08);padding-top:14px}
+.af-log ul{list-style:none;margin:0;padding:0;font-size:12.5px;line-height:1.75;color:rgba(255,255,255,.6);height:110px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;min-width:0}
+.af-log li{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;animation:afIn .4s}
+.af-log li time{color:#C9A4FF;font-variant-numeric:tabular-nums;margin-left:8px;direction:ltr;display:inline-block}
+@keyframes afIn{from{opacity:0;transform:translateY(6px)}}
+.af-sum{text-align:center;max-width:140px}
+.af-sum b{display:block;font-weight:900;font-size:48px;line-height:1;background:linear-gradient(120deg,#E8003D,#7B2FBE);-webkit-background-clip:text;background-clip:text;color:transparent}
+.af-sum span{font-size:12px;color:rgba(255,255,255,.62);line-height:1.4;display:block;margin-top:4px}
+@media (max-width:560px){.af{padding:16px}.af-log{grid-template-columns:1fr}.af-sum{max-width:none;display:flex;align-items:center;gap:12px;text-align:right}.af-sum b{font-size:38px}.af-n{padding:10px 12px}.af-n b{font-size:14px}}
+</style>
 </head>
-<body>
+<body class="v3" data-proc="stack">
   <div id="progress"><span></span></div>
   <header class="nav" role="banner">
     <div class="nav-in">
@@ -450,41 +484,43 @@
     </div>
   </nav>
 
-  <section class="srv-hero">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="hero-shape hero-shape-1"></div>
-    <div class="hero-shape hero-shape-2"></div>
-    <div class="wrap">
-      <div class="hero-inner">
-        <div class="hero-content">
-          <nav class="breadcrumb" aria-label="פירורי לחם"><a href="/">בית</a><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg><a href="services">שירותים</a><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg><span style="color:rgba(255,255,255,.7)">אוטומציות AI</span></nav>
+  <section class="v3-hero v3-ai-automation">
+    <div class="v3-bg lines" aria-hidden="true"></div>
+    <div class="v3-w">
+      <div class="v3-in split">
+        <div class="v3-copy">
+          <nav class="v3-crumb" aria-label="פירורי לחם"><a href="/">בית</a><span aria-hidden="true">/</span><a href="services">שירותים</a><span aria-hidden="true">/</span><span>אוטומציות AI</span></nav>
           <h1><span class="accent">אוטומציות</span> AI</h1>
-          <p class="subtitle">העסק שלך מבזבז שעות על משימות שחוזרות על עצמן. ניתוב לידים, מעקבים, הזנת נתונים: דברים ש-AI עושה בשניות.</p>
-          <div class="hero-actions">
-            <a href="tel:0508249824" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>שיחת אבחון · 050-824-9824</a>
-            <a href="https://wa.me/972508249824" class="btn btn-white" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>שלחו וואטסאפ</a>
+          <p class="v3-sub">העסק שלך מבזבז שעות על משימות שחוזרות על עצמן. ניתוב לידים, מעקבים, הזנת נתונים: דברים ש-AI עושה בשניות.</p>
+          <div class="v3-ctas">
+            <a href="tel:0508249824" class="v3-btn pri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>שיחת אבחון · 050-824-9824</a>
+            <a href="https://wa.me/972508249824" class="v3-btn gh" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>שלחו וואטסאפ</a>
           </div>
-          <a href="https://share.google/px8zW59yHP21QZPyc" target="_blank" rel="noopener" class="google-trust">
-            <svg class="g-icon" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-            <div class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
-            <b>5.0</b><small>20 ביקורות בגוגל</small>
-          </a>
+          <a href="https://share.google/px8zW59yHP21QZPyc" target="_blank" rel="noopener" class="v3-trust"><span class="st" aria-hidden="true">★★★★★</span><b>5.0</b><span>20 ביקורות בגוגל</span></a>
         </div>
-        <div class="hero-visual">
-          <div class="sh-stage sh-app">
-            <figure class="sh-main"><div class="sh-bar"><i></i><i></i><i></i><span>ליד חדש בוואטסאפ</span></div><img src="assets/srv-hero/lead.webp" alt="ליד חדש בוואטסאפ" fetchpriority="high" /></figure>
-            <figure class="sh-second sh-wide"><img src="assets/srv-hero/make.webp" alt="עוד עבודה מתיק העבודות" loading="lazy" /></figure>
-            <div class="sh-chip"><b>196</b><span>לידים שנותבו אוטומטית, בלי העתק-הדבק</span></div>
-            <a class="sh-case" href="case-haderech-hanechona"><span class="sh-dot"></span><small>מתוך תיק העבודות</small><b>הדרך הנכונה נדל״ן</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
-          </div>
+        <div class="v3-vis">
+
+<div class="af v3-card" role="img" aria-label="המחשה: ליד נכנס מהאתר, בינה מלאכותית מסווגת אותו, ותוך שניות הוא מגיע לנציג בוואטסאפ ול-CRM">
+  <div class="af-head"><b>אוטומציה: ליד חדש מהאתר</b><span class="af-on"><i></i>פועלת</span></div>
+  <div class="af-flow">
+    <div class="af-n" data-n="0"><span class="af-ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><div><b>טופס באתר</b><small>פנייה חדשה נכנסת</small></div></div>
+    <div class="af-c"><i></i></div>
+    <div class="af-n ai" data-n="1"><span class="af-ic"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2"/><circle cx="12" cy="12" r="3.5"/></svg></span><div><b>AI מסווג</b><small id="afTag">ליד חם · אזור מרכז</small></div></div>
+    <div class="af-c split"><i></i><i></i></div>
+    <div class="af-2">
+      <div class="af-n" data-n="2"><span class="af-ic wa"><svg viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/></svg></span><div><b>וואטסאפ לנציג</b><small>עם כל הפרטים</small></div></div>
+      <div class="af-n" data-n="3"><span class="af-ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16"/></svg></span><div><b>כרטיס ב-CRM</b><small>נפתח אוטומטית</small></div></div>
+    </div>
+    <div class="af-c"><i></i></div>
+    <div class="af-n" data-n="4"><span class="af-ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><b>מייל ללקוח</b><small>"קיבלנו, חוזרים אליך היום"</small></div></div>
+  </div>
+  <div class="af-log" aria-hidden="true"><ul id="afLog"></ul><div class="af-sum"><b id="afSec">4</b><span>שניות מהטופס ועד הנציג.<br>בלי שאף אחד נגע.</span></div></div>
+</div>
+<p class="v3-note">המחשה של זרימה. השמות והפרטים להמחשה בלבד.</p>
+
         </div>
       </div>
-      <div class="metrics">
-        <div class="metric"><b data-count="196">0</b><span>לידים שנותבו אוטומטית לנציגים</span></div>
-        <div class="metric"><b data-count="126">0</b><span>עסקים שליוויתי</span></div>
-        <div class="metric"><b data-count="9">0</b><span>שנים בדיגיטל</span></div>
-        <div class="metric"><b>5.0</b><span>דירוג בגוגל · 20 ביקורות</span></div>
-      </div>
+      <div class="v3-proof"><div><b data-to="196" data-suf="+">196+</b><span>לידים שנותבו אוטומטית לנציגים</span></div><div><b data-to="126" data-suf="+">126+</b><span>עסקים שליוויתי</span></div><div><b data-to="9" data-suf="+">9+</b><span>שנים בדיגיטל</span></div><div><b>5.0</b><span>דירוג בגוגל · 20 ביקורות</span></div></div>
     </div>
   </section>
 
@@ -900,5 +936,34 @@
 <!-- Sticky mobile CTA -->
 <script src="assets/mega.js?v=5" defer></script>
 <script src="assets/srv-up.js?v=1" defer></script>
+<script id="v3-js">
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // proof counters
+  var nums=[].slice.call(document.querySelectorAll('.v3-proof b[data-to]'));
+  function run(b){var to=+b.getAttribute('data-to'),suf=b.getAttribute('data-suf')||'';if(reduce){b.textContent=to.toLocaleString('he-IL')+suf;return}
+    var t0=null;function f(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1400),e=1-Math.pow(1-k,3);b.textContent=Math.round(to*e).toLocaleString('he-IL')+suf;if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run(e.target);io.unobserve(e.target)}})},{threshold:.4});nums.forEach(function(b){io.observe(b)})}else nums.forEach(run);
+  // process progress
+  var tl=document.querySelector('.process-sec .timeline');
+  if(tl){var steps=[].slice.call(tl.querySelectorAll('.tl-step'));
+    if(reduce||!('IntersectionObserver' in window)){tl.style.setProperty('--v3p','100%')}
+    else{var seen=0;var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var i=steps.indexOf(e.target)+1;if(i>seen){seen=i;tl.style.setProperty('--v3p',(seen/steps.length*100)+'%')}}})},{rootMargin:'0px 0px -35% 0px'});steps.forEach(function(s){io2.observe(s)})}}
+  window.__v3reduce=reduce;
+})();
+</script>
+<script id="v3-page-js">
+(function(){var a=document.querySelector('.af');if(!a)return;var R=window.__v3reduce;
+var N=[].slice.call(a.querySelectorAll('.af-n')),C=[].slice.call(a.querySelectorAll('.af-c')),log=document.getElementById('afLog'),tag=document.getElementById('afTag');
+var P=[['דנה','החלפת דוד שמש','ליד חם · אזור מרכז'],['יוסי','הצעת מחיר לשיפוץ מטבח','ליד חם · שפלה'],['מיכל','שאלה על מחירים','ליד פושר · שרון']];
+var r=0;function t(s){var d=new Date(2026,0,1,9,41,s);return d.toTimeString().slice(0,8)}
+function line(txt,s){var li=document.createElement('li');li.innerHTML='<time>'+t(s)+'</time>'+txt;log.appendChild(li);while(log.children.length>5)log.removeChild(log.firstChild)}
+function cycle(){var p=P[r%P.length],b=r*7;r++;N.forEach(function(n){n.classList.remove('on')});C.forEach(function(c){c.classList.remove('go')});tag.textContent=p[2];
+ var seq=[[function(){N[0].classList.add('on');line('ליד חדש: '+p[0]+', '+p[1],b)},0],[function(){C[0].classList.add('go')},600],[function(){N[1].classList.add('on');line('AI: '+p[2],b+1)},1100],[function(){C[1].classList.add('go')},1700],[function(){N[2].classList.add('on');N[3].classList.add('on');line('נשלח לנציג בוואטסאפ · נפתח כרטיס',b+3)},2200],[function(){C[2].classList.add('go')},2800],[function(){N[4].classList.add('on');line('נשלח מייל אישור ל'+p[0],b+4)},3300]];
+ seq.forEach(function(x){setTimeout(x[0],x[1])})}
+if(R){N.forEach(function(n){n.classList.add('on')});line('ליד חדש: דנה, החלפת דוד שמש',0);line('AI: ליד חם · אזור מרכז',1);line('נשלח לנציג בוואטסאפ · נפתח כרטיס',3);line('נשלח מייל אישור לדנה',4);return}
+var go=false;function start(){if(go)return;go=true;cycle();setInterval(cycle,6000)}
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){start();io.disconnect()}},{threshold:.3});io.observe(a)}else start();})();
+</script>
 </body>
 </html>
