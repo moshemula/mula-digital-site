@@ -5,13 +5,22 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Wed, 04 Nov 2026 21:46:01 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 09:15:29 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>איך לכתוב עמוד אודות לעסק?</title>
+      <link>https://muladigital.co.il/blog-eich-lichtov-amud-odot-laesek</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-eich-lichtov-amud-odot-laesek</guid>
+      <description>עמוד אודות טוב עונה על שאלה אחת: אפשר לסמוך עליך? מה כותבים, משפט פתיחה, תמונה, הוכחות, מה גוגל ו-AI לוקחים ממנו, ותבנית למילוי.</description>
+      <pubDate>Fri, 06 Nov 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&amp;amp;q=70" medium="image" />
+    </item>
     <item>
       <title>כמה לקוחות צריך כדי שהשיווק ישתלם?</title>
       <link>https://muladigital.co.il/blog-kama-lakochot-tzarich-kdei-shehashivuk-yishtalem</link>
@@ -362,15 +371,6 @@
       <pubDate>Thu, 13 Aug 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
-    </item>
-    <item>
-      <title>מה זה גוגל אדס ואיך הוא עובד? מדריך 2026</title>
-      <link>https://muladigital.co.il/blog-google-ads-guide</link>
-      <guid isPermaLink="true">https://muladigital.co.il/blog-google-ads-guide</guid>
-      <description>מה זה גוגל אדס ואיך הוא עובד בפועל? מכרז, Quality Score, סוגי קמפיינים, תקציב ריאלי לעסק בישראל ו-5 טעויות ששורפות כסף. מדריך מהשטח.</description>
-      <pubDate>Thu, 13 Aug 2026 10:00:00 +0300</pubDate>
-      <enclosure url="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
-      <media:content url="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
   </channel>
 </rss>
