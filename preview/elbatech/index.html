@@ -16,6 +16,15 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/favicon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GEHNCC9X6F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GEHNCC9X6F', {page_title:'Elbatech concept', content_group:'client-preview'});
+  window.__ev=function(n,p){try{gtag('event',n,Object.assign({concept:'elbatech'},p||{}));}catch(e){}};
+</script>
+
 <style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
 <title>Elbatech Group · Homepage Concept</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1179,14 +1188,14 @@ function initMachine(){
   if(HASG&&!REDUCE){mst=ScrollTrigger.create({trigger:stage,start:'top top',end:function(){return '+='+(window.innerHeight*(narrow?3.6:4.8));},pin:true,pinSpacing:true,scrub:true,invalidateOnRefresh:true,onUpdate:function(s){target=s.progress;}});}
   var jumpTo=[.04,.2,.4,.56,.76,.995];
   steps.forEach(function(li,i){li.tabIndex=0;li.setAttribute('role','button');
-    function go(){if(mst){var y=mst.start+(mst.end-mst.start)*jumpTo[i];if(window.__lenis)window.__lenis.scrollTo(y,{duration:1.6});else window.scrollTo({top:y,behavior:'smooth'});}else{target=jumpTo[i];}}
+    function go(){window.__ev&&__ev('machine_step_click',{step:i+1});if(mst){var y=mst.start+(mst.end-mst.start)*jumpTo[i];if(window.__lenis)window.__lenis.scrollTo(y,{duration:1.6});else window.scrollTo({top:y,behavior:'smooth'});}else{target=jumpTo[i];}}
     li.addEventListener('click',go);li.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});});
   // drag to orbit once the system is complete
   var yaw=0,yawT=0,pitch=0,pitchT=0,drag=null,canDrag=false,hint=document.getElementById('dragHint'),hinted=false;
   canvas.addEventListener('pointerdown',function(e){if(!canDrag)return;drag={x:e.clientX,y:e.clientY,yw:yawT,pt:pitchT,id:e.pointerId,moved:false};canvas.classList.add('grabbing');});
   window.addEventListener('pointermove',function(e){if(!drag)return;var dx=e.clientX-drag.x,dy=e.clientY-drag.y;
     if(!drag.moved&&Math.abs(dx)>6){drag.moved=true;try{canvas.setPointerCapture(drag.id);}catch(_){}}
-    if(drag.moved){yawT=drag.yw-dx*.0075;pitchT=clamp(drag.pt+dy*.004,-.35,.5);hinted=true;}});
+    if(drag.moved){yawT=drag.yw-dx*.0075;pitchT=clamp(drag.pt+dy*.004,-.35,.5);if(!hinted&&window.__ev)__ev('machine_drag');hinted=true;}});
   window.addEventListener('pointerup',function(){if(drag){drag=null;canvas.classList.remove('grabbing');}});
   window.addEventListener('pointercancel',function(){drag=null;canvas.classList.remove('grabbing');});
   var vis=false;watch(stage,function(v){vis=v;});
@@ -1242,7 +1251,7 @@ function initMachine(){
     var sp=clamp((p-.84)/.06,0,1),sOn=sp>0&&sp<1;scan.material.opacity=sOn?.12:0;scanEdge.material.opacity=sOn?.9:0;scan.position.x=scanEdge.position.x=-2.2+4.4*sp;
     grid.style.opacity=String(1-.55*ease((p-.1)/.3));
     camAt(p,cp,ct);var dist=narrow?1.22:Math.max(1,1.45/camera.aspect);
-    var cd=p>.96;if(cd!==canDrag){canDrag=cd;canvas.classList.toggle('grab',cd);}
+    var cd=p>.96;if(cd!==canDrag){canDrag=cd;canvas.classList.toggle('grab',cd);if(cd&&!window.__mdone){window.__mdone=1;window.__ev&&__ev('machine_completed');}}
     if(!cd&&!drag){yawT=0;pitchT=0;}
     if(cd&&!drag&&!hinted&&!REDUCE)yawT+=dt*.08;
     hint.classList.toggle('on',cd&&!hinted);
@@ -1325,6 +1334,25 @@ function initIntro(){
   if(document.readyState==='complete')go();else window.addEventListener('load',go);
   setTimeout(go,1800);
 }
+/* ============ ANALYTICS ============ */
+(function(){
+  if(!window.__ev)return;
+  var seen={};
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){var id=e.target.id||e.target.className.split(' ')[0];if(e.isIntersecting&&!seen[id]){seen[id]=1;__ev('section_view',{section:id});}});},{threshold:0,rootMargin:'-45% 0px -45% 0px'});
+    ['sectors','machine','group','campus','quality','leadership','contact'].forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});
+  }
+  document.addEventListener('click',function(e){var a=e.target.closest('a,button');if(!a)return;
+    var t=(a.textContent||'').trim().replace(/\s+/g,' ').slice(0,60);
+    if(a.matches('[data-mega]'))__ev('menu_open',{item:a.dataset.mega});
+    else if(a.closest('.film'))__ev('video_click',{video:t});
+    else if(a.classList.contains('btn'))__ev('cta_click',{label:t,href:a.getAttribute('href')||''});
+    else if(a.closest('.mega'))__ev('mega_link',{label:t});
+  },true);
+  var marks=[25,50,75,100],hit={};
+  window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-innerHeight;if(h<=0)return;var pc=scrollY/h*100;
+    marks.forEach(function(m){if(pc>=m-1&&!hit[m]){hit[m]=1;__ev('page_depth',{percent:m});}});},{passive:true});
+})();
 try{initLenis();}catch(e){console.warn(e);}
 try{initIntro();}catch(e){console.warn(e);document.documentElement.classList.remove('intro-on');}
 try{initMega();}catch(e){console.warn(e);}
