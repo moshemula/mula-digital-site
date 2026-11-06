@@ -591,348 +591,501 @@
     </div>
   </nav>
 
-  <!-- HERO - dark cinematic -->
-  <section class="srv-hero">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="hero-shape hero-shape-1"></div>
-    <div class="hero-shape hero-shape-2"></div>
-    <div class="hero-shape hero-shape-3"></div>
-    <div class="hero-shape hero-shape-4"></div>
-    <div class="wrap">
-      <div class="hero-inner">
-        <div class="hero-content">
-          <nav class="breadcrumb" aria-label="פירורי לחם">
-            <a href="/">בית</a>
-            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            <a href="services">שירותים</a>
-            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            <span style="color:rgba(255,255,255,.7)">קידום אתרים בגוגל</span>
-          </nav>
-          <h1><span class="accent">קידום אתרים</span> ברחובות</h1>
-          <p class="subtitle">להופיע ראשונים כשהלקוחות מחפשים אתכם. לא בזכות מזל. בזכות עבודה מסודרת.</p>
-          <div class="hero-actions">
-            <a href="tel:0508249824" class="btn btn-primary">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              שיחת אבחון · 050-824-9824
-            </a>
-            <a href="https://wa.me/972508249824" class="btn btn-white" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
-              שלחו וואטסאפ
-            </a>
+  <!-- ===== SEO v2 ===== -->
+  <style id="sv2-css">
+  body,.sv2,.sv2 *,.sec,.sec *,.xp,.xp *{font-family:'Heebo',system-ui,sans-serif!important}
+  .sv2{--n0:#07070B;--n1:#0E0E15;--n2:#16161F;--n3:#22222D;--ink:#0E0E12;--soft:#4a4a55;--mut:#8A8A92;--line:#ECECEC;--red:#E8003D;--pur:#7B2FBE;--lav:#C9A4FF;--grad:linear-gradient(120deg,#E8003D,#7B2FBE);color:var(--ink)}
+  .sv2 *{box-sizing:border-box}
+  .sv2 h1,.sv2 h2,.sv2 h3{margin:0;text-wrap:balance}
+  .s2-wrap{max-width:1200px;margin:0 auto;padding-inline:max(20px,env(safe-area-inset-left,0px))}
+  .s2-sec{padding-block:clamp(72px,9vw,120px);position:relative}
+  .s2-sec.dark{background:var(--n0);color:#fff}
+  .s2-sec.soft{background:#F6F5F9}
+  .s2-eye{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;letter-spacing:.04em;color:var(--pur)}
+  .s2-eye::before{content:"";width:26px;height:2px;border-radius:2px;background:var(--grad)}
+  .dark .s2-eye{color:var(--lav)}
+  .s2-h2{font-weight:900;font-size:clamp(32px,4.6vw,56px);line-height:1.04;letter-spacing:-.025em;margin-top:14px!important}
+  .s2-lead{font-weight:400;font-size:clamp(17px,1.5vw,19px);line-height:1.75;color:var(--soft);max-width:60ch;margin:18px 0 0}
+  .dark .s2-lead{color:rgba(255,255,255,.7)}
+  .s2-g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .s2-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:800;font-size:16px;padding:16px 28px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;transition:transform .2s,box-shadow .25s,border-color .2s,background .2s}
+  .s2-btn svg{width:18px;height:18px}
+  .s2-btn.pri{background:var(--grad);color:#fff;box-shadow:0 12px 34px rgba(232,0,61,.3)}
+  .s2-btn.pri:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(123,47,190,.4)}
+  .s2-btn.gh{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.2);color:#fff}
+  .s2-btn.gh:hover{border-color:#fff}
+  .sv2 a:focus-visible,.sv2 button:focus-visible,.sv2 input:focus-visible{outline:3px solid var(--lav);outline-offset:3px}
+
+  /* HERO */
+  .s2-hero{background:var(--n0);color:#fff;overflow:hidden;padding-block:clamp(118px,13vw,160px) clamp(56px,7vw,90px);position:relative}
+  .s2-hero::before{content:"";position:absolute;inset:-30% -20% auto auto;width:900px;height:900px;max-width:90vw;background:radial-gradient(closest-side,rgba(123,47,190,.42),transparent 70%);pointer-events:none}
+  .s2-hero::after{content:"";position:absolute;inset:auto auto -45% -15%;width:760px;height:760px;max-width:80vw;background:radial-gradient(closest-side,rgba(232,0,61,.24),transparent 70%);pointer-events:none}
+  .s2-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 30% 40%,#000 10%,transparent 70%);mask-image:radial-gradient(ellipse at 30% 40%,#000 10%,transparent 70%);pointer-events:none}
+  .s2-hero-in{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+  .s2-crumb{display:flex;gap:8px;font-size:13.5px;color:rgba(255,255,255,.5);margin-bottom:22px;flex-wrap:wrap}
+  .s2-crumb a{color:rgba(255,255,255,.7);text-decoration:none}
+  .s2-crumb a:hover{color:#fff}
+  .s2-hero h1{font-weight:900;font-size:clamp(44px,6.6vw,88px);line-height:.98;letter-spacing:-.035em}
+  .s2-hero h1 small{display:block;font-size:.3em;font-weight:600;letter-spacing:0;line-height:1.3;color:rgba(255,255,255,.6);margin-top:18px}
+  .s2-hero-sub{font-size:clamp(17px,1.6vw,20px);line-height:1.7;color:rgba(255,255,255,.74);max-width:46ch;margin:24px 0 30px}
+  .s2-hero-sub b{color:#fff;font-weight:700}
+  .s2-ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .s2-trust{display:flex;align-items:center;gap:14px;margin-top:28px;font-size:14px;color:rgba(255,255,255,.62)}
+  .s2-trust .st{color:#FFC94D;letter-spacing:2px}
+  .s2-trust b{color:#fff;font-size:16px}
+
+  /* SERP */
+  .s2-serp-wrap{position:relative;min-width:0}
+  .s2-serp{position:relative;background:#fff;color:#202124;border-radius:22px;padding:20px 20px 10px;box-shadow:0 40px 90px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.08);direction:rtl}
+  .s2-sbar{display:flex;align-items:center;gap:12px;border:1px solid #dfe1e5;border-radius:999px;padding:11px 16px;box-shadow:0 1px 6px rgba(32,33,36,.12)}
+  .s2-sbar svg{width:18px;height:18px;flex-shrink:0}
+  .s2-q{font-size:16px;color:#202124;min-height:1.4em;white-space:nowrap;overflow:hidden}
+  .s2-q::after{content:"";display:inline-block;width:1.5px;height:1.05em;background:#202124;vertical-align:-2px;margin-inline-start:2px;animation:s2blink 1s steps(1) infinite}
+  @keyframes s2blink{50%{opacity:0}}
+  .s2-tabs{display:flex;gap:18px;font-size:13px;color:#5f6368;padding:12px 6px 10px;border-bottom:1px solid #ebebeb}
+  .s2-tabs span:first-child{color:#1a73e8;border-bottom:2px solid #1a73e8;padding-bottom:8px}
+  .s2-res{position:relative;height:296px;margin-top:6px;overflow:hidden;border-radius:14px}
+  .s2-r{position:absolute;inset-inline:0;height:64px;padding:8px 6px;border-radius:14px;transition:transform .9s cubic-bezier(.65,0,.25,1),background .6s,box-shadow .6s}
+  .s2-r .u{display:flex;align-items:center;gap:8px;font-size:12px;color:#4d5156}
+  .s2-r .fav{width:22px;height:22px;border-radius:50%;background:#f1f3f4;display:grid;place-items:center;font-size:11px;font-weight:800;color:#5f6368;flex-shrink:0}
+  .s2-r .t{display:block;font-size:16px;color:#1a0dab;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .s2-r .bar{display:none}
+  .s2-r.me .fav{background:var(--grad);color:#fff}
+  .s2-r.me .t{font-weight:700}
+  .s2-r.me.top{background:linear-gradient(120deg,rgba(232,0,61,.07),rgba(123,47,190,.09));box-shadow:0 0 0 1.5px rgba(123,47,190,.35)}
+  .s2-pos{position:absolute;left:10px;top:10px;font-weight:900;font-size:13px;color:#fff;background:var(--grad);border-radius:999px;padding:5px 10px;white-space:nowrap;box-shadow:0 8px 20px rgba(232,0,61,.35);opacity:0;transition:opacity .4s}
+  .s2-r.me .s2-pos{opacity:1}
+  .s2-chip{position:absolute;display:inline-flex;align-items:center;gap:8px;background:rgba(22,22,31,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:10px 14px;font-weight:700;font-size:13.5px;color:#fff;white-space:nowrap;animation:s2float 6s ease-in-out infinite;z-index:2}
+  .s2-chip i{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+  .s2-chip.c1{top:-20px;left:8%}
+  .s2-chip.c2{top:44%;left:-46px;animation-delay:-2s}
+  .s2-chip.c3{bottom:-20px;left:22%;animation-delay:-4s}
+  @keyframes s2float{50%{transform:translateY(-10px)}}
+
+  /* PROOF STRIP */
+  .s2-proof{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);border-radius:24px;overflow:hidden;margin-top:clamp(56px,7vw,88px);position:relative;z-index:1}
+  .s2-proof>div{background:var(--n1);padding:26px 24px;min-width:0}
+  .s2-proof b{display:block;font-weight:900;font-size:clamp(32px,3.6vw,46px);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .s2-proof span{display:block;margin-top:10px;font-size:14.5px;line-height:1.45;color:rgba(255,255,255,.62)}
+  .s2-proof em{font-style:normal;display:block;margin-top:8px;font-size:12.5px;font-weight:700;color:var(--lav)}
+
+  /* PROBLEM */
+  .s2-prob{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,6vw,96px);align-items:center}
+  .s2-prob-copy p{font-size:18px;line-height:1.85;color:var(--soft);margin:0 0 16px;max-width:54ch}
+  .s2-prob-copy p b{color:var(--ink)}
+  .s2-big{font-weight:900;font-size:clamp(26px,3vw,36px);line-height:1.25;letter-spacing:-.015em;padding-inline-start:22px;border-inline-start:5px solid;border-image:var(--grad) 1;margin:26px 0!important;color:var(--ink)!important}
+  .s2-split{position:relative;border-radius:26px;background:var(--n1);color:#fff;padding:28px;overflow:hidden;min-width:0}
+  .s2-split h3{font-weight:800;font-size:15px;color:rgba(255,255,255,.55);letter-spacing:.02em}
+  .s2-mini{margin-top:16px;display:grid;gap:10px}
+  .s2-mini div{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:12px 14px;font-size:15px}
+  .s2-mini b{font-weight:900;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;background:rgba(255,255,255,.08);font-size:13px;flex-shrink:0}
+  .s2-mini .comp b{background:var(--grad)}
+  .s2-mini .comp{border-color:rgba(232,0,61,.35)}
+  .s2-mini .you{opacity:.42;border-style:dashed}
+  .s2-mini .you small{margin-inline-start:auto;font-size:12.5px;color:var(--lav)}
+
+  /* ORGANIC VS PAID */
+  .s2-ovp{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,72px);align-items:center}
+  .s2-ovp-copy p{font-size:17.5px;line-height:1.8;color:rgba(255,255,255,.72);margin:0 0 14px;max-width:52ch}
+  .s2-ovp-copy p b{color:#fff}
+  .s2-ovp-copy a{color:var(--lav);font-weight:700}
+  .s2-chart{background:var(--n1);border:1px solid rgba(255,255,255,.1);border-radius:26px;padding:24px;min-width:0}
+  .s2-chart-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+  .s2-leg{display:flex;gap:16px;font-size:13.5px;font-weight:700;color:rgba(255,255,255,.75)}
+  .s2-leg i{display:inline-block;width:12px;height:4px;border-radius:2px;margin-inline-end:6px;vertical-align:middle}
+  .s2-tog{display:inline-flex;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:4px}
+  .s2-tog button{border:0;background:none;color:rgba(255,255,255,.65);font-weight:800;font-size:13.5px;padding:8px 14px;border-radius:999px;cursor:pointer;transition:background .25s,color .25s}
+  .s2-tog button.on{background:#fff;color:var(--n0)}
+  .s2-chart svg{display:block;width:100%;height:auto;margin-top:18px;overflow:visible}
+  .s2-chart .gl line{stroke:rgba(255,255,255,.08)}
+  .s2-chart text{fill:rgba(255,255,255,.45);font-size:12px;font-family:'Heebo',sans-serif}
+  .s2-note{font-size:12.5px;color:rgba(255,255,255,.45);margin-top:10px}
+  .s2-cmp{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+  .s2-cmp div{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:12px 14px;min-width:0}
+  .s2-cmp small{display:block;font-size:12.5px;color:rgba(255,255,255,.5)}
+  .s2-cmp b{display:block;font-weight:800;font-size:14.5px;margin-top:4px}
+  .s2-cmp b.o{color:#fff}
+  .s2-cmp span{display:block;font-size:13px;color:rgba(255,255,255,.55);margin-top:2px}
+
+  /* BENTO */
+  .s2-bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:48px}
+  .s2-b{position:relative;background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;overflow:hidden;transition:transform .35s,box-shadow .35s,border-color .35s;min-width:0}
+  .s2-b:hover{transform:translateY(-4px);box-shadow:0 24px 50px rgba(14,14,18,.08);border-color:rgba(123,47,190,.25)}
+  .s2-b.w3{grid-column:span 3}.s2-b.w2{grid-column:span 2}.s2-b.w4{grid-column:span 4}
+  .s2-b.feat{background:var(--n1);color:#fff;border-color:transparent}
+  .s2-ic{width:50px;height:50px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(232,0,61,.1),rgba(123,47,190,.14));color:var(--pur);margin-bottom:18px}
+  .feat .s2-ic{background:rgba(255,255,255,.08);color:var(--lav)}
+  .s2-ic svg{width:24px;height:24px}
+  .s2-b h3{font-weight:800;font-size:22px;line-height:1.25}
+  .s2-b p{margin:10px 0 0;font-size:16px;line-height:1.7;color:var(--soft)}
+  .feat p{color:rgba(255,255,255,.7)}
+  .s2-b .gain{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-weight:800;font-size:16px;line-height:1.45;color:var(--ink)}
+  .feat .gain{border-color:rgba(255,255,255,.12);color:#fff}
+  .s2-kw{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .s2-kw span{font-size:13.5px;font-weight:700;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)}
+  .s2-kw span.hot{background:var(--grad);border-color:transparent}
+
+  /* PROCESS */
+  .s2-proc{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:56px}
+  .s2-proc::before{content:"";position:absolute;top:27px;inset-inline:6%;height:2px;background:linear-gradient(90deg,#7B2FBE,#E8003D);opacity:.35}
+  .s2-st{position:relative;text-align:center;min-width:0}
+  .s2-st .n{position:relative;z-index:1;width:56px;height:56px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;background:var(--n0);color:#fff;font-weight:900;font-size:18px;box-shadow:0 0 0 6px #F6F5F9,0 0 0 7px rgba(123,47,190,.3)}
+  .s2-st:last-child .n{background:var(--grad)}
+  .s2-st h3{font-weight:800;font-size:18.5px}
+  .s2-st p{margin:8px auto 0;font-size:15px;line-height:1.65;color:var(--soft);max-width:26ch}
+  .s2-st small{display:block;margin-top:10px;font-weight:700;font-size:13px;color:var(--pur)}
+
+  /* PRICING */
+  .s2-price{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px;align-items:stretch}
+  .s2-p{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px 24px;min-width:0}
+  .s2-p.pop{background:var(--n1);color:#fff;border-color:transparent;box-shadow:0 30px 60px rgba(123,47,190,.25);transform:translateY(-10px)}
+  .s2-p .tag{position:absolute;top:-13px;inset-inline-start:24px;background:var(--grad);color:#fff;font-weight:800;font-size:12.5px;padding:6px 12px;border-radius:999px}
+  .s2-p h3{font-weight:800;font-size:18px}
+  .s2-p .pr{margin-top:14px;font-weight:900;font-size:clamp(24px,2.2vw,30px);line-height:1.1;letter-spacing:-.02em;white-space:nowrap}
+  .s2-p .pr small{display:block;font-size:13.5px;font-weight:600;color:var(--mut);letter-spacing:0;margin-top:4px}
+  .pop .pr small{color:rgba(255,255,255,.55)}
+  .s2-p ul{list-style:none;margin:18px 0 0;padding:16px 0 0;border-top:1px solid var(--line);display:grid;gap:10px;font-size:15px;line-height:1.5}
+  .pop ul{border-color:rgba(255,255,255,.12)}
+  .s2-p li{display:flex;gap:10px}
+  .s2-p li svg{width:18px;height:18px;flex-shrink:0;margin-top:2px;color:var(--pur)}
+  .pop li svg{color:var(--lav)}
+  .s2-pnote{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;margin-top:28px;padding:20px 24px;border-radius:20px;background:#fff;border:1px solid var(--line)}
+  .s2-pnote p{margin:0;font-size:16px;line-height:1.6;color:var(--soft);max-width:70ch}
+  .s2-pnote b{color:var(--ink)}
+
+  /* RESULTS TIMELINE */
+  .s2-when{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:44px;border-radius:22px;overflow:hidden;border:1px solid var(--line)}
+  .s2-w{position:relative;padding:22px 18px 20px;background:#fff;border-inline-start:1px solid var(--line);min-width:0}
+  .s2-w:first-child{border-inline-start:0}
+  .s2-w::before{content:"";position:absolute;top:0;inset-inline:0;height:5px;background:var(--grad);opacity:var(--o)}
+  .s2-w b{display:block;font-weight:900;font-size:17px}
+  .s2-w p{margin:8px 0 0;font-size:14.5px;line-height:1.6;color:var(--soft)}
+
+  /* CHECK */
+  .s2-check{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center;background:var(--n1);color:#fff;border-radius:32px;padding:clamp(32px,5vw,64px);position:relative;overflow:hidden}
+  .s2-check::before{content:"";position:absolute;inset:-50% -20% auto auto;width:70%;height:200%;background:radial-gradient(closest-side,rgba(123,47,190,.4),transparent 70%)}
+  .s2-check>*{position:relative;min-width:0}
+  .s2-check h2{font-weight:900;font-size:clamp(28px,3.6vw,44px);line-height:1.1}
+  .s2-check p{color:rgba(255,255,255,.72);font-size:17px;line-height:1.7;margin:14px 0 0}
+  .s2-check ul{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:8px;font-size:15.5px;color:rgba(255,255,255,.82)}
+  .s2-check li::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--grad);margin-inline-end:10px;vertical-align:2px}
+  .s2-form{display:flex;flex-direction:column;gap:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:24px}
+  .s2-form label{font-weight:700;font-size:14.5px;color:rgba(255,255,255,.8)}
+  .s2-form input{width:100%;font-size:17px;padding:15px 16px;border-radius:14px;border:1.5px solid rgba(255,255,255,.18);background:rgba(0,0,0,.25);color:#fff;direction:ltr;text-align:left}
+  .s2-form input::placeholder{color:rgba(255,255,255,.35)}
+  .s2-form small{font-size:13px;color:rgba(255,255,255,.5)}
+
+  /* MOTION */
+  .s2-js .s2-rv{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .s2-js .s2-rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.s2-js .s2-rv{opacity:1;transform:none;transition:none}.s2-chip{animation:none}.s2-r{transition:none}.s2-q::after{animation:none}}
+
+  /* RESPONSIVE */
+  @media (max-width:1080px){
+    .s2-hero-in,.s2-prob,.s2-ovp,.s2-check{grid-template-columns:1fr}
+    .s2-serp-wrap{max-width:560px;width:100%;margin:10px auto 0}
+    .s2-proof{grid-template-columns:1fr 1fr}
+    .s2-bento{grid-template-columns:1fr 1fr}
+    .s2-b.w3,.s2-b.w2,.s2-b.w4{grid-column:span 1}
+    .s2-b.feat{grid-column:span 2}
+    .s2-price{grid-template-columns:1fr 1fr}
+    .s2-p.pop{transform:none}
+    .s2-proc{grid-template-columns:1fr;gap:26px;max-width:560px;margin-inline:auto}
+    .s2-proc::before{top:28px;bottom:28px;inset-inline:auto;inset-inline-start:27px;width:2px;height:auto;background:linear-gradient(#7B2FBE,#E8003D)}
+    .s2-st{display:grid;grid-template-columns:56px 1fr;gap:18px;text-align:start;align-items:start}
+    .s2-st .n{margin:0}
+    .s2-st p{margin-inline:0;max-width:none}
+    .s2-when{grid-template-columns:1fr}
+    .s2-w{border-inline-start:0;border-top:1px solid var(--line)}
+    .s2-w:first-child{border-top:0}
+  }
+  @media (max-width:640px){
+    .s2-hero{padding-top:104px}
+    .s2-ctas .s2-btn{flex:1 1 100%}
+    .s2-res{height:272px}
+    .s2-r{height:58px}
+    .s2-r .t{font-size:15px}
+    .s2-chip.c2{left:auto;right:10px;top:auto;bottom:-22px}
+    .s2-chip.c1{left:10px}
+    .s2-chip.c3{display:none}
+    .s2-pos{font-size:11.5px;padding:3px 8px}
+    .s2-proof>div{padding:20px 16px}
+    .s2-bento,.s2-price{grid-template-columns:1fr}
+    .s2-b.feat{grid-column:auto}
+    .s2-cmp{grid-template-columns:1fr}
+    .s2-b{padding:24px 22px}
+  }
+  </style>
+
+  <div class="sv2">
+
+  <!-- HERO -->
+  <section class="s2-hero" aria-labelledby="s2-h1">
+    <div class="s2-grid-bg" aria-hidden="true"></div>
+    <div class="s2-wrap">
+      <div class="s2-hero-in">
+        <div>
+          <nav class="s2-crumb" aria-label="פירורי לחם"><a href="./">בית</a><span aria-hidden="true">/</span><a href="services">שירותים</a><span aria-hidden="true">/</span><span>קידום אתרים בגוגל</span></nav>
+          <h1 id="s2-h1">קידום אתרים <span class="s2-g">ברחובות</span><small>ובכל מקום שהלקוחות שלכם מחפשים</small></h1>
+          <p class="s2-hero-sub">כשמישהו מחפש בגוגל את מה שאתם מוכרים, הוא בוחר באחת משלוש התוצאות הראשונות. <b>אני דואג שאחת מהן תהיה שלכם.</b> בלי מזל ובלי קיצורי דרך, בעבודה מסודרת שנשארת לאורך זמן.</p>
+          <div class="s2-ctas">
+            <a class="s2-btn pri" href="tel:0508249824"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>שיחת אבחון · 050-824-9824</a>
+            <a class="s2-btn gh" href="#s2-check">בדיקה אישית לאתר שלי</a>
           </div>
-          <a href="https://share.google/px8zW59yHP21QZPyc" target="_blank" rel="noopener" class="google-trust">
-            <svg class="g-icon" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-            <div class="stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.27 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg></div>
-            <b>5.0</b>
-            <small>20 ביקורות בגוגל</small>
-          </a>
+          <div class="s2-trust"><span class="st" aria-hidden="true">★★★★★</span><span><b>5.0</b> בגוגל · 20 ביקורות</span></div>
         </div>
-        <div class="hero-visual">
-          <div class="sh-stage">
-            <figure class="sh-main"><div class="sh-bar"><i></i><i></i><i></i><span>יוחאי ג׳קסון · אינסטלציה</span></div><img src="assets/srv-hero/yochai.webp" alt="יוחאי ג׳קסון · אינסטלציה" width="1000" height="600" fetchpriority="high" /></figure>
-            <figure class="sh-second "><img src="assets/srv-hero/ray.webp" alt="עוד עבודה מתיק העבודות" loading="lazy" /></figure>
-            <div class="sh-chip"><b>~800</b><span>מבקרים אורגניים בחודש, בלי לשלם על קליק</span></div>
-            <a class="sh-case" href="case-jackson"><span class="sh-dot"></span><small>מתוך תיק העבודות</small><b>יוחאי ג׳קסון</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></a>
+        <div class="s2-serp-wrap" aria-label="המחשה: אתר עולה למקום הראשון בגוגל">
+          <span class="s2-chip c1" aria-hidden="true"><i style="background:#34A853"></i>חיפוש בגוגל</span>
+          <span class="s2-chip c2" aria-hidden="true"><i style="background:#EA4335"></i>גוגל מפות</span>
+          <span class="s2-chip c3" aria-hidden="true"><i style="background:#C9A4FF"></i>תשובות AI</span>
+          <div class="s2-serp" aria-hidden="true">
+            <div class="s2-sbar"><svg viewBox="0 0 24 24" fill="none" stroke="#9aa0a6" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span class="s2-q" id="s2q"></span></div>
+            <div class="s2-tabs"><span>הכל</span><span>מפות</span><span>תמונות</span><span>חדשות</span></div>
+            <div class="s2-res" id="s2res"></div>
           </div>
         </div>
       </div>
 
-      <div class="metrics">
-        <div class="metric"><b data-count="114">0</b><span>ביקורות 5.0 שבנינו לעסק נדל״ן מקומי</span></div>
-        <div class="metric"><b data-count="126">0</b><span>עסקים שליוויתי</span></div>
-        <div class="metric"><b data-count="9">0</b><span>שנים בדיגיטל</span></div>
-        <div class="metric"><b>5.0</b><span>דירוג בגוגל · 20 ביקורות</span></div>
+      <div class="s2-proof">
+        <div><b data-c="509442">509,442</b><span>הופעות בגוגל ב-11 חודשים</span><em>יוחאי ג׳קסון, אינסטלציה</em></div>
+        <div><b data-c="2832">2,832</b><span>קליקים אורגניים, בלי שקל על פרסום</span><em>יוחאי ג׳קסון, אינסטלציה</em></div>
+        <div><b data-c="46">46</b><span>ביטויים בעמוד הראשון של גוגל</span><em>יוחאי ג׳קסון, אינסטלציה</em></div>
+        <div><b>#1</b><span>ל"רואה חשבון בגבעתיים"</span><em>הראלה הלוי, רואת חשבון</em></div>
       </div>
     </div>
   </section>
 
-  <!-- THE PROBLEM - editorial style -->
-  <section class="problem-sec sec">
-    <div class="wrap narrow">
-      <div class="prose reveal">
-        <p>תעשו ניסוי.</p>
-        <p>פתחו את גוגל וחפשו את מה שהלקוחות שלכם מחפשים. את השירות שלכם. את המוצר שלכם. את התחום שלכם + העיר שלכם.</p>
-        <p>מה אתם רואים?</p>
-        <p>אם זה לא אתם בתוצאות הראשונות, מישהו אחר שם. <strong>המתחרים שלכם.</strong></p>
-        <p>וכל יום שעובר בלי שאתם נמצאים בגוגל, זה יום שבו לקוחות שחיפשו בדיוק את מה שאתם מציעים, הגיעו למישהו אחר.</p>
+  <!-- PROBLEM -->
+  <section class="s2-sec" aria-labelledby="s2-prob-t">
+    <div class="s2-wrap s2-prob">
+      <div class="s2-prob-copy s2-rv">
+        <span class="s2-eye">תעשו ניסוי</span>
+        <h2 class="s2-h2" id="s2-prob-t">חפשו בגוגל את מה שאתם מוכרים. <span class="s2-g">מי מופיע ראשון?</span></h2>
+        <p style="margin-top:22px">את השירות שלכם. את התחום שלכם, ועוד שם העיר. אם זה לא אתם בתוצאות הראשונות, מישהו אחר שם. <b>המתחרים שלכם.</b></p>
+        <p>וכל יום שעובר בלי שאתם בגוגל, זה יום שבו לקוחות שחיפשו בדיוק את מה שאתם מציעים הגיעו למישהו אחר. הם לא בחרו בו כי הוא טוב יותר. הם בחרו בו כי הוא היה שם.</p>
+        <p class="s2-big">אם הלקוח מחפש את מה שאתם מוכרים ומוצא את המתחרה, הפסדתם אותו.</p>
+        <p>קידום אתרים מסדר את זה. <b>לא ביום אחד, אבל בצורה שנשארת.</b></p>
       </div>
-      <div class="callout reveal">אם הלקוח מחפש את מה שאתה מוכר ומוצא את המתחרה, הפסדת אותו.</div>
-      <div class="prose reveal">
-        <p>הם לא ידעו שאתם קיימים. לא כי הם לא רצו אתכם, אלא כי גוגל לא הראה אתכם.</p>
-        <p>קידום אתרים מסדר את זה. <strong>לא ביום אחד, אבל בצורה שנשארת.</strong></p>
+      <div class="s2-split s2-rv" aria-label="המחשה: מה הלקוח רואה כשהוא מחפש">
+        <h3>מה הלקוח רואה עכשיו</h3>
+        <div class="s2-mini">
+          <div class="comp"><b>1</b>המתחרה שלכם</div>
+          <div class="comp"><b>2</b>עוד מתחרה</div>
+          <div class="comp"><b>3</b>אתר מדריכים</div>
+          <div class="you"><b>?</b>האתר שלכם<small>עמוד 3, אם בכלל</small></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- WHY SEO - comparison + depth -->
-  <section class="sec surface">
-    <div class="wrap narrow">
-      <div class="prose">
-        <div class="s-head reveal"><span class="eyebrow">למה SEO</span><h2>קידום אורגני מול פרסום ממומן: מה באמת משתלם?</h2></div>
-
-        <div class="reveal">
-          <p>בעלי עסקים שואלים אותי כל הזמן: "למה לא פשוט לשלם לגוגל על מודעות?"</p>
-          <p>התשובה: <a href="service-google-ads" style="color:var(--purple);font-weight:700">פרסום בגוגל</a> עובד. אני עושה את זה ללקוחות. אבל יש הבדל מהותי בין תנועה שאתה קונה לתנועה שאתה מרוויח.</p>
-          <p>פרסום ממומן זה ברז. פותח, יש מים. סוגר, יבש. SEO זה באר. לוקח זמן לחפור, אבל אחרי שהמים זורמים, הם לא מפסיקים.</p>
+  <!-- ORGANIC VS PAID -->
+  <section class="s2-sec dark" aria-labelledby="s2-ovp-t">
+    <div class="s2-wrap s2-ovp">
+      <div class="s2-ovp-copy s2-rv">
+        <span class="s2-eye">למה SEO</span>
+        <h2 class="s2-h2" id="s2-ovp-t">קידום אורגני מול פרסום ממומן: <span class="s2-g">מה באמת משתלם?</span></h2>
+        <p style="margin-top:22px">בעלי עסקים שואלים אותי כל הזמן: "למה לא פשוט לשלם לגוגל על מודעות?"</p>
+        <p><a href="service-google-ads">פרסום בגוגל</a> עובד, ואני עושה אותו ללקוחות. אבל יש הבדל בין תנועה שקונים לתנועה שמרוויחים. <b>פרסום ממומן הוא ברז: פותחים, יש מים. סוגרים, יבש. SEO הוא באר:</b> לוקח זמן לחפור, אבל כשהמים מתחילים לזרום הם לא נעצרים.</p>
+        <p><b>הגישה שלי היא שילוב.</b> בהתחלה מריצים <a href="service-google-ads">קמפיינים בגוגל</a> כדי להביא פניות מהיום הראשון, ובמקביל בונים SEO. אחרי 3 עד 6 חודשים הקידום האורגני מתחיל לעבוד, מורידים את תקציב הפרסום, והתנועה האורגנית תופסת את מקומו. ככה לא מפסידים אף יום, ולא נשארים תלויים בתשלום לנצח.</p>
+        <p>קראו עוד: <a href="blog-eich-ladaat-im-hapirsum-oved">איך לדעת אם הפרסום שלך באמת עובד</a>, ו<a href="blog-lama-haatar-lo-mofia-begoogle">10 סיבות שהאתר לא מופיע בגוגל</a>.</p>
+      </div>
+      <div class="s2-chart s2-rv">
+        <div class="s2-chart-top">
+          <div class="s2-leg"><span><i style="background:#C9A4FF"></i>קידום אורגני</span><span><i style="background:#E8003D"></i>פרסום ממומן</span></div>
+          <div class="s2-tog" role="group" aria-label="מה קורה כשמפסיקים לשלם">
+            <button type="button" class="on" data-stop="0" aria-pressed="true">משלמים על פרסום</button>
+            <button type="button" data-stop="1" aria-pressed="false">מפסיקים לשלם</button>
+          </div>
         </div>
-
-        <table class="tbl reveal" style="margin:28px 0">
-          <thead><tr><th>קריטריון</th><th>SEO אורגני</th><th>Google Ads</th></tr></thead>
-          <tbody>
-            <tr><td><strong>עלות לקליק</strong></td><td>0 ש"ח (אחרי ההשקעה)</td><td>5-80 ש"ח לקליק</td></tr>
-            <tr><td><strong>זמן לתוצאות</strong></td><td>2-6 חודשים</td><td>מיידי</td></tr>
-            <tr><td><strong>מה קורה כשמפסיקים</strong></td><td>התנועה נשארת חודשים</td><td>נעלם מיד</td></tr>
-            <tr><td><strong>אמינות בעיני הגולש</strong></td><td>גבוהה (תוצאה אורגנית)</td><td>נמוכה יותר (מודעה)</td></tr>
-            <tr><td><strong>ROI לאורך זמן</strong></td><td>עולה עם הזמן</td><td>קבוע (משלם על כל קליק)</td></tr>
-            <tr><td><strong>מתאים ל...</strong></td><td>צמיחה ארוכת טווח</td><td>תוצאות מהירות, קמפיינים</td></tr>
-          </tbody>
-        </table>
-
-        <div class="reveal">
-          <p>הגישה שלי? <strong>שילוב.</strong> בהתחלה מריצים <a href="service-google-ads" style="color:var(--purple);font-weight:700">קמפיינים בגוגל</a> כדי להביא לידים מיידיים. במקביל בונים SEO. אחרי 3-6 חודשים ה-SEO מתחיל לעבוד, מורידים את התקציב הממומן, והתנועה האורגנית מחליפה אותו. ככה לא מפסידים אף יום, וגם לא נשארים תלויים בתשלום לנצח.</p>
-          <p>קרא עוד ב<a href="blog-eich-ladaat-im-hapirsum-oved" style="color:var(--purple);font-weight:700">מאמר: איך לדעת אם הפרסום שלך באמת עובד</a>.</p>
-          <p>האתר בכלל לא מופיע בגוגל? <a href="blog-lama-haatar-lo-mofia-begoogle" style="color:var(--purple);font-weight:700">10 סיבות ובדיקה עצמית ב-15 דקות</a>.</p>
+        <svg viewBox="0 0 520 250" role="img" aria-label="גרף המחשה: תנועה מפרסום ממומן נעלמת כשמפסיקים לשלם, תנועה אורגנית ממשיכה לעלות">
+          <g class="gl"><line x1="20" y1="40" x2="500" y2="40"/><line x1="20" y1="100" x2="500" y2="100"/><line x1="20" y1="160" x2="500" y2="160"/><line x1="20" y1="215" x2="500" y2="215"/></g>
+          <path id="s2paid" fill="none" stroke="#E8003D" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" d=""/>
+          <path id="s2org" fill="none" stroke="#C9A4FF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" d=""/>
+          <line id="s2stop" x1="300" y1="30" x2="300" y2="215" stroke="rgba(255,255,255,.35)" stroke-dasharray="4 6" opacity="0"/>
+          <text id="s2stopt" x="300" y="22" text-anchor="middle" opacity="0">מפסיקים לשלם</text>
+          <text x="500" y="240" text-anchor="end">חודש 1</text><text x="20" y="240" text-anchor="start">חודש 12</text>
+        </svg>
+        <p class="s2-note">גרף להמחשה של המגמה, לא נתונים של לקוח.</p>
+        <div class="s2-cmp">
+          <div><small>עלות לקליק</small><b class="o">0 ₪ אחרי ההשקעה</b><span>ממומן: 5 עד 80 ₪</span></div>
+          <div><small>זמן לתוצאות</small><b class="o">2 עד 6 חודשים</b><span>ממומן: מיידי</span></div>
+          <div><small>כשמפסיקים</small><b class="o">התנועה נשארת</b><span>ממומן: נעלם מיד</span></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- WHAT'S INCLUDED -->
-  <section class="sec">
-    <div class="wrap narrow">
-      <div class="prose">
-        <div class="s-head reveal"><span class="eyebrow">מה כולל השירות</span><h2>קידום אתרים שעובד, לא רק סלוגנים</h2></div>
-
-        <div class="reveal">
+  <section class="s2-sec soft" aria-labelledby="s2-inc-t">
+    <div class="s2-wrap">
+      <div class="s2-rv">
+        <span class="s2-eye">מה כולל השירות</span>
+        <h2 class="s2-h2" id="s2-inc-t">קידום אתרים שעובד, <span class="s2-g">לא רק סלוגנים</span></h2>
+      </div>
+      <div class="s2-bento">
+        <article class="s2-b w4 feat s2-rv">
+          <span class="s2-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></span>
           <h3>מחקר מילות מפתח</h3>
-          <p>הכל מתחיל מלהבין מה הלקוחות שלכם מחפשים. לא מה שאתם חושבים שהם מחפשים, אלא מה שהם <strong>באמת</strong> מקלידים בגוגל. אני מזהה את הביטויים שיביאו תנועה איכותית, לא סתם נפח.</p>
-        </div>
-
-        <div class="reveal">
-          <h3>אופטימיזציה On-Page</h3>
-          <p>כותרות, תיאורים, מבנה תוכן, כותרות H1-H3, Schema Markup: כל מה שגוגל צריך כדי להבין בדיוק על מה הדף שלכם מדבר. לא טריקים. תקשורת ברורה עם מנוע החיפוש, כולל סימון שעוזר לגוגל להבדיל ביניכם לבין <a href="blog-google-mevalbel-oti-im-mishehu-acher">מישהו אחר עם אותו שם</a>.</p>
-        </div>
-
-        <div class="reveal">
+          <p>הכל מתחיל מלהבין מה הלקוחות שלכם באמת מקלידים בגוגל. לא מה שאתם חושבים שהם מחפשים. אני מזהה את הביטויים שמביאים תנועה איכותית, לא סתם נפח.</p>
+          <div class="s2-kw" aria-label="דוגמה לביטויים"><span class="hot">אינסטלטור בגוש דן</span><span>איתור נזילות</span><span>פתיחת סתימה דחוף</span><span>נזילה מהתקרה</span></div>
+          <div class="gain">הכסף הולך על הביטויים שמביאים פניות, לא על מילים שאף אחד לא קונה דרכן.</div>
+        </article>
+        <article class="s2-b w2 s2-rv">
+          <span class="s2-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
           <h3>SEO טכני</h3>
-          <p>מהירות טעינה, התאמה למובייל, מבנה URL נקי, ניווט פנימי, robots.txt, sitemap, ותיקון שגיאות. זה הבסיס. בלי בסיס טכני תקין, שום תוכן לא יעזור.</p>
-        </div>
-
-        <div class="reveal">
-          <h3>אסטרטגיית תוכן</h3>
-          <p>תוכן שנכתב לבני אדם, לא לרובוטים. מאמרים, דפי שירות, דפי נחיתה: כל דף עם מטרה ברורה וביטוי מפתח שמוביל אותו. תוכן שעונה על שאלות אמיתיות של לקוחות אמיתיים.</p>
-        </div>
-
-        <div class="reveal">
-          <h3>בניית קישורים</h3>
-          <p>קישורים מאתרים איכותיים שמגיעים אליכם. לא ספאם, לא רכישה של קישורים זולים. בניית סמכות אמיתית. גוגל מתייחס לקישורים כהמלצות. אני דואג שתקבלו המלצות מהמקומות הנכונים.</p>
-        </div>
-
-        <div class="reveal">
-          <h3>דוחות חודשיים</h3>
-          <p>כל חודש אתם מקבלים דוח ברור: איפה הייתם, איפה אתם עכשיו, ומה עשינו. בלי מילים מקצועיות מיותרות. מספרים, גרפים, ותוכנית לחודש הבא.</p>
-        </div>
+          <p>מהירות טעינה, התאמה למובייל, מבנה כתובות, ניווט פנימי, robots.txt, sitemap ותיקון שגיאות. בלי בסיס טכני תקין, שום תוכן לא יעזור.</p>
+        </article>
+        <article class="s2-b w2 s2-rv">
+          <span class="s2-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg></span>
+          <h3>אופטימיזציה לכל דף</h3>
+          <p>כותרות, תיאורים, מבנה תוכן ו-Schema. כל מה שגוגל צריך כדי להבין על מה הדף מדבר, וכדי להבדיל ביניכם לבין <a href="blog-google-mevalbel-oti-im-mishehu-acher">מישהו אחר עם אותו שם</a>.</p>
+        </article>
+        <article class="s2-b w2 s2-rv">
+          <span class="s2-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4z"/></svg></span>
+          <h3>תוכן שנכתב לבני אדם</h3>
+          <p>מאמרים, דפי שירות ודפי נחיתה. כל דף עם מטרה ברורה, שעונה על שאלות אמיתיות של לקוחות אמיתיים.</p>
+        </article>
+        <article class="s2-b w2 s2-rv">
+          <span class="s2-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></span>
+          <h3>בניית סמכות</h3>
+          <p>קישורים מאתרים איכותיים ורלוונטיים. לא ספאם ולא קישורים זולים. גוגל מתייחס לקישורים כהמלצות, ואני דואג שתקבלו אותן מהמקומות הנכונים.</p>
+        </article>
+        <article class="s2-b w3 s2-rv">
+          <span class="s2-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span>
+          <h3>דוח חודשי ברור</h3>
+          <p>כל חודש: איפה הייתם, איפה אתם עכשיו, מה עשינו ומה עושים בחודש הבא. מספרים וגרפים, בלי מילים מקצועיות מיותרות.</p>
+          <div class="gain">יודעים בדיוק מה מקבלים על הכסף, כל חודש.</div>
+        </article>
+        <article class="s2-b w3 s2-rv">
+          <span class="s2-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <h3>ליווי אישי ושוטף</h3>
+          <p>לא מערכת אוטומטית ולא מנהל לקוח מתחלף. אדם אחד שמכיר את העסק שלכם, זמין לשאלות, ואחראי על התוצאה.</p>
+          <div class="gain">יש לכם כתובת אחת, וזה תמיד אני.</div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- PROCESS - timeline layout -->
-  <section class="process-sec">
-    <div class="wrap">
-      <div class="s-head center reveal">
-        <span class="eyebrow">איך זה עובד</span>
-        <h2>תהליך קידום אתרים: מהאבחון ועד התוצאות</h2>
-        <p>בלי קיצורי דרך. כל שלב בונה על הקודם.</p>
+  <!-- PROCESS -->
+  <section class="s2-sec soft" style="padding-top:0" aria-labelledby="s2-proc-t">
+    <div class="s2-wrap">
+      <div class="s2-rv" style="text-align:center">
+        <span class="s2-eye">איך זה עובד</span>
+        <h2 class="s2-h2" id="s2-proc-t">תהליך קידום אתרים: מהאבחון ועד התוצאות</h2>
+        <p class="s2-lead" style="margin-inline:auto">בלי קיצורי דרך. כל שלב בונה על הקודם.</p>
       </div>
-      <div class="timeline">
-        <div class="tl-step reveal">
-          <span class="s-num">שלב 01</span>
-          <h4>אבחון ומחקר</h4>
-          <p>אודיט טכני מלא לאתר + מחקר מילות מפתח מעמיק. מזהים את ההזדמנויות, הבעיות, ואת הביטויים שיניבו את התנועה הכי רלוונטית.</p>
-        </div>
-        <div class="tl-step reveal">
-          <span class="s-num">שלב 02</span>
-          <h4>אופטימיזציה טכנית</h4>
-          <p>תיקון מהירות, מבנה אתר, Schema, ניווט פנימי וכל מה שהאתר צריך כדי שגוגל יוכל לסרוק ולהבין אותו בצורה מושלמת.</p>
-        </div>
-        <div class="tl-step reveal">
-          <span class="s-num">שלב 03</span>
-          <h4>תוכן ממוקד</h4>
-          <p>כתיבת תוכן שמותאם לכוונת החיפוש של הלקוחות: מאמרים, דפי שירות ותוכן שעונה על שאלות אמיתיות ומושך תנועה אורגנית.</p>
-        </div>
-        <div class="tl-step reveal">
-          <span class="s-num">שלב 04</span>
-          <h4>בניית סמכות</h4>
-          <p>בניית קישורים איכותיים, אזכורי מותג ונוכחות דיגיטלית שמוכיחה לגוגל שהאתר שלכם אמין ורלוונטי.</p>
-        </div>
-        <div class="tl-step reveal">
-          <span class="s-num">שלב 05</span>
-          <h4>מדידה ואופטימיזציה</h4>
-          <p>דוחות חודשיים עם נתונים ברורים. מה עלה, מה צריך שיפור, ומה עושים בחודש הבא. התאמות לפי נתונים, לא לפי תחושות.</p>
-        </div>
+      <div class="s2-proc">
+        <div class="s2-st s2-rv"><span class="n">01</span><div><h3>אבחון ומחקר</h3><p>בדיקה טכנית מלאה של האתר ומחקר מילות מפתח. מזהים הזדמנויות, בעיות ואת הביטויים שיביאו את התנועה הנכונה.</p><small>חודש 1</small></div></div>
+        <div class="s2-st s2-rv"><span class="n">02</span><div><h3>תיקונים טכניים</h3><p>מהירות, מבנה, Schema וניווט פנימי, כדי שגוגל יוכל לסרוק ולהבין את האתר בצורה מושלמת.</p><small>חודש 1 עד 2</small></div></div>
+        <div class="s2-st s2-rv"><span class="n">03</span><div><h3>תוכן ממוקד</h3><p>מאמרים ודפי שירות שמותאמים למה שהלקוחות באמת מחפשים, ומושכים תנועה אורגנית.</p><small>חודש 2 ואילך</small></div></div>
+        <div class="s2-st s2-rv"><span class="n">04</span><div><h3>בניית סמכות</h3><p>קישורים איכותיים, אזכורי מותג ונוכחות שמוכיחה לגוגל שהאתר שלכם אמין ורלוונטי.</p><small>שוטף</small></div></div>
+        <div class="s2-st s2-rv"><span class="n">05</span><div><h3>מדידה ושיפור</h3><p>דוח חודשי: מה עלה, מה צריך שיפור, ומה עושים הלאה. החלטות לפי נתונים, לא לפי תחושות.</p><small>כל חודש</small></div></div>
+      </div>
+
+      <div class="s2-when s2-rv" aria-label="מתי התוצאות מגיעות">
+        <div class="s2-w" style="--o:.25"><b>חודש 1 עד 2</b><p>אבחון, תיקונים טכניים, מחקר מילות מפתח ואופטימיזציה ראשונית</p></div>
+        <div class="s2-w" style="--o:.45"><b>חודש 2 עד 3</b><p>תוכן חדש עולה, שיפור ראשוני בדירוגים</p></div>
+        <div class="s2-w" style="--o:.65"><b>חודש 3 עד 6</b><p>עלייה משמעותית בדירוגים, התנועה גדלה והפניות מתחילות</p></div>
+        <div class="s2-w" style="--o:.85"><b>חודש 6 עד 12</b><p>ביסוס בעמוד הראשון, תנועה יציבה והחזר השקעה חיובי</p></div>
+        <div class="s2-w" style="--o:1"><b>שנה ומעלה</b><p>נוכחות חזקה בתוצאות, תנועה עקבית ועלות לליד שיורדת</p></div>
       </div>
     </div>
   </section>
 
-  <!-- HOW MUCH DOES SEO COST -->
-  <section class="sec">
-    <div class="wrap narrow">
-      <div class="prose">
-        <div class="s-head reveal"><span class="eyebrow">מחירים</span><h2>כמה עולה קידום אתרים בישראל 2026</h2></div>
+  <!-- PRICING -->
+  <section class="s2-sec" aria-labelledby="s2-price-t">
+    <div class="s2-wrap">
+      <div class="s2-rv">
+        <span class="s2-eye">מחירים</span>
+        <h2 class="s2-h2" id="s2-price-t">כמה עולה קידום אתרים בישראל 2026</h2>
+        <p class="s2-lead">אני מאמין בשקיפות. אלה טווחי המחירים בשוק הישראלי. המחיר המדויק תלוי ברמת התחרות, במצב האתר ובהיקף העבודה.</p>
+      </div>
+      <div class="s2-price">
+        <div class="s2-p s2-rv"><h3>עסק מקומי קטן</h3><div class="pr">2,000-4,000 ₪<small>בחודש</small></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>SEO מקומי</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>5 עד 10 ביטויים</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>תוכן בסיסי</li></ul></div>
+        <div class="s2-p pop s2-rv"><span class="tag">הכי נפוץ</span><h3>עסק בינוני</h3><div class="pr">4,000-8,000 ₪<small>בחודש</small></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>SEO מקומי וארצי</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>15 עד 30 ביטויים</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>תוכן וקישורים</li></ul></div>
+        <div class="s2-p s2-rv"><h3>חנות אונליין</h3><div class="pr">5,000-12,000 ₪<small>בחודש</small></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>SEO טכני מתקדם</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>דפי קטגוריה</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>תוכן מוצרים</li></ul></div>
+        <div class="s2-p s2-rv"><h3>עסק גדול או תחרותי</h3><div class="pr">8,000-15,000+ ₪<small>בחודש</small></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>אסטרטגיה מלאה</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>תוכן בהיקף גדול</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>בניית סמכות</li></ul></div>
+      </div>
+      <div class="s2-pnote s2-rv"><p><b>אצלי אין דמי הקמה.</b> אין תשלום חד פעמי של אלפי שקלים לפני שמתחילים. מתחילים לעבוד, ומהחודש הראשון רואים מה נעשה.</p><a class="s2-btn pri" href="#s2-check">לקבל הערכה לעסק שלי</a></div>
+    </div>
+  </section>
 
-        <div class="reveal">
-          <p>אני מאמין בשקיפות. הנה טווחי המחירים בשוק הישראלי:</p>
+  <!-- PERSONAL CHECK -->
+  <section class="s2-sec" style="padding-top:0" id="s2-check" aria-labelledby="s2-check-t">
+    <div class="s2-wrap">
+      <div class="s2-check s2-rv">
+        <div>
+          <span class="s2-eye">בדיקה אישית, בלי התחייבות</span>
+          <h2 id="s2-check-t" style="margin-top:12px">שלחו לי את האתר. אני אבדוק אותו בעצמי.</h2>
+          <p>לא כלי אוטומטי. אני עובר על האתר שלכם, ובתוך יום עסקים חוזר אליכם עם תשובות ברורות:</p>
+          <ul><li>איפה אתם עומדים בגוגל היום</li><li>מה עוצר את האתר מלעלות</li><li>מי המתחרים שמופיעים לפניכם</li><li>מה הצעד הראשון, וכמה זה יעלה</li></ul>
         </div>
-
-        <table class="tbl reveal" style="margin:28px 0">
-          <thead><tr><th>סוג עסק</th><th>ריטיינר חודשי</th><th>מה כלול</th></tr></thead>
-          <tbody>
-            <tr><td><strong>עסק מקומי קטן</strong></td><td>2,000-4,000 ש"ח</td><td>SEO מקומי, 5-10 ביטויים, תוכן בסיסי</td></tr>
-            <tr><td><strong>עסק בינוני</strong></td><td>4,000-8,000 ש"ח</td><td>SEO מקומי + ארצי, 15-30 ביטויים, תוכן + קישורים</td></tr>
-            <tr><td><strong>חנות אונליין</strong></td><td>5,000-12,000 ש"ח</td><td>SEO טכני מתקדם, דפי קטגוריה, תוכן מוצרים</td></tr>
-            <tr><td><strong>עסק גדול / תחרותי</strong></td><td>8,000-15,000+ ש"ח</td><td>אסטרטגיה מלאה, תוכן אגרסיבי, בניית סמכות</td></tr>
-          </tbody>
-        </table>
-
-        <div class="reveal">
-          <p>המחיר תלוי בשלושה דברים: רמת התחרות על הביטויים, מצב האתר הנוכחי, והיקף העבודה הנדרש. אתר חדש בתחום תחרותי ידרוש יותר עבודה מאתר ותיק בתחום נישתי.</p>
-          <p><strong>מה לא משלמים אצלי:</strong> דמי הקמה. אין תשלום חד פעמי של אלפי שקלים "לפני שמתחילים". אני מתחיל לעבוד, ומהחודש הראשון אתם רואים מה נעשה.</p>
-          <p>רוצים לדעת כמה זה עולה לעסק שלכם? <a href="https://wa.me/972508249824" style="color:var(--purple);font-weight:700">שלחו הודעה</a> עם קישור לאתר ואחזור עם הערכה תוך יום עסקים.</p>
-        </div>
-
-        <div class="reveal">
-          <h3>מתי התוצאות מגיעות?</h3>
-          <p>SEO לא עובד ביום אחד. זה מרתון. אבל מרתון שמשתלם.</p>
-        </div>
-
-        <table class="tbl reveal" style="margin:28px 0">
-          <thead><tr><th>תקופה</th><th>מה קורה</th></tr></thead>
-          <tbody>
-            <tr><td><strong>חודש 1-2</strong></td><td>אבחון, תיקונים טכניים, מחקר מילות מפתח, אופטימיזציה ראשונית</td></tr>
-            <tr><td><strong>חודש 2-3</strong></td><td>תוכן חדש עולה, שיפור ראשוני בדירוגים, גוגל מתחיל לסרוק</td></tr>
-            <tr><td><strong>חודש 3-6</strong></td><td>עלייה משמעותית בדירוגים, תנועה אורגנית גדלה, פניות מתחילות</td></tr>
-            <tr><td><strong>חודש 6-12</strong></td><td>ביסוס בעמוד הראשון, תנועה יציבה וצומחת, ROI חיובי</td></tr>
-            <tr><td><strong>שנה +</strong></td><td>דומיננטיות בתוצאות, תנועה עקבית, עלות לליד יורדת</td></tr>
-          </tbody>
-        </table>
+        <form class="s2-form" id="s2form" novalidate>
+          <label for="s2url">כתובת האתר שלכם</label>
+          <input id="s2url" name="url" type="text" inputmode="url" placeholder="www.example.co.il" autocomplete="url" />
+          <button class="s2-btn pri" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>שלחו לי בוואטסאפ</button>
+          <small>ההודעה נפתחת בוואטסאפ עם הכתובת שלכם. אפשר גם להתקשר: 050-824-9824</small>
+        </form>
       </div>
     </div>
   </section>
 
-  <!-- INTERACTIVE SEO AUDIT TOOL -->
-  <section class="sec surface">
-    <div class="wrap narrow">
-      <div class="s-head center reveal">
-        <span class="eyebrow">כלי בדיקה</span>
-        <h2>האתר שלך מוכן ל-SEO? בדוק עכשיו</h2>
-        <p>סמן את מה שיש באתר שלך. ככל שיש יותר סימונים, האתר מוכן יותר לקידום.</p>
-      </div>
-      <div class="reveal" id="seoAuditTool" style="background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px;max-width:680px;margin:0 auto;">
-        <div style="display:grid;gap:12px;" id="seoChecks">
-          <label style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);cursor:pointer;transition:background .2s,border-color .2s;font-size:16px;">
-            <input type="checkbox" class="seo-check" style="width:20px;height:20px;accent-color:var(--purple);cursor:pointer;"> <span>האתר נטען תוך פחות מ-3 שניות</span>
-          </label>
-          <label style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);cursor:pointer;transition:background .2s,border-color .2s;font-size:16px;">
-            <input type="checkbox" class="seo-check" style="width:20px;height:20px;accent-color:var(--purple);cursor:pointer;"> <span>האתר מותאם למובייל (רספונסיבי)</span>
-          </label>
-          <label style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);cursor:pointer;transition:background .2s,border-color .2s;font-size:16px;">
-            <input type="checkbox" class="seo-check" style="width:20px;height:20px;accent-color:var(--purple);cursor:pointer;"> <span>יש תעודת SSL (כתובת מתחילה ב-https)</span>
-          </label>
-          <label style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);cursor:pointer;transition:background .2s,border-color .2s;font-size:16px;">
-            <input type="checkbox" class="seo-check" style="width:20px;height:20px;accent-color:var(--purple);cursor:pointer;"> <span>לכל דף יש כותרת (Title) ייחודית עם ביטוי מפתח</span>
-          </label>
-          <label style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);cursor:pointer;transition:background .2s,border-color .2s;font-size:16px;">
-            <input type="checkbox" class="seo-check" style="width:20px;height:20px;accent-color:var(--purple);cursor:pointer;"> <span>יש תיאור Meta Description לכל דף</span>
-          </label>
-          <label style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);cursor:pointer;transition:background .2s,border-color .2s;font-size:16px;">
-            <input type="checkbox" class="seo-check" style="width:20px;height:20px;accent-color:var(--purple);cursor:pointer;"> <span>יש כותרת H1 אחת בכל דף</span>
-          </label>
-          <label style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);cursor:pointer;transition:background .2s,border-color .2s;font-size:16px;">
-            <input type="checkbox" class="seo-check" style="width:20px;height:20px;accent-color:var(--purple);cursor:pointer;"> <span>לתמונות יש תיאור Alt Text</span>
-          </label>
-          <label style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);cursor:pointer;transition:background .2s,border-color .2s;font-size:16px;">
-            <input type="checkbox" class="seo-check" style="width:20px;height:20px;accent-color:var(--purple);cursor:pointer;"> <span>האתר מחובר ל-Google Search Console</span>
-          </label>
-          <label style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);cursor:pointer;transition:background .2s,border-color .2s;font-size:16px;">
-            <input type="checkbox" class="seo-check" style="width:20px;height:20px;accent-color:var(--purple);cursor:pointer;"> <span>האתר מחובר ל-Google Analytics</span>
-          </label>
-          <label style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);cursor:pointer;transition:background .2s,border-color .2s;font-size:16px;">
-            <input type="checkbox" class="seo-check" style="width:20px;height:20px;accent-color:var(--purple);cursor:pointer;"> <span>יש Sitemap.xml תקין</span>
-          </label>
-          <label style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);cursor:pointer;transition:background .2s,border-color .2s;font-size:16px;">
-            <input type="checkbox" class="seo-check" style="width:20px;height:20px;accent-color:var(--purple);cursor:pointer;"> <span>יש פרופיל Google Business (גוגל לעסקים)</span>
-          </label>
-          <label style="display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);cursor:pointer;transition:background .2s,border-color .2s;font-size:16px;">
-            <input type="checkbox" class="seo-check" style="width:20px;height:20px;accent-color:var(--purple);cursor:pointer;"> <span>האתר מייצר תוכן חדש באופן שוטף (בלוג/מאמרים)</span>
-          </label>
-        </div>
-        <div id="seoResult" style="margin-top:24px;padding:24px;border-radius:14px;background:var(--surface);text-align:center;font-family:var(--f-display);">
-          <div style="font-size:48px;font-weight:900;margin-bottom:4px;" id="seoScore">0 / 12</div>
-          <div style="font-size:16px;color:var(--soft);" id="seoMsg">סמן את מה שיש באתר שלך</div>
-        </div>
-        <div id="seoCtaBox" style="display:none;margin-top:16px;text-align:center;">
-          <p style="font-size:15px;color:var(--soft);margin-bottom:12px;">רוצה שאבדוק את האתר שלך בצורה מקצועית? חינם, בלי התחייבות.</p>
-          <a href="https://wa.me/972508249824?text=%D7%94%D7%99%D7%99%20%D7%9E%D7%A9%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%91%D7%93%D7%99%D7%A7%D7%AA%20SEO%20%D7%9C%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%99" class="btn btn-primary btn-sm" target="_blank" rel="noopener">שלח לי את הקישור לאתר</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
 
-  <!-- ADVANTAGES -->
-  <section class="sec">
-    <div class="wrap">
-      <div class="s-head center reveal">
-        <span class="eyebrow">היתרונות</span>
-        <h2>מה כולל קידום אתרים עם Mula Digital</h2>
-      </div>
-      <div class="advs">
-        <div class="adv reveal">
-          <span class="a-ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
-          <div><h4>מחקר מילות מפתח מעמיק</h4><p>לא ניחושים. מחקר שמבוסס על נתוני חיפוש אמיתיים, ניתוח מתחרים והבנה של מה שהלקוחות שלכם מחפשים.</p></div>
-        </div>
-        <div class="adv reveal">
-          <span class="a-ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
-          <div><h4>SEO טכני מקיף</h4><p>מהירות, מבנה, Schema, ניווט פנימי, תיקון שגיאות: כל הבסיס הטכני שגוגל צריך כדי לדרג אתכם גבוה.</p></div>
-        </div>
-        <div class="adv reveal">
-          <span class="a-ic"><svg viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></span>
-          <div><h4>תוכן שנכתב לבני אדם</h4><p>לא מילוי מילות מפתח. תוכן אמיתי שעוזר ללקוחות, בונה אמון, ומדורג גבוה בגוגל בגלל שהוא באמת טוב.</p></div>
-        </div>
-        <div class="adv reveal">
-          <span class="a-ic"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
-          <div><h4>בניית קישורים איכותיים</h4><p>קישורים מאתרים רלוונטיים ואיכותיים. לא ספאם, לא קניית קישורים. בניית סמכות אמיתית שמחזיקה לאורך זמן.</p></div>
-        </div>
-        <div class="adv reveal">
-          <span class="a-ic"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
-          <div><h4>דוחות חודשיים שקופים</h4><p>כל חודש דוח ברור עם דירוגים, תנועה, ומה נעשה. בלי מילים גדולות. מספרים ותוכנית פעולה.</p></div>
-        </div>
-        <div class="adv reveal">
-          <span class="a-ic"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
-          <div><h4>ליווי שוטף ואישי</h4><p>לא מערכת אוטומטית. בן אדם אחד שמכיר את העסק שלכם, זמין לשאלות, ואחראי על התוצאות.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <script>
+  (function(){
+    var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var root=document.querySelector('.sv2'); if(!root) return;
+    if(!reduce) document.documentElement.classList.add('s2-js');
+    var rv=[].slice.call(root.querySelectorAll('.s2-rv'));
+    if(reduce||!('IntersectionObserver' in window)) rv.forEach(function(e){e.classList.add('in')});
+    else{var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{rootMargin:'0px 0px -8% 0px'});rv.forEach(function(e){e.getBoundingClientRect().top<innerHeight?e.classList.add('in'):io.observe(e)})}
 
-  <!-- MID CTA -->
-  <section class="mid-cta-sec">
-    <div class="wrap">
-      <div class="mid-cta reveal">
-        <h2>רוצים להופיע ראשונים בגוגל?</h2>
-        <p>נקבע שיחת אבחון. נבדוק איפה האתר שלכם עומד בגוגל, ומה צריך לעשות כדי לעלות.</p>
-        <div class="row">
-          <a href="tel:0508249824" class="btn btn-primary">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            050-824-9824
-          </a>
-          <a href="https://wa.me/972508249824" target="_blank" rel="noopener" class="btn btn-dark">
-            <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>
-            וואטסאפ
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+    // SERP animation
+    var q=document.getElementById('s2q'),box=document.getElementById('s2res');
+    var rows=[['א','אינסטלטור בגוש דן | שירות מהיר','pro-fix.co.il'],['ש','אינסטלטורים מומלצים באזור המרכז','sherut-li.co.il'],['ד','מדריך: איך לבחור אינסטלטור','madrich.co.il'],['מ','אינסטלציה בתל אביב והמרכז','mayim-plus.co.il']];
+    var me=['י','יוחאי ג׳קסון אינסטלציה | גוש דן','jacksonplumber.co.il'];
+    var H=innerWidth<640?58:64, gap=innerWidth<640?10:10;
+    function card(r,cls){var d=document.createElement('div');d.className='s2-r'+(cls?' '+cls:'');d.innerHTML='<div class="u"><span class="fav">'+r[0]+'</span>'+r[2]+'</div><span class="t">'+r[1]+'</span><div class="bar"></div>'+(cls?'<span class="s2-pos">מקום <b>7</b></span>':'');return d}
+    var els=rows.map(function(r){return card(r)}); var meEl=card(me,'me');
+    els.forEach(function(e){box.appendChild(e)}); box.appendChild(meEl);
+    function place(order){order.forEach(function(e,i){e.style.transform='translateY('+(i*(H+gap))+'px)';e.style.zIndex=e===meEl?3:1})}
+    var phrase='אינסטלטור בגוש דן';
+    function run(){
+      meEl.classList.remove('top'); meEl.querySelector('.s2-pos b').textContent='7';
+      place(els.concat([meEl]));
+      if(reduce){q.textContent=phrase;place([meEl].concat(els));meEl.classList.add('top');meEl.querySelector('.s2-pos b').textContent='1';return}
+      q.textContent=''; var i=0;
+      var t=setInterval(function(){q.textContent=phrase.slice(0,++i); if(i>=phrase.length){clearInterval(t);
+        setTimeout(function(){meEl.querySelector('.s2-pos b').textContent='3';place([els[0],els[1],meEl,els[2],els[3]])},900);
+        setTimeout(function(){meEl.querySelector('.s2-pos b').textContent='1';place([meEl].concat(els));meEl.classList.add('top')},2100);
+        setTimeout(run,6800);
+      }},85);
+    }
+    run();
+
+    // counters
+    if(!reduce&&'IntersectionObserver' in window){
+      var io2=new IntersectionObserver(function(es){es.forEach(function(en){if(!en.isIntersecting)return;io2.unobserve(en.target);var el=en.target,to=+el.getAttribute('data-c'),t0=null;function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1600),e=1-Math.pow(1-p,3);el.textContent=Math.round(to*e).toLocaleString('en-US');if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)})},{threshold:.6});
+      root.querySelectorAll('[data-c]').forEach(function(n){io2.observe(n)});
+    }
+
+    // organic vs paid chart (RTL: month 1 on the right)
+    var paid=document.getElementById('s2paid'),org=document.getElementById('s2org'),sl=document.getElementById('s2stop'),st=document.getElementById('s2stopt');
+    function X(m){return 500-(m-1)*(480/11)}
+    function path(fn){var d='';for(var m=1;m<=12;m+=.25){var x=X(m),y=fn(m);d+=(d?' L':'M')+x.toFixed(1)+' '+y.toFixed(1)}return d}
+    function orgY(m){var v=1/(1+Math.exp(-(m-5)*0.9));return 210-v*165}
+    function paidY(stop){return function(m){if(stop&&m>7)return 212-Math.max(0,95-(m-7)*95*2.2); return 212-95*(1-Math.exp(-m*2.2))}}
+    function draw(stop){paid.setAttribute('d',path(paidY(stop)));org.setAttribute('d',path(orgY));sl.setAttribute('x1',X(7));sl.setAttribute('x2',X(7));st.setAttribute('x',X(7));sl.style.opacity=stop?1:0;st.style.opacity=stop?1:0}
+    draw(false);
+    root.querySelectorAll('.s2-tog button').forEach(function(b){b.addEventListener('click',function(){root.querySelectorAll('.s2-tog button').forEach(function(x){x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b)});draw(b.getAttribute('data-stop')==='1')})});
+
+    // personal check -> WhatsApp
+    var form=document.getElementById('s2form');
+    if(form) form.addEventListener('submit',function(e){e.preventDefault();var u=(document.getElementById('s2url').value||'').trim();var msg='היי משה, אשמח לבדיקה אישית לאתר שלי'+(u?': '+u:'');window.open('https://wa.me/972508249824?text='+encodeURIComponent(msg),'_blank','noopener')});
+  })();
+  </script>
+
 
   <!-- FAQ -->
   <section class="sec surface">
