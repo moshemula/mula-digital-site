@@ -35,7 +35,13 @@
     {"@type":"Question","name":"האם CRM מתחבר לוואטסאפ?","acceptedAnswer":{"@type":"Answer","text":"כן. אנחנו מחברים את ה-CRM לוואטסאפ כך שהודעות נכנסות ויוצאות נשמרות בכרטיס הליד. אפשר גם לשלוח הודעות אוטומטיות, תזכורות ומעקב ישירות מהמערכת."}},
     {"@type":"Question","name":"אפשר לחבר CRM לאתר שלי?","acceptedAnswer":{"@type":"Answer","text":"בהחלט. כל טופס באתר מחובר ישירות ל-CRM: הליד נכנס אוטומטית עם כל הפרטים, מקור הגעה, ומקבל סטטוס ומשימות מעקב. אין צורך להעביר ידנית."}},
     {"@type":"Question","name":"מה ההבדל בין CRM לאקסל?","acceptedAnswer":{"@type":"Answer","text":"אקסל לא שולח תזכורות, לא עוקב אחרי היסטוריית שיחות, לא מתחבר לוואטסאפ ולאתר, ולא מראה דוחות בזמן אמת. CRM עושה את כל זה אוטומטית. ברגע שיש יותר מ-10 לידים בחודש, אקסל כבר לא מספיק."}},
-    {"@type":"Question","name":"האם אפשר להעביר נתונים מאקסל ל-CRM?","acceptedAnswer":{"@type":"Answer","text":"כן. חלק מתהליך ההטמעה כולל ייבוא של כל הנתונים הקיימים: לקוחות, לידים, היסטוריית פניות. אנחנו מנקים את הנתונים, ממפים את השדות ומייבאים הכל."}}
+    {"@type":"Question","name":"האם אפשר להעביר נתונים מאקסל ל-CRM?","acceptedAnswer":{"@type":"Answer","text":"כן. חלק מתהליך ההטמעה כולל ייבוא של כל הנתונים הקיימים: לקוחות, לידים, היסטוריית פניות. אנחנו מנקים את הנתונים, ממפים את השדות ומייבאים הכל."}},
+    {"@type":"Question","name":"אני כבר עובד עם מאנדיי. צריך להחליף מערכת?","acceptedAnswer":{"@type":"Answer","text":"לא בהכרח. הרבה פעמים המערכת בסדר גמור, והבעיה היא בהגדרות: שלבים לא ברורים, שדות שאף אחד לא ממלא ואין תזכורות. לפני שמחליפים, בודקים אם אפשר לסדר את מה שיש. מחליפים רק כשהמערכת באמת לא מתאימה לעסק."}},
+    {"@type":"Question","name":"מה הדבר הראשון שאמור להשתנות אחרי ההטמעה?","acceptedAnswer":{"@type":"Answer","text":"שאין יותר ליד בלי צעד הבא. כל פנייה נכנסת למקום אחד, מקבלת אחראי ותאריך, ואתם רואים בכל רגע כמה עסקאות פתוחות יש ואיפה כל אחת עומדת."}},
+    {"@type":"Question","name":"כמה עולה המערכת עצמה בכל חודש?","acceptedAnswer":{"@type":"Answer","text":"זה תלוי במערכת ובמספר המשתמשים. את הרישיון משלמים בדרך כלל ישירות לחברה שמפתחת את המערכת. אני עוזר לבחור את המסלול שמתאים לעסק, כדי שלא תשלמו על פיצ׳רים שאף אחד לא משתמש בהם."}},
+    {"@type":"Question","name":"מה קורה למידע שלי אם ארצה לעזוב את המערכת?","acceptedAnswer":{"@type":"Answer","text":"המידע שלכם. במערכות ה-CRM המובילות אפשר לייצא את כל הלקוחות, הלידים וההיסטוריה לקובץ אקסל, ולהעביר אותם למערכת אחרת."}},
+    {"@type":"Question","name":"אפשר לראות מאיזה קמפיין הגיע כל ליד?","acceptedAnswer":{"@type":"Answer","text":"כן, וזה אחד הדברים הכי חשובים בהטמעה. כשהטפסים והקמפיינים מחוברים נכון, כל ליד נכנס עם המקור שלו. ככה רואים לא רק כמה לידים הביא כל קמפיין, אלא כמה מהם באמת נסגרו."}},
+    {"@type":"Question","name":"הצוות שלי עובד בעיקר מהנייד. זה עובד שם?","acceptedAnswer":{"@type":"Answer","text":"כן. לכל מערכות ה-CRM המובילות יש אפליקציה לנייד. נציג בשטח מעדכן סטטוס, רושם הערה ומקבל תזכורת ישר מהטלפון."}}
   ]}
   </script>
 
@@ -375,6 +381,7 @@
   <link rel="stylesheet" href="assets/mega-wow.css?v=5" />
   <link rel="stylesheet" href="assets/srv-hero.css?v=1" />
 <link rel="stylesheet" href="assets/srv-up.css?v=1" />
+<link rel="stylesheet" href="assets/fq.css?v=1" />
 </head>
 <body>
   <div id="progress"><span></span></div>
@@ -531,31 +538,100 @@
     </div>
   </section>
 
-  <!-- CRM readiness checker -->
+  <!-- CRM chaos to order -->
   <section class="sec surface">
     <div class="wrap">
-      <div class="s-head center reveal"><span class="eyebrow">כלי אבחון</span><h2>בודק מוכנות CRM</h2><p>סמנו מה קורה אצלכם ותגלו כמה דחוף לכם CRM.</p></div>
-      <div class="checker-box reveal">
-        <div class="checker-grid">
-          <label class="checker-item"><input type="checkbox" class="crm-chk"><span>קורה שאנחנו שוכחים לחזור ללידים</span></label>
-          <label class="checker-item"><input type="checkbox" class="crm-chk"><span>לידים מגיעים ממספר ערוצים (אתר, טלפון, וואטסאפ, פייסבוק)</span></label>
-          <label class="checker-item"><input type="checkbox" class="crm-chk"><span>אין לנו מקום אחד לראות את כל הלידים</span></label>
-          <label class="checker-item"><input type="checkbox" class="crm-chk"><span>אנחנו לא יודעים מאיזה ערוץ הגיעו הלידים הכי טובים</span></label>
-          <label class="checker-item"><input type="checkbox" class="crm-chk"><span>לא ברור מה הסטטוס של כל ליד</span></label>
-          <label class="checker-item"><input type="checkbox" class="crm-chk"><span>אנחנו מנהלים לידים באקסל או בראש</span></label>
-          <label class="checker-item"><input type="checkbox" class="crm-chk"><span>יש יותר מאדם אחד שמטפל בלידים</span></label>
-          <label class="checker-item"><input type="checkbox" class="crm-chk"><span>אין תהליך מעקב קבוע אחרי לקוחות קיימים</span></label>
-          <label class="checker-item"><input type="checkbox" class="crm-chk"><span>לא יודעים כמה לידים קיבלנו החודש</span></label>
-          <label class="checker-item"><input type="checkbox" class="crm-chk"><span>לקוחות לפעמים אומרים "לא חזרתם אליי"</span></label>
+      <div class="s-head center reveal">
+        <span class="eyebrow">לפני ואחרי</span>
+        <h2>יום ראשון, 9 בבוקר. איפה כל הלידים שלכם?</h2>
+        <p>שישה לידים מהשבוע שעבר. הם הגיעו מוואטסאפ, מהאתר, מטלפון ומפתק על השולחן. ככה זה נראה בלי מערכת, וככה עם CRM.</p>
+      </div>
+      <div class="cx reveal" id="cx">
+        <div class="cx-sw" role="group" aria-label="תצוגה">
+          <button type="button" data-m="0" aria-pressed="true">בלי CRM</button>
+          <button type="button" data-m="1" aria-pressed="false">עם CRM</button>
+          <i aria-hidden="true"></i>
         </div>
-        <div class="checker-result" id="crmResult">
-          <div class="score" id="crmScore">0/10</div>
-          <div class="msg" id="crmMsg"></div>
-          <div class="cta-row" id="crmCta" style="display:none"><a href="tel:0508249824" class="btn btn-primary btn-sm" style="margin-top:8px;">בואו נסדר את זה: 050-824-9824</a></div>
+        <div class="cx-board" id="cxBoard">
+          <div class="cx-col" data-s="0"><h4>חדש</h4></div><div class="cx-col" data-s="1"><h4>בטיפול</h4></div><div class="cx-col" data-s="2"><h4>הצעה נשלחה</h4></div><div class="cx-col" data-s="3"><h4>נסגר</h4></div>
         </div>
+        <div class="cx-foot">
+          <p id="cxSum" aria-live="polite"></p>
+          <a class="cx-cta" href="https://wa.me/972508249824?text=%D7%94%D7%99%D7%99%20%D7%9E%D7%A9%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%91%D7%A8%20%D7%A2%D7%9C%20CRM%20%D7%9C%D7%A2%D7%A1%D7%A7%20%D7%A9%D7%9C%D7%99" target="_blank" rel="noopener">בואו נעשה סדר בלידים שלכם</a>
+        </div>
+        <small class="cx-fine">השמות והפרטים מומצאים, להמחשה בלבד.</small>
       </div>
     </div>
   </section>
+<style>
+.cx{max-width:1080px;margin:8px auto 0}
+.cx-sw{position:relative;display:grid;grid-template-columns:1fr 1fr;width:280px;margin:0 auto 22px;background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:4px}
+.cx-sw button{position:relative;z-index:1;border:0;background:none;padding:11px 0;font:700 15px/1 var(--f-display);color:var(--soft);cursor:pointer;transition:color .3s}
+.cx-sw button[aria-pressed="true"]{color:#fff}
+.cx-sw i{position:absolute;top:4px;bottom:4px;right:4px;width:calc(50% - 4px);border-radius:999px;background:var(--ink);transition:transform .45s var(--ease)}
+.cx.on .cx-sw i{transform:translateX(-100%);background:var(--grad)}
+.cx-board{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;min-height:420px;border-radius:22px;padding:14px;background:repeating-linear-gradient(45deg,#f3f1f6,#f3f1f6 12px,#f7f6fa 12px,#f7f6fa 24px);border:1px solid var(--line);transition:background .5s}
+.cx.on .cx-board{background:#fff}
+.cx-col{border-radius:14px;padding:44px 0 0;position:relative;transition:background .4s}
+.cx-col h4{position:absolute;top:12px;right:12px;margin:0;font:700 14px/1 var(--f-display);color:var(--ink);opacity:0;transition:opacity .4s}
+.cx.on .cx-col{background:#F7F6FA}
+.cx.on .cx-col h4{opacity:1}
+.cx-card{position:absolute;top:0;right:0;width:var(--cw,200px);background:#fff;border:1px solid #e6e3ec;border-radius:12px;padding:12px;box-shadow:0 10px 24px -14px rgba(20,10,40,.35);transition:transform .7s var(--ease),box-shadow .3s,border-color .3s;will-change:transform}
+.cx-card .src{display:inline-flex;align-items:center;gap:6px;font:600 12px/1 var(--f-display);color:var(--soft);background:#f2f0f6;border-radius:999px;padding:5px 9px}
+.cx-card .src svg{width:13px;height:13px}
+.cx-card b{display:block;font:700 15px/1.3 var(--f-display);color:var(--ink);margin-top:8px}
+.cx-card p{margin:3px 0 0;font:400 13.5px/1.45 var(--f-body);color:var(--soft)}
+.cx-card .tag{display:none;margin-top:9px;font:700 12px/1.3 var(--f-display);padding:6px 8px;border-radius:8px}
+.cx-card .lost{display:block;background:#FDECF1;color:#C2003A}
+.cx.on .cx-card .lost{display:none}
+.cx.on .cx-card .ok{display:block;background:#EEF8F1;color:#15803d}
+.cx:not(.on) .cx-card.forgot{border-color:#f3a3b8}
+.cx-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-top:20px}
+.cx-foot p{margin:0;font:700 clamp(17px,2vw,20px)/1.45 var(--f-display);color:var(--ink);max-width:60ch}
+.cx-cta{display:inline-flex;padding:13px 22px;border-radius:999px;background:var(--ink);color:#fff!important;font:700 15px/1 var(--f-display);text-decoration:none!important;transition:transform .2s}
+.cx-cta:hover{transform:translateY(-2px)}
+.cx-fine{display:block;margin-top:10px;font:400 13px/1.4 var(--f-body);color:var(--muted)}
+@media(max-width:760px){.cx-board{grid-template-columns:repeat(2,minmax(0,1fr));padding:10px;gap:10px}.cx-card{padding:10px}.cx-card b{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.cx-card,.cx-sw i{transition:none}}
+</style>
+<script>
+(function(){
+  var root=document.getElementById('cx');if(!root)return;
+  var board=document.getElementById('cxBoard'),sum=document.getElementById('cxSum');
+  var IC={wa:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>',
+    web:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg>',
+    tel:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>',
+    note:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v12l-4 4H4z"/><path d="M16 20v-4h4"/></svg>',
+    xl:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>',
+    mail:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>'};
+  var L=[
+    ['wa','וואטסאפ','דנה כהן','ביקשה הצעת מחיר ביום שלישי',2,'','פולואפ אוטומטי יוצא מחר'],
+    ['web','טופס באתר','יוסי לוי','השאיר פרטים ב-23:10',0,'','שויך לנציג תוך דקה'],
+    ['tel','שיחה שלא נענתה','מיכל אברהם','התקשרה פעמיים ביום רביעי',1,'','תזכורת: היום 14:00'],
+    ['note','פתק על השולחן','אבי רוזן','"לחזור אליו אחרי החג"',1,'','פגישה נקבעה ליום ג׳'],
+    ['xl','שורה באקסל','רונית שמעוני','סגרה, חסרה רק חשבונית',3,'','נסגר, חשבונית נשלחה'],
+    ['mail','מייל','עומר ברק','שאל על זמינות לחודש הבא',0,'ליד שנשכח · 9 ימים','חזר לטיפול, משויך לנציג']];
+  board.insertAdjacentHTML('beforeend',L.map(function(l,i){return'<div class="cx-card'+(l[5]?' forgot':'')+'" data-i="'+i+'"><span class="src">'+IC[l[0]]+l[1]+'</span><b>'+l[2]+'</b><p>'+l[3]+'</p>'+(l[5]?'<span class="tag lost">'+l[5]+'</span>':'')+'<span class="tag ok">'+l[6]+'</span></div>'}).join(''));
+  var cards=[].slice.call(board.querySelectorAll('.cx-card')),cols=[].slice.call(board.querySelectorAll('.cx-col')),on=false;
+  var CH=[[.06,.04,-7],[.5,.02,5],[.28,.36,-3],[.68,.4,8],[.02,.6,4],[.42,.66,-6]];
+  function lay(){
+    var W=board.clientWidth,H0=board.clientHeight,pad=W<760?10:14,cw=cols[0].offsetWidth;
+    board.style.setProperty('--cw',(on?cw:Math.min(220,W*.42))+'px');
+    if(!on){var cwx=Math.min(220,W*.42),h=0;cards.forEach(function(c,i){var p=CH[i];var x=pad+p[0]*(W-2*pad-cwx),y=pad+p[1]*Math.max(300,H0-150);c.style.transform='translate('+(-x)+'px,'+y+'px) rotate('+p[2]+'deg)';h=Math.max(h,y+c.offsetHeight)});board.style.minHeight=Math.max(420,h+pad)+'px';return}
+    var stack=[0,0,0,0],maxH=0;
+    cards.forEach(function(c,i){var s=L[i][4],col=cols[s];var x=W-(col.offsetLeft+col.offsetWidth),y=col.offsetTop+44+stack[s];c.style.transform='translate('+(-x)+'px,'+y+'px) rotate(0deg)';stack[s]+=c.offsetHeight+10;maxH=Math.max(maxH,y+c.offsetHeight)});
+    cols.forEach(function(col,k){col.style.minHeight=(44+stack[k]+4)+'px'});
+  }
+  function set(m){on=!!m;root.classList.toggle('on',on);[].forEach.call(root.querySelectorAll('.cx-sw button'),function(b){b.setAttribute('aria-pressed',(+b.getAttribute('data-m')===m)?'true':'false')});
+    if(!on)cols.forEach(function(c){c.style.minHeight=''});
+    requestAnimationFrame(function(){lay();requestAnimationFrame(lay)});
+    sum.textContent=on?'6 לידים, מקום אחד. לכל ליד יש צעד הבא, תאריך ומישהו שאחראי עליו.':'6 לידים בשישה מקומות שונים. אחד מהם כבר נשכח, ואף אחד לא יודע מה הצעד הבא.'}
+  [].forEach.call(root.querySelectorAll('.cx-sw button'),function(b){b.addEventListener('click',function(){set(+b.getAttribute('data-m'))})});
+  var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(lay,120)});
+  set(0);
+  if('IntersectionObserver' in window&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){io.disconnect();setTimeout(function(){if(!on)set(1)},1600)}},{threshold:.5});io.observe(board)}
+})();
+</script>
 
   <section class="sec surface">
     <div class="wrap">
@@ -619,6 +695,8 @@
       <div class="s-head center reveal"><span class="eyebrow">שאלות ותשובות</span><h2>שאלות נפוצות על הטמעת CRM</h2></div>
       <p style="text-align:center;max-width:640px;margin:0 auto 26px;color:var(--soft);font-size:17px;line-height:1.6">רוצה לראות את פירוק המחיר שורה שורה, ומה ההבדל בין הצעה של 3,000 ₪ להצעה של 14,000 ₪? קראו את המדריך: <a href="blog-kama-ole-hatmaat-crm" style="color:var(--purple);font-weight:700">כמה עולה הטמעת מערכת CRM לעסק קטן</a>.</p>
       
+      <div class="fq">
+        <div class="fq-main">
       <div class="faq-list reveal">
         <details class="faq"><summary>מה זה CRM?</summary><div class="ans">CRM = Customer Relationship Management. מערכת שמרכזת את כל המידע על הלקוחות והלידים שלך: מי פנה, מתי, מה נאמר, ומה הצעד הבא. במקום פתקים, אקסלים ווואטסאפ פרטי.</div></details>
         <details class="faq"><summary>כמה עולה הטמעת CRM?</summary><div class="ans">תלוי בגודל העסק ובפלטפורמה. הטמעה בסיסית מתחילה מ-3,000–5,000 ₪. הטמעה מלאה עם אוטומציות ואינטגרציות: 8,000–15,000 ₪. יש גם ליווי חודשי.</div></details>
@@ -630,6 +708,21 @@
         <details class="faq"><summary>אפשר לחבר CRM לאתר שלי?</summary><div class="ans">בהחלט. כל טופס ב<a href="service-web-development" style="color:var(--purple);font-weight:600;">אתר</a> מחובר ישירות ל-CRM: הליד נכנס אוטומטית עם כל הפרטים, מקור הגעה, ומקבל סטטוס ומשימות מעקב. אין צורך להעביר ידנית.</div></details>
         <details class="faq"><summary>מה ההבדל בין CRM לאקסל?</summary><div class="ans">אקסל לא שולח תזכורות, לא עוקב אחרי היסטוריית שיחות, לא מתחבר לוואטסאפ ולאתר, ולא מראה דוחות בזמן אמת. CRM עושה את כל זה אוטומטית. ברגע שיש יותר מ-10 לידים בחודש, אקסל כבר לא מספיק.</div></details>
         <details class="faq"><summary>האם אפשר להעביר נתונים מאקסל ל-CRM?</summary><div class="ans">כן. חלק מתהליך ההטמעה כולל ייבוא של כל הנתונים הקיימים: לקוחות, לידים, היסטוריית פניות. אנחנו מנקים את הנתונים, ממפים את השדות ומייבאים הכל.</div></details>
+        <details class="faq"><summary>אני כבר עובד עם מאנדיי. צריך להחליף מערכת?</summary><div class="ans">לא בהכרח. הרבה פעמים המערכת בסדר גמור, והבעיה היא בהגדרות: שלבים לא ברורים, שדות שאף אחד לא ממלא ואין תזכורות. לפני שמחליפים, בודקים אם אפשר לסדר את מה שיש. מחליפים רק כשהמערכת באמת לא מתאימה לעסק.</div></details>
+        <details class="faq"><summary>מה הדבר הראשון שאמור להשתנות אחרי ההטמעה?</summary><div class="ans">שאין יותר ליד בלי צעד הבא. כל פנייה נכנסת למקום אחד, מקבלת אחראי ותאריך, ואתם רואים בכל רגע כמה עסקאות פתוחות יש ואיפה כל אחת עומדת.</div></details>
+        <details class="faq"><summary>כמה עולה המערכת עצמה בכל חודש?</summary><div class="ans">זה תלוי במערכת ובמספר המשתמשים. את הרישיון משלמים בדרך כלל ישירות לחברה שמפתחת את המערכת. אני עוזר לבחור את המסלול שמתאים לעסק, כדי שלא תשלמו על פיצ׳רים שאף אחד לא משתמש בהם.</div></details>
+        <details class="faq"><summary>מה קורה למידע שלי אם ארצה לעזוב את המערכת?</summary><div class="ans">המידע שלכם. במערכות ה-CRM המובילות אפשר לייצא את כל הלקוחות, הלידים וההיסטוריה לקובץ אקסל, ולהעביר אותם למערכת אחרת.</div></details>
+        <details class="faq"><summary>אפשר לראות מאיזה קמפיין הגיע כל ליד?</summary><div class="ans">כן, וזה אחד הדברים הכי חשובים בהטמעה. כשהטפסים והקמפיינים מחוברים נכון, כל ליד נכנס עם המקור שלו. ככה רואים לא רק כמה לידים הביא כל קמפיין, אלא כמה מהם באמת נסגרו.</div></details>
+        <details class="faq"><summary>הצוות שלי עובד בעיקר מהנייד. זה עובד שם?</summary><div class="ans">כן. לכל מערכות ה-CRM המובילות יש אפליקציה לנייד. נציג בשטח מעדכן סטטוס, רושם הערה ומקבל תזכורת ישר מהטלפון.</div></details>
+      </div>
+        </div>
+        <aside class="fq-side">
+          <div class="fq-who"><img src="assets/moshe-face.webp" alt="משה מולה" width="52" height="52" loading="lazy"><div><b>משה מולה</b><span>זמין א׳-ה׳ 8:30-18:00</span></div></div>
+          <h3>השאלה שלכם לא כאן?</h3>
+          <p>שלחו אותה אליי. אני עונה אישית, בלי בוט ובלי מוקד, ובלי לנסות למכור לכם משהו שאתם לא צריכים.</p>
+          <a class="wa" href="https://wa.me/972508249824" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24z"/></svg>שאלה בוואטסאפ</a>
+          <a class="tel" href="tel:0508249824"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>050-824-9824</a>
+        </aside>
       </div>
     </div>
   </section>
@@ -897,5 +990,6 @@
 <!-- Sticky mobile CTA -->
 <script src="assets/mega.js?v=5" defer></script>
 <script src="assets/srv-up.js?v=1" defer></script>
+<script src="assets/fq.js?v=1" defer></script>
 </body>
 </html>
