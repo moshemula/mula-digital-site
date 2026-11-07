@@ -526,6 +526,7 @@
   <link rel="stylesheet" href="assets/mega-wow.css?v=5" />
   <link rel="stylesheet" href="assets/srv-hero.css?v=1" />
 <link rel="stylesheet" href="assets/srv-up.css?v=1" />
+<link rel="stylesheet" href="assets/dx.css?v=1" />
 <link rel="stylesheet" href="assets/sv3.css?v=1" />
 <style id="v3-page">
 .bd{position:relative;display:grid;gap:14px}
@@ -945,33 +946,15 @@
     </div>
   </section>
 
-  <!-- BRANDING READINESS CHECKER -->
-  <section class="sec surface">
-    <div class="wrap narrow">
+  <!-- guided diagnosis -->
+  <section class="sec surface dx-sec">
+    <div class="wrap">
       <div class="s-head center reveal">
-        <span class="eyebrow">בדיקה עצמית</span>
-        <h2>בדקו כמה חזק המותג שלכם</h2>
-        <p>סמנו את המשפטים שנכונים לגבי העסק שלכם. ככל שסימנתם יותר, המותג שלכם צריך יותר עבודה.</p>
+        <span class="eyebrow">אבחון מהיר</span>
+        <h2>5 שאלות. תמונת מצב של המותג שלכם.</h2>
+        <p>עונים בלחיצה, ותוך כדי נבנה לכם דוח: מה עובד, איפה המותג מפספס, ומה הייתי מטפל בו ראשון.</p>
       </div>
-      <div class="checker-box reveal">
-        <div class="checker-grid">
-          <label class="checker-item"><input type="checkbox" class="br-chk"> אין לי הגדרה ברורה של קהל היעד שלי</label>
-          <label class="checker-item"><input type="checkbox" class="br-chk"> אני לא יודע מה מבדיל אותי מהמתחרים</label>
-          <label class="checker-item"><input type="checkbox" class="br-chk"> אין לי קול מותגי מוגדר (כל פעם כותבים אחרת)</label>
-          <label class="checker-item"><input type="checkbox" class="br-chk"> הלקוחות שלי לא יכולים לתאר מה מיוחד בי</label>
-          <label class="checker-item"><input type="checkbox" class="br-chk"> אין לי ערכי מותג מוגדרים</label>
-          <label class="checker-item"><input type="checkbox" class="br-chk"> המסרים שלי משתנים בין ערוצים שונים</label>
-          <label class="checker-item"><input type="checkbox" class="br-chk"> אני מתחרה בעיקר על מחיר (ולא על ערך)</label>
-          <label class="checker-item"><input type="checkbox" class="br-chk"> אין לי סיפור מותג שאני מספר</label>
-          <label class="checker-item"><input type="checkbox" class="br-chk"> הצוות שלי לא יודע להסביר את המותג בצורה אחידה</label>
-          <label class="checker-item"><input type="checkbox" class="br-chk"> אני מרגיש שהעסק שלי "עוד אחד" בתחום</label>
-        </div>
-        <div class="checker-result" id="brResult">
-          <div class="score" id="brScore"></div>
-          <div class="msg" id="brMsg"></div>
-          <div class="cta-row" id="brCta"></div>
-        </div>
-      </div>
+      <div class="dx reveal" data-dx><script type="application/json">{"topic": "מיתוג", "qs": [{"q": "אם אשאל שלושה לקוחות שלכם מה מיוחד בכם, מה הם יגידו?", "o": [["אותו דבר, כמעט במילים שלי", 0], ["משהו כללי, כמו \"שירות טוב\"", 1], ["אין לי מושג", 2]], "ok": "הלקוחות יודעים להסביר מה מיוחד בכם", "f": "הבידול שלכם לא עובר ללקוחות", "fix": "מנסחים משפט בידול אחד, שכל לקוח יכול לחזור עליו"}, {"q": "כמה לקוחות מתמקחים איתכם על המחיר?", "o": [["כמעט אף אחד", 0], ["חלק, בעיקר על המחיר", 1], ["הרבה, ומשווים אותי לזולים", 2]], "ok": "אתם נמדדים על ערך, לא רק על מחיר", "f": "משווים אתכם לפי מחיר בלבד", "fix": "בונים מיצוב שמצדיק את המחיר: למי אתם הכי טובים, ולמה"}, {"q": "תפתחו את האתר, האינסטגרם וכרטיס הביקור. זה נראה כמו אותו עסק?", "o": [["כן, הכל אחיד", 0], ["פחות או יותר", 1], ["כל אחד בסגנון אחר", 2]], "ok": "המותג נראה אותו דבר בכל הערוצים", "f": "המותג נראה אחרת בכל ערוץ", "fix": "שפה ויזואלית אחת: לוגו, צבעים, פונטים וכללי שימוש"}, {"q": "כשמישהו בצוות כותב פוסט או עונה ללקוח, איך זה נשמע?", "o": [["יש קול ברור שכולם מכירים", 0], ["כל אחד כותב קצת אחרת", 1], ["אין שום כללים", 2]], "ok": "יש לכם קול מותג אחיד", "f": "אין לכם קול מותג אחיד", "fix": "מסמך קול מותג: איך מדברים, מה אסור, ודוגמאות מוכנות"}, {"q": "מתי בדקתם לאחרונה שהמיתוג עדיין מתאים לעסק?", "o": [["בשנתיים האחרונות", 0], ["כשפתחתי את העסק", 1], ["אף פעם לא היה מיתוג מסודר", 2]], "ok": "המיתוג מעודכן ומתאים לעסק של היום", "f": "המיתוג לא גדל יחד עם העסק", "fix": "בודקים מה נשאר ומה מתחדש, בלי לזרוק את מה שכבר עובד"}], "lv": [[2, "המותג שלכם עובד בשבילכם", "יש לכם בסיס חזק. מכאן זה עניין של חידוד ושל שמירה על אחידות כשהעסק גדל."], [6, "יש בסיס, אבל יש פערים שעולים לכם בלקוחות", "לקוחות שמכירים אתכם יודעים כמה אתם טובים. מי שעוד לא מכיר אתכם לא רואה את זה, ולכן משווה אתכם לאחרים."], [10, "המותג שלכם לא מספר את הסיפור שלכם", "העסק כנראה טוב יותר ממה שהוא נראה. הפער הזה בדיוק גורם ללקוחות להתמקח, להשוות ולהתלבט."]]}</script></div>
     </div>
   </section>
 
@@ -1410,6 +1393,7 @@
 <!-- Sticky mobile CTA -->
 <script src="assets/mega.js?v=5" defer></script>
 <script src="assets/srv-up.js?v=1" defer></script>
+<script src="assets/dx.js?v=1" defer></script>
 <script id="v3-js">
 (function(){
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;

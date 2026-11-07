@@ -390,6 +390,7 @@
   <link rel="stylesheet" href="assets/mega-wow.css?v=5" />
   <link rel="stylesheet" href="assets/srv-hero.css?v=1" />
 <link rel="stylesheet" href="assets/srv-up.css?v=1" />
+<link rel="stylesheet" href="assets/dx.css?v=1" />
 <link rel="stylesheet" href="assets/sv3.css?v=1" />
 <style id="v3-page">
 .af{padding:20px;text-align:right}
@@ -624,31 +625,15 @@
     </div>
   </section>
 
-  <!-- ai readiness checker -->
-  <section class="sec surface">
+  <!-- guided diagnosis -->
+  <section class="sec surface dx-sec">
     <div class="wrap">
-      <div class="s-head center reveal"><span class="eyebrow">בדיקה עצמית</span><h2>בדקו כמה אוטומציה חסרה לעסק שלכם</h2><p>סמנו כל משפט שנכון לגבי העסק שלכם:</p></div>
-      <div class="checker-box reveal" style="max-width:780px;margin-inline:auto;">
-        <div class="checker-grid">
-          <label class="checker-item"><input type="checkbox" class="ai-chk">אני עונה ללידים ידנית (וואטסאפ, מייל, טלפון)</label>
-          <label class="checker-item"><input type="checkbox" class="ai-chk">אין לי מערכת שמסווגת לידים אוטומטית</label>
-          <label class="checker-item"><input type="checkbox" class="ai-chk">אני שוכח לעשות Follow-up ללקוחות</label>
-          <label class="checker-item"><input type="checkbox" class="ai-chk">הדוחות שלי מוכנים ידנית (אקסל, גוגל שיטס)</label>
-          <label class="checker-item"><input type="checkbox" class="ai-chk">אני מבצע משימות חוזרות כל יום (אותו מייל, אותה הודעה)</label>
-          <label class="checker-item"><input type="checkbox" class="ai-chk">אין לי צ׳אטבוט באתר או בוואטסאפ</label>
-          <label class="checker-item"><input type="checkbox" class="ai-chk">תהליך הצעת המחיר שלי ידני לגמרי</label>
-          <label class="checker-item"><input type="checkbox" class="ai-chk">אני לא יודע מי הליד הכי חם שלי עכשיו</label>
-          <label class="checker-item"><input type="checkbox" class="ai-chk">לקוחות קיימים לא מקבלים ממני תוכן שוטף</label>
-          <label class="checker-item"><input type="checkbox" class="ai-chk">אין לי התראות אוטומטיות על הזדמנויות מכירה</label>
-        </div>
-        <div class="checker-result" id="aiResult">
-          <div class="score" id="aiScore"></div>
-          <div class="msg" id="aiMsg"></div>
-          <div class="cta-row" id="aiCta" style="display:none;">
-            <a href="tel:0508249824" class="btn btn-primary btn-sm" style="margin-top:8px;">שיחת אבחון: 050-824-9824</a>
-          </div>
-        </div>
+      <div class="s-head center reveal">
+        <span class="eyebrow">אבחון מהיר</span>
+        <h2>5 שאלות. איפה העסק שלכם דולף זמן?</h2>
+        <p>עונים בלחיצה, ותוך כדי נבנה לכם דוח: מה כבר עובד לבד, מה עדיין ידני, ואיזו אוטומציה הייתי בונה ראשונה.</p>
       </div>
+      <div class="dx reveal" data-dx><script type="application/json">{"topic": "אוטומציות", "qs": [{"q": "ליד נכנס ב-22:00 בלילה. מה קורה איתו?", "o": [["מקבל מענה אוטומטי ונכנס למערכת", 0], ["מחכה לבוקר", 1], ["לפעמים הוא פשוט נשכח", 2]], "ok": "לידים מקבלים מענה גם מחוץ לשעות העבודה", "f": "לידים מחכים שעות למענה", "fix": "מענה אוטומטי תוך דקה, וניתוב הליד לנציג הנכון"}, {"q": "כמה זמן ביום הולך על העתקה והדבקה בין מערכות?", "o": [["כמעט כלום", 0], ["חצי שעה עד שעה", 1], ["יותר משעה", 2]], "ok": "המידע עובר בין המערכות לבד", "f": "שעות עבודה הולכות על הזנה ידנית", "fix": "מחברים את הטופס, ה-CRM והוואטסאפ, כך שהמידע עובר לבד"}, {"q": "לקוח קיבל הצעת מחיר ולא חזר. מה קורה?", "o": [["יוצאת אליו תזכורת אוטומטית בזמן", 0], ["אני חוזר אליו כשאני נזכר", 1], ["בדרך כלל זה נופל", 2]], "ok": "אין לקוח שנופל בין הכיסאות", "f": "פולואפים נופלים בין הכיסאות", "fix": "רצף תזכורות אוטומטי: גם ללקוח וגם לכם"}, {"q": "איך נראה הדוח השבועי שלכם?", "o": [["מתעדכן לבד, בזמן אמת", 0], ["קובץ אקסל שאני מכין", 1], ["אין דוח קבוע", 2]], "ok": "יש לכם תמונת מצב בזמן אמת", "f": "אין לכם תמונת מצב בזמן אמת", "fix": "דשבורד שמתעדכן לבד מכל המקורות"}, {"q": "מחר נכנסות פי שניים פניות. מה קורה?", "o": [["המערכת סופגת את זה", 0], ["נעבוד עד מאוחר", 1], ["חלק מהפניות ילכו לאיבוד", 2]], "ok": "העסק בנוי לגדול בלי לקרוס", "f": "העסק עדיין לא בנוי לגדול", "fix": "תהליך שעובד אותו דבר על 10 פניות ועל 100"}], "lv": [[2, "העסק שלכם כבר עובד חכם", "רוב הדברים כבר רצים לבד. השלב הבא הוא לחבר אותם לתמונה אחת ולהשתמש ב-AI כדי לקבל החלטות מהר יותר."], [6, "יש כמה נקודות שדולפות זמן וכסף", "העסק עובד, אבל חלק מהעבודה עדיין נשען עליכם. אוטומציה אחת או שתיים במקום הנכון יחזירו לכם שעות כל שבוע."], [10, "יותר מדי עבודה ידנית מחזיקה את העסק", "כרגע אתם המערכת. כל ליד, כל תזכורת וכל דוח עוברים דרככם. בדיוק פה אוטומציה עושה את ההבדל הגדול."]]}</script></div>
     </div>
   </section>
 
@@ -936,6 +921,7 @@
 <!-- Sticky mobile CTA -->
 <script src="assets/mega.js?v=5" defer></script>
 <script src="assets/srv-up.js?v=1" defer></script>
+<script src="assets/dx.js?v=1" defer></script>
 <script id="v3-js">
 (function(){
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
