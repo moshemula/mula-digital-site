@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/assets/favicon.png">
+<title>הצעת מחיר להילה אחירם</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* Layout: one dark editorial column, numbered chapters, brand gradient used only as a signal line */
+:root{
+  --bg:#0B0A0F;
+  --panel:#14121B;
+  --line:#2A2634;
+  --ink:#F4F1F8;
+  --muted:#A9A3B6;
+  --g1:#7A2BD4; --g2:#C72C7C; --g3:#F2522A;
+  --grad:linear-gradient(90deg,var(--g1),var(--g2),var(--g3));
+  --display:"Heebo",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --body:"Heebo",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.15}
+.num{font-variant-numeric:tabular-nums}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* Top bar */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:28px 0;flex-wrap:wrap}
+.logo{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#0B0A0F;border-radius:999px;padding:8px 18px 8px 14px;font-weight:900;letter-spacing:.04em;font-size:15px;direction:ltr}
+.logo svg{width:20px;height:20px}
+.doc-meta{display:flex;gap:18px;color:var(--muted);font-size:14px;flex-wrap:wrap}
+.doc-meta b{color:var(--ink);font-weight:500}
+
+/* Hero */
+.hero{position:relative;padding:56px 0 64px;border-bottom:1px solid var(--line);overflow:hidden}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.55;pointer-events:none}
+.hero .wrap{position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--muted);letter-spacing:.02em;margin-bottom:22px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--grad);border-radius:2px}
+.hero h1{font-size:clamp(32px,5.2vw,60px);font-weight:800;max-width:15ch;letter-spacing:-.01em}
+.hero p.lead{margin-top:22px;font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:56ch}
+.hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:44px}
+.hero-stats div{background:rgba(20,18,27,.85);backdrop-filter:blur(6px);padding:22px 22px 20px;text-align:right}
+.hero-stats strong{display:block;font-size:clamp(24px,3.2vw,34px);font-weight:800}
+.hero-stats span{color:var(--muted);font-size:14px}
+
+/* Sections */
+section.ch{padding:72px 0;border-bottom:1px solid var(--line)}
+.ch-head{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:baseline;margin-bottom:36px}
+.ch-num{font-size:14px;font-weight:700;color:var(--g3);font-variant-numeric:tabular-nums;border:1px solid var(--line);border-radius:999px;padding:4px 12px;white-space:nowrap}
+.ch-head h2{font-size:clamp(26px,3.6vw,40px);font-weight:800}
+.ch-head p{grid-column:2;color:var(--muted);max-width:60ch;margin-top:6px}
+
+/* Flow diagram */
+.flow{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:28px;overflow-x:auto}
+.flow svg{display:block;width:100%;min-width:640px;height:auto}
+.flow .cap{display:flex;gap:22px;flex-wrap:wrap;margin-top:14px;color:var(--muted);font-size:14px}
+.flow .cap i{display:inline-block;width:18px;height:3px;border-radius:2px;vertical-align:middle;margin-left:8px}
+@keyframes dash{to{stroke-dashoffset:-40}}
+.flow .moving{stroke-dasharray:6 14;animation:dash 1.6s linear infinite}
+
+/* Pillars */
+.pillars{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:28px}
+.pillar{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}
+.pillar::before{content:"";position:absolute;top:0;right:0;left:0;height:2px;background:var(--grad);opacity:.8}
+.pillar .tag{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.pillar h3{font-size:21px;font-weight:700}
+.pillar p{color:var(--muted);font-size:16px}
+.pillar .benefit{margin-top:auto;padding-top:14px;border-top:1px dashed var(--line);font-weight:700;font-size:17px;color:var(--ink)}
+
+/* Timeline */
+.timeline{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;position:relative}
+.timeline::before{content:"";position:absolute;top:15px;right:0;left:0;height:2px;background:var(--line)}
+.timeline::after{content:"";position:absolute;top:15px;right:0;height:2px;width:100%;background:var(--grad);transform-origin:right;animation:grow 2.4s ease-out both}
+@keyframes grow{from{transform:scaleX(.08)}to{transform:scaleX(1)}}
+.timeline li{position:relative;padding:44px 0 0 18px}
+.timeline li::before{content:"";position:absolute;top:7px;right:0;width:18px;height:18px;border-radius:50%;background:var(--bg);border:3px solid var(--g2);z-index:1}
+.timeline .when{font-size:13px;color:var(--g3);font-weight:700}
+.timeline h3{font-size:18px;font-weight:700;margin:4px 0 6px}
+.timeline p{font-size:15px;color:var(--muted)}
+
+/* Pricing */
+.price-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:28px}
+.card h3{font-size:19px;font-weight:700;margin-bottom:4px}
+.card .sub{color:var(--muted);font-size:14px;margin-bottom:18px}
+.rows{display:flex;flex-direction:column}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row .name{display:flex;flex-direction:column}
+.row .name small{color:var(--muted);font-size:14px}
+.row .amt{font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+.row .amt small{font-weight:400;color:var(--muted);font-size:13px}
+.total{margin-top:14px;padding:18px 20px;border-radius:16px;background:linear-gradient(90deg,rgba(122,43,212,.18),rgba(242,82,42,.14));border:1px solid rgba(199,44,124,.45);display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.total b{font-size:28px;font-weight:800;font-variant-numeric:tabular-nums}
+.badge{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--grad);color:#fff;margin-inline-start:8px;vertical-align:middle}
+.stack{display:flex;flex-direction:column;gap:18px}
+.opt{border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.opt.rec{border-color:rgba(199,44,124,.6);background:rgba(199,44,124,.07)}
+.opt p{font-size:15px}
+.opt small{display:block;color:var(--muted);font-size:13px}
+.opt .amt{font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* Calculator */
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ctrl{display:flex;flex-direction:column;gap:22px}
+.ctrl label{display:flex;justify-content:space-between;font-size:15px;color:var(--muted);margin-bottom:8px}
+.ctrl label output{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:6px;background:var(--line);outline:none;direction:rtl}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#fff;border:4px solid var(--g2);cursor:pointer}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#fff;border:4px solid var(--g2);cursor:pointer}
+input[type=range]:focus-visible{box-shadow:0 0 0 3px rgba(199,44,124,.5)}
+.results{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.results div{background:var(--panel);padding:20px;text-align:right}
+.results strong{display:block;font-size:30px;font-weight:800;font-variant-numeric:tabular-nums}
+.results span{color:var(--muted);font-size:14px}
+.results .hl{grid-column:1/-1;background:linear-gradient(90deg,rgba(122,43,212,.2),rgba(242,82,42,.16))}
+.note{color:var(--muted);font-size:14px;margin-top:14px}
+.bigline{margin-top:26px;font-size:clamp(20px,2.6vw,26px);font-weight:800}
+
+/* Proof */
+.proof{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.proof .card{padding:22px}
+.proof strong{display:block;font-size:30px;font-weight:800;margin-bottom:6px;font-variant-numeric:tabular-nums}
+.proof p{color:var(--muted);font-size:15px}
+.proof .who{font-size:13px;color:var(--ink);font-weight:700;margin-bottom:10px;display:block}
+
+/* Terms */
+.terms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;list-style:none}
+.terms li{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 20px;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start}
+.terms .ix{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--g3);font-variant-numeric:tabular-nums}
+.terms b{display:block;font-size:16px;margin-bottom:2px}
+.terms span{color:var(--muted);font-size:15px}
+
+/* CTA */
+.cta{padding:80px 0 56px;text-align:right}
+.cta h2{font-size:clamp(28px,4.4vw,48px);font-weight:800;max-width:18ch}
+.cta p{color:var(--muted);margin-top:14px;max-width:52ch}
+.btns{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;font-weight:700;font-size:17px;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}
+.btn.primary{background:var(--grad);color:#fff;box-shadow:0 10px 40px -10px rgba(199,44,124,.7)}
+.btn.ghost{border:1px solid var(--line);color:var(--ink)}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.sign{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:15px}
+.sign b{color:var(--ink)}
+.sign a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.sign .ltr{direction:ltr;unicode-bidi:isolate}
+
+
+.flow-m{display:none;list-style:none;flex-direction:column;gap:10px}
+.flow-m li{border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:#1C1925;position:relative}
+.flow-m li b{display:block;font-size:16px}
+.flow-m li span{color:var(--muted);font-size:14px}
+.flow-m li.hot{background:var(--grad);border:0}
+.flow-m li.hot span{color:#fff;opacity:.9}
+.flow-m li.re{border-color:#7A2BD4}
+.flow-m .arrow{border:0;background:none;padding:0;text-align:center;color:var(--g2);font-size:14px;font-weight:700}
+.row .name .badge{align-self:flex-start;margin:4px 0}
+@media (max-width:600px){.flow svg,.flow .cap{display:none}.flow-m{display:flex}.flow{padding:18px}}
+
+/* Why-me bento with motion */
+.bento{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+.bcard{grid-column:span 2;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
+.bcard.wide{grid-column:span 3}
+.bcard:hover{border-color:rgba(199,44,124,.5);transform:translateY(-3px)}
+.bcard::after{content:"";position:absolute;inset:auto -30% -60% auto;width:70%;height:90%;background:radial-gradient(closest-side,rgba(199,44,124,.14),transparent);pointer-events:none}
+.viz{height:170px;border-radius:16px;background:linear-gradient(180deg,#17141F,#110F17);border:1px solid var(--line);margin-bottom:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.viz svg{width:100%;height:100%}
+.kicker{font-size:13px;font-weight:700;color:var(--g3)}
+.bcard h3{font-size:21px;font-weight:700}
+.bcard p{color:var(--muted);font-size:16px}
+.bcard .benefit{margin-top:auto;padding-top:12px;border-top:1px dashed var(--line);font-weight:700;font-size:17px;color:var(--ink)}
+@keyframes scan{0%{transform:translateY(0)}50%{transform:translateY(116px)}100%{transform:translateY(0)}}
+.scan{animation:scan 3.2s ease-in-out infinite}
+@keyframes pulseo{0%,100%{opacity:.22}50%{opacity:.5}}
+.hl-clause{animation:pulseo 3.2s ease-in-out infinite}
+.flowdash{stroke-dasharray:6 12;animation:dash 1.4s linear infinite}
+@keyframes draw{0%,15%{stroke-dashoffset:90}45%,100%{stroke-dashoffset:0}}
+.check{stroke-dasharray:90;animation:draw 3.2s ease-in-out infinite}
+@keyframes ring{0%{stroke-dashoffset:390}60%,100%{stroke-dashoffset:40}}
+.ring{stroke-dasharray:390;animation:ring 3.6s cubic-bezier(.6,0,.2,1) infinite alternate}
+@keyframes rise{0%{transform:scaleY(.15)}60%,100%{transform:scaleY(1)}}
+.bars rect{transform-box:fill-box;transform-origin:bottom;animation:rise 3.6s cubic-bezier(.5,0,.2,1) infinite alternate}
+.bars rect:nth-child(2){animation-delay:.1s}.bars rect:nth-child(3){animation-delay:.2s}.bars rect:nth-child(4){animation-delay:.3s}.bars rect:nth-child(5){animation-delay:.4s}.bars rect:nth-child(6){animation-delay:.5s}
+@keyframes trend{0%,20%{stroke-dashoffset:420}70%,100%{stroke-dashoffset:0}}
+.trend{stroke-dasharray:420;animation:trend 3.6s ease-out infinite alternate}
+@keyframes ping{0%,100%{r:7;opacity:1}50%{r:11;opacity:.6}}
+.dot{animation:ping 1.6s ease-in-out infinite}
+.chat{flex-direction:column;align-items:stretch;justify-content:center;gap:8px;padding:16px}
+.bubble{max-width:82%;padding:8px 12px;border-radius:14px;font-size:13px;line-height:1.4;animation:pop 6s ease-in-out infinite both}
+.bubble.in{align-self:flex-start;background:#241F30;color:var(--ink);border-bottom-right-radius:4px}
+.bubble.out{align-self:flex-end;background:var(--grad);color:#fff;border-bottom-left-radius:4px;animation-delay:.6s}
+.bubble.typing{display:flex;gap:4px;padding:10px 12px;animation-delay:1.2s}
+.bubble.typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:blink 1s infinite}
+.bubble.typing i:nth-child(2){animation-delay:.15s}.bubble.typing i:nth-child(3){animation-delay:.3s}
+@keyframes blink{0%,100%{opacity:.3}50%{opacity:1}}
+@keyframes pop{0%{transform:translateY(6px);opacity:.35}12%,85%{transform:none;opacity:1}100%{opacity:.35}}
+.online{position:absolute;top:10px;left:12px;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.online b{width:8px;height:8px;border-radius:50%;background:#3DD68C;box-shadow:0 0 0 0 rgba(61,214,140,.6);animation:live 1.8s infinite}
+@keyframes live{0%{box-shadow:0 0 0 0 rgba(61,214,140,.6)}100%{box-shadow:0 0 0 10px rgba(61,214,140,0)}}
+@media (max-width:860px){.bento{grid-template-columns:1fr}.bcard,.bcard.wide{grid-column:auto}}
+@media (max-width:860px){
+  .pillars,.price-grid,.calc,.terms{grid-template-columns:1fr}
+  .proof{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .timeline{grid-template-columns:1fr 1fr;row-gap:10px}
+  .timeline::before,.timeline::after{display:none}
+}
+@media (max-width:480px){
+  html,body{font-size:16px}
+  .wrap{padding:0 18px}
+  .hero{padding:36px 0 44px}
+  .hero-stats{grid-template-columns:1fr}
+  .hero-stats div{padding:16px 18px}
+  section.ch{padding:52px 0}
+  .ch-head{grid-template-columns:1fr;gap:10px}
+  .ch-head p{grid-column:1}
+  .ch-num{justify-self:start}
+  .proof{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr}
+  .card{padding:22px 18px}
+  .row{flex-direction:column;gap:4px}
+  .results strong{font-size:24px}
+  .btn{width:100%;justify-content:flex-start}
+  .doc-meta{gap:10px;font-size:13px}
+}
+
+/* force right alignment everywhere */
+*{direction:rtl}
+.logo,.logo *{direction:ltr}
+.hero-stats strong{unicode-bidi:plaintext}
+body,main,section,header,div,p,h1,h2,h3,li,span,label{text-align:right}
+.row{flex-direction:column;align-items:flex-start;gap:4px}
+.total{flex-direction:column;align-items:flex-start}
+.opt{flex-direction:column;align-items:flex-start;gap:6px}
+.ctrl label{justify-content:flex-start;gap:10px}
+
+.flow-m .arrow{text-align:right;padding-right:16px}
+.btn{justify-content:flex-start}
+.sign{flex-direction:column;justify-content:flex-start;align-items:flex-start}
+.flow .cap{justify-content:flex-start}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body dir="rtl">
+
+<header class="hero">
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="top">
+      <span class="logo" aria-label="MULA DIGITAL">MULA DIGITAL
+        <svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="la" x1="0" x2="1"><stop offset="0" stop-color="#7A2BD4"/><stop offset=".5" stop-color="#C72C7C"/><stop offset="1" stop-color="#F2522A"/></linearGradient></defs><path d="M5 19 19 5M9 5h10v10" fill="none" stroke="url(#la)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <div class="doc-meta">
+        <span>הצעה אישית ל<b>עו"ד הילה אחירם</b></span>
+        <span>תאריך: <b class="num">8.11.2026</b></span>
+        <span>בתוקף ל-<b class="num">7</b> ימי עסקים</span>
+      </div>
+    </div>
+
+    <div class="eyebrow">תוכנית להבאת תיקי סיעוד מגוגל</div>
+    <h1>מי שמחפש עורכת דין לתביעת סיעוד <span class="grad-text">יגיע אלייך</span></h1>
+    <p class="lead">אנשים שחברת הביטוח דחתה להם תביעת סיעוד, או שעומדים להגיש אחת, מחפשים בגוגל עזרה מקצועית כבר היום. בניתי לך תוכנית שתופסת אותם ברגע החיפוש, ומחזירה אלייך גם את מי שנכנס ועוד לא השאיר פרטים.</p>
+
+    <div class="hero-stats">
+      <div><strong>בין <bdi class="num">12</bdi> ל-<bdi class="num">18</bdi> ₪</strong><span>עלות קליק בתחום, לפי הבדיקה שעשינו יחד</span></div>
+      <div><strong><bdi class="num">3,700</bdi> ₪</strong><span>הקמה מלאה, חד פעמי</span></div>
+      <div><strong>תיק אחד</strong><span>שנסגר מכסה את כל ההשקעה</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="ch">
+    <div class="wrap">
+      <div class="ch-head">
+        <span class="ch-num">01</span>
+        <div><h2>ככה זה עובד</h2><p>שני ערוצים שעובדים ביחד: גוגל מביא את מי שמחפש עכשיו, והרימרקטינג מחזיר את מי שנכנס והתלבט.</p></div>
+      </div>
+
+      <div class="flow" role="img" aria-label="תרשים: חיפוש בגוגל מוביל לדף הנחיתה. משם הגולש משאיר פרטים או ממשיך הלאה. מי שהמשיך רואה סרטונים של הילה בפייסבוק ובאינסטגרם, וחוזר להשאיר פרטים.">
+        <svg viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg" font-family="Heebo, Arial, sans-serif">
+          <defs>
+            <linearGradient id="fg" x1="1" x2="0"><stop offset="0" stop-color="#7A2BD4"/><stop offset=".5" stop-color="#C72C7C"/><stop offset="1" stop-color="#F2522A"/></linearGradient>
+            <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#C72C7C"/></marker>
+            <marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#7A6F8E"/></marker>
+          </defs>
+          <!-- nodes, flowing right to left -->
+          <g text-anchor="start">
+            <rect x="700" y="40" width="180" height="84" rx="16" fill="#1C1925" stroke="#2A2634"/>
+            <text x="862" y="76" fill="#F4F1F8" font-size="18" font-weight="700">חיפוש בגוגל</text>
+            <text x="862" y="102" fill="#A9A3B6" font-size="14">"עורך דין לתביעת סיעוד"</text>
+
+            <rect x="460" y="40" width="180" height="84" rx="16" fill="#1C1925" stroke="#C72C7C"/>
+            <text x="622" y="76" fill="#F4F1F8" font-size="18" font-weight="700">דף נחיתה ייעודי</text>
+            <text x="622" y="102" fill="#A9A3B6" font-size="14">טופס קצר וחיוג</text>
+
+            <rect x="200" y="40" width="200" height="84" rx="16" fill="url(#fg)"/>
+            <text x="382" y="76" fill="#fff" font-size="19" font-weight="800">פנייה אלייך</text>
+            <text x="382" y="102" fill="#fff" font-size="14" opacity=".9">שיחה, ייעוץ ותיק</text>
+
+            <rect x="460" y="168" width="180" height="76" rx="16" fill="#1C1925" stroke="#2A2634"/>
+            <text x="622" y="200" fill="#F4F1F8" font-size="17" font-weight="700">לא השאיר פרטים</text>
+            <text x="622" y="224" fill="#A9A3B6" font-size="14">נכנס לקהל רימרקטינג</text>
+
+            <rect x="200" y="168" width="200" height="76" rx="16" fill="#1C1925" stroke="#7A2BD4"/>
+            <text x="382" y="200" fill="#F4F1F8" font-size="17" font-weight="700">סרטון שלך ברשתות</text>
+            <text x="382" y="224" fill="#A9A3B6" font-size="14">בונה אמון וחוזר לדף</text>
+          </g>
+          <path class="moving" d="M700 82 H646" stroke="#C72C7C" stroke-width="3" fill="none" marker-end="url(#ah)"/>
+          <path class="moving" d="M460 82 H406" stroke="#C72C7C" stroke-width="3" fill="none" marker-end="url(#ah)"/>
+          <path d="M550 124 V162" stroke="#7A6F8E" stroke-width="2" fill="none" stroke-dasharray="4 6" marker-end="url(#ah2)"/>
+          <path class="moving" d="M460 206 H406" stroke="#7A2BD4" stroke-width="3" fill="none" marker-end="url(#ah)"/>
+          <path class="moving" d="M300 168 V130" stroke="#7A2BD4" stroke-width="3" fill="none" marker-end="url(#ah)"/>
+        </svg>
+        <ol class="flow-m" aria-hidden="true">
+          <li><b>חיפוש בגוגל</b><span>"עורך דין לתביעת סיעוד"</span></li>
+          <li class="arrow">↓</li>
+          <li style="border-color:#C72C7C"><b>דף נחיתה ייעודי</b><span>טופס קצר וחיוג</span></li>
+          <li class="arrow">↓ משאיר פרטים</li>
+          <li class="hot"><b>פנייה אלייך</b><span>שיחה, ייעוץ ותיק</span></li>
+          <li class="arrow" style="color:var(--g1)">ומי שלא השאיר פרטים ↓</li>
+          <li class="re"><b>רואה סרטון שלך בפייסבוק ובאינסטגרם</b><span>בונה אמון, חוזר לדף ופונה אלייך</span></li>
+        </ol>
+        <div class="cap"><span><i style="background:#C72C7C"></i>מסלול ישיר מגוגל</span><span><i style="background:#7A2BD4"></i>מסלול החזרה ברימרקטינג</span></div>
+      </div>
+
+      <div class="pillars">
+        <article class="pillar">
+          <span class="tag">רכיב 1</span>
+          <h3>דף נחיתה ייעודי לתביעות סיעוד</h3>
+          <p>דף שמדבר רק על השירות הזה, בשפה של מי שמחפש אותו. בנוי להמרה, מותאם מלא למובייל ומאוחסן על שרת ישראלי מהיר ומאובטח.</p>
+          <p class="benefit">מי שנכנס מבין תוך שניות שהגיע למקום הנכון, וזה מה שהופך כניסה לפנייה.</p>
+        </article>
+        <article class="pillar">
+          <span class="tag">רכיב 2</span>
+          <h3>קמפיין גוגל על הביטויים המדויקים</h3>
+          <p>מחקר מעמיק של מה שאנשים באמת מחפשים, סינון של מי שלא רלוונטי, ומודעות שנכתבות כדי שיפנו אלייך.</p>
+          <p class="benefit">כל שקל הולך על מי שבאמת מחפש עורכת דין, ולא על מי שרוצה לקנות ביטוח סיעודי.</p>
+        </article>
+        <article class="pillar">
+          <span class="tag">רכיב 3</span>
+          <h3>מעקב המרות מלא</h3>
+          <p>מערכת מדידה מלאה. כל פנייה וכל שיחה נמדדות עד המקור שהביא אותן.</p>
+          <p class="benefit">את יודעת בדיוק כמה עולה פנייה אמיתית, ואנחנו מגדילים רק את מה שעובד.</p>
+        </article>
+        <article class="pillar">
+          <span class="tag">רכיב 4</span>
+          <h3>רימרקטינג בפייסבוק ובאינסטגרם</h3>
+          <p>מי שנכנס לדף ולא השאיר פרטים יראה אותך שוב, בסרטונים קצרים שבהם את מסבירה בעצמך.</p>
+          <p class="benefit">בתחום הזה בוחרים עורכת דין שסומכים עליה. הסרטונים בונים את האמון הזה עוד לפני השיחה הראשונה.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ch">
+    <div class="wrap">
+      <div class="ch-head">
+        <span class="ch-num">02</span>
+        <div><h2>לוח הזמנים</h2><p>אני מכין הכל מראש. הקמפיין עולה לאוויר רק כשהדף, המעקב והסרטונים מוכנים.</p></div>
+      </div>
+      <ol class="timeline">
+        <li><span class="when">שבוע 1</span><h3>אפיון ובנייה</h3><p>כתיבה ובניית דף הנחיתה, מחקר, יום צילום.</p></li>
+        <li><span class="when">שבוע 2</span><h3>הטמעה ובדיקות</h3><p>מערכת המדידה, עריכת הסרטונים, בדיקות ואישור שלך.</p></li>
+        <li><span class="when">עלייה לאוויר</span><h3>הקמפיין רץ</h3><p>גוגל ורימרקטינג פעילים, מעקב יומי ושיפורים ראשונים.</p></li>
+        <li><span class="when">יום 30</span><h3>דוח והחלטה</h3><p>מספרים אמיתיים: כניסות, פניות ועלות לפנייה. מחליטים ביחד על התקציב.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="ch">
+    <div class="wrap">
+      <div class="ch-head">
+        <span class="ch-num">03</span>
+        <div><h2>ההשקעה</h2><p>כל המחירים לא כוללים מע"מ.</p></div>
+      </div>
+
+      <div class="price-grid">
+        <div class="stack">
+          <div class="card">
+            <h3>הקמה</h3>
+            <p class="sub">חד פעמי, משולם בחתימה על ההצעה</p>
+            <div class="rows">
+              <div class="row"><span class="name">בניית דף נחיתה ייעודי<small>קופי, עיצוב, התאמה למובייל, חיבור לדומיין</small></span><span class="amt">2,500 ₪</span></div>
+              <div class="row"><span class="name">הקמת קמפיין בגוגל<small>כולל הטמעת מערכת מדידה מלאה</small></span><span class="amt">1,200 ₪</span></div>
+            </div>
+            <div class="total"><span>סה"כ הקמה</span><b>3,700 ₪</b></div>
+          </div>
+
+          <div class="card">
+            <h3>ניהול שוטף</h3>
+            <p class="sub">משולם מראש בתחילת כל חודש, החל מעליית הקמפיין</p>
+            <div class="rows">
+              <div class="row"><span class="name">חודש ראשון<span class="badge">מחיר מיוחד</span><small>ניהול גוגל ורימרקטינג, אופטימיזציה ודוח חודשי</small></span><span class="amt">2,000 ₪</span></div>
+              <div class="row"><span class="name">מהחודש השני<small>אותו שירות מלא</small></span><span class="amt">2,500 ₪ <small>לחודש</small></span></div>
+              <div class="row"><span class="name">אחסון ותחזוקה של הדף<small>שרת ישראלי, גיבויים, SSL ותוספים</small></span><span class="amt">120 ₪ <small>לחודש</small></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="card">
+            <h3>סרטונים</h3>
+            <p class="sub">לבחירתך</p>
+            <div class="stack" style="gap:12px">
+              <div class="opt rec"><p>יום צילום במשרד ועריכה של 4 סרטונים<small>מומלץ: איכות שבונה אמון</small></p><span class="amt">2,500 ₪</span></div>
+              <div class="opt"><p>עריכה של 4 סרטונים<small>מחומר שאת מצלמת בעצמך</small></p><span class="amt">1,200 ₪</span></div>
+            </div>
+          </div>
+          <div class="card">
+            <h3>תקציב פרסום מומלץ להתחלה</h3>
+            <p class="sub">משולם על ידך ישירות לגוגל ולמטא, לא עובר דרכי</p>
+            <div class="rows">
+              <div class="row"><span class="name">גוגל</span><span class="amt">3,000 ₪ <small>לחודש</small></span></div>
+              <div class="row"><span class="name">פייסבוק ואינסטגרם</span><span class="amt">500 ₪ <small>לחודש</small></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ch why">
+    <div class="wrap">
+      <div class="ch-head">
+        <span class="ch-num">04</span>
+        <div><h2>למה לעבוד איתי</h2><p>הצלחה בתחום שלך תלויה בהבנה של העולם שממנו הלקוחות שלך מגיעים.</p></div>
+      </div>
+      <div class="bento">
+
+        <article class="bcard wide">
+          <div class="viz" aria-hidden="true">
+            <svg viewBox="0 0 520 170"><defs><linearGradient id="w1" x1="1" x2="0"><stop offset="0" stop-color="#7A2BD4"/><stop offset=".5" stop-color="#C72C7C"/><stop offset="1" stop-color="#F2522A"/></linearGradient></defs>
+              <!-- policy document being scanned -->
+              <g transform="translate(330 18)">
+                <rect width="150" height="134" rx="12" fill="#1C1925" stroke="#2A2634"/>
+                <rect x="104" y="18" width="30" height="6" rx="3" fill="#F4F1F8" opacity=".85"/>
+                <rect x="40" y="36" width="94" height="5" rx="2.5" fill="#A9A3B6" opacity=".5"/>
+                <rect x="58" y="50" width="76" height="5" rx="2.5" fill="#A9A3B6" opacity=".5"/>
+                <rect x="30" y="64" width="104" height="5" rx="2.5" fill="#A9A3B6" opacity=".5"/>
+                <rect class="hl-clause" x="22" y="80" width="116" height="20" rx="5" fill="url(#w1)" opacity=".28"/>
+                <rect x="34" y="87" width="100" height="5" rx="2.5" fill="#F4F1F8"/>
+                <rect x="64" y="110" width="70" height="5" rx="2.5" fill="#A9A3B6" opacity=".5"/>
+                <rect class="scan" x="8" y="10" width="134" height="2" rx="1" fill="url(#w1)"/>
+              </g>
+              <!-- arrow to shield -->
+              <path class="flowdash" d="M318 85 H210" stroke="#C72C7C" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <g transform="translate(110 22)" class="shield">
+                <path d="M60 0 L112 18 V60 C112 95 88 118 60 128 C32 118 8 95 8 60 V18 Z" fill="#1C1925" stroke="url(#w1)" stroke-width="3"/>
+                <path class="check" d="M36 64 L54 82 L86 48" fill="none" stroke="url(#w1)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+            </svg>
+          </div>
+          <span class="kicker">מומחיות</span>
+          <h3>אני מכיר את עולם הביטוח מבפנים</h3>
+          <p>שנים של עבודה עם סוכני ביטוח ופנסיה, והרצאות לסוכנים ולמפקחים של הראל ומנורה מבטחים.</p>
+          <p class="benefit">אני מבין מה עובר על מי שנלחם מול חברת ביטוח, וכותב לו בשפה שלו.</p>
+        </article>
+
+        <article class="bcard">
+          <div class="viz" aria-hidden="true">
+            <svg viewBox="0 0 240 170"><defs><linearGradient id="w2" x1="1" x2="0"><stop offset="0" stop-color="#7A2BD4"/><stop offset=".5" stop-color="#C72C7C"/><stop offset="1" stop-color="#F2522A"/></linearGradient></defs>
+              <circle cx="120" cy="85" r="62" fill="none" stroke="#2A2634" stroke-width="10"/>
+              <circle class="ring" cx="120" cy="85" r="62" fill="none" stroke="url(#w2)" stroke-width="10" stroke-linecap="round" transform="rotate(-90 120 85)"/>
+              <text x="120" y="96" text-anchor="middle" font-family="Heebo, Arial" font-size="40" font-weight="900" fill="#F4F1F8">+15</text>
+              <text x="120" y="120" text-anchor="middle" font-family="Heebo, Arial" font-size="13" fill="#A9A3B6">שנים</text>
+            </svg>
+          </div>
+          <span class="kicker">ניסיון</span>
+          <h3>מעל 15 שנה בשיווק ובדיגיטל</h3>
+          <p>אתרים, קמפיינים, תוכן ווידאו תחת קורת גג אחת. אסטרטגיה וביצוע אצל אותו אדם.</p>
+          <p class="benefit">יש לך כתובת אחת שאחראית על התוצאה.</p>
+        </article>
+
+        <article class="bcard">
+          <div class="viz chat" aria-hidden="true">
+            <div class="bubble in">הגיעו 3 פניות חדשות היום</div>
+            <div class="bubble out">מעולה, אני חוזרת אליהן עכשיו</div>
+            <div class="bubble in typing"><i></i><i></i><i></i></div>
+            <span class="online"><b></b>משה זמין</span>
+          </div>
+          <span class="kicker">ליווי</span>
+          <h3>ליווי אישי וזמינות מלאה</h3>
+          <p>את עובדת מולי ישירות, לא מול נציג. דוח חודשי ברור ושיחה על המספרים.</p>
+          <p class="benefit">את תמיד יודעת מה קורה עם הכסף שלך, ולמה.</p>
+        </article>
+
+        <article class="bcard wide">
+          <div class="viz" aria-hidden="true">
+            <svg viewBox="0 0 520 170"><defs><linearGradient id="w4" x1="1" x2="0"><stop offset="0" stop-color="#7A2BD4"/><stop offset=".5" stop-color="#C72C7C"/><stop offset="1" stop-color="#F2522A"/></linearGradient></defs>
+              <g stroke="#2A2634" stroke-width="1">
+                <line x1="20" y1="30" x2="500" y2="30"/><line x1="20" y1="80" x2="500" y2="80"/><line x1="20" y1="130" x2="500" y2="130"/>
+              </g>
+              <g class="bars">
+                <rect x="440" y="100" width="40" height="30" rx="6" fill="#2A2634"/>
+                <rect x="370" y="88" width="40" height="42" rx="6" fill="#2A2634"/>
+                <rect x="300" y="72" width="40" height="58" rx="6" fill="#2A2634"/>
+                <rect x="230" y="60" width="40" height="70" rx="6" fill="#3A2F52"/>
+                <rect x="160" y="44" width="40" height="86" rx="6" fill="#5B2C7E"/>
+                <rect x="90" y="30" width="40" height="100" rx="6" fill="url(#w4)"/>
+              </g>
+              <path class="trend" d="M460 96 L390 82 L320 66 L250 52 L180 36 L110 22" fill="none" stroke="#F4F1F8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle class="dot" cx="110" cy="22" r="7" fill="#F2522A"/>
+              <text x="40" y="150" font-family="Heebo, Arial" font-size="12" fill="#A9A3B6" text-anchor="middle">חודש 3</text>
+              <text x="460" y="150" font-family="Heebo, Arial" font-size="12" fill="#A9A3B6" text-anchor="middle">חודש 1</text>
+            </svg>
+          </div>
+          <span class="kicker">מדידה</span>
+          <h3>מדידה לפני תחושות</h3>
+          <p>כל החלטה על הקמפיין נשענת על נתונים אמיתיים. מגדילים את מה שעובד ומשפרים את מה שלא.</p>
+          <p class="benefit">התקציב שלך עובד חכם יותר מחודש לחודש.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="ch">
+    <div class="wrap">
+      <div class="ch-head">
+        <span class="ch-num">05</span>
+        <div><h2>תנאים</h2></div>
+      </div>
+      <ul class="terms">
+        <li><span class="ix">1</span><div><b>הקמה</b><span>3,700 ₪ + מע"מ, משולם במלואו בחתימה על ההצעה.</span></div></li>
+        <li><span class="ix">2</span><div><b>ניהול חודשי</b><span>משולם מראש בתחילת כל חודש, החל מהיום שהקמפיין עולה לאוויר.</span></div></li>
+        <li><span class="ix">3</span><div><b>תקציב פרסום</b><span>משולם על ידך ישירות לגוגל ולמטא. החשבונות שייכים לך.</span></div></li>
+        <li><span class="ix">4</span><div><b>תקופת עבודה</b><span>מומלץ לפחות 3 חודשים כדי שהקמפיין יגיע לשיא. אין חובה.</span></div></li>
+        <li><span class="ix">5</span><div><b>עמידה בכללי הלשכה</b><span>הדף והמודעות נכתבים לפי כללי לשכת עורכי הדין לגבי פרסום: בלי הבטחת תוצאות ובלי ניסוחים שעלולים לסבך אותך.</span></div></li>
+        <li><span class="ix">6</span><div><b>תוקף</b><span>ההצעה בתוקף ל-7 ימי עסקים. המחירים לא כוללים מע"מ.</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2>אפשר להתחיל <span class="grad-text">כבר השבוע</span></h2>
+      <p>מאשרת? שולחים הודעה ואני פותח את העבודה. רוצה לשנות משהו בהצעה? נדבר ונתאים.</p>
+      <div class="btns">
+        <a class="btn primary" href="https://wa.me/972508249824?text=%D7%94%D7%99%D7%99%20%D7%9E%D7%A9%D7%94%2C%20%D7%9E%D7%90%D7%A9%D7%A8%D7%AA%20%D7%90%D7%AA%20%D7%94%D7%94%D7%A6%D7%A2%D7%94%20%D7%95%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%94%D7%AA%D7%97%D7%99%D7%9C" target="_blank" rel="noopener">מאשרת ומתחילים</a>
+        <a class="btn ghost" href="https://wa.me/972508249824" target="_blank" rel="noopener">יש לי שאלה</a>
+      </div>
+      <div class="sign">
+        <div><b>משה מולה | MULA DIGITAL</b><br>ליווי אישי, זמינות מלאה, ואני לצידך לאורך כל הדרך.</div>
+        <div>
+          <a href="https://muladigital.co.il/" target="_blank" rel="noopener" class="ltr">muladigital.co.il</a><br>
+          טלפון: <span class="ltr num">050-8249824</span><br>
+          וואטסאפ: <a href="https://wa.me/972508249824" target="_blank" rel="noopener">שלחי הודעה</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+
+  // Hero: slow drifting gradient particles (search signals moving toward one point)
+  var cv=document.getElementById('bg'),ctx=cv.getContext('2d');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W,H,dpr=Math.min(window.devicePixelRatio||1,2),pts=[];
+  var cols=['#7A2BD4','#C72C7C','#F2522A'];
+  function size(){W=cv.offsetWidth;H=cv.offsetHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);}
+  function seed(){pts=[];var n=Math.min(70,Math.floor(W/14));for(var i=0;i<n;i++){pts.push({x:Math.random()*W,y:Math.random()*H,v:.2+Math.random()*.6,r:1+Math.random()*2,c:cols[i%3]});}}
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    var tx=W*.12,ty=H*.35;
+    var g=ctx.createRadialGradient(tx,ty,0,tx,ty,Math.max(W,H)*.5);
+    g.addColorStop(0,'rgba(199,44,124,.22)');g.addColorStop(1,'rgba(11,10,15,0)');
+    ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+    pts.forEach(function(p){
+      var dx=tx-p.x,dy=ty-p.y,d=Math.sqrt(dx*dx+dy*dy)||1;
+      if(!reduce){p.x+=dx/d*p.v;p.y+=dy/d*p.v;}
+      if(d<20){p.x=W+Math.random()*40;p.y=Math.random()*H;}
+      ctx.globalAlpha=Math.min(1,d/300)*.8;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=p.c;ctx.fill();
+      ctx.globalAlpha=.12;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(p.x+dx/d*24,p.y+dy/d*24);ctx.strokeStyle=p.c;ctx.stroke();
+    });
+    ctx.globalAlpha=1;
+    if(!reduce)requestAnimationFrame(draw);
+  }
+  size();seed();draw();
+  window.addEventListener('resize',function(){size();seed();if(reduce)draw();});
+})();
+</script>
+</body>
+</html>
