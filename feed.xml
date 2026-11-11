@@ -5,13 +5,22 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Sun, 08 Nov 2026 11:02:13 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 14:39:05 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>כדאי לפרסם מחירים באתר או שזה מבריח לקוחות?</title>
+      <link>https://muladigital.co.il/blog-lefarsem-mechirim-baatar</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-lefarsem-mechirim-baatar</guid>
+      <description>ברוב העסקים הקטנים כן: מחיר פתיחה עם הסבר מסנן פניות וחוסך שיחות. מתי לא לפרסם, 6 דרכים להציג מחיר, מע״מ, גוגל, ובדיקה של 60 יום.</description>
+      <pubDate>Wed, 11 Nov 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&amp;amp;q=70" medium="image" />
+    </item>
     <item>
       <title>איך לכתוב עמוד אודות לעסק?</title>
       <link>https://muladigital.co.il/blog-eich-lichtov-amud-odot-laesek</link>
@@ -359,15 +368,6 @@
       <link>https://muladigital.co.il/blog-crm-laasakim-ktanim</link>
       <guid isPermaLink="true">https://muladigital.co.il/blog-crm-laasakim-ktanim</guid>
       <description>מה זה CRM? הגדרה בשורה אחת, מה מערכת CRM עושה בפועל, מה ההבדל בינה לבין ERP ואקסל, איזו מערכת מתאימה לעסק קטן וכמה זה עולה.</description>
-      <pubDate>Thu, 13 Aug 2026 10:00:00 +0300</pubDate>
-      <enclosure url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
-      <media:content url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
-    </item>
-    <item>
-      <title>איך לבחור סוכנות דיגיטל? 15 קריטריונים 2026</title>
-      <link>https://muladigital.co.il/blog-eich-livhor-sochnut-digital</link>
-      <guid isPermaLink="true">https://muladigital.co.il/blog-eich-livhor-sochnut-digital</guid>
-      <description>המדריך הכי מלא בעברית לבחירת סוכנות דיגיטל. 15 קריטריונים, צ'קליסט 25 נקודות, 10 דגלים אדומים, טבלת עלויות, והשאלה שחושפת הכל. מניסיון של 9 שנים בשטח.</description>
       <pubDate>Thu, 13 Aug 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
