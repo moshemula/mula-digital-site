@@ -214,7 +214,8 @@ p{margin:0}
 .hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
 .hero h1 .ln > span{display:block}
 /* intro */
-.intro{position:fixed;inset:0;z-index:200;background:#fff;display:grid;place-items:center;pointer-events:none}
+.intro{position:fixed;inset:0;z-index:200;background:#fff;display:grid;place-items:center;pointer-events:none;animation:introFail .5s ease 2.8s forwards}
+@keyframes introFail{to{opacity:0;visibility:hidden}}
 .intro .in{display:grid;justify-items:center;gap:22px}
 .intro img{width:min(280px,60vw);height:auto}
 .intro .bar{width:min(220px,50vw);height:3px;border-radius:3px;background:var(--line);overflow:hidden}
@@ -577,7 +578,8 @@ footer .mono{color:#9EA3C8}
 
 <main id="top">
 <section class="hero" aria-label="Elbatech Group">
-  <video autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg" aria-hidden="true"><source src="hero.mp4" type="video/mp4"></video>
+  <video id="heroVid" autoplay muted loop playsinline preload="none" poster="hero-poster.jpg" aria-hidden="true"></video>
+  <script>(function(){var v=document.getElementById("heroVid");if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;v.src=(innerWidth<900||(navigator.connection&&navigator.connection.saveData))?"hero-m.mp4":"hero.mp4";v.preload="auto";try{v.play()}catch(e){}})();</script>
   <div class="side" aria-hidden="true"><span>AS9100D:2016</span><span>ISO 13485:2016</span><span>IPC/WHMA-A-620</span></div>
   <div class="wrap">
     <span class="eyebrow hero-seq">Aerospace · Defense · High-tech · Medical</span>
@@ -1335,8 +1337,7 @@ function initIntro(){
     .to(el,{clipPath:'inset(0 0 100% 0)',duration:.75,ease:'power4.inOut'},'-=.05')
     .add(function(){root.classList.remove('intro-on');},'-=.4');
   var started=false;function go(){if(started)return;started=true;requestAnimationFrame(function(){requestAnimationFrame(function(){tl.play(0);setTimeout(function(){if(!done)finish();},4200);});});}
-  if(document.readyState==='complete')go();else window.addEventListener('load',go);
-  setTimeout(go,1800);
+  go();
 }
 /* ============ ANALYTICS ============ */
 (function(){
