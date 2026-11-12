@@ -35,6 +35,16 @@
 - [שיווק דיגיטלי לסוכני ביטוח](https://muladigital.co.il/shivuk-lesochnei-bituach)
 - [שיווק דיגיטלי למשרדי תיווך](https://muladigital.co.il/shivuk-lemisradei-tivuch)
 - [בניית אתר לפי תחום](https://muladigital.co.il/service-web-build): חשמלאים, אינסטלטורים, עורכי דין, רואי חשבון, סוכני ביטוח, מטפלים, קוסמטיקאיות, מאמני כושר ועוד
+- [שיווק ובניית אתרים לבעלי מקצוע](https://muladigital.co.il/shivuk-leanshei-miktzoa): עמוד מרכזי לכל המקצועות
+- [שיווק ובניית אתר לחשמלאים](https://muladigital.co.il/shivuk-lechashmalaim)
+- [שיווק ובניית אתר לטכנאי גז](https://muladigital.co.il/shivuk-letechnaei-gaz)
+- [שיווק ובניית אתר לטכנאי מיזוג ומתקיני מזגנים](https://muladigital.co.il/shivuk-letechnaei-mizug)
+- [שיווק ובניית אתר לאנשי איטום](https://muladigital.co.il/shivuk-lechevrot-itum)
+- [שיווק ובניית אתר לאינסטלטורים](https://muladigital.co.il/shivuk-leinstalatorim)
+- [שיווק ובניית אתר למאתרי נזילות](https://muladigital.co.il/shivuk-lemeatrei-nezilot)
+- [שיווק ובניית אתר למנעולנים](https://muladigital.co.il/shivuk-lemanulanim)
+- [שיווק ובניית אתר למדבירים](https://muladigital.co.il/shivuk-lemadbirim)
+- [בניית אתר לסוכן ביטוח](https://muladigital.co.il/service-web-build-insurance)
 
 ## הרצאות וסדנאות
 
