@@ -5,7 +5,7 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Thu, 12 Nov 2026 15:37:12 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 16:34:26 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
@@ -17,7 +17,7 @@
       <link>https://muladigital.co.il/blog-chatgpt-business-hub</link>
       <guid isPermaLink="true">https://muladigital.co.il/blog-chatgpt-business-hub</guid>
       <description>מה זה ChatGPT Business Hub, איך תובעים עסק שלב אחרי שלב, ומה קרה כשניסיתי לרשום עסק ישראלי. כולל בדיקה של 40 שאלות במנועי AI ומה לעשות כבר השבוע.</description>
-      <pubDate>Thu, 12 Nov 2026 12:00:00 +0300</pubDate>
+      <pubDate>Thu, 12 Nov 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://muladigital.co.il/assets/blog-business-hub/cover.jpg" type="image/jpeg" />
       <media:content url="https://muladigital.co.il/assets/blog-business-hub/cover.jpg" medium="image" />
     </item>
@@ -371,15 +371,6 @@
       <pubDate>Mon, 07 Sep 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://muladigital.co.il/assets/moshe-white.jpg" type="image/jpeg" />
       <media:content url="https://muladigital.co.il/assets/moshe-white.jpg" medium="image" />
-    </item>
-    <item>
-      <title>לקוח לכל החיים: למה עצמאי מפסיד בלי אתר</title>
-      <link>https://muladigital.co.il/blog-lakoach-lekol-hachaim</link>
-      <guid isPermaLink="true">https://muladigital.co.il/blog-lakoach-lekol-hachaim</guid>
-      <description>סוכן ביטוח, רואה חשבון, יועץ מס ועורך דין - לקוח אצלם נשאר שנים, ולכן ההחזר על לקוח מהרשת הוא מהגבוהים בשוק. אז למה כל כך הרבה מהם עדיין בלי אתר?</description>
-      <pubDate>Mon, 31 Aug 2026 10:00:00 +0300</pubDate>
-      <enclosure url="https://muladigital.co.il/assets/cover-lakoach.jpg" type="image/jpeg" />
-      <media:content url="https://muladigital.co.il/assets/cover-lakoach.jpg" medium="image" />
     </item>
   </channel>
 </rss>
