@@ -5,13 +5,22 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Wed, 11 Nov 2026 14:39:05 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 13:38:43 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>איך לבדוק אתר חדש לפני שמאשרים אותו?</title>
+      <link>https://muladigital.co.il/blog-eich-livdok-atar-chadash-lifnei-ishur</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-eich-livdok-atar-chadash-lifnei-ishur</guid>
+      <description>בודקים 6 דברים: בעלות על דומיין וחשבונות, טפסים שמגיעים אליך, נייד ומהירות, גוגל והפניות, נגישות ופרטיות, והתאמה לאפיון. ורק אז משלמים.</description>
+      <pubDate>Thu, 12 Nov 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&amp;amp;q=70" medium="image" />
+    </item>
     <item>
       <title>כדאי לפרסם מחירים באתר או שזה מבריח לקוחות?</title>
       <link>https://muladigital.co.il/blog-lefarsem-mechirim-baatar</link>
@@ -362,15 +371,6 @@
       <pubDate>Mon, 31 Aug 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://muladigital.co.il/assets/cover-lakoach.jpg" type="image/jpeg" />
       <media:content url="https://muladigital.co.il/assets/cover-lakoach.jpg" medium="image" />
-    </item>
-    <item>
-      <title>מה זה CRM? הגדרה פשוטה ומדריך לעסק קטן</title>
-      <link>https://muladigital.co.il/blog-crm-laasakim-ktanim</link>
-      <guid isPermaLink="true">https://muladigital.co.il/blog-crm-laasakim-ktanim</guid>
-      <description>מה זה CRM? הגדרה בשורה אחת, מה מערכת CRM עושה בפועל, מה ההבדל בינה לבין ERP ואקסל, איזו מערכת מתאימה לעסק קטן וכמה זה עולה.</description>
-      <pubDate>Thu, 13 Aug 2026 10:00:00 +0300</pubDate>
-      <enclosure url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
-      <media:content url="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
   </channel>
 </rss>
