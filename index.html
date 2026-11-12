@@ -1656,6 +1656,7 @@
       {n:'ABP Consultancy',logo:'abp',cat:'B2B · AI ואוטומציה',serv:'פודקאסט · וידאו · LinkedIn Ads · YouTube · Spotify',res:'16,171 חשיפות בלינקדאין · CTR 1.01%',cats:['קמפיינים','מיתוג'],url:'case-abp',img:'assets/case-abp/eli-hero.webp'},
       {n:'ERP Logic',logo:'erplogic',cat:'Enterprise · SAP · AI',serv:'ניהול שיווק חיצוני · אתר · SEO · LinkedIn · וובינרים',res:'177 נרשמים לוובינר (יעד: 30) · 124K חשיפות בגוגל',cats:['אתרים','SEO','קמפיינים'],url:'case-erp-logic',img:'assets/portfolio/b2b/erplogic-1280.webp',strip:'erplogic'},
       {n:'רשת בית המיזוג',logo:'mizug',cat:'מיזוג אוויר · הרצאה',serv:'הרצאה בזום למתקינים וטכנאים',res:'שיווק דיגיטלי וקידום עצמי לבעלי מקצוע',cats:['מיתוג'],url:'hartzaot-vesadnaot'},
+      {n:'Elbatech Group',logo:'elbatech',cat:'קונספט ללקוח · תעשייה ביטחונית והייטק',serv:'קונספט דף בית · מגה מניו · מודל 3D אינטראקטיבי · קופי באנגלית',res:'קונספט שבנינו כהצעה לקבוצה. זה עדיין לא האתר הרשמי שלהם.',cats:['אתרים'],url:'/preview/elbatech/',cta:'לצפייה בקונספט',img:'assets/portfolio/concept/elbatech-1280.webp',strip:'elbatech',concept:1},
       {n:'הראל ביטוח',logo:'harel',cat:'ביטוח · סדנאות',serv:'סדנאות לסוכנים חדשים ולמפקחי מחוז דן',res:'גוגל, Google Business, איזי ורשתות חברתיות',cats:['SEO','מיתוג'],url:'hartzaot-vesadnaot'},
       {n:'סילבי ויסוצקי',logo:'silvi',cat:'ביוטי · נתניה',serv:'קמפיינים · תוכן · קהילה · עיצוב גבות',res:'215 שיחות · כ-22 ₪ לשיחה · עברנו את היעד',cats:['קמפיינים'],url:'case-silvi',img:'assets/case-silvi-monitor.webp'},
       {n:'אתלטיקה קלה ראשון לציון',logo:'athletics',cat:'ספורט · קהילה',serv:'מיתוג · ניהול דיגיטל',res:'מיתוג ונראות לקהילת הספורט',cats:['מיתוג','קמפיינים'],img:'assets/portfolio/fitness/athletics-1280.webp',strip:'athletics'},
@@ -1693,13 +1694,13 @@
       } else {
         heroImg=p.img?'<img loading="lazy" src="'+p.img+'" alt="'+p.n+'" />':'<div style="width:100%;height:100%;background:linear-gradient(135deg,var(--night),#1a1a2e);"></div>';
       }
-      var link=p.url?'<a class="pf-link" href="'+p.url+'">קראו את הסיפור המלא <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></a>':'';
+      var link=p.url?'<a class="pf-link" href="'+p.url+'">'+(p.cta||'קראו את הסיפור המלא')+' <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></a>':'';
       return '<article class="pf-card pf-item" data-cats="'+p.cats.join(' ')+'">'+
         '<div class="pf-hero">'+heroImg+'<div class="pf-hero-overlay"></div>'+
         '<div class="pf-hero-content"><div class="pf-hero-text"><h3>'+p.n+'</h3><span class="pf-cat">'+p.cat+'</span></div>'+
         '<div class="pf-logo-circle"><img loading="lazy" src="'+LG(p.logo)+'" alt="'+p.n+'" /></div></div></div>'+
         '<div class="pf-body"><p class="pf-serv">'+p.serv+'</p>'+
-        '<div class="pf-result"><div class="k">התוצאה</div><div class="v">'+p.res+'</div></div>'+
+        '<div class="pf-result"><div class="k">'+(p.concept?'סטטוס':'התוצאה')+'</div><div class="v">'+p.res+'</div></div>'+
         link+'</div></article>';
     }
     var clientProject={};
