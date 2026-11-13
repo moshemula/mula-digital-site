@@ -5,13 +5,22 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Thu, 12 Nov 2026 16:34:26 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 09:55:30 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>איך לבנות משפך שיווקי לעסק קטן?</title>
+      <link>https://muladigital.co.il/blog-eich-livnot-mashpech-shivuki</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-eich-livnot-mashpech-shivuki</guid>
+      <description>בונים מהסוף, בחמישה שלבים: רואים אותך, בודקים, פונים, עונים וסוגרים, ונשארים. איך בונים כל שלב, איפה הוא דולף, כמה זה עולה ותוכנית ל-7 ימים.</description>
+      <pubDate>Fri, 13 Nov 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1200&amp;amp;q=70" medium="image" />
+    </item>
     <item>
       <title>ChatGPT Business Hub: איך לרשום עסק ב-ChatGPT</title>
       <link>https://muladigital.co.il/blog-chatgpt-business-hub</link>
@@ -360,15 +369,6 @@
       <guid isPermaLink="true">https://muladigital.co.il/daf-nechita</guid>
       <description>דף נחיתה שהופך גולש לפנייה. עמוד אחד, מטרה אחת. 2,000-7,000 ₪, מוכן ב-3 עד 7 ימים. משה מולה, Mula Digital.</description>
       <pubDate>Tue, 08 Sep 2026 10:00:00 +0300</pubDate>
-      <enclosure url="https://muladigital.co.il/assets/moshe-white.jpg" type="image/jpeg" />
-      <media:content url="https://muladigital.co.il/assets/moshe-white.jpg" medium="image" />
-    </item>
-    <item>
-      <title>בניית אתר תדמית לעסק</title>
-      <link>https://muladigital.co.il/atar-tadmit</link>
-      <guid isPermaLink="true">https://muladigital.co.il/atar-tadmit</guid>
-      <description>אתר תדמית שגורם ללקוח לבחור בך עוד לפני שדיברתם. מחיר 6,000-18,000 ש&quot;ח, 2-4 שבועות, 29 אתרים חיים בתיק העבודות. משה מולה, Mula Digital.</description>
-      <pubDate>Mon, 07 Sep 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://muladigital.co.il/assets/moshe-white.jpg" type="image/jpeg" />
       <media:content url="https://muladigital.co.il/assets/moshe-white.jpg" medium="image" />
     </item>
