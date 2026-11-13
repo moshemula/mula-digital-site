@@ -579,6 +579,7 @@
   .pf-head{display:flex;align-items:center;gap:14px;margin-bottom:12px;}
   .pf-head .pf-logo-circle{width:52px;height:52px;border:1px solid var(--line);box-shadow:none;}
   .pf-head-t{min-width:0;}
+  .pf-plate{height:48px;width:auto;max-width:132px;object-fit:contain;border-radius:10px;border:1px solid var(--line);flex-shrink:0;background:#fff;}
   .pf-head-t h3{font-size:clamp(17px,2vw,20px);font-weight:800;color:var(--ink);margin:0;line-height:1.25;}
   .pf-head-t .pf-cat{color:var(--soft);background:var(--surface);border-color:var(--line);margin-top:6px;}
   .pf-serv{color:var(--muted);font-size:14px;font-weight:600;margin-bottom:14px;line-height:1.5;}
@@ -1796,7 +1797,7 @@
       if(p.mock){
         return '<article class="pf-card pf-item pf-mock" data-cats="'+p.cats.join(' ')+'">'+
           '<div class="pf-hero">'+heroImg+(p.concept?'<span class="pf-flag">קונספט</span>':'')+'</div>'+
-          '<div class="pf-body"><div class="pf-head">'+(p.logo?'<div class="pf-logo-circle"><img loading="lazy" src="'+LG(p.logo)+'" alt="" /></div>':'')+
+          '<div class="pf-body"><div class="pf-head">'+(p.logo?'<img class="pf-plate" loading="lazy" src="assets/logos/plate/'+p.logo+'.webp" alt="" height="48" />':'')+
           '<div class="pf-head-t"><h3>'+p.n+'</h3><span class="pf-cat">'+p.cat+'</span></div></div>'+
           '<p class="pf-serv">'+p.serv+'</p>'+
           '<div class="pf-result"><div class="k">'+(p.concept?'סטטוס':'התוצאה')+'</div><div class="v">'+p.res+'</div></div>'+
