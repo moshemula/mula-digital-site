@@ -572,6 +572,15 @@
   .pf-logo-circle{width:56px;height:56px;border-radius:14px;background:#fff;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(0,0,0,.15);}
   .pf-logo-circle img{max-width:40px;max-height:40px;object-fit:contain;}
   .pf-body{padding:18px 22px 22px;flex:1;display:flex;flex-direction:column;}
+  .pf-mock .pf-hero{background:#0e1630;}
+  .pf-mock .pf-hero img{opacity:1;}
+  .pf-mock:hover .pf-hero img{transform:scale(1.025);}
+  .pf-flag{position:absolute;top:14px;right:14px;font-family:var(--f-display);font-weight:700;font-size:12px;color:#fff;background:var(--grad);padding:5px 12px;border-radius:100px;box-shadow:0 6px 16px -6px rgba(232,0,61,.5);}
+  .pf-head{display:flex;align-items:center;gap:14px;margin-bottom:12px;}
+  .pf-head .pf-logo-circle{width:52px;height:52px;border:1px solid var(--line);box-shadow:none;}
+  .pf-head-t{min-width:0;}
+  .pf-head-t h3{font-size:clamp(17px,2vw,20px);font-weight:800;color:var(--ink);margin:0;line-height:1.25;}
+  .pf-head-t .pf-cat{color:var(--soft);background:var(--surface);border-color:var(--line);margin-top:6px;}
   .pf-serv{color:var(--muted);font-size:14px;font-weight:600;margin-bottom:14px;line-height:1.5;}
   .pf-result{margin-top:auto;background:var(--surface);border-radius:12px;padding:14px 16px;border:1px solid var(--line);}
   .pf-result .k{font-family:var(--f-display);font-weight:700;font-size:11px;color:var(--muted);letter-spacing:.05em;margin-bottom:5px;}
@@ -1726,24 +1735,35 @@
     ];
     var LG=function(slug){return 'assets/logos/'+slug+'.webp';};
     var projects=[
-      {n:'Tamuz FTK Solutions',logo:'tamuz',cat:'תעשייה · B2B',serv:'אתר · מיתוג · נראות B2B · לינקדאין',res:'שם אחד, ספר מותג ואתר עם עמוד לכל מחלקה',cats:['אתרים','מיתוג'],url:'case-tamuz',img:'assets/portfolio/b2b/tamuz-1280.webp',strip:'tamuz'},
-      {n:'ABP Consultancy',logo:'abp',cat:'B2B · AI ואוטומציה',serv:'פודקאסט · וידאו · LinkedIn Ads · YouTube · Spotify',res:'16,171 חשיפות בלינקדאין · CTR 1.01%',cats:['קמפיינים','מיתוג'],url:'case-abp',img:'assets/case-abp/eli-hero.webp'},
-      {n:'ERP Logic',logo:'erplogic',cat:'Enterprise · SAP · AI',serv:'ניהול שיווק חיצוני · אתר · SEO · LinkedIn · וובינרים',res:'177 נרשמים לוובינר (יעד: 30) · 124K חשיפות בגוגל',cats:['אתרים','SEO','קמפיינים'],url:'case-erp-logic',img:'assets/portfolio/b2b/erplogic-1280.webp',strip:'erplogic'},
-      {n:'רשת בית המיזוג',logo:'mizug',cat:'מיזוג אוויר · הרצאה',serv:'הרצאה בזום למתקינים וטכנאים',res:'שיווק דיגיטלי וקידום עצמי לבעלי מקצוע',cats:['מיתוג'],url:'hartzaot-vesadnaot'},
-      {n:'הראל ביטוח',logo:'harel',cat:'ביטוח · סדנאות',serv:'סדנאות לסוכנים חדשים ולמפקחי מחוז דן',res:'גוגל, Google Business, איזי ורשתות חברתיות',cats:['SEO','מיתוג'],url:'hartzaot-vesadnaot'},
-      {n:'סילבי ויסוצקי',logo:'silvi',cat:'ביוטי · נתניה',serv:'קמפיינים · תוכן · קהילה · עיצוב גבות',res:'215 שיחות · כ-22 ₪ לשיחה · עברנו את היעד',cats:['קמפיינים'],url:'case-silvi',img:'assets/case-silvi-monitor.webp'},
-      {n:'אתלטיקה קלה ראשון לציון',logo:'athletics',cat:'ספורט · קהילה',serv:'מיתוג · ניהול דיגיטל',res:'מיתוג ונראות לקהילת הספורט',cats:['מיתוג','קמפיינים'],img:'assets/portfolio/fitness/athletics-1280.webp',strip:'athletics'},
-      {n:'הדרך הנכונה נדל״ן',logo:'haderech',cat:'נדל״ן · ראשון לציון',serv:'תוכן · קמפיינים לנכסים · וידאו · אוטומציית לידים',res:'196 לידים מטפסי Meta · כ-42 ₪ לליד',cats:['מיתוג','קמפיינים','אוטומציות'],url:'case-haderech-hanechona',img:'assets/case-haderech-key.webp'},
-      {n:'ריי נכסים',logo:'ray',cat:'נדל״ן · יבנה',serv:'Google Business · Local SEO · אתר · YouTube',res:'114 ביקורות 5.0 · 80%+ תנועה אורגנית',cats:['אתרים','SEO','עסקים מקומיים'],url:'case-ray-nechasim',img:'assets/case-ray/site.webp'},
-      {n:'אלדד לוי שמאי מקרקעין',logo:'eldadlevi',cat:'שמאות · מקצועי',serv:'אתר · SEO · תוכן · צילום · וידאו · YouTube',res:'מ-Wix ישן לנוכחות דיגיטלית ברמה של המשרד',cats:['אתרים','SEO'],img:'assets/portfolio/accountant/eldadlevi-1280.webp',strip:'eldadlevi',url:'case-eldad-levi'},
-      {n:'עמית מתן חשמלאי מוסמך',logo:'amitmatan',cat:'בעלי מקצוע · חשמל',serv:'אתר · SEO · וידאו · YouTube · TikTok',res:'פניות קבועות ממי שראה עבודה והחליט להתקשר',cats:['אתרים','SEO','קמפיינים'],url:'case-amit-matan',img:'assets/portfolio/electrician/amitmatan-1280.webp',strip:'amitmatan'},
-      {n:'שי חיים טכנאי גז',logo:'shaihaim',cat:'בעלי מקצוע · גז',serv:'אתר · SEO · Google Business · YouTube · Google Ads · Meta',res:'90 ביקורות 4.9 · 1,189 שיחות מ-Meta',cats:['אתרים','SEO','קמפיינים','עסקים מקומיים'],url:'case-shai-haim',img:'assets/case-shai/site-home.webp'},
-      {n:'יוחאי ג׳קסון אינסטלציה',logo:'yochai',cat:'בעלי מקצוע · מקומי',serv:'אתר · Local SEO · קמפיינים',res:'~10 שיחות ביום · ~800 מבקרים אורגניים בחודש',cats:['אתרים','SEO','קמפיינים'],url:'case-jackson',img:'assets/portfolio/installer/yochai-1280.webp',strip:'yochai'},
-      {n:'חיבור סוכנות לביטוח',logo:'hibur',cat:'ביטוח ופיננסים',serv:'אסטרטגיה · מיתוג · דיגיטל · תוכן',res:'מותג חזק, נוכחות דיגיטלית, תשתית לצמיחה',cats:['מיתוג','אתרים'],url:'case-hibur',img:'assets/portfolio/insurance/maayan-1280.webp',strip:'maayan'},
-      {n:'DANI RUN קבוצת הריצה של יבנה',logo:'danirun',cat:'ספורט וקהילה · יבנה',serv:'מיתוג · אתר · דפי נחיתה · Meta · פייסבוק · וידאו',res:'500+ רצים שגויסו · 3 מאמנים במקביל בשיא',cats:['מיתוג','אתרים','קמפיינים'],url:'case-dani-run',img:'assets/case-danirun/medals.webp'},
-      {n:'QuickFit Studio',logo:'quickfit',cat:'כושר · מקומי',serv:'מיתוג · דיגיטל · קמפיינים',res:'מותג מקומי בולט ומתאמנים חדשים כל חודש',cats:['מיתוג','קמפיינים'],url:'case-quickfit',img:'assets/case-quickfit.png'},
-      {n:'CloudBeam CRM',logo:'cloudbeam',cat:'טכנולוגיה · CRM',serv:'אתר · אוטומציות',res:'נכס דיגיטלי למוצר טכנולוגי',cats:['אתרים','אוטומציות'],img:'assets/portfolio/b2b/cloudbeam-1280.webp',strip:'cloudbeam'},
-      {n:'שי לעתיד',logo:'shaiatid',cat:'ביטוח ופיננסים',serv:'מיתוג · אתר',res:'מיתוג ובידול בתחום הפיננסי',cats:['מיתוג','אתרים'],img:'assets/portfolio/insurance/shai-elimelech-1280.webp'}
+      {mock:'assets/portfolio/mock/tamuz.webp',n:'Tamuz FTK Solutions',logo:'tamuz',cat:'תעשייה · B2B',serv:'אתר · מיתוג · נראות B2B · לינקדאין',res:'שם אחד, ספר מותג ואתר עם עמוד לכל מחלקה',cats:['אתרים','מיתוג'],url:'case-tamuz',img:'assets/portfolio/b2b/tamuz-1280.webp',strip:'tamuz'},
+      {mock:'assets/portfolio/mock/abp.webp',n:'ABP Consultancy',logo:'abp',cat:'B2B · AI ואוטומציה',serv:'פודקאסט · וידאו · LinkedIn Ads · YouTube · Spotify',res:'16,171 חשיפות בלינקדאין · CTR 1.01%',cats:['קמפיינים','מיתוג'],url:'case-abp',img:'assets/case-abp/eli-hero.webp'},
+      {mock:'assets/portfolio/mock/erplogic.webp',n:'ERP Logic',logo:'erplogic',cat:'Enterprise · SAP · AI',serv:'ניהול שיווק חיצוני · אתר · SEO · LinkedIn · וובינרים',res:'177 נרשמים לוובינר (יעד: 30) · 124K חשיפות בגוגל',cats:['אתרים','SEO','קמפיינים'],url:'case-erp-logic',img:'assets/portfolio/b2b/erplogic-1280.webp',strip:'erplogic'},
+      {mock:'assets/portfolio/mock/toast.webp',n:'טוסט גן העיר',logo:'toast',cat:'מסעדה · אשדוד',serv:'מחקר שוק · מיתוג · תוכן · קמפיינים בפייסבוק ובאינסטגרם',res:'כמה חודשים אחרי הפתיחה: מחזור של פי 7 עד 10 מיום רגיל',cats:['מיתוג','קמפיינים']},
+      {mock:'assets/portfolio/mock/harela.webp',n:'הראלה הלוי רואי חשבון',logo:'harela',cat:'רואת חשבון · גבעתיים',serv:'אתר · SEO · ניהול שוטף',res:'מקום ראשון בגוגל על "רואה חשבון בגבעתיים"',cats:['אתרים','SEO']},
+      {mock:'assets/portfolio/mock/shalomsamya.webp',n:'Shalom Samya',logo:'shalomsamya',cat:'ברוקר ביטוח עסקי · קליפורניה',serv:'מיתוג · אתר באנגלית · SEO ו-GEO · Google Business · Yelp',res:'פניות מגוגל ומ-AI, עם מאמרים בעמדות תחרותיות בארה״ב',cats:['מיתוג','אתרים','SEO']},
+      {mock:'assets/portfolio/mock/machine3d.webp',n:'מודל 3D אינטראקטיבי',logo:'elbatech',cat:'קונספט · Elbatech Group',serv:'Three.js · GSAP · מכונה שנבנית בגלילה',res:'המבקר בונה את המכונה בגלילה ובגרירה, שלב אחרי שלב. אפשר לבנות כזה לכל אתר תעשייתי.',cats:['אתרים'],url:'/preview/elbatech/#machine',cta:'לנסות את המודל',concept:1},
+      {mock:'assets/portfolio/mock/elbatech.webp',n:'Elbatech Group',logo:'elbatech',cat:'קונספט ללקוח · תעשייה ביטחונית והייטק',serv:'קונספט דף בית · מגה מניו · מודל 3D אינטראקטיבי · קופי באנגלית',res:'קונספט שבנינו כהצעה לקבוצה. זה עדיין לא האתר הרשמי שלהם.',cats:['אתרים'],url:'/preview/elbatech/',cta:'לצפייה בקונספט',img:'assets/portfolio/concept/elbatech-1280.webp',strip:'elbatech',concept:1},
+      {mock:'assets/portfolio/mock/silvi.webp',n:'סילבי ויסוצקי',logo:'silvi',cat:'ביוטי · נתניה',serv:'קמפיינים · תוכן · קהילה · עיצוב גבות',res:'215 שיחות · כ-22 ₪ לשיחה · עברנו את היעד',cats:['קמפיינים'],url:'case-silvi',img:'assets/case-silvi-monitor.webp'},
+      {mock:'assets/portfolio/mock/athletics.webp',n:'אתלטיקה קלה ראשון לציון',logo:'athletics',cat:'ספורט · קהילה',serv:'מיתוג · ניהול דיגיטל',res:'מיתוג ונראות לקהילת הספורט',cats:['מיתוג','קמפיינים'],img:'assets/portfolio/fitness/athletics-1280.webp',strip:'athletics'},
+      {mock:'assets/portfolio/mock/haderech.webp',n:'הדרך הנכונה נדל״ן',logo:'haderech',cat:'נדל״ן · ראשון לציון',serv:'תוכן · קמפיינים לנכסים · וידאו · אוטומציית לידים',res:'196 לידים מטפסי Meta · כ-42 ₪ לליד',cats:['מיתוג','קמפיינים','אוטומציות'],url:'case-haderech-hanechona',img:'assets/case-haderech-key.webp'},
+      {mock:'assets/portfolio/mock/ray.webp',n:'ריי נכסים',logo:'ray',cat:'נדל״ן · יבנה',serv:'Google Business · Local SEO · אתר · YouTube',res:'114 ביקורות 5.0 · 80%+ תנועה אורגנית',cats:['אתרים','SEO','עסקים מקומיים'],url:'case-ray-nechasim',img:'assets/case-ray/site.webp'},
+      {mock:'assets/portfolio/mock/eldadlevi.webp',n:'אלדד לוי שמאי מקרקעין',logo:'eldadlevi',cat:'שמאות · מקצועי',serv:'אתר · SEO · תוכן · צילום · וידאו · YouTube',res:'מ-Wix ישן לנוכחות דיגיטלית ברמה של המשרד',cats:['אתרים','SEO'],img:'assets/portfolio/accountant/eldadlevi-1280.webp',strip:'eldadlevi',url:'case-eldad-levi'},
+      {mock:'assets/portfolio/mock/amitmatan.webp',n:'עמית מתן חשמלאי מוסמך',logo:'amitmatan',cat:'בעלי מקצוע · חשמל',serv:'אתר · SEO · וידאו · YouTube · TikTok',res:'פניות קבועות ממי שראה עבודה והחליט להתקשר',cats:['אתרים','SEO','קמפיינים'],url:'case-amit-matan',img:'assets/portfolio/electrician/amitmatan-1280.webp',strip:'amitmatan'},
+      {mock:'assets/portfolio/mock/shaihaim.webp',n:'שי חיים טכנאי גז',logo:'shaihaim',cat:'בעלי מקצוע · גז',serv:'אתר · SEO · Google Business · YouTube · Google Ads · Meta',res:'90 ביקורות 4.9 · 1,189 שיחות מ-Meta',cats:['אתרים','SEO','קמפיינים','עסקים מקומיים'],url:'case-shai-haim',img:'assets/case-shai/site-home.webp'},
+      {mock:'assets/portfolio/mock/yochai.webp',n:'יוחאי ג׳קסון אינסטלציה',logo:'yochai',cat:'בעלי מקצוע · מקומי',serv:'אתר · Local SEO · קמפיינים',res:'~10 שיחות ביום · ~800 מבקרים אורגניים בחודש',cats:['אתרים','SEO','קמפיינים'],url:'case-jackson',img:'assets/portfolio/installer/yochai-1280.webp',strip:'yochai'},
+      {mock:'assets/portfolio/mock/hibur.webp',n:'חיבור סוכנות לביטוח',logo:'hibur',cat:'ביטוח ופיננסים',serv:'אסטרטגיה · מיתוג · דיגיטל · תוכן',res:'מותג חזק, נוכחות דיגיטלית, תשתית לצמיחה',cats:['מיתוג','אתרים'],url:'case-hibur',img:'assets/portfolio/insurance/maayan-1280.webp',strip:'maayan'},
+      {mock:'assets/portfolio/mock/danirun.webp',n:'DANI RUN קבוצת הריצה של יבנה',logo:'danirun',cat:'ספורט וקהילה · יבנה',serv:'מיתוג · אתר · דפי נחיתה · Meta · פייסבוק · וידאו',res:'500+ רצים שגויסו · 3 מאמנים במקביל בשיא',cats:['מיתוג','אתרים','קמפיינים'],url:'case-dani-run',img:'assets/case-danirun/medals.webp'},
+      {mock:'assets/portfolio/mock/burger.webp',n:'בורגר סאלון',logo:'burger-saloon',cat:'מסעדה · רחובות וחולון',serv:'פוסטים · קמפיינים · גיוס עובדים · פרופיל עסק בגוגל',res:'סושיאל ופרופיל גוגל מנוהלים לשני סניפים',cats:['קמפיינים','SEO'],url:'case-burger-saloon'},
+      {mock:'assets/portfolio/mock/quickfit.webp',n:'QuickFit Studio',logo:'quickfit',cat:'כושר · מקומי',serv:'מיתוג · דיגיטל · קמפיינים',res:'מותג מקומי בולט ומתאמנים חדשים כל חודש',cats:['מיתוג','קמפיינים'],url:'case-quickfit',img:'assets/case-quickfit.png'},
+      {mock:'assets/portfolio/mock/cloudbeam.webp',n:'CloudBeam CRM',logo:'cloudbeam',cat:'טכנולוגיה · CRM',serv:'אתר · אוטומציות',res:'נכס דיגיטלי למוצר טכנולוגי',cats:['אתרים','אוטומציות'],img:'assets/portfolio/b2b/cloudbeam-1280.webp',strip:'cloudbeam'},
+      {mock:'assets/portfolio/mock/shaiatid.webp',n:'שי לעתיד',logo:'shaiatid',cat:'ביטוח ופיננסים',serv:'מיתוג · אתר',res:'מיתוג ובידול בתחום הפיננסי',cats:['מיתוג','אתרים'],img:'assets/portfolio/insurance/shai-elimelech-1280.webp'},
+      {mock:'assets/portfolio/mock/idantamar.webp',n:'עידן תמר',logo:'idantamar',cat:'סוכנות לביטוח פנסיוני · ראשון לציון',serv:'מיתוג · אתר · SEO · ניהול שוטף',res:'נוכחות בגוגל שנבנתה מאפס, לסוכן שגדל לסוכנות',cats:['מיתוג','אתרים','SEO']},
+      {mock:'assets/portfolio/mock/dikla.webp',n:'דקלה שליט',logo:'',cat:'עיסוי עד הבית',serv:'אתר · נוכחות בגוגל',res:'ימים עם 8 לקוחות חמים שמחפשים בדיוק את מה שהיא עושה',cats:['אתרים','SEO']},
+      {mock:'assets/portfolio/mock/taxreturnil.webp',n:'חיבור החזרי מס',logo:'hibur-tax',cat:'החזרי מס לשכירים · רחובות',serv:'אתר · SEO · מאמר חדש כל יום · Google Business · פייסבוק',res:'מאמר חדש בכל יום עבודה ועמוד לכל עיר באזור',cats:['אתרים','SEO','אוטומציות']},
+      {mock:'assets/portfolio/mock/shlomi.webp',n:'שלומי סאסי הובלות',logo:'shlomi',cat:'הובלות ומשלוחים · גוש דן',serv:'אתר · SEO ו-GEO · Google Business',res:'קידום אורגני לכל ערי גוש דן ולעסקים עם משלוחים קבועים',cats:['אתרים','SEO']},
+      {mock:'assets/portfolio/mock/yatzivim.webp',n:'יציבים',logo:'yatzivim',cat:'פנסיה, ביטוח ופיננסים',serv:'מיתוג · אתר · שילוט משרד',res:'מותג אחד, מהשלט במשרד ועד האתר',cats:['מיתוג','אתרים']},
+      {mock:'assets/portfolio/mock/comutech.webp',n:'COMUTech',logo:'comutech',cat:'כנסים ופורומים לאנשי HR',serv:'מיתוג · אתר בהתאמה אישית',res:'אתר שנבנה מהתוכן והצרכים של הלקוחה, עם מיתוג חדש',cats:['מיתוג','אתרים']},
+      {mock:'assets/portfolio/mock/branding.webp',n:'תיק מיתוגים',logo:'',cat:'לוגו ושפה עיצובית',serv:'לוגו · שפה עיצובית · ניירת · תבניות לרשתות',res:'מסקיצה ועד שלט, לעסקים מכל התחומים',cats:['מיתוג'],url:'service-branding#tik-mitugim',cta:'לכל המיתוגים'}
     ];
     // client logos for the trust strip (first-party assets supplied by the client)
     var clients=['harel','erplogic','tamuz','abp','iteam','cloudbeam','athletics','mizug','keter','silvi','amirbracha','eldadlevi','ray','shaiatid','finansee','yuval','nitzan','shaihaim','atal','amitmatan','burgersaloon','danirun','elisasson','harela','idantamar','shalomsamya','shlomi','talpiot','toast','up','yatzivim','yochai','quickfit','comutech','hibur','haderech','menora'];
@@ -1758,7 +1778,9 @@
     }
     function pfCard(p){
       var heroImg;
-      if(p.strip){
+      if(p.mock){
+        heroImg='<img loading="lazy" src="'+p.mock+'" alt="'+p.n+'" width="1280" height="800" />';
+      } else if(p.strip){
         var st='assets/portfolio/strips/'+p.strip+'.webp';
         heroImg='<div class="pf-win" data-strip="'+st+'">'+
           '<div class="pf-bar" aria-hidden="true"><i></i><i></i><i></i><span></span></div>'+
@@ -1767,13 +1789,22 @@
       } else {
         heroImg=p.img?'<img loading="lazy" src="'+p.img+'" alt="'+p.n+'" />':'<div style="width:100%;height:100%;background:linear-gradient(135deg,var(--night),#1a1a2e);"></div>';
       }
-      var link=p.url?'<a class="pf-link" href="'+p.url+'">קראו את הסיפור המלא <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></a>':'';
+      var link=p.url?'<a class="pf-link" href="'+p.url+'">'+(p.cta||'קראו את הסיפור המלא')+' <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></a>':'';
+      if(p.mock){
+        return '<article class="pf-card pf-item pf-mock" data-cats="'+p.cats.join(' ')+'">'+
+          '<div class="pf-hero">'+heroImg+(p.concept?'<span class="pf-flag">קונספט</span>':'')+'</div>'+
+          '<div class="pf-body"><div class="pf-head">'+(p.logo?'<div class="pf-logo-circle"><img loading="lazy" src="'+LG(p.logo)+'" alt="" /></div>':'')+
+          '<div class="pf-head-t"><h3>'+p.n+'</h3><span class="pf-cat">'+p.cat+'</span></div></div>'+
+          '<p class="pf-serv">'+p.serv+'</p>'+
+          '<div class="pf-result"><div class="k">'+(p.concept?'סטטוס':'התוצאה')+'</div><div class="v">'+p.res+'</div></div>'+
+          link+'</div></article>';
+      }
       return '<article class="pf-card pf-item" data-cats="'+p.cats.join(' ')+'">'+
         '<div class="pf-hero">'+heroImg+'<div class="pf-hero-overlay"></div>'+
         '<div class="pf-hero-content"><div class="pf-hero-text"><h3>'+p.n+'</h3><span class="pf-cat">'+p.cat+'</span></div>'+
         '<div class="pf-logo-circle"><img loading="lazy" src="'+LG(p.logo)+'" alt="'+p.n+'" /></div></div></div>'+
         '<div class="pf-body"><p class="pf-serv">'+p.serv+'</p>'+
-        '<div class="pf-result"><div class="k">התוצאה</div><div class="v">'+p.res+'</div></div>'+
+        '<div class="pf-result"><div class="k">'+(p.concept?'סטטוס':'התוצאה')+'</div><div class="v">'+p.res+'</div></div>'+
         link+'</div></article>';
     }
     var clientProject={};
@@ -1787,7 +1818,7 @@
     // inject blog (preview 3 + full 6), portfolio (preview 4 + full 12), clients strip
     document.getElementById('blogPreview').innerHTML = posts.slice(0,3).map(postCard).join('');
     document.getElementById('blogFull').innerHTML = posts.map(postCard).join('');
-    document.getElementById('pfPreview').innerHTML = projects.filter(function(p){return p.img;}).slice(0,6).map(pfCard).join('');
+    document.getElementById('pfPreview').innerHTML = projects.filter(function(p){return p.img||p.mock;}).slice(0,6).map(pfCard).join('');
     document.getElementById('pfFull').innerHTML = projects.map(pfCard).join('');
     // split clients into two rows for scroll parallax
     (function(){
