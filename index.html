@@ -579,6 +579,7 @@
   .pf-head{display:flex;align-items:center;gap:14px;margin-bottom:12px;}
   .pf-head .pf-logo-circle{width:52px;height:52px;border:1px solid var(--line);box-shadow:none;}
   .pf-head-t{min-width:0;}
+  .pf-plate{height:48px;width:auto;max-width:132px;object-fit:contain;border-radius:10px;border:1px solid var(--line);flex-shrink:0;background:#fff;}
   .pf-head-t h3{font-size:clamp(17px,2vw,20px);font-weight:800;color:var(--ink);margin:0;line-height:1.25;}
   .pf-head-t .pf-cat{color:var(--soft);background:var(--surface);border-color:var(--line);margin-top:6px;}
   .pf-serv{color:var(--muted);font-size:14px;font-weight:600;margin-bottom:14px;line-height:1.5;}
@@ -1735,12 +1736,12 @@
     ];
     var LG=function(slug){return 'assets/logos/'+slug+'.webp';};
     var projects=[
-      {mock:'assets/portfolio/mock/tamuz.webp',n:'Tamuz FTK Solutions',logo:'tamuz',cat:'תעשייה · B2B',serv:'אתר · מיתוג · נראות B2B · לינקדאין',res:'שם אחד, ספר מותג ואתר עם עמוד לכל מחלקה',cats:['אתרים','מיתוג'],url:'case-tamuz',img:'assets/portfolio/b2b/tamuz-1280.webp',strip:'tamuz'},
+      {mock:'assets/portfolio/mock/tamuz.webp',n:'Tamuz FTK Solutions',logo:'tamuz',cat:'תעשייה · B2B',serv:'אתר · מיתוג · יום צילום להנהלה · וידאו ורחפן · לינקדאין',res:'שם אחד, ספר מותג ואתר עם עמוד לכל מחלקה',cats:['אתרים','מיתוג'],url:'case-tamuz',img:'assets/portfolio/b2b/tamuz-1280.webp',strip:'tamuz'},
       {mock:'assets/portfolio/mock/abp.webp',n:'ABP Consultancy',logo:'abp',cat:'B2B · AI ואוטומציה',serv:'פודקאסט · וידאו · LinkedIn Ads · YouTube · Spotify',res:'16,171 חשיפות בלינקדאין · CTR 1.01%',cats:['קמפיינים','מיתוג'],url:'case-abp',img:'assets/case-abp/eli-hero.webp'},
       {mock:'assets/portfolio/mock/erplogic.webp',n:'ERP Logic',logo:'erplogic',cat:'Enterprise · SAP · AI',serv:'ניהול שיווק חיצוני · אתר · SEO · LinkedIn · וובינרים',res:'177 נרשמים לוובינר (יעד: 30) · 124K חשיפות בגוגל',cats:['אתרים','SEO','קמפיינים'],url:'case-erp-logic',img:'assets/portfolio/b2b/erplogic-1280.webp',strip:'erplogic'},
-      {mock:'assets/portfolio/mock/toast.webp',n:'טוסט גן העיר',logo:'toast',cat:'מסעדה · אשדוד',serv:'מחקר שוק · מיתוג · תוכן · קמפיינים בפייסבוק ובאינסטגרם',res:'כמה חודשים אחרי הפתיחה: מחזור של פי 7 עד 10 מיום רגיל',cats:['מיתוג','קמפיינים']},
+      {mock:'assets/portfolio/mock/toast.webp',n:'טוסט גן העיר',logo:'toast',cat:'מסעדה · אשדוד',serv:'מחקר שוק · מיתוג · תוכן · קמפיינים בפייסבוק ובאינסטגרם',res:'כמה חודשים אחרי הפתיחה: מחזור של פי 7 עד 10 מיום רגיל',cats:['מיתוג','קמפיינים'],url:'mitug-toast-gan-hair'},
       {mock:'assets/portfolio/mock/harela.webp',n:'הראלה הלוי רואי חשבון',logo:'harela',cat:'רואת חשבון · גבעתיים',serv:'אתר · SEO · ניהול שוטף',res:'מקום ראשון בגוגל על "רואה חשבון בגבעתיים"',cats:['אתרים','SEO']},
-      {mock:'assets/portfolio/mock/shalomsamya.webp',n:'Shalom Samya',logo:'shalomsamya',cat:'ברוקר ביטוח עסקי · קליפורניה',serv:'מיתוג · אתר באנגלית · SEO ו-GEO · Google Business · Yelp',res:'פניות מגוגל ומ-AI, עם מאמרים בעמדות תחרותיות בארה״ב',cats:['מיתוג','אתרים','SEO']},
+      {mock:'assets/portfolio/mock/shalomsamya.webp',n:'Shalom Samya',logo:'shalomsamya',cat:'ברוקר ביטוח עסקי · קליפורניה',serv:'מיתוג · אתר באנגלית · SEO ו-GEO · Google Business · Yelp',res:'פניות מגוגל ומ-AI, עם מאמרים בעמדות תחרותיות בארה״ב',cats:['מיתוג','אתרים','SEO'],url:'mitug-shalom-samya'},
       {mock:'assets/portfolio/mock/machine3d.webp',n:'מודל 3D אינטראקטיבי',logo:'elbatech',cat:'קונספט · Elbatech Group',serv:'Three.js · GSAP · מכונה שנבנית בגלילה',res:'המבקר בונה את המכונה בגלילה ובגרירה, שלב אחרי שלב. אפשר לבנות כזה לכל אתר תעשייתי.',cats:['אתרים'],url:'/preview/elbatech/#machine',cta:'לנסות את המודל',concept:1},
       {mock:'assets/portfolio/mock/elbatech.webp',n:'Elbatech Group',logo:'elbatech',cat:'קונספט ללקוח · תעשייה ביטחונית והייטק',serv:'קונספט דף בית · מגה מניו · מודל 3D אינטראקטיבי · קופי באנגלית',res:'קונספט שבנינו כהצעה לקבוצה. זה עדיין לא האתר הרשמי שלהם.',cats:['אתרים'],url:'/preview/elbatech/',cta:'לצפייה בקונספט',img:'assets/portfolio/concept/elbatech-1280.webp',strip:'elbatech',concept:1},
       {mock:'assets/portfolio/mock/silvi.webp',n:'סילבי ויסוצקי',logo:'silvi',cat:'ביוטי · נתניה',serv:'קמפיינים · תוכן · קהילה · עיצוב גבות',res:'215 שיחות · כ-22 ₪ לשיחה · עברנו את היעד',cats:['קמפיינים'],url:'case-silvi',img:'assets/case-silvi-monitor.webp'},
@@ -1756,13 +1757,16 @@
       {mock:'assets/portfolio/mock/burger.webp',n:'בורגר סאלון',logo:'burger-saloon',cat:'מסעדה · רחובות וחולון',serv:'פוסטים · קמפיינים · גיוס עובדים · פרופיל עסק בגוגל',res:'סושיאל ופרופיל גוגל מנוהלים לשני סניפים',cats:['קמפיינים','SEO'],url:'case-burger-saloon'},
       {mock:'assets/portfolio/mock/quickfit.webp',n:'QuickFit Studio',logo:'quickfit',cat:'כושר · מקומי',serv:'מיתוג · דיגיטל · קמפיינים',res:'מותג מקומי בולט ומתאמנים חדשים כל חודש',cats:['מיתוג','קמפיינים'],url:'case-quickfit',img:'assets/case-quickfit.png'},
       {mock:'assets/portfolio/mock/cloudbeam.webp',n:'CloudBeam CRM',logo:'cloudbeam',cat:'טכנולוגיה · CRM',serv:'אתר · אוטומציות',res:'נכס דיגיטלי למוצר טכנולוגי',cats:['אתרים','אוטומציות'],img:'assets/portfolio/b2b/cloudbeam-1280.webp',strip:'cloudbeam'},
-      {mock:'assets/portfolio/mock/shaiatid.webp',n:'שי לעתיד',logo:'shaiatid',cat:'ביטוח ופיננסים',serv:'מיתוג · אתר',res:'מיתוג ובידול בתחום הפיננסי',cats:['מיתוג','אתרים'],img:'assets/portfolio/insurance/shai-elimelech-1280.webp'},
-      {mock:'assets/portfolio/mock/idantamar.webp',n:'עידן תמר',logo:'idantamar',cat:'סוכנות לביטוח פנסיוני · ראשון לציון',serv:'מיתוג · אתר · SEO · ניהול שוטף',res:'נוכחות בגוגל שנבנתה מאפס, לסוכן שגדל לסוכנות',cats:['מיתוג','אתרים','SEO']},
+      {mock:'assets/portfolio/mock/shaiatid.webp',n:'שי לעתיד',logo:'shaiatid',cat:'ביטוח ופיננסים',serv:'מיתוג · אתר',res:'מיתוג ובידול בתחום הפיננסי',cats:['מיתוג','אתרים'],url:'mitug-shai-laatid',img:'assets/portfolio/insurance/shai-elimelech-1280.webp'},
+      {mock:'assets/portfolio/mock/idantamar.webp',n:'עידן תמר',logo:'idantamar',cat:'סוכנות לביטוח פנסיוני · ראשון לציון',serv:'מיתוג · אתר · יום צילום מקצועי · SEO · ניהול שוטף',res:'נוכחות בגוגל שנבנתה מאפס, לסוכן שגדל לסוכנות',cats:['מיתוג','אתרים','SEO'],url:'mitug-idan-tamar'},
       {mock:'assets/portfolio/mock/dikla.webp',n:'דקלה שליט',logo:'',cat:'עיסוי עד הבית',serv:'אתר · נוכחות בגוגל',res:'ימים עם 8 לקוחות חמים שמחפשים בדיוק את מה שהיא עושה',cats:['אתרים','SEO']},
-      {mock:'assets/portfolio/mock/taxreturnil.webp',n:'חיבור החזרי מס',logo:'hibur-tax',cat:'החזרי מס לשכירים · רחובות',serv:'אתר · SEO · מאמר חדש כל יום · Google Business · פייסבוק',res:'מאמר חדש בכל יום עבודה ועמוד לכל עיר באזור',cats:['אתרים','SEO','אוטומציות']},
+      {mock:'assets/portfolio/mock/taxreturnil.webp',n:'חיבור החזרי מס',logo:'hibur-tax',cat:'החזרי מס לשכירים · רחובות',serv:'מיתוג · אתר וורדפרס · עיצוב מחדש · SEO מלא · שיתופי פעולה עם ועדי עובדים',res:'מותג, אתר ותוכן שמביאים פניות מגוגל, ושיתופי פעולה עם ועדי עובדים',cats:['מיתוג','אתרים','SEO'],url:'mitug-hibur-tax'},
       {mock:'assets/portfolio/mock/shlomi.webp',n:'שלומי סאסי הובלות',logo:'shlomi',cat:'הובלות ומשלוחים · גוש דן',serv:'אתר · SEO ו-GEO · Google Business',res:'קידום אורגני לכל ערי גוש דן ולעסקים עם משלוחים קבועים',cats:['אתרים','SEO']},
-      {mock:'assets/portfolio/mock/yatzivim.webp',n:'יציבים',logo:'yatzivim',cat:'פנסיה, ביטוח ופיננסים',serv:'מיתוג · אתר · שילוט משרד',res:'מותג אחד, מהשלט במשרד ועד האתר',cats:['מיתוג','אתרים']},
-      {mock:'assets/portfolio/mock/comutech.webp',n:'COMUTech',logo:'comutech',cat:'כנסים ופורומים לאנשי HR',serv:'מיתוג · אתר בהתאמה אישית',res:'אתר שנבנה מהתוכן והצרכים של הלקוחה, עם מיתוג חדש',cats:['מיתוג','אתרים']},
+      {mock:'assets/portfolio/mock/officeli.webp',n:'Office Li',logo:'officeli',cat:'שירותי משרד לעסקים · אלכס ויזל',serv:'מיתוג · אתר ברמה גבוהה · SEO',res:'שירותי משרד, חשבונות וגבייה תחת מותג אחד שעסקים סומכים עליו',cats:['מיתוג','אתרים','SEO'],url:'mitug-officeli'},
+      {mock:'assets/portfolio/mock/neta.webp',n:'נטע דרוקמן',logo:'neta',cat:'מדריכת מיינדפולנס · ליווי אישי',serv:'מיתוג · דף נחיתה עם וידאו · קמפיין לידים בפייסבוק · וובינר',res:'לידים מפייסבוק שנרשמים ישר לוובינר של נטע',cats:['קמפיינים','אתרים','מיתוג'],url:'mitug-neta-druckman'},
+      {mock:'assets/portfolio/mock/luxury.webp',n:'Luxury Tours VIP',logo:'luxury',cat:'הסעות VIP · מורה דרך מוסמך',serv:'מיתוג · מיתוג רכב ההסעות · קריאייטיב לפרסום',res:'מותג יוקרה אחד, מהלוגו ועד המרצדס עצמה',cats:['מיתוג'],url:'mitug-luxury-tours-vip'},
+      {mock:'assets/portfolio/mock/yatzivim.webp',n:'יציבים',logo:'yatzivim',cat:'פנסיה, ביטוח ופיננסים',serv:'מיתוג · אתר · יום צילום · שילוט משרד',res:'מותג אחד, מהשלט במשרד ועד האתר',cats:['מיתוג','אתרים'],url:'mitug-yatzivim'},
+      {mock:'assets/portfolio/mock/comutech.webp',n:'COMUTech',logo:'comutech',cat:'כנסים ופורומים לאנשי HR',serv:'מיתוג · אתר בהתאמה אישית',res:'אתר שנבנה מהתוכן והצרכים של הלקוחה, עם מיתוג חדש',cats:['מיתוג','אתרים'],url:'mitug-comutech'},
       {mock:'assets/portfolio/mock/branding.webp',n:'תיק מיתוגים',logo:'',cat:'לוגו ושפה עיצובית',serv:'לוגו · שפה עיצובית · ניירת · תבניות לרשתות',res:'מסקיצה ועד שלט, לעסקים מכל התחומים',cats:['מיתוג'],url:'service-branding#tik-mitugim',cta:'לכל המיתוגים'}
     ];
     // client logos for the trust strip (first-party assets supplied by the client)
@@ -1793,7 +1797,7 @@
       if(p.mock){
         return '<article class="pf-card pf-item pf-mock" data-cats="'+p.cats.join(' ')+'">'+
           '<div class="pf-hero">'+heroImg+(p.concept?'<span class="pf-flag">קונספט</span>':'')+'</div>'+
-          '<div class="pf-body"><div class="pf-head">'+(p.logo?'<div class="pf-logo-circle"><img loading="lazy" src="'+LG(p.logo)+'" alt="" /></div>':'')+
+          '<div class="pf-body"><div class="pf-head">'+(p.logo?'<img class="pf-plate" loading="lazy" src="assets/logos/plate/'+p.logo+'.webp" alt="" height="48" />':'')+
           '<div class="pf-head-t"><h3>'+p.n+'</h3><span class="pf-cat">'+p.cat+'</span></div></div>'+
           '<p class="pf-serv">'+p.serv+'</p>'+
           '<div class="pf-result"><div class="k">'+(p.concept?'סטטוס':'התוצאה')+'</div><div class="v">'+p.res+'</div></div>'+
