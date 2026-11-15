@@ -7,6 +7,8 @@
 3. בכל מאמר: פירורי לחם בית > בלוג > מדריך > מאמר (גם בתצוגה וגם ב-schema).
 4. ב-blog.html: רצועת "מדריכים לפי נושא".
 
+בלוקים שנוספו ידנית לעמוד מדריך (בין הסקשן התחתון לפוטר) נשמרים בכל הרצה.
+
 מאמר חדש? מוסיפים את ה-slug שלו לרשימת articles של המדריך המתאים ב-hubs.json ומריצים:
     python3 tools_hubs.py
 """
@@ -102,7 +104,7 @@ def build_hub(h, all_hubs):
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": h['h1'] + ': ' + h['accent'],
           "description": desc, "url": url, "inLanguage": "he",
           "isPartOf": {"@type": "WebSite", "name": "Mula Digital", "url": SITE},
-          "author": {"@type": "Person", "name": "משה מולה", "url": SITE + "about"},
+          "author": {"@type": "Person", "name": "משה מולה", "url": SITE + "about", "@id": SITE + "#moshe"},
           "mainEntity": {"@type": "ItemList", "numberOfItems": len(items), "itemListElement": [
               {"@type": "ListItem", "position": i + 1, "name": card_info(a)[0], "url": SITE + a} for i, a in enumerate(items)]}}
     bc = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
@@ -169,7 +171,22 @@ def build_hub(h, all_hubs):
   </section>
 
   '''
+    # שומרים בלוקים שנוספו ידנית לעמוד המדריך (מדריכי עומק, "מי כתב את המדריך" וכו'):
+    # כל מה שיושב בעמוד הקיים בין סוף <section class="sec surface"> לבין הפוטר
+    keep = ''
+    if os.path.exists(os.path.join(ROOT, h['slug'] + '.html')):
+        old = rd(h['slug'])
+        i = old.find('<section class="sec surface">')
+        if i >= 0:
+            i = old.find('</section>', i) + len('</section>')
+            j = old.find('<footer', i)
+            if j > i:
+                keep = old[i:j].strip()
     s = s[:a] + body + s[b:]
+    if keep:
+        i = s.find('</section>', s.index('<section class="sec surface">', a)) + len('</section>')
+        j = s.find('<footer', i)
+        s = s[:i] + '\n\n' + keep + '\n\n' + s[j:]
     wr(h['slug'], s)
 
 
@@ -189,7 +206,7 @@ def article_box(h, slug):
 
 def link_article(h, slug):
     s = rd(slug)
-    s = re.sub(r'<!--HUB-BOX-->.*?<!--/HUB-BOX-->', '', s, flags=re.S)
+    s = re.sub(r'<!--HUB-BOX-->.*?<!--/HUB-BOX-->\n?', '', s, flags=re.S)
     box = article_box(h, slug)
     if '<div class="author">' in s:
         s = s.replace('<div class="author">', box + '\n<div class="author">', 1)
@@ -199,7 +216,7 @@ def link_article(h, slug):
             i = s.rfind('</main>')
         s = s[:i] + box + s[i:]
     # פירורי לחם בתצוגה
-    s = re.sub(r'(<a href="blog">בלוג</a>)(\s*[·›]\s*)(?:<a href="madrich-[^"]+">[^<]*</a>\s*[·›]\s*)?',
+    s = re.sub(r'(<a href="blog">בלוג</a>)(\s*[·›]\s*)(?:(?:<bdi>)?<a href="madrich-[^"]+">[^<]*</a>(?:</bdi>)?\s*[·›]\s*)?',
                lambda m: m.group(1) + m.group(2) + '<a href="%s">%s</a>%s' % (h['slug'], esc(h['short']), m.group(2)), s, 1)
     # פירורי לחם ב-schema
     def fix_bc(m):
