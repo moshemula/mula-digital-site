@@ -5,13 +5,22 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Fri, 13 Nov 2026 09:55:30 +0300</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 11:28:15 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>כמה כסף עולה לעסק שאין לו אתר?</title>
+      <link>https://muladigital.co.il/blog-kama-ole-esek-bli-atar</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-kama-ole-esek-bli-atar</guid>
+      <description>ההפסד שקט: בודקים אותך, לא מוצאים, והולכים. נוסחה של 5 מספרים לחישוב הלקוחות שהלכו, איפה מוצאים כל מספר, ומתי אתר מחזיר את עצמו.</description>
+      <pubDate>Mon, 16 Nov 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&amp;amp;q=70" medium="image" />
+    </item>
     <item>
       <title>איך לבנות משפך שיווקי לעסק קטן?</title>
       <link>https://muladigital.co.il/blog-eich-livnot-mashpech-shivuki</link>
@@ -362,15 +371,6 @@
       <pubDate>Tue, 15 Sep 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://muladigital.co.il/assets/og/og-linkedin-guide.jpg" type="image/jpeg" />
       <media:content url="https://muladigital.co.il/assets/og/og-linkedin-guide.jpg" medium="image" />
-    </item>
-    <item>
-      <title>בניית דף נחיתה לעסק</title>
-      <link>https://muladigital.co.il/daf-nechita</link>
-      <guid isPermaLink="true">https://muladigital.co.il/daf-nechita</guid>
-      <description>דף נחיתה שהופך גולש לפנייה. עמוד אחד, מטרה אחת. 2,000-7,000 ₪, מוכן ב-3 עד 7 ימים. משה מולה, Mula Digital.</description>
-      <pubDate>Tue, 08 Sep 2026 10:00:00 +0300</pubDate>
-      <enclosure url="https://muladigital.co.il/assets/moshe-white.jpg" type="image/jpeg" />
-      <media:content url="https://muladigital.co.il/assets/moshe-white.jpg" medium="image" />
     </item>
   </channel>
 </rss>
