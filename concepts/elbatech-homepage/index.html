@@ -301,6 +301,17 @@ html.intro-on .hero video{opacity:0;transform:scale(1.08)}
 .drag-hint i{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--green);font-style:normal;font-size:12px}
 #machGL.grab{cursor:grab}#machGL.grabbing{cursor:grabbing}
 #machGL{touch-action:pan-y}
+#machGL:focus-visible{outline:2px solid var(--green);outline-offset:-4px;border-radius:12px}
+.m-ctl{position:absolute;z-index:5;right:28px;top:104px;transform:translateY(-8px);display:flex;align-items:center;gap:6px;padding:6px;border-radius:999px;background:rgba(22,26,64,.92);box-shadow:0 18px 30px -18px rgba(22,26,64,.6);opacity:0;pointer-events:none;transition:opacity .35s,transform .45s var(--ease)}
+.m-ctl.on{opacity:1;pointer-events:auto;transform:none}
+.m-ctl button{all:unset;cursor:pointer;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;color:#fff;transition:background .2s}
+.m-ctl button:hover{background:rgba(255,255,255,.14)}
+.m-ctl button:focus-visible{outline:2px solid var(--green);outline-offset:1px}
+.m-ctl svg{width:18px;height:18px}
+.m-ctl .kb{color:rgba(255,255,255,.62);font-size:12px;padding:0 10px 0 6px;white-space:nowrap}
+.m-ctl .kb b{display:inline-block;min-width:18px;padding:1px 5px;margin:0 1px;border-radius:5px;background:rgba(255,255,255,.12);color:#fff;font-weight:600;text-align:center}
+@media (max-width:900px){.m-ctl{right:10px;top:200px;flex-direction:column;gap:2px;padding:4px}.m-ctl .kb{display:none}}
+@media (prefers-reduced-motion:reduce){.m-ctl{transition:none}}
 @media (max-width:900px){.drag-hint{left:50%;top:auto;bottom:196px}}
 
 .steps .k{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--green-d)}
@@ -639,7 +650,7 @@ footer .mono{color:#9EA3C8}
 <section class="machine" id="machine" aria-labelledby="mTitle">
   <div class="m-stage" id="mStage">
     <div class="grid" id="mGrid" aria-hidden="true"></div><div class="glow" aria-hidden="true"></div>
-    <canvas id="machGL" role="img" aria-label="3D autonomous drone station built from a technical drawing as you scroll: structure, electrical cabinet, cable harness, battery-swap robot, landing lift, hexacopter drone and a test launch"></canvas>
+    <canvas id="machGL" tabindex="0" role="img" aria-label="3D autonomous drone station built from a technical drawing as you scroll: structure, electrical cabinet, cable harness, battery-swap robot, landing lift, hexacopter drone and a test launch. When complete: arrow keys rotate, J and L pan, plus and minus zoom, R resets."></canvas>
     <div class="mlabels" id="mlabels" aria-hidden="true"></div>
     <div class="m-side">
       <div class="m-head">
@@ -656,6 +667,12 @@ footer .mono{color:#9EA3C8}
     </ol>
     </div>
     <div class="drag-hint" id="dragHint" aria-hidden="true"><i>⟲</i>Drag to explore the system</div>
+    <div class="m-ctl" id="mCtl" role="toolbar" aria-label="3D view controls">
+      <button type="button" data-z="-1" aria-label="Zoom in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></button>
+      <button type="button" data-z="1" aria-label="Zoom out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M8 11h6"/></svg></button>
+      <button type="button" data-r="1" aria-label="Reset view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></button>
+      <span class="kb" aria-hidden="true"><b>←</b><b>→</b><b>↑</b><b>↓</b> rotate · <b>J</b><b>L</b> pan · <b>+</b><b>−</b> zoom</span>
+    </div>
     <div class="m-hud" aria-hidden="true">
       <div>Build progress<b id="mPct">0%</b><div class="bar"><i id="mBar"></i></div></div>
       <div>Status<b class="state" id="mState">Drawing</b></div>
@@ -1203,6 +1220,26 @@ function initMachine(){
     if(!drag.moved&&Math.abs(dx)>6){drag.moved=true;try{canvas.setPointerCapture(drag.id);}catch(_){}}
     if(drag.moved){yawT=drag.yw-dx*.0075;pitchT=clamp(drag.pt+dy*.004,-.35,.5);if(!hinted&&window.__ev)__ev('machine_drag');hinted=true;}});
   window.addEventListener('pointerup',function(){if(drag){drag=null;canvas.classList.remove('grabbing');}});
+  // zoom + pan (keyboard navigation adapted from a WebGL camera: arrows move, J/L pan)
+  var zoom=1,zoomT=1,pan=0,panT=0,touches={},pinch=null,ctl=document.getElementById('mCtl');
+  function used(){if(!hinted&&window.__ev)__ev('machine_drag');hinted=true;}
+  function zoomBy(d){zoomT=clamp(zoomT*(d>0?1.18:1/1.18),.55,1.7);used();}
+  function resetView(){yawT=0;pitchT=0;zoomT=1;panT=0;}
+  canvas.addEventListener('keydown',function(e){if(!canDrag)return;var k=e.key,h=true;
+    if(k==='ArrowLeft')yawT+=.18;else if(k==='ArrowRight')yawT-=.18;
+    else if(k==='ArrowUp')pitchT=clamp(pitchT+.08,-.35,.5);else if(k==='ArrowDown')pitchT=clamp(pitchT-.08,-.35,.5);
+    else if(k==='j'||k==='J')panT=clamp(panT+.25,-1.4,1.4);else if(k==='l'||k==='L')panT=clamp(panT-.25,-1.4,1.4);
+    else if(k==='+'||k==='='){zoomBy(-1);}else if(k==='-'||k==='_'){zoomBy(1);}
+    else if(k==='r'||k==='R')resetView();else h=false;
+    if(h){e.preventDefault();used();}});
+  canvas.addEventListener('wheel',function(e){if(!canDrag||!(e.ctrlKey||e.metaKey))return;e.preventDefault();zoomT=clamp(zoomT*Math.exp(e.deltaY*.0025),.55,1.7);used();},{passive:false});
+  canvas.addEventListener('pointerdown',function(e){if(e.pointerType!=='touch'||!canDrag)return;touches[e.pointerId]={x:e.clientX,y:e.clientY};var ids=Object.keys(touches);
+    if(ids.length===2){var a=touches[ids[0]],b=touches[ids[1]];pinch={d:Math.hypot(a.x-b.x,a.y-b.y),z:zoomT};drag=null;}});
+  window.addEventListener('pointermove',function(e){if(!touches[e.pointerId])return;touches[e.pointerId]={x:e.clientX,y:e.clientY};
+    if(pinch){var ids=Object.keys(touches);if(ids.length<2)return;var a=touches[ids[0]],b=touches[ids[1]],d=Math.hypot(a.x-b.x,a.y-b.y);zoomT=clamp(pinch.z*pinch.d/Math.max(20,d),.55,1.7);used();}});
+  function tEnd(e){delete touches[e.pointerId];if(Object.keys(touches).length<2)pinch=null;}
+  window.addEventListener('pointerup',tEnd);window.addEventListener('pointercancel',tEnd);
+  ctl.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;if(b.dataset.r)resetView();else zoomBy(+b.dataset.z);used();});
   window.addEventListener('pointercancel',function(){drag=null;canvas.classList.remove('grabbing');});
   var vis=false;watch(stage,function(v){vis=v;});
   window.__mach=function(v){target=prog=v;};
@@ -1258,12 +1295,14 @@ function initMachine(){
     grid.style.opacity=String(1-.55*ease((p-.1)/.3));
     camAt(p,cp,ct);var dist=narrow?1.22:Math.max(1,1.45/camera.aspect);
     var cd=p>.96;if(cd!==canDrag){canDrag=cd;canvas.classList.toggle('grab',cd);if(cd&&!window.__mdone){window.__mdone=1;window.__ev&&__ev('machine_completed');}}
-    if(!cd&&!drag){yawT=0;pitchT=0;}
+    if(!cd&&!drag){yawT=0;pitchT=0;zoomT=1;panT=0;}
+    ctl.classList.toggle('on',cd);
     if(cd&&!drag&&!hinted&&!REDUCE)yawT+=dt*.08;
     hint.classList.toggle('on',cd&&!hinted);
-    yaw+=(yawT-yaw)*.08;pitch+=(pitchT-pitch)*.08;
+    yaw+=(yawT-yaw)*.08;pitch+=(pitchT-pitch)*.08;zoom+=(zoomT-zoom)*.1;pan+=(panT-pan)*.1;dist*=zoom;
     var ox=(cp.x-ct.x)*dist,oy=(cp.y-ct.y)*dist,oz=(cp.z-ct.z)*dist,cyw=Math.cos(yaw),syw=Math.sin(yaw);
     var rx=ox*cyw+oz*syw,rz=-ox*syw+oz*cyw,rr=Math.sqrt(rx*rx+rz*rz),ry=oy+rr*Math.sin(pitch)*.9;
+    if(pan){var rl=Math.sqrt(rx*rx+rz*rz)||1,px=-rz/rl*pan,pz=rx/rl*pan;ct.x+=px;ct.z+=pz;}
     camera.position.set(ct.x+rx+mx*.6,ct.y+ry-my*.3,ct.z+rz);
     camera.lookAt(ct.x,ct.y-.1,ct.z);
     renderer.render(scene,camera);
