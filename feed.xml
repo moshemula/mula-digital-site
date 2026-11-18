@@ -5,13 +5,22 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Mon, 16 Nov 2026 11:28:15 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 13:53:42 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>איך לכתוב מודעה בגוגל שמביאה לקוחות?</title>
+      <link>https://muladigital.co.il/blog-eich-lichtov-modaa-begoogle</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-eich-lichtov-modaa-begoogle</guid>
+      <description>כותבים לאדם שכבר מחפש: 4 תפקידים שכל מודעה חייבת למלא, תיאור שעומד לבד, ומודעה שמסננת את מי שלא יקנה. נכסים, ובדיקה של 10 דקות.</description>
+      <pubDate>Wed, 18 Nov 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=1200&amp;amp;q=70" medium="image" />
+    </item>
     <item>
       <title>כמה כסף עולה לעסק שאין לו אתר?</title>
       <link>https://muladigital.co.il/blog-kama-ole-esek-bli-atar</link>
@@ -362,15 +371,6 @@
       <pubDate>Wed, 16 Sep 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
-    </item>
-    <item>
-      <title>שיווק בלינקדאין לעסקים: המדריך המלא 2026</title>
-      <link>https://muladigital.co.il/blog-shivuk-linkedin-laasakim</link>
-      <guid isPermaLink="true">https://muladigital.co.il/blog-shivuk-linkedin-laasakim</guid>
-      <description>איך עושים שיווק בלינקדאין שמביא לידים B2B ב-2026: פרופיל, תוכן, Outreach, אוטומציה, פרסום ממומן ומחירים אמיתיים. מדריך מהשטח של משה מולה.</description>
-      <pubDate>Tue, 15 Sep 2026 10:00:00 +0300</pubDate>
-      <enclosure url="https://muladigital.co.il/assets/og/og-linkedin-guide.jpg" type="image/jpeg" />
-      <media:content url="https://muladigital.co.il/assets/og/og-linkedin-guide.jpg" medium="image" />
     </item>
   </channel>
 </rss>
