@@ -5,13 +5,22 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Wed, 18 Nov 2026 13:53:42 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 14:38:23 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>איך לדעת מה הלקוחות שלי מחפשים בגוגל?</title>
+      <link>https://muladigital.co.il/blog-ma-halakochot-mechapsim-begoogle</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-ma-halakochot-mechapsim-begoogle</guid>
+      <description>מתחילים מהנתונים שכבר שלך: Search Console ופרופיל העסק בגוגל מראים מה הקלידו. ואז מסננים לפי כוונה, לא לפי כמות חיפושים. עם בדיקה של 20 דקות.</description>
+      <pubDate>Thu, 19 Nov 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1529612700005-e35377bf1415?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1529612700005-e35377bf1415?w=1200&amp;amp;q=70" medium="image" />
+    </item>
     <item>
       <title>איך לכתוב מודעה בגוגל שמביאה לקוחות?</title>
       <link>https://muladigital.co.il/blog-eich-lichtov-modaa-begoogle</link>
@@ -362,15 +371,6 @@
       <pubDate>Sun, 20 Sep 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
-    </item>
-    <item>
-      <title>הטמעת מערכת CRM: כמה עולה, כמה זמן ומה מקבלים</title>
-      <link>https://muladigital.co.il/blog-kama-ole-hatmaat-crm</link>
-      <guid isPermaLink="true">https://muladigital.co.il/blog-kama-ole-hatmaat-crm</guid>
-      <description>הטמעת מערכת CRM לעסק קטן: בסיסית 3,000-5,000 ₪, מלאה 8,000-15,000 ₪. שבעה שלבים, כמה זמן זה לוקח, איך גורמים לצוות לעבוד בה, ומתי בונים מאפס.</description>
-      <pubDate>Wed, 16 Sep 2026 10:00:00 +0300</pubDate>
-      <enclosure url="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
-      <media:content url="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
   </channel>
 </rss>
