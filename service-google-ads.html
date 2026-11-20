@@ -1443,6 +1443,6 @@ function add(){var x=L[i%L.length];i++;var li=document.createElement('li');li.in
 function start(){g.classList.add('go');count();if(R){for(var k=0;k<4;k++)add();return}add();setInterval(add,1900)}
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){start();io.disconnect()}},{threshold:.3});io.observe(g)}else start();})();
 </script>
-<script src="/assets/track.js?v=1" defer></script>
+<script src="/assets/track.js?v=2" defer></script>
 </body>
 </html>
