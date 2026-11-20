@@ -951,5 +951,6 @@ if(R){N.forEach(function(n){n.classList.add('on')});line('ליד חדש: דנה,
 var go=false;function start(){if(go)return;go=true;cycle();setInterval(cycle,6000)}
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){start();io.disconnect()}},{threshold:.3});io.observe(a)}else start();})();
 </script>
+<script src="/assets/track.js?v=1" defer></script>
 </body>
 </html>

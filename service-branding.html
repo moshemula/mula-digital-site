@@ -1418,5 +1418,6 @@ function play(){b.classList.remove('s1','s2','s3','s4');[['s1',300],['s2',1500],
 var started=false;function go(){if(started)return;started=true;play();setInterval(play,11000)}
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){go();io.disconnect()}},{threshold:.3});io.observe(b)}else all();})();
 </script>
+<script src="/assets/track.js?v=1" defer></script>
 </body>
 </html>
