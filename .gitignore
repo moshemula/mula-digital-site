@@ -27,3 +27,4 @@ gbp-secrets.txt
 
 # Test screenshots (never publish)
 /*.png
+/shots/
