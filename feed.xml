@@ -5,13 +5,22 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Fri, 20 Nov 2026 10:45:20 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 10:18:10 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>קמפיין בפייסבוק מביא לקוחות או רק לייקים?</title>
+      <link>https://muladigital.co.il/blog-kampein-facebook-lakochot-o-laykim</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-kampein-facebook-lakochot-o-laykim</guid>
+      <description>תסתכל מה כתוב מתחת לתוצאות במנהל המודעות: מעורבות זה לייקים. איך בודקים, למה המספרים לא מסתדרים, ואיך מחשבים עלות ללקוח. עם בדיקה עצמית.</description>
+      <pubDate>Sat, 21 Nov 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=1200&amp;amp;q=70" medium="image" />
+    </item>
     <item>
       <title>מה לכתוב בדף הבית של האתר העסקי?</title>
       <link>https://muladigital.co.il/blog-ma-lichtov-bedaf-habait</link>
@@ -362,15 +371,6 @@
       <pubDate>Tue, 22 Sep 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
-    </item>
-    <item>
-      <title>אוטומציה בוואטסאפ לעסקים: 12 תרחישים ומחירים</title>
-      <link>https://muladigital.co.il/blog-automatzia-whatsapp-laasakim</link>
-      <guid isPermaLink="true">https://muladigital.co.il/blog-automatzia-whatsapp-laasakim</guid>
-      <description>אוטומציה בוואטסאפ לעסקים: 12 תרחישים שעובדים, חיבור ל-CRM ולפריוריטי, מה אסור לאוטמט, איך לא לאבד את המספר העסקי וכמה זה עולה.</description>
-      <pubDate>Sun, 20 Sep 2026 10:00:00 +0300</pubDate>
-      <enclosure url="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" type="image/jpeg" />
-      <media:content url="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=1200&amp;q=70&amp;auto=format&amp;fit=crop" medium="image" />
     </item>
   </channel>
 </rss>
