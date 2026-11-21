@@ -1,7 +1,7 @@
 # Mula Digital - אסטרטגיית תוכן חיה
 
 > מסמך עבודה פנימי. מתעדכן תוך כדי עבודה.
-> אחרון עדכון: 6 באוגוסט 2026
+> אחרון עדכון: 21 בנובמבר 2026 (רשימת המאמרים ובנק הנושאים החדש). שאר המסמך מאוגוסט 2026, וחלק מהרעיונות בו כבר נכתבו.
 
 ---
 
@@ -15,26 +15,136 @@
 
 ---
 
-## מה כבר פורסם (16 מאמרים)
+## מה כבר פורסם (73 מאמרים, לפי מדריך)
 
-| # | ביטוי מפתח | קובץ | סטטוס |
-|---|-----------|------|-------|
-| 1 | אתר יפה לא מספיק / אתר שמוכר | blog-atar-yafe-lo-maspik.html | פורסם |
-| 2 | כמה עולה לבנות אתר | blog-kama-ole-livnot-atar.html | פורסם |
-| 3 | איך לבחור חברת שיווק דיגיטלי | blog-eich-livhor-chevrat-shivuk.html | פורסם |
-| 4 | מדידת פרסום / ROI פרסום | blog-eich-ladaat-im-hapirsum-oved.html | פורסם |
-| 5 | AI לבעלי עסקים | blog-ai-chosech-zman-laasakim.html | פורסם |
-| 6 | SEO מקומי / SEO לעסקים מקומיים | blog-seo-laasakim-mekomiyim.html | פורסם |
-| 7 | וואטסאפ CRM / מעקב לידים | blog-whatsapp-bli-crm.html | פורסם |
-| 8 | כמה עולה קידום אתר בגוגל | blog-kama-ole-kiddum-bGoogle.html | פורסם |
-| 9 | איך לבנות דף נחיתה שממיר | blog-daf-nchita-shemammir.html | פורסם |
-| 10 | איך לכתוב תוכן שמביא לקוחות מגוגל | blog-tochen-shemavi-lekochot.html | פורסם |
-| 11 | גוגל לעסק שלי - המדריך המלא 2026 | blog-google-business-profile.html | פורסם |
-| 12 | קידום ב-AI - מדריך GEO מלא 2026 | blog-kiddum-ai-geo.html | פורסם |
-| 13 | איך לבחור סוכנות דיגיטל לעסק קטן | blog-eich-livhor-sochnut-digital.html | פורסם |
-| 14 | פרסום בגוגל מול פייסבוק - איפה לשים את הכסף | blog-google-ads-vs-facebook.html | פורסם |
-| 15 | מה זה CRM ולמה כל עסק קטן חייב אחד | blog-crm-laasakim-ktanim.html | פורסם |
-| 16 | איך Google Ads עובד - מדריך למתחילים | blog-google-ads-guide.html | פורסם |
+הרשימה המלאה לפי hubs.json, נכון ל-21 בנובמבר 2026. לפני כל מאמר חדש בודקים כאן, וגם בענפים origin/draft/article-*, שאין חפיפה.
+
+### קידום בגוגל (13)
+
+| קובץ | כותרת |
+|---|---|
+| blog-lama-haatar-lo-mofia-begoogle.html | למה האתר שלי לא מופיע בגוגל? 10 סיבות |
+| blog-eich-lekadem-esek-begoogle.html | קידום עסק בגוגל: 9 צעדים לפי סדר |
+| blog-google-business-profile.html | גוגל לעסק שלי 2026: המדריך האסטרטגי המלא |
+| blog-eich-lehasig-bikorot-begoogle.html | איך להשיג ביקורות בגוגל בלי לבקש בצורה מביכה? |
+| blog-ma-roim-kshemechapsim-et-hashem-sheli.html | מה רואים כשמחפשים את השם שלי בגוגל? |
+| blog-google-mevalbel-oti-im-mishehu-acher.html | גוגל מבלבל אותי עם מישהו עם אותו שם? |
+| blog-seo-laasakim-mekomiyim.html | SEO לעסקים מקומיים: מדריך מעשי 2026 |
+| blog-eich-livdok-ma-hametcharim-osim.html | איך לבדוק מה המתחרים שלי עושים בשיווק? |
+| blog-ma-halakochot-mechapsim-begoogle.html | איך לדעת מה הלקוחות שלי מחפשים בגוגל? |
+| blog-tochen-shemavi-lekochot.html | איך לכתוב תוכן שמביא לקוחות מגוגל? מדריך 2026 |
+| blog-google-maanish-maamarim-chatgpt.html | האם גוגל מעניש מאמרים שנכתבו עם ChatGPT? |
+| blog-kama-ole-kiddum-bGoogle.html | קידום אתרים בגוגל מחיר: 2,000-5,000 ₪ לחודש |
+| blog-kama-zman-lokeach-kidum-begoogle.html | כמה זמן לוקח לראות תוצאות מקידום בגוגל? |
+
+### קידום ב-AI (4)
+
+| קובץ | כותרת |
+|---|---|
+| blog-kiddum-ai-geo.html | קידום ב-AI: מדריך GEO מלא להופיע בתשובות AI 2026 |
+| blog-sapak-sherutey-geo.html | סוכנות GEO או ספק GEO: איך בוחרים נכון |
+| blog-pirsum-bechatgpt.html | פרסום ב-ChatGPT בישראל: המדריך המלא מהחשבון שלי |
+| blog-ai-chosech-zman-laasakim.html | איך AI חוסך זמן לבעלי עסקים (7 שימושים מעשיים) |
+
+### אתר שמביא לקוחות (19)
+
+| קובץ | כותרת |
+|---|---|
+| blog-atar-yafe-lo-maspik.html | למה אתר יפה לא מספיק כדי להביא לקוחות |
+| blog-eich-livhor-shem-laesek-vedomain.html | איך לבחור שם לעסק ודומיין? |
+| blog-eich-lemateg-esek-katan.html | איך למתג עסק קטן בתקציב קטן? מדריך מעשי |
+| blog-eich-leatzev-logo-laesek.html | איך לעצב לוגו לעסק, ומה חשוב יותר ממנו? |
+| blog-lakoach-lekol-hachaim.html | לקוח לכל החיים: למה עצמאי מפסיד בלי אתר |
+| blog-kama-ole-esek-bli-atar.html | כמה כסף עולה לעסק שאין לו אתר? |
+| blog-livnot-atar-levad-im-ai.html | כדאי לבנות אתר לבד עם AI? |
+| blog-atar-chadash-o-leshaper.html | איך לדעת אם צריך אתר חדש או לשפר את הקיים? |
+| blog-ma-ze-afyon-atar.html | מה זה אפיון אתר, ואיך יודעים שעשו אותו נכון? |
+| blog-eich-lichtov-amud-odot-laesek.html | איך לכתוב עמוד אודות לעסק? |
+| blog-ma-lichtov-bedaf-habait.html | מה לכתוב בדף הבית של האתר העסקי? |
+| blog-kama-ole-livnot-atar.html | כמה עולה לבנות אתר? מדריך מחירים 2026 |
+| blog-lehaavir-atar-mewix-lewordpress.html | איך עוברים מוויקס לוורדפרס בלי לאבד גוגל? |
+| blog-eich-livdok-atar-chadash-lifnei-ishur.html | מה לבדוק לפני העלאת אתר לאוויר? |
+| blog-daf-nchita-shemammir.html | איך לבנות דף נחיתה שממיר? מדריך מעשי 2026 |
+| blog-lefarsem-mechirim-baatar.html | כדאי לפרסם מחירים באתר או שזה מבריח לקוחות? |
+| blog-eich-lechaber-google-analytics.html | איך לחבר את האתר ל-Google Analytics? |
+| blog-optimizatzia-hamarot.html | אופטימיזציית המרות: יש כניסות ואין פניות? |
+| blog-bniyat-atar-lemetaplim.html | בניית וקידום אתרים למטפלים: המדריך המלא |
+
+### פרסום ממומן (26)
+
+| קובץ | כותרת |
+|---|---|
+| blog-tochnit-shivuk-shnatit.html | איך לבנות תוכנית שיווק שנתית לעסק קטן? |
+| blog-eich-lekadem-esek-katan-bli-taktziv.html | איך לקדם עסק קטן בלי תקציב גדול? |
+| blog-google-ads-vs-facebook.html | פרסום בגוגל מול פייסבוק: איפה לשים את הכסף? |
+| blog-google-ads-guide.html | מה זה גוגל אדס ואיך הוא עובד? מדריך 2026 |
+| blog-eich-lichtov-modaa-begoogle.html | איך לכתוב מודעה בגוגל שמביאה לקוחות? |
+| blog-kama-ole-nihul-kampein-begoogle.html | כמה עולה ניהול קמפיין בגוגל לעסק קטן? |
+| blog-lama-hakampein-begoogle-lo-mevi-leadim.html | למה הקמפיין בגוגל לא מביא לידים? |
+| blog-pirsum-facebook-laasakim.html | כמה עולה פרסום בפייסבוק לעסקים ואיך מתחילים |
+| blog-eich-lehatkin-pixel-facebook.html | איך מתקינים פיקסל של פייסבוק באתר? |
+| blog-kampein-facebook-lakochot-o-laykim.html | קמפיין בפייסבוק מביא לקוחות או רק לייקים? |
+| blog-kama-ole-nihul-social.html | כמה עולה ניהול סושיאל לעסק קטן? |
+| blog-eich-leatzev-post-leinstagram.html | איך לעצב פוסט לאינסטגרם שנראה מקצועי? |
+| blog-eich-letzalem-sirton-batelefon.html | איך לצלם סרטון לעסק בטלפון שנראה מקצועי? |
+| blog-eich-lichtov-post-shemavi-pniyot.html | איך לכתוב פוסט שמביא פניות ולא רק לייקים? |
+| blog-kama-ole-sirton-tadmit.html | כמה עולה סרטון תדמית לעסק קטן? |
+| blog-eich-lahafoch-okvim-lelakochot.html | איך להפוך עוקבים באינסטגרם ללקוחות? |
+| blog-shivuk-linkedin-laasakim.html | שיווק בלינקדאין לעסקים: המדריך המלא 2026 |
+| blog-eich-lehafik-webinar-shemavi-leadim.html | איך להפיק וובינר שמביא לידים? |
+| blog-eich-laasot-remarketing.html | איך לעשות רימרקטינג לעסק קטן? |
+| blog-kama-lakochot-tzarich-kdei-shehashivuk-yishtalem.html | כמה לקוחות צריך כדי שהשיווק ישתלם? |
+| blog-eich-livnot-mashpech-shivuki.html | איך לבנות משפך שיווקי לעסק קטן? |
+| blog-eich-ladaat-im-hapirsum-oved.html | איך לדעת אם הפרסום שלך באמת עובד (ומה למדוד) |
+| blog-eich-livhor-chevrat-shivuk.html | איך לבחור חברת שיווק דיגיטלי בלי לזרוק כסף |
+| blog-eich-livhor-sochnut-digital.html | איך לבחור סוכנות דיגיטל? 15 קריטריונים 2026 |
+| blog-chevra-gdola-o-menahel-shivuk.html | חברת שיווק גדולה או מנהל שיווק אחד? |
+| blog-chevrat-shivuk-osa-avoda-tova.html | איך אני יודע אם חברת השיווק עושה עבודה טובה? |
+
+### CRM ואוטומציה (10)
+
+| קובץ | כותרת |
+|---|---|
+| blog-kama-leadim-ani-mefaspes.html | איך אני יודע כמה לידים אני מפספס בחודש? |
+| blog-lama-haleadim-sheli-lo-ichutiyim.html | למה הלידים שלי לא איכותיים? |
+| blog-whatsapp-bli-crm.html | למה וואטסאפ בלי CRM גורם לאיבוד לידים (ואיך לתקן) |
+| blog-lama-lakochot-neelamim-achrei-hatzaat-mechir.html | למה לקוחות נעלמים אחרי הצעת מחיר? |
+| blog-crm-laasakim-ktanim.html | מה זה CRM? הגדרה פשוטה ומדריך לעסק קטן |
+| blog-kama-ole-hatmaat-crm.html | הטמעת מערכת CRM: כמה עולה, כמה זמן ומה מקבלים |
+| blog-automatzia-whatsapp-laasakim.html | אוטומציה בוואטסאפ לעסקים: 12 תרחישים ומחירים |
+| blog-eich-ligrom-lelakochot-lehamlitz.html | איך לגרום ללקוחות להמליץ עליי? |
+| blog-eich-livnot-newsletter-laesek-katan.html | איך לבנות ניוזלטר לעסק קטן שאנשים פותחים? |
+| blog-leadim-b2b-laasakim.html | לידים B2B לעסקים: פגישות במקום רשימות קנויות |
+
+### מחוץ למדריכים (1)
+
+| קובץ | כותרת |
+|---|---|
+| blog-chatgpt-business-hub.html | ChatGPT Business Hub: איך לרשום עסק ב-ChatGPT |
+
+---
+
+## בנק נושאים חדש (מחקר 21.11.2026)
+
+עמוד 1 בגוגל בעברית נבדק ב-21.11.2026. ברוב הנושאים יש בעמוד 1 תוכן שיווקי של משרדים, בערך 1,000 עד 2,500 מילים, עם מספרים בלי מקור ובלי דוגמאות. מתחרה חזק שחוזר בכמה נושאים: danielzrihen.co.il.
+
+| # | השאלה | סיכוי | מתחרים בעמוד 1 | החולשה שלהם | הזווית שלנו |
+|---|---|---|---|---|---|
+| N1 | איך משיגים את הלקוחות הראשונים לעסק חדש? | גבוה | hyp, digi-tech, frontask | רשימות "20 דרכים", מניחים שכבר יש לקוחות | 30 הימים הראשונים של עסק חדש: רשת חמה, הצעת פתיחה, פרופיל עסק בגוגל ביום הראשון, ביקורות ראשונות, ועל מה עוד לא מוציאים כסף |
+| N2 | איך מתמחרים שירות בעסק קטן בלי להפסיד? | טוב | hamaarav, expeditor, theboss | אין חישוב מההכנסה הרצויה, אין עוסק פטור/מורשה, מספרים סותרים | מחשבון להמחשה: הכנסה רצויה, שעות שאפשר באמת לחייב, מחיר. כל נתון מס או ביטוח לאומי רק ממקור רשמי |
+| N3 | של מי האתר שלי? איך בודקים שהדומיין, האתר והחשבונות רשומים עליי | טוב | ymdigital, muchmore, mnemir | אין העברת דומיין, אין חשבונות מודעות ו-Business Manager | רשימת כל הנכסים הדיגיטליים של העסק ומה צריך להיות כתוב בהסכם. בלי חפיפה ל-blog-kama-ole-livnot-atar ול-blog-eich-livdok-atar-chadash-lifnei-ishur (לקשר אליהם) |
+| N4 | איך לבנות דף עסקי בלינקדאין שבאמת מביא לקוחות? | טוב | comversation (2018), tlnk, stra | התוצאה הראשונה מ-2018, אין השוואה בין דף חברה לפרופיל אישי | דף חברה ופרופיל אישי כמערכת אחת לעסק של 1 עד 5 אנשים. בלי חפיפה ל-blog-shivuk-linkedin-laasakim |
+| N5 | איך עושים מיתוג מחדש בלי לאבד לקוחות? | טוב | hybrid, assafgoren, logonet | כתוב למותגים גדולים, אף אחד לא מכסה את המעבר הדיגיטלי | מה שומרים, איך מודיעים, והמעבר בגוגל: שם בפרופיל העסק, הפניות 301, שמות משתמש ברשתות |
+| N6 | מה עושים עם ביקורת שלילית בגוגל: איך מוחקים ואיך מגיבים? | טוב | kerenmor, monitin-net, adactive | דפי מכירה, תבנית תגובה אחת, ממליצים על דברים שעלולים להפר את המדיניות של גוגל | תהליך ההסרה הרשמי של גוגל, מה אסור, ודוגמה אחת לתגובה לכל מקרה. בלי חפיפה ל-blog-eich-lehasig-bikorot-begoogle |
+| N7 | מה זה UTM ואיך יודעים מאיפה הגיע כל ליד? | בינוני | danielzrihen, stra, galyam-studio | רמת מילון מונחים, אין וואטסאפ, QR או CRM | מקור לכל ליד: מהקישור, דרך הטופס ועד ה-CRM. עיקרון ודוגמה, בלי מתכון מלא |
+| N8 | וואטסאפ ביזנס לעסק: איך מגדירים קטלוג, הודעות אוטומטיות ותוויות? | בינוני | arthurmeltser, netolink, thecyborg | בלי צילומי מסך, מחירים בלי מקור | הדרכה ויזואלית במסכים שנראים כמו וואטסאפ, ומתי צריך כבר API. בלי חפיפה ל-blog-automatzia-whatsapp-laasakim |
+| N9 | איך עושים את האתר נגיש לפי החוק, ומה הקנס לעסק קטן? | בינוני | isoc, kolzchut, digitale | דפים מסחריים בלי מקור לקנסות ולפטורים | רק מה שחל על עסק קטן, כל טענה עם קישור לחוק או לתקנות (נושא משפטי, לבדוק מקורות היטב). לקשר ל-hatsharat-negishut |
+| N10 | איך מקבלים וי כחול לעמוד העסקי, ושווה לשלם? | בינוני | smartdesign, stra, se-keys | מחירים סותרים ובלי מקור | עלות מול תועלת לפי הדף הרשמי של Meta, עם תאריך בדיקה |
+| N11 | העסק שלי צריך אפליקציה או שאתר מספיק? | בינוני | npcoding, danielzrihen, edensharabi | נכתב על ידי מפתחי אפליקציות, אין עלויות בשקלים | עץ החלטה, ואפשרות הביניים של PWA |
+| N12 | למה העסק שלי לא מופיע בגוגל מפות? | בינוני | danielzrihen, ninjamonkey, ronen-web | מערבבים "לא מופיע" עם "מדורג נמוך" | תרשים אבחון: מושעה, לא מאומת או לא מדורג, ומה עושים בכל מקרה. בלי חפיפה ל-blog-google-business-profile ול-blog-seo-laasakim-mekomiyim |
+| N13 | פרסום בטיקטוק לעסק קטן בישראל: איך מתחילים וכמה זה עולה? | בינוני | thecyborg, s-pixel, lastartup | אין מספרים ואין צעדים | רק אם משה מציע טיקטוק. לשאול לפני שכותבים |
+
+נמוך (עמוד 1 מלא בדפים חזקים או טריים, לדחות): מהירות אתר, כמה עולה חנות אינטרנטית, כמה עולה דף נחיתה, איך בוחרים חברה לבניית אתרים, איזה CRM מתאים לעסק קטן.
 
 ---
 

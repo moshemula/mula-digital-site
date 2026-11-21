@@ -24,3 +24,6 @@ screenshot-tool/
 __pycache__/
 *.pyc
 gbp-secrets.txt
+
+# Test screenshots (never publish)
+/*.png
