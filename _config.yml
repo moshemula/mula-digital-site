@@ -1,0 +1,19 @@
+# GitHub Pages (Jekyll): קבצים פנימיים שלא מתפרסמים באתר.
+# הם נשארים בריפו ומשמשים את הכלים והמשימות, אבל לא נגישים בכתובת באתר.
+exclude:
+  - CLAUDE.md
+  - README.md
+  - content-strategy.md
+  - mula-storyboard.md
+  - hubs.json
+  - gbp-queue.json
+  - "*.py"
+  - "*.yml"
+  - .htaccess
+  - .gitignore
+  - .claude
+  - .github
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
