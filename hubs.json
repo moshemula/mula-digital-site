@@ -15,9 +15,12 @@
       "blog-ma-roim-kshemechapsim-et-hashem-sheli",
       "blog-google-mevalbel-oti-im-mishehu-acher",
       "blog-seo-laasakim-mekomiyim",
+      "blog-eich-livdok-ma-hametcharim-osim",
       "blog-ma-halakochot-mechapsim-begoogle",
       "blog-tochen-shemavi-lekochot",
-      "blog-kama-ole-kiddum-bGoogle"
+      "blog-google-maanish-maamarim-chatgpt",
+      "blog-kama-ole-kiddum-bGoogle",
+      "blog-kama-zman-lokeach-kidum-begoogle"
     ],
     "extra": [
       "hashvaa-kidum-organi-mul-kampeinim"
@@ -77,7 +80,9 @@
     "start": "לפני שבונים או מחדשים אתר, מתחילים במאמר הראשון. יש אתר ויש כניסות אבל אין פניות? המאמר על אופטימיזציית המרות הוא בשבילכם.",
     "articles": [
       "blog-atar-yafe-lo-maspik",
+      "blog-eich-livhor-shem-laesek-vedomain",
       "blog-eich-lemateg-esek-katan",
+      "blog-eich-leatzev-logo-laesek",
       "blog-lakoach-lekol-hachaim",
       "blog-kama-ole-esek-bli-atar",
       "blog-livnot-atar-levad-im-ai",
@@ -127,11 +132,15 @@
       "blog-google-ads-guide",
       "blog-eich-lichtov-modaa-begoogle",
       "blog-kama-ole-nihul-kampein-begoogle",
+      "blog-lama-hakampein-begoogle-lo-mevi-leadim",
       "blog-pirsum-facebook-laasakim",
+      "blog-eich-lehatkin-pixel-facebook",
       "blog-kampein-facebook-lakochot-o-laykim",
       "blog-kama-ole-nihul-social",
       "blog-eich-leatzev-post-leinstagram",
       "blog-eich-letzalem-sirton-batelefon",
+      "blog-eich-lichtov-post-shemavi-pniyot",
+      "blog-kama-ole-sirton-tadmit",
       "blog-eich-lahafoch-okvim-lelakochot",
       "blog-shivuk-linkedin-laasakim",
       "blog-eich-lehafik-webinar-shemavi-leadim",
@@ -172,10 +181,13 @@
     "start": "מנהלים לידים בוואטסאפ ובראש? מתחילים במאמר הראשון. כבר יודעים שצריך CRM? המאמר על עלות ההטמעה יעזור לתכנן תקציב.",
     "articles": [
       "blog-kama-leadim-ani-mefaspes",
+      "blog-lama-haleadim-sheli-lo-ichutiyim",
       "blog-whatsapp-bli-crm",
+      "blog-lama-lakochot-neelamim-achrei-hatzaat-mechir",
       "blog-crm-laasakim-ktanim",
       "blog-kama-ole-hatmaat-crm",
       "blog-automatzia-whatsapp-laasakim",
+      "blog-eich-ligrom-lelakochot-lehamlitz",
       "blog-eich-livnot-newsletter-laesek-katan",
       "blog-leadim-b2b-laasakim"
     ],
