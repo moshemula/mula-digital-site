@@ -5,13 +5,22 @@
     <link>https://muladigital.co.il/</link>
     <description>מאמרים, מדריכים ועדכונים על בניית אתרים, קידום בגוגל וקמפיינים ממומנים. משה מולה, Mula Digital.</description>
     <language>he-IL</language>
-    <lastBuildDate>Sun, 22 Nov 2026 10:45:50 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 12:26:54 +0300</lastBuildDate>
     <atom:link href="https://muladigital.co.il/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://muladigital.co.il/assets/logo-dark.png</url>
       <title>Mula Digital - שיווק דיגיטלי שמביא לקוחות</title>
       <link>https://muladigital.co.il/</link>
     </image>
+    <item>
+      <title>איך לבנות דף עסקי בלינקדאין שמביא לקוחות?</title>
+      <link>https://muladigital.co.il/blog-daf-iski-belinkedin</link>
+      <guid isPermaLink="true">https://muladigital.co.il/blog-daf-iski-belinkedin</guid>
+      <description>דף עסקי בלינקדאין מביא לקוחות כשהוא עובד יחד עם הפרופיל האישי. מה לכתוב בו, איך מחברים את הצוות, מה מפרסמים איפה ובדיקה של 10 דקות.</description>
+      <pubDate>Thu, 26 Nov 2026 10:00:00 +0300</pubDate>
+      <enclosure url="https://images.unsplash.com/photo-1611944212129-29977ae1398c?w=1200&amp;amp;q=70" type="image/jpeg" />
+      <media:content url="https://images.unsplash.com/photo-1611944212129-29977ae1398c?w=1200&amp;amp;q=70" medium="image" />
+    </item>
     <item>
       <title>איך לעצב לוגו לעסק, ומה חשוב יותר ממנו?</title>
       <link>https://muladigital.co.il/blog-eich-leatzev-logo-laesek</link>
@@ -362,15 +371,6 @@
       <pubDate>Sun, 18 Oct 2026 10:00:00 +0300</pubDate>
       <enclosure url="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=1200&amp;amp;q=70" type="image/jpeg" />
       <media:content url="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=1200&amp;amp;q=70" medium="image" />
-    </item>
-    <item>
-      <title>איך לעשות רימרקטינג לעסק קטן?</title>
-      <link>https://muladigital.co.il/blog-eich-laasot-remarketing</link>
-      <guid isPermaLink="true">https://muladigital.co.il/blog-eich-laasot-remarketing</guid>
-      <description>מתקינים תג Google ופיקסל, בונים 3 קהלים ומחריגים את מי שפנה. כמה כניסות צריך, מה לכתוב במודעה, כמה תקציב, ומתי לא כדאי.</description>
-      <pubDate>Sat, 17 Oct 2026 10:00:00 +0300</pubDate>
-      <enclosure url="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=1200&amp;amp;q=70" type="image/jpeg" />
-      <media:content url="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=1200&amp;amp;q=70" medium="image" />
     </item>
   </channel>
 </rss>
